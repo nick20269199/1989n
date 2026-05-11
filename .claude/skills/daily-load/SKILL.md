@@ -94,7 +94,25 @@ cd D:/1989n/stock_analysis && python forecast_closer.py --report 2>&1 | head -15
 - 准确率是否在下降（系统性的研究质量退化？）
 - 到期待验证的预测数量（是否需要手动验证？）
 
-### Step 6: 注入上下文
+### Step 6: 蒸馏简报处理 (v4 新增)
+
+检查 `stock_data/distillation_brief.md`:
+- 如果文件存在且「待蒸馏文件」非空:
+  - 读取每个待蒸馏文件内容
+  - 判断是否产生可复用知识 → 更新 rules/skills/memory
+  - 更新 `distill_queue.json` 中对应条目状态 (done/skipped)
+- 如果无新知识待蒸馏 → 跳过
+
+蒸馏产出落点规则:
+| 发现类型 | 落点 |
+|---------|------|
+| 新错误模式/修复方式 | `memory/feedback/` |
+| 被验证的市场规律 | `memory/knowledge/stocks/` |
+| 交易决策中的认知偏差 | `rules/` 或对应 skill |
+| API/数据源变化 | `memory/knowledge/tools/` |
+| 新交易规则/策略 | `stock_data/trading_rules.json` |
+
+### Step 7: 注入上下文
 
 以结构化格式输出到当前会话：
 
