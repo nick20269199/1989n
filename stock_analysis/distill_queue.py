@@ -15,6 +15,7 @@ from datetime import datetime, date
 from pathlib import Path
 
 STOCK_DATA = Path("D:/1989n/stock_data")
+INBOX = Path("D:/1989n/inbox")
 QUEUE_FILE = STOCK_DATA / "distill_queue.json"
 BRIEF_FILE = STOCK_DATA / "distillation_brief.md"
 
@@ -33,6 +34,9 @@ DISTILL_PATTERNS = [
     "sentinel_status.json",      # 任务执行状态
     "bs_analysis.json",          # 买卖分析
     "emotional_cycle_raw.json",  # 情绪周期
+    "inbox/ideas.md",            # 收件箱-想法
+    "inbox/links.md",            # 收件箱-链接
+    "inbox/questions.md",        # 收件箱-问题
 ]
 
 # 不蒸馏的（纯缓存/原始数据）
@@ -76,6 +80,27 @@ def find_today_files() -> list[dict]:
                         "path": rel_str,
                         "size_kb": round(size_kb, 1),
                         "matched": any(p.replace("*", "") in f for p in DISTILL_PATTERNS),
+                    })
+            except OSError:
+                continue
+
+    # 也扫描 inbox/
+    for root, dirs, files in os.walk(INBOX):
+        for f in files:
+            if f == ".gitkeep" or f == "README.md":
+                continue
+            fpath = Path(root) / f
+            rel_str = "inbox/" + str(fpath.relative_to(INBOX)).replace("\\", "/")
+
+            try:
+                mtime = datetime.fromtimestamp(fpath.stat().st_mtime).date()
+                if mtime == today:
+                    size_kb = fpath.stat().st_size / 1024
+                    matched = any(p.replace("*", "") in f for p in DISTILL_PATTERNS)
+                    results.append({
+                        "path": rel_str,
+                        "size_kb": round(size_kb, 1),
+                        "matched": matched,
                     })
             except OSError:
                 continue

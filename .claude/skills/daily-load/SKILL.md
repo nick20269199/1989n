@@ -94,7 +94,22 @@ cd D:/1989n/stock_analysis && python forecast_closer.py --report 2>&1 | head -15
 - 准确率是否在下降（系统性的研究质量退化？）
 - 到期待验证的预测数量（是否需要手动验证？）
 
-### Step 6: 蒸馏简报处理 (v4 新增)
+### Step 6: 检查收件箱 (v5 新增)
+
+**先拉取远程更新** (用户可能从手机/GitHub 加了东西):
+```bash
+cd D:/1989n && git pull --rebase 2>&1
+```
+
+读 `inbox/` 目录下所有 `.md` 文件:
+- `ideas.md` — 逐条读取未标记 `[processed]` 的条目 → 有价值的纳入当日分析/知识库
+- `links.md` — 逐个读取链接 → 判断是否值得深入研究 → 有价值的内容提取到 `knowledge/`
+- `questions.md` — 逐个读取问题 → 能马上回答的直接回答 → 需要研究的加入 `open_questions.json`
+- `inbox/images/` — 有新图片 → 用 vision.py 分析 → 纳入 context
+
+处理完的条目标记 `[processed]`，提交推送。
+
+### Step 7: 蒸馏简报处理 (v4)
 
 检查 `stock_data/distillation_brief.md`:
 - 如果文件存在且「待蒸馏文件」非空:
