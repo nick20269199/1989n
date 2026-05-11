@@ -1,5 +1,7 @@
-# 密钥
+# 密钥 + 本地配置
 .env
+settings.local.json
+.claude/settings.local.json
 
 # 大数据/缓存
 stock_data/vv_browser_state/
