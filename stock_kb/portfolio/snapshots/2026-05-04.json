@@ -1,0 +1,17 @@
+{
+  "date": "2026-05-04",
+  "account": {
+    "total_assets": 246652.55,
+    "available_cash": 55.55,
+    "market_value": 246597.00,
+    "total_pnl": 672.89
+  },
+  "holdings": [
+    {"code":"002156","name":"通富微电","shares":2300,"cost":49.787,"price":51.770,"pnl":4560.30,"pnl_pct":3.98,"value":119071.00,"weight":48.27},
+    {"code":"000062","name":"深圳华强","shares":1200,"cost":36.613,"price":36.920,"pnl":368.66,"pnl_pct":0.84,"value":44304.00,"weight":17.96},
+    {"code":"300739","name":"明阳电路","shares":1100,"cost":29.727,"price":27.130,"pnl":-2857.00,"pnl_pct":-8.74,"value":29843.00,"weight":12.10},
+    {"code":"300480","name":"光力科技","shares":700,"cost":36.289,"price":35.870,"pnl":-292.98,"pnl_pct":-1.16,"value":25109.00,"weight":10.18},
+    {"code":"000815","name":"美利云","shares":1300,"cost":19.902,"price":19.020,"pnl":-1146.09,"pnl_pct":-4.43,"value":24726.00,"weight":10.02},
+    {"code":"002261","name":"拓维信息","shares":100,"cost":35.040,"price":35.440,"pnl":40.00,"pnl_pct":1.14,"value":3544.00,"weight":1.44}
+  ]
+}

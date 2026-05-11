@@ -1,0 +1,134 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "sk-d8ed79961b77432f9240e2ea90648895",
+    "ANTHROPIC_MODEL": "DeepSeek-V4-pro",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "DeepSeek-V4-pro",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "DeepSeek-V4-pro",
+    "ANTHROPIC_SMALL_FAST_MODEL": "deepseek-v4-flash",
+    "ENABLE_TOOL_SEARCH": "auto:5",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "autoMemoryDirectory": "D:\\1989n\\.claude\\memory",
+  "cleanupPeriodDays": 14,
+  "skipDangerousModePermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "WebFetch(domain:www.cls.cn)",
+      "WebFetch(domain:www.kaipanle.com)",
+      "WebFetch(domain:www.10jqka.com.cn)",
+      "WebSearch",
+      "Bash(pip install *)",
+      "Bash(python selenium_connect.py)",
+      "Bash(python finance_news_api.py)",
+      "Bash(python selenium_news.py)",
+      "Bash(pip3 list *)",
+      "Bash(pip list *)",
+      "Read(//mnt/c/Users/**)",
+      "Bash(python stock_analysis/*.py *)",
+      "Bash(python3 stock_analysis/*.py *)",
+      "Bash(python -c *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \" *)",
+      "Bash(python -c ' *)",
+      "Bash(python -m *)",
+      "Bash(python -m pip *)",
+      "Bash(python -m ruff *)",
+      "Bash(where *)",
+      "Bash(which *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(mkdir *)",
+      "Bash(cd /c/Users/1989n/stock_analysis && *)",
+      "Bash(cd /c/Users/1989n && *)",
+      "Bash(PYTHONPATH=* python *)",
+      "Bash(PYTHONPATH=* python -c *)",
+      "Bash(powershell -Command ' *)",
+      "Bash(powershell.exe -Command \" *)",
+      "Bash(xargs grep *)",
+      "Bash(curl -s \"https://api.github.com/*\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/*\")",
+      "Bash(curl -sL *)",
+      "Bash(npm install *)",
+      "Bash(npm install -g *)",
+      "Bash(winget install *)",
+      "Bash(choco install *)",
+      "Bash(git clone *)",
+      "Bash([ -f *)",
+      "Bash([ -d *)",
+      "mcp__china-stock__get_*",
+      "Skill",
+      "Agent",
+      "CronCreate",
+      "CronDelete",
+      "CronList",
+      "ToolSearch",
+      "TaskOutput",
+      "TaskStop",
+      "WebFetch(domain:*)",
+      "Edit(*.py *)",
+      "Write(*.py *)",
+      "Edit(*.md *)",
+      "Write(*.md *)",
+      "Edit(*settings.json*)",
+      "Write(*settings.json*)",
+      "Edit(*stock_analysis*)",
+      "Write(*stock_analysis*)",
+      "Read(//d/**)",
+      "Read(//tmp/**)",
+      "Glob",
+      "Grep",
+      "Read"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\1989n\\stock_analysis",
+      "C:\\Users\\1989n\\.claude",
+      "C:\\Users\\1989n\\Downloads",
+      "\\tmp",
+      "D:\\1989n\\.claude\\memory",
+      "D:\\1989n"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -m ruff check --fix --select E,F,I,N \"$FILE_PATH\" 2>&1 || true"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PYTHONIOENCODING=utf-8 python ~/.claude/scripts/harness-check.py"
+          }
+        ]
+      }
+    ]
+  },
+  "effortLevel": "max",
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "china-stock"
+  ],
+  "skipAutoPermissionPrompt": true,
+  "includeCoAuthoredBy": false,
+  "preferredNotifChannel": "notifications_disabled",
+  "inputNeededNotifEnabled": false,
+  "agentPushNotifEnabled": false,
+  "disableBackgroundAgents": true,
+  "autoCompactEnabled": false,
+  "autoUploadSessions": false,
+  "remoteControlAtStartup": false,
+  "feedbackSurveyRate": 0
+}

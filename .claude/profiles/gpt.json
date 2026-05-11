@@ -1,0 +1,11 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:15721",
+    "ANTHROPIC_AUTH_TOKEN": "PROXY_MANAGED",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "autoMemoryDirectory": "D:\\1989n\\.claude\\memory",
+  "cleanupPeriodDays": 14,
+  "includeCoAuthoredBy": false
+}

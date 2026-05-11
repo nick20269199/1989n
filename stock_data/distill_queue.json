@@ -1,0 +1,41 @@
+{
+  "entries": [
+    {
+      "date": "2026-05-11",
+      "file": "closing_review.json",
+      "status": "pending",
+      "size_kb": 7.4
+    },
+    {
+      "date": "2026-05-11",
+      "file": "git_push.log",
+      "status": "pending",
+      "size_kb": 0.0
+    },
+    {
+      "date": "2026-05-11",
+      "file": "last_error.txt",
+      "status": "pending",
+      "size_kb": 1.1
+    },
+    {
+      "date": "2026-05-11",
+      "file": "morning_enhanced.json",
+      "status": "pending",
+      "size_kb": 7.9
+    },
+    {
+      "date": "2026-05-11",
+      "file": "sentinel_status.json",
+      "status": "pending",
+      "size_kb": 1.3
+    },
+    {
+      "date": "2026-05-11",
+      "file": "trading_rules.json",
+      "status": "pending",
+      "size_kb": 3.1
+    }
+  ],
+  "last_distilled": null
+}

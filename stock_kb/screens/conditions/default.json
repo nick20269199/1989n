@@ -1,0 +1,18 @@
+{
+  "name": "默认选股条件",
+  "description": "基于4维度评估：景气度、估值、技术面、催化剂",
+  "filters": {
+    "exclude_st": true,
+    "exclude_kcb": true,
+    "min_market_cap": 50,
+    "max_pe": 200,
+    "min_turnover_rate": 1.0
+  },
+  "scoring": {
+    "momentum": {"weight": 0.30, "desc": "板块景气度+个股涨跌幅"},
+    "valuation": {"weight": 0.25, "desc": "PE分位+PB+现金流"},
+    "technical": {"weight": 0.25, "desc": "均线+MACD+量价关系"},
+    "catalyst": {"weight": 0.20, "desc": "政策+事件+财报节点"}
+  },
+  "focus_sectors": ["半导体", "锂电", "能源金属", "算力"]
+}

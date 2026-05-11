@@ -1,0 +1,576 @@
+{
+  "schemaVersion": "ecc.install.v1",
+  "installedAt": "2026-05-04T10:39:13.690Z",
+  "target": {
+    "id": "claude-home",
+    "target": "claude",
+    "kind": "home",
+    "root": "C:\\Users\\1989n\\.claude",
+    "installStatePath": "C:\\Users\\1989n\\.claude\\ecc\\install-state.json"
+  },
+  "request": {
+    "profile": null,
+    "modules": [
+      "security"
+    ],
+    "includeComponents": [],
+    "excludeComponents": [],
+    "legacyLanguages": [],
+    "legacyMode": false
+  },
+  "resolution": {
+    "selectedModules": [
+      "platform-configs",
+      "workflow-quality",
+      "security"
+    ],
+    "skippedModules": []
+  },
+  "source": {
+    "repoVersion": "2.0.0-rc.1",
+    "repoCommit": "841beea45cb25ba51f29fa45b7e272938d19b80a",
+    "manifestVersion": 1
+  },
+  "operations": [
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\.claude-plugin\\PLUGIN_SCHEMA_NOTES.md",
+      "sourceRelativePath": ".claude-plugin\\PLUGIN_SCHEMA_NOTES.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\PLUGIN_SCHEMA_NOTES.md",
+      "strategy": "sync-root-children",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\.claude-plugin\\README.md",
+      "sourceRelativePath": ".claude-plugin\\README.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\README.md",
+      "strategy": "sync-root-children",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\.claude-plugin\\marketplace.json",
+      "sourceRelativePath": ".claude-plugin\\marketplace.json",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\marketplace.json",
+      "strategy": "sync-root-children",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\.claude-plugin\\plugin.json",
+      "sourceRelativePath": ".claude-plugin\\plugin.json",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\plugin.json",
+      "strategy": "sync-root-children",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\mcp-configs\\mcp-servers.json",
+      "sourceRelativePath": "mcp-configs\\mcp-servers.json",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\mcp-configs\\mcp-servers.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\scripts\\auto-update.js",
+      "sourceRelativePath": "scripts/auto-update.js",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\scripts\\auto-update.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "platform-configs",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\scripts\\setup-package-manager.js",
+      "sourceRelativePath": "scripts/setup-package-manager.js",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\scripts\\setup-package-manager.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\agent-sort\\SKILL.md",
+      "sourceRelativePath": "skills\\agent-sort\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\agent-sort\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\agent-introspection-debugging\\SKILL.md",
+      "sourceRelativePath": "skills\\agent-introspection-debugging\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\agent-introspection-debugging\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\ai-regression-testing\\SKILL.md",
+      "sourceRelativePath": "skills\\ai-regression-testing\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\ai-regression-testing\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\configure-ecc\\SKILL.md",
+      "sourceRelativePath": "skills\\configure-ecc\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\configure-ecc\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\code-tour\\SKILL.md",
+      "sourceRelativePath": "skills\\code-tour\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\code-tour\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning\\SKILL.md",
+      "sourceRelativePath": "skills\\continuous-learning\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning\\config.json",
+      "sourceRelativePath": "skills\\continuous-learning\\config.json",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning\\config.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning\\evaluate-session.sh",
+      "sourceRelativePath": "skills\\continuous-learning\\evaluate-session.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning\\evaluate-session.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\SKILL.md",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\agents\\observer-loop.sh",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\agents\\observer-loop.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\agents\\observer-loop.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\agents\\observer.md",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\agents\\observer.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\agents\\observer.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\agents\\session-guardian.sh",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\agents\\session-guardian.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\agents\\session-guardian.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\agents\\start-observer.sh",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\agents\\start-observer.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\agents\\start-observer.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\config.json",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\config.json",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\config.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\hooks\\observe.sh",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\hooks\\observe.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\hooks\\observe.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\scripts\\detect-project.sh",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\scripts\\detect-project.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\scripts\\detect-project.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\scripts\\instinct-cli.py",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\scripts\\instinct-cli.py",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\scripts\\instinct-cli.py",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\continuous-learning-v2\\scripts\\test_parse_instinct.py",
+      "sourceRelativePath": "skills\\continuous-learning-v2\\scripts\\test_parse_instinct.py",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\continuous-learning-v2\\scripts\\test_parse_instinct.py",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\council\\SKILL.md",
+      "sourceRelativePath": "skills\\council\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\council\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\e2e-testing\\SKILL.md",
+      "sourceRelativePath": "skills\\e2e-testing\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\e2e-testing\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\eval-harness\\SKILL.md",
+      "sourceRelativePath": "skills\\eval-harness\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\eval-harness\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\hookify-rules\\SKILL.md",
+      "sourceRelativePath": "skills\\hookify-rules\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\hookify-rules\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\iterative-retrieval\\SKILL.md",
+      "sourceRelativePath": "skills\\iterative-retrieval\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\iterative-retrieval\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\plankton-code-quality\\SKILL.md",
+      "sourceRelativePath": "skills\\plankton-code-quality\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\plankton-code-quality\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\skill-stocktake\\SKILL.md",
+      "sourceRelativePath": "skills\\skill-stocktake\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\skill-stocktake\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\skill-stocktake\\scripts\\quick-diff.sh",
+      "sourceRelativePath": "skills\\skill-stocktake\\scripts\\quick-diff.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\skill-stocktake\\scripts\\quick-diff.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\skill-stocktake\\scripts\\save-results.sh",
+      "sourceRelativePath": "skills\\skill-stocktake\\scripts\\save-results.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\skill-stocktake\\scripts\\save-results.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\skill-stocktake\\scripts\\scan.sh",
+      "sourceRelativePath": "skills\\skill-stocktake\\scripts\\scan.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\skill-stocktake\\scripts\\scan.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\strategic-compact\\SKILL.md",
+      "sourceRelativePath": "skills\\strategic-compact\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\strategic-compact\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\strategic-compact\\suggest-compact.sh",
+      "sourceRelativePath": "skills\\strategic-compact\\suggest-compact.sh",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\strategic-compact\\suggest-compact.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\tdd-workflow\\SKILL.md",
+      "sourceRelativePath": "skills\\tdd-workflow\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\tdd-workflow\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "workflow-quality",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\verification-loop\\SKILL.md",
+      "sourceRelativePath": "skills\\verification-loop\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\verification-loop\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\defi-amm-security\\SKILL.md",
+      "sourceRelativePath": "skills\\defi-amm-security\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\defi-amm-security\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\django-security\\SKILL.md",
+      "sourceRelativePath": "skills\\django-security\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\django-security\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\healthcare-phi-compliance\\SKILL.md",
+      "sourceRelativePath": "skills\\healthcare-phi-compliance\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\healthcare-phi-compliance\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\hipaa-compliance\\SKILL.md",
+      "sourceRelativePath": "skills\\hipaa-compliance\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\hipaa-compliance\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\laravel-security\\SKILL.md",
+      "sourceRelativePath": "skills\\laravel-security\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\laravel-security\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\llm-trading-agent-security\\SKILL.md",
+      "sourceRelativePath": "skills\\llm-trading-agent-security\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\llm-trading-agent-security\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\nodejs-keccak256\\SKILL.md",
+      "sourceRelativePath": "skills\\nodejs-keccak256\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\nodejs-keccak256\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\perl-security\\SKILL.md",
+      "sourceRelativePath": "skills\\perl-security\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\perl-security\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\security-review\\SKILL.md",
+      "sourceRelativePath": "skills\\security-review\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\security-review\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\security-review\\cloud-infrastructure-security.md",
+      "sourceRelativePath": "skills\\security-review\\cloud-infrastructure-security.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\security-review\\cloud-infrastructure-security.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\security-scan\\SKILL.md",
+      "sourceRelativePath": "skills\\security-scan\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\security-scan\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\security-bounty-hunter\\SKILL.md",
+      "sourceRelativePath": "skills\\security-bounty-hunter\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\security-bounty-hunter\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\springboot-security\\SKILL.md",
+      "sourceRelativePath": "skills\\springboot-security\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\springboot-security\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\skills\\evm-token-decimals\\SKILL.md",
+      "sourceRelativePath": "skills\\evm-token-decimals\\SKILL.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\skills\\ecc\\evm-token-decimals\\SKILL.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "security",
+      "sourcePath": "C:\\Users\\1989n\\AppData\\Local\\Temp\\everything-claude-code\\the-security-guide.md",
+      "sourceRelativePath": "the-security-guide.md",
+      "destinationPath": "C:\\Users\\1989n\\.claude\\the-security-guide.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    }
+  ]
+}
