@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "date": "20260511",
+  "cycle_stage": {
+    "stage": "启动",
+    "confidence": 0.5,
+    "signals": ["科创50+2.66%领涨", "涨跌比3570/1785", "涨停129跌停5", "航天航空催化"],
+    "strategy_hint": "确认领头羊，追强不追弱",
+    "next_stage_risk": "主升（确认后）或 冰点（假突破）"
+  },
+  "ratio_alerts": {
+    "triggered": {},
+    "collision_focus": "技术面vs涨幅背离",
+    "data_quality": "degraded — eastmoney+gtimg API双故障，比率不可用"
+  },
+  "expectation_gaps": [
+    {
+      "dimension": "技术面 vs 价格走势",
+      "consensus": "技术评分高应伴随涨幅",
+      "potential_gap": "天银机电+5.09%但技术评分45(死叉)，深圳华强-5.02%但技术评分92(金叉多头)——技术指标可能滞后于价格，而非预判"
+    },
+    {
+      "dimension": "机械规则 vs 市场热度",
+      "consensus": "危险区/超时=清仓",
+      "potential_gap": "天银机电危险区D3但航天航空催化+魔法师看多→机械规则可能错杀强势股"
+    }
+  ],
+  "rules_today": [
+    {
+      "condition": "当日收盘复盘API连续失败>3次(同一host)",
+      "action": "立即切换到备选数据源(新浪)，不反复重试同一故障host",
+      "failure_signal": "备选源也失败→标记data_quality=missing，不基于降级数据做决策",
+      "is_condensed": true,
+      "source": "20260511 closing_review eastmoney+gtimg双故障"
+    },
+    {
+      "condition": "技术评分与日内涨跌幅符号相反(技术强但大跌 / 技术弱但大涨)",
+      "action": "暂缓基于技术面的操作决策，优先看资金流向和板块催化",
+      "failure_signal": "连续3天技术面与价格同向回归→恢复技术面权重",
+      "is_condensed": true,
+      "source": "20260511 天银机电+5%/45分 vs 深圳华强-5%/92分"
+    }
+  ],
+  "rules_condensed_count": 2,
+  "rules_total_count": 2,
+  "self_check": {
+    "mistake": "收盘复盘API双故障后未立即切换数据源，持仓PnL全显示0%，真实收盘盈亏未知",
+    "mistake_root_cause": "数据源单一依赖，脚本重试逻辑只有同一host 3次重试没有跨host切换",
+    "ego_challenge": "盘中判断'天银机电持有'vs自动剧本'减半仓'——收盘天银+5%说明手动判断正确，但这是运气还是判断力？航天催化是盘前已知信息，机械规则不考虑催化=设计缺陷",
+    "discipline_breach": "无模式外操作，全天未执行实际交易",
+    "feedback": "确认盘前4步流程(竞价→简报→VV抓取→分析)为标准化操作序列；用户偏好重复执行同命令序列监控大V动态"
+  },
+  "forecast_updates": {
+    "monday_brief_review": "航天航空60-65%概率预判准确，板块为当日催化主线；通富微电建议止盈一半vs实际-3.30%——若执行止盈则锁定部分利润"
+  },
+  "efficiency": {
+    "vv_fetch_rounds": 5,
+    "new_videos_total": 12,
+    "transcribed": 5,
+    "analysis_gaps": "子辉先生2个CPU/存储芯片+Neuralink视频未转录，可能对通富微电有直接影响"
+  },
+  "compressed_at": "2026-05-11 16:10"
+}

@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-05-11 17:16:51",
+  "win_tasks": {
+    "found": [
+      "StockAnalysis_MorningBrief",
+      "StockAnalysis_HotStocks",
+      "StockAnalysis_IntradayMidday",
+      "StockAnalysis_IntradayClose",
+      "StockAnalysis_ClosingReview",
+      "StockAnalysis_TechScan",
+      "StockAnalysis_NightlyPlan",
+      "StockAnalysis_Overnight"
+    ],
+    "missing": []
+  },
+  "cron_tasks": {
+    "found": [
+      "morning_enhanced",
+      "call_auction",
+      "closing_review",
+      "tech_scan",
+      "daily-load",
+      "daily-compress",
+      "deep-research",
+      "weekly-audit",
+      "health_check",
+      "nightly_health",
+      "morning_brief",
+      "vv_radar",
+      "盘前",
+      "集合竞价",
+      "收盘",
+      "技术形态",
+      "晨间",
+      "压缩",
+      "深度研究",
+      "健康检查",
+      "夜间",
+      "盘前晨报",
+      "新闻",
+      "大V"
+    ],
+    "missing": [
+      "news_scheduler",
+      "intraday_report"
+    ],
+    "total": 21
+  },
+  "data_files": {
+    "ok": [
+      "concept_mapping.json",
+      "learning/rules.json",
+      "learning/ratio_baselines.json",
+      "closing_review.json"
+    ],
+    "missing": [],
+    "empty": []
+  },
+  "actions": [],
+  "alerts": []
+}

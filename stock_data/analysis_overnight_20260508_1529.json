@@ -1,0 +1,24 @@
+{
+  "title": "隔夜分析 | 2026-05-08日",
+  "date": "2026-05-08",
+  "time": "15:29:58",
+  "us_market": [
+    {
+      "name": "道琼斯",
+      "price": 49596.97,
+      "change_pct": -0.63
+    },
+    {
+      "name": "纳斯达克",
+      "price": 25806.2,
+      "change_pct": -0.13
+    },
+    {
+      "name": "标普500",
+      "price": 7337.11,
+      "change_pct": -0.38
+    }
+  ],
+  "key_developments": [],
+  "next_day_outlook": "正常交易"
+}

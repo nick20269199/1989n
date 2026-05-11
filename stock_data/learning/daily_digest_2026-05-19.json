@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "date": "2026-05-19",
+  "cycle_stage": {
+    "stage": "启动",
+    "confidence": 0.5,
+    "signals": [],
+    "strategy_hint": "确认领头羊，追强不追弱",
+    "next_stage_risk": "主升（确认后）或 冰点（假突破）"
+  },
+  "ratio_alerts": {
+    "triggered": {},
+    "collision_focus": "连板率×成交量变化率",
+    "data_quality": "from_intraday"
+  },
+  "expectation_gaps": [
+    {
+      "dimension": "辨识度 vs 预期差",
+      "consensus": "资金追逐辨识度最高的标的（龙头）",
+      "potential_gap": "如果龙头被过度定价 → 跟风中存在预期差 → 补涨机会"
+    }
+  ],
+  "rules_today": [
+    {
+      "id": "R20260509_225741",
+      "condition": "当启动阶段，炸板率出现异常偏离时",
+      "action": "执行操作8-0",
+      "failure_signal": "如果晋级率未同步确认，则规则失效",
+      "is_condensed": false
+    },
+    {
+      "id": "R20260509_225741",
+      "condition": "当启动阶段，晋级率出现异常偏离时",
+      "action": "执行操作8-1",
+      "failure_signal": "如果涨跌停比未同步确认，则规则失效",
+      "is_condensed": false
+    }
+  ],
+  "rules_condensed_count": 0,
+  "rules_total_count": 2,
+  "self_check": {
+    "mistake": "数据滞后：用了T-2的数据做T+0判断",
+    "mistake_root_cause": "",
+    "ego_challenge": "",
+    "discipline_breach": "",
+    "feedback": "测试反馈"
+  },
+  "forecast_updates": {
+    "new": 1
+  },
+  "efficiency": {
+    "total_calls": 21
+  },
+  "compressed_at": "2026-05-09 22:57"
+}

@@ -1,0 +1,59 @@
+# 密钥
+.env
+
+# 大数据/缓存
+stock_data/vv_browser_state/
+stock_data/bilibili_audio/
+stock_data/bilibili_audio2/
+stock_data/bilibili_transcripts/
+stock_data/vv_transcripts/
+
+# 音视频
+*.mp4
+*.m4a
+*.mp3
+*.wav
+*.webm
+
+# 数据库（太大，只在本地用）
+stock_data/stock.db
+
+# 缓存文件（每日重新生成）
+stock_data/index_cache.json
+stock_data/index_cache_full.json
+stock_data/north_flow_cache.json
+stock_data/market_calendar_full.json
+stock_data/vv_video_data.json
+stock_data/vv_video_summary.json
+stock_data/vv_ssr_full.json
+stock_data/douyin_render_data.json
+stock_data/bilibili_all_videos.json
+stock_data/bilibili_relevant_videos.json
+
+# Claude Code 内部文件
+.claude/file-history/
+.claude/shell-snapshots/
+.claude/backups/
+.claude/scripts/
+.claude/projects/
+
+# 备份
+backups/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# 锁文件
+*.lock
+*.sentinel
+
+# 临时文件
+*.tmp
+*.log
+.DS_Store

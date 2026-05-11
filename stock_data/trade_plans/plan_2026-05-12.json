@@ -1,0 +1,331 @@
+{
+  "generated_at": "2026-05-11 15:40",
+  "for_date": "2026-05-12",
+  "market_outlook": {
+    "date": "2026-05-11",
+    "next_trading_day": "2026-05-12",
+    "today_market": {
+      "close": 4179.952,
+      "pct_chg": -0.0,
+      "trend": "多头排列",
+      "volume_state": "正常",
+      "sentiment": "偏弱",
+      "volatility": 0.73
+    },
+    "can_open_new": true,
+    "restrictions": [],
+    "watch_notes": [
+      "多头排列 — 持仓可适当延长"
+    ]
+  },
+  "positions": [
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "qty": 2000,
+      "cost": 37.28,
+      "close": 39.09,
+      "market_value": 78180.0,
+      "pnl_pct": 4.86,
+      "pnl_amount": 3620.0,
+      "hold_days": 11,
+      "sector": "电子元器件分销",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 40.26",
+          "action": "超时11天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 39.48 ~ 40.26",
+          "action": "超时11天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 38.70 ~ 39.48",
+          "action": "超时11天 → 强制清仓"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 37.92 ~ 38.70",
+          "action": "超时11天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 37.92 或触及硬止损34.67",
+          "action": "超时11天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 34.67,
+        "soft_stop": 36.16,
+        "take_profit_half": 40.26,
+        "take_profit_all": 42.87,
+        "trail_activate": 39.14
+      },
+      "priority": "正常",
+      "trail_active": false,
+      "danger_zone": false
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "qty": 2200,
+      "cost": 49.77,
+      "close": 61.22,
+      "market_value": 134684.0,
+      "pnl_pct": 23.01,
+      "pnl_amount": 25190.0,
+      "hold_days": 14,
+      "sector": "半导体封测",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 63.06",
+          "action": "超时14天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 61.83 ~ 63.06",
+          "action": "超时14天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 60.61 ~ 61.83",
+          "action": "全部止盈，不犹豫"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 59.38 ~ 60.61",
+          "action": "超时14天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 59.38 或触及硬止损46.29",
+          "action": "超时14天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 46.29,
+        "soft_stop": 48.28,
+        "take_profit_half": 53.75,
+        "take_profit_all": 57.24,
+        "trail_activate": 52.26,
+        "trail_stop": 59.38
+      },
+      "priority": "正常",
+      "trail_active": true,
+      "danger_zone": false
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "qty": 400,
+      "cost": 36.28,
+      "close": 39.9,
+      "market_value": 15960.0,
+      "pnl_pct": 9.98,
+      "pnl_amount": 1448.0,
+      "hold_days": 11,
+      "sector": "半导体划片设备",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 41.10",
+          "action": "超时11天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 40.30 ~ 41.10",
+          "action": "超时11天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 39.50 ~ 40.30",
+          "action": "止盈一半，剩余设移动止损"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 38.70 ~ 39.50",
+          "action": "超时11天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 38.70 或触及硬止损33.74",
+          "action": "超时11天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 33.74,
+        "soft_stop": 35.19,
+        "take_profit_half": 39.18,
+        "take_profit_all": 41.72,
+        "trail_activate": 38.09,
+        "trail_stop": 38.7
+      },
+      "priority": "正常",
+      "trail_active": true,
+      "danger_zone": false
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "qty": 600,
+      "cost": 36.25,
+      "close": 36.25,
+      "market_value": 21750.0,
+      "pnl_pct": 0.0,
+      "pnl_amount": 0.0,
+      "hold_days": 5,
+      "sector": "锂电化工",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 37.34",
+          "action": "大幅高开不追，已持有的话设好止损继续持有"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 36.61 ~ 37.34",
+          "action": "持有，设好止损单即可"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 35.89 ~ 36.61",
+          "action": "危险区+微利 → 至少止盈一半"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 35.16 ~ 35.89",
+          "action": "开盘30分钟不翻红则清仓"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 35.16 或触及硬止损33.71",
+          "action": "开盘即砍半仓，剩余设-3%止损"
+        }
+      ],
+      "levels": {
+        "hard_stop": 33.71,
+        "soft_stop": 35.16,
+        "take_profit_half": 39.15,
+        "take_profit_all": 41.69,
+        "trail_activate": 38.06
+      },
+      "priority": "关注",
+      "trail_active": false,
+      "danger_zone": true,
+      "danger_day": 5,
+      "danger_rule": "浮亏即清仓, 微利(<2%)也减半"
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "qty": 200,
+      "cost": 64.56,
+      "close": 64.56,
+      "market_value": 12912.0,
+      "pnl_pct": 0.0,
+      "pnl_amount": 0.0,
+      "hold_days": 3,
+      "sector": "商业航天/军工",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 66.50",
+          "action": "大幅高开不追，已持有的话设好止损继续持有"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 65.21 ~ 66.50",
+          "action": "持有，设好止损单即可"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 63.91 ~ 65.21",
+          "action": "危险区+微利 → 至少止盈一半"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 62.62 ~ 63.91",
+          "action": "开盘30分钟不翻红则清仓"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 62.62 或触及硬止损60.04",
+          "action": "开盘即砍半仓，剩余设-3%止损"
+        }
+      ],
+      "levels": {
+        "hard_stop": 60.04,
+        "soft_stop": 62.62,
+        "take_profit_half": 69.72,
+        "take_profit_all": 74.24,
+        "trail_activate": 67.79
+      },
+      "priority": "关注",
+      "trail_active": false,
+      "danger_zone": true,
+      "danger_day": 3,
+      "danger_rule": "浮亏即清仓, 微利(<2%)也减半"
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "qty": 100,
+      "cost": 29.72,
+      "close": 30.29,
+      "market_value": 3029.0,
+      "pnl_pct": 1.92,
+      "pnl_amount": 57.0,
+      "hold_days": 18,
+      "sector": "PCB/电子",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 31.20",
+          "action": "超时18天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 30.59 ~ 31.20",
+          "action": "超时18天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 29.99 ~ 30.59",
+          "action": "超时18天 → 强制清仓"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 29.38 ~ 29.99",
+          "action": "超时18天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 29.38 或触及硬止损27.64",
+          "action": "超时18天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 27.64,
+        "soft_stop": 28.83,
+        "take_profit_half": 32.1,
+        "take_profit_all": 34.18,
+        "trail_activate": 31.21
+      },
+      "priority": "正常",
+      "trail_active": false,
+      "danger_zone": false
+    }
+  ],
+  "summary": {
+    "total_cost": 236200.0,
+    "total_value": 266515.0,
+    "total_pnl": 30315.0,
+    "total_pnl_pct": 12.83,
+    "emergency_count": 0,
+    "can_open_new": true
+  }
+}

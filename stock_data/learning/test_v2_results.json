@@ -1,0 +1,28 @@
+{
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    "[PASS] v2 日摘要: 14/14",
+    "[PASS] 周期一致性: 前5天1个不同阶段",
+    "[PASS] 比率快照: 每天8个比率",
+    "[PASS] 预期差分析: 每天至少1个维度",
+    "[PASS] 规则凝练: 17 条达标",
+    "[PASS] ego_challenge: 2/14 天",
+    "[PASS] 周审计: 3 份",
+    "[PASS] 所有数据文件完整",
+    "[PASS] 零系统错误"
+  ],
+  "warnings": [
+    "本周 ego_challenge 全部为空 — 框架可能在自循环验证",
+    "重复错误模式: 1 个",
+    "重复错误模式: 1 个"
+  ],
+  "results_summary": {
+    "stages_distribution": {
+      "启动": 14
+    },
+    "total_rules_condensed": 17,
+    "total_ego_challenges": 2,
+    "total_audits": 3
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "title": "收盘复盘 | 2026-05-11日",
+  "date": "2026-05-11",
+  "time": "15:38:31",
+  "is_trading_hours": false,
+  "holdings_report": {
+    "holdings": [
+      {
+        "code": "000062",
+        "name": "深圳华强",
+        "sector": "电子元器件分销",
+        "shares": 2000,
+        "cost": 37.28,
+        "price": 37.28,
+        "high": 37.28,
+        "low": 37.28,
+        "change_pct": 0,
+        "volume": 0,
+        "turnover": 0,
+        "pnl_pct": 0.0,
+        "pnl_amt": 0.0,
+        "position_value": 74560.0,
+        "stop_loss": 35.42,
+        "dist_to_stop": 4.99,
+        "status": "🟡 微利"
+      },
+      {
+        "code": "002156",
+        "name": "通富微电",
+        "sector": "半导体封测",
+        "shares": 2200,
+        "cost": 49.77,
+        "price": 49.77,
+        "high": 49.77,
+        "low": 49.77,
+        "change_pct": 0,
+        "volume": 0,
+        "turnover": 0,
+        "pnl_pct": 0.0,
+        "pnl_amt": 0.0,
+        "position_value": 109494.0,
+        "stop_loss": 47.28,
+        "dist_to_stop": 5.0,
+        "status": "🟡 微利"
+      },
+      {
+        "code": "300480",
+        "name": "光力科技",
+        "sector": "半导体划片设备",
+        "shares": 400,
+        "cost": 36.28,
+        "price": 36.28,
+        "high": 36.28,
+        "low": 36.28,
+        "change_pct": 0,
+        "volume": 0,
+        "turnover": 0,
+        "pnl_pct": 0.0,
+        "pnl_amt": 0.0,
+        "position_value": 14512.0,
+        "stop_loss": 34.47,
+        "dist_to_stop": 4.99,
+        "status": "🟡 微利"
+      },
+      {
+        "code": "002407",
+        "name": "多氟多",
+        "sector": "锂电化工",
+        "shares": 600,
+        "cost": 36.25,
+        "price": 36.25,
+        "high": 36.25,
+        "low": 36.25,
+        "change_pct": 0,
+        "volume": 0,
+        "turnover": 0,
+        "pnl_pct": 0.0,
+        "pnl_amt": 0.0,
+        "position_value": 21750.0,
+        "stop_loss": 34.44,
+        "dist_to_stop": 4.99,
+        "status": "🟡 微利"
+      },
+      {
+        "code": "300342",
+        "name": "天银机电",
+        "sector": "商业航天/军工电子",
+        "shares": 200,
+        "cost": 64.56,
+        "price": 64.56,
+        "high": 64.56,
+        "low": 64.56,
+        "change_pct": 0,
+        "volume": 0,
+        "turnover": 0,
+        "pnl_pct": 0.0,
+        "pnl_amt": 0.0,
+        "position_value": 12912.0,
+        "stop_loss": 61.33,
+        "dist_to_stop": 5.0,
+        "status": "🟡 微利"
+      },
+      {
+        "code": "300739",
+        "name": "明阳电路",
+        "sector": "PCB/电子",
+        "shares": 100,
+        "cost": 29.72,
+        "price": 29.72,
+        "high": 29.72,
+        "low": 29.72,
+        "change_pct": 0,
+        "volume": 0,
+        "turnover": 0,
+        "pnl_pct": 0.0,
+        "pnl_amt": 0.0,
+        "position_value": 2972.0,
+        "stop_loss": 28.23,
+        "dist_to_stop": 5.01,
+        "status": "🟡 微利"
+      }
+    ],
+    "total_value": 236200.0,
+    "total_cost": 236200.0,
+    "total_pnl": 0.0,
+    "total_pnl_pct": 0.0
+  },
+  "market_context": {
+    "indices": [],
+    "breadth": {}
+  },
+  "hot_sectors": [],
+  "actions": [
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "action": "关注",
+      "detail": "距止损位5.0%，监控是否企稳",
+      "urgency": "medium"
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "action": "关注",
+      "detail": "距止损位5.0%，监控是否企稳",
+      "urgency": "medium"
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "action": "关注",
+      "detail": "距止损位5.0%，监控是否企稳",
+      "urgency": "medium"
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "action": "关注",
+      "detail": "距止损位5.0%，监控是否企稳",
+      "urgency": "medium"
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "action": "关注",
+      "detail": "距止损位5.0%，监控是否企稳",
+      "urgency": "medium"
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "action": "关注",
+      "detail": "距止损位5.0%，监控是否企稳",
+      "urgency": "medium"
+    }
+  ],
+  "mcp_checklist": {
+    "fund_flow_check": [
+      {
+        "code": "000062",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "002156",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "300480",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "002407",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "300342",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "300739",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      }
+    ],
+    "volume_price_phase": [
+      {
+        "code": "000062",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "002156",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "300480",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "002407",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "300342",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "300739",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      }
+    ],
+    "investor_sentiment": [
+      {
+        "code": "000062",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "002156",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "300480",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "002407",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "300342",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "300739",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      }
+    ]
+  }
+}

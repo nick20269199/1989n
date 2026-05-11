@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-05-11 04:33:58",
+  "summary": {
+    "fixed": {
+      "total_pnl": 32628.54,
+      "avg_pnl": 8.55,
+      "wins": 1791,
+      "losses": 2026,
+      "win_rate": 46.9
+    },
+    "prob": {
+      "total_pnl": 347025.55,
+      "avg_pnl": 90.92,
+      "wins": 1791,
+      "losses": 2026,
+      "win_rate": 46.9
+    },
+    "adaptive": {
+      "total_pnl": 189972.36,
+      "avg_pnl": 49.77,
+      "wins": 1791,
+      "losses": 2026,
+      "win_rate": 46.9
+    }
+  }
+}

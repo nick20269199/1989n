@@ -1,0 +1,119 @@
+{
+  "date": "2026-05-11",
+  "time": "09:54:23",
+  "us_market": {
+    "indices": [
+      {
+        "name": "道琼斯",
+        "price": 49609.1602,
+        "change_pct": 0.02,
+        "date": "2026-05-08"
+      },
+      {
+        "name": "纳斯达克",
+        "price": 26247.0762,
+        "change_pct": 1.71,
+        "date": "2026-05-08"
+      },
+      {
+        "name": "标普500",
+        "price": 7398.9302,
+        "change_pct": 0.84,
+        "date": "2026-05-08"
+      }
+    ],
+    "sector_leaders": [
+      {
+        "name": "AMD",
+        "ticker": "105.AMD",
+        "concept": "半导体封测/CPU",
+        "price": 455.19,
+        "change_pct": 11.44
+      }
+    ],
+    "timestamp": "2026-05-11 09:54"
+  },
+  "holding_impact": [
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "sector": "电子元器件分销",
+      "direction": "略多",
+      "news_count": 0,
+      "leader_signals": [],
+      "key_news": [],
+      "us_tailwind": "科技股强势"
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "sector": "半导体封测",
+      "direction": "略多",
+      "news_count": 0,
+      "leader_signals": [
+        "AMD +11.4%"
+      ],
+      "key_news": [
+        "美股: AMD +11.4%"
+      ],
+      "us_tailwind": "科技股强势"
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "sector": "半导体划片设备",
+      "direction": "略多",
+      "news_count": 0,
+      "leader_signals": [],
+      "key_news": [],
+      "us_tailwind": "科技股强势"
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "sector": "锂电化工",
+      "direction": "中性",
+      "news_count": 0,
+      "leader_signals": [],
+      "key_news": [],
+      "us_tailwind": ""
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "sector": "商业航天/军工电子",
+      "direction": "中性",
+      "news_count": 0,
+      "leader_signals": [],
+      "key_news": [],
+      "us_tailwind": ""
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "sector": "PCB/电子",
+      "direction": "略多",
+      "news_count": 0,
+      "leader_signals": [],
+      "key_news": [],
+      "us_tailwind": "科技股强势"
+    }
+  ],
+  "announcements": {
+    "contracts": [
+      {
+        "title": "投资日历：周一资本市场大事提醒",
+        "time": "2026-05-11 07:37:20"
+      }
+    ],
+    "decreases": [],
+    "lockup": [
+      {
+        "title": "A股限售股解禁一览：136.79亿元市值限售股今日解禁",
+        "time": "2026-05-11 07:31:37"
+      }
+    ],
+    "unusual": []
+  },
+  "my_news_count": 0
+}

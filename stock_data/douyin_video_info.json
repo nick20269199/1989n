@@ -1,0 +1,39 @@
+[
+  {
+    "index": 0,
+    "src": "",
+    "currentSrc": "https://v11-weba.douyinvod.com/2eb932eb3a7d918e0dda080558adb1d7/69feddf1/video/tos/cn/tos-cn-ve-15/o4YA05w0AoLB1eaT7EpCBHgCgEESIQF8NvLefD/?a=6383&br=300&bt=300&btag=c0000e00030000&cd=0%7C0%7C0%7C3&ch=26&cquery=100H_100K_100o_100w_100B&cr=3&cs=0&cv=1&dr=0&ds=4&dy_q=1778299535&feature_id=37f92ebd2877ae8e7eba995d406c5150&ft=AJkeU_TERR0si0C4kDg2Nc0iPMgzbLuTTy-U_4bP~U2JNv7TGW&l=2026050912053590E6AE5B1A9D3D615CBA&lr=all&mime_type=video_mp4&qs=0&rc=NjM0ZzM6Njk5ODZmMzRpZkBpanMzZ3g5cndvOjMzNGkzM0BjMDA1X2MyX2IxYmFjMTUuYSNoYzFoMmQ0MnFhLS1kLWFzcw%3D%3D&temp=1&__vid=7636793427128044834",
+    "duration": 306.131882
+  },
+  {
+    "index": 1,
+    "src": "",
+    "currentSrc": "",
+    "duration": NaN
+  },
+  {
+    "index": "source_0",
+    "src": "https://v11-weba.douyinvod.com/2eb932eb3a7d918e0dda080558adb1d7/69feddf1/video/tos/cn/tos-cn-ve-15/o4YA05w0AoLB1eaT7EpCBHgCgEESIQF8NvLefD/?a=6383&br=300&bt=300&btag=c0000e00030000&cd=0%7C0%7C0%7C3&ch=26&cquery=100H_100K_100o_100w_100B&cr=3&cs=0&cv=1&dr=0&ds=4&dy_q=1778299535&feature_id=37f92ebd2877ae8e7eba995d406c5150&ft=AJkeU_TERR0si0C4kDg2Nc0iPMgzbLuTTy-U_4bP~U2JNv7TGW&l=2026050912053590E6AE5B1A9D3D615CBA&lr=all&mime_type=video_mp4&qs=0&rc=NjM0ZzM6Njk5ODZmMzRpZkBpanMzZ3g5cndvOjMzNGkzM0BjMDA1X2MyX2IxYmFjMTUuYSNoYzFoMmQ0MnFhLS1kLWFzcw%3D%3D&temp=1&__vid=7636793427128044834",
+    "type": ""
+  },
+  {
+    "index": "source_1",
+    "src": "https://v26-web.douyinvod.com/32e4778de2ccc5104f92e59aa8db82c2/69feddf1/video/tos/cn/tos-cn-ve-15/o4YA05w0AoLB1eaT7EpCBHgCgEESIQF8NvLefD/?a=6383&br=300&bt=300&btag=c0000e00030000&cd=0%7C0%7C0%7C3&ch=26&cquery=100K_100o_100w_100B_100H&cr=3&cs=0&cv=1&dr=0&ds=4&dy_q=1778299535&feature_id=37f92ebd2877ae8e7eba995d406c5150&ft=AJkeU_TERR0si0C4kDg2Nc0iPMgzbLuTTy-U_4bP~U2JNv7TGW&l=2026050912053590E6AE5B1A9D3D615CBA&lr=all&mime_type=video_mp4&qs=0&rc=NjM0ZzM6Njk5ODZmMzRpZkBpanMzZ3g5cndvOjMzNGkzM0BjMDA1X2MyX2IxYmFjMTUuYSNoYzFoMmQ0MnFhLS1kLWFzcw%3D%3D&temp=1&__vid=7636793427128044834",
+    "type": ""
+  },
+  {
+    "index": "source_2",
+    "src": "https://www.douyin.com/aweme/v1/play/?file_id=1c8f41f0dce345e6b653f7b08d3130f3&is_play_url=1&line=0&sign=1b0863a81a0ff7585ab543df32383fb4&source=PackSourceEnum_AWEME_DETAIL&uifid=c4a29131752d59acb78af076c3dbdd52744118e38e80b4b96439ef1e20799db052c23f321f52a919b8f8516050fc6900ad7877df3016e3588907ebb746897c9c2e659cb1c0f259d96492ad1e9df0ffe2&video_id=v0d00fg10000d7tl5t7og65ukd40fpkg&aid=6383&__vid=7636793427128044834",
+    "type": ""
+  },
+  {
+    "index": "source_3",
+    "src": "",
+    "type": "image/avif"
+  },
+  {
+    "index": "source_4",
+    "src": "",
+    "type": "image/webp"
+  }
+]

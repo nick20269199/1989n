@@ -1,0 +1,111 @@
+<!DOCTYPE html><html dark="true" is-chrome="true"><head><link rel="dns-prefetch" href="//v3-web.douyinvod.com"><link rel="dns-prefetch" href="//v26-web.douyinvod.com"><link rel="dns-prefetch" href="//p-pc-weboff.byteimg.com"><link rel="dns-prefetch" href="//lf-douyin-pc-web.douyinstatic.com"><link rel="dns-prefetch" href="//v11-web-prime.douyinvod.com"><link rel="dns-prefetch" href="//v26-web-prime.douyinvod.com"><link rel="dns-prefetch" href="//v95-web-sz.douyinvod.com"><link rel="shortcut icon" href="//p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/favicon.png" type="image/x-icon"><link rel="apple-touch-icon" href="https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png"><link rel="apple-touch-startup-image" href="https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png"><meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/2025_0313_logo.png"><meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=no,viewport-fit=cover"><script nonce="">var mark = function(tag) { typeof window !== undefined && window.performance && performance.mark && performance.mark(tag) }</script><script nonce="">mark('head_start')</script><script nonce="">mark('script_slardar_start')</script><script nonce="">
+              (function (w, d, u, b, n, pc, ga, ae, po, s, p, e, t, pp) {pc = 'precollect';ga
+              = 'getAttribute';ae = 'addEventListener';po = 'PerformanceObserver';s = function
+              (m) {p = [].slice.call(arguments);p.push(Date.now(), location.href);(m == pc ?
+              s.p.a : s.q).push(p)};s.q = [];s.p = { a: [] };w[n] = s;e =
+              document.createElement('script');e.src = u + '?bid=' + b + '&globalName=' +
+              n;e.crossOrigin = u.indexOf('sdk-web') > 0 ? 'anonymous' :
+              'use-credentials';d.getElementsByTagName('head')[0].appendChild(e);if (ae in w)
+              {s.pcErr = function (e) {e = e || w.event;t = e.target || e.srcElement;if (t
+              instanceof Element || t instanceof HTMLElement) {if (t[ga]('integrity'))
+              {w[n](pc, 'sri', t[ga]('href') || t[ga]('src'))} else {w[n](pc, 'st', { tagName:
+              t.tagName, url: t[ga]('href') || t[ga]('src') })}} else {w[n](pc, 'err', e.error)}};s.pcRej = function (e) {e = e || w.event;w[n](pc, 'reject',
+              e.reason || (e.detail && e.detail.reason))};w[ae]('error', s.pcErr,
+              true);w[ae]('unhandledrejection', s.pcRej,
+              true);};if('PerformanceLongTaskTiming' in w) {pp = s.pp = { entries: []
+              };pp.observer = new PerformanceObserver(function (l) {pp.entries =
+              pp.entries.concat(l.getEntries())});pp.observer.observe({ entryTypes:
+              ['longtask']
+              })}})(window,document,'https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js','douyin_web','Slardar')
+            </script><script src="https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js?bid=douyin_web&amp;globalName=Slardar" crossorigin="anonymous"></script><script nonce="">(function(e) {
+    let { env: t, release: a } = e;
+    console.log("init slardar");
+    Slardar("init", {
+        bid: "douyin_web",
+        env: t,
+        release: a,
+        plugins: {
+            fmp: false,
+            tti: false,
+            blankScreen: {
+                screenshot: false,
+                threshold: 1.5
+            },
+            pageview: {
+                routeMode: "history",
+                extractPid () {
+                    let e = [
+                        "/follow",
+                        "/friend",
+                        "/jingxuan",
+                        "/user",
+                        "/video",
+                        "/collection",
+                        "/hot",
+                        "/vsdetail",
+                        "/lvdetail",
+                        "/hashtag",
+                        "/htmlmap",
+                        "/light",
+                        "/music",
+                        "/note",
+                        "/musicplaylist",
+                        "/zhuanti",
+                        "/topic",
+                        "/mall/item",
+                        "/wallpaper",
+                        "/channel",
+                        "/shipin",
+                        "/creatorvideo",
+                        "/series"
+                    ];
+                    if (-1 !== location.pathname.indexOf("/search/")) try {
+                        let e = new URLSearchParams(location.search).get("type");
+                        let t = [
+                            "general",
+                            "video",
+                            "user",
+                            "live"
+                        ];
+                        if (-1 !== t.indexOf(e)) return `/search/${e}`;
+                        return "/search/general";
+                    } catch (e) {
+                        return "/search/general";
+                    }
+                    else if (-1 !== location.pathname.indexOf("/live/")) try {
+                        let e = location.pathname.split("/") || [];
+                        let t = e.slice(0, e.length - 1).join("/");
+                        return t;
+                    } catch (e) {
+                        return "douyin/live";
+                    }
+                    for(let t = 0; t < e.length; t++)if (-1 !== location.pathname.indexOf(e[t])) return e[t];
+                    return location.pathname;
+                }
+            },
+            action: {
+                types: [
+                    "click"
+                ]
+            },
+            performance: {
+                longtask: true
+            },
+            ajax: {
+                ignoreUrls: [
+                    "https://mcs.zijieapi.com/list"
+                ]
+            }
+        }
+    });
+    Slardar("start");
+    console.log("init slardar success");
+})({"env":"production","release":"1.0.8.9295"});
+</script><script nonce="">mark('script_slardar_end')</script><script nonce="">
+              if (!/(awemePcClient)|(electron)/i.test(navigator.userAgent)) {
+                  window.JS2NativeBridge = {
+                      _invokeMethod(){}
+                  }
+              }
+            </script><script nonce="">mark('script_asset_retry_start')</script><script id="inline-asset-retry" crossorigin="anonymous" nonce="">(function () {
+  !function (e, r) { "object" == typeof exports && "undefined" != typeof module ? module.exports = r() : "function" == typeof define && define.amd ? define(r) : (e = "undefined" != typeof globalThis ? globalThis : e || self).edenAssetsRetryRuntime = r() }(this, (function () { "use strict"; var e, r = function (e, r) { return e(r = { exports: {} }, r.exports), r.exports }((function (e, r) { function n(e) { return (n = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) { return typeof e } : function (e) { return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e })(e) } function t(e, r) { for (var n = 0; n < e.length; n++)if (r(e[n], n, e)) return n; return -1 } function o(e, r) { var n = t(e, r); return -1 === n ? void 0 : e[n] } function i(e, r, n) { for (var t = n || 0; t < e.length; t++)if (e[t] === r) return !0; return !1 } Object.defineProperty(r, "__esModule", { value: !0 }); var a = function (e) { for (var r = Array.prototype.slice.apply(arguments, [1]), n = 0; n < r.length; n++) { var t = r[n]; for (var o in t) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]) } return e }; function c(e) { var r = []; for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && r.push(n); return r } function s(e) { return "Object" === Object.prototype.toString.call(e).replace(/\[\w+\s?(\w+)\]/, (function () { return Array.prototype.slice.apply(arguments)[1] })) } var f = /[\:|\/]/, u = { removeCrossOrigin: !0, tagType: ["script", "link", "img"], defer: !1, href: ["ORIGINAL_HREF"], onRetry: function (e) { return e.assetRetryOption } }; function d(e) { var r = c(e); return !!r.length && r.some((function (r) { return "object" === n(e[r]) && !Array.isArray(e[r]) })) } function l(e) { return Array.isArray(e) ? e : [e] } function y(e) { return e.map((function (e) { return f.test(e) ? e : "" })).filter((function (e) { return Boolean(e) })) } function p(e) { if (o = e, Boolean(o.domain) && Boolean(o.href)) throw new Error("闂佺偨鍎茬粭涔篹f闂佺偨鍎婚幏锟� and 闂佺偨鍎茬粩绔渕ain闂佺偨鍎婚幏锟� cannot exist at the same time!"); var r, n, t, o, s = e.href, f = e.domain; if (s || f || (e.href = ["ORIGINAL_HREF"], e.retryLimitPerHref = e.retryLimitPerHref || 3), s) { var d = l(s); e.href = d.length ? d : ["ORIGINAL_HREF"], e.retryLimitPerHref = e.retryLimitPerHref || 3 } if (f) { var y = l(f); e.domain = y.length ? y : ["ORIGINAL_DOMAIN"], e.retryLimitPerDomain = e.retryLimitPerDomain || 3 } return a({}, (r = {}, void 0 === (t = ["href"]) && (t = []), c(n = u).forEach((function (e) { i(t, e) || (r[e] = n[e]) })), r), e) } r.DEFAULT_OPTIONS = u, r.DOMAIN_REG = f, r.ORIGINAL_DOMAIN = "ORIGINAL_DOMAIN", r.ORIGINAL_HREF = "ORIGINAL_HREF", r.RETRY_LIMIT_PER_DOMAIN = 3, r.RETRY_LIMIT_PER_HREF = 3, r.addRetryTime = function (e, r) { e[r] ? e[r] = e[r] + 1 : e[r] = 1 }, r.arrayFind = o, r.arrayFindIndex = t, r.arrayFrom = function (e) { return Array.prototype.slice.apply(e) }, r.arrayIncludes = i, r.getCurrentRetryOptions = function (e, r, n) { var t, o; void 0 === n && (n = !0); var i = ""; if (d(e)) { for (var c in e) if (Object.prototype.hasOwnProperty.call(e, c) && new RegExp(c, "i").test(r)) { o = a({}, e[c]), i = c; break } } else o = a({}, e); var s = function (e) { return Array.isArray(e) ? e : [e] }; if (o) { var f = function (e, n, t) { return s(e).map((function (e) { var o; return e === n && "undefined" != typeof window ? (r.match(t) || [])[1] || (null === (o = window.location) || void 0 === o ? void 0 : o.hostname) : e })) }; if (o.href) o.href = n ? f(o.href, "ORIGINAL_HREF", /([\s\S]*)/) : s(o.href), o.href = o.href.length ? o.href : [r]; else { var u = /https?:\/\/([^\/]*)/; console.log("hhhh", o.href); o.domain = n ? f(o.domain, "ORIGINAL_DOMAIN", u) : s(o.domain); var l = r.match(u) || []; o.domain = o.domain.length ? o.domain : [l[1] || (null === (t = window.location) || void 0 === t ? void 0 : t.hostname)] } } return { currentOptions: o, currentResourceReg: i } }, r.getNextRetryReplaceValue = function (e, r) { return o(r, (function (r) { return !e.firedDomain.some((function (e) { return e === r })) })) }, r.getRetryReplaceValue = function (e, r) { return o(r, (function (r) { return -1 !== e.indexOf(r) })) }, r.isAllReplaceValueListRetried = function (e, r, n) { for (var t = 0; t < e.length; t++) { var o = r[e[t]]; if (!o) return !1; if (o < n) return !1 } return !0 }, r.isResourceOptions = d, r.kebabcase = function (e) { for (var r = "", n = function (e) { return "-" !== e }, t = 0; t < e.length; t++) { var o = e[t], i = r[t - 1] || ""; /([A-Z])/.test(o) ? r += 0 === t ? o.toLowerCase() : "".concat(n(i) ? "-" : "").concat(o.toLowerCase()) : /_/.test(o) && t !== e.length - 1 && n(i) ? r += "-" : r += o } return r }, r.objectAssign = a, r.objectGet = function (e, r) { if ("string" == typeof r) for (var n = r.split("."), t = n.length, o = e, i = 0; i < t; i++) { if (!s(o)) return; if (o = o[n[i]], i === t - 1) return o } }, r.objectKeys = c, r.transformPluginOptions = function (e) { if (e.domain && e.href) throw new Error("闂佺偨鍎茬粭涔篹f闂佺偨鍎婚幏锟� and 闂佺偨鍎茬粩绔渕ain闂佺偨鍎婚幏锟� cannot exist at the same time!"); var r, n = [], t = c(e); if (d(e) ? (r = {}, t.forEach((function (t) { r[t] = p(e[t]), n.push.apply(n, y(e[t].domain || [])) }))) : (r = p(e), n.push.apply(n, y(e.domain || []))), n.length) throw new Error("Invalid domains as follows: \n".concat(n.join("\n"), '\n Maybe you want to use "href" instead of "domain".')); return r } })); (e = r) && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") && e.default, r.DEFAULT_OPTIONS, r.DOMAIN_REG, r.ORIGINAL_DOMAIN, r.ORIGINAL_HREF, r.RETRY_LIMIT_PER_DOMAIN, r.RETRY_LIMIT_PER_HREF; var n = r.addRetryTime; r.arrayFind, r.arrayFindIndex, r.arrayFrom, r.arrayIncludes; var t = r.getCurrentRetryOptions, o = r.getNextRetryReplaceValue, i = r.getRetryReplaceValue, a = r.isAllReplaceValueListRetried; r.isResourceOptions; var c = r.kebabcase, s = r.objectAssign; r.objectGet; var f = r.objectKeys; r.transformPluginOptions; var u = { script: HTMLScriptElement, link: HTMLLinkElement, img: HTMLImageElement }; function d(e) { var r = {}; window.EDEN_ASYNC_WEBPACK_SCRIPT_NAMES = {}, window.MINI_CSS_EXTRACT_ASYNC_LINK_COMPLETE = {}, function (e, r) { if (!e) return console.error("Can't found window"), !1; e.addEventListener("error", (function (e) { e instanceof ErrorEvent || r(e) }), !0) }(window, (function (d) { var l, y, p; if (d) { var m = d.target || d.srcElement; if (m) { var R, A = (R = m) instanceof HTMLScriptElement || R instanceof HTMLImageElement ? R.src : R instanceof HTMLLinkElement && "string" == typeof R.href && /\.css$/.test(R.href) ? R.href : null; if (A && !f(window.EDEN_ASYNC_WEBPACK_SCRIPT_NAMES).some((function (e) { return -1 !== A.indexOf(e) }))) { var h = (null === (l = m.dataset) || void 0 === l ? void 0 : l.edenRetryOrigin) || A, E = t(e, h), v = E.currentOptions, O = E.currentResourceReg; if (v) { var I = Boolean(v.href); if (function (e) { var r = e; Array.isArray(e) || (r = [e]); var n = []; return r.forEach((function (e) { n.push(u[e]) })), n }(v.tagType).some((function (e) { return m instanceof e }))) { var _ = null === (y = m.dataset) || void 0 === y ? void 0 : y.edenRetryEnd; if (!(_ = !0 === _ || "true" === _)) { var g = Boolean(null === (p = m.dataset) || void 0 === p ? void 0 : p.edenAsyncAsset) || m.async || m.defer, L = I ? v.href : v.domain, C = i(A, L); if (C) { var T, M = null; r[h] || (r[h] = { retryMap: {}, currentReplaceValue: C, removeCrossOrigin: v.removeCrossOrigin, firedDomain: [] }), M = r[h], n(M.retryMap, C), M.firedDomain.push(C), (T = o(M, L)) || (T = M.firedDomain[0], M.firedDomain = [], M.removeCrossOrigin = !0); var w, N, b, S = {}; S.src = A.replace(C, T), S.edenRetryOrigin = h, a(L, M.retryMap, I ? v.retryLimitPerHref : v.retryLimitPerDomain) && (S.edenRetryEnd = !0), g && (S.edenAsyncAsset = !0), (null == m ? void 0 : m.dataset.edenWebpackAsyncAsset) && (S.edenWebpackAsyncAsset = !0, S.edenWebpackAsyncChunkid = m.dataset.edenWebpackAsyncChunkid), M.removeCrossOrigin || g || (S.crossOrigin = "anonymous"), function (e, r, n, t) { if (e instanceof HTMLScriptElement) if (n) { var o = document.createRange().createContextualFragment(t); r.edenWebpackAsyncAsset ? (o.firstChild.onload = window.WEBPACK_ASYNC_SCRIPT_COMPLETE[r.edenWebpackAsyncChunkid], r.edenRetryEnd && (o.firstChild.onerror = window.WEBPACK_ASYNC_SCRIPT_COMPLETE[r.edenWebpackAsyncChunkid]), document.head.appendChild(o)) : (r.edenDeferRetry, document.body && doc

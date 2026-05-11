@@ -1,0 +1,408 @@
+{
+  "update_time": "2026-05-08 06:11:11",
+  "sentiment_index": 64.1,
+  "level": "NORMAL",
+  "description": "上涨比例64.1% | 涨停100家 跌停4家 | 大肉76.0 大面3.0",
+  "history": [
+    {
+      "date": "2026-03-09",
+      "sentiment_index": 26.0,
+      "up_pct": 25.96,
+      "limit_up_count": 41,
+      "limit_down_count": 4,
+      "big_meat_sentiment": 29.0,
+      "big_noodle_sentiment": 5.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-03-10",
+      "sentiment_index": 82.8,
+      "up_pct": 82.79,
+      "limit_up_count": 56,
+      "limit_down_count": 2,
+      "big_meat_sentiment": 28.0,
+      "big_noodle_sentiment": 0.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-03-11",
+      "sentiment_index": 37.6,
+      "up_pct": 37.58,
+      "limit_up_count": 51,
+      "limit_down_count": 1,
+      "big_meat_sentiment": 38.0,
+      "big_noodle_sentiment": 1.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-03-12",
+      "sentiment_index": 27.2,
+      "up_pct": 27.25,
+      "limit_up_count": 52,
+      "limit_down_count": 2,
+      "big_meat_sentiment": 38.0,
+      "big_noodle_sentiment": 2.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-03-13",
+      "sentiment_index": 27.4,
+      "up_pct": 27.4,
+      "limit_up_count": 54,
+      "limit_down_count": 12,
+      "big_meat_sentiment": 45.0,
+      "big_noodle_sentiment": 7.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-03-16",
+      "sentiment_index": 51.9,
+      "up_pct": 51.88,
+      "limit_up_count": 41,
+      "limit_down_count": 6,
+      "big_meat_sentiment": 33.0,
+      "big_noodle_sentiment": 6.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-03-17",
+      "sentiment_index": 15.8,
+      "up_pct": 15.83,
+      "limit_up_count": 37,
+      "limit_down_count": 10,
+      "big_meat_sentiment": 29.0,
+      "big_noodle_sentiment": 10.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-03-18",
+      "sentiment_index": 64.9,
+      "up_pct": 64.87,
+      "limit_up_count": 54,
+      "limit_down_count": 3,
+      "big_meat_sentiment": 39.0,
+      "big_noodle_sentiment": 2.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-03-19",
+      "sentiment_index": 9.2,
+      "up_pct": 9.22,
+      "limit_up_count": 27,
+      "limit_down_count": 4,
+      "big_meat_sentiment": 18.0,
+      "big_noodle_sentiment": 5.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-03-20",
+      "sentiment_index": 12.1,
+      "up_pct": 12.08,
+      "limit_up_count": 27,
+      "limit_down_count": 11,
+      "big_meat_sentiment": 20.0,
+      "big_noodle_sentiment": 12.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-03-23",
+      "sentiment_index": 5.6,
+      "up_pct": 5.56,
+      "limit_up_count": 26,
+      "limit_down_count": 69,
+      "big_meat_sentiment": 16.0,
+      "big_noodle_sentiment": 32.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-03-24",
+      "sentiment_index": 93.7,
+      "up_pct": 93.71,
+      "limit_up_count": 77,
+      "limit_down_count": 1,
+      "big_meat_sentiment": 45.0,
+      "big_noodle_sentiment": 1.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-03-25",
+      "sentiment_index": 88.9,
+      "up_pct": 88.91,
+      "limit_up_count": 82,
+      "limit_down_count": 1,
+      "big_meat_sentiment": 52.0,
+      "big_noodle_sentiment": 2.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-03-26",
+      "sentiment_index": 16.7,
+      "up_pct": 16.71,
+      "limit_up_count": 36,
+      "limit_down_count": 8,
+      "big_meat_sentiment": 23.0,
+      "big_noodle_sentiment": 10.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-03-27",
+      "sentiment_index": 79.2,
+      "up_pct": 79.17,
+      "limit_up_count": 77,
+      "limit_down_count": 2,
+      "big_meat_sentiment": 67.0,
+      "big_noodle_sentiment": 0.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-03-30",
+      "sentiment_index": 52.4,
+      "up_pct": 52.37,
+      "limit_up_count": 58,
+      "limit_down_count": 9,
+      "big_meat_sentiment": 40.0,
+      "big_noodle_sentiment": 4.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-03-31",
+      "sentiment_index": 18.4,
+      "up_pct": 18.44,
+      "limit_up_count": 50,
+      "limit_down_count": 2,
+      "big_meat_sentiment": 35.0,
+      "big_noodle_sentiment": 5.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-04-01",
+      "sentiment_index": 82.0,
+      "up_pct": 81.95,
+      "limit_up_count": 55,
+      "limit_down_count": 6,
+      "big_meat_sentiment": 26.0,
+      "big_noodle_sentiment": 2.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-04-02",
+      "sentiment_index": 19.2,
+      "up_pct": 19.18,
+      "limit_up_count": 28,
+      "limit_down_count": 3,
+      "big_meat_sentiment": 19.0,
+      "big_noodle_sentiment": 5.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-04-03",
+      "sentiment_index": 13.1,
+      "up_pct": 13.05,
+      "limit_up_count": 34,
+      "limit_down_count": 21,
+      "big_meat_sentiment": 22.0,
+      "big_noodle_sentiment": 13.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-04-07",
+      "sentiment_index": 72.5,
+      "up_pct": 72.52,
+      "limit_up_count": 88,
+      "limit_down_count": 3,
+      "big_meat_sentiment": 66.0,
+      "big_noodle_sentiment": 2.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-04-08",
+      "sentiment_index": 94.2,
+      "up_pct": 94.24,
+      "limit_up_count": 121,
+      "limit_down_count": 4,
+      "big_meat_sentiment": 22.0,
+      "big_noodle_sentiment": 1.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-04-09",
+      "sentiment_index": 20.8,
+      "up_pct": 20.76,
+      "limit_up_count": 51,
+      "limit_down_count": 0,
+      "big_meat_sentiment": 40.0,
+      "big_noodle_sentiment": 2.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-04-10",
+      "sentiment_index": 72.4,
+      "up_pct": 72.37,
+      "limit_up_count": 56,
+      "limit_down_count": 7,
+      "big_meat_sentiment": 31.0,
+      "big_noodle_sentiment": 4.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-04-13",
+      "sentiment_index": 43.3,
+      "up_pct": 43.28,
+      "limit_up_count": 57,
+      "limit_down_count": 3,
+      "big_meat_sentiment": 49.0,
+      "big_noodle_sentiment": 1.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-14",
+      "sentiment_index": 67.7,
+      "up_pct": 67.74,
+      "limit_up_count": 55,
+      "limit_down_count": 2,
+      "big_meat_sentiment": 35.0,
+      "big_noodle_sentiment": 3.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-15",
+      "sentiment_index": 33.5,
+      "up_pct": 33.51,
+      "limit_up_count": 58,
+      "limit_down_count": 5,
+      "big_meat_sentiment": 42.0,
+      "big_noodle_sentiment": 5.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-16",
+      "sentiment_index": 78.1,
+      "up_pct": 78.08,
+      "limit_up_count": 77,
+      "limit_down_count": 1,
+      "big_meat_sentiment": 60.0,
+      "big_noodle_sentiment": 0.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-04-17",
+      "sentiment_index": 43.6,
+      "up_pct": 43.59,
+      "limit_up_count": 69,
+      "limit_down_count": 0,
+      "big_meat_sentiment": 56.0,
+      "big_noodle_sentiment": 0.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-20",
+      "sentiment_index": 62.3,
+      "up_pct": 62.33,
+      "limit_up_count": 75,
+      "limit_down_count": 3,
+      "big_meat_sentiment": 46.0,
+      "big_noodle_sentiment": 1.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-21",
+      "sentiment_index": 35.5,
+      "up_pct": 35.45,
+      "limit_up_count": 51,
+      "limit_down_count": 7,
+      "big_meat_sentiment": 41.0,
+      "big_noodle_sentiment": 2.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-22",
+      "sentiment_index": 53.1,
+      "up_pct": 53.12,
+      "limit_up_count": 54,
+      "limit_down_count": 1,
+      "big_meat_sentiment": 48.0,
+      "big_noodle_sentiment": 2.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-23",
+      "sentiment_index": 24.2,
+      "up_pct": 24.21,
+      "limit_up_count": 50,
+      "limit_down_count": 14,
+      "big_meat_sentiment": 28.0,
+      "big_noodle_sentiment": 5.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-04-24",
+      "sentiment_index": 37.0,
+      "up_pct": 37.05,
+      "limit_up_count": 56,
+      "limit_down_count": 18,
+      "big_meat_sentiment": 39.0,
+      "big_noodle_sentiment": 7.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-27",
+      "sentiment_index": 59.8,
+      "up_pct": 59.76,
+      "limit_up_count": 63,
+      "limit_down_count": 26,
+      "big_meat_sentiment": 37.0,
+      "big_noodle_sentiment": 9.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-04-28",
+      "sentiment_index": 30.9,
+      "up_pct": 30.94,
+      "limit_up_count": 58,
+      "limit_down_count": 23,
+      "big_meat_sentiment": 30.0,
+      "big_noodle_sentiment": 1.0,
+      "level": "WEAK"
+    },
+    {
+      "date": "2026-04-29",
+      "sentiment_index": 72.7,
+      "up_pct": 72.74,
+      "limit_up_count": 100,
+      "limit_down_count": 8,
+      "big_meat_sentiment": 60.0,
+      "big_noodle_sentiment": 1.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-04-30",
+      "sentiment_index": 52.7,
+      "up_pct": 52.71,
+      "limit_up_count": 79,
+      "limit_down_count": 9,
+      "big_meat_sentiment": 41.0,
+      "big_noodle_sentiment": 4.0,
+      "level": "NORMAL"
+    },
+    {
+      "date": "2026-05-06",
+      "sentiment_index": 70.8,
+      "up_pct": 70.84,
+      "limit_up_count": 101,
+      "limit_down_count": 2,
+      "big_meat_sentiment": 44.0,
+      "big_noodle_sentiment": 0.0,
+      "level": "STRONG"
+    },
+    {
+      "date": "2026-05-07",
+      "sentiment_index": 64.1,
+      "up_pct": 64.08,
+      "limit_up_count": 100,
+      "limit_down_count": 4,
+      "big_meat_sentiment": 76.0,
+      "big_noodle_sentiment": 3.0,
+      "level": "NORMAL"
+    }
+  ]
+}

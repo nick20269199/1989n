@@ -1,0 +1,15 @@
+{
+  "time": "15:24:57",
+  "price": 36.88,
+  "change_pct": -0.11,
+  "high": 40.13,
+  "low": 36.22,
+  "amplitude": 10.6,
+  "volume": 1284890,
+  "turnover": 0,
+  "alerts": [
+    "⚠️ 高振幅 10.6%"
+  ],
+  "vs_resistance": -2.1,
+  "vs_support": 3.5
+}

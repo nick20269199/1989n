@@ -1,0 +1,25 @@
+{
+  "profile_raw": {
+    "extra": null,
+    "log_pb": {
+      "impr_id": "20260510123259D37C1453E4D6398B6A9E"
+    },
+    "status_code": 2,
+    "status_msg": "UserId不合法",
+    "user": {}
+  },
+  "post_raw": {
+    "status_code": 0,
+    "min_cursor": 1778387580000,
+    "max_cursor": 0,
+    "has_more": 0,
+    "aweme_list": [],
+    "time_list": null,
+    "log_pb": {
+      "impr_id": "20260510123300B60EE2096AF47949B933"
+    },
+    "request_item_cursor": 0,
+    "post_serial": 2,
+    "replace_series_cover": 1
+  }
+}

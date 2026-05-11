@@ -1,0 +1,145 @@
+{
+  "date": "2026-05-11",
+  "time": "2026-05-11 05:18:55",
+  "total_cost": 236200.0,
+  "total_value": 249407.0,
+  "total_pnl": 13207.0,
+  "total_pnl_pct": 5.59,
+  "can_open_new": true,
+  "open_blockers": [],
+  "emergency": [
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "action": "清仓",
+      "pnl_pct": 2.92,
+      "warnings": [
+        "⏰ 超时11天"
+      ]
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "action": "清仓",
+      "pnl_pct": -0.24,
+      "warnings": [
+        "⏰ 超时18天"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "action": "减半",
+      "pnl_pct": -4.67,
+      "warnings": [
+        "⚠ 软止损: -4.7%, 减半仓"
+      ]
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "action": "减半",
+      "pnl_pct": 14.85,
+      "warnings": [
+        "💰 +8%止盈一半: 14.8%"
+      ]
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "action": "减半",
+      "pnl_pct": -3.48,
+      "warnings": [
+        "⚠ 软止损: -3.5%, 减半仓"
+      ]
+    }
+  ],
+  "all_positions": [
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "qty": 2000,
+      "cost": 37.28,
+      "last_price": 35.54,
+      "pnl_pct": -4.67,
+      "hold_days": 11,
+      "status": "预警",
+      "action": "减半",
+      "warnings": [
+        "⚠ 软止损: -4.7%, 减半仓"
+      ]
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "qty": 2200,
+      "cost": 49.77,
+      "last_price": 57.16,
+      "pnl_pct": 14.85,
+      "hold_days": 14,
+      "status": "止盈",
+      "action": "减半",
+      "warnings": [
+        "💰 +8%止盈一半: 14.8%"
+      ]
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "qty": 400,
+      "cost": 36.28,
+      "last_price": 37.34,
+      "pnl_pct": 2.92,
+      "hold_days": 11,
+      "status": "超时",
+      "action": "清仓",
+      "warnings": [
+        "⏰ 超时11天"
+      ]
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "qty": 600,
+      "cost": 36.25,
+      "last_price": 34.99,
+      "pnl_pct": -3.48,
+      "hold_days": 5,
+      "status": "预警",
+      "action": "减半",
+      "warnings": [
+        "⚠ 软止损: -3.5%, 减半仓"
+      ]
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "qty": 200,
+      "cost": 64.56,
+      "last_price": 68.4,
+      "pnl_pct": 5.95,
+      "hold_days": 3,
+      "status": "正常",
+      "action": "持有",
+      "warnings": [
+        "📈 移动止损激活: 浮盈5.9%, 保护线+2.0%"
+      ]
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "qty": 100,
+      "cost": 29.72,
+      "last_price": 29.65,
+      "pnl_pct": -0.24,
+      "hold_days": 18,
+      "status": "超时",
+      "action": "清仓",
+      "warnings": [
+        "⏰ 超时18天"
+      ]
+    }
+  ]
+}

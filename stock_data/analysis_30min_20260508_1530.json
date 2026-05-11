@@ -1,0 +1,63 @@
+{
+  "type": "30min_analysis",
+  "time": "2026-05-08 15:30",
+  "indices": {
+    "sh": 4179.95,
+    "sz": 15563.8,
+    "cy": 3796.13,
+    "kc50": 1640.46
+  },
+  "portfolio": {
+    "total_value": 256362.0,
+    "total_cost": 240820.0,
+    "total_pnl": 15542.0,
+    "total_pnl_pct": 6.45
+  },
+  "holdings": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "price": 57.16,
+      "today_chg": -3.25,
+      "cost": 49.79,
+      "pnl_pct": 14.8,
+      "mv": 131468.0
+    },
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "price": 35.54,
+      "today_chg": -5.13,
+      "cost": 36.88,
+      "pnl_pct": -3.63,
+      "mv": 71080.0
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "price": 37.34,
+      "today_chg": -1.24,
+      "cost": 36.29,
+      "pnl_pct": 2.89,
+      "mv": 26138.0
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "price": 34.99,
+      "today_chg": -6.79,
+      "cost": 35.6,
+      "pnl_pct": -1.71,
+      "mv": 13996.0
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "price": 68.4,
+      "today_chg": 5.25,
+      "cost": 64.5,
+      "pnl_pct": 6.05,
+      "mv": 13680.0
+    }
+  ]
+}

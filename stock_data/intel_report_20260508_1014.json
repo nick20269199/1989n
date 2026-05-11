@@ -1,0 +1,86 @@
+{
+  "time": "2026-05-08 10:14:32",
+  "indices": {},
+  "breadth": {
+    "total": 100,
+    "up": 52,
+    "down": 45,
+    "flat": 2,
+    "limit_up": 1,
+    "limit_down": 0
+  },
+  "catalysts": [],
+  "holdings": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "price": 57.53,
+      "chg_pct": -2.62,
+      "pnl_pct": 15.55,
+      "amount": 35.4506920542,
+      "turnover": 4.05,
+      "vol_ratio": 2.57
+    },
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "price": 36.05,
+      "chg_pct": -3.76,
+      "pnl_pct": -2.25,
+      "amount": 15.394449588499999,
+      "turnover": 4.11,
+      "vol_ratio": 1.9
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "price": 37.29,
+      "chg_pct": -1.38,
+      "pnl_pct": 2.76,
+      "amount": 2.4606008979,
+      "turnover": 2.45,
+      "vol_ratio": 1.45
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "price": 36.06,
+      "chg_pct": -3.94,
+      "pnl_pct": 1.29,
+      "amount": 25.1191152548,
+      "turnover": 6.28,
+      "vol_ratio": 2.05
+    },
+    {
+      "code": "002328",
+      "name": "新朋股份",
+      "price": 11.02,
+      "chg_pct": -0.54,
+      "pnl_pct": 3.96,
+      "amount": 3.5431606109,
+      "turnover": 5.65,
+      "vol_ratio": 2.34
+    },
+    {
+      "code": "002261",
+      "name": "拓维信息",
+      "price": 36.52,
+      "chg_pct": -3.26,
+      "pnl_pct": 4.22,
+      "amount": 20.5762380933,
+      "turnover": 4.94,
+      "vol_ratio": 2.26
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "price": 29.87,
+      "chg_pct": 1.84,
+      "pnl_pct": 0.47,
+      "amount": 3.5138670843,
+      "turnover": 3.46,
+      "vol_ratio": 3.04
+    }
+  ],
+  "news_count": 33
+}

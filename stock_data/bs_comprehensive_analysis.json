@@ -1,0 +1,282 @@
+{
+  "generated_at": "2026-05-10 18:07:04",
+  "summary": {
+    "total_trades": 2100,
+    "winners": 1028,
+    "losers": 963,
+    "flats": 109,
+    "win_rate": 49.0,
+    "total_pnl": -232266.7,
+    "total_winner_pnl": 788937.4,
+    "total_loser_pnl": -1021000.6
+  },
+  "hold_analysis": {
+    "1-2天": {
+      "count": 1127,
+      "win": 586,
+      "loss": 478,
+      "flat": 63,
+      "total_pnl": -6104.39999999998,
+      "total_pct": 1431.8300000000002,
+      "avg_pnl_yuan": -5.42,
+      "avg_pct": 1.27,
+      "win_rate": 52.0
+    },
+    "3-5天": {
+      "count": 668,
+      "win": 292,
+      "loss": 343,
+      "flat": 33,
+      "total_pnl": -210955.39999999997,
+      "total_pct": -195.8000000000001,
+      "avg_pnl_yuan": -315.8,
+      "avg_pct": -0.29,
+      "win_rate": 43.7
+    },
+    "6-10天": {
+      "count": 229,
+      "win": 115,
+      "loss": 104,
+      "flat": 10,
+      "total_pnl": 10124.8,
+      "total_pct": 324.5400000000001,
+      "avg_pnl_yuan": 44.21,
+      "avg_pct": 1.42,
+      "win_rate": 50.2
+    },
+    "11-20天": {
+      "count": 71,
+      "win": 32,
+      "loss": 36,
+      "flat": 3,
+      "total_pnl": -26828.4,
+      "total_pct": -120.21000000000001,
+      "avg_pnl_yuan": -377.86,
+      "avg_pct": -1.69,
+      "win_rate": 45.1
+    },
+    "日内(0天)": {
+      "count": 1,
+      "win": 0,
+      "loss": 1,
+      "flat": 0,
+      "total_pnl": -67.0,
+      "total_pct": -4.51,
+      "avg_pnl_yuan": -67.0,
+      "avg_pct": -4.51,
+      "win_rate": 0.0
+    },
+    "20天以上": {
+      "count": 4,
+      "win": 3,
+      "loss": 1,
+      "flat": 0,
+      "total_pnl": 1563.7,
+      "total_pct": 19.9,
+      "avg_pnl_yuan": 390.93,
+      "avg_pct": 4.97,
+      "win_rate": 75.0
+    }
+  },
+  "monthly_analysis": {
+    "2024-10": {
+      "total_trades": 55,
+      "win": 32,
+      "loss": 20,
+      "flat": 3,
+      "total_pnl": 8987.300000000001,
+      "market_pct": 0,
+      "market_trend": "数据不足",
+      "win_rate": 58.2
+    },
+    "2025-02": {
+      "total_trades": 128,
+      "win": 73,
+      "loss": 52,
+      "flat": 3,
+      "total_pnl": 18109.400000000005,
+      "market_pct": 0,
+      "market_trend": "空头排列",
+      "win_rate": 57.0
+    },
+    "2025-08": {
+      "total_trades": 181,
+      "win": 105,
+      "loss": 64,
+      "flat": 12,
+      "total_pnl": 16148.999999999996,
+      "market_pct": 0,
+      "market_trend": "多头排列",
+      "win_rate": 58.0
+    },
+    "2025-09": {
+      "total_trades": 167,
+      "win": 97,
+      "loss": 63,
+      "flat": 7,
+      "total_pnl": 15648.100000000002,
+      "market_pct": 0,
+      "market_trend": "多头排列",
+      "win_rate": 58.1
+    },
+    "2026-04": {
+      "total_trades": 74,
+      "win": 30,
+      "loss": 40,
+      "flat": 4,
+      "total_pnl": -25518.699999999997,
+      "market_pct": 0,
+      "market_trend": "空头排列",
+      "win_rate": 40.5
+    },
+    "2026-02": {
+      "total_trades": 84,
+      "win": 35,
+      "loss": 45,
+      "flat": 4,
+      "total_pnl": -32557.199999999997,
+      "market_pct": 0,
+      "market_trend": "短期偏空",
+      "win_rate": 41.7
+    },
+    "2025-03": {
+      "total_trades": 90,
+      "win": 39,
+      "loss": 46,
+      "flat": 5,
+      "total_pnl": -34370.1,
+      "market_pct": 0,
+      "market_trend": "短期偏空",
+      "win_rate": 43.3
+    },
+    "2025-11": {
+      "total_trades": 144,
+      "win": 59,
+      "loss": 73,
+      "flat": 12,
+      "total_pnl": -3753.0,
+      "market_pct": 0,
+      "market_trend": "多头排列",
+      "win_rate": 41.0
+    },
+    "2026-01": {
+      "total_trades": 138,
+      "win": 85,
+      "loss": 50,
+      "flat": 3,
+      "total_pnl": 1169.4000000000024,
+      "market_pct": 0,
+      "market_trend": "短期偏多",
+      "win_rate": 61.6
+    },
+    "2025-07": {
+      "total_trades": 96,
+      "win": 42,
+      "loss": 50,
+      "flat": 4,
+      "total_pnl": -3758.2,
+      "market_pct": 0,
+      "market_trend": "多头排列",
+      "win_rate": 43.8
+    },
+    "2025-10": {
+      "total_trades": 78,
+      "win": 29,
+      "loss": 45,
+      "flat": 4,
+      "total_pnl": -20418.1,
+      "market_pct": 0,
+      "market_trend": "多头排列",
+      "win_rate": 37.2
+    },
+    "2026-03": {
+      "total_trades": 172,
+      "win": 73,
+      "loss": 86,
+      "flat": 13,
+      "total_pnl": -18661.1,
+      "market_pct": 0,
+      "market_trend": "多头排列",
+      "win_rate": 42.4
+    },
+    "2025-04": {
+      "total_trades": 106,
+      "win": 67,
+      "loss": 34,
+      "flat": 5,
+      "total_pnl": 18761.999999999996,
+      "market_pct": 0,
+      "market_trend": "短期偏空",
+      "win_rate": 63.2
+    },
+    "2025-06": {
+      "total_trades": 48,
+      "win": 20,
+      "loss": 26,
+      "flat": 2,
+      "total_pnl": -13892.400000000001,
+      "market_pct": 0,
+      "market_trend": "多头排列",
+      "win_rate": 41.7
+    },
+    "2025-12": {
+      "total_trades": 141,
+      "win": 69,
+      "loss": 65,
+      "flat": 7,
+      "total_pnl": 4522.000000000002,
+      "market_pct": 0,
+      "market_trend": "短期偏空",
+      "win_rate": 48.9
+    },
+    "2024-12": {
+      "total_trades": 118,
+      "win": 50,
+      "loss": 64,
+      "flat": 4,
+      "total_pnl": -36857.0,
+      "market_pct": 0,
+      "market_trend": "数据不足",
+      "win_rate": 42.4
+    },
+    "2024-11": {
+      "total_trades": 106,
+      "win": 48,
+      "loss": 53,
+      "flat": 5,
+      "total_pnl": -74080.99999999999,
+      "market_pct": 0,
+      "market_trend": "数据不足",
+      "win_rate": 45.3
+    },
+    "2025-01": {
+      "total_trades": 94,
+      "win": 43,
+      "loss": 44,
+      "flat": 7,
+      "total_pnl": -40627.399999999994,
+      "market_pct": 0,
+      "market_trend": "短期偏空",
+      "win_rate": 45.7
+    },
+    "2025-05": {
+      "total_trades": 80,
+      "win": 32,
+      "loss": 43,
+      "flat": 5,
+      "total_pnl": -11119.700000000004,
+      "market_pct": 0,
+      "market_trend": "短期偏多",
+      "win_rate": 40.0
+    }
+  },
+  "loss_patterns": {
+    "total_losers": 963,
+    "big_loss_gt10pct": 209,
+    "mid_loss_5to10pct": 318,
+    "small_loss_lt5pct": 436,
+    "loss_streaks_2plus": 112,
+    "stop_loss_violations": 186,
+    "avg_big_loss_pct": -14.37
+  }
+}

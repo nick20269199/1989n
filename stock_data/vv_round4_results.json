@@ -1,0 +1,344 @@
+{
+  "HuDaMao.New": {
+    "name": "胡大毛",
+    "total_with_phase": 18,
+    "phase_distribution": {
+      "EUPHORIA": 6,
+      "PANIC": 4,
+      "RECOVERY": 3,
+      "DECLINE": 2,
+      "TEPID": 2,
+      "REBOUND": 1
+    },
+    "contrarian_score": -100,
+    "contrarian_wins": 0,
+    "contrarian_errors": 2,
+    "panic_posts": 6,
+    "euphoria_posts": 6,
+    "sample_analysis": [
+      {
+        "date": "2026-03-09",
+        "phase": "DECLINE",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "2026年3月9日盘面分析 #A股  #大盘  #股票  #股民  #胡大毛"
+      },
+      {
+        "date": "2026-03-10",
+        "phase": "EUPHORIA",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "2026年3月10日盘面分析 #A股  #大盘  #股票  #股民  #胡大毛"
+      },
+      {
+        "date": "2026-03-11",
+        "phase": "TEPID",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "2026年3月11日盘面分析 #A股  #大盘  #股票  #股民  #胡大毛"
+      }
+    ]
+  },
+  "xiaositv": {
+    "name": "小司频道",
+    "total_with_phase": 23,
+    "phase_distribution": {
+      "EUPHORIA": 5,
+      "PANIC": 5,
+      "RECOVERY": 4,
+      "REBOUND": 4,
+      "TEPID": 4,
+      "DECLINE": 1
+    },
+    "contrarian_score": 100,
+    "contrarian_wins": 1,
+    "contrarian_errors": 0,
+    "panic_posts": 6,
+    "euphoria_posts": 5,
+    "sample_analysis": [
+      {
+        "date": "2026-03-10",
+        "phase": "EUPHORIA",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "原油价格与通胀：市场最直接的担忧 #美国  #中美博弈 #原油价格"
+      },
+      {
+        "date": "2026-03-16",
+        "phase": "RECOVERY",
+        "desc_sentiment": "SLIGHTLY_BEARISH",
+        "desc_preview": "换预期 vs 海外风险：谁主导市场？ #零距离看懂财经"
+      },
+      {
+        "date": "2026-03-18",
+        "phase": "RECOVERY",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "中东乱局，戳破日本经济假象 #油价 #日元"
+      }
+    ]
+  },
+  "Cyclequeen": {
+    "name": "周期女王",
+    "total_with_phase": 9,
+    "phase_distribution": {
+      "EUPHORIA": 3,
+      "TEPID": 3,
+      "DECLINE": 1,
+      "PANIC": 1,
+      "RECOVERY": 1
+    },
+    "contrarian_score": 0,
+    "contrarian_wins": 0,
+    "contrarian_errors": 0,
+    "panic_posts": 2,
+    "euphoria_posts": 3,
+    "sample_analysis": [
+      {
+        "date": "2026-03-10",
+        "phase": "EUPHORIA",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "术服从于道：泛冲突主线，才是真正核心 #财经 #股市 #交易 #周期女王"
+      },
+      {
+        "date": "2026-03-11",
+        "phase": "TEPID",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "周期为路，孤独为刃，终见曙光 #财经 #股市 #交易 #周期女王"
+      },
+      {
+        "date": "2026-03-12",
+        "phase": "DECLINE",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "强者定力才是交易场上的最高段位 #财经 #股市 #交易 #周期女王"
+      }
+    ]
+  },
+  "kaixin2091": {
+    "name": "凯心",
+    "total_with_phase": 23,
+    "phase_distribution": {
+      "RECOVERY": 8,
+      "PANIC": 6,
+      "EUPHORIA": 3,
+      "DECLINE": 2,
+      "REBOUND": 2,
+      "TEPID": 2
+    },
+    "contrarian_score": 100,
+    "contrarian_wins": 1,
+    "contrarian_errors": 0,
+    "panic_posts": 8,
+    "euphoria_posts": 3,
+    "sample_analysis": [
+      {
+        "date": "2026-03-12",
+        "phase": "DECLINE",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "这个视频发了三遍，真的累了，且看且珍惜吧。 #股票 #股市 #凯心 #金融知识 #AI"
+      },
+      {
+        "date": "2026-03-12",
+        "phase": "DECLINE",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "明天别追这个，收盘后的消息很多人都没看到。 #股票 #股市 #复盘 #金融知识 #凯心"
+      },
+      {
+        "date": "2026-03-16",
+        "phase": "RECOVERY",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "这一波看看谁能看到最后了 #股票 #股市 #金融知识 #凯心 #AI"
+      }
+    ]
+  },
+  "6052m9121": {
+    "name": "太阳李博良",
+    "total_with_phase": 38,
+    "phase_distribution": {
+      "PANIC": 10,
+      "TEPID": 9,
+      "RECOVERY": 8,
+      "EUPHORIA": 7,
+      "REBOUND": 4
+    },
+    "contrarian_score": 0,
+    "contrarian_wins": 0,
+    "contrarian_errors": 0,
+    "panic_posts": 10,
+    "euphoria_posts": 7,
+    "sample_analysis": [
+      {
+        "date": "2026-03-16",
+        "phase": "RECOVERY",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "终其一生无法认识自己的原因，内容过于真实  "
+      },
+      {
+        "date": "2026-03-18",
+        "phase": "RECOVERY",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "虽然这次话有些重，但重点敲醒大家看重自己思考，审视自己的思考，这对于你们以后的人生很重要，实在不明白的，就把这条视频当日常娱乐看"
+      },
+      {
+        "date": "2026-03-20",
+        "phase": "PANIC",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "特意单独把价值含量很高的一段拎出来发给你们 #商业 #认知 #自我提升"
+      }
+    ]
+  },
+  "85164940078": {
+    "name": "好运佛系",
+    "total_with_phase": 37,
+    "phase_distribution": {
+      "REBOUND": 11,
+      "RECOVERY": 9,
+      "TEPID": 8,
+      "PANIC": 6,
+      "DECLINE": 3
+    },
+    "contrarian_score": 0,
+    "contrarian_wins": 0,
+    "contrarian_errors": 0,
+    "panic_posts": 9,
+    "euphoria_posts": 0,
+    "sample_analysis": [
+      {
+        "date": "2026-04-15",
+        "phase": "TEPID",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "最近好多假冒加大家进群 绝对不可能我根本没时间，重来不联系大家，一定不要信！"
+      },
+      {
+        "date": "2026-04-22",
+        "phase": "RECOVERY",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "上证4101又是一点不差cpo光纤航天怎么办？ #股票#基金#光纤#cpo"
+      },
+      {
+        "date": "2026-04-22",
+        "phase": "RECOVERY",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "要更相信光，因为二季度业绩更好 #股票#cpo#光纤#航天"
+      }
+    ]
+  },
+  "Trader9": {
+    "name": "Trader韭",
+    "total_with_phase": 43,
+    "phase_distribution": {
+      "RECOVERY": 18,
+      "TEPID": 9,
+      "REBOUND": 7,
+      "EUPHORIA": 3,
+      "PANIC": 3,
+      "DECLINE": 3
+    },
+    "contrarian_score": -100,
+    "contrarian_wins": 0,
+    "contrarian_errors": 1,
+    "panic_posts": 6,
+    "euphoria_posts": 3,
+    "sample_analysis": [
+      {
+        "date": "2026-04-16",
+        "phase": "EUPHORIA",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "本周10倍股诞生 羊毛鞋转型AI云 Salute 本周10倍股诞生 羊毛鞋转型AI云 Salute #allbirds  #Bird  #Newbird  #甲"
+      },
+      {
+        "date": "2026-04-16",
+        "phase": "EUPHORIA",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "美伊更新和机构应对（上集） 美伊更新和机构应对（上集） #美股  #美伊  #油价  #霍尔木兹  #川普"
+      },
+      {
+        "date": "2026-04-16",
+        "phase": "EUPHORIA",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "美伊更新和机构应对（下集） 美伊更新和机构应对（下集）#美股   #川普  #港股  #恒生科技  #股市"
+      }
+    ]
+  },
+  "yanbao60": {
+    "name": "口罩哥研报60秒",
+    "total_with_phase": 17,
+    "phase_distribution": {
+      "RECOVERY": 9,
+      "REBOUND": 8
+    },
+    "contrarian_score": 0,
+    "contrarian_wins": 0,
+    "contrarian_errors": 0,
+    "panic_posts": 0,
+    "euphoria_posts": 0,
+    "sample_analysis": [
+      {
+        "date": "2026-04-29",
+        "phase": "REBOUND",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "连HDD都轮到了"
+      },
+      {
+        "date": "2026-04-29",
+        "phase": "REBOUND",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "六张网系统越来越 super."
+      },
+      {
+        "date": "2026-04-29",
+        "phase": "REBOUND",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "深圳这是把门槛门框都拆了呀，居住证直接买核心区。"
+      }
+    ]
+  },
+  "Zihui518": {
+    "name": "子辉先生",
+    "total_with_phase": 26,
+    "phase_distribution": {
+      "REBOUND": 15,
+      "RECOVERY": 11
+    },
+    "contrarian_score": 0,
+    "contrarian_wins": 0,
+    "contrarian_errors": 0,
+    "panic_posts": 0,
+    "euphoria_posts": 0,
+    "sample_analysis": [
+      {
+        "date": "2026-04-29",
+        "phase": "REBOUND",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "我坚信：脑机接口是未来人类连接科技重要的一环！ #脑机接口 #脑机接口马斯克 #脑机接口公司neuralink"
+      },
+      {
+        "date": "2026-04-29",
+        "phase": "REBOUND",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "看到自己的持仓被ST是什么心情？ #st股"
+      },
+      {
+        "date": "2026-04-29",
+        "phase": "REBOUND",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "美加墨世界杯倒计时43天！！！！！ #美加墨世界杯"
+      }
+    ]
+  },
+  "guojame": {
+    "name": "创业魔法师",
+    "total_with_phase": 1,
+    "phase_distribution": {
+      "RECOVERY": 1
+    },
+    "contrarian_score": 0,
+    "contrarian_wins": 0,
+    "contrarian_errors": 0,
+    "panic_posts": 0,
+    "euphoria_posts": 0,
+    "sample_analysis": [
+      {
+        "date": "2026-05-07",
+        "phase": "RECOVERY",
+        "desc_sentiment": "NEUTRAL",
+        "desc_preview": "@俞浩"
+      }
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-05-11 02:58:09",
+  "summary": {
+    "total_round_trips": 3817,
+    "winners": 1759,
+    "losers": 1845,
+    "flats": 213,
+    "win_rate": 46.1,
+    "total_gross_pnl": -351729.44,
+    "total_net_pnl": -403676.49,
+    "total_fees": 51947.37
+  },
+  "yearly": {
+    "2022": {
+      "count": 1025,
+      "win": 366,
+      "loss": 596,
+      "flat": 63,
+      "gross_pnl": -92410.18999999994,
+      "net_pnl": -103978.49000000014,
+      "fees": 11568.359999999999,
+      "win_rate": 35.7,
+      "avg_net": -101.0
+    },
+    "2026": {
+      "count": 476,
+      "win": 229,
+      "loss": 223,
+      "flat": 24,
+      "gross_pnl": -73781.9,
+      "net_pnl": -80833.35999999994,
+      "fees": 7051.5300000000025,
+      "win_rate": 48.1,
+      "avg_net": -170.0
+    },
+    "2025": {
+      "count": 1463,
+      "win": 756,
+      "loss": 633,
+      "flat": 74,
+      "gross_pnl": -32492.40000000001,
+      "net_pnl": -50062.97999999996,
+      "fees": 17570.679999999975,
+      "win_rate": 51.7,
+      "avg_net": -34.0
+    },
+    "2023": {
+      "count": 283,
+      "win": 139,
+      "loss": 130,
+      "flat": 14,
+      "gross_pnl": -13105.849999999999,
+      "net_pnl": -16427.340000000015,
+      "fees": 3321.4699999999984,
+      "win_rate": 49.1,
+      "avg_net": -58.0
+    },
+    "2021": {
+      "count": 289,
+      "win": 139,
+      "loss": 125,
+      "flat": 25,
+      "gross_pnl": -36993.7,
+      "net_pnl": -44502.90999999999,
+      "fees": 7509.259999999999,
+      "win_rate": 48.1,
+      "avg_net": -154.0
+    },
+    "2024": {
+      "count": 281,
+      "win": 130,
+      "loss": 138,
+      "flat": 13,
+      "gross_pnl": -102945.40000000001,
+      "net_pnl": -107871.41000000002,
+      "fees": 4926.069999999993,
+      "win_rate": 46.3,
+      "avg_net": -384.0
+    }
+  },
+  "loss_causes": {
+    "追高杀跌": {
+      "count": 251,
+      "total_loss": -174615.75,
+      "avg_loss_pct": -5.19,
+      "avg_hold": 2.3
+    },
+    "止损犹豫": {
+      "count": 254,
+      "total_loss": -458062.68,
+      "avg_loss_pct": -12.64,
+      "avg_hold": 7.0
+    },
+    "大盘逆风": {
+      "count": 408,
+      "total_loss": -161411.18,
+      "avg_loss_pct": -6.19,
+      "avg_hold": 4.6
+    },
+    "缩量陷阱": {
+      "count": 165,
+      "total_loss": -144321.33,
+      "avg_loss_pct": -5.5,
+      "avg_hold": 2.2
+    },
+    "其他": {
+      "count": 767,
+      "total_loss": -501134.63,
+      "avg_loss_pct": -4.91,
+      "avg_hold": 2.7
+    }
+  }
+}

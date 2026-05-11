@@ -1,0 +1,1142 @@
+{
+  "updated": "2026-05-11 16:08",
+  "entries": [
+    {
+      "date": "2026-05-12",
+      "ratios": {
+        "炸板率": {
+          "value": 0.5086,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual"
+        },
+        "晋级率": {
+          "value": 0.652,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual"
+        },
+        "涨跌停比": {
+          "value": 0.5125,
+          "definition": "极端情绪对比",
+          "source": "manual"
+        },
+        "强势占比": {
+          "value": 0.5825,
+          "definition": "板块轮动广度",
+          "source": "manual"
+        },
+        "北向强度": {
+          "value": 0.5166,
+          "definition": "外资相对参与度",
+          "source": "manual"
+        },
+        "大单强度": {
+          "value": 0.1491,
+          "definition": "主力资金方向",
+          "source": "manual"
+        },
+        "红盘比": {
+          "value": 0.1009,
+          "definition": "赚钱效应广度",
+          "source": "manual"
+        },
+        "融资变化比": {
+          "value": 0.2975,
+          "definition": "杠杆资金弹性",
+          "source": "manual"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-13",
+      "ratios": {
+        "炸板率": {
+          "value": 0.5096,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual"
+        },
+        "晋级率": {
+          "value": 0.7657,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual"
+        },
+        "涨跌停比": {
+          "value": 0.1111,
+          "definition": "极端情绪对比",
+          "source": "manual"
+        },
+        "强势占比": {
+          "value": 0.7397,
+          "definition": "板块轮动广度",
+          "source": "manual"
+        },
+        "北向强度": {
+          "value": 0.1343,
+          "definition": "外资相对参与度",
+          "source": "manual"
+        },
+        "大单强度": {
+          "value": 0.4091,
+          "definition": "主力资金方向",
+          "source": "manual"
+        },
+        "红盘比": {
+          "value": 0.4561,
+          "definition": "赚钱效应广度",
+          "source": "manual"
+        },
+        "融资变化比": {
+          "value": 0.7917,
+          "definition": "杠杆资金弹性",
+          "source": "manual"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-14",
+      "ratios": {
+        "炸板率": {
+          "value": 0.1276,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual"
+        },
+        "晋级率": {
+          "value": 0.4374,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual"
+        },
+        "涨跌停比": {
+          "value": 0.2941,
+          "definition": "极端情绪对比",
+          "source": "manual"
+        },
+        "强势占比": {
+          "value": 0.5309,
+          "definition": "板块轮动广度",
+          "source": "manual"
+        },
+        "北向强度": {
+          "value": 0.3487,
+          "definition": "外资相对参与度",
+          "source": "manual"
+        },
+        "大单强度": {
+          "value": 0.2514,
+          "definition": "主力资金方向",
+          "source": "manual"
+        },
+        "红盘比": {
+          "value": 0.2786,
+          "definition": "赚钱效应广度",
+          "source": "manual"
+        },
+        "融资变化比": {
+          "value": 0.0992,
+          "definition": "杠杆资金弹性",
+          "source": "manual"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-15",
+      "ratios": {
+        "炸板率": {
+          "value": 0.6701,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual"
+        },
+        "晋级率": {
+          "value": 0.4338,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual"
+        },
+        "涨跌停比": {
+          "value": 0.2421,
+          "definition": "极端情绪对比",
+          "source": "manual"
+        },
+        "强势占比": {
+          "value": 0.62,
+          "definition": "板块轮动广度",
+          "source": "manual"
+        },
+        "北向强度": {
+          "value": 0.1819,
+          "definition": "外资相对参与度",
+          "source": "manual"
+        },
+        "大单强度": {
+          "value": 0.5039,
+          "definition": "主力资金方向",
+          "source": "manual"
+        },
+        "红盘比": {
+          "value": 0.3262,
+          "definition": "赚钱效应广度",
+          "source": "manual"
+        },
+        "融资变化比": {
+          "value": 0.2823,
+          "definition": "杠杆资金弹性",
+          "source": "manual"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-18",
+      "ratios": {
+        "炸板率": {
+          "value": 0.7093,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.505,
+          "std": 0.2057,
+          "z_score": 0.99,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.6309,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.584,
+          "std": 0.1295,
+          "z_score": 0.36,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.2124,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.2744,
+          "std": 0.1331,
+          "z_score": -0.47,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.8919,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.673,
+          "std": 0.1293,
+          "z_score": 1.69,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.3345,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.3032,
+          "std": 0.1355,
+          "z_score": 0.23,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.7817,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.419,
+          "std": 0.219,
+          "z_score": 1.66,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.3007,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.2925,
+          "std": 0.1139,
+          "z_score": 0.07,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.2282,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3398,
+          "std": 0.2365,
+          "z_score": -0.47,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-19",
+      "ratios": {
+        "炸板率": {
+          "value": 0.9167,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.5736,
+          "std": 0.2424,
+          "z_score": 1.41,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.7038,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.6039,
+          "std": 0.1264,
+          "z_score": 0.79,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.5685,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3234,
+          "std": 0.1637,
+          "z_score": 1.5,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.4613,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.6377,
+          "std": 0.142,
+          "z_score": -1.24,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.5762,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.3487,
+          "std": 0.1602,
+          "z_score": 1.42,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.5091,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.434,
+          "std": 0.2027,
+          "z_score": 0.37,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.5363,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.3331,
+          "std": 0.1381,
+          "z_score": 1.47,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.1457,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3074,
+          "std": 0.2277,
+          "z_score": -0.71,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-20",
+      "ratios": {
+        "炸板率": {
+          "value": 0.4669,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.5584,
+          "std": 0.2275,
+          "z_score": -0.4,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.3479,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.5674,
+          "std": 0.1474,
+          "z_score": -1.49,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.2971,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3197,
+          "std": 0.1518,
+          "z_score": -0.15,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.2347,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.5801,
+          "std": 0.1928,
+          "z_score": -1.79,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.5768,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.3813,
+          "std": 0.1684,
+          "z_score": 1.16,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.5308,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.4479,
+          "std": 0.1907,
+          "z_score": 0.43,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.6493,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.3783,
+          "std": 0.1691,
+          "z_score": 1.6,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.2966,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3059,
+          "std": 0.2108,
+          "z_score": -0.04,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-21",
+      "ratios": {
+        "炸板率": {
+          "value": 0.5856,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.5618,
+          "std": 0.213,
+          "z_score": 0.11,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.5011,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.5591,
+          "std": 0.1396,
+          "z_score": -0.42,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.3804,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3273,
+          "std": 0.1434,
+          "z_score": 0.37,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.7734,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.6043,
+          "std": 0.1913,
+          "z_score": 0.88,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.5819,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.4064,
+          "std": 0.1709,
+          "z_score": 1.03,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.7256,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.4826,
+          "std": 0.2006,
+          "z_score": 1.21,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.3204,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.3711,
+          "std": 0.1593,
+          "z_score": -0.32,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.2699,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3014,
+          "std": 0.1976,
+          "z_score": -0.16,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-22",
+      "ratios": {
+        "炸板率": {
+          "value": 0.1691,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.5182,
+          "std": 0.2357,
+          "z_score": -1.48,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.464,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.5485,
+          "std": 0.135,
+          "z_score": -0.63,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.3197,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3264,
+          "std": 0.1352,
+          "z_score": -0.05,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.8661,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.6334,
+          "std": 0.1983,
+          "z_score": 1.17,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.6047,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.4284,
+          "std": 0.1728,
+          "z_score": 1.02,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.3624,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.4692,
+          "std": 0.1929,
+          "z_score": -0.55,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.7829,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.4168,
+          "std": 0.1983,
+          "z_score": 1.85,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.8276,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3599,
+          "std": 0.2491,
+          "z_score": 1.88,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-25",
+      "ratios": {
+        "炸板率": {
+          "value": 0.3948,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.5058,
+          "std": 0.2267,
+          "z_score": -0.49,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.2198,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.5156,
+          "std": 0.1616,
+          "z_score": -1.83,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.497,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3435,
+          "std": 0.1381,
+          "z_score": 1.11,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.2631,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.5964,
+          "std": 0.2184,
+          "z_score": -1.53,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.2467,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.4102,
+          "std": 0.1728,
+          "z_score": -0.95,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.2823,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.4505,
+          "std": 0.1914,
+          "z_score": -0.88,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.6481,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.4399,
+          "std": 0.2005,
+          "z_score": 1.04,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.4198,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3659,
+          "std": 0.237,
+          "z_score": 0.23,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-26",
+      "ratios": {
+        "炸板率": {
+          "value": 0.7354,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.5267,
+          "std": 0.226,
+          "z_score": 0.92,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.3087,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.4968,
+          "std": 0.1652,
+          "z_score": -1.14,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.2677,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3366,
+          "std": 0.1335,
+          "z_score": -0.52,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.4873,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.5864,
+          "std": 0.2106,
+          "z_score": -0.47,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.3806,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.4075,
+          "std": 0.1649,
+          "z_score": -0.16,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.7763,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.4802,
+          "std": 0.2051,
+          "z_score": 1.44,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.3602,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.4327,
+          "std": 0.1925,
+          "z_score": -0.38,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.6634,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3929,
+          "std": 0.2416,
+          "z_score": 1.12,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-27",
+      "ratios": {
+        "炸板率": {
+          "value": 0.4656,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.5216,
+          "std": 0.217,
+          "z_score": -0.26,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.3237,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.4824,
+          "std": 0.1652,
+          "z_score": -0.96,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.4087,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3426,
+          "std": 0.1293,
+          "z_score": 0.51,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.245,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.558,
+          "std": 0.2226,
+          "z_score": -1.41,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.1247,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.384,
+          "std": 0.1762,
+          "z_score": -1.47,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.6807,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.4969,
+          "std": 0.2041,
+          "z_score": 0.9,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.1438,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.4086,
+          "std": 0.2009,
+          "z_score": -1.32,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.0972,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3683,
+          "std": 0.2453,
+          "z_score": -1.1,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-28",
+      "ratios": {
+        "炸板率": {
+          "value": 0.4787,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.5183,
+          "std": 0.2088,
+          "z_score": -0.19,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.1048,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.4534,
+          "std": 0.1879,
+          "z_score": -1.85,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.2556,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3359,
+          "std": 0.1264,
+          "z_score": -0.64,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.6948,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.5685,
+          "std": 0.217,
+          "z_score": 0.58,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.5466,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.3965,
+          "std": 0.1747,
+          "z_score": 0.86,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.4709,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.4949,
+          "std": 0.1962,
+          "z_score": -0.12,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.6795,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.4295,
+          "std": 0.2061,
+          "z_score": 1.21,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.2968,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3628,
+          "std": 0.2365,
+          "z_score": -0.28,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-29",
+      "ratios": {
+        "炸板率": {
+          "value": 0.2894,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "manual",
+          "mean": 0.502,
+          "std": 0.2097,
+          "z_score": -1.01,
+          "alert": "normal"
+        },
+        "晋级率": {
+          "value": 0.3258,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "manual",
+          "mean": 0.4442,
+          "std": 0.1841,
+          "z_score": -0.64,
+          "alert": "normal"
+        },
+        "涨跌停比": {
+          "value": 0.627,
+          "definition": "极端情绪对比",
+          "source": "manual",
+          "mean": 0.3567,
+          "std": 0.143,
+          "z_score": 1.89,
+          "alert": "normal"
+        },
+        "强势占比": {
+          "value": 0.3982,
+          "definition": "板块轮动广度",
+          "source": "manual",
+          "mean": 0.5564,
+          "std": 0.2136,
+          "z_score": -0.74,
+          "alert": "normal"
+        },
+        "北向强度": {
+          "value": 0.3228,
+          "definition": "外资相对参与度",
+          "source": "manual",
+          "mean": 0.3912,
+          "std": 0.1695,
+          "z_score": -0.4,
+          "alert": "normal"
+        },
+        "大单强度": {
+          "value": 0.5573,
+          "definition": "主力资金方向",
+          "source": "manual",
+          "mean": 0.4993,
+          "std": 0.1897,
+          "z_score": 0.31,
+          "alert": "normal"
+        },
+        "红盘比": {
+          "value": 0.4315,
+          "definition": "赚钱效应广度",
+          "source": "manual",
+          "mean": 0.4296,
+          "std": 0.1986,
+          "z_score": 0.01,
+          "alert": "normal"
+        },
+        "融资变化比": {
+          "value": 0.8489,
+          "definition": "杠杆资金弹性",
+          "source": "manual",
+          "mean": 0.3975,
+          "std": 0.26,
+          "z_score": 1.74,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "2026-05-10",
+      "ratios": {
+        "炸板率": {
+          "value": 0,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.502,
+          "std": 0.2097,
+          "z_score": -2.39,
+          "alert": "triggered"
+        },
+        "晋级率": {
+          "value": 0,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4442,
+          "std": 0.1841,
+          "z_score": -2.41,
+          "alert": "triggered"
+        },
+        "涨跌停比": {
+          "value": 0,
+          "definition": "极端情绪对比",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3567,
+          "std": 0.143,
+          "z_score": -2.49,
+          "alert": "triggered"
+        },
+        "强势占比": {
+          "value": 0,
+          "definition": "板块轮动广度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.5564,
+          "std": 0.2136,
+          "z_score": -2.6,
+          "alert": "triggered"
+        },
+        "北向强度": {
+          "value": 0,
+          "definition": "外资相对参与度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3912,
+          "std": 0.1695,
+          "z_score": -2.31,
+          "alert": "triggered"
+        },
+        "大单强度": {
+          "value": 0,
+          "definition": "主力资金方向",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4993,
+          "std": 0.1897,
+          "z_score": -2.63,
+          "alert": "triggered"
+        },
+        "红盘比": {
+          "value": 0,
+          "definition": "赚钱效应广度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4296,
+          "std": 0.1986,
+          "z_score": -2.16,
+          "alert": "triggered"
+        },
+        "融资变化比": {
+          "value": 0,
+          "definition": "杠杆资金弹性",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3975,
+          "std": 0.26,
+          "z_score": -1.53,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "20260511",
+      "ratios": {
+        "炸板率": {
+          "value": 0,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.502,
+          "std": 0.2097,
+          "z_score": -2.39,
+          "alert": "triggered"
+        },
+        "晋级率": {
+          "value": 0,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4442,
+          "std": 0.1841,
+          "z_score": -2.41,
+          "alert": "triggered"
+        },
+        "涨跌停比": {
+          "value": 0,
+          "definition": "极端情绪对比",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3567,
+          "std": 0.143,
+          "z_score": -2.49,
+          "alert": "triggered"
+        },
+        "强势占比": {
+          "value": 0,
+          "definition": "板块轮动广度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.5564,
+          "std": 0.2136,
+          "z_score": -2.6,
+          "alert": "triggered"
+        },
+        "北向强度": {
+          "value": 0,
+          "definition": "外资相对参与度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3912,
+          "std": 0.1695,
+          "z_score": -2.31,
+          "alert": "triggered"
+        },
+        "大单强度": {
+          "value": 0,
+          "definition": "主力资金方向",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4993,
+          "std": 0.1897,
+          "z_score": -2.63,
+          "alert": "triggered"
+        },
+        "红盘比": {
+          "value": 0,
+          "definition": "赚钱效应广度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4296,
+          "std": 0.1986,
+          "z_score": -2.16,
+          "alert": "triggered"
+        },
+        "融资变化比": {
+          "value": 0,
+          "definition": "杠杆资金弹性",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3975,
+          "std": 0.26,
+          "z_score": -1.53,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    }
+  ],
+  "stats": {}
+}

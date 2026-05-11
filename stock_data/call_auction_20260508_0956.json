@@ -1,0 +1,585 @@
+{
+  "type": "call_auction",
+  "time": "2026-05-08 09:56:14",
+  "date": "2026-05-08",
+  "market_breadth": {
+    "up": 2543,
+    "down": 0,
+    "flat": 1,
+    "limit_up": 2985,
+    "limit_down": 0,
+    "total": 5529,
+    "avg_change": 9.409,
+    "details": [
+      {
+        "code": "688655",
+        "name": "迅捷兴",
+        "change_pct": 20.0
+      },
+      {
+        "code": "300840",
+        "name": "酷特智能",
+        "change_pct": 16.97
+      },
+      {
+        "code": "300736",
+        "name": "百邦科技",
+        "change_pct": 16.81
+      },
+      {
+        "code": "300819",
+        "name": "聚杰微纤",
+        "change_pct": 16.51
+      },
+      {
+        "code": "301369",
+        "name": "联动科技",
+        "change_pct": 16.33
+      },
+      {
+        "code": "300839",
+        "name": "博汇股份",
+        "change_pct": 15.58
+      },
+      {
+        "code": "300599",
+        "name": "雄塑科技",
+        "change_pct": 14.92
+      },
+      {
+        "code": "688260",
+        "name": "昀冢科技",
+        "change_pct": 12.99
+      },
+      {
+        "code": "300488",
+        "name": "恒锋工具",
+        "change_pct": 12.33
+      },
+      {
+        "code": "300052",
+        "name": "中青宝",
+        "change_pct": 12.19
+      },
+      {
+        "code": "301603",
+        "name": "乔锋智能",
+        "change_pct": 10.51
+      },
+      {
+        "code": "301328",
+        "name": "维峰电子",
+        "change_pct": 10.51
+      },
+      {
+        "code": "688001",
+        "name": "华兴源创",
+        "change_pct": 10.24
+      },
+      {
+        "code": "000839",
+        "name": "国安股份",
+        "change_pct": 10.16
+      },
+      {
+        "code": "600076",
+        "name": "康欣新材",
+        "change_pct": 10.09
+      },
+      {
+        "code": "600724",
+        "name": "宁波富达",
+        "change_pct": 10.07
+      },
+      {
+        "code": "002642",
+        "name": "荣联科技",
+        "change_pct": 10.06
+      },
+      {
+        "code": "000720",
+        "name": "新能泰山",
+        "change_pct": 10.06
+      },
+      {
+        "code": "002624",
+        "name": "完美世界",
+        "change_pct": 10.03
+      },
+      {
+        "code": "000782",
+        "name": "恒申新材",
+        "change_pct": 10.03
+      }
+    ]
+  },
+  "concept_auction": [
+    {
+      "name": "昨日连板",
+      "change_pct": 4.21,
+      "turnover": 0.0,
+      "leading_stock": "大唐发电",
+      "leading_pct": 21
+    },
+    {
+      "name": "昨日连板_含一字",
+      "change_pct": 3.4,
+      "turnover": 0.0,
+      "leading_stock": "福达合金",
+      "leading_pct": 26
+    },
+    {
+      "name": "昨日涨停",
+      "change_pct": 3.15,
+      "turnover": 0.0,
+      "leading_stock": "南威软件",
+      "leading_pct": 88
+    },
+    {
+      "name": "昨日涨停_含一字",
+      "change_pct": 3.1,
+      "turnover": 0.0,
+      "leading_stock": "福达合金",
+      "leading_pct": 93
+    },
+    {
+      "name": "东方财富热股",
+      "change_pct": 3.05,
+      "turnover": 0.0,
+      "leading_stock": "福达合金",
+      "leading_pct": 73
+    },
+    {
+      "name": "昨日首板",
+      "change_pct": 2.89,
+      "turnover": 0.0,
+      "leading_stock": "南威软件",
+      "leading_pct": 56
+    },
+    {
+      "name": "资源开采概念",
+      "change_pct": 2.13,
+      "turnover": 0.0,
+      "leading_stock": "龙高股份",
+      "leading_pct": 18
+    },
+    {
+      "name": "机器人执行器",
+      "change_pct": 1.98,
+      "turnover": 0.0,
+      "leading_stock": "恒锋工具",
+      "leading_pct": 31
+    },
+    {
+      "name": "基因测序",
+      "change_pct": 1.95,
+      "turnover": 0.0,
+      "leading_stock": "荣联科技",
+      "leading_pct": 29
+    },
+    {
+      "name": "最近多板",
+      "change_pct": 1.8,
+      "turnover": 0.0,
+      "leading_stock": "福达合金",
+      "leading_pct": 146
+    }
+  ],
+  "industry_auction": [
+    {
+      "name": "房产租赁经纪",
+      "change_pct": 5.09,
+      "turnover": 0.0,
+      "main_net_inflow": 0.57,
+      "leading_stock": "宁波富达"
+    },
+    {
+      "name": "诊断服务",
+      "change_pct": 4.29,
+      "turnover": 0.0,
+      "main_net_inflow": 0.97,
+      "leading_stock": "华大基因"
+    },
+    {
+      "name": "白银",
+      "change_pct": 3.6,
+      "turnover": 0.0,
+      "main_net_inflow": 2.61,
+      "leading_stock": "兴业银锡"
+    },
+    {
+      "name": "玻纤制造",
+      "change_pct": 2.68,
+      "turnover": 0.0,
+      "main_net_inflow": -0.96,
+      "leading_stock": "山东玻纤"
+    },
+    {
+      "name": "油田服务",
+      "change_pct": 2.61,
+      "turnover": 0.0,
+      "main_net_inflow": 0.48,
+      "leading_stock": "仁智股份"
+    },
+    {
+      "name": "游戏Ⅲ",
+      "change_pct": 2.52,
+      "turnover": 0.0,
+      "main_net_inflow": 6.32,
+      "leading_stock": "完美世界"
+    },
+    {
+      "name": "游戏Ⅱ",
+      "change_pct": 2.52,
+      "turnover": 0.0,
+      "main_net_inflow": 6.32,
+      "leading_stock": "完美世界"
+    },
+    {
+      "name": "化妆品制造及其他",
+      "change_pct": 2.4,
+      "turnover": 0.0,
+      "main_net_inflow": 0.14,
+      "leading_stock": "嘉亨家化"
+    },
+    {
+      "name": "疫苗",
+      "change_pct": 2.2,
+      "turnover": 0.0,
+      "main_net_inflow": 1.26,
+      "leading_stock": "华兰疫苗"
+    },
+    {
+      "name": "火力发电",
+      "change_pct": 2.16,
+      "turnover": 0.0,
+      "main_net_inflow": 0.14,
+      "leading_stock": "大唐发电"
+    },
+    {
+      "name": "通信线缆及配套",
+      "change_pct": 2.08,
+      "turnover": 0.0,
+      "main_net_inflow": -0.03,
+      "leading_stock": "通鼎互联"
+    },
+    {
+      "name": "机床工具",
+      "change_pct": 2.05,
+      "turnover": 0.0,
+      "main_net_inflow": 0.01,
+      "leading_stock": "乔锋智能"
+    },
+    {
+      "name": "胶黏剂及胶带",
+      "change_pct": 2.05,
+      "turnover": 0.0,
+      "main_net_inflow": 0.25,
+      "leading_stock": "永冠新材"
+    },
+    {
+      "name": "油服工程",
+      "change_pct": 2.05,
+      "turnover": 0.0,
+      "main_net_inflow": 0.17,
+      "leading_stock": "仁智股份"
+    },
+    {
+      "name": "锦纶",
+      "change_pct": 2.04,
+      "turnover": 0.0,
+      "main_net_inflow": 0.22,
+      "leading_stock": "恒申新材"
+    }
+  ],
+  "limit_orders": {
+    "limit_up_strength": [
+      {
+        "code": "688655",
+        "name": "迅捷兴",
+        "price": 55.8,
+        "change_pct": 20.0,
+        "volume": 118418,
+        "amount": 6.35,
+        "volume_ratio": 5.54,
+        "turnover_rate": 8.88,
+        "market_cap": 74.43
+      },
+      {
+        "code": "300840",
+        "name": "酷特智能",
+        "price": 25.59,
+        "change_pct": 17.06,
+        "volume": 236574,
+        "amount": 5.72,
+        "volume_ratio": 16.94,
+        "turnover_rate": 13.36,
+        "market_cap": 61.42
+      },
+      {
+        "code": "300736",
+        "name": "百邦科技",
+        "price": 33.7,
+        "change_pct": 16.81,
+        "volume": 132115,
+        "amount": 4.33,
+        "volume_ratio": 12.26,
+        "turnover_rate": 10.59,
+        "market_cap": 43.11
+      },
+      {
+        "code": "300819",
+        "name": "聚杰微纤",
+        "price": 82.28,
+        "change_pct": 16.43,
+        "volume": 87752,
+        "amount": 6.83,
+        "volume_ratio": 9.42,
+        "turnover_rate": 6.51,
+        "market_cap": 122.77
+      },
+      {
+        "code": "301369",
+        "name": "联动科技",
+        "price": 213.21,
+        "change_pct": 16.3,
+        "volume": 13521,
+        "amount": 2.79,
+        "volume_ratio": 8.84,
+        "turnover_rate": 3.72,
+        "market_cap": 150.47
+      },
+      {
+        "code": "300839",
+        "name": "博汇股份",
+        "price": 17.8,
+        "change_pct": 15.58,
+        "volume": 124121,
+        "amount": 2.06,
+        "volume_ratio": 13.3,
+        "turnover_rate": 4.28,
+        "market_cap": 52.5
+      },
+      {
+        "code": "300599",
+        "name": "雄塑科技",
+        "price": 14.17,
+        "change_pct": 14.92,
+        "volume": 150897,
+        "amount": 2.0,
+        "volume_ratio": 6.48,
+        "turnover_rate": 8.02,
+        "market_cap": 50.75
+      },
+      {
+        "code": "688260",
+        "name": "昀冢科技",
+        "price": 42.96,
+        "change_pct": 12.76,
+        "volume": 34152,
+        "amount": 1.41,
+        "volume_ratio": 4.3,
+        "turnover_rate": 2.85,
+        "market_cap": 51.55
+      },
+      {
+        "code": "300488",
+        "name": "恒锋工具",
+        "price": 38.93,
+        "change_pct": 12.42,
+        "volume": 110109,
+        "amount": 4.12,
+        "volume_ratio": 13.9,
+        "turnover_rate": 6.79,
+        "market_cap": 74.44
+      },
+      {
+        "code": "300052",
+        "name": "中青宝",
+        "price": 16.01,
+        "change_pct": 12.19,
+        "volume": 467445,
+        "amount": 7.4,
+        "volume_ratio": 18.7,
+        "turnover_rate": 17.85,
+        "market_cap": 41.92
+      },
+      {
+        "code": "301603",
+        "name": "乔锋智能",
+        "price": 136.89,
+        "change_pct": 10.51,
+        "volume": 31053,
+        "amount": 4.18,
+        "volume_ratio": 4.94,
+        "turnover_rate": 8.23,
+        "market_cap": 165.31
+      },
+      {
+        "code": "301328",
+        "name": "维峰电子",
+        "price": 71.9,
+        "change_pct": 10.48,
+        "volume": 15091,
+        "amount": 1.04,
+        "volume_ratio": 7.27,
+        "turnover_rate": 1.37,
+        "market_cap": 79.01
+      },
+      {
+        "code": "688001",
+        "name": "华兴源创",
+        "price": 62.68,
+        "change_pct": 10.24,
+        "volume": 106506,
+        "amount": 6.34,
+        "volume_ratio": 4.4,
+        "turnover_rate": 2.33,
+        "market_cap": 286.57
+      },
+      {
+        "code": "000839",
+        "name": "国安股份",
+        "price": 3.36,
+        "change_pct": 10.16,
+        "volume": 318331,
+        "amount": 1.07,
+        "volume_ratio": 3.63,
+        "turnover_rate": 0.81,
+        "market_cap": 131.71
+      },
+      {
+        "code": "600076",
+        "name": "康欣新材",
+        "price": 3.6,
+        "change_pct": 10.09,
+        "volume": 258579,
+        "amount": 0.91,
+        "volume_ratio": 8.34,
+        "turnover_rate": 1.92,
+        "market_cap": 48.4
+      },
+      {
+        "code": "600724",
+        "name": "宁波富达",
+        "price": 8.09,
+        "change_pct": 10.07,
+        "volume": 153843,
+        "amount": 1.22,
+        "volume_ratio": 14.37,
+        "turnover_rate": 1.06,
+        "market_cap": 116.92
+      },
+      {
+        "code": "002642",
+        "name": "荣联科技",
+        "price": 9.08,
+        "change_pct": 10.06,
+        "volume": 435716,
+        "amount": 3.86,
+        "volume_ratio": 22.06,
+        "turnover_rate": 6.59,
+        "market_cap": 60.07
+      },
+      {
+        "code": "000720",
+        "name": "新能泰山",
+        "price": 5.69,
+        "change_pct": 10.06,
+        "volume": 1997687,
+        "amount": 11.07,
+        "volume_ratio": 29.46,
+        "turnover_rate": 15.9,
+        "market_cap": 71.5
+      },
+      {
+        "code": "002624",
+        "name": "完美世界",
+        "price": 17.55,
+        "change_pct": 10.03,
+        "volume": 309769,
+        "amount": 5.43,
+        "volume_ratio": 2.55,
+        "turnover_rate": 1.69,
+        "market_cap": 340.46
+      },
+      {
+        "code": "000782",
+        "name": "恒申新材",
+        "price": 8.23,
+        "change_pct": 10.03,
+        "volume": 177427,
+        "amount": 1.43,
+        "volume_ratio": 3.79,
+        "turnover_rate": 3.36,
+        "market_cap": 56.51
+      }
+    ],
+    "limit_down_pressure": []
+  },
+  "portfolio_auction": [
+    {
+      "code": "002156",
+      "name": "002156",
+      "auction_price": 57.49,
+      "prev_close": 59.08,
+      "auction_chg_pct": -2.69,
+      "open_volume": 482437,
+      "sector": "半导体封测"
+    },
+    {
+      "code": "000062",
+      "name": "000062",
+      "auction_price": 36.1,
+      "prev_close": 37.46,
+      "auction_chg_pct": -3.63,
+      "open_volume": 352762,
+      "sector": "华为昇腾/分销"
+    },
+    {
+      "code": "300480",
+      "name": "300480",
+      "auction_price": 37.54,
+      "prev_close": 37.81,
+      "auction_chg_pct": -0.71,
+      "open_volume": 53640,
+      "sector": "半导体设备"
+    },
+    {
+      "code": "002407",
+      "name": "002407",
+      "auction_price": 37.19,
+      "prev_close": 37.54,
+      "auction_chg_pct": -0.93,
+      "open_volume": 371242,
+      "sector": "锂电化工"
+    },
+    {
+      "code": "002328",
+      "name": "002328",
+      "auction_price": 10.99,
+      "prev_close": 11.08,
+      "auction_chg_pct": -0.81,
+      "open_volume": 251701,
+      "sector": "汽车零部件/半导体"
+    },
+    {
+      "code": "002261",
+      "name": "002261",
+      "auction_price": 36.53,
+      "prev_close": 37.75,
+      "auction_chg_pct": -3.23,
+      "open_volume": 460462,
+      "sector": "华为昇腾/算力"
+    },
+    {
+      "code": "300739",
+      "name": "300739",
+      "auction_price": 29.84,
+      "prev_close": 29.33,
+      "auction_chg_pct": 1.74,
+      "open_volume": 80234,
+      "sector": "PCB"
+    }
+  ]
+}

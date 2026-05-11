@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-05-11 03:36:29",
+  "summary": {
+    "total_trades": 3817,
+    "actual_pnl": -403676.49,
+    "simulated_pnl": 92109.51,
+    "improvement": 495786.0,
+    "filtered_out": 1226,
+    "stop_loss_hit": 428,
+    "danger_zone_exit": 348,
+    "profit_take_hit": 391
+  }
+}

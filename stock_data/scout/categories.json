@@ -1,0 +1,42 @@
+{
+  "categories": {
+    "trading_strategy": {
+      "label": "交易策略",
+      "description": "新算法、因子挖掘、策略论文、回测方法、风控模型",
+      "sources": ["GitHub topic: quantitative-trading", "GitHub topic: algorithmic-trading", "arXiv q-fin", "SSRN"],
+      "priority": "high"
+    },
+    "trading_software": {
+      "label": "交易软件/工具",
+      "description": "数据源、API、可视化库、回测框架、执行引擎",
+      "sources": ["GitHub trending Python", "PyPI new releases", "npm trending"],
+      "priority": "high"
+    },
+    "ai_agent": {
+      "label": "AI 智能体",
+      "description": "Claude Code skills、Agent 架构、MCP 工具、LLM 新能力、prompt 工程突破",
+      "sources": ["GitHub topic: claude-code", "GitHub topic: ai-agents", "Anthropic blog", "LangChain blog"],
+      "priority": "high"
+    },
+    "market_data": {
+      "label": "市场数据源",
+      "description": "新的免费/廉价数据 API、另类数据、情绪指标源",
+      "sources": ["GitHub topic: financial-data", "newsletters", "API marketplaces"],
+      "priority": "medium"
+    },
+    "infrastructure": {
+      "label": "基础设施",
+      "description": "监控告警、数据管道、数据库优化、部署运维",
+      "sources": ["GitHub trending", "Hacker News", "DevOps weekly"],
+      "priority": "medium"
+    },
+    "frontier": {
+      "label": "前沿探索",
+      "description": "新技术、新框架、论文突破，不一定立即可用但值得追踪",
+      "sources": ["arXiv", "Hacker News", "GitHub trending", "Twitter/X AI圈"],
+      "priority": "low"
+    }
+  },
+  "registry_version": "1.0",
+  "created": "2026-05-10"
+}

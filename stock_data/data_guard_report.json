@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-05-11 10:01:22",
+  "json_issues": [
+    {
+      "file": "analysis_30min.json",
+      "issue": "encoding error: 'utf-8' codec can't decode byte 0xcd in position 193: invalid continuation byte",
+      "severity": "high"
+    },
+    {
+      "file": "bilibili_videos.json",
+      "issue": "JSON error: Expecting value: line 1 column 1 (char 0)",
+      "severity": "high"
+    },
+    {
+      "file": "closing_quotes.json",
+      "issue": "encoding error: 'utf-8' codec can't decode byte 0xb8 in position 132: invalid start byte",
+      "severity": "high"
+    },
+    {
+      "file": "market_quotes.json",
+      "issue": "encoding error: 'utf-8' codec can't decode byte 0xd0 in position 18: invalid continuation byte",
+      "severity": "high"
+    }
+  ],
+  "critical_issues": [],
+  "stale_issues": [
+    {
+      "file": "news_manual_20260507_0900.json",
+      "issue": "stale (97.0h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260508_0800.json",
+      "issue": "stale (74.0h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260508_0843.json",
+      "issue": "stale (73.3h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260508_1520.json",
+      "issue": "stale (66.7h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260509_0800.json",
+      "issue": "stale (50.0h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260510_0800.json",
+      "issue": "stale (26.0h > 12h threshold)",
+      "severity": "medium"
+    }
+  ],
+  "total_issues": 10,
+  "healthy": false
+}

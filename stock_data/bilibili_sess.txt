@@ -1,0 +1,4 @@
+# Netscape HTTP Cookie File
+# curl-cffi extracted
+.bilibili.com	TRUE	/	FALSE	1809629987	buvid3	98A6CA4B-C073-A938-B535-17D8C60AE9EE87784infoc
+.bilibili.com	TRUE	/	FALSE	1809629987	b_nut	1778093987

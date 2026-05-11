@@ -1,0 +1,126 @@
+{
+  "updated": "2026-05-11 16:08",
+  "daily_digest_index": [],
+  "digests": [
+    {
+      "date": "2026-05-12",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 1,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-12.json"
+    },
+    {
+      "date": "2026-05-13",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 0,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-13.json"
+    },
+    {
+      "date": "2026-05-14",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 1,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-14.json"
+    },
+    {
+      "date": "2026-05-15",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 1,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-15.json"
+    },
+    {
+      "date": "2026-05-18",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 1,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-18.json"
+    },
+    {
+      "date": "2026-05-19",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 0,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-19.json"
+    },
+    {
+      "date": "2026-05-20",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 1,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-20.json"
+    },
+    {
+      "date": "2026-05-21",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 1,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-21.json"
+    },
+    {
+      "date": "2026-05-22",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 3,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-22.json"
+    },
+    {
+      "date": "2026-05-25",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 2,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-25.json"
+    },
+    {
+      "date": "2026-05-26",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 1,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-26.json"
+    },
+    {
+      "date": "2026-05-27",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 2,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-27.json"
+    },
+    {
+      "date": "2026-05-28",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 2,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-28.json"
+    },
+    {
+      "date": "2026-05-29",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 0,
+      "rules_condensed": 1,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-29.json"
+    },
+    {
+      "date": "20260511",
+      "version": 2,
+      "stage": "启动",
+      "alerts": 7,
+      "rules_condensed": 0,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_20260511.json"
+    }
+  ]
+}

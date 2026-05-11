@@ -1,0 +1,147 @@
+{
+  "type": "板块排行",
+  "time": "2026-05-04 19:12:25",
+  "count": 20,
+  "data": [
+    {
+      "name": "燃料电池",
+      "code": "BK1305",
+      "change_pct": 9.46,
+      "up_count": 1,
+      "down_count": 0
+    },
+    {
+      "name": "集成电路制造",
+      "code": "BK1329",
+      "change_pct": 6.56,
+      "up_count": 8,
+      "down_count": 0
+    },
+    {
+      "name": "体育Ⅲ",
+      "code": "BK1564",
+      "change_pct": 6.43,
+      "up_count": 2,
+      "down_count": 0
+    },
+    {
+      "name": "体育Ⅱ",
+      "code": "BK1273",
+      "change_pct": 6.43,
+      "up_count": 2,
+      "down_count": 0
+    },
+    {
+      "name": "图片媒体",
+      "code": "BK1297",
+      "change_pct": 5.21,
+      "up_count": 1,
+      "down_count": 0
+    },
+    {
+      "name": "锂",
+      "code": "BK1621",
+      "change_pct": 5.13,
+      "up_count": 6,
+      "down_count": 2
+    },
+    {
+      "name": "模拟芯片设计",
+      "code": "BK1330",
+      "change_pct": 4.63,
+      "up_count": 31,
+      "down_count": 4
+    },
+    {
+      "name": "能源金属",
+      "code": "BK1015",
+      "change_pct": 3.8,
+      "up_count": 8,
+      "down_count": 3
+    },
+    {
+      "name": "半导体设备",
+      "code": "BK1326",
+      "change_pct": 3.43,
+      "up_count": 18,
+      "down_count": 4
+    },
+    {
+      "name": "半导体",
+      "code": "BK1036",
+      "change_pct": 3.4,
+      "up_count": 148,
+      "down_count": 26
+    },
+    {
+      "name": "集成电路封测",
+      "code": "BK1328",
+      "change_pct": 3.33,
+      "up_count": 13,
+      "down_count": 0
+    },
+    {
+      "name": "个护小家电",
+      "code": "BK1458",
+      "change_pct": 3.16,
+      "up_count": 4,
+      "down_count": 0
+    },
+    {
+      "name": "风电整机",
+      "code": "BK1314",
+      "change_pct": 3.11,
+      "up_count": 5,
+      "down_count": 0
+    },
+    {
+      "name": "其他金属新材料",
+      "code": "BK1619",
+      "change_pct": 2.94,
+      "up_count": 16,
+      "down_count": 5
+    },
+    {
+      "name": "数字芯片设计",
+      "code": "BK1331",
+      "change_pct": 2.93,
+      "up_count": 38,
+      "down_count": 13
+    },
+    {
+      "name": "钨",
+      "code": "BK1625",
+      "change_pct": 2.89,
+      "up_count": 3,
+      "down_count": 1
+    },
+    {
+      "name": "半导体材料",
+      "code": "BK1325",
+      "change_pct": 2.71,
+      "up_count": 26,
+      "down_count": 2
+    },
+    {
+      "name": "机器人",
+      "code": "BK1408",
+      "change_pct": 2.71,
+      "up_count": 18,
+      "down_count": 2
+    },
+    {
+      "name": "其他种植业",
+      "code": "BK1516",
+      "change_pct": 2.65,
+      "up_count": 4,
+      "down_count": 1
+    },
+    {
+      "name": "航天装备Ⅲ",
+      "code": "BK1385",
+      "change_pct": 2.57,
+      "up_count": 8,
+      "down_count": 1
+    }
+  ]
+}

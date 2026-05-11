@@ -1,0 +1,112 @@
+{
+  "type": "实时行情-30min分析",
+  "time": "2026-05-07 11:51:31",
+  "indices": [
+    {
+      "name": "上证指数",
+      "price": 4170.75,
+      "change_pct": 0.25
+    },
+    {
+      "name": "深证成指",
+      "price": 15569.46,
+      "change_pct": 0.71
+    },
+    {
+      "name": "创业板指",
+      "price": 3815.24,
+      "change_pct": 0.98
+    },
+    {
+      "name": "科创50",
+      "price": 1663.93,
+      "change_pct": 0.42
+    }
+  ],
+  "holdings": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "price": 58.58,
+      "change_pct": 2.86,
+      "high": 60.8,
+      "low": 57.6,
+      "open": 60.8,
+      "pre_close": 56.95,
+      "volume": 1764668,
+      "amount": 1038919.0
+    },
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "price": 37.01,
+      "change_pct": 0.35,
+      "high": 37.1,
+      "low": 35.53,
+      "open": 35.95,
+      "pre_close": 36.88,
+      "volume": 723645,
+      "amount": 263941.0
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "price": 36.98,
+      "change_pct": 2.04,
+      "high": 37.49,
+      "low": 35.79,
+      "open": 36.01,
+      "pre_close": 36.24,
+      "volume": 138027,
+      "amount": 50405.0
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "price": 37.35,
+      "change_pct": -2.02,
+      "high": 38.04,
+      "low": 36.65,
+      "open": 37.4,
+      "pre_close": 38.12,
+      "volume": 1002932,
+      "amount": 374225.0
+    },
+    {
+      "code": "002328",
+      "name": "新朋股份",
+      "price": 11.07,
+      "change_pct": 4.34,
+      "high": 11.19,
+      "low": 10.63,
+      "open": 10.65,
+      "pre_close": 10.61,
+      "volume": 678384,
+      "amount": 74324.0
+    },
+    {
+      "code": "002261",
+      "name": "拓维信息",
+      "price": 37.44,
+      "change_pct": -0.43,
+      "high": 37.9,
+      "low": 37.28,
+      "open": 37.62,
+      "pre_close": 37.6,
+      "volume": 549801,
+      "amount": 206147.0
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "price": 29.27,
+      "change_pct": 4.54,
+      "high": 29.43,
+      "low": 28.2,
+      "open": 28.3,
+      "pre_close": 28.0,
+      "volume": 168085,
+      "amount": 48770.0
+    }
+  ]
+}

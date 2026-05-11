@@ -1,0 +1,139 @@
+{
+  "type": "closing_quotes",
+  "time": "2026-05-07 18:07:45",
+  "holdings": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "price": 59.08,
+      "change_pct": 3.74,
+      "high": 60.8,
+      "low": 57.6,
+      "open": 60.8,
+      "pre_close": 56.95,
+      "volume": 2517397,
+      "amount": 1484129.0
+    },
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "price": 37.46,
+      "change_pct": 1.57,
+      "high": 38.2,
+      "low": 35.53,
+      "open": 35.95,
+      "pre_close": 36.88,
+      "volume": 1099820,
+      "amount": 405161.0
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "price": 37.81,
+      "change_pct": 4.33,
+      "high": 38.34,
+      "low": 35.79,
+      "open": 36.01,
+      "pre_close": 36.24,
+      "volume": 293564,
+      "amount": 108442.0
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "price": 37.54,
+      "change_pct": -1.52,
+      "high": 38.04,
+      "low": 36.65,
+      "open": 37.4,
+      "pre_close": 38.12,
+      "volume": 1468894,
+      "amount": 548520.0
+    },
+    {
+      "code": "002328",
+      "name": "新朋股份",
+      "price": 11.08,
+      "change_pct": 4.43,
+      "high": 11.19,
+      "low": 10.63,
+      "open": 10.65,
+      "pre_close": 10.61,
+      "volume": 1168076,
+      "amount": 128422.0
+    },
+    {
+      "code": "002261",
+      "name": "拓维信息",
+      "price": 37.75,
+      "change_pct": 0.4,
+      "high": 37.9,
+      "low": 37.28,
+      "open": 37.62,
+      "pre_close": 37.6,
+      "volume": 1007110,
+      "amount": 378089.0
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "price": 29.33,
+      "change_pct": 4.75,
+      "high": 29.44,
+      "low": 28.2,
+      "open": 28.3,
+      "pre_close": 28.0,
+      "volume": 264186,
+      "amount": 76912.0
+    },
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "price": 4180.09,
+      "change_pct": 0.48,
+      "high": 4180.21,
+      "low": 4163.14,
+      "open": 4168.45,
+      "pre_close": 4160.17,
+      "volume": 685574249,
+      "amount": 135909951.0
+    },
+    {
+      "code": "399001",
+      "name": "深证成指",
+      "price": 15641.89,
+      "change_pct": 1.18,
+      "high": 15652.58,
+      "low": 15439.48,
+      "open": 15541.3,
+      "pre_close": 15459.62,
+      "volume": 844489884,
+      "amount": 178485610.0
+    },
+    {
+      "code": "399006",
+      "name": "创业板指",
+      "price": 3833.06,
+      "change_pct": 1.45,
+      "high": 3840.06,
+      "low": 3761.23,
+      "open": 3807.99,
+      "pre_close": 3778.16,
+      "volume": 252313119,
+      "amount": 83941528.0
+    },
+    {
+      "code": "000688",
+      "name": "科创50",
+      "price": 1678.89,
+      "change_pct": 1.32,
+      "high": 1682.22,
+      "low": 1646.94,
+      "open": 1663.16,
+      "pre_close": 1656.95,
+      "volume": 13930063,
+      "amount": 14714854.0
+    }
+  ],
+  "indices": []
+}
