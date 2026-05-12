@@ -36,6 +36,16 @@ from config import (
     SINA_QUOTE_URL,
 )
 
+# ── 多源数据路由 (自动健康检查 + 回退) ──
+from data_source_router import get_quotes as router_get_quotes
+from data_source_router import get_index_quotes as router_get_index_quotes
+from data_source_router import get_us_index_quotes, check_channels, EASTMONEY_BLOCKED
+
+# 启动时检测通道健康状态
+_channels_ok = check_channels()
+logger = logging.getLogger("daily_task")
+logger.info("数据通道状态: %s", {k: "✅" if v else "❌" for k, v in _channels_ok.items()})
+
 # ── 可选依赖（尚在开发中的模块使用 fallback） ──────────────────────────
 
 try:
@@ -285,6 +295,7 @@ def _fallback_holdings() -> list[dict]:
         {"code": "002407", "name": "多氟多",   "shares": 600,  "cost": 36.25, "sector": "锂电化工", "first_buy": "2026-05-06", "latest_buy": "2026-05-07"},
         {"code": "300342", "name": "天银机电", "shares": 200,  "cost": 64.56, "sector": "商业航天/军工电子", "first_buy": "2026-05-08", "latest_buy": "2026-05-08"},
         {"code": "300739", "name": "明阳电路", "shares": 100,  "cost": 29.72, "sector": "PCB/电子", "first_buy": "2026-04-23", "latest_buy": "2026-04-23"},
+        {"code": "601789", "name": "宁波建工", "shares": 600,  "cost": 6.36,  "sector": "建筑工程/基建", "first_buy": "2026-05-05", "latest_buy": "2026-05-05"},
     ]
 
 
@@ -423,51 +434,144 @@ def fetch_quote_eastmoney(code: str) -> Optional[dict]:
 
 
 def fetch_quote(code: str) -> Optional[dict]:
-    """获取个股行情：Eastmoney -> Sina -> Tencent 三级回退"""
-    result = fetch_quote_eastmoney(code)
-    if result and result.get("price", 0) > 0:
-        return result
+    """获取个股行情: 数据源路由器 → 遗留接口回退"""
+    # 1) 路由器
+    result = router_get_quotes([code]).get(code)
+    if result and result.get("current", 0) > 0:
+        return {
+            "code": code,
+            "name": result.get("name", ""),
+            "price": result["current"],
+            "change_pct": result.get("change_pct", 0),
+            "high": result.get("high", 0),
+            "low": result.get("low", 0),
+            "volume": result.get("volume", 0),
+            "source": result.get("source", "router"),
+        }
 
-    sina_results = fetch_quote_sina([code])
-    if sina_results:
-        result = sina_results[0]
-        if result.get("price", 0) > 0:
+    # 2) 遗留: 东方财富 (如果已恢复)
+    if not EASTMONEY_BLOCKED:
+        result = fetch_quote_eastmoney(code)
+        if result and result.get("price", 0) > 0:
             return result
 
+    # 3) 腾讯单只
     result = fetch_quote_tencent(code)
     if result and result.get("price", 0) > 0:
         return result
 
-    logger.error(f"所有行情源均无法获取 {code}")
+    logger.error("所有行情源均无法获取 %s", code)
     return None
 
 
+def fetch_quotes_ulist_batch(codes: list[str]) -> dict[str, dict]:
+    """通过东方财富 ulist 批量接口获取行情（最稳定，一次拿所有）"""
+    if not codes:
+        return {}
+    secids = []
+    for c in codes:
+        prefix = "0" if c.startswith(("0", "3")) else "1"
+        secids.append(f"{prefix}.{c}")
+    try:
+        params = {
+            "fltt": 2, "invt": 2,
+            "fields": "f2,f3,f4,f5,f6,f12,f14,f15,f16,f17,f18",
+            "secids": ",".join(secids),
+        }
+        r = safe_request(
+            "https://push2.eastmoney.com/api/qt/ulist.np/get",
+            params=params, timeout=10, retries=3,
+        )
+        if r is None:
+            return {}
+        data = r.json()
+        results: dict[str, dict] = {}
+        for item in data.get("data", {}).get("diff", []):
+            code = item.get("f12", "")
+            price = item.get("f2", 0)
+            if not price or price <= 0:
+                continue
+            prev_close = item.get("f18", price)
+            change_pct = item.get("f3", 0)
+            results[code] = {
+                "code": code,
+                "name": item.get("f14", ""),
+                "price": price,
+                "change_pct": round(change_pct, 2),
+                "high": item.get("f15", price),
+                "low": item.get("f16", price),
+                "open": item.get("f17", price),
+                "prev_close": prev_close,
+                "volume": item.get("f5", 0),
+                "amount": item.get("f6", 0),
+                "source": "eastmoney_ulist",
+            }
+        logger.info(f"ulist批量行情: 获取 {len(results)}/{len(codes)} 只")
+        return results
+    except Exception as e:
+        logger.warning(f"ulist批量行情失败: {e}")
+    return {}
+
+
 def fetch_quotes_batch(codes: list[str]) -> dict[str, dict]:
-    """批量获取行情：Eastmoney逐个 -> Sina批量 -> Tencent回退"""
+    """批量获取行情: 数据源路由器(新浪主→腾讯备), 东方财富WAF封锁中则跳过。"""
     results: dict[str, dict] = {}
 
-    # 先尝试新浪批量 (一次请求全拿)
-    sina_data = fetch_quote_sina(codes)
-    sina_codes = {q["code"] for q in sina_data}
-    for q in sina_data:
-        results[q["code"]] = q
+    # 1) 路由器统一获取 (新浪 → 腾讯回退)
+    router_data = router_get_quotes(codes)
+    for code, q in router_data.items():
+        if q.get("current", 0) > 0:
+            results[code] = {
+                "code": code,
+                "name": q.get("name", ""),
+                "price": q["current"],
+                "change_pct": q.get("change_pct", 0),
+                "high": q.get("high", 0),
+                "low": q.get("low", 0),
+                "open": q.get("open", 0),
+                "prev_close": q.get("prev_close", 0),
+                "volume": q.get("volume", 0),
+                "amount": q.get("amount", 0),
+                "source": q.get("source", "router"),
+            }
 
-    # 剩余代码逐个获取（Eastmoney优先，速度快）
-    remaining = [c for c in codes if c not in sina_codes]
-    for code in remaining:
-        q = fetch_quote_eastmoney(code) or fetch_quote_tencent(code)
-        if q:
-            results[code] = q
+    remaining = [c for c in codes if c not in results]
+    if remaining:
+        logger.info("路由器剩余 %d 只, 尝试遗留接口...", len(remaining))
+        # 2) 遗留: 东方财富单只 (如果已恢复)
+        if not EASTMONEY_BLOCKED:
+            for code in remaining:
+                q = fetch_quote_eastmoney(code)
+                if q and q.get("price", 0) > 0:
+                    results[code] = q
+        # 3) 再试腾讯单只 (不同路径)
+        still_missing = [c for c in remaining if c not in results]
+        for code in still_missing:
+            q = fetch_quote_tencent(code)
+            if q and q.get("price", 0) > 0:
+                results[code] = q
+
+    missing = [c for c in codes if c not in results]
+    if missing:
+        logger.warning("⚠ 以下股票所有行情源均失败: %s", missing)
 
     return results
 
 
 def fetch_index_quote(index_code: str, index_name: str) -> Optional[dict]:
-    """获取指数行情（东方财富）"""
-    q = fetch_quote_eastmoney(index_code)
-    if q:
-        q["name"] = index_name
-        return q
+    """获取指数行情 (路由器 → 遗留回退)"""
+    # 路由器一次性获取所有指数
+    indices = router_get_index_quotes()
+    for idx in indices:
+        if idx["name"] == index_name:
+            return {"code": index_code, "name": index_name, "price": idx["price"], "change_pct": idx["change_pct"]}
+
+    # 遗留: 东方财富 (如果已恢复)
+    if not EASTMONEY_BLOCKED:
+        q = fetch_quote_eastmoney(index_code)
+        if q:
+            q["name"] = index_name
+            return q
     return None
 
 
@@ -489,28 +593,40 @@ US_INDICES = [
 
 
 def fetch_global_markets() -> dict:
-    """获取全球主要指数和商品数据"""
+    """获取全球主要指数和商品数据 (路由器 → akshare → 遗留回退)"""
     result: dict = {"indices": [], "commodities": [], "forex": []}
 
-    # A股指数
-    for code, name in GLOBAL_INDICES:
-        q = fetch_index_quote(code, name)
-        if q:
-            result["indices"].append({
-                "name": name,
-                "price": q.get("price", 0),
-                "change_pct": q.get("change_pct", 0),
-            })
+    # A股指数 (路由器: 新浪主→腾讯备)
+    a_indices = router_get_index_quotes()
+    for idx in a_indices:
+        result["indices"].append({
+            "name": idx["name"],
+            "price": idx["price"],
+            "change_pct": idx["change_pct"],
+        })
 
-    # 美股指数 (通过东方财富全球指数)
-    for code, name in US_INDICES:
-        q = fetch_quote_eastmoney(code)
-        if q:
-            result["indices"].append({
-                "name": name,
-                "price": q.get("price", 0),
-                "change_pct": q.get("change_pct", 0),
-            })
+    # 美股指数 (akshare)
+    us_indices = get_us_index_quotes()
+    for idx in us_indices:
+        result["indices"].append({
+            "name": idx["name"],
+            "price": idx["price"],
+            "change_pct": idx["change_pct"],
+        })
+
+    # 遗留: 东方财富美股 (如果akshare失败且东方财富已恢复)
+    if not EASTMONEY_BLOCKED:
+        existing_names = {idx["name"] for idx in result["indices"]}
+        for code, name in US_INDICES:
+            if name in existing_names:
+                continue
+            q = fetch_quote_eastmoney(code)
+            if q:
+                result["indices"].append({
+                    "name": name,
+                    "price": q.get("price", 0),
+                    "change_pct": q.get("change_pct", 0),
+                })
 
     return result
 
@@ -595,35 +711,36 @@ def fetch_news_for_holdings(codes: list[str], limit: int = 20) -> list[dict]:
     except Exception as e:
         logger.warning(f"财联社新闻获取失败: {e}")
 
-    # 沪/深交易所公告标题检索
-    for code in code_set:
-        try:
-            prefix = _market_prefix(code)
-            r = safe_request(
-                f"https://push2.eastmoney.com/api/qt/stock/get",
-                params={
-                    "secid": f"{'0' if prefix == 'sz' else '1'}.{code}",
-                    "fields": "f271,f272",
-                    "ut": "fa5fd1943c7b386f172d6893dbf38dc7",
-                },
-                timeout=8,
-            )
-            if r:
-                d = r.json().get("data", {})
-                if d:
-                    for field in ["f271", "f272"]:
-                        txt = d.get(field, "")
-                        if txt and len(txt) > 5:
-                            news_items.append({
-                                "title": txt[:100],
-                                "time": timestamp_now(),
-                                "source": "东方财富",
-                                "related_stocks": code,
-                                "sentiment": "",
-                                "category": "公告",
-                            })
-        except Exception:
-            continue
+    # 沪/深交易所公告标题检索 (仅当东方财富可用时)
+    if not EASTMONEY_BLOCKED:
+        for code in code_set:
+            try:
+                prefix = _market_prefix(code)
+                r = safe_request(
+                    f"https://push2.eastmoney.com/api/qt/stock/get",
+                    params={
+                        "secid": f"{'0' if prefix == 'sz' else '1'}.{code}",
+                        "fields": "f271,f272",
+                        "ut": "fa5fd1943c7b386f172d6893dbf38dc7",
+                    },
+                    timeout=8,
+                )
+                if r:
+                    d = r.json().get("data", {})
+                    if d:
+                        for field in ["f271", "f272"]:
+                            txt = d.get(field, "")
+                            if txt and len(txt) > 5:
+                                news_items.append({
+                                    "title": txt[:100],
+                                    "time": timestamp_now(),
+                                    "source": "东方财富",
+                                    "related_stocks": code,
+                                    "sentiment": "",
+                                    "category": "公告",
+                                })
+            except Exception:
+                continue
 
     # 按时间排序并截断
     news_items.sort(key=lambda x: x.get("time", ""), reverse=True)
@@ -670,7 +787,9 @@ def fetch_hot_stocks_10jqka() -> list[dict]:
 
 
 def fetch_hot_stocks_eastmoney() -> list[dict]:
-    """从东方财富获取涨幅榜/成交额榜"""
+    """从东方财富获取涨幅榜/成交额榜 (东方财富WAF封锁时跳过)"""
+    if EASTMONEY_BLOCKED:
+        return []
     results = []
     # 涨幅榜
     try:
@@ -742,8 +861,13 @@ def calculate_position_report(holdings: list[dict]) -> dict:
 
     for h in holdings:
         code = h["code"]
-        q = quotes.get(code, {})
-        price = q.get("price", h.get("cost", 0))
+        q = quotes.get(code)
+        if q is None or q.get("price", 0) <= 0:
+            logger.warning(f"⚠ {code} 行情缺失，使用成本价计算（盈亏数据可能不准）")
+            price = h.get("cost", 0)
+            q = {}
+        else:
+            price = q.get("price", h.get("cost", 0))
         high = q.get("high", price)
         low = q.get("low", price)
         change_pct = q.get("change_pct", 0)
@@ -916,8 +1040,12 @@ def run_morning_enhanced():
         cal_data = json.loads(alt_path.read_text(encoding="utf-8"))
 
     for h in holdings:
-        q = quotes.get(h["code"], {})
-        price = q.get("price", h.get("cost", 0))
+        q = quotes.get(h["code"])
+        if q is None or q.get("price", 0) <= 0:
+            price = h.get("cost", 0)
+            q = {}
+        else:
+            price = q.get("price", h.get("cost", 0))
         cost = h["cost"]
         pnl_pct = round(((price - cost) / cost * 100), 2) if cost > 0 else 0
         mv = price * h["shares"]
@@ -1111,27 +1239,28 @@ def run_closing_review():
                 "change_pct": q.get("change_pct", 0),
             })
 
-    # 3) 热门板块
+    # 3) 热门板块 (仅东方财富可用时)
     hot_sectors = []
-    try:
-        params = {
-            "pn": 1, "pz": 10, "po": 1, "np": 1,
-            "ut": "bd1d9ddb04089700cf9c27f6f7426281",
-            "fltt": 2, "invt": 2,
-            "fid": "f3",
-            "fs": "m:90+t:2",  # 行业板块
-            "fields": "f2,f3,f4,f12,f14",
-        }
-        r = safe_request("https://push2.eastmoney.com/api/qt/clist/get", params=params, timeout=10)
-        if r:
-            items = r.json().get("data", {}).get("diff", [])
-            for item in items:
-                hot_sectors.append({
-                    "name": item.get("f14", ""),
-                    "change_pct": item.get("f3", 0),
-                })
-    except Exception as e:
-        logger.warning(f"板块数据获取失败: {e}")
+    if not EASTMONEY_BLOCKED:
+        try:
+            params = {
+                "pn": 1, "pz": 10, "po": 1, "np": 1,
+                "ut": "bd1d9ddb04089700cf9c27f6f7426281",
+                "fltt": 2, "invt": 2,
+                "fid": "f3",
+                "fs": "m:90+t:2",  # 行业板块
+                "fields": "f2,f3,f4,f12,f14",
+            }
+            r = safe_request("https://push2.eastmoney.com/api/qt/clist/get", params=params, timeout=10)
+            if r:
+                items = r.json().get("data", {}).get("diff", [])
+                for item in items:
+                    hot_sectors.append({
+                        "name": item.get("f14", ""),
+                        "change_pct": item.get("f3", 0),
+                    })
+        except Exception as e:
+            logger.warning(f"板块数据获取失败: {e}")
 
     # 4) 持仓建议
     recommendations = []
@@ -1291,8 +1420,13 @@ def run_intraday_analysis(mode: str):
     total_cost = 0.0
 
     for h in holdings:
-        q = quotes.get(h["code"], {})
-        price = q.get("price", h.get("cost", 0))
+        q = quotes.get(h["code"])
+        if q is None or q.get("price", 0) <= 0:
+            logger.warning(f"⚠ {h['code']} 30min行情缺失，使用成本价")
+            price = h.get("cost", 0)
+            q = {}
+        else:
+            price = q.get("price", h.get("cost", 0))
         cost = h["cost"]
         shares = h["shares"]
         mv = price * shares
@@ -1496,16 +1630,17 @@ def run_overnight():
 
     ts_compact = date_now_compact()
 
-    # 1) 美股指数 (通过东方财富)
-    us_market = []
-    for code, name in US_INDICES:
-        q = fetch_quote_eastmoney(code)
-        if q:
-            us_market.append({
-                "name": name,
-                "price": q.get("price", 0),
-                "change_pct": q.get("change_pct", 0),
-            })
+    # 1) 美股指数 (akshare → 东方财富备选)
+    us_market = get_us_index_quotes()
+    if not us_market and not EASTMONEY_BLOCKED:
+        for code, name in US_INDICES:
+            q = fetch_quote_eastmoney(code)
+            if q:
+                us_market.append({
+                    "name": name,
+                    "price": q.get("price", 0),
+                    "change_pct": q.get("change_pct", 0),
+                })
 
     # 2) 汇总今日数据源
     holdings = load_portfolio()

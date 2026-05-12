@@ -1,16 +1,10 @@
 {
-  "title": "盘前简报 | 2026-05-11日",
-  "date": "2026-05-11",
-  "time": "09:58:11",
+  "title": "盘前简报 | 2026-05-12日",
+  "date": "2026-05-12",
+  "time": "09:58:08",
   "market_status": "交易中",
   "economic_calendar": {
     "monthly_events": [
-      {
-        "date": "05/11",
-        "event": "社会融资规模 / M2货币供应",
-        "status": "待发布",
-        "importance": "★★★★★"
-      },
       {
         "date": "05/15",
         "event": "工业增加值 / 固定资产投资 / 社消",
@@ -54,6 +48,12 @@
         "event": "CPI / PPI",
         "status": "已发布",
         "importance": "★★★★★"
+      },
+      {
+        "date": "05/11",
+        "event": "社会融资规模 / M2货币供应",
+        "status": "已发布",
+        "importance": "★★★★★"
       }
     ]
   },
@@ -61,38 +61,38 @@
     "indices": [
       {
         "name": "上证指数",
-        "price": 4198.03,
-        "change_pct": 0.43
+        "price": 4220.666,
+        "change_pct": -0.1
       },
       {
         "name": "深证成指",
-        "price": 15645.11,
-        "change_pct": 0.52
+        "price": 15869.26,
+        "change_pct": -0.19
       },
       {
         "name": "创业板指",
-        "price": 3803.42,
-        "change_pct": 0.19
+        "price": 3944.168,
+        "change_pct": 0.39
       },
       {
         "name": "科创50",
-        "price": 1684.12,
-        "change_pct": 2.66
+        "price": 1701.1781,
+        "change_pct": -0.9
       },
       {
         "name": "道琼斯",
-        "price": 49609.16,
-        "change_pct": 0.02
+        "price": 49704.4688,
+        "change_pct": 0.19
       },
       {
         "name": "纳斯达克",
-        "price": 26247.08,
-        "change_pct": 1.71
+        "price": 26274.125,
+        "change_pct": 0.1
       },
       {
         "name": "标普500",
-        "price": 7398.93,
-        "change_pct": 0.84
+        "price": 7412.8398,
+        "change_pct": 0.19
       }
     ],
     "commodities": [],
@@ -105,12 +105,12 @@
         "name": "深圳华强",
         "shares": 2000,
         "cost": 37.28,
-        "price": 36.91,
-        "change_pct": 3.85,
-        "pnl_pct": -0.99,
+        "price": 38.03,
+        "change_pct": -2.71,
+        "pnl_pct": 2.01,
         "sector": "电子元器件分销",
         "alerts": [
-          "⏰ 超时 D11"
+          "⏰ 超时 D12"
         ]
       },
       {
@@ -118,14 +118,14 @@
         "name": "通富微电",
         "shares": 2200,
         "cost": 49.77,
-        "price": 59.79,
-        "change_pct": 4.6,
-        "pnl_pct": 20.13,
+        "price": 59.41,
+        "change_pct": -2.96,
+        "pnl_pct": 19.37,
         "sector": "半导体封测",
         "alerts": [
-          "⏰ 超时 D14",
+          "⏰ 超时 D15",
           "💰 +15%全止盈",
-          "📈 移动止损激活 20.1%"
+          "📈 移动止损激活 19.4%"
         ]
       },
       {
@@ -133,13 +133,13 @@
         "name": "光力科技",
         "shares": 400,
         "cost": 36.28,
-        "price": 38.96,
-        "change_pct": 4.34,
-        "pnl_pct": 7.39,
+        "price": 38.33,
+        "change_pct": -3.93,
+        "pnl_pct": 5.65,
         "sector": "半导体划片设备",
         "alerts": [
-          "⏰ 超时 D11",
-          "📈 移动止损激活 7.4%"
+          "⏰ 超时 D12",
+          "📈 移动止损激活 5.7%"
         ]
       },
       {
@@ -147,12 +147,12 @@
         "name": "多氟多",
         "shares": 600,
         "cost": 36.25,
-        "price": 35.3,
-        "change_pct": 0.89,
-        "pnl_pct": -2.62,
+        "price": 34.58,
+        "change_pct": -2.54,
+        "pnl_pct": -4.61,
         "sector": "锂电化工",
         "alerts": [
-          "🔶 危险区 D5 -2.6%"
+          "⚡ 软止损触发 -4.6%"
         ]
       },
       {
@@ -160,12 +160,13 @@
         "name": "天银机电",
         "shares": 200,
         "cost": 64.56,
-        "price": 65.14,
-        "change_pct": -4.77,
-        "pnl_pct": 0.9,
+        "price": 62.21,
+        "change_pct": -4.44,
+        "pnl_pct": -3.64,
         "sector": "商业航天/军工电子",
         "alerts": [
-          "🔶 危险区 D3 +0.9%"
+          "⚡ 软止损触发 -3.6%",
+          "🔶 危险区 D4 -3.6%"
         ]
       },
       {
@@ -173,16 +174,29 @@
         "name": "明阳电路",
         "shares": 100,
         "cost": 29.72,
-        "price": 29.17,
-        "change_pct": -1.62,
-        "pnl_pct": -1.85,
+        "price": 30.14,
+        "change_pct": -0.5,
+        "pnl_pct": 1.41,
         "sector": "PCB/电子",
         "alerts": [
-          "⏰ 超时 D18"
+          "⏰ 超时 D19"
+        ]
+      },
+      {
+        "code": "601789",
+        "name": "宁波建工",
+        "shares": 600,
+        "cost": 6.36,
+        "price": 6.06,
+        "change_pct": -1.78,
+        "pnl_pct": -4.72,
+        "sector": "建筑工程/基建",
+        "alerts": [
+          "⚡ 软止损触发 -4.7%"
         ]
       }
     ],
-    "total": 258067.0
+    "total": 261934.0
   },
   "today_focus": {
     "top_news": [],
@@ -190,138 +204,159 @@
       {
         "code": "000062",
         "name": "",
-        "price": 36.91,
+        "price": 39.09,
         "change_pct": 0.0,
         "ma_alignment": "多头排列",
-        "rsi": 64.92,
+        "rsi": 68.61,
         "macd_signal": "金叉",
-        "volume_status": "缩量",
+        "volume_status": "正常",
+        "score": 92
+      },
+      {
+        "code": "002407",
+        "name": "",
+        "price": 35.48,
+        "change_pct": 0.0,
+        "ma_alignment": "多头排列",
+        "rsi": 60.97,
+        "macd_signal": "金叉",
+        "volume_status": "正常",
+        "score": 92
+      },
+      {
+        "code": "601789",
+        "name": "",
+        "price": 6.17,
+        "change_pct": 0.0,
+        "ma_alignment": "多头排列",
+        "rsi": 57.59,
+        "macd_signal": "金叉",
+        "volume_status": "正常",
+        "score": 92
+      },
+      {
+        "code": "002156",
+        "name": "",
+        "price": 61.22,
+        "change_pct": 0.0,
+        "ma_alignment": "多头排列",
+        "rsi": 74.34,
+        "macd_signal": "金叉",
+        "volume_status": "放量",
         "score": 85
       },
       {
         "code": "300480",
         "name": "",
-        "price": 38.94,
+        "price": 39.9,
         "change_pct": 0.0,
         "ma_alignment": "多头排列",
-        "rsi": 69.67,
-        "macd_signal": "金叉",
-        "volume_status": "缩量",
-        "score": 85
-      },
-      {
-        "code": "002407",
-        "name": "",
-        "price": 35.35,
-        "change_pct": 0.0,
-        "ma_alignment": "多头排列",
-        "rsi": 60.63,
-        "macd_signal": "金叉",
-        "volume_status": "缩量",
-        "score": 85
-      },
-      {
-        "code": "002156",
-        "name": "",
-        "price": 59.86,
-        "change_pct": 0.0,
-        "ma_alignment": "多头排列",
-        "rsi": 72.82,
+        "rsi": 71.69,
         "macd_signal": "金叉",
         "volume_status": "正常",
         "score": 77
       },
       {
-        "code": "300342",
-        "name": "",
-        "price": 65.16,
-        "change_pct": 0.0,
-        "ma_alignment": "交叉震荡",
-        "rsi": 54.28,
-        "macd_signal": "死叉",
-        "volume_status": "缩量",
-        "score": 38
-      },
-      {
         "code": "300739",
         "name": "",
-        "price": 29.2,
+        "price": 30.29,
         "change_pct": 0.0,
         "ma_alignment": "交叉震荡",
-        "rsi": 55.36,
+        "rsi": 60.07,
+        "macd_signal": "金叉",
+        "volume_status": "正常",
+        "score": 75
+      },
+      {
+        "code": "300342",
+        "name": "",
+        "price": 65.1,
+        "change_pct": 0.0,
+        "ma_alignment": "交叉震荡",
+        "rsi": 54.2,
         "macd_signal": "死叉",
-        "volume_status": "缩量",
-        "score": 38
+        "volume_status": "正常",
+        "score": 45
       }
     ],
     "risks": []
   },
   "trade_plan": {
-    "for_date": "2026-05-12",
-    "generated_at": "2026-05-11 04:18",
+    "for_date": "2026-05-13",
+    "generated_at": "2026-05-12 07:33",
     "can_open_new": true,
     "emergency_count": 0,
-    "total_pnl_pct": -0.49,
+    "total_pnl_pct": 12.44,
     "positions": [
       {
         "code": "000062",
         "name": "深圳华强",
-        "pnl_pct": -1.07,
-        "hold_days": 11,
+        "pnl_pct": 4.86,
+        "hold_days": 12,
         "priority": "正常",
         "danger_zone": false,
         "trail_active": false,
-        "key_action": "超时11天 → 强制清仓"
+        "key_action": "超时12天 → 强制清仓"
       },
       {
         "code": "002156",
         "name": "通富微电",
-        "pnl_pct": 0.04,
-        "hold_days": 14,
+        "pnl_pct": 23.01,
+        "hold_days": 15,
         "priority": "正常",
         "danger_zone": false,
-        "trail_active": false,
-        "key_action": "超时14天 → 强制清仓"
+        "trail_active": true,
+        "key_action": "全部止盈，不犹豫"
       },
       {
         "code": "300480",
         "name": "光力科技",
-        "pnl_pct": 0.03,
-        "hold_days": 11,
+        "pnl_pct": 9.98,
+        "hold_days": 12,
         "priority": "正常",
         "danger_zone": false,
-        "trail_active": false,
-        "key_action": "超时11天 → 强制清仓"
+        "trail_active": true,
+        "key_action": "止盈一半，剩余设移动止损"
       },
       {
         "code": "002407",
         "name": "多氟多",
-        "pnl_pct": -1.79,
-        "hold_days": 5,
-        "priority": "关注",
-        "danger_zone": true,
+        "pnl_pct": -2.12,
+        "hold_days": 6,
+        "priority": "正常",
+        "danger_zone": false,
         "trail_active": false,
-        "key_action": "危险区+浮亏 → 减半仓或清仓"
+        "key_action": "持有，观察盘中走势"
       },
       {
         "code": "300342",
         "name": "天银机电",
-        "pnl_pct": -0.09,
-        "hold_days": 3,
+        "pnl_pct": 0.84,
+        "hold_days": 4,
         "priority": "关注",
         "danger_zone": true,
         "trail_active": false,
-        "key_action": "危险区+浮亏 → 减半仓或清仓"
+        "key_action": "危险区+微利 → 至少止盈一半"
       },
       {
         "code": "300739",
         "name": "明阳电路",
-        "pnl_pct": 0.0,
-        "hold_days": 18,
+        "pnl_pct": 1.92,
+        "hold_days": 19,
         "priority": "正常",
         "danger_zone": false,
         "trail_active": false,
-        "key_action": "超时18天 → 强制清仓"
+        "key_action": "超时19天 → 强制清仓"
+      },
+      {
+        "code": "601789",
+        "name": "宁波建工",
+        "pnl_pct": -2.99,
+        "hold_days": 7,
+        "priority": "正常",
+        "danger_zone": false,
+        "trail_active": false,
+        "key_action": "持有，观察盘中走势"
       }
     ]
   }

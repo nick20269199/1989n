@@ -2,7 +2,8 @@
 DNS fix for financial APIs that redirect to subdomains unreachable
 from certain Chinese ISPs. Patches socket.getaddrinfo at startup.
 
-Problem: web.ifzq.gtimg.cn → 301 → web3.ifzq.gtimg.cn (DNS fail)
+Problem: web.ifzq.gtimg.cn -> 301 -> web3.ifzq.gtimg.cn (SSL cert mismatch)
+Fix: map web3 -> web so it resolves to the correct IP
 """
 import socket
 import logging
@@ -12,7 +13,7 @@ logger = logging.getLogger("dns_fix")
 
 # Hosts that need DNS override: {unreachable_host: reachable_host_to_resolve}
 FIXED_HOSTS = {
-    "web3.ifzq.gtimg.cn": "web.ifzq.gtimg.cn",
+    "web3.ifzq.gtimg.cn": "web.ifzq.gtimg.cn",  # BUGFIX
 }
 
 _cache: dict[str, list[tuple]] = {}
@@ -24,7 +25,6 @@ def _resolve_fixed(host: str, port: int, family: int) -> list[tuple] | None:
     source = FIXED_HOSTS[host]
     try:
         original = socket.getaddrinfo(source, port, family, socket.SOCK_STREAM)
-        # Replace the canonical name with the unreachable host
         fixed = [(fam, typ, proto, canon, (ip, p)) for fam, typ, proto, canon, (ip, p) in original]
         logger.info("DNS fix: %s -> %s (%s)", host, source, fixed[0][4][0] if fixed else "?")
         return fixed

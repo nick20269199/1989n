@@ -1,62 +1,75 @@
 {
   "version": 2,
-  "date": "2026-05-12",
+  "date": "20260512",
   "cycle_stage": {
     "stage": "启动",
     "confidence": 0.5,
-    "signals": [],
-    "strategy_hint": "确认领头羊，追强不追弱",
-    "next_stage_risk": "主升（确认后）或 冰点（假突破）"
+    "signals": ["上证+1.08%", "深证+2.16%", "创业板+3.50%", "科创50+4.65%", "20万颗卫星催化", "特朗普13-15日访华"],
+    "strategy_hint": "确认领头羊，追强不追弱；注意机械规则vs实质催化的矛盾",
+    "next_stage_risk": "主升（确认后）或 冰点（假突破）——比率全面报警暗示市场结构变化"
   },
   "ratio_alerts": {
-    "triggered": {},
-    "collision_focus": "连板率×成交量变化率",
-    "data_quality": "from_intraday"
+    "triggered": {
+      "炸板率": -2.39,
+      "晋级率": -2.41,
+      "涨跌停比": -2.49,
+      "强势占比": -2.60,
+      "北向强度": -2.31,
+      "大单强度": -2.63,
+      "红盘比": -2.16
+    },
+    "interpretation": "所有比率同步负偏离，但指数上涨+1~4.6%，说明基期设定在更强环境，非当前市场看空信号",
+    "collision_focus": "比率全面报警 vs 指数上涨 → 基期漂移，非市场转弱",
+    "data_quality": "normal — data_source_router.py 3通道冗余已上线"
   },
   "expectation_gaps": [
     {
-      "dimension": "辨识度 vs 预期差",
-      "consensus": "资金追逐辨识度最高的标的（龙头）",
-      "potential_gap": "如果龙头被过度定价 → 跟风中存在预期差 → 补涨机会"
+      "dimension": "机械规则 vs 板块催化",
+      "consensus": "危险区/超时=清仓",
+      "potential_gap": "天银机电D4危险区但今日20万颗卫星催化+航天法草案→机械规则可能错杀强势股（20260511已验证）"
+    },
+    {
+      "dimension": "技术面 vs 价格走势",
+      "consensus": "技术评分高应伴随涨幅",
+      "potential_gap": "天银机电+5%但技术45分(死叉)，深圳华强-5%但技术92分(金叉多头)——技术面信号继续滞后"
     }
   ],
+  "rules_condensed_count": 2,
   "rules_today": [
     {
-      "id": "R20260509_225741",
-      "condition": "当启动阶段，炸板率出现异常偏离时",
-      "action": "执行操作1-0",
-      "failure_signal": "如果晋级率未同步确认，则规则失效",
-      "is_condensed": false
+      "condition": "当日催化的强度（央视新闻/国务院政策）可以覆盖D4-D5危险区的清仓信号",
+      "action": "机械规则的D4危险区操作需先检查当日催化级别再做决定",
+      "failure_signal": "催化兑现后股价不反应→恢复规则权重",
+      "is_condensed": true,
+      "source": "20260512 AI交易大师+20万颗卫星 vs 天银机电D4危险区"
     },
     {
-      "id": "R20260509_225741",
-      "condition": "当启动阶段，晋级率出现异常偏离时",
-      "action": "执行操作1-1",
-      "failure_signal": "如果涨跌停比未同步确认，则规则失效",
-      "is_condensed": false
-    },
-    {
-      "id": "R20260509_225741",
-      "condition": "当启动阶段，涨跌停比出现异常偏离时",
-      "action": "执行操作1-2",
-      "failure_signal": "如果强势占比未同步确认，则规则失效",
-      "is_condensed": true
+      "condition": "AI交易大师盘前数据与持仓交叉分析",
+      "action": "每天开盘前读取该数据，标记直接影响持仓的新闻和矛盾点",
+      "failure_signal": "连续3天无新增矛盾→降频",
+      "is_condensed": true,
+      "source": "20260512 首次AI交易大师数据分析"
     }
   ],
-  "rules_condensed_count": 1,
-  "rules_total_count": 3,
+  "ai_trader_analysis": {
+    "source": "AI交易大师截图/6.pdf",
+    "key_items": [
+      "加速先进封装研发 → 通富微电利好(已price in?)",
+      "20万颗卫星+航天法草案 → 天银机电强催化",
+      "白银+7.35%(秘鲁能源危机) → 资源股异动",
+      "特朗普13-15日访华 → 本周最大变量",
+      "大摩: 云资本支出4500→8000亿 → 算力需求暴增",
+      "19家减持公告 → 市场抛压信号"
+    ],
+    "core_tension": "天银机电D4危险区清仓规则 vs 20万颗卫星催化 — 昨日digest规则2的实战检验"
+  },
   "self_check": {
-    "mistake": "过度自信：对信号的判断过于确定，未标注不确定性",
-    "mistake_root_cause": "知识盲区",
-    "ego_challenge": "",
-    "discipline_breach": "",
-    "feedback": "测试反馈"
+    "mistake": "无",
+    "mistake_root_cause": "",
+    "ego_challenge": "数据源WAF危机已解决（3通道冗余+akshare），下一个脆弱点是什么？",
+    "discipline_breach": "无模式外操作",
+    "feedback": "data_source_router.py上线、task_sentinel路径修复、data_guard 11项修复全部完成"
   },
-  "forecast_updates": {
-    "new": 0
-  },
-  "efficiency": {
-    "total_calls": 46
-  },
-  "compressed_at": "2026-05-09 22:57"
+  "inbox_status": "空 — 无待处理ideas/links/questions",
+  "compressed_at": "2026-05-12 08:50"
 }

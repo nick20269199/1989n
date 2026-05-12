@@ -103,7 +103,7 @@ def repair_win_tasks() -> bool:
 
 def check_claude_cron() -> dict:
     """检查 Claude cron 任务。读取项目 .claude/scheduled_tasks.json"""
-    cron_file = Path(r"D:\1989n\.claude\scheduled_tasks.json")
+    cron_file = Path(r"C:\Users\1989n\.claude\scheduled_tasks.json")
     if not cron_file.exists():
         return {"found": [], "missing": EXPECTED_CRON_KEYWORDS, "total": 0}
     try:

@@ -1,11 +1,12 @@
 {
   "holdings": [
-    {"code": "000062", "name": "深圳华强", "shares": 2000, "cost": 37.28, "sector": "电子元器件分销", "first_buy": "2026-04-30", "latest_buy": "2026-05-06"},
-    {"code": "002156", "name": "通富微电", "shares": 2200, "cost": 49.77, "sector": "半导体封测", "first_buy": "2026-04-27", "latest_buy": "2026-04-29"},
-    {"code": "300480", "name": "光力科技", "shares": 400,  "cost": 36.28, "sector": "半导体划片设备", "first_buy": "2026-04-30", "latest_buy": "2026-04-30"},
-    {"code": "002407", "name": "多氟多",   "shares": 600,  "cost": 36.25, "sector": "锂电化工", "first_buy": "2026-05-06", "latest_buy": "2026-05-07"},
-    {"code": "300342", "name": "天银机电", "shares": 200,  "cost": 64.56, "sector": "商业航天/军工电子", "first_buy": "2026-05-08", "latest_buy": "2026-05-08"},
-    {"code": "300739", "name": "明阳电路", "shares": 100,  "cost": 29.72, "sector": "PCB/电子", "first_buy": "2026-04-23", "latest_buy": "2026-04-23"}
+    {"code": "002156", "name": "通富微电",   "shares": 2200, "cost": 49.465, "sector": "半导体封测",   "first_buy": "2026-04-27", "latest_buy": "2026-04-29"},
+    {"code": "300480", "name": "光力科技",   "shares": 400,  "cost": 36.28,  "sector": "半导体划片设备", "first_buy": "2026-04-30", "latest_buy": "2026-04-30"},
+    {"code": "002407", "name": "多氟多",     "shares": 600,  "cost": 36.27,  "sector": "锂电化工",       "first_buy": "2026-05-06", "latest_buy": "2026-05-07"},
+    {"code": "300342", "name": "天银机电",   "shares": 200,  "cost": 64.48,  "sector": "商业航天/军工电子", "first_buy": "2026-05-08", "latest_buy": "2026-05-08"},
+    {"code": "300739", "name": "明阳电路",   "shares": 100,  "cost": 47.759, "sector": "PCB/电子",       "first_buy": "2026-04-23", "latest_buy": "2026-04-23"},
+    {"code": "601789", "name": "宁波建工",   "shares": 600,  "cost": 6.305,  "sector": "建筑工程/基建",  "first_buy": "2026-05-05", "latest_buy": "2026-05-05"},
+    {"code": "600236", "name": "桂冠电力",   "shares": 6100, "cost": 12.303, "sector": "水电/电力",     "first_buy": "2026-05-12", "latest_buy": "2026-05-12"}
   ],
-  "updated": "2026-05-11"
+  "updated": "2026-05-12"
 }

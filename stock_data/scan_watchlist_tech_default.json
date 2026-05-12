@@ -1,20 +1,9 @@
 {
   "scan_type": "watchlist_tech",
   "param": "default",
-  "time": "2026-05-11 16:03:12",
-  "count": 6,
+  "time": "2026-05-12 15:30:02",
+  "count": 7,
   "results": [
-    {
-      "code": "000062",
-      "name": "",
-      "price": 39.09,
-      "change_pct": 0.0,
-      "ma_alignment": "多头排列",
-      "rsi": 68.61,
-      "macd_signal": "金叉",
-      "volume_status": "正常",
-      "score": 92
-    },
     {
       "code": "002407",
       "name": "",
@@ -27,12 +16,34 @@
       "score": 92
     },
     {
+      "code": "601789",
+      "name": "",
+      "price": 6.17,
+      "change_pct": 0.0,
+      "ma_alignment": "多头排列",
+      "rsi": 57.59,
+      "macd_signal": "金叉",
+      "volume_status": "正常",
+      "score": 92
+    },
+    {
       "code": "002156",
       "name": "",
       "price": 61.22,
       "change_pct": 0.0,
       "ma_alignment": "多头排列",
       "rsi": 74.34,
+      "macd_signal": "金叉",
+      "volume_status": "放量",
+      "score": 85
+    },
+    {
+      "code": "600236",
+      "name": "",
+      "price": 11.63,
+      "change_pct": 0.0,
+      "ma_alignment": "多头排列",
+      "rsi": 70.78,
       "macd_signal": "金叉",
       "volume_status": "放量",
       "score": 85

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-11 20:16:48",
+  "timestamp": "2026-05-12 15:25:03",
   "win_tasks": {
     "found": [
       "StockAnalysis_MorningBrief",
@@ -26,6 +26,8 @@
       "health_check",
       "nightly_health",
       "morning_brief",
+      "news_scheduler",
+      "intraday_report",
       "vv_radar",
       "盘前",
       "集合竞价",
@@ -38,13 +40,11 @@
       "夜间",
       "盘前晨报",
       "新闻",
+      "盘中",
       "大V"
     ],
-    "missing": [
-      "news_scheduler",
-      "intraday_report"
-    ],
-    "total": 21
+    "missing": [],
+    "total": 26
   },
   "data_files": {
     "ok": [

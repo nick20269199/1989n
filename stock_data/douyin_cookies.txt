@@ -10,6 +10,7 @@ www.douyin.com	FALSE	/	TRUE	1812946056	fpk2	f51bb482c660d0eeadd1f058058a2b35
 www.douyin.com	FALSE	/	FALSE	0	device_web_cpu_core	20
 www.douyin.com	FALSE	/	FALSE	0	device_web_memory_size	16
 www.douyin.com	FALSE	/	FALSE	0	architecture	amd64
+www.douyin.com	FALSE	/	FALSE	1778569866	__ac_nonce	06a02cb8200f9ca76d406
 .douyin.com	TRUE	/	TRUE	1812946215	enter_pc_once	1
 .douyin.com	TRUE	/	TRUE	1812946052	UIFID_TEMP	c4a29131752d59acb78af076c3dbdd52744118e38e80b4b96439ef1e20799db052c23f321f52a919b8f8516050fc6900aefab7193e3f7a0b91543d8568d41e6eb23f4a49ce77c601785039434166f72b
 .douyin.com	TRUE	/	FALSE	1812946218	hevc_supported	true
@@ -56,3 +57,4 @@ www.douyin.com	FALSE	/	FALSE	0	architecture	amd64
 .douyin.com	TRUE	/	FALSE	1778991037	home_can_add_dy_2_desktop	%221%22
 api.feelgood.cn	FALSE	/	TRUE	1809922237	fg_uid	RID20260510120740AF31A8B3CCD0BDCA3B98
 login.douyin.com	FALSE	/	FALSE	1783570076	bd_ticket_guard_web_domain	2
+.iesdouyin.com	TRUE	/	FALSE	1809672078	ttwid	1%7CP8lADfltjhxDWBfcFUD0DFeIpxZuen6uHZIC5ujfEKk%7C1778568078%7C615bcbd418db106b7cb401f93d0abfa866afbcb889af1276da57320d6ce6b93b

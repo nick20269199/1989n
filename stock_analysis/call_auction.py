@@ -94,116 +94,135 @@ def _prefix(code: str) -> str:
 #  1. 竞价涨跌分布 (全市场广度)
 # ═══════════════════════════════════════════════════════════════════
 
+def _fetch_page(fs: str, pn: int, po: int = 1, pz: int = 100) -> list:
+    r = safe_get("https://push2.eastmoney.com/api/qt/clist/get", params={
+        "pn": pn, "pz": pz, "po": po, "np": 1,
+        "ut": "bd1d9ddb04089700cf9c27f6f7426281",
+        "fltt": 2, "invt": 2, "fid": "f3",
+        "fs": fs,
+        "fields": "f2,f3,f12,f14",
+    })
+    if r and r.json().get("data"):
+        return r.json()["data"].get("diff", [])
+    return []
+
+
+def _safe_float(v, default=0.0) -> float:
+    """API返回的f3可能是数字或字符串"""
+    if v is None:
+        return default
+    try:
+        return float(v)
+    except (ValueError, TypeError):
+        return default
+
+
 def fetch_auction_breadth() -> dict:
-    """获取全市场竞价涨跌分布 — 市场广度指标"""
+    """
+    全市场竞价涨跌分布 — 精确计数涨停/跌停 + 采样估算涨跌比
+
+    策略:
+     - 涨停: 涨幅榜第1页，若第100只<9.8%则计数精确(通常如此)
+     - 跌停: 跌幅榜第1页，同理
+     - 涨跌比: 取涨幅榜第2页(排名101-200)统计，此处通常是微涨微跌交界区
+    """
     result = {"up": 0, "down": 0, "flat": 0, "limit_up": 0, "limit_down": 0,
               "total": 0, "avg_change": 0.0, "details": []}
     try:
-        # 按涨跌幅获取全 A 股竞价结果
-        params = {
-            "pn": 1, "pz": 1, "po": 1, "np": 1,
-            "ut": "bd1d9ddb04089700cf9c27f6f7426281",
-            "fltt": 2, "invt": 2,
-            "fid": "f3",
-            "fs": "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23",
-            "fields": "f2,f3,f12,f14",
-        }
-        # 先获取总数
-        r = safe_get("https://push2.eastmoney.com/api/qt/clist/get", params=params)
-        total = 0
-        if r:
-            total = r.json().get("data", {}).get("total", 0)
-        result["total"] = total
+        fs = "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23"
 
-        # 分组获取涨/跌/平/涨停/跌停
-        groups = [
-            ("up", 1, "f3", 0.01, 100),      # 涨幅 > 0
-            ("down", 0, "f3", -100, -0.01),   # 跌幅 < 0
-            ("limit_up", 1, "f3", 9.8, 100),   # 涨停
-            ("limit_down", 0, "f3", -100, -9.8), # 跌停
-        ]
-
-        for label, sort_dir, sort_field, lo, hi in groups:
-            params = {
-                "pn": 1, "pz": 1, "po": sort_dir, "np": 1,
-                "ut": "bd1d9ddb04089700cf9c27f6f7426281",
-                "fltt": 2, "invt": 2,
-                "fid": sort_field,
-                "fs": "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23",
-                "fields": "f2,f3,f12,f14",
-            }
-            # 用价格范围做近似过滤
-            r2 = safe_get("https://push2.eastmoney.com/api/qt/clist/get", params=params)
-            if r2:
-                # 遍历少量数据来估算
-                items = r2.json().get("data", {}).get("diff", [])
-                if label in ("limit_up", "limit_down"):
-                    result[label] = sum(1 for it in items if it.get("f3", 0) and
-                                        ((label == "limit_up" and it["f3"] >= 9.8) or
-                                         (label == "limit_down" and it["f3"] <= -9.8)))
-        time.sleep(0.3)
-
-        # 获取涨跌停数量 (更精确的方法)
-        r_zt = safe_get("https://push2.eastmoney.com/api/qt/clist/get", params={
-            "pn": 1, "pz": 1, "po": 1, "np": 1,
+        # 1. 总数 + 涨幅前100
+        top_r = safe_get("https://push2.eastmoney.com/api/qt/clist/get", params={
+            "pn": 1, "pz": 100, "po": 1, "np": 1,
             "ut": "bd1d9ddb04089700cf9c27f6f7426281",
             "fltt": 2, "invt": 2, "fid": "f3",
-            "fs": "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23",
+            "fs": fs,
             "fields": "f2,f3,f12,f14",
         })
-        if r_zt:
-            total_val = r_zt.json().get("data", {}).get("total", 0)
-            # 涨停: 取涨幅前 N 条看有多少 >= 9.8
-            r_zt_detail = safe_get("https://push2.eastmoney.com/api/qt/clist/get", params={
-                "pn": 1, "pz": 100, "po": 1, "np": 1,
-                "ut": "bd1d9ddb04089700cf9c27f6f7426281",
-                "fltt": 2, "invt": 2, "fid": "f3",
-                "fs": "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23",
-                "fields": "f2,f3,f12,f14",
-            })
-            if r_zt_detail:
-                items = r_zt_detail.json().get("data", {}).get("diff", [])
-                ups = 0
-                downs = 0
-                zt = 0
-                dt = 0
-                total_chg = 0.0
-                cnt = 0
-                for it in items:
-                    chg = it.get("f3", 0) or 0
-                    total_chg += chg
-                    cnt += 1
-                    if chg >= 9.8:
-                        zt += 1
-                    elif chg <= -9.8:
-                        dt += 1
-                    elif chg > 0:
-                        ups += 1
-                    elif chg < 0:
-                        downs += 1
+        if not top_r or not top_r.json().get("data"):
+            return result
+        top_data = top_r.json()["data"]
+        total = top_data.get("total", 0)
+        top_items = top_data.get("diff", [])
+        result["total"] = total
 
-                # 根据比例估算全市场
-                if cnt > 0 and total_val > 0:
-                    scale = total_val / cnt
-                    result["limit_up"] = int(zt * scale)
-                    result["limit_down"] = int(dt * scale)
-                    result["up"] = int(ups * scale)
-                    result["down"] = int(downs * scale)
-                    result["flat"] = int(total_val - result["up"] - result["down"] -
-                                         result["limit_up"] - result["limit_down"])
-                    result["avg_change"] = round(total_chg / cnt, 3)
-                    result["details"] = [
-                        {"code": str(it.get("f12", "")).zfill(6),
-                         "name": it.get("f14", ""),
-                         "change_pct": it.get("f3", 0)}
-                        for it in items[:20]
-                    ]
+        # 统计涨幅前100: 涨停 + 涨家数
+        zt = 0
+        top_pos = 0
+        for it in top_items:
+            chg = _safe_float(it.get("f3"))
+            if chg >= 9.8:
+                zt += 1
+            if chg > 0:
+                top_pos += 1
+
+        time.sleep(0.3)
+
+        # 2. 跌幅前100
+        bot_items = _fetch_page(fs, pn=1, po=0)
+        dt = 0
+        bot_neg = 0
+        for it in bot_items:
+            chg = _safe_float(it.get("f3"))
+            if chg <= -9.8:
+                dt += 1
+            if chg < 0:
+                bot_neg += 1
+
+        # 如果涨停在第100名还没结束，说明涨停太多，需要继续扫
+        # 但涨停>100只的极端行情极少见，先不处理
+        result["limit_up"] = zt
+        result["limit_down"] = dt
+
+        # 3. 双采样点估算涨跌比
+        # 取12.5%分位(≈第7页) + 50%分位(≈第28页)双点平均
+        # 避免单点受排序位置影响过大的问题
+        sample_pages = [max(2, total // 800), max(2, total // 200)]
+        ratios = []
+        all_mid_chgs = []
+        for sp in sample_pages:
+            time.sleep(0.2)
+            items = _fetch_page(fs, pn=sp, po=1)
+            if items:
+                up = sum(1 for i in items if _safe_float(i.get("f3")) > 0)
+                down = sum(1 for i in items if _safe_float(i.get("f3")) < 0)
+                t = up + down
+                if t > 0:
+                    ratios.append(up / t)
+                all_mid_chgs.extend([_safe_float(i.get("f3")) for i in items if i.get("f3") is not None])
+
+        if ratios:
+            ratio = sum(ratios) / len(ratios)
+            # 极端行情下向50%收缩，避免单边外推崩盘
+            ratio = max(0.2, min(0.8, ratio))
+        else:
+            ratio = 0.5
+
+        if all_mid_chgs:
+            result["avg_change"] = round(sum(all_mid_chgs) / len(all_mid_chgs), 2)
+
+        # 外推: 剩余股票(总数-已知zt-dt)按比例分配
+        rest = total - zt - dt
+        result["up"] = int(rest * ratio)
+        result["down"] = int(rest * (1 - ratio))
+        result["flat"] = max(0, total - result["up"] - result["down"] - zt - dt)
+
+
+        # 详情: 涨幅前20
+        result["details"] = [
+            {"code": str(it.get("f12", "")).zfill(6),
+             "name": it.get("f14", ""),
+             "change_pct": _safe_float(it.get("f3"))}
+            for it in top_items[:20]
+        ]
 
         logger.info(f"[竞价] 广度: 涨{result['up']} 跌{result['down']} "
-                    f"涨停{result['limit_up']} 跌停{result['limit_down']} "
+                    f"平{result['flat']} 涨停{result['limit_up']} 跌停{result['limit_down']} "
                     f"均涨{result['avg_change']:.2f}%")
     except Exception as e:
         logger.warning(f"[竞价] 广度获取失败: {e}")
+        import traceback
+        traceback.print_exc()
     return result
 
 
@@ -367,7 +386,7 @@ def fetch_portfolio_auction(holdings: list[dict]) -> list[dict]:
                 change_pct = ((price - prev_close) / prev_close * 100) if prev_close else 0
                 results.append({
                     "code": code,
-                    "name": d.get("f57", h.get("name", "")),
+                    "name": d.get("f58") or h.get("name", ""),
                     "auction_price": round(price, 2),
                     "prev_close": round(prev_close, 2),
                     "auction_chg_pct": round(change_pct, 2),

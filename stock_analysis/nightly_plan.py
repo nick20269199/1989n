@@ -31,6 +31,8 @@ HOLDINGS = [
      "buy_date": "2026-05-08", "first_buy": "2026-05-08", "latest_buy": "2026-05-08"},
     {"code": "300739", "name": "明阳电路", "qty": 100,  "cost": 29.72, "sector": "PCB/电子",
      "buy_date": "2026-04-23", "first_buy": "2026-04-23", "latest_buy": "2026-04-23"},
+    {"code": "601789", "name": "宁波建工", "qty": 600,  "cost": 6.36,  "sector": "建筑工程/基建",
+     "buy_date": "2026-05-05", "first_buy": "2026-05-05", "latest_buy": "2026-05-05"},
 ]
 
 # ============================================================
@@ -53,30 +55,46 @@ def load_market_calendar():
 
 
 def get_latest_closing_prices():
-    """从最近的盘中报告提取收盘价"""
-    today = datetime.now().strftime("%Y%m%d")
-    # 找今天的报告
-    pattern = os.path.join(DATA_DIR, f"analysis_30min_{today}*.json")
-    files = sorted(glob.glob(pattern))
-
-    if not files:
-        # 找最近的
-        pattern = os.path.join(DATA_DIR, "analysis_30min_*.json")
-        files = sorted(glob.glob(pattern))
-
+    """获取收盘价：优先用已验证的批量行情接口 → 30min文件回退"""
     prices = {}
-    source = "无数据"
-    if files:
-        # 取最后几个中的最新价格
-        for f in files[-3:]:
-            try:
-                with open(f, "r") as fh:
-                    data = json.load(fh)
-                for h in data.get("holdings", []):
-                    prices[h["code"]] = float(h["price"])
+    source = ""
+
+    # 源1: 复用 daily_task 的稳定批量行情（Sina+Eastmoney多级回退）
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from daily_task import fetch_quotes_batch
+        codes = [h["code"] for h in HOLDINGS]
+        quotes = fetch_quotes_batch(codes)
+        for code, q in quotes.items():
+            if q.get("price", 0) > 0:
+                prices[code] = q["price"]
+        if prices:
+            source = f"API(direct) {len(prices)}/{len(codes)}"
+    except Exception as e:
+        print(f"  ⚠ 批量行情获取失败: {e}")
+
+    # 源2: 30min分析文件补充 (按修改时间取最新)
+    pattern = os.path.join(DATA_DIR, "analysis_30min_*.json")
+    all_files = sorted(glob.glob(pattern), key=lambda f: os.path.getmtime(f), reverse=True)
+    today = datetime.now().strftime("%Y%m%d")
+    today_files = [f for f in all_files if today in f]
+    files_to_check = today_files if today_files else all_files[:1]
+
+    for f in files_to_check:
+        try:
+            with open(f, "r") as fh:
+                data = json.load(fh)
+            for h in data.get("holdings", []):
+                code = h["code"]
+                if code not in prices:
+                    prices[code] = float(h["price"])
+            if source:
+                source += f" + {os.path.basename(f)}"
+            else:
                 source = os.path.basename(f)
-            except Exception:
-                pass
+            break  # 只取最新一个文件
+        except Exception:
+            pass
 
     return prices, source
 

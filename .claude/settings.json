@@ -1,23 +1,16 @@
 {
-  "autoMemoryDirectory": "D:\\1989n\\.claude\\memory",
-  "cleanupPeriodDays": 14,
-  "model": "opus",
-  "includeCoAuthoredBy": false,
-  "statusLine": {
-    "type": "command",
-    "command": "ccstatusline",
-    "refreshInterval": 30
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "sk-d0383e492f62499abf19dc0b76bc0350",
+    "ANTHROPIC_MODEL": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-pro",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-pro",
+    "ANTHROPIC_SMALL_FAST_MODEL": "deepseek-v4-flash",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
   },
-  "permissions": {
-    "allow": [
-      "WebFetch(domain:www.cls.cn)",
-      "WebFetch(domain:www.kaipanle.com)",
-      "WebFetch(domain:www.10jqka.com.cn)",
-      "WebSearch",
-      "Bash(pip install *)",
-      "Bash(python selenium_connect.py)",
-      "Bash(python finance_news_api.py)",
-      "Bash(npx *)"
-    ]
-  }
+  "includeCoAuthoredBy": false,
+  "permissions": {},
+  "skipDangerousModePermissionPrompt": true
 }

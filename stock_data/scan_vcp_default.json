@@ -1,21 +1,9 @@
 {
   "scan_type": "vcp",
   "param": null,
-  "time": "2026-05-11 16:03:12",
-  "count": 6,
+  "time": "2026-05-12 15:30:02",
+  "count": 7,
   "results": [
-    {
-      "phase": "企稳",
-      "score": 80,
-      "price": 39.09,
-      "volume_ratio": 101,
-      "ma20": 32.79,
-      "above_ma20": true,
-      "range_narrowing": true,
-      "lower_shadows": 2,
-      "has_limit_up": true,
-      "code": "000062"
-    },
     {
       "phase": "企稳",
       "score": 80,
@@ -63,6 +51,30 @@
       "lower_shadows": 2,
       "has_limit_up": false,
       "code": "300739"
+    },
+    {
+      "phase": "企稳",
+      "score": 50,
+      "price": 6.17,
+      "volume_ratio": 108,
+      "ma20": 5.79,
+      "above_ma20": true,
+      "range_narrowing": false,
+      "lower_shadows": 2,
+      "has_limit_up": true,
+      "code": "601789"
+    },
+    {
+      "phase": "企稳",
+      "score": 50,
+      "price": 11.63,
+      "volume_ratio": 166,
+      "ma20": 10.11,
+      "above_ma20": true,
+      "range_narrowing": false,
+      "lower_shadows": 2,
+      "has_limit_up": true,
+      "code": "600236"
     },
     {
       "phase": "企稳",

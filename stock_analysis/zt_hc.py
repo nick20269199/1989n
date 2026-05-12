@@ -1,0 +1,405 @@
+#!/usr/bin/env python3
+"""
+涨停回踩 (Limit-Up Pullback) — 策略扫描器 v3.0
+===============================================
+全A股市场扫描 (5000+ 标的)
+
+核心条件 (四重过滤):
+  1. 10个交易日内有过涨停
+  2. 趋势向上 (10MA > 20MA > 60MA)
+  3. 股价回踩到10日均线附近 (偏离 < 2%)
+  4. 10日均线缩量翘头向上 (量缩 + MA10斜率转正)
+
+用法:
+  python zt_hc.py                    # 全市场扫描 (并发)
+  python zt_hc.py 000062 002156     # 指定股票
+  python zt_hc.py --top 10           # 只取前10结果
+  python zt_hc.py --json             # JSON输出
+"""
+
+import json
+import sys
+import time
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timedelta
+from typing import Optional
+
+HEADERS = {"Referer": "https://finance.sina.com.cn"}
+
+# ── 默认关注池 (备用) ──
+WATCHLIST = [
+    {"code": "002156", "name": "通富微电"},
+    {"code": "603005", "name": "晶丰明源"},
+    {"code": "300782", "name": "卓胜微"},
+    {"code": "688981", "name": "中芯国际"},
+    {"code": "300750", "name": "宁德时代"},
+    {"code": "002594", "name": "比亚迪"},
+    {"code": "601012", "name": "隆基绿能"},
+    {"code": "600030", "name": "中信证券"},
+    {"code": "601688", "name": "华泰证券"},
+    {"code": "600519", "name": "贵州茅台"},
+    {"code": "000858", "name": "五粮液"},
+    {"code": "600276", "name": "恒瑞医药"},
+    {"code": "300760", "name": "迈瑞医疗"},
+    {"code": "000062", "name": "深圳华强"},
+    {"code": "600236", "name": "桂冠电力"},
+    {"code": "000601", "name": "韶能股份"},
+    {"code": "002180", "name": "纳思达"},
+]
+
+
+# ═══════════════════════════════════════════════════
+#  数据获取
+# ═══════════════════════════════════════════════════
+
+def fetch(url, timeout=10, encoding="gbk"):
+    req = urllib.request.Request(url, headers=HEADERS)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.read().decode(encoding, errors="replace")
+    except Exception:
+        return None
+
+
+def get_all_a_stocks() -> list[dict]:
+    """新浪全A股列表 (分页, 返回全部 5000+ 只)。"""
+    stocks = []
+    for page in range(1, 100):
+        url = ("https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/"
+               "Market_Center.getHQNodeData?"
+               f"page={page}&num=100&sort=code&asc=1&node=hs_a&symbol=&_s_r_a=page")
+        resp = fetch(url, encoding="utf-8")
+        if not resp or resp.strip() == "null":
+            break
+        try:
+            data = json.loads(resp)
+            if not data:
+                break
+            for item in data:
+                stocks.append({"code": item["code"], "name": item["name"]})
+        except Exception:
+            break
+        if len(data) < 100:
+            break
+    if stocks:
+        return stocks
+    print("⚠ 数据源失效, 使用预设关注池", file=sys.stderr)
+    return WATCHLIST
+
+
+def get_kline(code: str, days: int = 120) -> list[dict]:
+    """搜狐 K 线, 正序 (旧→新)。"""
+    end = datetime.now().strftime("%Y%m%d")
+    start = (datetime.now() - timedelta(days=days + 10)).strftime("%Y%m%d")
+    url = f"https://q.stock.sohu.com/hisHq?code=cn_{code.strip()}&start={start}&end={end}"
+    resp = fetch(url, encoding="utf-8")
+    if not resp:
+        return []
+    try:
+        data = json.loads(resp)
+        if not data or "hq" not in data[0] or not data[0]["hq"]:
+            return []
+        bars = []
+        for row in data[0]["hq"]:
+            bars.append({
+                "date": row[0],
+                "open": float(row[1]),
+                "close": float(row[2]),
+                "change_pct": row[4].replace("%", "").strip(),
+                "low": float(row[5]),
+                "high": float(row[6]),
+                "volume": int(row[7]) if row[7] else 0,
+            })
+        bars.reverse()
+        return bars
+    except Exception:
+        return []
+
+
+# ═══════════════════════════════════════════════════
+#  技术指标
+# ═══════════════════════════════════════════════════
+
+def sma(bars: list[dict], field: str, idx: int, period: int) -> float:
+    start = max(0, idx - period + 1)
+    vals = [b[field] for b in bars[start:idx + 1]]
+    return sum(vals) / len(vals) if vals else 0
+
+
+def ma_slope(bars: list[dict], field: str, idx: int, period: int = 10) -> float:
+    ma_now = sma(bars, field, idx, period)
+    ma_before = sma(bars, field, max(0, idx - 3), period)
+    if ma_before == 0:
+        return 0
+    return (ma_now - ma_before) / ma_before * 100
+
+
+def threshold_for(code: str) -> float:
+    prefix = code[:2] if code else ""
+    if prefix in ("30", "68"):
+        return 19.0
+    if prefix in ("83", "87", "4"):
+        return 29.0
+    return 9.5
+
+
+# ═══════════════════════════════════════════════════
+#  四重过滤核心
+# ═══════════════════════════════════════════════════
+
+def check_stock(bars: list[dict], code: str = "") -> Optional[dict]:
+    """四重过滤, 返回结果 dict 或 None。"""
+    n = len(bars)
+    if n < 30:
+        return None
+
+    thresh = threshold_for(code)
+
+    # ── 条件1: 10个交易日内有过涨停 ──
+    limit_up_idx = None
+    for offset in range(min(10, n - 1)):
+        idx = n - 1 - offset
+        try:
+            chg = float(bars[idx]["change_pct"])
+        except (ValueError, TypeError):
+            continue
+        if chg >= thresh:
+            limit_up_idx = idx
+            break
+    if limit_up_idx is None:
+        return None
+
+    latest = bars[-1]
+    li = n - 1
+
+    # ── 条件2: 趋势向上 ──
+    ma10 = sma(bars, "close", li, 10)
+    ma20 = sma(bars, "close", li, 20)
+    ma60 = sma(bars, "close", li, 60)
+    if not (ma10 > ma20 > ma60 * 0.98):
+        return None
+
+    # ── 条件3: 股价在10日均线附近 ──
+    if ma10 == 0:
+        return None
+    dev = (latest["close"] - ma10) / ma10 * 100
+    if not (-2 <= dev <= 2):
+        return None
+
+    # ── 条件4: 缩量 + MA10翘头 ──
+    vol_ma3 = sma(bars, "volume", li, 3)
+    vol_ma10 = sma(bars, "volume", li, 10)
+    if vol_ma10 <= 0:
+        return None
+    shrink = vol_ma3 < vol_ma10 * 0.8
+    slope = ma_slope(bars, "close", li, 10)
+    turning = slope > 0.1
+    if not (shrink and turning):
+        return None
+
+    # ── 通过 ──
+    zt_bar = bars[limit_up_idx]
+    retrace = (zt_bar["close"] - latest["close"]) / zt_bar["close"] * 100
+    shrink_ratio = vol_ma3 / vol_ma10
+
+    score = 60
+    if abs(dev) < 1:
+        score += 15
+    elif abs(dev) < 1.5:
+        score += 10
+    if shrink_ratio < 0.5:
+        score += 10
+    elif shrink_ratio < 0.7:
+        score += 5
+    if slope > 0.3:
+        score += 5
+    if 2 < retrace < 8:
+        score += 10
+
+    return {
+        "code": code,
+        "name": "",
+        "zt_date": zt_bar["date"],
+        "zt_price": round(zt_bar["close"], 2),
+        "latest_close": round(latest["close"], 2),
+        "ma10": round(ma10, 2),
+        "ma20": round(ma20, 2),
+        "ma60": round(ma60, 2),
+        "ma5": round(sma(bars, "close", li, 5), 2),
+        "dev_pct": round(dev, 2),
+        "retrace_pct": round(retrace, 2),
+        "slope_ma10": round(slope, 2),
+        "shrink_ratio": round(shrink_ratio, 2),
+        "score": min(score, 100),
+        "days_since_zt": li - limit_up_idx,
+    }
+
+
+# ═══════════════════════════════════════════════════
+#  扫描引擎
+# ═══════════════════════════════════════════════════
+
+def scan_one(stk: dict, days: int) -> Optional[dict]:
+    """扫一只股票, 返回结果或None。"""
+    try:
+        bars = get_kline(stk["code"], days)
+        if not bars or len(bars) < 30:
+            return None
+        r = check_stock(bars, stk["code"])
+        if r:
+            r["name"] = stk.get("name", "")
+        return r
+    except Exception:
+        return None
+
+
+def scan_all(days: int = 120, top: Optional[int] = None, workers: int = 6) -> list[dict]:
+    """全市场并发扫描。"""
+    stocks = get_all_a_stocks()
+    total = len(stocks)
+    print(f"\n全A股扫描启动 | 列表 {total} 只 | 并发 {workers} 线程 | 回溯 {days} 天", file=sys.stderr)
+    print(f"{'=' * 50}", file=sys.stderr)
+
+    results = []
+    done = 0
+    t0 = time.time()
+
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        fut_map = {executor.submit(scan_one, stk, days): stk for stk in stocks}
+
+        for fut in as_completed(fut_map):
+            done += 1
+            stk = fut_map[fut]
+            try:
+                r = fut.result()
+                if r:
+                    results.append(r)
+                    # 实时输出发现的标的
+                    print(f"  ▶ {r['code']} {r['name']} | 涨停{r['zt_date']} "
+                          f"回踩{r['dev_pct']}% | 分{r['score']}", file=sys.stderr)
+            except Exception:
+                pass
+
+            # 进度 (每5秒或每50只)
+            if done % 100 == 0 or done == total:
+                elapsed = time.time() - t0
+                rate = done / elapsed if elapsed > 0 else 0
+                eta = (total - done) / rate if rate > 0 else 0
+                print(f"  进度 {done}/{total} | 已发现 {len(results)} 个 "
+                      f"| 耗时 {elapsed:.0f}s | 速率 {rate:.1f}只/秒 "
+                      f"| 预估剩 {eta:.0f}s", file=sys.stderr)
+
+            if top and len(results) >= top:
+                for f in fut_map:
+                    f.cancel()
+                break
+
+        if top and len(results) >= top:
+            break
+
+    elapsed = time.time() - t0
+    print(f"\n扫描完成 | 耗时 {elapsed:.0f}s | 发现 {len(results)} 个标的\n", file=sys.stderr)
+    results.sort(key=lambda x: x["score"], reverse=True)
+    return results
+
+
+# ═══════════════════════════════════════════════════
+#  输出
+# ═══════════════════════════════════════════════════
+
+def fmt(v):
+    return f"{v:>8.2f}"
+
+
+def print_results(results: list[dict]):
+    if not results:
+        print("未检测到符合四重条件的涨停回踩标的")
+        return
+
+    best = [r for r in results if r["score"] >= 80]
+    good = [r for r in results if 65 <= r["score"] < 80]
+    watch = [r for r in results if r["score"] < 65]
+
+    print(f"\n{'=' * 90}")
+    print(f"  涨停回踩扫描结果 | {datetime.now().strftime('%m-%d %H:%M')} | 共 {len(results)} 个标的")
+    print(f"{'=' * 90}")
+
+    sections = [
+        ("★★★★ 高质量 (≥80)", best),
+        ("★★★ 关注 (65-79)", good),
+    ]
+    for title, items in sections:
+        if not items:
+            continue
+        print(f"\n{title} — {len(items)} 只")
+        print(f"{'代码':<8} {'名称':<8} {'涨停日':<11} {'涨停价':>8} {'现价':>8} "
+              f"{'MA10':>8} {'偏离%':>7} {'回撤%':>7} {'量缩比':>7} {'MA10斜率':>8} {'分数':>5}")
+        print("-" * 90)
+        for r in items:
+            flag = " ★" if r["score"] >= 90 else ""
+            print(f"{r['code']:<8} {r['name']:<8} {r['zt_date']:<11} "
+                  f"{fmt(r['zt_price'])} {fmt(r['latest_close'])} "
+                  f"{fmt(r['ma10'])} {r['dev_pct']:>6.2f}% "
+                  f"{r['retrace_pct']:>6.2f}% {r['shrink_ratio']:>6.2f} "
+                  f"{r['slope_ma10']:>7.2f}% {r['score']:>4}{flag}")
+
+    if watch:
+        print(f"\n★★ 观察 (<65) — {len(watch)} 只")
+        for r in watch[:8]:
+            print(f"  {r['code']} {r['name']} 涨停{r['zt_date']} 现价{r['latest_close']} "
+                  f"MA10={r['ma10']} 偏离{r['dev_pct']}% 分{r['score']}")
+        if len(watch) > 8:
+            print(f"  ... 还有 {len(watch) - 8} 只")
+    print()
+
+
+# ═══════════════════════════════════════════════════
+#  入口
+# ═══════════════════════════════════════════════════
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="涨停回踩全市场扫描器")
+    parser.add_argument("codes", nargs="*", help="指定股票代码")
+    parser.add_argument("--days", type=int, default=120, help="回溯天数")
+    parser.add_argument("--top", type=int, default=0, help="只取前N个结果")
+    parser.add_argument("--workers", type=int, default=6, help="并发线程数")
+    parser.add_argument("--json", action="store_true", help="JSON输出")
+    args = parser.parse_args()
+
+    if args.codes:
+        # ── 指定股票模式 ──
+        results = []
+        for code in args.codes:
+            name = ""
+            try:
+                from stock_quote import PORTFOLIO
+                if code in PORTFOLIO:
+                    name = PORTFOLIO[code].get("name", "")
+            except ImportError:
+                pass
+            bars = get_kline(code, args.days)
+            if bars and len(bars) >= 30:
+                r = check_stock(bars, code)
+                if r:
+                    r["name"] = name
+                    results.append(r)
+                else:
+                    nm = f"({name})" if name else ""
+                    print(f"{code} {nm}: 不符合四重条件")
+            else:
+                print(f"{code}: 数据不足 ({len(bars) if bars else 0} 条)")
+        results.sort(key=lambda x: x["score"], reverse=True)
+    else:
+        # ── 全市场模式 ──
+        results = scan_all(args.days, args.top if args.top > 0 else None, args.workers)
+
+    if args.json:
+        print(json.dumps(results, ensure_ascii=False, indent=2))
+    else:
+        print_results(results)
+
+
+if __name__ == "__main__":
+    main()

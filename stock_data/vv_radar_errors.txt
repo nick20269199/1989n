@@ -1,0 +1,6 @@
+=== vv_transcribe ERROR [2026-05-12 08:45:27] ===
+Playwright Page.goto crash: 3/3 videos failed (Page crashed on Douyin navigation)
+Browser.close: Connection closed while reading from the driver
+Likely Douyin anti-bot detection
+---
+2026-05-12 10:33: vv_transcribe.py --priority --limit 10 失败: 3分钟无输出, Playwright 无响应
