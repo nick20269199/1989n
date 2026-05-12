@@ -1,5 +1,29 @@
 {
   "version": "1.0",
   "created": "2026-05-11",
-  "integrations": []
+  "integrations": [
+    {
+      "id": "INT-20260512-001",
+      "date": "2026-05-12",
+      "source_id": "20260511-003",
+      "name": "StratEvo - 遗传算法自动因子发现",
+      "method": "pip install stratevo",
+      "version": "6.0.5",
+      "files_created": [
+        "stock_analysis/stratevo_wrapper.py"
+      ],
+      "test_results": {
+        "analyze_002156": "Consensus: HOLD (score 0.50) — low confidence, yfinance rate limited on A-shares",
+        "scan_cn": "Too Many Requests via yfinance",
+        "cn_realtime_002156": "No data (market closed)"
+      },
+      "limitations": [
+        "yfinance rate-limits A-share tickers — need to patch data source to AKShare/local",
+        "Market hours required for real-time data testing",
+        "Genetic algorithm ensemble=5 uses default weights when yfinance fails"
+      ],
+      "status": "wrapper_created",
+      "next_step": "当A股交易时段重测，验证AKShare替代数据通路后的准确性"
+    }
+  ]
 }

@@ -4,3 +4,6 @@ Browser.close: Connection closed while reading from the driver
 Likely Douyin anti-bot detection
 ---
 2026-05-12 10:33: vv_transcribe.py --priority --limit 10 失败: 3分钟无输出, Playwright 无响应
+[2026-05-12 20:40] Playwright Browser.close: Connection closed while reading from the driver — first account (创业魔法师) crashed, all 10 skipped
+[2026-05-12 21:30] vv_radar: 6/10 OK (0 new), crashed on 小司频道 — Browser.close: Connection closed while reading from the driver
+[2026-05-12 23:45] vv_radar: 4 new (创业魔法师2+周期女王1+子辉先生1) but vv_transcribe timeout — Playwright blocked, queue pending for morning retry

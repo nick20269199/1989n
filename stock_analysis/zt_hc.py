@@ -240,8 +240,21 @@ def check_stock(bars: list[dict], code: str = "") -> Optional[dict]:
 #  扫描引擎
 # ═══════════════════════════════════════════════════
 
+def is_excluded(stk: dict) -> bool:
+    """排除科创板(688)和ST/*ST。"""
+    code = stk.get("code", "")
+    name = stk.get("name", "")
+    if code.startswith("688"):
+        return True
+    if "ST" in name.upper() or "*ST" in name.upper():
+        return True
+    return False
+
+
 def scan_one(stk: dict, days: int) -> Optional[dict]:
     """扫一只股票, 返回结果或None。"""
+    if is_excluded(stk):
+        return None
     try:
         bars = get_kline(stk["code"], days)
         if not bars or len(bars) < 30:
@@ -294,9 +307,6 @@ def scan_all(days: int = 120, top: Optional[int] = None, workers: int = 6) -> li
                 for f in fut_map:
                     f.cancel()
                 break
-
-        if top and len(results) >= top:
-            break
 
     elapsed = time.time() - t0
     print(f"\n扫描完成 | 耗时 {elapsed:.0f}s | 发现 {len(results)} 个标的\n", file=sys.stderr)

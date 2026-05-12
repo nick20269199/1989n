@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-11 16:08",
+  "updated": "2026-05-12 16:07",
   "entries": [
     {
       "date": "2026-05-12",
@@ -1053,6 +1053,92 @@
     },
     {
       "date": "20260511",
+      "ratios": {
+        "炸板率": {
+          "value": 0,
+          "definition": "日内封板失败率，衡量短线情绪",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.502,
+          "std": 0.2097,
+          "z_score": -2.39,
+          "alert": "triggered"
+        },
+        "晋级率": {
+          "value": 0,
+          "definition": "首板→连板晋级率，衡量持续性",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4442,
+          "std": 0.1841,
+          "z_score": -2.41,
+          "alert": "triggered"
+        },
+        "涨跌停比": {
+          "value": 0,
+          "definition": "极端情绪对比",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3567,
+          "std": 0.143,
+          "z_score": -2.49,
+          "alert": "triggered"
+        },
+        "强势占比": {
+          "value": 0,
+          "definition": "板块轮动广度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.5564,
+          "std": 0.2136,
+          "z_score": -2.6,
+          "alert": "triggered"
+        },
+        "北向强度": {
+          "value": 0,
+          "definition": "外资相对参与度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3912,
+          "std": 0.1695,
+          "z_score": -2.31,
+          "alert": "triggered"
+        },
+        "大单强度": {
+          "value": 0,
+          "definition": "主力资金方向",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4993,
+          "std": 0.1897,
+          "z_score": -2.63,
+          "alert": "triggered"
+        },
+        "红盘比": {
+          "value": 0,
+          "definition": "赚钱效应广度",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.4296,
+          "std": 0.1986,
+          "z_score": -2.16,
+          "alert": "triggered"
+        },
+        "融资变化比": {
+          "value": 0,
+          "definition": "杠杆资金弹性",
+          "source": "placeholder",
+          "note": "需要实际市场数据填充",
+          "mean": 0.3975,
+          "std": 0.26,
+          "z_score": -1.53,
+          "alert": "normal"
+        }
+      },
+      "data_quality": "from_intraday"
+    },
+    {
+      "date": "20260512",
       "ratios": {
         "炸板率": {
           "value": 0,

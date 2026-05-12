@@ -1,15 +1,15 @@
 {
   "version": "1.0",
   "created": "2026-05-10",
-  "last_updated": "2026-05-11",
-  "total_discoveries": 9,
+  "last_updated": "2026-05-12",
+  "total_discoveries": 14,
   "by_category": {
-    "trading_strategy": 3,
-    "trading_software": 1,
-    "ai_agent": 3,
+    "trading_strategy": 4,
+    "trading_software": 2,
+    "ai_agent": 5,
     "market_data": 1,
     "infrastructure": 0,
-    "frontier": 1
+    "frontier": 2
   },
   "items": [
     {
@@ -18,10 +18,18 @@
       "category": "trading_strategy",
       "name": "AlphaCrafter - 多Agent量化选股框架",
       "source_url": "https://www.catalyzex.com/paper/alphacrafter-a-full-stack-multi-agent",
-      "one_liner": "三Agent协作(Miner/Screener/Trader)进行因子挖掘和风险约束执行，CSI300实测跑赢基准",
+      "one_liner": "三Agent协作(Miner/Screener/Trader)进行因子挖掘和风险约束执行",
       "use_for": "A股因子挖掘管道 + adversarial-review流水线参考架构",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 4,
+        "maturity": 2,
+        "cost": 4,
+        "risk": 2,
+        "decision": "deferred",
+        "note": "论文阶段无稳定代码库，标记watch，月检。三Agent架构值得参考但不急于集成。"
+      }
     },
     {
       "id": "20260511-002",
@@ -31,8 +39,16 @@
       "source_url": "https://export.arxiv.org/abs/2603.21330",
       "one_liner": "统一数据→策略→回测→执行的全栈框架，支持RL+LLM混合信号",
       "use_for": "stock_data管道架构参考 + LLM情绪信号融入intraday_report",
-      "status": "new",
-      "evaluated_at": null
+      "status": "rejected",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 3,
+        "maturity": 2,
+        "cost": 5,
+        "risk": 3,
+        "decision": "rejected",
+        "note": "纯论文级(arXiv)，无实用实现。框架庞大(数据到执行全栈)，集成成本极高。当前已有成熟数据管道(Sina/Tencent/Sohu)。"
+      }
     },
     {
       "id": "20260511-003",
@@ -42,8 +58,16 @@
       "source_url": "https://github.com/NeuZhou/stratevo",
       "one_liner": "遗传算法在484个市场因子中自动发现权重组合，walk-forward验证",
       "use_for": "替代手工技术指标筛选，walk-forward验证方法论导入回测",
-      "status": "new",
-      "evaluated_at": null
+      "status": "integrated",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 4,
+        "maturity": 4,
+        "cost": 2,
+        "risk": 2,
+        "decision": "approved → direct_integration",
+        "note": "PyPI已发布，GitHub活跃，MIT协议。pip install即可用。匹配度: 直接用于持仓因子分析+技术指标验证。集成成本低。"
+      }
     },
     {
       "id": "20260511-004",
@@ -53,8 +77,16 @@
       "source_url": "https://llm-stats.com/ai-news",
       "one_liner": "中国开源代码模型达到西方前沿水平，agentic coding能力大幅提升",
       "use_for": "6个DeepSeek API通道可直接受益，推理质量提升",
-      "status": "new",
-      "evaluated_at": null
+      "status": "approved",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 3,
+        "maturity": 5,
+        "cost": 1,
+        "risk": 1,
+        "decision": "approved_backup_pool",
+        "note": "信息类——API通道已在用，无需额外集成。标记为已确认，通道自动受益于模型升级。"
+      }
     },
     {
       "id": "20260511-005",
@@ -64,8 +96,16 @@
       "source_url": "https://github.com/IKingBarou/Zeroclaw-Plugin-Hub",
       "one_liner": "多MCP路由编排器，子agent隔离上下文，自适应路由，2847星",
       "use_for": "13个cron任务统一编排 + 上下文窗口膨胀控制",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 4,
+        "maturity": 3,
+        "cost": 4,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "匹配度高但成熟度不足(2847星/较新)。集成需重新设计cron编排架构。月检跟踪。"
+      }
     },
     {
       "id": "20260511-006",
@@ -75,8 +115,16 @@
       "source_url": "https://indianexpress.com/article/technology/artificial-intelligence/what-is-claude-code-channels-anthropic-openclaw-ai-agents-10595037/",
       "one_liner": "Claude Code通过MCP接入Telegram/Discord，手机端实时交互",
       "use_for": "飞书Bot升级参考架构，手机端触发交易任务",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 3,
+        "maturity": 3,
+        "cost": 3,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "概念验证阶段，非稳定工具。飞书Bot当前已关闭，不急于升级。月检。"
+      }
     },
     {
       "id": "20260511-007",
@@ -86,8 +134,16 @@
       "source_url": "https://github.com/akfamily/akshare",
       "one_liner": "统一pandas接口覆盖A股/期货/期权/ETF/宏观，MIT协议",
       "use_for": "备选数据源，东方财富/交易所原始数据补充",
-      "status": "new",
-      "evaluated_at": null
+      "status": "integrated",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 5,
+        "maturity": 5,
+        "cost": 1,
+        "risk": 1,
+        "decision": "already_integrated",
+        "note": "已在data_source_router.py中使用(get_us_index_quotes通过akshare获取美股指数)。无需额外集成。"
+      }
     },
     {
       "id": "20260511-008",
@@ -97,8 +153,16 @@
       "source_url": "https://github.com/vivek-v-rao/intraday-prices",
       "one_liner": "多供应商日内数据抓取/清洗/缓存/拼接，解决数据不一致",
       "use_for": "intraday_report.py数据质量提升，减少0/None异常",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 3,
+        "maturity": 3,
+        "cost": 3,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "小项目(unknown stars)，通用架构参考。当前日内数据问题已通过多源路由解决，不急需。月检。"
+      }
     },
     {
       "id": "20260511-009",
@@ -108,8 +172,16 @@
       "source_url": "https://press.airstreet.com/p/state-of-ai-may-2026",
       "one_liner": "月频AI全景：中国编程模型追平西方、AI安全升级、幻觉率大降",
       "use_for": "科技/半导体持仓背景判断(通富微电/光力科技)",
-      "status": "new",
-      "evaluated_at": null
+      "status": "rejected",
+      "evaluated_at": "2026-05-12",
+      "evaluation": {
+        "match": 2,
+        "maturity": 5,
+        "cost": 1,
+        "risk": 1,
+        "decision": "rejected",
+        "note": "信息类文章，非工具/库。匹配度≤2。对持仓背景判断的作用过于间接。"
+      }
     }
   ]
 }

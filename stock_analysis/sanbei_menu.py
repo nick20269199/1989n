@@ -32,9 +32,10 @@ def show_menu():
     print()
     print("-" * 55)
     print("  [1] 扫描持仓(7只)")
-    print("  [2] 扫描单只股票")
-    print("  [3] 查看上次信号报告")
-    print("  [4] 退出")
+    print("  [2] 全市场扫描(排除科创板/ST)")
+    print("  [3] 扫描单只股票")
+    print("  [4] 查看上次信号报告")
+    print("  [5] 退出")
     print("-" * 55)
 
 
@@ -42,8 +43,12 @@ def run_scan(code=""):
     clear()
     print("正在扫描，请稍候...\n")
     cmd = [sys.executable, str(SCRIPT)]
-    if code:
+    if code and code != "--full":
         cmd.append(code)
+    elif code == "--full":
+        pass  # 默认就是全市场, 不加参数
+    else:
+        cmd.append("--watch")
     try:
         subprocess.run(cmd, cwd=str(BASE_DIR), check=True)
     except subprocess.CalledProcessError:
@@ -81,16 +86,18 @@ def show_report():
 def main():
     while True:
         show_menu()
-        choice = input("请选择 (1-4): ").strip()
+        choice = input("请选择 (1-5): ").strip()
         if choice == "1":
             run_scan()
         elif choice == "2":
+            run_scan("--full")
+        elif choice == "3":
             code = input("输入股票代码: ").strip()
             if code:
                 run_scan(code)
-        elif choice == "3":
-            show_report()
         elif choice == "4":
+            show_report()
+        elif choice == "5":
             print("bye")
             break
         else:

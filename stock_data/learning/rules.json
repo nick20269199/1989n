@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-09 22:57",
+  "updated": "2026-05-12 16:08",
   "rules": [
     {
       "condition": "当启动阶段，炸板率出现异常偏离时",
@@ -372,6 +372,42 @@
       "last_verified": "",
       "verified_count": 0,
       "id": "R20260509_225741"
+    },
+    {
+      "condition": "当多位大V(≥3)独立指向同一板块且存在即将兑现的强催化时",
+      "action": "容忍持仓浮亏扩大至常规止损的1.5倍(如-3%→-4.5%)，不机械执行清仓",
+      "failure_signal": "催化事件落地后板块不涨反跌，或持仓跌破关键技术支撑位",
+      "cycle_stage": "启动→主升过渡",
+      "source": "vv_transcripts_20260512",
+      "is_condensed": true,
+      "created": "2026-05-12 16:08",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260512_160850"
+    },
+    {
+      "condition": "当大盘关键支撑位放量守住后出现V反(如上证4201)",
+      "action": "不执行收盘前减仓，等待次日催化窗口确认方向",
+      "failure_signal": "次日低开跌破支撑位，或放量阴线反包",
+      "cycle_stage": "启动→主升过渡",
+      "source": "market_data_20260512",
+      "is_condensed": true,
+      "created": "2026-05-12 16:08",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260512_160850"
+    },
+    {
+      "condition": "当大V雷达抓到新视频(任意大V)",
+      "action": "自动全部转录→分析→报告，不询问用户",
+      "failure_signal": "所有视频转录失败(如反爬)，报告失败并提替代方案",
+      "cycle_stage": "all",
+      "source": "user_feedback_20260512",
+      "is_condensed": true,
+      "created": "2026-05-12 16:08",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260512_160850"
     }
   ],
   "stats": {}
