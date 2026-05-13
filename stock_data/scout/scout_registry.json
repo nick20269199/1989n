@@ -1,17 +1,50 @@
 {
   "version": "1.0",
   "created": "2026-05-10",
-  "last_updated": "2026-05-12",
-  "total_discoveries": 14,
+  "last_updated": "2026-05-13",
+  "total_discoveries": 17,
   "by_category": {
-    "trading_strategy": 4,
+    "trading_strategy": 6,
     "trading_software": 2,
     "ai_agent": 5,
-    "market_data": 1,
+    "market_data": 2,
     "infrastructure": 0,
     "frontier": 2
   },
   "items": [
+    {
+      "id": "20260513-001",
+      "date": "2026-05-13",
+      "category": "trading_strategy",
+      "name": "Strat-LLM: LLM Stock Trading Alignment Framework",
+      "source_url": "https://arxiv.org/html/2605.06024v1",
+      "one_liner": "测试LLM交易代理三种模式(Free/Guided/Strict)，发现Alignment Tax——规则硬约束损害大模型表现",
+      "use_for": "daily_task.py信号聚合两级模式：Free推理→Strict风控，而非先约束再推理",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260513-002",
+      "date": "2026-05-13",
+      "category": "trading_strategy",
+      "name": "AlphaLogics: 多Agent市场逻辑因子挖掘",
+      "source_url": "https://arxiv.org/html/2603.20247v1",
+      "one_liner": "从因子库逆向提取市场逻辑→迭代生成新因子，CSI 500超额16.72%",
+      "use_for": "tech_scan因子发现方法论：逻辑驱动而非随机搜索，与StratEvo遗传算法互补",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260513-003",
+      "date": "2026-05-13",
+      "category": "market_data",
+      "name": "finagg v2.0: 免费金融数据聚合器",
+      "source_url": "https://github.com/theOGognf/finagg",
+      "one_liner": "统一FRED/BEA/SEC免费数据，Python/SQLite，v2.0.0 Mar 2026",
+      "use_for": "data_source_router.py宏观数据通道：利率/就业/GDP，补全morning_brief全球宏观部分",
+      "status": "new",
+      "evaluated_at": null
+    },
     {
       "id": "20260511-001",
       "date": "2026-05-11",

@@ -23,9 +23,9 @@
 
 **Agent映射**：
 
-1. `market_context.py` → 新增 `herding_index()`：计算持仓5只股票+同行业top10的日内相关性矩阵，相关性>0.85持续30分钟=羊群警报
-2. `intraday_report.py` → 盘中报告新增"羊群指数"一栏，触发阈值时推送飞书告警
-3. `emotional_analysis.py` → 新增"共识脆弱性"指标：当舆情一致性>80%时标记为脆弱共识
+1. `market_context.py` — 新增 `herding_index()`：计算持仓5只股票+同行业top10的日内相关性矩阵，相关性>0.85持续30分钟=羊群警报
+2. `intraday_report.py` — 盘中报告新增"羊群指数"一栏，触发阈值时推送飞书告警
+3. `emotional_analysis.py` — 新增"共识脆弱性"指标：当舆情一致性>80%时标记为脆弱共识
 
 **落地状态**：planned
 
@@ -55,9 +55,9 @@
 
 **Agent映射**：
 
-1. `market_context.py` → 新增 `anomaly_score()`：用Isolation Forest对15维盘中特征（价差/量波/振幅/涨跌比/板块离散度/换手率等）做异常打分，>0.7=异常日
-2. `intraday_report.py` → 异常日触发"防御模式"提示：暂停新开仓、检查已有持仓、收紧止损
-3. `portfolio_guard.py` → 接收anomaly_score，>0.8时强制将仓位上限降至50%
+1. `market_context.py` — 新增 `anomaly_score()`：用Isolation Forest对15维盘中特征（价差/量波/振幅/涨跌比/板块离散度/换手率等）做异常打分，>0.7=异常日
+2. `intraday_report.py` — 异常日触发"防御模式"提示：暂停新开仓、检查已有持仓、收紧止损
+3. `portfolio_guard.py` — 接收anomaly_score，>0.8时强制将仓位上限降至50%
 
 **落地状态**：planned
 
@@ -71,9 +71,9 @@ Ilya核心主张："无监督学习就是压缩"——好模型是数据的最�
 
 **Agent映射**：
 
-1. `rule_verifier.py` → 新增 `mdl_score()`：对每条交易规则计算复杂度(条件数+参数数)和信息增益(命中率×平均收益)，输出MDL排序
-2. `trade_engine.py` → 新增 `rule_pruner()`：每月自动剪枝——MDL分数最低20%的规则禁用，下月观察P&L变化
-3. `daily_task.py closing_review` → 复盘增加"规则复杂度监控"：当日触发的规则平均复杂度，趋势上升=过拟合风险
+1. `rule_verifier.py` — 新增 `mdl_score()`：对每条交易规则计算复杂度(条件数+参数数)和信息增益(命中率×平均收益)，输出MDL排序
+2. `trade_engine.py` — 新增 `rule_pruner()`：每月自动剪枝——MDL分数最低20%的规则禁用，下月观察P&L变化
+3. `daily_task.py closing_review` — 复盘增加"规则复杂度监控"：当日触发的规则平均复杂度，趋势上升=过拟合风险
 
 **落地状态**：planned
 
@@ -87,8 +87,30 @@ RLHF研究发现，当优化代理指标时，模型最终会黑掉指标而不�
 
 **Agent映射**：
 
-1. `trade_backtest.py` → 新增 `goodhart_check()`：对每次优化迭代，检查所有代理指标与P&L的Spearman相关性。若某指标与P&L出现负相关(r<-0.3)，标记为Goodhart风险
-2. `daily_task.py closing_review` → 新增"指标背离"检查：计算当日胜率/盈亏比/P&L三者的方向一致性，不一致时告警
-3. `config.py` → 新增 `GOODHART_ABORT_THRESHOLD=-0.3`（代理指标与P&L相关系数低于此值→中止该方向优化）
+1. `trade_backtest.py` — 新增 `goodhart_check()`：对每次优化迭代，检查所有代理指标与P&L的Spearman相关性。若某指标与P&L出现负相关(r<-0.3)，标记为Goodhart风险
+2. `daily_task.py closing_review` — 新增"指标背离"检查：计算当日胜率/盈亏比/P&L三者的方向一致性，不一致时告警
+3. `config.py` — 新增 `GOODHART_ABORT_THRESHOLD=-0.3`（代理指标与P&L相关系数低于此值→中止该方向优化）
+
+**落地状态**：planned
+
+---
+
+### 2026-05-13 | 来源：Karpathy @ Sequoia AI Ascent 2026 — 锯齿状智能(Jagged Intelligence) + 上下文工程
+
+**洞察**：
+
+Karpathy 在红杉AI峰会(2026.4.29)的核心论点：AI 能力不是均匀分布的，而是参差不齐的锯齿状。同一个AI能重构10万行代码，却会建议你走路去50米外的洗车店。原因——前沿实验室只把有明确奖励信号且商业价值高的领域打包进RL训练分布。**在RL轨道上你在飞；离开数据分布，你拿着砍刀进丛林。**
+
+这直接解释了今日技术侦查发现的 Strat-LLM Alignment Tax：当用Strict规则约束LLM交易输出时，性能显著下降。根本原因不是规则本身错了——而是LLM的"RL轨道"是Free模式金融推理，Strict模式把它推到了分布外("丛林")，能力从"飞"降为"砍刀"。两种模式下的LLM是同一模型的两个不同能力状态，不能假设规则越强效果越好。
+
+关键推论：系统需要知道当前LLM调用是"在轨道上"还是"在丛林中"。检测指标——输出token熵(高熵=不熟悉领域)、推理时间(更长=挣扎)、措辞中的模糊限定词("可能""或许"增加)。当检测到OOD时，不强制LLM输出进入规则约束(这只会降低表现)——而是直接降级为纯规则决策，跳过LLM环节。
+
+另：Karpathy 宣布"提示词工程已死，上下文工程崛起"。当前系统对LLM的调用本质是prompt模式("我告诉你做什么")。应转向context模式：给LLM提供最近N个相似市场状态的完整快照(指数位置/板块结构/资金流向/前次决策结果)，让LLM做模式匹配而非听从指令。Context模式的LLM更可能处于训练分布内，因为训练数据就是"看上下文做预测"。
+
+**Agent映射**：
+
+1. `daily_task.py` — 新增 `llm_competence_check()`：对每次LLM调用计算token熵+推理时间+限定词频率。三项指标偏离基线>1.5σ=OOD→跳过该路LLM信号，降级为规则决策
+2. `data_source_router.py` — 所有LLM调用端新增Context Engineering层：在system prompt末尾附加最近5个交易日的完整市场快照(指数/板块/资金/前次预测结果)，作为模式匹配参考
+3. `llm_bridge.py`(如存在) — 新增 `ood_fallback_policy`：OOD时该路LLM信号置信度标记为0，不参与信号聚合，避免"丛林推理"污染决策
 
 **落地状态**：planned

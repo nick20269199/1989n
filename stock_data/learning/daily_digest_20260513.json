@@ -1,19 +1,57 @@
 {
   "version": 2,
-  "date": "2026-05-13",
+  "date": "20260513",
   "cycle_stage": {
-    "stage": "启动",
-    "confidence": 0.5,
-    "signals": [],
-    "strategy_hint": "确认领头羊，追强不追弱",
-    "next_stage_risk": "主升（确认后）或 冰点（假突破）"
+    "stage": "主升",
+    "confidence": 0.65,
+    "signals": [
+      "上证+0.67% 深证+1.67% 创业板+2.63%, 持仓+8.4%",
+      "开盘弱势(-0.2%~-2.4%)后V型反转收涨",
+      "注意: 比率数据源全部返回0, cycle判定依赖收盘数据有偏差"
+    ],
+    "strategy_hint": "持仓跟随，关注通富微电止盈窗口",
+    "next_stage_risk": "高潮（一致性过强）或 分化（板块轮动不持续）"
   },
   "ratio_alerts": {
-    "triggered": {},
-    "collision_focus": "连板率×成交量变化率",
+    "triggered": {
+      "炸板率": {
+        "value": 0,
+        "z_score": -2.39
+      },
+      "晋级率": {
+        "value": 0,
+        "z_score": -2.41
+      },
+      "涨跌停比": {
+        "value": 0,
+        "z_score": -2.49
+      },
+      "强势占比": {
+        "value": 0,
+        "z_score": -2.6
+      },
+      "北向强度": {
+        "value": 0,
+        "z_score": -2.31
+      },
+      "大单强度": {
+        "value": 0,
+        "z_score": -2.63
+      },
+      "红盘比": {
+        "value": 0,
+        "z_score": -2.16
+      }
+    },
+    "collision_focus": "恐慌指标×资金流入方向",
     "data_quality": "from_intraday"
   },
   "expectation_gaps": [
+    {
+      "dimension": "恐慌定价",
+      "consensus": "市场认为风险会持续恶化",
+      "potential_gap": "如果利空未伤及个股基本面 → 正预期差 → 被错杀的黄金坑"
+    },
     {
       "dimension": "辨识度 vs 预期差",
       "consensus": "资金追逐辨识度最高的标的（龙头）",
@@ -22,27 +60,34 @@
   ],
   "rules_today": [
     {
-      "id": "R20260509_225741",
-      "condition": "当启动阶段，炸板率出现异常偏离时",
-      "action": "执行操作2-0",
-      "failure_signal": "如果晋级率未同步确认，则规则失效",
-      "is_condensed": false
+      "condition": "Playwright访问抖音弹出CAPTCHA验证码时",
+      "action": "改用page.evaluate()调/aweme/v1/web/aweme/detail/绕过页面渲染，下载改用curl_cffi(impersonate)",
+      "failure_signal": "API返回空体或403→需重新登录更新state.json",
+      "is_condensed": true
+    },
+    {
+      "condition": "CDN视频链接需Referer验证但浏览器fetch被阻断时",
+      "action": "使用curl_cffi requests.get(url, headers={Referer}, impersonate=chrome131)下载",
+      "failure_signal": "CDN URL过期返回403→通过API获取新鲜URL后重试",
+      "is_condensed": true
+    },
+    {
+      "condition": "分析对象连续2年以上亏损且净资产持续下降时",
+      "action": "分析重心从技术面转为基本面(退市风险/PB/现金消耗率)",
+      "failure_signal": "连续2季盈利+营收增长→基本面反转，重新启用技术分析",
+      "is_condensed": true
     }
   ],
-  "rules_condensed_count": 0,
-  "rules_total_count": 1,
+  "rules_condensed_count": 3,
+  "rules_total_count": 3,
   "self_check": {
-    "mistake": "逻辑跳跃：把相关性当成了因果性",
-    "mistake_root_cause": "数据缺失",
-    "ego_challenge": "",
-    "discipline_breach": "",
-    "feedback": "测试反馈"
+    "mistake": "转录修复初期误判根因：以为Playwright版本问题，实际是抖音反爬弹验证码，page.evaluate()在验证码页下JS仍可用",
+    "mistake_root_cause": "教科书式调试偏差：先怀疑熟悉的Playwright版本而非抖音反爬逻辑",
+    "ego_challenge": "翠微股份分析挑战了技术面通用假设：连续亏损股MA支撑无统计学意义",
+    "discipline_breach": "无模式外操作",
+    "feedback": "转录自动执行确认——不需要每次询问，全部自动转录分析"
   },
-  "forecast_updates": {
-    "new": 0
-  },
-  "efficiency": {
-    "total_calls": 44
-  },
-  "compressed_at": "2026-05-09 22:57"
+  "forecast_updates": {},
+  "efficiency": {},
+  "compressed_at": "2026-05-13 16:39"
 }

@@ -1,6 +1,7 @@
 """
 大V雷达 - 批量视频转录
-从 vv_radar.db 读取视频，用 Playwright 获取新鲜 CDN 地址，下载音频后用 faster-whisper 转录。
+从 vv_radar.db 读取视频，通过 Playwright 调抖音API获取CDN地址（绕过反爬），
+用 curl_cffi 下载视频，ffmpeg 提取音频，faster-whisper 转录。
 
 用法:
   py vv_transcribe.py                    # 转录所有未转录视频
@@ -79,7 +80,7 @@ def get_untranscribed(account=None, limit=None, force=False, priority=False):
     if force:
         query = "SELECT aweme_id, vv_id, desc, duration FROM vv_videos WHERE 1=1"
     else:
-        query = "SELECT aweme_id, vv_id, desc, duration FROM vv_videos WHERE transcript_text IS NULL"
+        query = "SELECT aweme_id, vv_id, desc, duration FROM vv_videos WHERE (transcript_text IS NULL OR transcript_text = '')"
 
     params = []
     if account:
@@ -131,30 +132,22 @@ def mark_failed(aweme_id, error_msg):
     conn.close()
 
 
-async def get_video_url(page, aweme_id):
-    """导航到视频页面，获取视频源URL"""
+async def get_video_url_api(page, aweme_id):
+    """通过抖音详情API获取视频CDN地址（不需要导航到视频页）"""
     try:
-        await page.goto(
-            f"https://www.douyin.com/video/{aweme_id}",
-            wait_until="load",
-            timeout=30000
-        )
-        await page.wait_for_timeout(2000)
-
-        # 尝试从 video source 元素获取
-        result = await page.evaluate("""() => {
-            const sources = document.querySelectorAll('video source');
-            for (const s of sources) {
-                if (s.src && s.src.includes('douyinvod')) return s.src;
+        result = await page.evaluate("""
+            async (aid) => {
+                const resp = await fetch('/aweme/v1/web/aweme/detail/?aweme_id=' + aid);
+                const data = await resp.json();
+                const detail = data.aweme_detail;
+                if (!detail || !detail.video) return null;
+                const addr = detail.video.play_addr;
+                return (addr.url_list || []).slice(0, 3);
             }
-            const videos = document.querySelectorAll('video');
-            for (const v of videos) {
-                if (v.src && v.src.includes('douyinvod')) return v.src;
-            }
-            return null;
-        }""")
-
-        return result
+        """, aweme_id)
+        if result and len(result) > 0:
+            return result[0]
+        return None
     except Exception as e:
         print(f"  [WARN] 获取视频URL失败: {e}")
         return None
@@ -213,8 +206,11 @@ async def transcribe_batch(account=None, limit=None, force=False, priority=False
         page = await context.new_page()
 
         # 先访问首页建立会话
-        await page.goto("https://www.douyin.com/", wait_until="load", timeout=60000)
-        await page.wait_for_timeout(3000)
+        try:
+            await page.goto("https://www.douyin.com/", wait_until="domcontentloaded", timeout=30000)
+        except Exception:
+            pass  # 验证码页超时不阻塞流程，JS上下文仍可用
+        await page.wait_for_timeout(2000)
 
         start_time = time.time()
 
@@ -240,78 +236,55 @@ async def transcribe_batch(account=None, limit=None, force=False, priority=False
                         continue
 
             # Step 1: 获取视频URL
-            video_url = await get_video_url(page, aweme_id)
+            video_url = await get_video_url_api(page, aweme_id)
             if not video_url:
                 print(f"  -> 失败 (无视频URL)")
                 mark_failed(aweme_id, "无法获取视频URL")
                 failed += 1
                 continue
 
-            # Step 2: 用浏览器 fetch 下载视频 (带 Referer/Cookies)
+            # Step 2: 用 curl_cffi 下载视频 (模拟浏览器指纹绕过CDN鉴权)
             audio_path = AUDIO_DIR / f"{aweme_id}.wav"
             if not audio_path.exists():
                 print(f"  下载视频...")
                 video_file = AUDIO_DIR / f"{aweme_id}.mp4"
                 try:
-                    # 在浏览器上下文中 fetch 视频，绕过 CDN 鉴权
-                    video_bytes_b64 = await page.evaluate("""
-                        async (url) => {
-                            const resp = await fetch(url, {
-                                headers: { 'Referer': 'https://www.douyin.com/' }
-                            });
-                            if (!resp.ok) return null;
-                            const blob = await resp.blob();
-                            const buffer = await blob.arrayBuffer();
-                            const bytes = new Uint8Array(buffer);
-                            // 转 base64 传回 Python
-                            let binary = '';
-                            for (let i = 0; i < bytes.length; i++) {
-                                binary += String.fromCharCode(bytes[i]);
-                            }
-                            return btoa(binary);
-                        }
-                    """, video_url)
+                    from curl_cffi import requests as curl_requests
+                    resp = curl_requests.get(
+                        video_url,
+                        headers={"Referer": "https://www.douyin.com/"},
+                        impersonate="chrome131",
+                        timeout=60
+                    )
 
-                    if not video_bytes_b64:
-                        print(f"  -> fetch 失败 (可能URL过期)")
-                        # 重新获取一次URL
-                        video_url = await get_video_url(page, aweme_id)
+                    if resp.status_code == 403:
+                        # URL过期，重新获取
+                        print(f"  URL过期，重新获取...")
+                        video_url = await get_video_url_api(page, aweme_id)
                         if not video_url:
                             print(f"  -> 重新获取URL也失败")
                             mark_failed(aweme_id, "无法获取视频URL")
                             failed += 1
                             continue
-                        print(f"  重试下载...")
-                        video_bytes_b64 = await page.evaluate("""
-                            async (url) => {
-                                const resp = await fetch(url, {
-                                    headers: { 'Referer': 'https://www.douyin.com/' }
-                                });
-                                if (!resp.ok) return null;
-                                const blob = await resp.blob();
-                                const buffer = await blob.arrayBuffer();
-                                const bytes = new Uint8Array(buffer);
-                                let binary = '';
-                                for (let i = 0; i < bytes.length; i++) {
-                                    binary += String.fromCharCode(bytes[i]);
-                                }
-                                return btoa(binary);
-                            }
-                        """, video_url)
+                        resp = curl_requests.get(
+                            video_url,
+                            headers={"Referer": "https://www.douyin.com/"},
+                            impersonate="chrome131",
+                            timeout=60
+                        )
 
-                    if not video_bytes_b64:
-                        print(f"  -> 下载失败 (CDN拒绝)")
-                        mark_failed(aweme_id, "CDN下载失败")
+                    if resp.status_code != 200:
+                        print(f"  -> 下载失败 (HTTP {resp.status_code})")
+                        mark_failed(aweme_id, f"CDN下载失败 HTTP {resp.status_code}")
                         failed += 1
                         continue
 
-                    import base64
-                    video_bytes = base64.b64decode(video_bytes_b64)
+                    video_bytes = resp.content
                     print(f"  下载完成: {len(video_bytes)/1024/1024:.1f}MB")
                     video_file.write_bytes(video_bytes)
 
                 except Exception as e:
-                    print(f"  -> 异常: {e}")
+                    print(f"  -> 下载异常: {e}")
                     mark_failed(aweme_id, str(e))
                     failed += 1
                     continue
@@ -343,7 +316,7 @@ async def transcribe_batch(account=None, limit=None, force=False, priority=False
                     str(audio_path),
                     language="zh",
                     beam_size=5,
-                    vad_filter=True,
+                    vad_filter=False,
                 )
 
                 lines = []

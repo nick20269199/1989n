@@ -1,14 +1,24 @@
 {
-  "timestamp": "2026-05-12 13:42:33",
+  "timestamp": "2026-05-13 08:36:15",
   "json_issues": [],
   "critical_issues": [],
   "stale_issues": [
     {
       "file": "news_manual_20260511_0800.json",
-      "issue": "stale (29.7h > 12h threshold)",
+      "issue": "stale (48.6h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260512_0800.json",
+      "issue": "stale (24.6h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "morning_brief_latest.md",
+      "issue": "stale (18.9h > 12h threshold)",
       "severity": "medium"
     }
   ],
-  "total_issues": 1,
+  "total_issues": 3,
   "healthy": false
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-12 16:08",
+  "updated": "2026-05-13 16:39",
   "rules": [
     {
       "condition": "当启动阶段，炸板率出现异常偏离时",
@@ -408,6 +408,42 @@
       "last_verified": "",
       "verified_count": 0,
       "id": "R20260512_160850"
+    },
+    {
+      "condition": "Playwright访问抖音弹出CAPTCHA验证码时",
+      "action": "改用page.evaluate()调/aweme/v1/web/aweme/detail/或/aweme/v1/web/aweme/post/绕过页面渲染，下载改用curl_cffi(impersonate)",
+      "failure_signal": "API返回空体或403→需重新登录更新state.json",
+      "cycle_stage": "通用",
+      "source": "vv_transcribe.py修复经验",
+      "is_condensed": true,
+      "created": "2026-05-13 16:39",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260513_163943"
+    },
+    {
+      "condition": "CDN视频链接需要Referer验证但浏览器fetch被反爬阻断时",
+      "action": "使用curl_cffi requests.get(url, headers={Referer}, impersonate=chrome131)下载",
+      "failure_signal": "CDN URL过期返回403→通过API重新获取新鲜URL后重试",
+      "cycle_stage": "通用",
+      "source": "curl_cffi v0.15.0测试",
+      "is_condensed": true,
+      "created": "2026-05-13 16:39",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260513_163943"
+    },
+    {
+      "condition": "分析对象连续2年以上亏损且净资产持续下降时",
+      "action": "分析重心从技术面(MA/VCP)转为基本面(退市风险/PB/现金消耗率)，技术面仅做辅助参考",
+      "failure_signal": "出现连续2季盈利+营收同比增长→基本面反转，重新启用技术分析",
+      "cycle_stage": "通用",
+      "source": "翠微股份(603123) 基本面分析",
+      "is_condensed": true,
+      "created": "2026-05-13 16:39",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260513_163943"
     }
   ],
   "stats": {}

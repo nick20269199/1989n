@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-12 23:25:03",
+  "timestamp": "2026-05-13 23:25:03",
   "win_tasks": {
     "found": [
       "StockAnalysis_MorningBrief",
@@ -44,7 +44,7 @@
       "大V"
     ],
     "missing": [],
-    "total": 26
+    "total": 25
   },
   "data_files": {
     "ok": [

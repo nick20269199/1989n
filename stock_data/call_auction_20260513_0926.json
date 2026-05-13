@@ -1,0 +1,68 @@
+{
+  "type": "call_auction",
+  "time": "2026-05-13 09:26:39",
+  "date": "2026-05-13",
+  "market_breadth": {
+    "up": 0,
+    "down": 0,
+    "flat": 0,
+    "limit_up": 0,
+    "limit_down": 0,
+    "total": 0,
+    "avg_change": 0.0,
+    "details": []
+  },
+  "concept_auction": [],
+  "industry_auction": [],
+  "limit_orders": {
+    "limit_up_strength": [],
+    "limit_down_pressure": []
+  },
+  "portfolio_auction": [
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "auction_price": 34.32,
+      "prev_close": 34.32,
+      "auction_chg_pct": 0.0,
+      "open_volume": 7747,
+      "sector": "锂电化工"
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "auction_price": 62.0,
+      "prev_close": 62.1,
+      "auction_chg_pct": -0.16,
+      "open_volume": 2671,
+      "sector": "商业航天/军工电子"
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "auction_price": 29.66,
+      "prev_close": 30.3,
+      "auction_chg_pct": -2.11,
+      "open_volume": 1526,
+      "sector": "PCB/电子"
+    },
+    {
+      "code": "601789",
+      "name": "宁波建工",
+      "auction_price": 6.01,
+      "prev_close": 6.06,
+      "auction_chg_pct": -0.83,
+      "open_volume": 2492,
+      "sector": "建筑工程/基建"
+    },
+    {
+      "code": "600236",
+      "name": "桂冠电力",
+      "auction_price": 11.82,
+      "prev_close": 11.94,
+      "auction_chg_pct": -1.01,
+      "open_volume": 5870,
+      "sector": "水电/电力"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "type": "30min_analysis",
+  "time": "2026-05-13 15:00",
+  "indices": {
+    "sh": 4243.2145,
+    "sz": 16089.749,
+    "cy": 4038.333,
+    "kc50": 1769.6444
+  },
+  "portfolio": {
+    "total_value": 267903.0,
+    "total_cost": 245575.3,
+    "total_pnl": 22327.7,
+    "total_pnl_pct": 9.09
+  },
+  "holdings": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "price": 60.86,
+      "today_chg": 2.32,
+      "cost": 49.465,
+      "pnl_pct": 23.04,
+      "mv": 133892.0
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "price": 37.91,
+      "today_chg": -0.21,
+      "cost": 36.28,
+      "pnl_pct": 4.49,
+      "mv": 15164.0
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "price": 34.24,
+      "today_chg": -0.23,
+      "cost": 36.27,
+      "pnl_pct": -5.6,
+      "mv": 20544.0
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "price": 63.83,
+      "today_chg": 2.79,
+      "cost": 64.48,
+      "pnl_pct": -1.01,
+      "mv": 12766.0
+    },
+    {
+      "code": "601789",
+      "name": "宁波建工",
+      "price": 6.26,
+      "today_chg": 3.3,
+      "cost": 6.267,
+      "pnl_pct": -0.11,
+      "mv": 12520.0
+    },
+    {
+      "code": "600236",
+      "name": "桂冠电力",
+      "price": 11.97,
+      "today_chg": 0.25,
+      "cost": 12.303,
+      "pnl_pct": -2.71,
+      "mv": 73017.0
+    }
+  ]
+}

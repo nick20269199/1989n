@@ -1,140 +1,69 @@
 {
-  "date": "2026-05-12",
-  "time": "13:42:24",
+  "date": "2026-05-13",
+  "time": "09:07:44",
   "us_market": {
     "indices": [
       {
         "name": "道琼斯",
-        "price": 49704.4688,
-        "change_pct": 0.19,
-        "date": "2026-05-11"
+        "price": 49760.5586,
+        "change_pct": 0.11,
+        "date": "2026-05-12"
       },
       {
         "name": "纳斯达克",
-        "price": 26274.125,
-        "change_pct": 0.1,
-        "date": "2026-05-11"
+        "price": 26088.2031,
+        "change_pct": -0.71,
+        "date": "2026-05-12"
       },
       {
         "name": "标普500",
-        "price": 7412.8398,
-        "change_pct": 0.19,
-        "date": "2026-05-11"
+        "price": 7400.96,
+        "change_pct": -0.16,
+        "date": "2026-05-12"
       }
     ],
-    "sector_leaders": [
-      {
-        "name": "AMD",
-        "ticker": "105.AMD",
-        "concept": "半导体封测/CPU",
-        "price": 458.79,
-        "change_pct": 0.79
-      },
-      {
-        "name": "英特尔",
-        "ticker": "105.INTC",
-        "concept": "半导体/CPU",
-        "price": 129.44,
-        "change_pct": 3.62
-      },
-      {
-        "name": "英伟达",
-        "ticker": "105.NVDA",
-        "concept": "AI算力/GPU",
-        "price": 219.44,
-        "change_pct": 1.97
-      },
-      {
-        "name": "美光科技",
-        "ticker": "105.MU",
-        "concept": "存储芯片",
-        "price": 795.33,
-        "change_pct": 6.5
-      },
-      {
-        "name": "阿斯麦",
-        "ticker": "105.ASML",
-        "concept": "光刻机/半导体设备",
-        "price": 1565.81,
-        "change_pct": -1.65
-      },
-      {
-        "name": "特斯拉",
-        "ticker": "105.TSLA",
-        "concept": "机器人/新能源",
-        "price": 445.0,
-        "change_pct": 3.89
-      },
-      {
-        "name": "Rocket Lab",
-        "ticker": "105.RKLB",
-        "concept": "商业航天",
-        "price": 117.35,
-        "change_pct": 11.26
-      }
-    ],
-    "timestamp": "2026-05-12 13:42"
+    "sector_leaders": [],
+    "timestamp": "2026-05-13 09:07"
   },
   "holding_impact": [
     {
       "code": "002156",
       "name": "通富微电",
       "sector": "半导体封测",
-      "direction": "偏多",
-      "news_count": 4,
-      "leader_signals": [
-        "AMD +0.8%",
-        "英特尔 +3.6%"
-      ],
-      "key_news": [
-        "美股: AMD +0.8%, 英特尔 +3.6%",
-        "【点金互动易】半导体设备+PCB，钻孔设备在IC载板领域取得首台订单，全面推进算力PCB领域的客户扩展，这家公司产品可用",
-        "【研选】存储模组/利基存储厂商营收环比高增，毛利率均有显著改善，利基存储企业业绩开始释放；在核电审批常态化、抽水蓄能进入"
-      ],
+      "direction": "中性",
+      "news_count": 0,
+      "leader_signals": [],
+      "key_news": [],
       "us_tailwind": ""
     },
     {
       "code": "300480",
       "name": "光力科技",
       "sector": "半导体划片设备",
-      "direction": "偏多",
-      "news_count": 3,
-      "leader_signals": [
-        "阿斯麦 -1.6%"
-      ],
-      "key_news": [
-        "美股: 阿斯麦 -1.6%",
-        "【点金互动易】半导体设备+PCB，钻孔设备在IC载板领域取得首台订单，全面推进算力PCB领域的客户扩展，这家公司产品可用",
-        "【点金互动易】半导体设备+PCB，钻孔设备在IC载板领域取得首台订单，全面推进算力PCB领域的客户扩展，这家公司产品可用"
-      ],
+      "direction": "中性",
+      "news_count": 0,
+      "leader_signals": [],
+      "key_news": [],
       "us_tailwind": ""
     },
     {
       "code": "002407",
       "name": "多氟多",
       "sector": "锂电化工",
-      "direction": "略多",
-      "news_count": 1,
+      "direction": "中性",
+      "news_count": 0,
       "leader_signals": [],
-      "key_news": [
-        "期价突破20万元/吨 碳酸锂“高涨”势头持续"
-      ],
+      "key_news": [],
       "us_tailwind": ""
     },
     {
       "code": "300342",
       "name": "天银机电",
       "sector": "商业航天/军工电子",
-      "direction": "略多",
-      "news_count": 2,
-      "leader_signals": [
-        "Rocket Lab +11.3%"
-      ],
-      "key_news": [
-        "美股: Rocket Lab +11.3%",
-        "人形机器人落地加速 保险托底打通商业化最后一公里",
-        "人形机器人量产元年开启 产业链进入规模化商业化新阶段"
-      ],
+      "direction": "中性",
+      "news_count": 0,
+      "leader_signals": [],
+      "key_news": [],
       "us_tailwind": ""
     },
     {
@@ -142,11 +71,11 @@
       "name": "明阳电路",
       "sector": "PCB/电子",
       "direction": "略多",
-      "news_count": 4,
+      "news_count": 3,
       "leader_signals": [],
       "key_news": [
-        "【点金互动易】半导体设备+PCB，钻孔设备在IC载板领域取得首台订单，全面推进算力PCB领域的客户扩展，这家公司产品可用",
-        "【研选】存储模组/利基存储厂商营收环比高增，毛利率均有显著改善，利基存储企业业绩开始释放；在核电审批常态化、抽水蓄能进入"
+        "三星电子计划在第四季度量产CXL 3.1内存模块",
+        "财联社5月13日电，三星电子称，对调解会谈破裂表示遗憾。将努力继续与工会进行谈判。"
       ],
       "us_tailwind": ""
     },
@@ -154,12 +83,10 @@
       "code": "601789",
       "name": "宁波建工",
       "sector": "建筑工程/基建",
-      "direction": "略多",
-      "news_count": 1,
+      "direction": "中性",
+      "news_count": 0,
       "leader_signals": [],
-      "key_news": [
-        "挖掘机量价齐涨 工程机械行业景气度攀升"
-      ],
+      "key_news": [],
       "us_tailwind": ""
     },
     {
@@ -174,33 +101,10 @@
     }
   ],
   "announcements": {
-    "contracts": [
-      {
-        "title": "投资日历：周二资本市场大事提醒",
-        "time": "2026-05-12 07:44:46"
-      },
-      {
-        "title": "周二你需要知道的隔夜全球要闻：特朗普称与伊朗停火协议已“岌岌可危”，标普500指数、纳指续创新高，知名投资人Michael Burry警告纳斯达克100指数或大跌",
-        "time": "2026-05-12 06:00:00"
-      },
-      {
-        "title": "贝莱德：对投资委内瑞拉的机会持有“相当乐观”的态度",
-        "time": "2026-05-12 05:41:47"
-      }
-    ],
+    "contracts": [],
     "decreases": [],
-    "lockup": [
-      {
-        "title": "A股限售股解禁一览：46.25亿元市值限售股今日解禁",
-        "time": "2026-05-12 07:33:01"
-      }
-    ],
-    "unusual": [
-      {
-        "title": "财联社5月12日电，拓璞数控在港交所公告，在港上市拟发行6530万股H股，定价26.39港元/股，预计5月20日开始上市交易。",
-        "time": "2026-05-12 06:10:09"
-      }
-    ]
+    "lockup": [],
+    "unusual": []
   },
-  "my_news_count": 15
+  "my_news_count": 3
 }

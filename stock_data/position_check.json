@@ -1,10 +1,10 @@
 {
-  "date": "2026-05-12",
-  "time": "2026-05-12 14:21:19",
+  "date": "2026-05-13",
+  "time": "2026-05-13 11:02:41",
   "total_cost": 241600.2,
-  "total_value": 259558.0,
-  "total_pnl": 17957.8,
-  "total_pnl_pct": 7.43,
+  "total_value": 258238.0,
+  "total_pnl": 16637.8,
+  "total_pnl_pct": 6.89,
   "can_open_new": true,
   "open_blockers": [],
   "emergency": [
@@ -12,27 +12,36 @@
       "code": "002156",
       "name": "通富微电",
       "action": "清仓",
-      "pnl_pct": 20.37,
+      "pnl_pct": 18.23,
       "warnings": [
-        "💰 +15%止盈: 20.4%"
+        "💰 +15%止盈: 18.2%"
       ]
     },
     {
       "code": "300480",
       "name": "光力科技",
       "action": "清仓",
-      "pnl_pct": 4.88,
+      "pnl_pct": 2.67,
       "warnings": [
-        "⏰ 超时12天"
+        "⏰ 超时13天"
+      ]
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "action": "清仓",
+      "pnl_pct": -1.04,
+      "warnings": [
+        "⛔ 危险区第5天+浮亏-1.0%"
       ]
     },
     {
       "code": "300739",
       "name": "明阳电路",
       "action": "清仓",
-      "pnl_pct": -36.87,
+      "pnl_pct": -36.41,
       "warnings": [
-        "⛔ 硬止损触发: -36.9% ≤ -7%"
+        "⛔ 硬止损触发: -36.4% ≤ -7%"
       ]
     }
   ],
@@ -41,27 +50,9 @@
       "code": "002407",
       "name": "多氟多",
       "action": "减半",
-      "pnl_pct": -5.68,
+      "pnl_pct": -6.56,
       "warnings": [
-        "⚠ 软止损: -5.7%, 减半仓"
-      ]
-    },
-    {
-      "code": "300342",
-      "name": "天银机电",
-      "action": "减半",
-      "pnl_pct": -3.66,
-      "warnings": [
-        "⚠ 软止损: -3.7%, 减半仓"
-      ]
-    },
-    {
-      "code": "601789",
-      "name": "宁波建工",
-      "action": "减半",
-      "pnl_pct": -3.89,
-      "warnings": [
-        "⚠ 软止损: -3.9%, 减半仓"
+        "⚠ 软止损: -6.6%, 减半仓"
       ]
     }
   ],
@@ -71,13 +62,13 @@
       "name": "通富微电",
       "qty": 2200,
       "cost": 49.465,
-      "last_price": 59.54,
-      "pnl_pct": 20.37,
-      "hold_days": 15,
+      "last_price": 58.48,
+      "pnl_pct": 18.23,
+      "hold_days": 16,
       "status": "止盈",
       "action": "清仓",
       "warnings": [
-        "💰 +15%止盈: 20.4%"
+        "💰 +15%止盈: 18.2%"
       ]
     },
     {
@@ -85,13 +76,13 @@
       "name": "光力科技",
       "qty": 400,
       "cost": 36.28,
-      "last_price": 38.05,
-      "pnl_pct": 4.88,
-      "hold_days": 12,
+      "last_price": 37.25,
+      "pnl_pct": 2.67,
+      "hold_days": 13,
       "status": "超时",
       "action": "清仓",
       "warnings": [
-        "⏰ 超时12天"
+        "⏰ 超时13天"
       ]
     },
     {
@@ -99,13 +90,13 @@
       "name": "多氟多",
       "qty": 600,
       "cost": 36.27,
-      "last_price": 34.21,
-      "pnl_pct": -5.68,
-      "hold_days": 6,
+      "last_price": 33.89,
+      "pnl_pct": -6.56,
+      "hold_days": 7,
       "status": "预警",
       "action": "减半",
       "warnings": [
-        "⚠ 软止损: -5.7%, 减半仓"
+        "⚠ 软止损: -6.6%, 减半仓"
       ]
     },
     {
@@ -113,13 +104,13 @@
       "name": "天银机电",
       "qty": 200,
       "cost": 64.48,
-      "last_price": 62.12,
-      "pnl_pct": -3.66,
-      "hold_days": 4,
-      "status": "预警",
-      "action": "减半",
+      "last_price": 63.81,
+      "pnl_pct": -1.04,
+      "hold_days": 5,
+      "status": "危险区",
+      "action": "清仓",
       "warnings": [
-        "⚠ 软止损: -3.7%, 减半仓"
+        "⛔ 危险区第5天+浮亏-1.0%"
       ]
     },
     {
@@ -127,13 +118,13 @@
       "name": "明阳电路",
       "qty": 100,
       "cost": 47.759,
-      "last_price": 30.15,
-      "pnl_pct": -36.87,
-      "hold_days": 19,
+      "last_price": 30.37,
+      "pnl_pct": -36.41,
+      "hold_days": 20,
       "status": "止损",
       "action": "清仓",
       "warnings": [
-        "⛔ 硬止损触发: -36.9% ≤ -7%"
+        "⛔ 硬止损触发: -36.4% ≤ -7%"
       ]
     },
     {
@@ -141,23 +132,21 @@
       "name": "宁波建工",
       "qty": 600,
       "cost": 6.305,
-      "last_price": 6.06,
-      "pnl_pct": -3.89,
-      "hold_days": 7,
-      "status": "预警",
-      "action": "减半",
-      "warnings": [
-        "⚠ 软止损: -3.9%, 减半仓"
-      ]
+      "last_price": 6.17,
+      "pnl_pct": -2.14,
+      "hold_days": 8,
+      "status": "正常",
+      "action": "持有",
+      "warnings": []
     },
     {
       "code": "600236",
       "name": "桂冠电力",
       "qty": 6100,
       "cost": 12.303,
-      "last_price": 12.09,
-      "pnl_pct": -1.73,
-      "hold_days": 0,
+      "last_price": 12.27,
+      "pnl_pct": -0.27,
+      "hold_days": 1,
       "status": "正常",
       "action": "持有",
       "warnings": []

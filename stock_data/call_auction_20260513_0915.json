@@ -1,0 +1,204 @@
+{
+  "type": "call_auction",
+  "time": "2026-05-13 09:15:54",
+  "date": "2026-05-13",
+  "market_breadth": {
+    "up": 2734,
+    "down": 2734,
+    "flat": 0,
+    "limit_up": 61,
+    "limit_down": 0,
+    "total": 5529,
+    "avg_change": 0.0,
+    "details": [
+      {
+        "code": "300287",
+        "name": "飞利信",
+        "change_pct": 20.04
+      },
+      {
+        "code": "300959",
+        "name": "线上线下",
+        "change_pct": 20.0
+      },
+      {
+        "code": "688363",
+        "name": "华熙生物",
+        "change_pct": 20.0
+      },
+      {
+        "code": "301538",
+        "name": "骏鼎达",
+        "change_pct": 20.0
+      },
+      {
+        "code": "301288",
+        "name": "清研环境",
+        "change_pct": 20.0
+      },
+      {
+        "code": "300965",
+        "name": "恒宇信通",
+        "change_pct": 20.0
+      },
+      {
+        "code": "300617",
+        "name": "安靠智电",
+        "change_pct": 20.0
+      },
+      {
+        "code": "301137",
+        "name": "哈焊华通",
+        "change_pct": 19.99
+      },
+      {
+        "code": "300565",
+        "name": "科信技术",
+        "change_pct": 19.98
+      },
+      {
+        "code": "300047",
+        "name": "天源迪科",
+        "change_pct": 19.98
+      },
+      {
+        "code": "300787",
+        "name": "海能实业",
+        "change_pct": 19.98
+      },
+      {
+        "code": "300771",
+        "name": "智莱科技",
+        "change_pct": 19.97
+      },
+      {
+        "code": "300449",
+        "name": "汉邦高科",
+        "change_pct": 19.97
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "change_pct": 19.95
+      },
+      {
+        "code": "300460",
+        "name": "ST惠伦",
+        "change_pct": 19.83
+      },
+      {
+        "code": "300264",
+        "name": "佳创视讯",
+        "change_pct": 19.77
+      },
+      {
+        "code": "301290",
+        "name": "东星医疗",
+        "change_pct": 19.42
+      },
+      {
+        "code": "300268",
+        "name": "佳沃食品",
+        "change_pct": 19.23
+      },
+      {
+        "code": "301185",
+        "name": "鸥玛软件",
+        "change_pct": 16.04
+      },
+      {
+        "code": "300265",
+        "name": "通光线缆",
+        "change_pct": 14.99
+      }
+    ]
+  },
+  "concept_auction": [
+    {
+      "name": "昨日首板",
+      "change_pct": 6.35,
+      "turnover": 0,
+      "leading_stock": "线上线下",
+      "leading_pct": 40
+    },
+    {
+      "name": "昨日涨停_含一字",
+      "change_pct": 5.48,
+      "turnover": 0,
+      "leading_stock": "线上线下",
+      "leading_pct": 79
+    },
+    {
+      "name": "昨日连板_含一字",
+      "change_pct": 5.11,
+      "turnover": 0,
+      "leading_stock": "汉邦高科",
+      "leading_pct": 35
+    },
+    {
+      "name": "昨日涨停",
+      "change_pct": 5.01,
+      "turnover": 0,
+      "leading_stock": "通光线缆",
+      "leading_pct": 68
+    },
+    {
+      "name": "昨日连板",
+      "change_pct": 4.15,
+      "turnover": 0,
+      "leading_stock": "康欣新材",
+      "leading_pct": 24
+    },
+    {
+      "name": "昨日打二板以上表现",
+      "change_pct": 3.01,
+      "turnover": 0,
+      "leading_stock": "康欣新材",
+      "leading_pct": 5
+    },
+    {
+      "name": "举牌",
+      "change_pct": 2.43,
+      "turnover": 0,
+      "leading_stock": "可川科技",
+      "leading_pct": 2
+    },
+    {
+      "name": "东方财富热股",
+      "change_pct": 2.4,
+      "turnover": 0,
+      "leading_stock": "汉邦高科",
+      "leading_pct": 49
+    },
+    {
+      "name": "数字水印",
+      "change_pct": 1.95,
+      "turnover": 0,
+      "leading_stock": "汉邦高科",
+      "leading_pct": 7
+    },
+    {
+      "name": "时空大数据",
+      "change_pct": 1.87,
+      "turnover": 0,
+      "leading_stock": "飞利信",
+      "leading_pct": 10
+    }
+  ],
+  "industry_auction": [],
+  "limit_orders": {
+    "limit_up_strength": [],
+    "limit_down_pressure": []
+  },
+  "portfolio_auction": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "auction_price": 57.61,
+      "prev_close": 59.48,
+      "auction_chg_pct": -3.14,
+      "open_volume": 0,
+      "sector": "半导体封测"
+    }
+  ]
+}
