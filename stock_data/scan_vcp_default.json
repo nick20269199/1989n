@@ -1,68 +1,56 @@
 {
   "scan_type": "vcp",
   "param": null,
-  "time": "2026-05-14 15:30:02",
-  "count": 5,
+  "time": "2026-05-14 16:03:09",
+  "count": 4,
   "results": [
-    {
-      "phase": "收缩",
-      "score": 85,
-      "price": 34.24,
-      "volume_ratio": 60,
-      "ma20": 33.1,
-      "above_ma20": true,
-      "range_narrowing": true,
-      "lower_shadows": 3,
-      "has_limit_up": true,
-      "code": "002407"
-    },
     {
       "phase": "企稳",
       "score": 50,
-      "price": 60.86,
-      "volume_ratio": 136,
-      "ma20": 51.67,
+      "price": 6.13,
+      "volume_ratio": 98,
+      "ma20": 5.88,
       "above_ma20": true,
       "range_narrowing": false,
       "lower_shadows": 2,
-      "has_limit_up": true,
-      "code": "002156"
-    },
-    {
-      "phase": "企稳",
-      "score": 50,
-      "price": 6.26,
-      "volume_ratio": 90,
-      "ma20": 5.85,
-      "above_ma20": true,
-      "range_narrowing": false,
-      "lower_shadows": 3,
       "has_limit_up": true,
       "code": "601789"
     },
     {
       "phase": "企稳",
-      "score": 50,
-      "price": 11.97,
-      "volume_ratio": 257,
-      "ma20": 10.35,
+      "score": 35,
+      "price": 57.4,
+      "volume_ratio": 114,
+      "ma20": 52.25,
       "above_ma20": true,
       "range_narrowing": false,
-      "lower_shadows": 3,
+      "lower_shadows": 1,
       "has_limit_up": true,
-      "code": "600236"
+      "code": "002156"
     },
     {
       "phase": "突破",
       "score": 35,
-      "price": 37.91,
-      "volume_ratio": 141,
-      "ma20": 35.56,
+      "price": 39.42,
+      "volume_ratio": 155,
+      "ma20": 35.9,
       "above_ma20": true,
       "range_narrowing": false,
       "lower_shadows": 1,
       "has_limit_up": false,
       "code": "300480"
+    },
+    {
+      "phase": "企稳",
+      "score": 35,
+      "price": 11.13,
+      "volume_ratio": 223,
+      "ma20": 10.41,
+      "above_ma20": true,
+      "range_narrowing": false,
+      "lower_shadows": 3,
+      "has_limit_up": true,
+      "code": "600236"
     }
   ]
 }

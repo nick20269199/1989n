@@ -1,15 +1,15 @@
 {
   "version": "1.0",
   "created": "2026-05-10",
-  "last_updated": "2026-05-13",
-  "total_discoveries": 17,
+  "last_updated": "2026-05-14",
+  "total_discoveries": 25,
   "by_category": {
-    "trading_strategy": 6,
-    "trading_software": 2,
-    "ai_agent": 5,
+    "trading_strategy": 8,
+    "trading_software": 4,
+    "ai_agent": 7,
     "market_data": 2,
     "infrastructure": 0,
-    "frontier": 2
+    "frontier": 4
   },
   "items": [
     {
@@ -20,8 +20,16 @@
       "source_url": "https://arxiv.org/html/2605.06024v1",
       "one_liner": "测试LLM交易代理三种模式(Free/Guided/Strict)，发现Alignment Tax——规则硬约束损害大模型表现",
       "use_for": "daily_task.py信号聚合两级模式：Free推理→Strict风控，而非先约束再推理",
-      "status": "new",
-      "evaluated_at": null
+      "status": "approved",
+      "evaluated_at": "2026-05-14",
+      "evaluation": {
+        "match": 4,
+        "maturity": 2,
+        "cost": 2,
+        "risk": 1,
+        "decision": "approved",
+        "note": "概念级——非代码集成而是设计模式。Free推理→Strict风控两级架构可直接用于daily_task.py信号聚合改造，低风险高回报。"
+      }
     },
     {
       "id": "20260513-002",
@@ -31,8 +39,16 @@
       "source_url": "https://arxiv.org/html/2603.20247v1",
       "one_liner": "从因子库逆向提取市场逻辑→迭代生成新因子，CSI 500超额16.72%",
       "use_for": "tech_scan因子发现方法论：逻辑驱动而非随机搜索，与StratEvo遗传算法互补",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-14",
+      "evaluation": {
+        "match": 4,
+        "maturity": 2,
+        "cost": 4,
+        "risk": 2,
+        "decision": "deferred",
+        "note": "方法论有价值但纯论文级(arXiv)。需从零实现因子逆向提取管道。StratEvo遗传算法已覆盖因子发现。月检，关注代码发布。"
+      }
     },
     {
       "id": "20260513-003",
@@ -42,8 +58,16 @@
       "source_url": "https://github.com/theOGognf/finagg",
       "one_liner": "统一FRED/BEA/SEC免费数据，Python/SQLite，v2.0.0 Mar 2026",
       "use_for": "data_source_router.py宏观数据通道：利率/就业/GDP，补全morning_brief全球宏观部分",
-      "status": "new",
-      "evaluated_at": null
+      "status": "approved",
+      "evaluated_at": "2026-05-14",
+      "evaluation": {
+        "match": 4,
+        "maturity": 4,
+        "cost": 1,
+        "risk": 1,
+        "decision": "approved",
+        "note": "v2.0.0已发布(GitHub活跃)，pip install即可。当前data_source_router.py无宏观数据通道，finagg填补FRED/BEA/SEC空白。直接集成到morning_brief全球宏观部分。"
+      }
     },
     {
       "id": "20260511-001",
@@ -215,6 +239,94 @@
         "decision": "rejected",
         "note": "信息类文章，非工具/库。匹配度≤2。对持仓背景判断的作用过于间接。"
       }
+    },
+    {
+      "id": "20260514-001",
+      "date": "2026-05-14",
+      "category": "trading_strategy",
+      "name": "Autoresearch-trading: LLM+进化策略发现",
+      "source_url": "",
+      "one_liner": "LLM驱动交易策略自动研究与进化，替代随机变异算子加速收敛",
+      "use_for": "daily_task.py信号聚合的进化优化，LLM作为定向变异引擎",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260514-002",
+      "date": "2026-05-14",
+      "category": "trading_strategy",
+      "name": "WEEX Alpha Awakens: GMM体制分类+多Agent",
+      "source_url": "",
+      "one_liner": "GMM高斯混合模型对市场状态分类，每个状态分配独立Agent策略",
+      "use_for": "daily_compress.py周期阶段判定升级，从规则引擎→概率模型",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260514-003",
+      "date": "2026-05-14",
+      "category": "ai_agent",
+      "name": "When2Tool (Probe&Prefill): 工具调用必要性检测",
+      "source_url": "https://arxiv.org/abs/2605.09252",
+      "one_liner": "LLM隐藏状态线性可解码工具调用必要性(AUROC 0.89-0.96)，减少48%不必要工具调用",
+      "use_for": "daily_task.py/cron任务链工具调用优化，减少token浪费",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260514-004",
+      "date": "2026-05-14",
+      "category": "ai_agent",
+      "name": "SkillMaster: 自主技能掌握 (DualAdv-GRPO)",
+      "source_url": "https://arxiv.org/abs/2605.08693",
+      "one_liner": "Agent在任务解决中自主创建/优化/选择技能，ALFWorld+8.8%, WebShop+9.3%",
+      "use_for": "SEL Growth Loop的技能进化自动化参考",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260514-005",
+      "date": "2026-05-14",
+      "category": "trading_software",
+      "name": "Investing Algorithm Framework (v8.6.0): 全栈量化框架",
+      "source_url": "https://github.com/coding-kitties/investing-algorithm-framework",
+      "one_liner": "Polars向量化+事件驱动双模式回测，内置MCP服务器供AI Agent查询",
+      "use_for": "回测报告MCP接口参考，Polars向量化回测替代pandas",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260514-006",
+      "date": "2026-05-14",
+      "category": "trading_software",
+      "name": "open-market-data (omd): AI Agent原生金融数据CLI",
+      "source_url": "https://www.npmjs.com/package/open-market-data",
+      "one_liner": "Node.js CLI/AI Agent技能，免费公开API获取金融数据，无需API Key",
+      "use_for": "market_pool数据源补充，美股/全球数据CLI获取通道",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260514-007",
+      "date": "2026-05-14",
+      "category": "frontier",
+      "name": "GPT-5.5 Instant: 幻觉降低52.5%",
+      "source_url": "",
+      "one_liner": "高风险场景(医疗/法律/金融)幻觉降低52.5%，历史标记对话不准确声明减少37.3%",
+      "use_for": "LLM信号可信度重新评估，幻觉率减半则信号聚合权重可上调",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260514-008",
+      "date": "2026-05-14",
+      "category": "frontier",
+      "name": "Warm-up Training: AI学会说不知道",
+      "source_url": "",
+      "one_liner": "受人类大脑不确定性信号启发，训练AI在不确定时主动承认而非幻觉(Nature Machine Intelligence)",
+      "use_for": "llm_competence_check()置信度校准参考，不确定性-aware信号聚合",
+      "status": "new",
+      "evaluated_at": null
     }
   ]
 }

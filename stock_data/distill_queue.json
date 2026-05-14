@@ -107,6 +107,12 @@
       "file": "sentinel_status.json",
       "status": "pending",
       "size_kb": 1.3
+    },
+    {
+      "date": "2026-05-14",
+      "file": "git_push.log",
+      "status": "pending",
+      "size_kb": 512.8
     }
   ],
   "last_distilled": null

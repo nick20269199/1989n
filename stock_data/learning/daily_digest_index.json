@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-13 16:39",
+  "updated": "2026-05-14 16:07",
   "daily_digest_index": [],
   "digests": [
     {
@@ -133,10 +133,18 @@
     {
       "date": "20260513",
       "version": 2,
-      "stage": "冰点",
+      "stage": "主升",
       "alerts": 7,
-      "rules_condensed": 0,
+      "rules_condensed": 3,
       "file": "D:\\1989n\\stock_data\\learning\\daily_digest_20260513.json"
+    },
+    {
+      "date": "20260514",
+      "version": 2,
+      "stage": "分化（主升回调）",
+      "alerts": 7,
+      "rules_condensed": 3,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_20260514.json"
     }
   ]
 }

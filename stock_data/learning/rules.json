@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-13 16:39",
+  "updated": "2026-05-14 16:08",
   "rules": [
     {
       "condition": "当启动阶段，炸板率出现异常偏离时",
@@ -444,6 +444,42 @@
       "last_verified": "",
       "verified_count": 0,
       "id": "R20260513_163943"
+    },
+    {
+      "condition": "当持仓股竞价低开>3%且大盘指数低开>1%时",
+      "action": "联动检查该持仓是否需要减仓：若前日浮盈>10%，至少减半仓锁利；若前日亏损，执行止损",
+      "failure_signal": "竞价低开但开盘后V型反转收回失地 → 减仓过早但锁利不等于错误",
+      "cycle_stage": "分化",
+      "source": "竞价数据和实操回测",
+      "is_condensed": true,
+      "created": "2026-05-14 16:08",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260514_160834"
+    },
+    {
+      "condition": "三大指数同步跌>1.5%的全面回调日时",
+      "action": "全面回调日不追强势股(补跌风险)，只减仓不清仓。有浮盈的部分锁利，穿止损的执行，有空间的等修复",
+      "failure_signal": "回调次日开盘半小时放量上攻 → 是洗盘非真跌，可择机回补",
+      "cycle_stage": "分化",
+      "source": "今日指数行情",
+      "is_condensed": true,
+      "created": "2026-05-14 16:08",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260514_160834"
+    },
+    {
+      "condition": "持仓穿止损但技术指标仍多头排列+金叉时",
+      "action": "止损优先于技术面——穿止损必须执行。技术面只用于决定是否在止损后重新接回，而非取消止损",
+      "failure_signal": "穿止损后股价立即反弹>5% → 止损过早但纪律不可废，等确认反转再接回",
+      "cycle_stage": "分化",
+      "source": "桂冠电力持仓分析",
+      "is_condensed": true,
+      "created": "2026-05-14 16:08",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260514_160834"
     }
   ],
   "stats": {}
