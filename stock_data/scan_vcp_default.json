@@ -1,8 +1,8 @@
 {
   "scan_type": "vcp",
   "param": null,
-  "time": "2026-05-13 16:33:01",
-  "count": 6,
+  "time": "2026-05-14 15:30:02",
+  "count": 5,
   "results": [
     {
       "phase": "收缩",
@@ -27,18 +27,6 @@
       "lower_shadows": 2,
       "has_limit_up": true,
       "code": "002156"
-    },
-    {
-      "phase": "企稳",
-      "score": 50,
-      "price": 36.87,
-      "volume_ratio": 107,
-      "ma20": 35.67,
-      "above_ma20": true,
-      "range_narrowing": false,
-      "lower_shadows": 2,
-      "has_limit_up": false,
-      "code": "300792"
     },
     {
       "phase": "企稳",

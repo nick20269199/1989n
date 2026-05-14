@@ -89,6 +89,24 @@
       "file": "git_push.log",
       "status": "pending",
       "size_kb": 232.1
+    },
+    {
+      "date": "2026-05-14",
+      "file": "closing_review.json",
+      "status": "pending",
+      "size_kb": 9.0
+    },
+    {
+      "date": "2026-05-14",
+      "file": "morning_enhanced.json",
+      "status": "pending",
+      "size_kb": 8.6
+    },
+    {
+      "date": "2026-05-14",
+      "file": "sentinel_status.json",
+      "status": "pending",
+      "size_kb": 1.3
     }
   ],
   "last_distilled": null

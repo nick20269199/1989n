@@ -1,7 +1,7 @@
 {
-  "title": "收盘复盘 | 2026-05-13日",
-  "date": "2026-05-13",
-  "time": "16:32:53",
+  "title": "收盘复盘 | 2026-05-14日",
+  "date": "2026-05-14",
+  "time": "15:35:09",
   "is_trading_hours": false,
   "holdings_report": {
     "holdings": [
@@ -11,17 +11,17 @@
         "sector": "半导体封测",
         "shares": 2000,
         "cost": 49.465,
-        "price": 60.86,
-        "high": 61.0,
-        "low": 56.93,
-        "change_pct": 2.32,
-        "volume": 149735805,
+        "price": 57.4,
+        "high": 61.2,
+        "low": 57.39,
+        "change_pct": -5.69,
+        "volume": 130148166,
         "turnover": 0,
-        "pnl_pct": 23.04,
-        "pnl_amt": 22790.0,
-        "position_value": 121720.0,
+        "pnl_pct": 16.04,
+        "pnl_amt": 15870.0,
+        "position_value": 114800.0,
         "stop_loss": 46.99,
-        "dist_to_stop": 22.79,
+        "dist_to_stop": 18.14,
         "status": "🟢 大幅盈利"
       },
       {
@@ -30,18 +30,18 @@
         "sector": "半导体划片设备",
         "shares": 400,
         "cost": 36.28,
-        "price": 37.91,
-        "high": 39.57,
-        "low": 36.7,
-        "change_pct": -0.21,
-        "volume": 31751108,
+        "price": 39.42,
+        "high": 40.8,
+        "low": 37.96,
+        "change_pct": 3.98,
+        "volume": 35233511,
         "turnover": 0,
-        "pnl_pct": 4.49,
-        "pnl_amt": 652.0,
-        "position_value": 15164.0,
+        "pnl_pct": 8.65,
+        "pnl_amt": 1256.0,
+        "position_value": 15768.0,
         "stop_loss": 34.47,
-        "dist_to_stop": 9.07,
-        "status": "🟡 微利"
+        "dist_to_stop": 12.56,
+        "status": "🟡 盈利中"
       },
       {
         "code": "002407",
@@ -49,17 +49,17 @@
         "sector": "锂电化工",
         "shares": 600,
         "cost": 36.27,
-        "price": 34.24,
-        "high": 34.58,
-        "low": 33.88,
-        "change_pct": -0.23,
-        "volume": 83072268,
+        "price": 33.15,
+        "high": 34.88,
+        "low": 33.15,
+        "change_pct": -3.18,
+        "volume": 96557034,
         "turnover": 0,
-        "pnl_pct": -5.6,
-        "pnl_amt": -1218.0,
-        "position_value": 20544.0,
+        "pnl_pct": -8.6,
+        "pnl_amt": -1872.0,
+        "position_value": 19890.0,
         "stop_loss": 34.46,
-        "dist_to_stop": -0.64,
+        "dist_to_stop": -3.95,
         "status": "🔴 亏损"
       },
       {
@@ -68,18 +68,18 @@
         "sector": "商业航天/军工电子",
         "shares": 200,
         "cost": 64.48,
-        "price": 63.83,
-        "high": 64.95,
-        "low": 61.98,
-        "change_pct": 2.79,
-        "volume": 44562990,
+        "price": 58.91,
+        "high": 63.67,
+        "low": 58.87,
+        "change_pct": -7.71,
+        "volume": 49818841,
         "turnover": 0,
-        "pnl_pct": -1.01,
-        "pnl_amt": -130.0,
-        "position_value": 12766.0,
+        "pnl_pct": -8.64,
+        "pnl_amt": -1114.0,
+        "position_value": 11782.0,
         "stop_loss": 61.26,
-        "dist_to_stop": 4.03,
-        "status": "⚠️ 临近止损"
+        "dist_to_stop": -3.99,
+        "status": "🔴 亏损"
       },
       {
         "code": "300792",
@@ -87,18 +87,18 @@
         "sector": "电商服务/数字营销",
         "shares": 100,
         "cost": 36.76,
-        "price": 36.87,
-        "high": 36.99,
-        "low": 35.8,
-        "change_pct": 1.46,
-        "volume": 6716704,
+        "price": 35.11,
+        "high": 37.55,
+        "low": 35.08,
+        "change_pct": -4.77,
+        "volume": 7177200,
         "turnover": 0,
-        "pnl_pct": 0.3,
-        "pnl_amt": 11.0,
-        "position_value": 3687.0,
+        "pnl_pct": -4.49,
+        "pnl_amt": -165.0,
+        "position_value": 3511.0,
         "stop_loss": 34.92,
-        "dist_to_stop": 5.29,
-        "status": "🟡 微利"
+        "dist_to_stop": 0.54,
+        "status": "⚠️ 临近止损"
       },
       {
         "code": "601789",
@@ -106,17 +106,17 @@
         "sector": "建筑工程/基建",
         "shares": 2000,
         "cost": 6.267,
-        "price": 6.26,
-        "high": 6.29,
-        "low": 5.99,
-        "change_pct": 3.3,
-        "volume": 98476212,
+        "price": 6.13,
+        "high": 6.5,
+        "low": 6.12,
+        "change_pct": -2.08,
+        "volume": 108254136,
         "turnover": 0,
-        "pnl_pct": -0.11,
-        "pnl_amt": -14.0,
-        "position_value": 12520.0,
+        "pnl_pct": -2.19,
+        "pnl_amt": -274.0,
+        "position_value": 12260.0,
         "stop_loss": 5.95,
-        "dist_to_stop": 4.95,
+        "dist_to_stop": 2.94,
         "status": "⚠️ 临近止损"
       },
       {
@@ -125,50 +125,50 @@
         "sector": "水电/电力",
         "shares": 6100,
         "cost": 12.303,
-        "price": 11.97,
-        "high": 12.47,
-        "low": 11.68,
-        "change_pct": 0.25,
-        "volume": 70659985,
+        "price": 11.13,
+        "high": 12.34,
+        "low": 10.79,
+        "change_pct": -7.02,
+        "volume": 67336546,
         "turnover": 0,
-        "pnl_pct": -2.71,
-        "pnl_amt": -2031.3,
-        "position_value": 73017.0,
+        "pnl_pct": -9.53,
+        "pnl_amt": -7155.3,
+        "position_value": 67893.0,
         "stop_loss": 11.69,
-        "dist_to_stop": 2.34,
-        "status": "⚠️ 临近止损"
+        "dist_to_stop": -5.03,
+        "status": "🔴 亏损"
       }
     ],
-    "total_value": 259418.0,
+    "total_value": 245904.0,
     "total_cost": 239358.3,
-    "total_pnl": 20059.7,
-    "total_pnl_pct": 8.38
+    "total_pnl": 6545.7,
+    "total_pnl_pct": 2.73
   },
   "market_context": {
     "indices": [
       {
         "name": "上证指数",
         "code": "1.000001",
-        "price": 4242.572,
-        "change_pct": 0.67
+        "price": 4177.9175,
+        "change_pct": -1.52
       },
       {
         "name": "深证成指",
         "code": "0.399001",
-        "price": 16089.749,
-        "change_pct": 1.67
+        "price": 15745.736,
+        "change_pct": -2.14
       },
       {
         "name": "创业板指",
         "code": "0.399006",
-        "price": 4038.333,
-        "change_pct": 2.63
+        "price": 3951.14,
+        "change_pct": -2.16
       },
       {
         "name": "科创50",
         "code": "1.000688",
-        "price": 1770.1471,
-        "change_pct": 2.69
+        "price": 1725.0932,
+        "change_pct": -2.55
       }
     ],
     "breadth": {}
@@ -179,42 +179,42 @@
       "code": "002156",
       "name": "通富微电",
       "action": "考虑部分止盈",
-      "detail": "浮盈23.0%，评估是否分批锁利",
+      "detail": "浮盈16.0%，评估是否分批锁利",
       "urgency": "medium"
     },
     {
       "code": "002407",
       "name": "多氟多",
       "action": "关注",
-      "detail": "距止损位-0.6%，监控是否企稳",
+      "detail": "距止损位-4.0%，监控是否企稳",
       "urgency": "medium"
     },
     {
       "code": "300342",
       "name": "天银机电",
       "action": "关注",
-      "detail": "距止损位4.0%，监控是否企稳",
+      "detail": "距止损位-4.0%，监控是否企稳",
       "urgency": "medium"
     },
     {
       "code": "300792",
       "name": "壹网壹创",
       "action": "关注",
-      "detail": "距止损位5.3%，监控是否企稳",
+      "detail": "距止损位0.5%，监控是否企稳",
       "urgency": "medium"
     },
     {
       "code": "601789",
       "name": "宁波建工",
       "action": "关注",
-      "detail": "距止损位5.0%，监控是否企稳",
+      "detail": "距止损位2.9%，监控是否企稳",
       "urgency": "medium"
     },
     {
       "code": "600236",
       "name": "桂冠电力",
       "action": "关注",
-      "detail": "距止损位2.3%，监控是否企稳",
+      "detail": "距止损位-5.0%，监控是否企稳",
       "urgency": "medium"
     }
   ],
