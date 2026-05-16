@@ -14,8 +14,31 @@ from typing import Optional
 from .config import (
     HEADERS, TENCENT_HEADERS, SINA_HEADERS, REQUEST_TIMEOUT,
 )
+from .fetcher_tdx import fetch_kline_tdx, stats as tdx_stats
 
 logger = logging.getLogger("market_pool.fetcher")
+
+# ── TDX 实时行情服务器 ──
+TDX_SERVERS = [
+    ("180.153.18.170", 7709),
+]
+
+# ── 股票简称缓存 (从本地 JSON 加载) ──
+_STOCK_NAMES = None
+
+def _load_stock_names():
+    global _STOCK_NAMES
+    if _STOCK_NAMES is not None:
+        return _STOCK_NAMES
+    _STOCK_NAMES = {}
+    try:
+        from .stock_list import load_stock_list
+        lst = load_stock_list()
+        if lst:
+            _STOCK_NAMES = {s["code"]: s["name"] for s in lst if s.get("code") and s.get("name")}
+    except Exception:
+        pass
+    return _STOCK_NAMES
 
 # ── 市场前缀 ──
 
@@ -115,12 +138,31 @@ def fetch_kline_sohu(code: str, days: int = 365) -> Optional[list]:
         return None
 
 
-def fetch_kline(code: str, days: int = 365) -> Optional[list]:
-    """获取日K线: 腾讯 → 搜狐 自动回退。"""
+def fetch_kline(code: str, days: int = 365, prefer_online=False) -> Optional[list]:
+    """获取日K线: TDX本地(最快) → 腾讯 → 搜狐 三级回退。
+
+    Args:
+        code: 6位股票代码
+        days: 取最近N天历史 (仅对在线API生效, TDX返回全部)
+        prefer_online: True=跳过TDX本地, 强制走在线 (用于校验场景)
+
+    Returns:
+        [{date, open, close, high, low, volume, amount}, ...] 按日期升序
+    """
+    # 第一级: TDX本地数据 (零延迟, 数据最全)
+    if not prefer_online:
+        bars = fetch_kline_tdx(code)
+        if bars:
+            return bars
+        logger.debug("TDX本地无数据(%s), 切腾讯在线", code)
+
+    # 第二级: 腾讯在线
     bars = fetch_kline_tencent(code, days)
     if bars:
         return bars
     logger.debug("腾讯K线失败(%s), 切搜狐", code)
+
+    # 第三级: 搜狐备选
     bars = fetch_kline_sohu(code, days)
     if bars:
         return bars
@@ -129,8 +171,82 @@ def fetch_kline(code: str, days: int = 365) -> Optional[list]:
 
 
 # ═══════════════════════════════════════════════════════
-# 2. 实时行情 (腾讯 → 新浪 双通道)
+# 2. 实时行情 (TDX → 腾讯 → 新浪 三级回退)
 # ═══════════════════════════════════════════════════════
+
+def fetch_quotes_tdx(codes: list[str]) -> dict:
+    """通达信实时行情 — 主通道。
+    通过 pytdx 直连通达信行情服务器，不限流，响应 ~60ms。
+    每批最多查 100 只。
+    返回格式与 fetch_quotes_tencent() 兼容。
+    """
+    if not codes:
+        return {}
+
+    from pytdx.hq import TdxHq_API
+
+    result = {}
+    # 分批，每批最多 100 只
+    batch_size = 100
+    for start in range(0, len(codes), batch_size):
+        batch = codes[start:start + batch_size]
+
+        # 尝试连接可用服务器
+        api = None
+        for ip, port in TDX_SERVERS:
+            try:
+                a = TdxHq_API()
+                if a.connect(ip, port, time_out=8):
+                    api = a
+                    break
+            except Exception:
+                continue
+
+        if api is None:
+            logger.warning("TDX实时行情: 所有服务器连接失败")
+            break
+
+        try:
+            pairs = [(1, c) if c.startswith(("60", "68", "90", "9")) else (0, c) for c in batch]
+            quotes = api.get_security_quotes(pairs)
+            if not quotes:
+                continue
+
+            names = _load_stock_names()
+            for q in quotes:
+                try:
+                    code = str(q.get("code", "")).strip()
+                    if not code:
+                        continue
+                    price = float(q.get("price", 0) or 0)
+                    prev_close = float(q.get("last_close", 0) or 0)
+                    result[code] = {
+                        "name": names.get(code, ""),
+                        "code": code,
+                        "current": price,
+                        "prev_close": prev_close,
+                        "open": float(q.get("open", 0) or 0),
+                        "high": float(q.get("high", 0) or 0),
+                        "low": float(q.get("low", 0) or 0),
+                        "volume": int(q.get("vol", 0) or 0),
+                        "amount": float(q.get("amount", 0) or 0),
+                        "bid": float(q.get("bid1", 0) or 0),
+                        "ask": float(q.get("ask1", 0) or 0),
+                        "change_pct": round((price - prev_close) / prev_close * 100, 2) if prev_close else 0,
+                        "time": str(q.get("servertime", "")),
+                        "source": "tdx",
+                    }
+                except (ValueError, TypeError):
+                    continue
+        except Exception as e:
+            logger.debug("TDX实时行情: 查询失败 %s", e)
+        finally:
+            try:
+                api.disconnect()
+            except Exception:
+                pass
+
+    return result
 
 def fetch_quotes_tencent(codes: list[str]) -> dict:
     """腾讯实时行情 — 主通道。
@@ -222,14 +338,18 @@ def fetch_quotes_sina(codes: list[str]) -> dict:
 
 
 def fetch_quotes(codes: list[str]) -> dict:
-    """获取实时行情: 腾讯 → 新浪 自动回退。
+    """获取实时行情: TDX(主) → 腾讯 → 新浪 三级回退。
     一次可传多只股票代码。返回 {code: {fields...}, ...}
     """
-    result = fetch_quotes_tencent(codes)
+    result = fetch_quotes_tdx(codes)
     missing = [c for c in codes if c not in result]
     if missing:
-        logger.debug("腾讯缺失 %d 只, 新浪补", len(missing))
-        result.update(fetch_quotes_sina(missing))
+        logger.debug("TDX缺失 %d 只, 切腾讯", len(missing))
+        result.update(fetch_quotes_tencent(missing))
+    still_missing = [c for c in codes if c not in result]
+    if still_missing:
+        logger.debug("腾讯缺失 %d 只, 切新浪", len(still_missing))
+        result.update(fetch_quotes_sina(still_missing))
     return result
 
 

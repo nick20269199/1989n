@@ -1,10 +1,11 @@
 """
-data_source_router.py — 多源行情路由 v1.0
+data_source_router.py — 多源行情路由 v1.1
 ========================================
 自动检测可用数据通道，提供统一行情接口。所有任务通过此模块获取数据。
 设计原则: 无单点故障，每个接口至少有两个独立通道。
 
-通道实测状态 (2026-05-12):
+通道实测状态 (2026-05-16):
+  ✅ TDX (实时A股个股) — pytdx 直连通达信行情服务器 (主通道)
   ✅ 新浪 (实时A股个股+指数) — hq.sinajs.cn
   ✅ 腾讯 (实时A股个股+指数) — web.sqt.gtimg.cn
   ✅ 搜狐 (K线) — q.stock.sohu.com
@@ -24,6 +25,14 @@ from datetime import datetime, timedelta
 from typing import Optional
 
 logger = logging.getLogger("data_source_router")
+
+# ── TDX 实时行情 (直连通达信服务器, 主通道) ──
+try:
+    from market_pool.fetcher import fetch_quotes_tdx
+    _HAS_TDX = True
+except ImportError:
+    _HAS_TDX = False
+    logger.warning("TDX实时行情不可用 (market_pool.fetcher 未找到)")
 
 # ── Headers ──
 SINA_HEADERS = {"Referer": "https://finance.sina.com.cn"}
@@ -231,19 +240,21 @@ EASTMONEY_BLOCKED = True  # 2026-05 WAF封锁, 恢复后设为False
 
 
 def get_quotes(codes: list[str]) -> dict:
-    """获取个股实时行情。新浪(主) → 腾讯(备), 逐级回退。
+    """获取个股实时行情。TDX(主) → 新浪 → 腾讯, 逐级回退。
     返回 {code: {name, current, change_pct, ...}}"""
     if not codes:
         return {}
-    result = sina_quotes(codes)
+    result = {}
+    if _HAS_TDX:
+        result = fetch_quotes_tdx(codes)
     missing = [c for c in codes if c not in result]
     if missing:
-        logger.info("Sina missing %d codes, Tencent fallback", len(missing))
-        q2 = tencent_quotes(missing)
+        q2 = sina_quotes(missing)
         result.update(q2)
     still_missing = [c for c in codes if c not in result]
     if still_missing:
-        logger.warning("所有行情源均无法获取: %s", still_missing)
+        logger.info("Sina missing %d codes, Tencent fallback", len(still_missing))
+        result.update(tencent_quotes(still_missing))
     return result
 
 
@@ -349,6 +360,16 @@ def check_channels() -> dict:
     except Exception:
         status['sina_index'] = False
 
+    # TDX
+    if _HAS_TDX:
+        try:
+            q = fetch_quotes_tdx([test_code])
+            status['tdx'] = test_code in q and q[test_code].get('current', 0) > 0
+        except Exception:
+            status['tdx'] = False
+    else:
+        status['tdx'] = False
+
     # Tencent
     try:
         q = tencent_quotes([test_code])
@@ -391,8 +412,9 @@ if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == 'check':
         status = check_channels()
         print(json.dumps(status, indent=2))
-        all_ok = all(v for k, v in status.items() if k != 'eastmoney')
+        all_ok = all(v for k, v in status.items() if k not in ('eastmoney',))
         print(f"\n核心通道: {'✅ 全部正常' if all_ok else '❌ 有异常'}")
+        print("优先级: TDX → Sina → Tencent → Sohu")
     else:
         q = get_quotes(['002156'])
         print(json.dumps(q, ensure_ascii=False, indent=2))
