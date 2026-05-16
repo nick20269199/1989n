@@ -68,3 +68,16 @@ H 文学, N 艺术, S 少数民族
 | 子域 | 文件 | 状态 | 日期 |
 |------|------|------|------|
 | E 宋明理学 | branch_E_song_ming_confucianism/ | ✅ 完成 | 2026-05-12 |
+| I 兵家法家 | branch_I_military_legalism/ | ✅ 完成 | 2026-05-15 |
+| C 道家与黄老 | branch_C_daoist_huanglao/ | ✅ 完成 | 2026-05-15 |
+| D 佛教中国化 | branch_D_buddhism_sinicization/ | ✅ 完成 | 2026-05-15 |
+| L 政治制度 | branch_L_political_institutions/ | ✅ 完成 | 2026-05-15 |
+| A 先秦诸子概论 | branch_A_pre_qin_philosophers/ | ✅ 完成 | 2026-05-15 |
+| B 儒家经典与注疏 | branch_B_confucian_classics/ | ✅ 完成 | 2026-05-16 |
+| G 史学传统 | branch_G_historiography/ | ✅ 完成 | 2026-05-16 |
+| J 天算农医 | branch_J_astronomy_math_medicine/ | ✅ 完成 | 2026-05-16 |
+| K 工程与技艺 | branch_K_craft_engineering/ | ✅ 完成 | 2026-05-16 |
+| M 经济与民生 | branch_M_economy_livelihood/ | ✅ 完成 | 2026-05-16 |
+| O 西学东渐与近代转型 | branch_O_modern_transition/ | ✅ 完成 | 2026-05-16 |
+| P 现代新儒家 | branch_P_new_confucian/ | ✅ 完成 | 2026-05-16 |
+| F 考据学与经学 | branch_F_textual_criticism/ | ✅ 完成 | 2026-05-16 |

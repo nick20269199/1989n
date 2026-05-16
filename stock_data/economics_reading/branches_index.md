@@ -77,3 +77,15 @@ N 国际, O 公共, P 劳动
 |------|------|------|------|
 | D 行为经济学 | branch_D_behavioral_economics/ | ✅ 完成 | 2026-05-12 |
 | G 博弈论与信息经济学 | branch_G_game_theory/ | ✅ 完成 | 2026-05-12 |
+| E 行为金融与投资 | branch_E_behavioral_finance/ | ✅ 完成 | 2026-05-12 |
+| F 制度经济学 | branch_F_institutional_economics/ | ✅ 完成 | 2026-05-12 |
+| J 复杂经济学 | branch_J_complexity_economics/ | ✅ 完成 | 2026-05-12 |
+| M 金融经济学与资产定价 | branch_M_financial_economics/ | ✅ 完成 | 2026-05-12 |
+| Q 政治经济学 | branch_Q_political_economy/ | ✅ 完成 | 2026-05-15 |
+| S 网络经济学与平台 | branch_S_network_economics/ | ✅ 完成 | 2026-05-16 |
+| T 实验经济学 | branch_T_experimental_economics/ | ✅ 完成 | 2026-05-16 |
+| X 神经经济学与决策科学 | branch_X_neuroeconomics/ | ✅ 完成 | 2026-05-15 |
+| U 奥地利学派与异端 | branch_U_austrian_economics/ | ✅ 完成 | 2026-05-16 |
+| V 中国经济改革 | branch_V_chinese_economic_reform/ | ✅ 完成 | 2026-05-16 |
+| W 非线性经济动力学 | branch_W_nonlinear_dynamics/ | ✅ 完成 | 2026-05-16 |
+| A 古典与新古典 | branch_A_classical_neoclassical/ | ✅ 完成 | 2026-05-16 |

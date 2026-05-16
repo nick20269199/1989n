@@ -65,3 +65,11 @@ L 萨满, M 琐罗亚斯德, N 耆那锡克, O 新兴宗教
 | 子域 | 文件 | 状态 | 日期 |
 |------|------|------|------|
 | Q 宗教心理学 | branch_Q_religious_psychology/ | ✅ 完成 | 2026-05-12 |
+| P 宗教人类学 | branch_P_religious_anthropology/ | ✅ 完成 | 2026-05-15 |
+| A 道家经典与注疏 | branch_A_daoist_texts/ | ✅ 完成 | 2026-05-15 |
+| B 儒家哲学与伦理 | branch_B_confucian_ethics/ | ✅ 完成 | 2026-05-16 |
+| C 中国佛教诸宗 | branch_C_chinese_buddhism/ | ✅ 完成 | 2026-05-16 |
+| H 藏传佛教 | branch_H_tibetan_buddhism/ | ✅ 完成 | 2026-05-16 |
+| R 宗教与科学 | branch_R_religion_and_science/ | ✅ 完成 | 2026-05-16 |
+| S 比较宗教学方法论 | branch_S_comparative_methodology/ | ✅ 完成 | 2026-05-16 |
+| F 犹太教与塔木德 | branch_F_judaism_talmud/ | ✅ 完成 | 2026-05-16 |

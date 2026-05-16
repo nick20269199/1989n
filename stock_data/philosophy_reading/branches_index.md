@@ -75,3 +75,12 @@
 | 13 政治哲学 | branch_13_political_philosophy/ | ✅ 完成 | 2026-05-12 |
 | 16 认知科学与心灵哲学 | branch_16_cognitive_science/ | ✅ 完成 | 2026-05-12 |
 | 17 伦理学 | branch_17_ethics/ | ✅ 完成 | 2026-05-12 |
+| 6 现象学 | branch_6_phenomenology/ | ✅ 完成 | 2026-05-15 |
+| 8 语言与逻辑 | branch_8_language_logic/ | ✅ 完成 | 2026-05-16 |
+| 10 形而上学与知识论 | branch_10_metaphysics_epistemology/ | ✅ 完成 | 2026-05-16 |
+| 14 法哲学 | branch_14_philosophy_of_law/ | ✅ 完成 | 2026-05-16 |
+| 15 科学哲学 | branch_15_philosophy_of_science/ | ✅ 完成 | 2026-05-16 |
+| 18 应用伦理学 | branch_18_applied_ethics/ | ✅ 完成 | 2026-05-16 |
+| 20 中国哲学(哲学视角) | branch_20_chinese_philosophy/ | ✅ 完成 | 2026-05-16 |
+| 25 元哲学与方法论 | branch_25_metaphilosophy/ | ✅ 完成 | 2026-05-16 |
+| 4 德国观念论 | branch_4_german_idealism/ | ✅ 完成 | 2026-05-16 |

@@ -79,3 +79,9 @@ P 核物理, Q 材料科学, S 地球物理, V 高能弦论
 | A 热力学与统计物理 | branch_A_thermo_statistical/ | ✅ 完成 | 2026-05-12 |
 | B 量子力学基础 | branch_B_quantum_mechanics/ | ✅ 完成 | 2026-05-12 |
 | C 复杂系统与涌现 | branch_C_complex_systems/ | ✅ 完成 | 2026-05-12 |
+| D 信息论与计算 | branch_D_information_theory/ | ✅ 完成 | 2026-05-15 |
+| E 非线性动力学与混沌 | branch_E_nonlinear_dynamics/ | ✅ 完成 | 2026-05-16 |
+| R 数学物理 | branch_R_mathematical_physics/ | ✅ 完成 | 2026-05-16 |
+| U 统计力学进阶 | branch_U_statistical_mechanics_advanced/ | ✅ 完成 | 2026-05-12 |
+| X 物理哲学与基础问题 | branch_X_physics_philosophy/ | ✅ 完成 | 2026-05-15 |
+| H 控制论与系统论 | branch_H_cybernetics/ | ✅ 完成 | 2026-05-16 |
