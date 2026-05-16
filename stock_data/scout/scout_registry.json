@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "created": "2026-05-10",
-  "last_updated": "2026-05-14",
+  "last_updated": "2026-05-15",
   "total_discoveries": 25,
   "by_category": {
     "trading_strategy": 8,
@@ -248,8 +248,16 @@
       "source_url": "",
       "one_liner": "LLM驱动交易策略自动研究与进化，替代随机变异算子加速收敛",
       "use_for": "daily_task.py信号聚合的进化优化，LLM作为定向变异引擎",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-15",
+      "evaluation": {
+        "match": 3,
+        "maturity": 2,
+        "cost": 4,
+        "risk": 2,
+        "decision": "deferred",
+        "note": "方法论有价值——LLM作为定向变异引擎补充进化策略。纯论文级无代码。从零实现成本高，StratEvo遗传算法已覆盖因子搜索。月检关注代码发布。"
+      }
     },
     {
       "id": "20260514-002",
@@ -259,8 +267,16 @@
       "source_url": "",
       "one_liner": "GMM高斯混合模型对市场状态分类，每个状态分配独立Agent策略",
       "use_for": "daily_compress.py周期阶段判定升级，从规则引擎→概率模型",
-      "status": "new",
-      "evaluated_at": null
+      "status": "approved",
+      "evaluated_at": "2026-05-15",
+      "evaluation": {
+        "match": 5,
+        "maturity": 2,
+        "cost": 3,
+        "risk": 2,
+        "decision": "approved",
+        "note": "直接命中daily_compress.py周期阶段判定痛点(连续2天手动修正)。GMM是sklearn成熟算法，实现风险低。需将当前规则引擎的6阶段映射到GMM的K个隐状态。集成: sklearn GMM → daily_compress周期判定分支。成本中等但回报确定性高。"
+      }
     },
     {
       "id": "20260514-003",
@@ -270,8 +286,16 @@
       "source_url": "https://arxiv.org/abs/2605.09252",
       "one_liner": "LLM隐藏状态线性可解码工具调用必要性(AUROC 0.89-0.96)，减少48%不必要工具调用",
       "use_for": "daily_task.py/cron任务链工具调用优化，减少token浪费",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-15",
+      "evaluation": {
+        "match": 4,
+        "maturity": 2,
+        "cost": 4,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "UCSD+Amazon论文，有开源代码。线性探针检测LLM工具调用意图(隐藏状态)，减少48%不必要调用。但需访问模型隐藏状态，在当前Claude Code API下不可行。方法论参考——不等同于可集成。月检。"
+      }
     },
     {
       "id": "20260514-004",
@@ -281,8 +305,16 @@
       "source_url": "https://arxiv.org/abs/2605.08693",
       "one_liner": "Agent在任务解决中自主创建/优化/选择技能，ALFWorld+8.8%, WebShop+9.3%",
       "use_for": "SEL Growth Loop的技能进化自动化参考",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-15",
+      "evaluation": {
+        "match": 4,
+        "maturity": 2,
+        "cost": 4,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "DualAdv-GRPO让Agent自主创建/优化/选择技能，直接对应SEL Growth Loop自动化。纯论文级，无生产实现。RL管道从零搭建成本极高，RL训练稳定性不确定。月检关注代码发布。"
+      }
     },
     {
       "id": "20260514-005",
@@ -292,8 +324,16 @@
       "source_url": "https://github.com/coding-kitties/investing-algorithm-framework",
       "one_liner": "Polars向量化+事件驱动双模式回测，内置MCP服务器供AI Agent查询",
       "use_for": "回测报告MCP接口参考，Polars向量化回测替代pandas",
-      "status": "new",
-      "evaluated_at": null
+      "status": "approved",
+      "evaluated_at": "2026-05-15",
+      "evaluation": {
+        "match": 3,
+        "maturity": 5,
+        "cost": 2,
+        "risk": 1,
+        "decision": "approved",
+        "note": "v8.6.0成熟框架，内置MCP Server(直接对应当前Claude Code生态)。Polars向量化回测参考架构。pip install安装，集成成本低。MCP回测查询接口可作为future work跟踪。"
+      }
     },
     {
       "id": "20260514-006",
@@ -303,8 +343,16 @@
       "source_url": "https://www.npmjs.com/package/open-market-data",
       "one_liner": "Node.js CLI/AI Agent技能，免费公开API获取金融数据，无需API Key",
       "use_for": "market_pool数据源补充，美股/全球数据CLI获取通道",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-15",
+      "evaluation": {
+        "match": 2,
+        "maturity": 2,
+        "cost": 1,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "v0.1.0极早期，Node.js生态与当前Python栈不一致。聚焦A股，omd侧重美股/全球。数据源覆盖与现有(Sina/Tencent/AKShare)重叠。月检跟踪成熟度。"
+      }
     },
     {
       "id": "20260514-007",
@@ -314,8 +362,16 @@
       "source_url": "",
       "one_liner": "高风险场景(医疗/法律/金融)幻觉降低52.5%，历史标记对话不准确声明减少37.3%",
       "use_for": "LLM信号可信度重新评估，幻觉率减半则信号聚合权重可上调",
-      "status": "new",
-      "evaluated_at": null
+      "status": "approved",
+      "evaluated_at": "2026-05-15",
+      "evaluation": {
+        "match": 3,
+        "maturity": 5,
+        "cost": 1,
+        "risk": 1,
+        "decision": "approved",
+        "note": "OpenAI产品级数据——非集成项，但直接支撑信号聚合权重调整。幻觉率减半意味着LLM信号在信号聚合中的权重可上调。记录到knowledge/tools/llm-confidence.md供权重校准参考。"
+      }
     },
     {
       "id": "20260514-008",
@@ -325,8 +381,16 @@
       "source_url": "",
       "one_liner": "受人类大脑不确定性信号启发，训练AI在不确定时主动承认而非幻觉(Nature Machine Intelligence)",
       "use_for": "llm_competence_check()置信度校准参考，不确定性-aware信号聚合",
-      "status": "new",
-      "evaluated_at": null
+      "status": "approved",
+      "evaluated_at": "2026-05-15",
+      "evaluation": {
+        "match": 3,
+        "maturity": 5,
+        "cost": 2,
+        "risk": 1,
+        "decision": "approved",
+        "note": "Nature Machine Intelligence方法，非代码集成但方法论参考价值高。不确定性-aware信号聚合直接对应llm_competence_check()置信度校准。提取核心思路记录到knowledge/tools/llm-confidence.md。"
+      }
     }
   ]
 }

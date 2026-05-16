@@ -35,6 +35,8 @@
 
 ## 其他来源
 
+- [x] 2026-05-15 | EACL 2026 — 推理深度×过度自信 (Reasoning about Uncertainty)
+
 - [ ] DeepSeek 技术报告
 - [ ] Anthropic 研究博客 (Transformer Circuits, 可解释性)
 - [ ] OpenAI 研究博客
