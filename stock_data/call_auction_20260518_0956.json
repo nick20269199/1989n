@@ -1,0 +1,540 @@
+{
+  "type": "call_auction",
+  "time": "2026-05-18 09:56:39",
+  "date": "2026-05-18",
+  "market_breadth": {
+    "up": 2718,
+    "down": 2718,
+    "flat": 1,
+    "limit_up": 74,
+    "limit_down": 18,
+    "total": 5529,
+    "avg_change": 1.14,
+    "details": [
+      {
+        "code": "001365",
+        "name": "N天海",
+        "change_pct": 148.99
+      },
+      {
+        "code": "688807",
+        "name": "优迅股份",
+        "change_pct": 20.0
+      },
+      {
+        "code": "688507",
+        "name": "索辰科技",
+        "change_pct": 20.0
+      },
+      {
+        "code": "300657",
+        "name": "弘信电子",
+        "change_pct": 19.99
+      },
+      {
+        "code": "300302",
+        "name": "同有科技",
+        "change_pct": 19.95
+      },
+      {
+        "code": "300212",
+        "name": "*ST易录",
+        "change_pct": 19.93
+      },
+      {
+        "code": "300259",
+        "name": "新天科技",
+        "change_pct": 18.75
+      },
+      {
+        "code": "301188",
+        "name": "力诺药包",
+        "change_pct": 15.98
+      },
+      {
+        "code": "300889",
+        "name": "爱克股份",
+        "change_pct": 15.45
+      },
+      {
+        "code": "301599",
+        "name": "理奇智能",
+        "change_pct": 15.36
+      },
+      {
+        "code": "688727",
+        "name": "恒坤新材",
+        "change_pct": 14.94
+      },
+      {
+        "code": "688403",
+        "name": "汇成股份",
+        "change_pct": 14.91
+      },
+      {
+        "code": "300571",
+        "name": "平治信息",
+        "change_pct": 14.91
+      },
+      {
+        "code": "300721",
+        "name": "怡达股份",
+        "change_pct": 14.24
+      },
+      {
+        "code": "301235",
+        "name": "华康洁净",
+        "change_pct": 13.88
+      },
+      {
+        "code": "688583",
+        "name": "思看科技",
+        "change_pct": 13.06
+      },
+      {
+        "code": "688035",
+        "name": "德邦科技",
+        "change_pct": 12.81
+      },
+      {
+        "code": "688627",
+        "name": "精智达",
+        "change_pct": 12.61
+      },
+      {
+        "code": "300163",
+        "name": "先锋新材",
+        "change_pct": 12.39
+      },
+      {
+        "code": "300959",
+        "name": "线上线下",
+        "change_pct": 12.28
+      }
+    ]
+  },
+  "concept_auction": [
+    {
+      "name": "昨日打二板以上表现",
+      "change_pct": 3.89,
+      "turnover": 0.0,
+      "leading_stock": "威龙股份",
+      "leading_pct": 3
+    },
+    {
+      "name": "高带宽内存",
+      "change_pct": 3.78,
+      "turnover": 0.0,
+      "leading_stock": "雅克科技",
+      "leading_pct": 23
+    },
+    {
+      "name": "存储芯片",
+      "change_pct": 3.49,
+      "turnover": 0.0,
+      "leading_stock": "柏诚股份",
+      "leading_pct": 101
+    },
+    {
+      "name": "昨日连板",
+      "change_pct": 3.31,
+      "turnover": 0.0,
+      "leading_stock": "京能电力",
+      "leading_pct": 6
+    },
+    {
+      "name": "昨日连板_含一字",
+      "change_pct": 3.31,
+      "turnover": 0.0,
+      "leading_stock": "威龙股份",
+      "leading_pct": 10
+    },
+    {
+      "name": "历史新高",
+      "change_pct": 2.94,
+      "turnover": 0.0,
+      "leading_stock": "合肥城建",
+      "leading_pct": 29
+    },
+    {
+      "name": "AI芯片",
+      "change_pct": 2.53,
+      "turnover": 0.0,
+      "leading_stock": "思特威-W",
+      "leading_pct": 35
+    },
+    {
+      "name": "国资云概念",
+      "change_pct": 2.48,
+      "turnover": 0.0,
+      "leading_stock": "广电网络",
+      "leading_pct": 18
+    },
+    {
+      "name": "PLC概念",
+      "change_pct": 2.45,
+      "turnover": 0.0,
+      "leading_stock": "英杰电气",
+      "leading_pct": 8
+    },
+    {
+      "name": "东方财富热股",
+      "change_pct": 2.44,
+      "turnover": 0.0,
+      "leading_stock": "合肥城建",
+      "leading_pct": 66
+    }
+  ],
+  "industry_auction": [
+    {
+      "name": "其他数字媒体",
+      "change_pct": 6.56,
+      "turnover": 0.0,
+      "main_net_inflow": 0.19,
+      "leading_stock": "凡拓数创"
+    },
+    {
+      "name": "集成电路封测",
+      "change_pct": 3.77,
+      "turnover": 0.0,
+      "main_net_inflow": 8.35,
+      "leading_stock": "汇成股份"
+    },
+    {
+      "name": "风电整机",
+      "change_pct": 3.74,
+      "turnover": 0.0,
+      "main_net_inflow": 2.03,
+      "leading_stock": "明阳智能"
+    },
+    {
+      "name": "综合电力设备商",
+      "change_pct": 3.39,
+      "turnover": 0.0,
+      "main_net_inflow": 3.82,
+      "leading_stock": "上海电气"
+    },
+    {
+      "name": "数字芯片设计",
+      "change_pct": 3.24,
+      "turnover": 0.0,
+      "main_net_inflow": 28.04,
+      "leading_stock": "优迅股份"
+    },
+    {
+      "name": "逆变器",
+      "change_pct": 3.11,
+      "turnover": 0.0,
+      "main_net_inflow": 1.24,
+      "leading_stock": "固德威"
+    },
+    {
+      "name": "通信线缆及配套",
+      "change_pct": 3.01,
+      "turnover": 0.0,
+      "main_net_inflow": 2.16,
+      "leading_stock": "长盈通"
+    },
+    {
+      "name": "半导体材料",
+      "change_pct": 2.73,
+      "turnover": 0.0,
+      "main_net_inflow": 3.05,
+      "leading_stock": "雅克科技"
+    },
+    {
+      "name": "电视广播Ⅲ",
+      "change_pct": 2.53,
+      "turnover": 0.0,
+      "main_net_inflow": 1.71,
+      "leading_stock": "贵广网络"
+    },
+    {
+      "name": "电视广播Ⅱ",
+      "change_pct": 2.53,
+      "turnover": 0.0,
+      "main_net_inflow": 1.71,
+      "leading_stock": "贵广网络"
+    },
+    {
+      "name": "半导体设备",
+      "change_pct": 2.4,
+      "turnover": 0.0,
+      "main_net_inflow": 7.12,
+      "leading_stock": "京仪装备"
+    },
+    {
+      "name": "半导体",
+      "change_pct": 2.33,
+      "turnover": 0.0,
+      "main_net_inflow": 36.33,
+      "leading_stock": "雅克科技"
+    },
+    {
+      "name": "激光设备",
+      "change_pct": 2.29,
+      "turnover": 0.0,
+      "main_net_inflow": 15.31,
+      "leading_stock": "华工科技"
+    },
+    {
+      "name": "航天装备Ⅲ",
+      "change_pct": 2.22,
+      "turnover": 0.0,
+      "main_net_inflow": -0.05,
+      "leading_stock": "电科蓝天"
+    },
+    {
+      "name": "航天装备Ⅱ",
+      "change_pct": 2.22,
+      "turnover": 0.0,
+      "main_net_inflow": -0.05,
+      "leading_stock": "电科蓝天"
+    }
+  ],
+  "limit_orders": {
+    "limit_up_strength": [
+      {
+        "code": "001365",
+        "name": "N天海",
+        "price": 67.69,
+        "change_pct": 148.95,
+        "volume": 171981,
+        "amount": 12.52,
+        "volume_ratio": "-",
+        "turnover_rate": 29.91,
+        "market_cap": 355.37
+      },
+      {
+        "code": "688807",
+        "name": "优迅股份",
+        "price": 458.45,
+        "change_pct": 20.0,
+        "volume": 21382,
+        "amount": 9.63,
+        "volume_ratio": 10.58,
+        "turnover_rate": 14.22,
+        "market_cap": 366.76
+      },
+      {
+        "code": "688507",
+        "name": "索辰科技",
+        "price": 129.02,
+        "change_pct": 20.0,
+        "volume": 56749,
+        "amount": 7.24,
+        "volume_ratio": 14.31,
+        "turnover_rate": 11.53,
+        "market_cap": 114.97
+      },
+      {
+        "code": "300657",
+        "name": "弘信电子",
+        "price": 43.4,
+        "change_pct": 19.99,
+        "volume": 187419,
+        "amount": 8.13,
+        "volume_ratio": 3.46,
+        "turnover_rate": 4.0,
+        "market_cap": 209.24
+      },
+      {
+        "code": "300302",
+        "name": "同有科技",
+        "price": 53.45,
+        "change_pct": 19.95,
+        "volume": 521574,
+        "amount": 26.13,
+        "volume_ratio": 5.03,
+        "turnover_rate": 14.14,
+        "market_cap": 256.17
+      },
+      {
+        "code": "300212",
+        "name": "*ST易录",
+        "price": 7.22,
+        "change_pct": 19.93,
+        "volume": 351288,
+        "amount": 2.52,
+        "volume_ratio": 10.0,
+        "turnover_rate": 5.03,
+        "market_cap": 51.98
+      },
+      {
+        "code": "300259",
+        "name": "新天科技",
+        "price": 6.28,
+        "change_pct": 18.94,
+        "volume": 791809,
+        "amount": 4.7,
+        "volume_ratio": 12.79,
+        "turnover_rate": 6.77,
+        "market_cap": 73.46
+      },
+      {
+        "code": "301188",
+        "name": "力诺药包",
+        "price": 41.1,
+        "change_pct": 15.81,
+        "volume": 144900,
+        "amount": 5.64,
+        "volume_ratio": 3.96,
+        "turnover_rate": 5.42,
+        "market_cap": 109.96
+      },
+      {
+        "code": "301599",
+        "name": "理奇智能",
+        "price": 67.82,
+        "change_pct": 15.34,
+        "volume": 145942,
+        "amount": 9.46,
+        "volume_ratio": 6.03,
+        "turnover_rate": 26.68,
+        "market_cap": 292.71
+      },
+      {
+        "code": "300889",
+        "name": "爱克股份",
+        "price": 25.37,
+        "change_pct": 15.32,
+        "volume": 79919,
+        "amount": 1.93,
+        "volume_ratio": 11.25,
+        "turnover_rate": 5.46,
+        "market_cap": 55.87
+      },
+      {
+        "code": "688403",
+        "name": "汇成股份",
+        "price": 22.2,
+        "change_pct": 14.97,
+        "volume": 559878,
+        "amount": 11.81,
+        "volume_ratio": 6.49,
+        "turnover_rate": 5.65,
+        "market_cap": 219.99
+      },
+      {
+        "code": "300571",
+        "name": "平治信息",
+        "price": 70.56,
+        "change_pct": 14.86,
+        "volume": 179350,
+        "amount": 12.29,
+        "volume_ratio": 5.31,
+        "turnover_rate": 15.51,
+        "market_cap": 98.45
+      },
+      {
+        "code": "688727",
+        "name": "恒坤新材",
+        "price": 68.89,
+        "change_pct": 14.76,
+        "volume": 91691,
+        "amount": 5.86,
+        "volume_ratio": 8.37,
+        "turnover_rate": 16.97,
+        "market_cap": 309.54
+      },
+      {
+        "code": "300721",
+        "name": "怡达股份",
+        "price": 33.48,
+        "change_pct": 14.03,
+        "volume": 259975,
+        "amount": 8.5,
+        "volume_ratio": 8.29,
+        "turnover_rate": 18.79,
+        "market_cap": 55.19
+      },
+      {
+        "code": "301235",
+        "name": "华康洁净",
+        "price": 74.57,
+        "change_pct": 13.83,
+        "volume": 49671,
+        "amount": 3.53,
+        "volume_ratio": 5.89,
+        "turnover_rate": 6.83,
+        "market_cap": 80.37
+      },
+      {
+        "code": "688583",
+        "name": "思看科技",
+        "price": 134.63,
+        "change_pct": 13.03,
+        "volume": 16842,
+        "amount": 2.23,
+        "volume_ratio": 9.72,
+        "turnover_rate": 5.47,
+        "market_cap": 119.01
+      },
+      {
+        "code": "300959",
+        "name": "线上线下",
+        "price": 187.61,
+        "change_pct": 13.02,
+        "volume": 45818,
+        "amount": 8.29,
+        "volume_ratio": 4.82,
+        "turnover_rate": 8.76,
+        "market_cap": 150.78
+      },
+      {
+        "code": "688035",
+        "name": "德邦科技",
+        "price": 91.66,
+        "change_pct": 12.83,
+        "volume": 74115,
+        "amount": 6.59,
+        "volume_ratio": 7.27,
+        "turnover_rate": 5.21,
+        "market_cap": 130.38
+      },
+      {
+        "code": "688627",
+        "name": "精智达",
+        "price": 397.74,
+        "change_pct": 12.53,
+        "volume": 47171,
+        "amount": 17.84,
+        "volume_ratio": 7.05,
+        "turnover_rate": 6.51,
+        "market_cap": 374.39
+      },
+      {
+        "code": "300163",
+        "name": "先锋新材",
+        "price": 5.08,
+        "change_pct": 12.39,
+        "volume": 345961,
+        "amount": 1.69,
+        "volume_ratio": 12.69,
+        "turnover_rate": 7.58,
+        "market_cap": 24.08
+      }
+    ],
+    "limit_down_pressure": []
+  },
+  "portfolio_auction": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "auction_price": 60.09,
+      "prev_close": 57.02,
+      "auction_chg_pct": 5.38,
+      "open_volume": 545094,
+      "sector": "半导体封测"
+    },
+    {
+      "code": "000981",
+      "name": "山子高科",
+      "auction_price": 4.28,
+      "prev_close": 4.41,
+      "auction_chg_pct": -2.95,
+      "open_volume": 2435920,
+      "sector": "汽车零部件/房地产"
+    }
+  ]
+}

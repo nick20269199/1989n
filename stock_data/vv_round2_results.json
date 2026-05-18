@@ -1,16 +1,16 @@
 {
   "85164940078": {
     "name": "好运佛系",
-    "total_videos": 63,
-    "topic_concentration": 0.441,
+    "total_videos": 84,
+    "topic_concentration": 0.45,
     "top_topics": [
       [
         "CPO/光模块",
-        54
+        75
       ],
       [
         "商业航天",
-        44
+        65
       ],
       [
         "AI",
@@ -27,39 +27,39 @@
     ],
     "top_tickers": [],
     "intent_distribution": {
-      "GENERAL": 45,
-      "NEWS_READ": 17,
+      "GENERAL": 61,
+      "NEWS_READ": 22,
       "BUY_SIGNAL": 1
     },
     "timing_distribution": {
       "pre_market": 5,
-      "during_market": 19,
-      "after_market": 39
+      "during_market": 29,
+      "after_market": 50
     },
-    "pre_market_ratio": 0.079,
+    "pre_market_ratio": 0.06,
     "has_original_analysis": false,
     "is_hype_driven": false
   },
   "Trader9": {
     "name": "Trader韭",
-    "total_videos": 63,
-    "topic_concentration": 0.232,
+    "total_videos": 75,
+    "topic_concentration": 0.221,
     "top_topics": [
       [
-        "AI",
-        13
+        "半导体",
+        17
       ],
       [
-        "半导体",
-        12
+        "AI",
+        15
       ],
       [
         "CPO/光模块",
-        4
+        7
       ],
       [
         "消费电子",
-        3
+        4
       ],
       [
         "消费",
@@ -68,13 +68,13 @@
     ],
     "top_tickers": [],
     "intent_distribution": {
-      "GENERAL": 62,
+      "GENERAL": 74,
       "SELL_SIGNAL": 1
     },
     "timing_distribution": {
       "pre_market": 0,
-      "during_market": 32,
-      "after_market": 31
+      "during_market": 38,
+      "after_market": 37
     },
     "pre_market_ratio": 0.0,
     "has_original_analysis": false,
@@ -82,19 +82,19 @@
   },
   "Cyclequeen": {
     "name": "周期女王",
-    "total_videos": 42,
+    "total_videos": 45,
     "topic_concentration": 0,
     "top_topics": [],
     "top_tickers": [],
     "intent_distribution": {
-      "GENERAL": 36,
-      "NEWS_READ": 5,
+      "GENERAL": 37,
+      "NEWS_READ": 7,
       "BUY_SIGNAL": 1
     },
     "timing_distribution": {
       "pre_market": 0,
       "during_market": 9,
-      "after_market": 33
+      "after_market": 36
     },
     "pre_market_ratio": 0.0,
     "has_original_analysis": false,
@@ -102,7 +102,7 @@
   },
   "xiaositv": {
     "name": "小司频道",
-    "total_videos": 62,
+    "total_videos": 65,
     "topic_concentration": 0.222,
     "top_topics": [
       [
@@ -128,13 +128,13 @@
     ],
     "top_tickers": [],
     "intent_distribution": {
-      "GENERAL": 48,
+      "GENERAL": 51,
       "NEWS_READ": 14
     },
     "timing_distribution": {
       "pre_market": 0,
       "during_market": 6,
-      "after_market": 56
+      "after_market": 59
     },
     "pre_market_ratio": 0.0,
     "has_original_analysis": false,
@@ -142,67 +142,68 @@
   },
   "Zihui518": {
     "name": "子辉先生",
-    "total_videos": 63,
-    "topic_concentration": 0.225,
+    "total_videos": 107,
+    "topic_concentration": 0.231,
     "top_topics": [
       [
         "半导体",
-        12
+        18
       ],
       [
         "AI",
-        6
+        10
       ],
       [
         "机器人",
-        5
+        7
       ],
       [
         "商业航天",
         4
       ],
       [
-        "消费电子",
-        2
+        "CPO/光模块",
+        4
       ]
     ],
     "top_tickers": [],
     "intent_distribution": {
-      "GENERAL": 31,
-      "NEWS_READ": 30,
-      "BUY_SIGNAL": 2
+      "GENERAL": 55,
+      "NEWS_READ": 48,
+      "BUY_SIGNAL": 3,
+      "SELL_SIGNAL": 1
     },
     "timing_distribution": {
-      "pre_market": 6,
-      "during_market": 8,
-      "after_market": 49
+      "pre_market": 9,
+      "during_market": 19,
+      "after_market": 79
     },
-    "pre_market_ratio": 0.095,
+    "pre_market_ratio": 0.084,
     "has_original_analysis": false,
     "is_hype_driven": false
   },
   "guojame": {
     "name": "创业魔法师",
-    "total_videos": 63,
+    "total_videos": 151,
     "topic_concentration": 0,
     "top_topics": [],
     "top_tickers": [],
     "intent_distribution": {
-      "NEWS_READ": 62,
+      "NEWS_READ": 150,
       "GENERAL": 1
     },
     "timing_distribution": {
-      "pre_market": 3,
-      "during_market": 12,
-      "after_market": 48
+      "pre_market": 21,
+      "during_market": 39,
+      "after_market": 91
     },
-    "pre_market_ratio": 0.048,
+    "pre_market_ratio": 0.139,
     "has_original_analysis": false,
     "is_hype_driven": false
   },
   "kaixin2091": {
     "name": "凯心",
-    "total_videos": 61,
+    "total_videos": 63,
     "topic_concentration": 0.556,
     "top_topics": [
       [
@@ -216,17 +217,17 @@
     ],
     "top_tickers": [],
     "intent_distribution": {
-      "GENERAL": 52,
-      "NEWS_READ": 6,
+      "GENERAL": 53,
+      "NEWS_READ": 7,
       "BUY_SIGNAL": 2,
       "HYPE": 1
     },
     "timing_distribution": {
       "pre_market": 4,
-      "during_market": 16,
-      "after_market": 41
+      "during_market": 17,
+      "after_market": 42
     },
-    "pre_market_ratio": 0.066,
+    "pre_market_ratio": 0.063,
     "has_original_analysis": false,
     "is_hype_driven": false
   },
@@ -252,49 +253,49 @@
   },
   "6052m9121": {
     "name": "太阳李博良",
-    "total_videos": 60,
+    "total_videos": 66,
     "topic_concentration": 1.0,
     "top_topics": [
       [
         "AI",
-        8
+        10
       ]
     ],
     "top_tickers": [],
     "intent_distribution": {
-      "GENERAL": 52,
+      "GENERAL": 58,
       "NEWS_READ": 7,
       "HYPE": 1
     },
     "timing_distribution": {
       "pre_market": 4,
-      "during_market": 7,
-      "after_market": 49
+      "during_market": 8,
+      "after_market": 54
     },
-    "pre_market_ratio": 0.067,
+    "pre_market_ratio": 0.061,
     "has_original_analysis": false,
     "is_hype_driven": false
   },
   "yanbao60": {
     "name": "口罩哥研报60秒",
-    "total_videos": 60,
-    "topic_concentration": 0.308,
+    "total_videos": 91,
+    "topic_concentration": 0.305,
     "top_topics": [
       [
         "AI",
-        11
-      ],
-      [
-        "消费电子",
-        4
+        15
       ],
       [
         "半导体",
-        4
+        6
+      ],
+      [
+        "消费电子",
+        5
       ],
       [
         "消费",
-        3
+        5
       ],
       [
         "机器人",
@@ -303,15 +304,15 @@
     ],
     "top_tickers": [],
     "intent_distribution": {
-      "NEWS_READ": 49,
-      "GENERAL": 11
+      "NEWS_READ": 73,
+      "GENERAL": 18
     },
     "timing_distribution": {
-      "pre_market": 1,
-      "during_market": 15,
-      "after_market": 44
+      "pre_market": 4,
+      "during_market": 29,
+      "after_market": 58
     },
-    "pre_market_ratio": 0.017,
+    "pre_market_ratio": 0.044,
     "has_original_analysis": false,
     "is_hype_driven": false
   }

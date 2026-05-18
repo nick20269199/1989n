@@ -1,24 +1,49 @@
 {
-  "timestamp": "2026-05-13 08:36:15",
+  "timestamp": "2026-05-18 08:34:14",
   "json_issues": [],
   "critical_issues": [],
   "stale_issues": [
     {
       "file": "news_manual_20260511_0800.json",
-      "issue": "stale (48.6h > 12h threshold)",
+      "issue": "stale (168.6h > 12h threshold)",
       "severity": "medium"
     },
     {
       "file": "news_manual_20260512_0800.json",
+      "issue": "stale (144.6h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260513_0800.json",
+      "issue": "stale (120.6h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260513_0835.json",
+      "issue": "stale (120.0h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260515_0800.json",
+      "issue": "stale (72.6h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260515_0835.json",
+      "issue": "stale (72.0h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260517_0800.json",
       "issue": "stale (24.6h > 12h threshold)",
       "severity": "medium"
     },
     {
       "file": "morning_brief_latest.md",
-      "issue": "stale (18.9h > 12h threshold)",
+      "issue": "stale (71.5h > 12h threshold)",
       "severity": "medium"
     }
   ],
-  "total_issues": 3,
+  "total_issues": 8,
   "healthy": false
 }

@@ -1,38 +1,27 @@
 {
   "scan_type": "watchlist_tech",
   "param": "default",
-  "time": "2026-05-14 16:03:09",
+  "time": "2026-05-18 15:30:04",
   "count": 7,
   "results": [
     {
-      "code": "300480",
-      "name": "",
-      "price": 39.42,
-      "change_pct": 0.0,
-      "ma_alignment": "多头排列",
-      "rsi": 66.24,
-      "macd_signal": "金叉",
-      "volume_status": "放量",
-      "score": 100
-    },
-    {
-      "code": "600236",
-      "name": "",
-      "price": 11.13,
-      "change_pct": 0.0,
-      "ma_alignment": "多头排列",
-      "rsi": 59.04,
-      "macd_signal": "金叉",
-      "volume_status": "放量",
-      "score": 100
-    },
-    {
       "code": "002156",
       "name": "",
-      "price": 57.4,
+      "price": 57.02,
       "change_pct": 0.0,
       "ma_alignment": "多头排列",
-      "rsi": 61.29,
+      "rsi": 60.33,
+      "macd_signal": "金叉",
+      "volume_status": "正常",
+      "score": 92
+    },
+    {
+      "code": "300136",
+      "name": "",
+      "price": 111.75,
+      "change_pct": 0.0,
+      "ma_alignment": "多头排列",
+      "rsi": 67.06,
       "macd_signal": "金叉",
       "volume_status": "正常",
       "score": 92
@@ -40,46 +29,57 @@
     {
       "code": "601789",
       "name": "",
-      "price": 6.13,
+      "price": 6.05,
       "change_pct": 0.0,
       "ma_alignment": "多头排列",
-      "rsi": 55.31,
+      "rsi": 53.24,
       "macd_signal": "金叉",
-      "volume_status": "正常",
-      "score": 92
+      "volume_status": "缩量",
+      "score": 85
+    },
+    {
+      "code": "002208",
+      "name": "",
+      "price": 20.76,
+      "change_pct": 0.0,
+      "ma_alignment": "多头排列",
+      "rsi": 85.84,
+      "macd_signal": "金叉",
+      "volume_status": "放量",
+      "score": 85
+    },
+    {
+      "code": "000981",
+      "name": "",
+      "price": 4.41,
+      "change_pct": 0.0,
+      "ma_alignment": "交叉震荡",
+      "rsi": 62.47,
+      "macd_signal": "金叉",
+      "volume_status": "放量",
+      "score": 83
     },
     {
       "code": "300792",
       "name": "",
-      "price": 35.11,
+      "price": 37.03,
       "change_pct": 0.0,
       "ma_alignment": "交叉震荡",
-      "rsi": 46.66,
+      "rsi": 55.29,
       "macd_signal": "金叉",
-      "volume_status": "正常",
-      "score": 75
+      "volume_status": "放量",
+      "score": 83
     },
     {
-      "code": "002407",
+      "code": "300339",
       "name": "",
-      "price": 33.15,
+      "price": 44.71,
       "change_pct": 0.0,
       "ma_alignment": "交叉震荡",
-      "rsi": 51.68,
+      "rsi": 51.29,
       "macd_signal": "死叉",
-      "volume_status": "正常",
-      "score": 45
-    },
-    {
-      "code": "300342",
-      "name": "",
-      "price": 58.91,
-      "change_pct": 0.0,
-      "ma_alignment": "交叉震荡",
-      "rsi": 45.97,
-      "macd_signal": "死叉",
-      "volume_status": "正常",
-      "score": 45
+      "volume_status": "缩量",
+      "score": 38
     }
   ]
 }

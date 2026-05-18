@@ -29,6 +29,7 @@ from config import (
     STOCK_DATA_DIR,
     PORTFOLIO_FILE,
     FEISHU_WEBHOOK_URL,
+    FEISHU_ROUTES,
     HEADERS,
     EASTMONEY_QUOTE_URL,
     TENCENT_KLINE_URL,
@@ -74,8 +75,8 @@ try:
     _FEISHU_AVAILABLE = True
 except ImportError:
 
-    def send_feishu_message(title: str, content: str) -> bool:
-        """Fallback: 直接使用 webhook 发送飞书卡片消息"""
+    def send_feishu_message(title: str, content: str, chat_id: str = "") -> bool:
+        """Fallback: webhook 发送飞书卡片（chat_id 参数接收但忽略，webhook 去固定群）"""
         if not FEISHU_WEBHOOK_URL:
             logger.warning("FEISHU_WEBHOOK_URL 未配置，跳过飞书发送")
             return False
@@ -287,15 +288,14 @@ def _normalize_holdings(raw: list[dict]) -> list[dict]:
 
 
 def _fallback_holdings() -> list[dict]:
-    """硬编码后备持仓（与 CLAUDE.md 持仓一致）"""
+    """硬编码后备持仓（与 portfolio.json 一致的应急备份）"""
     return [
-        {"code": "000062", "name": "深圳华强", "shares": 2000, "cost": 37.28, "sector": "电子元器件分销", "first_buy": "2026-04-30", "latest_buy": "2026-05-06"},
-        {"code": "002156", "name": "通富微电", "shares": 2200, "cost": 49.77, "sector": "半导体封测", "first_buy": "2026-04-27", "latest_buy": "2026-04-29"},
-        {"code": "300480", "name": "光力科技", "shares": 400,  "cost": 36.28, "sector": "半导体划片设备", "first_buy": "2026-04-30", "latest_buy": "2026-04-30"},
-        {"code": "002407", "name": "多氟多",   "shares": 600,  "cost": 36.25, "sector": "锂电化工", "first_buy": "2026-05-06", "latest_buy": "2026-05-07"},
-        {"code": "300342", "name": "天银机电", "shares": 200,  "cost": 64.56, "sector": "商业航天/军工电子", "first_buy": "2026-05-08", "latest_buy": "2026-05-08"},
-        {"code": "300739", "name": "明阳电路", "shares": 100,  "cost": 29.72, "sector": "PCB/电子", "first_buy": "2026-04-23", "latest_buy": "2026-04-23"},
-        {"code": "601789", "name": "宁波建工", "shares": 600,  "cost": 6.36,  "sector": "建筑工程/基建", "first_buy": "2026-05-05", "latest_buy": "2026-05-05"},
+        {"code": "002156", "name": "通富微电",   "shares": 1600, "cost": 44.85,  "sector": "半导体封测",         "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
+        {"code": "000981", "name": "山子高科",   "shares": 4900, "cost": 4.501, "sector": "汽车零部件/房地产",  "first_buy": "2026-05-15", "latest_buy": "2026-05-15"},
+        {"code": "002208", "name": "合肥城建",   "shares": 900,  "cost": 19.849,"sector": "房地产",             "first_buy": "2026-05-15", "latest_buy": "2026-05-15"},
+        {"code": "300792", "name": "壹网壹创",   "shares": 100,  "cost": 36.81, "sector": "电商服务/数字营销",   "first_buy": "2026-05-13", "latest_buy": "2026-05-13"},
+        {"code": "601789", "name": "宁波建工",   "shares": 5200, "cost": 6.206, "sector": "建筑工程/基建",      "first_buy": "2026-05-05", "latest_buy": "2026-05-15"},
+        {"code": "002050", "name": "三花智控",   "shares": 100,  "cost": 28.49, "sector": "热管理/制冷控制",     "first_buy": "2026-05-12", "latest_buy": "2026-05-15"},
     ]
 
 
@@ -935,19 +935,27 @@ def format_holdings_feishu(holdings: list[dict]) -> str:
     """将持仓报告格式化为飞书 Markdown"""
     lines = ["**持仓盈亏一览**\n"]
     for h in holdings:
-        pnl_pct = h.get("pnl_pct", 0)
-        sign = "+" if pnl_pct >= 0 else ""
+        pnl_pct = h.get("pnl_pct")
         status = h.get("status", "")
-        pnl_amt = h.get("pnl_amt", 0)
-        pos_value = h.get("position_value", h.get("price", 0) * h.get("shares", 0))
+        pos_value = h.get("position_value", (h.get("price") or 0) * h.get("shares", 0))
         status_str = f"{status} " if status else ""
-        lines.append(
-            f"- {status_str}**{h.get('name', '')}**({h.get('code', '')}) "
-            f"现价 {h.get('price', '-')} | 成本 {h.get('cost', '-')} | "
-            f"盈亏 {sign}{pnl_pct:.1f}%"
-            + (f" ({sign}{pnl_amt:.0f}元)" if pnl_amt else "")
-            + f" | 市值 {pos_value:.0f}元"
-        )
+
+        if pnl_pct is None:
+            lines.append(
+                f"- {status_str}**{h.get('name', '')}**({h.get('code', '')}) "
+                f"现价 数据暂缺 | 成本 {h.get('cost', '-')} | 盈亏 数据暂缺"
+            )
+        else:
+            sign = "+" if pnl_pct >= 0 else ""
+            pnl_amt = h.get("pnl_amt", 0)
+            price = h.get("price", "-")
+            lines.append(
+                f"- {status_str}**{h.get('name', '')}**({h.get('code', '')}) "
+                f"现价 {price} | 成本 {h.get('cost', '-')} | "
+                f"盈亏 {sign}{pnl_pct:.1f}%"
+                + (f" ({sign}{pnl_amt:.0f}元)" if pnl_amt else "")
+                + f" | 市值 {pos_value:.0f}元"
+            )
     return "\n".join(lines)
 
 
@@ -1041,12 +1049,24 @@ def run_morning_enhanced():
 
     for h in holdings:
         q = quotes.get(h["code"])
-        if q is None or q.get("price", 0) <= 0:
-            price = h.get("cost", 0)
-            q = {}
-        else:
-            price = q.get("price", h.get("cost", 0))
         cost = h["cost"]
+
+        if q is None or q.get("price", 0) <= 0:
+            # 数据源不可用 → 标记缺失，不生成虚假盈亏
+            portfolio_scan["holdings"].append({
+                "code": h["code"],
+                "name": h.get("name", ""),
+                "shares": h["shares"],
+                "cost": cost,
+                "price": None,
+                "change_pct": None,
+                "pnl_pct": None,
+                "sector": h.get("sector", ""),
+                "alerts": ["🔴 行情数据暂缺"],
+            })
+            continue
+
+        price = q.get("price", 0)
         pnl_pct = round(((price - cost) / cost * 100), 2) if cost > 0 else 0
         mv = price * h["shares"]
         total_value += mv
@@ -1148,6 +1168,10 @@ def run_morning_enhanced():
     md_lines.append("|------|------|------|------|------|")
     alert_count = 0
     for h_ in portfolio_scan["holdings"]:
+        if h_["pnl_pct"] is None:
+            alert_str = ", ".join(h_["alerts"]) if h_["alerts"] else "数据暂缺"
+            md_lines.append(f"| {h_['name']}({h_['code']}) | 数据暂缺 | 数据暂缺 | 数据暂缺 | {alert_str} |")
+            continue
         sign = "+" if h_["pnl_pct"] >= 0 else ""
         alert_str = ", ".join(h_["alerts"]) if h_["alerts"] else "-"
         if h_["alerts"]:
@@ -1376,7 +1400,7 @@ def run_closing_review():
         for r in recommendations:
             feishu_content += f"- {r['name']}: {r['action']} ({r['urgency']})\n"
 
-    ok = send_feishu_message(f"收盘复盘 | {date_str}", feishu_content)
+    ok = send_feishu_message(f"收盘复盘 | {date_str}", feishu_content, chat_id="closing")
     logger.info(f"飞书发送: {'成功' if ok else '失败'}")
 
     logger.info("closing_review 完成")
@@ -1488,7 +1512,7 @@ def run_intraday_analysis(mode: str):
         f"- {h['name']}: {h['price']} ({h['today_chg']:+.1f}%)"
         for h in holdings_data
     )
-    ok = send_feishu_message(f"盘中快照 | {dt.strftime('%m/%d %H:%M')}", feishu_content)
+    ok = send_feishu_message(f"盘中快照 | {dt.strftime('%m/%d %H:%M')}", feishu_content, chat_id="midday")
     logger.info(f"飞书发送: {'成功' if ok else '失败'}")
 
     logger.info("intraday_analysis 完成")
@@ -1528,7 +1552,7 @@ def run_hot_stocks():
     for s in stocks[:10]:
         sign = "+" if s.get("change_pct", 0) >= 0 else ""
         lines.append(f"- {s.get('rank','')}. {s['name']}({s['code']}) {s.get('price','')} ({sign}{s.get('change_pct',0):.2f}%)")
-    ok = send_feishu_message(f"热门股票 | {datetime.now().strftime('%H:%M')}", "\n".join(lines))
+    ok = send_feishu_message(f"热门股票 | {datetime.now().strftime('%H:%M')}", "\n".join(lines), chat_id="midday")
     logger.info(f"飞书发送: {'成功' if ok else '失败'}")
 
     logger.info("hot_stocks 完成")
@@ -1691,7 +1715,7 @@ def run_overnight():
             feishu_content += f"- {m['name']}: {sign}{m['change_pct']:.2f}%\n"
     feishu_content += f"\n明日展望: **{outlook}**"
 
-    ok = send_feishu_message(f"隔夜分析 | {date_today()}", feishu_content)
+    ok = send_feishu_message(f"隔夜分析 | {date_today()}", feishu_content, chat_id="overnight")
     logger.info(f"飞书发送: {'成功' if ok else '失败'}")
 
     logger.info("overnight 完成")
@@ -1751,7 +1775,7 @@ def run_tech_scan():
             f"RSI{r.get('rsi','')} | 量比{r.get('vol_ratio','')}"
         )
 
-    ok = send_feishu_message(f"技术扫描 | {datetime.now().strftime('%m/%d %H:%M')}", "\n".join(feishu_lines))
+    ok = send_feishu_message(f"技术扫描 | {datetime.now().strftime('%m/%d %H:%M')}", "\n".join(feishu_lines), chat_id="closing")
     logger.info(f"飞书发送: {'成功' if ok else '失败'}")
 
     logger.info("tech_scan 完成")

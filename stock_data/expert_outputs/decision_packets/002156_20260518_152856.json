@@ -1,0 +1,50 @@
+{
+  "symbol": "002156",
+  "name": "通富微电",
+  "timestamp": "2026-05-18T15:28:56.012715",
+  "pipeline_status": "rejected",
+  "grader": {
+    "score": 0.56,
+    "scores": {
+      "direction": 1.0,
+      "method": 0.83,
+      "trajectory": 0.67,
+      "margin": 0.67,
+      "logic": 0.63
+    },
+    "failures": [
+      "逻辑维度未达1.0：三位专家均未构建完整可证伪的因果链（如‘若A则B，若非B则非A’的严格推演）；expert1和expert2的‘if_wrong’仅描述修正动作，未反向验证前提真值；expert3逻辑链条过简（‘动能不足→观望’缺乏量价/筹码的定量支撑），未体现条件依赖与排除推理",
+      "轨迹维度未达1.0：expert2的entry_zone为模糊表述‘待确认板块共振信号’，无价格区间；expert3的entry_zone‘55-56’与专家1/2引用的关键支撑56.39明显冲突且未解释差异；三者目标位（60/62.23/62.23）、时间框架（1周/1-3日/1周）虽存在交集但未达成共识性整合",
+      "方法维度扣分：expert1未说明均线参数来源（MA5/20/60是否为收盘价？是否前复权？）、量价背离的量化标准（如何定义‘背离’？RSI/MACD是否配合？）；expert3未说明‘主力资金’判定依据（L2数据？DDX？还是经验估算？），筹码分布分析止于定性描述，缺乏成本峰/集中度等关键指标",
+      "边际维度隐含缺陷：三位专家均未定义‘confidence_decay’触发后的具体操作（如是否平仓、减仓、切换策略？），black_swan应对均为被动规避（‘需重新评估’‘降级应对’），缺少预案级响应（如对冲、空头头寸、期权保护等）"
+    ],
+    "merged_direction": "观望",
+    "merged_confidence": 0.54,
+    "summary": "三位专家一致给出‘观望’结论，技术、情绪、资金面均指向短期方向不明、需等待企稳或共振信号，但分析颗粒度、逻辑严谨性与执行细节未达专业交易系统要求。"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "观望",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.52,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "观望",
+      "confidence": 0.5,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": false
+}

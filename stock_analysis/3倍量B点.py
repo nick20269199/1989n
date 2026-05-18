@@ -16,14 +16,16 @@
 
 import concurrent.futures
 import json
-import os
 import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-import requests
+from market_pool import MarketPool
+from market_pool.stock_list import filter_stocks, load_stock_list as mp_load_stock_list
+
+pool = MarketPool()
 
 # -- 配置 --
 VOLUME_RATIO = 3.0       # 倍量阈值: >=3倍20日均量
@@ -35,8 +37,6 @@ BOUNCE_MIN_HOLD_DAYS = 2 # 回踩至少持续N天
 STOCK_DATA_DIR = Path("D:/1989n/stock_data")
 OUTPUT_DIR = STOCK_DATA_DIR / "signals"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-KLINE_CACHE_DIR = STOCK_DATA_DIR / "kline_cache"
-KLINE_CACHE_TTL = 4 * 3600  # 4小时缓存
 
 # 持仓列表（用于 --watch 模式 + 持仓映射）
 WATCHLIST = [
@@ -51,213 +51,32 @@ WATCHLIST = [
 # 数据获取
 # ================================================
 
-def _fetch_tencent_kline(code: str, days: int, headers: dict) -> Optional[list]:
-    """通过腾讯获取日K线 (直接JSON, 速度快)"""
-    tc_code = f"{'sh' if code.startswith('6') else 'sz'}{code}"
-    url = f"https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param={tc_code},day,,,{days},qfq"
-    try:
-        resp = requests.get(url, headers=headers, timeout=15)
-        data = resp.json()
-        days_list = data.get("data", {}).get(tc_code, {}).get("day", [])
-        if not days_list or "qfqday" in str(data.get("data", {}).get(tc_code, {}).keys()):
-            days_list = data.get("data", {}).get(tc_code, {}).get("qfqday", days_list)
-        if not days_list:
-            return None
-        bars = []
-        for item in days_list:
-            try:
-                bars.append({
-                    "date": item[0],
-                    "open": float(item[1]),
-                    "close": float(item[2]),
-                    "high": float(item[3]),
-                    "low": float(item[4]),
-                    "volume": float(item[5]) if len(item) > 5 else 0,
-                })
-            except (ValueError, IndexError):
-                continue
-        return bars if bars else None
-    except Exception:
+def fetch_kline(code: str, days: int = 120) -> Optional[list]:
+    """通过 market_pool 获取日K线 (本地缓存, 毫秒级)"""
+    df = pool.get_kline(code, days)
+    if df is None or df.empty:
         return None
-
-
-def _fetch_sina_kline(code: str, days: int, headers: dict) -> Optional[list]:
-    """通过新浪获取日K线 (JSONP, 备选)"""
-    prefix = _sina_prefix(code)
-    url = f"https://quotes.sina.cn/cn/api/jsonp_v2.php/var%20_{code}/=/CN_MarketData.getKLineData?symbol={prefix}{code}&scale=60&datalen={days // 5}"
-    try:
-        resp = requests.get(url, headers=headers, timeout=10)
-        text = resp.text
-        json_str = text[text.find("(") + 1 : text.rfind(")")]
-        data = json.loads(json_str)
-        if not data:
-            return None
-        bars = []
-        for item in data:
-            try:
-                bars.append({
-                    "date": item["date"],
-                    "open": float(item["open"]),
-                    "high": float(item["high"]),
-                    "low": float(item["low"]),
-                    "close": float(item["close"]),
-                    "volume": float(item["volume"]),
-                })
-            except (KeyError, ValueError):
-                continue
-        return bars if bars else None
-    except Exception:
-        return None
-
-
-def fetch_kline(code: str, days: int = 60) -> Optional[list]:
-    """获取日K线数据(带4小时本地缓存), 腾讯->新浪双通道+1次重试"""
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Referer": "https://finance.sina.com.cn",
-    }
-
-    # -- 检查本地缓存 --
-    cache_file = KLINE_CACHE_DIR / f"{code}.json"
-    if cache_file.exists():
-        try:
-            with open(cache_file, "r") as f:
-                cached = json.load(f)
-            cache_time = cached.get("_cache_time", 0)
-            if time.time() - cache_time < KLINE_CACHE_TTL:
-                return cached["data"]
-        except Exception:
-            pass
-
-    # -- 腾讯(主) -> 新浪(备), 各重试1次 --
-    for attempt in range(2):
-        result = _fetch_tencent_kline(code, days, headers)
-        if result:
-            break
-        result = _fetch_sina_kline(code, days, headers)
-        if result:
-            break
-        if attempt == 0:
-            time.sleep(1)  # 重试前等1秒
-
-    # -- 写入缓存 --
-    if result:
-        KLINE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
-        with open(cache_file, "w") as f:
-            json.dump({"_cache_time": time.time(), "data": result}, f)
-
-    return result
-
-
-def _sina_prefix(code: str) -> str:
-    """新浪股票前缀"""
-    if code.startswith("6"):
-        return "sh"
-    elif code.startswith("0") or code.startswith("3"):
-        return "sz"
-    elif code.startswith("4"):
-        return "bj"
-    return "sz"
+    bars = []
+    for _, row in df.iterrows():
+        bars.append({
+            "date": str(row["date"]),
+            "open": float(row["open"]),
+            "close": float(row["close"]),
+            "high": float(row["high"]),
+            "low": float(row["low"]),
+            "volume": float(row["volume"]),
+        })
 
 
 # ================================================
 # A股全市场列表
 # ================================================
 
-STOCK_LIST_CACHE = STOCK_DATA_DIR / "a_stock_list.json"
-
-
 def load_a_stock_list(force_refresh: bool = False) -> list[dict]:
-    """
-    从新浪获取A股全市场列表, 排除ST/科创板/北交所。
-
-    返回: [{"code": "000001", "name": "平安银行", "price": 12.34, "volume": 123456}, ...]
-    """
-    if not force_refresh and STOCK_LIST_CACHE.exists():
-        with open(STOCK_LIST_CACHE, encoding="utf-8") as f:
-            cached = json.load(f)
-            if cached.get("date") == datetime.now().strftime("%Y%m%d"):
-                return cached["stocks"]
-
-    headers = {
-        "Referer": "https://finance.sina.com.cn",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-    }
-
-    all_stocks = []
-    # A股约4500只, 每页100条, 50页覆盖全市场
-    seen_codes = set()
-
-    print(f"\n  >> 获取A股列表...")
-    for page in range(1, 55):
-        try:
-            url = (
-                f"https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/"
-                f"Market_Center.getHQNodeData?page={page}&num=100&sort=symbol&asc=1&"
-                f"node=hs_a&symbol=&_s_r_a=page"
-            )
-            resp = requests.get(url, headers=headers, timeout=10)
-            data = resp.json()
-            if not data:
-                break  # 无更多页
-
-            before = len(all_stocks)
-            for item in data:
-                raw_code = item.get("symbol", "")
-                name = item.get("name", "")
-                trade = item.get("trade", "0")
-                volume = item.get("volume", "0")
-
-                # 去掉交易所前缀 (sh/sz/bj → 纯数字代码)
-                code = raw_code[2:] if raw_code[:2] in ("sh", "sz", "bj") else raw_code
-
-                # 过滤 科创板 (688xxx / 689xxx)
-                if code.startswith(("688", "689")):
-                    continue
-                # 去重
-                if code in seen_codes:
-                    continue
-                seen_codes.add(code)
-                # 过滤 ST / *ST / 退市
-                if "ST" in name.upper() or "退" in name:
-                    continue
-                # 过滤北交所 (4xxxxx / 8xxxxx)
-                if code.startswith(("4", "8")):
-                    continue
-
-                try:
-                    price = float(trade) if trade else 0
-                    vol = int(volume) if volume else 0
-                except (ValueError, TypeError):
-                    price = 0
-                    vol = 0
-
-                # 过滤低价股 (< 3元) 和 高价股 (> 200元)
-                if price < 3 or price > 200:
-                    continue
-
-                all_stocks.append({
-                    "code": code,
-                    "name": name,
-                    "price": price,
-                    "volume": vol,
-                })
-
-            added = len(all_stocks) - before
-            print(f"    第{page}页: {len(data)}只 -> 新增{added}只, 累计{len(all_stocks)}只")
-
-        except Exception as e:
-            print(f"    第{page}页失败: {e}")
-            break
-
-    print(f"  >> 过滤后共 {len(all_stocks)} 只候选")
-
-    # 缓存
-    STOCK_LIST_CACHE.parent.mkdir(parents=True, exist_ok=True)
-    with open(STOCK_LIST_CACHE, "w", encoding="utf-8") as f:
-        json.dump({"date": datetime.now().strftime("%Y%m%d"), "stocks": all_stocks}, f, ensure_ascii=False)
-
-    return all_stocks
+    """从 market_pool 加载A股全市场列表, 排除ST/科创板/北交所。"""
+    stocks = mp_load_stock_list(force_refresh=force_refresh)
+    stocks = filter_stocks(stocks, exclude_st=True, exclude_bj=True, exclude_kcb=True)
+    return stocks
 
 
 def scan_full_market() -> tuple[list, list, list]:
@@ -401,8 +220,8 @@ def detect_b_point(kline: list) -> Optional[dict]:
             if j >= len(kline):
                 break
             day_vol = kline[j]["volume"]
-            if ma_volumes[i] > 0:
-                day_shrink = 1 - (day_vol / ma_volumes[i])
+            if kline[i]["volume"] > 0:
+                day_shrink = 1 - (day_vol / kline[i]["volume"])
             else:
                 day_shrink = 0
 

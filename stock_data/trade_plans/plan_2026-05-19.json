@@ -1,0 +1,376 @@
+{
+  "generated_at": "2026-05-18 15:40",
+  "for_date": "2026-05-19",
+  "market_outlook": {
+    "date": "2026-05-18",
+    "next_trading_day": "2026-05-19",
+    "today_market": {
+      "close": 4179.952,
+      "pct_chg": -0.0,
+      "trend": "多头排列",
+      "volume_state": "正常",
+      "sentiment": "偏弱",
+      "volatility": 0.73
+    },
+    "can_open_new": true,
+    "restrictions": [],
+    "watch_notes": [
+      "多头排列 — 持仓可适当延长"
+    ]
+  },
+  "positions": [
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "qty": 2000,
+      "cost": 37.28,
+      "close": 32.03,
+      "market_value": 64060.0,
+      "pnl_pct": -14.08,
+      "pnl_amount": -10500.0,
+      "hold_days": 18,
+      "sector": "电子元器件分销",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 32.99",
+          "action": "超时18天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 32.35 ~ 32.99",
+          "action": "超时18天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 31.71 ~ 32.35",
+          "action": "立即清仓"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 31.07 ~ 31.71",
+          "action": "超时18天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 31.07 或触及硬止损34.67",
+          "action": "超时18天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 34.67,
+        "soft_stop": 36.16,
+        "take_profit_half": 40.26,
+        "take_profit_all": 42.87,
+        "trail_activate": 39.14
+      },
+      "priority": "紧急",
+      "trail_active": false,
+      "danger_zone": false
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "qty": 2200,
+      "cost": 49.77,
+      "close": 58.07,
+      "market_value": 127754.0,
+      "pnl_pct": 16.68,
+      "pnl_amount": 18260.0,
+      "hold_days": 21,
+      "sector": "半导体封测",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 59.81",
+          "action": "超时21天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 58.65 ~ 59.81",
+          "action": "超时21天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 57.49 ~ 58.65",
+          "action": "全部止盈，不犹豫"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 56.33 ~ 57.49",
+          "action": "超时21天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 56.33 或触及硬止损46.29",
+          "action": "超时21天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 46.29,
+        "soft_stop": 48.28,
+        "take_profit_half": 53.75,
+        "take_profit_all": 57.24,
+        "trail_activate": 52.26,
+        "trail_stop": 56.33
+      },
+      "priority": "正常",
+      "trail_active": true,
+      "danger_zone": false
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "qty": 400,
+      "cost": 36.28,
+      "close": 39.38,
+      "market_value": 15752.0,
+      "pnl_pct": 8.54,
+      "pnl_amount": 1240.0,
+      "hold_days": 18,
+      "sector": "半导体划片设备",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 40.56",
+          "action": "超时18天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 39.77 ~ 40.56",
+          "action": "超时18天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 38.99 ~ 39.77",
+          "action": "止盈一半，剩余设移动止损"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 38.20 ~ 38.99",
+          "action": "超时18天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 38.20 或触及硬止损33.74",
+          "action": "超时18天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 33.74,
+        "soft_stop": 35.19,
+        "take_profit_half": 39.18,
+        "take_profit_all": 41.72,
+        "trail_activate": 38.09,
+        "trail_stop": 38.2
+      },
+      "priority": "正常",
+      "trail_active": true,
+      "danger_zone": false
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "qty": 600,
+      "cost": 36.25,
+      "close": 37.79,
+      "market_value": 22674.0,
+      "pnl_pct": 4.25,
+      "pnl_amount": 924.0,
+      "hold_days": 12,
+      "sector": "锂电化工",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 38.92",
+          "action": "超时12天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 38.17 ~ 38.92",
+          "action": "超时12天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 37.41 ~ 38.17",
+          "action": "超时12天 → 强制清仓"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 36.66 ~ 37.41",
+          "action": "超时12天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 36.66 或触及硬止损33.71",
+          "action": "超时12天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 33.71,
+        "soft_stop": 35.16,
+        "take_profit_half": 39.15,
+        "take_profit_all": 41.69,
+        "trail_activate": 38.06
+      },
+      "priority": "正常",
+      "trail_active": false,
+      "danger_zone": false
+    },
+    {
+      "code": "300342",
+      "name": "天银机电",
+      "qty": 200,
+      "cost": 64.56,
+      "close": 58.22,
+      "market_value": 11644.0,
+      "pnl_pct": -9.82,
+      "pnl_amount": -1268.0,
+      "hold_days": 10,
+      "sector": "商业航天/军工",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 59.97",
+          "action": "大幅高开不追，已持有的话设好止损继续持有"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 58.80 ~ 59.97",
+          "action": "持有，设好止损单即可"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 57.64 ~ 58.80",
+          "action": "立即清仓"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 56.47 ~ 57.64",
+          "action": "立即清仓，不等反弹"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 56.47 或触及硬止损60.04",
+          "action": "集合竞价挂跌停价清仓，不犹豫"
+        }
+      ],
+      "levels": {
+        "hard_stop": 60.04,
+        "soft_stop": 62.62,
+        "take_profit_half": 69.72,
+        "take_profit_all": 74.24,
+        "trail_activate": 67.79
+      },
+      "priority": "紧急",
+      "trail_active": false,
+      "danger_zone": false
+    },
+    {
+      "code": "300739",
+      "name": "明阳电路",
+      "qty": 100,
+      "cost": 29.72,
+      "close": 29.39,
+      "market_value": 2939.0,
+      "pnl_pct": -1.11,
+      "pnl_amount": -33.0,
+      "hold_days": 25,
+      "sector": "PCB/电子",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 30.27",
+          "action": "超时25天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 29.68 ~ 30.27",
+          "action": "超时25天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 29.10 ~ 29.68",
+          "action": "超时25天 → 强制清仓"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 28.51 ~ 29.10",
+          "action": "超时25天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 28.51 或触及硬止损27.64",
+          "action": "超时25天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 27.64,
+        "soft_stop": 28.83,
+        "take_profit_half": 32.1,
+        "take_profit_all": 34.18,
+        "trail_activate": 31.21
+      },
+      "priority": "正常",
+      "trail_active": false,
+      "danger_zone": false
+    },
+    {
+      "code": "601789",
+      "name": "宁波建工",
+      "qty": 600,
+      "cost": 6.36,
+      "close": 6.26,
+      "market_value": 3756.0,
+      "pnl_pct": -1.57,
+      "pnl_amount": -60.0,
+      "hold_days": 13,
+      "sector": "建筑工程/基建",
+      "scenarios": [
+        {
+          "name": "高开>3%",
+          "trigger": "开盘价 ≥ 6.45",
+          "action": "超时13天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "高开1-3%",
+          "trigger": "开盘价在 6.32 ~ 6.45",
+          "action": "超时13天 → 趁高开立即清仓，不犹豫"
+        },
+        {
+          "name": "平开±1%",
+          "trigger": "开盘价在 6.20 ~ 6.32",
+          "action": "超时13天 → 强制清仓"
+        },
+        {
+          "name": "低开1-3%",
+          "trigger": "开盘价在 6.07 ~ 6.20",
+          "action": "超时13天 → 集合竞价清仓，不再拖延"
+        },
+        {
+          "name": "低开>3%",
+          "trigger": "开盘价 ≤ 6.07 或触及硬止损5.91",
+          "action": "超时13天 → 集合竞价清仓，不再拖延"
+        }
+      ],
+      "levels": {
+        "hard_stop": 5.91,
+        "soft_stop": 6.17,
+        "take_profit_half": 6.87,
+        "take_profit_all": 7.31,
+        "trail_activate": 6.68
+      },
+      "priority": "正常",
+      "trail_active": false,
+      "danger_zone": false
+    }
+  ],
+  "summary": {
+    "total_cost": 240016.0,
+    "total_value": 248579.0,
+    "total_pnl": 8563.0,
+    "total_pnl_pct": 3.57,
+    "emergency_count": 2,
+    "can_open_new": true
+  }
+}

@@ -85,3 +85,14 @@ NEWS_MARKET_CLOSE = "15:00"
 # 确保目录存在
 for d in [LOG_DIR, OUTPUT_DIR, SCREENSHOT_DIR]:
     d.mkdir(parents=True, exist_ok=True)
+
+# === 飞书推送路由（内容类型 → 群聊） ===
+FEISHU_ROUTES = {
+    "main":      FEISHU_BOT_CHAT_ID,                  # 主群（默认）
+    "book":      "oc_7884ad241159d9b39fb855592e19bb6d",  # 书虫群
+    "news":      "oc_879207bdeaee695505d45a85afb9bca8",  # 新闻群
+    "midday":    "oc_2683bbadb9721aea6e6ed585c24a3cf4",  # 午盘数据群
+    "closing":   "oc_afc63ec9893d4f3393bfe5cb64203e72",  # 收盘数据群
+    "alerts":    "oc_2c82fb2d0b3c326a3edd0e413dcb5089",  # 问题组告警群
+    "overnight": "oc_fc5afbd06d624257b621f9bbad3e3bf7",  # 背调小队
+}

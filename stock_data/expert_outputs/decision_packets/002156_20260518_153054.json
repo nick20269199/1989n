@@ -1,0 +1,52 @@
+{
+  "symbol": "002156",
+  "name": "通富微电",
+  "timestamp": "2026-05-18T15:30:54.181686",
+  "pipeline_status": "rejected",
+  "grader": {
+    "passed": false,
+    "score": 0.56,
+    "scores": {
+      "direction": 1.0,
+      "method": 0.83,
+      "trajectory": 0.67,
+      "margin": 0.67,
+      "logic": 0.6
+    },
+    "failures": [
+      "逻辑维度未达1.0：三位专家均未构建完整因果链（如'因为A→B→C→决策'），缺乏可证伪的严密推理；expert1和expert2的'if_wrong'仅描述现象而非逻辑反推，expert3未说明'短期量价背离→空头衰竭→观望'的传导机制是否唯一或充分",
+      "轨迹维度未达1.0：expert2的entry_zone为条件性描述（'需等待...'），无具体价格区间；expert3的entry_zone（55-56）与expert1（56.5-57.5）冲突且未调和，缺乏共识性入场定义",
+      "方法维度扣分：expert1未说明MA/量比等数据来源（实时？收盘后？）、未定义'温和放量'阈值；expert2未说明情绪周期数据来源（StockAPI？自建模型？）；expert3承认关键数据缺失（R7、逐笔、大中小单）却仍作结论，方法透明度受损",
+      "平均分0.56 < 0.6，且虽方向得分1.0，但整体未达pass门槛"
+    ],
+    "merged_direction": "观望",
+    "merged_confidence": 0.58,
+    "summary": "三位专家一致判断‘观望’，技术面（均线压制+量价背离）、情绪面（板块缺领涨+新闻弱催化）、资金面（脉冲上涨后动能存疑）形成三角印证，但关键参数未统一、逻辑闭环不严、数据依据部分缺失，尚不满足高置信度决策标准。",
+    "_raw": "```json\n{\n  \"passed\": false,\n  \"average_score\": 0.56,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 0.83,\n    \"trajectory\": 0.67,\n    \"margin\": 0.67,\n    \"logic\": 0.6\n  },\n  \"failures\": [\n    \"逻辑维度未达1.0：三位专家均未构建完整因果链（如'因为A→B→C→决策'），缺乏可证伪的严密推理；expert1和expert2的'if_wrong'仅描述现象而非逻辑反推，expert3未说明'短期量价背离→空头衰竭→观望'的传导机制是否唯一或充分\",\n    \"轨迹维度未达1.0：expert2的entry_zone为条件性描述（'需等待...'），无具体价格区间；expert3的entry_zone（55-56）与expert1（56.5-57.5）冲突且未调和，缺乏共识性入场定义\",\n    \"方法维度扣分：expert1未说明MA/量比等数据来源（实时？收盘后？）、未定义'温和放量'阈值；expert2未说明情绪周期数据来源（StockAPI？自建模型？）；expert3承认关键数据缺失（R7、逐笔、大中小单）却仍作结论，方法透明度受损\",\n    \"平均分0.56 < 0.6，且虽方向得分1.0，但整体未达pass门槛\"\n  },\n  \"merged_direction\": \"观望\",\n  \"merged_confidence\": 0.58,\n  \"summary\": \"三位专家一致判断‘观望’，技术面（均线压制+量价背离）、情绪面（板块缺领涨+新闻弱催化）、资金面（脉冲上涨后动能存疑）形成三角印证，但关键参数未统一、逻辑闭环不严、数据依据部分缺失，尚不满足高置信度决策标准。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "观望",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.55,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "观望",
+      "confidence": 0.6,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": false
+}

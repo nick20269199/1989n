@@ -1,0 +1,135 @@
+{
+  "type": "财经快讯-manual",
+  "time": "2026-05-18 11:41:53",
+  "market_status": "closed",
+  "count": 21,
+  "data": [
+    {
+      "title": "财联社5月18日电，印度10年期国债收益率涨5个基点至7.11%。",
+      "time": "2026-05-18 11:33:02",
+      "category": "{'article_id': 2373856, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156021, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373856"
+    },
+    {
+      "title": "财联社5月18日电，印度卢比兑美元汇率跌至纪录新低，96.165。",
+      "time": "2026-05-18 11:32:35",
+      "category": "{'article_id': 2373854, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156021, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373854"
+    },
+    {
+      "title": "午评：创业板指冲高回落跌0.5% 油气概念逆势走强",
+      "time": "2026-05-18 11:32:13",
+      "related_stocks": "{'rise_range_has_null': -0.005, 'RiseRange': -0.5, 'name': '创业板指', 'StockID': 'sz399006', 'schema': 'cailianshe://stock_detail?stock_id=sz399006', 'status': 'L', 'last': 3909.257, 'is_stib': False}",
+      "category": "{'article_id': 2373851, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175122, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373851"
+    },
+    {
+      "title": "国内商品期货收盘涨跌不一 沪银跌超9%",
+      "time": "2026-05-18 11:31:39",
+      "category": "{'article_id': 2373852, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56410, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373852, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156021, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373852, 'subject_id': 1583, 'subject_name': '原油市场动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 45039, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 316, 'channel': 'cls'},{'article_id': 2373852, 'subject_id': 1741, 'subject_name': '海外大宗商品', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 33213, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373852, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175122, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373852, 'subject_id': 1528, 'subject_name': '橡胶', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8874, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 158, 'channel': 'cls'},{'article_id': 2373852, 'subject_id': 1497, 'subject_name': '轮胎', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11742, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 265, 'channel': 'cls'},{'article_id': 2373852, 'subject_id': 11394, 'subject_name': '能源类期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8500, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373852"
+    },
+    {
+      "title": "上海市经济信息化委主任汤文侃：力争在“十五五”时期 三大先导产业都要迈上万亿元台阶",
+      "time": "2026-05-18 11:30:56",
+      "category": "{'article_id': 2373845, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2373845, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101355, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2373845, 'subject_id': 1424, 'subject_name': '医药', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 30546, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 54, 'channel': 'cls,stib'},{'article_id': 2373845, 'subject_id': 1423, 'subject_name': '医疗器械', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22750, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 576, 'channel': 'cls,stib'},{'article_id': 2373845, 'subject_id': 12697, 'subject_name': 'EDA', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 5758, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 603, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373845"
+    },
+    {
+      "title": "上海市发展改革委主任刘健：推动算力规模倍增 打造4个千万千瓦级绿电基地",
+      "time": "2026-05-18 11:30:39",
+      "category": "{'article_id': 2373846, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18485, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2373846, 'subject_id': 1700, 'subject_name': '电力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22388, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 145, 'channel': 'cls'},{'article_id': 2373846, 'subject_id': 1635, 'subject_name': '基建投资', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 21681, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 321, 'channel': 'cls'},{'article_id': 2373846, 'subject_id': 9086, 'subject_name': '算力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 16860, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 550, 'channel': 'cls,stib'},{'article_id': 2373846, 'subject_id': 10697, 'subject_name': '土地', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9873, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373846"
+    },
+    {
+      "title": "上海市经济信息化委主任汤文侃：做优全国首个语料服务平台 目前已有158款通过备案",
+      "time": "2026-05-18 11:29:49",
+      "category": "{'article_id': 2373847, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2373847, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101355, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2373847, 'subject_id': 9086, 'subject_name': '算力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 16860, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 550, 'channel': 'cls,stib'},{'article_id': 2373847, 'subject_id': 10539, 'subject_name': '算力芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11249, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1953, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373847"
+    },
+    {
+      "title": "高盛：2026年央行月均购金量有望升至60吨 助力金价回升",
+      "time": "2026-05-18 11:26:54",
+      "category": "{'article_id': 2373848, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56410, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373848, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28090, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'},{'article_id': 2373848, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37108, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373848"
+    },
+    {
+      "title": "摩根大通将2026年黄金均价预测值从每盎司5,708美元下调至5,243美元",
+      "time": "2026-05-18 11:25:27",
+      "category": "{'article_id': 2373844, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56410, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373844, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28090, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'},{'article_id': 2373844, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37108, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373844"
+    },
+    {
+      "title": "财联社5月18日电，据报道，三星与工会的谈判将继续进行到明天。",
+      "time": "2026-05-18 11:24:09",
+      "category": "{'article_id': 2373842, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156021, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373842"
+    },
+    {
+      "title": "财联社5月18日电，富时中国A50指数期货跌近1%。",
+      "time": "2026-05-18 11:17:05",
+      "category": "{'article_id': 2373834, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156021, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373834"
+    },
+    {
+      "title": "【电报解读】光纤交货期限延长至20周以上，目前全球光纤光缆仍存在较大供需缺口，这家公司产品已在光纤领域小批量供货",
+      "time": "2026-05-18 11:13:51",
+      "url": "https://www.cls.cn/detail/2373826"
+    },
+    {
+      "title": "京张高铁试点自行车随身行",
+      "time": "2026-05-18 11:12:42",
+      "category": "{'article_id': 2373829, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56410, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373829, 'subject_id': 1550, 'subject_name': '高铁轨交', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12608, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 135, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373829"
+    },
+    {
+      "title": "国家统计局：国内物价保持稳定的基础没有改变",
+      "time": "2026-05-18 11:09:01",
+      "category": "{'article_id': 2373823, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56410, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373823, 'subject_id': 1741, 'subject_name': '海外大宗商品', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 33213, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373823, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18485, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'},{'article_id': 2373823, 'subject_id': 7733, 'subject_name': '促消费举措', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12325, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373823"
+    },
+    {
+      "title": "财联社5月18日电，丁二烯橡胶主力合约涨幅扩大至4%，报16120元/吨。",
+      "time": "2026-05-18 11:07:28",
+      "category": "{'article_id': 2373822, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56410, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373822, 'subject_id': 1528, 'subject_name': '橡胶', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8874, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 158, 'channel': 'cls'},{'article_id': 2373822, 'subject_id': 1497, 'subject_name': '轮胎', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11742, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 265, 'channel': 'cls'},{'article_id': 2373822, 'subject_id': 11397, 'subject_name': '软商品期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 5865, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373822"
+    },
+    {
+      "title": "俄副外长：将继续支持古巴应对美制裁压力",
+      "time": "2026-05-18 11:06:56",
+      "category": "{'article_id': 2373819, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156021, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373819"
+    },
+    {
+      "title": "【研选•行业数据】AI三大飞轮驱动存储全品类需求激增，2026年Q1全球存储公司业绩齐创历史新高，供需紧缺有望延续至2027年甚至更久",
+      "time": "2026-05-18 11:05:50",
+      "url": "https://www.cls.cn/detail/2373748"
+    },
+    {
+      "title": "上海市市长龚正：更大力度赋能集成电路、生物医药、人工智能等十大千亿级硬核产业集群发展",
+      "time": "2026-05-18 11:04:15",
+      "category": "{'article_id': 2373812, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101355, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2373812, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2373812, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24527, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2373812"
+    },
+    {
+      "title": "上海市市长龚正：到2030年全社会研发经费支出GDP占比提高到5%以上",
+      "time": "2026-05-18 11:03:30",
+      "category": "{'article_id': 2373811, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24527, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373811"
+    },
+    {
+      "title": "上海市经济信息化委主任汤文侃：到“十五五”末推动10万台人形机器人进工厂",
+      "time": "2026-05-18 11:02:53",
+      "category": "{'article_id': 2373809, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101355, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'stib,cls'},{'article_id': 2373809, 'subject_id': 1309, 'subject_name': '机器人', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 43924, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 201, 'channel': 'cls,stib'},{'article_id': 2373809, 'subject_id': 12683, 'subject_name': '人形机器人', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9685, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2067, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373809"
+    },
+    {
+      "title": "主力资金监控：华工科技净买入超20亿",
+      "time": "2026-05-18 10:56:11",
+      "related_stocks": "{'rise_range_has_null': 0.0119, 'RiseRange': 1.19, 'name': '巨轮智能', 'StockID': 'sz002031', 'schema': 'cailianshe://stock_detail?stock_id=sz002031', 'status': 'L', 'last': 8.5, 'is_stib': False},{'rise_range_has_null': -0.0813, 'RiseRange': -8.13, 'name': '粤 传 媒', 'StockID': 'sz002181', 'schema': 'cailianshe://stock_detail?stock_id=sz002181', 'status': 'L', 'last': 18.09, 'is_stib': False},{'rise_range_has_null': 0.0733, 'RiseRange': 7.3299994, 'name': '兆易创新', 'StockID': 'sh603986', 'schema': 'cailianshe://stock_detail?stock_id=sh603986', 'status': 'L', 'last': 402.87, 'is_stib': False},{'rise_range_has_null': 0.0393, 'RiseRange': 3.9299998, 'name': '东山精密', 'StockID': 'sz002384', 'schema': 'cailianshe://stock_detail?stock_id=sz002384', 'status': 'L', 'last': 211.34, 'is_stib': False},{'rise_range_has_null': 0.1002, 'RiseRange': 10.0199995, 'name': '再升科技', 'StockID': 'sh603601', 'schema': 'cailianshe://stock_detail?stock_id=sh603601', 'status': 'L', 'last': 18.56, 'is_stib': False},{'rise_range_has_null': 0.1, 'RiseRange': 10, 'name': '华工科技', 'StockID': 'sz000988', 'schema': 'cailianshe://stock_detail?stock_id=sz000988', 'status': 'L', 'last': 147.38, 'is_stib': False},{'rise_range_has_null': 0.0562, 'RiseRange': 5.6200004, 'name': '多氟多', 'StockID': 'sz002407', 'schema': 'cailianshe://stock_detail?stock_id=sz002407', 'status': 'L', 'last': 38.52, 'is_stib': False},{'rise_range_has_null': -0.0525, 'RiseRange': -5.25, 'name': '天孚通信', 'StockID': 'sz300394', 'schema': 'cailianshe://stock_detail?stock_id=sz300394', 'status': 'L', 'last': 378.99, 'is_stib': False}",
+      "category": "{'article_id': 2373802, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175122, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373802"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

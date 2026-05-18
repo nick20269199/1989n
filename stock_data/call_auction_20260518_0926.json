@@ -1,0 +1,357 @@
+{
+  "type": "call_auction",
+  "time": "2026-05-18 09:26:33",
+  "date": "2026-05-18",
+  "market_breadth": {
+    "up": 2753,
+    "down": 2753,
+    "flat": 0,
+    "limit_up": 13,
+    "limit_down": 10,
+    "total": 5529,
+    "avg_change": 0.21,
+    "details": [
+      {
+        "code": "001365",
+        "name": "N天海",
+        "change_pct": 197.9
+      },
+      {
+        "code": "300657",
+        "name": "弘信电子",
+        "change_pct": 19.99
+      },
+      {
+        "code": "300212",
+        "name": "*ST易录",
+        "change_pct": 19.93
+      },
+      {
+        "code": "688507",
+        "name": "索辰科技",
+        "change_pct": 13.27
+      },
+      {
+        "code": "002374",
+        "name": "中锐股份",
+        "change_pct": 10.14
+      },
+      {
+        "code": "000417",
+        "name": "合百集团",
+        "change_pct": 10.07
+      },
+      {
+        "code": "002208",
+        "name": "合肥城建",
+        "change_pct": 10.02
+      },
+      {
+        "code": "000672",
+        "name": "上峰水泥",
+        "change_pct": 10.01
+      },
+      {
+        "code": "603082",
+        "name": "北自科技",
+        "change_pct": 10.0
+      },
+      {
+        "code": "001259",
+        "name": "利仁科技",
+        "change_pct": 10.0
+      },
+      {
+        "code": "603726",
+        "name": "朗迪集团",
+        "change_pct": 10.0
+      },
+      {
+        "code": "603779",
+        "name": "威龙股份",
+        "change_pct": 9.98
+      },
+      {
+        "code": "002915",
+        "name": "中欣氟材",
+        "change_pct": 9.95
+      },
+      {
+        "code": "600676",
+        "name": "交运股份",
+        "change_pct": 9.66
+      },
+      {
+        "code": "600909",
+        "name": "华安证券",
+        "change_pct": 9.28
+      },
+      {
+        "code": "002409",
+        "name": "雅克科技",
+        "change_pct": 9.01
+      },
+      {
+        "code": "300721",
+        "name": "怡达股份",
+        "change_pct": 8.99
+      },
+      {
+        "code": "603986",
+        "name": "兆易创新",
+        "change_pct": 8.86
+      },
+      {
+        "code": "300691",
+        "name": "联合光电",
+        "change_pct": 8.76
+      },
+      {
+        "code": "601133",
+        "name": "柏诚股份",
+        "change_pct": 7.88
+      }
+    ]
+  },
+  "concept_auction": [
+    {
+      "name": "昨日打二板以上表现",
+      "change_pct": 2.7,
+      "turnover": 0.0,
+      "leading_stock": "利仁科技",
+      "leading_pct": 3
+    },
+    {
+      "name": "昨日连板_含一字",
+      "change_pct": 2.22,
+      "turnover": 0.0,
+      "leading_stock": "利仁科技",
+      "leading_pct": 7
+    },
+    {
+      "name": "昨日首板",
+      "change_pct": 1.48,
+      "turnover": 0.0,
+      "leading_stock": "中锐股份",
+      "leading_pct": 33
+    },
+    {
+      "name": "东方财富热股",
+      "change_pct": 1.35,
+      "turnover": 0.0,
+      "leading_stock": "上峰水泥",
+      "leading_pct": 55
+    },
+    {
+      "name": "昨日涨停_含一字",
+      "change_pct": 1.32,
+      "turnover": 0.0,
+      "leading_stock": "利仁科技",
+      "leading_pct": 41
+    },
+    {
+      "name": "电子车牌",
+      "change_pct": 1.31,
+      "turnover": 0.0,
+      "leading_stock": "南威软件",
+      "leading_pct": 7
+    },
+    {
+      "name": "国资云概念",
+      "change_pct": 1.14,
+      "turnover": 0.0,
+      "leading_stock": "云赛智联",
+      "leading_pct": 6
+    },
+    {
+      "name": "昨日涨停",
+      "change_pct": 0.8,
+      "turnover": 0.0,
+      "leading_stock": "中锐股份",
+      "leading_pct": 35
+    },
+    {
+      "name": "退税商店",
+      "change_pct": 0.75,
+      "turnover": 0.0,
+      "leading_stock": "合百集团",
+      "leading_pct": 5
+    },
+    {
+      "name": "昨日连板",
+      "change_pct": 0.74,
+      "turnover": 0.0,
+      "leading_stock": "北自科技",
+      "leading_pct": 3
+    }
+  ],
+  "industry_auction": [],
+  "limit_orders": {
+    "limit_up_strength": [
+      {
+        "code": "001365",
+        "name": "N天海",
+        "price": 81.0,
+        "change_pct": 197.9,
+        "volume": 20771,
+        "amount": 1.68,
+        "volume_ratio": "-",
+        "turnover_rate": 3.61,
+        "market_cap": 425.25
+      },
+      {
+        "code": "300657",
+        "name": "弘信电子",
+        "price": 43.4,
+        "change_pct": 19.99,
+        "volume": 46348,
+        "amount": 2.01,
+        "volume_ratio": 23.12,
+        "turnover_rate": 0.99,
+        "market_cap": 209.24
+      },
+      {
+        "code": "300212",
+        "name": "*ST易录",
+        "price": 7.22,
+        "change_pct": 19.93,
+        "volume": 86788,
+        "amount": 0.63,
+        "volume_ratio": 66.74,
+        "turnover_rate": 1.24,
+        "market_cap": 51.98
+      },
+      {
+        "code": "688507",
+        "name": "索辰科技",
+        "price": 121.79,
+        "change_pct": 13.27,
+        "volume": 5225,
+        "amount": 0.64,
+        "volume_ratio": 35.56,
+        "turnover_rate": 1.06,
+        "market_cap": 108.53
+      },
+      {
+        "code": "002374",
+        "name": "中锐股份",
+        "price": 3.91,
+        "change_pct": 10.14,
+        "volume": 119809,
+        "amount": 0.47,
+        "volume_ratio": 83.41,
+        "turnover_rate": 1.1,
+        "market_cap": 42.43
+      },
+      {
+        "code": "000417",
+        "name": "合百集团",
+        "price": 7.87,
+        "change_pct": 10.07,
+        "volume": 22301,
+        "amount": 0.18,
+        "volume_ratio": 12.04,
+        "turnover_rate": 0.29,
+        "market_cap": 61.38
+      },
+      {
+        "code": "002208",
+        "name": "合肥城建",
+        "price": 22.84,
+        "change_pct": 10.02,
+        "volume": 20925,
+        "amount": 0.48,
+        "volume_ratio": 4.85,
+        "turnover_rate": 0.26,
+        "market_cap": 183.47
+      },
+      {
+        "code": "000672",
+        "name": "上峰水泥",
+        "price": 18.9,
+        "change_pct": 10.01,
+        "volume": 47649,
+        "amount": 0.9,
+        "volume_ratio": 22.68,
+        "turnover_rate": 0.49,
+        "market_cap": 183.22
+      },
+      {
+        "code": "603082",
+        "name": "北自科技",
+        "price": 46.53,
+        "change_pct": 10.0,
+        "volume": 21767,
+        "amount": 1.01,
+        "volume_ratio": 122.39,
+        "turnover_rate": 5.37,
+        "market_cap": 75.48
+      },
+      {
+        "code": "001259",
+        "name": "利仁科技",
+        "price": 66.55,
+        "change_pct": 10.0,
+        "volume": 28235,
+        "amount": 1.88,
+        "volume_ratio": 735.8,
+        "turnover_rate": 5.94,
+        "market_cap": 48.97
+      },
+      {
+        "code": "603726",
+        "name": "朗迪集团",
+        "price": 30.15,
+        "change_pct": 10.0,
+        "volume": 11818,
+        "amount": 0.36,
+        "volume_ratio": 35.47,
+        "turnover_rate": 0.64,
+        "market_cap": 55.97
+      },
+      {
+        "code": "603779",
+        "name": "威龙股份",
+        "price": 10.91,
+        "change_pct": 9.98,
+        "volume": 10525,
+        "amount": 0.11,
+        "volume_ratio": 14.28,
+        "turnover_rate": 0.32,
+        "market_cap": 36.23
+      },
+      {
+        "code": "002915",
+        "name": "中欣氟材",
+        "price": 25.41,
+        "change_pct": 9.95,
+        "volume": 56179,
+        "amount": 1.43,
+        "volume_ratio": 106.14,
+        "turnover_rate": 1.95,
+        "market_cap": 85.19
+      }
+    ],
+    "limit_down_pressure": []
+  },
+  "portfolio_auction": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "auction_price": 57.6,
+      "prev_close": 57.02,
+      "auction_chg_pct": 1.02,
+      "open_volume": 13620,
+      "sector": "半导体封测"
+    },
+    {
+      "code": "000981",
+      "name": "山子高科",
+      "auction_price": 4.3,
+      "prev_close": 4.41,
+      "auction_chg_pct": -2.49,
+      "open_volume": 68617,
+      "sector": "汽车零部件/房地产"
+    }
+  ]
+}

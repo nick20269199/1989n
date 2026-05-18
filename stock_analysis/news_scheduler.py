@@ -32,11 +32,13 @@ import requests
 from config import (
     CLS_NEWS_FLASH_URL,
     HEADERS,
+    PROJECT_DIR,
     STOCK_DATA_DIR,
     NEWS_INTRADAY_INTERVAL_MINUTES,
     NEWS_MARKET_OPEN,
     NEWS_MARKET_CLOSE,
     FEISHU_BOT_CHAT_ID,
+    FEISHU_ROUTES,
     DATABASE_PATH,
 )
 from database import save_news, get_db
@@ -310,10 +312,20 @@ def transform_news(cls_items: list[dict]) -> list[dict]:
         ctime = item.get("ctime", 0)
         pub_time = ts_to_str(ctime) if ctime else ""
 
-        # 关联股票
+        # 关联股票 — CLS StockID 格式: "sz002031" 或 "sh603986"
         stock_list = item.get("stock_list") or []
         if isinstance(stock_list, list):
-            related_stocks = ",".join(str(s.get("code", s) if isinstance(s, dict) else s) for s in stock_list)
+            codes = []
+            for s in stock_list:
+                if isinstance(s, dict):
+                    sid = s.get("StockID", "") or s.get("code", "")
+                    # 去掉 sz/sh 前缀，保留纯数字代码
+                    clean = sid.replace("sz", "").replace("sh", "").replace("bj", "")
+                    if clean.isdigit():
+                        codes.append(clean)
+                elif s and str(s).strip():
+                    codes.append(str(s).strip())
+            related_stocks = ",".join(codes)
         else:
             related_stocks = ""
 
@@ -360,27 +372,36 @@ def save_news_json(news_items: list[dict], mode: str) -> str:
     }
     news_type = type_map.get(mode, "财经快讯")
 
-    # raw_data: 只保留 title 和 time 以匹配现有简洁格式
-    simple_data = []
+    # 保留完整字段：title + time + related_stocks + category
+    rich_data = []
     for item in news_items:
-        simple_data.append({
+        entry = {
             "title": item["title"],
             "time": item["pub_time"],
-        })
+        }
+        # CLS API 自带的股票标注（免费数据已有）
+        if item.get("related_stocks"):
+            entry["related_stocks"] = item["related_stocks"]
+        if item.get("category"):
+            entry["category"] = item["category"]
+        if item.get("url"):
+            entry["url"] = item["url"]
+        rich_data.append(entry)
 
     output = {
         "type": news_type,
         "time": timestamp_str(),
         "market_status": market_status,
-        "count": len(simple_data),
-        "data": simple_data,
+        "count": len(rich_data),
+        "data": rich_data,
+        "fields": "title,time,related_stocks,category,url",
     }
 
     STOCK_DATA_DIR.mkdir(parents=True, exist_ok=True)
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    logger.info(f"[JSON] 保存到 {filepath} ({len(simple_data)} 条)")
+    logger.info(f"[JSON] 保存到 {filepath} ({len(rich_data)} 条)")
     return str(filepath)
 
 
@@ -417,7 +438,7 @@ def _truncate_title(title: str, max_len: int = 100) -> str:
 def generate_markdown_summary(news_items: list[dict], mode: str) -> str:
     """生成 Markdown 格式的新闻摘要，用于飞书推送。"""
     now = now_cst()
-    mode_label = {"morning": "盘前早报", "evening": "盘后晚报"}.get(mode, "新闻快讯")
+    mode_label = {"morning": "盘前早报", "intraday": "盘中快讯", "evening": "盘后晚报"}.get(mode, "新闻快讯")
 
     lines = [
         f"**采集时间**: {now.strftime('%Y-%m-%d %H:%M:%S')}",
@@ -462,22 +483,23 @@ def generate_markdown_summary(news_items: list[dict], mode: str) -> str:
     return "\n".join(lines)
 
 
-def send_summary_via_feishu(news_items: list[dict], mode: str) -> bool:
-    """通过飞书推送新闻摘要。"""
-    if not FEISHU_BOT_CHAT_ID:
-        logger.info("[飞书] BOT_CHAT_ID 未配置，跳过推送")
+def send_summary_via_feishu(news_items: list[dict], mode: str, chat_id: str = "") -> bool:
+    """通过飞书推送新闻摘要。可指定群聊（路由名或原始 chat_id）。"""
+    target = FEISHU_ROUTES.get(chat_id) or chat_id or FEISHU_BOT_CHAT_ID
+    if not target:
+        logger.info("[飞书] 目标群未配置，跳过推送")
         return False
 
     if send_feishu_message is None:
         logger.warning("[飞书] feishu_sender 模块不可用，跳过推送")
         return False
 
-    mode_label = {"morning": "盘前早报", "evening": "盘后晚报"}.get(mode, mode)
+    mode_label = {"morning": "盘前早报", "intraday": "盘中快讯", "evening": "盘后晚报"}.get(mode, mode)
     title = f"财经快讯 - {mode_label} - {now_cst().strftime('%m/%d %H:%M')}"
     content = generate_markdown_summary(news_items, mode)
 
     try:
-        ok = send_feishu_message(title=title, content=content)
+        ok = send_feishu_message(title=title, content=content, chat_id=target)
         if ok:
             logger.info(f"[飞书] {mode_label} 推送成功 ({len(news_items)} 条)")
         else:
@@ -535,7 +557,7 @@ def run_morning() -> bool:
             traceback.print_exc()
 
         # 6. 飞书推送摘要
-        send_summary_via_feishu(unique_news, "morning")
+        send_summary_via_feishu(unique_news, "morning", chat_id="news")
 
         elapsed = time.time() - start_ts
         logger.info(f"[morning] 执行完成，耗时 {elapsed:.1f}s, 采集 {len(unique_news)} 条")
@@ -547,13 +569,34 @@ def run_morning() -> bool:
         return False
 
 
+# 盘中推送时间门控（避免每30分钟轰炸）
+_INTRADAY_PUSH_INTERVAL = 7200  # 2小时
+_INTRADAY_PUSH_FILE = PROJECT_DIR / "data" / "intraday_push_stamp"
+
+
+def _intraday_should_push() -> bool:
+    """检查距上次盘中推送是否超过间隔，未超时则不推送"""
+    if not _INTRADAY_PUSH_FILE.exists():
+        return True
+    try:
+        last = float(_INTRADAY_PUSH_FILE.read_text(encoding="utf-8").strip())
+        return (time.time() - last) >= _INTRADAY_PUSH_INTERVAL
+    except Exception:
+        return True
+
+
+def _intraday_mark_pushed():
+    _INTRADAY_PUSH_FILE.parent.mkdir(parents=True, exist_ok=True)
+    _INTRADAY_PUSH_FILE.write_text(str(time.time()), encoding="utf-8")
+
+
 def run_intraday() -> bool:
     """
     盘中模式: 采集实时快讯。
     - 检查市场是否开盘，休市则跳过
     - 拉取最新 50 条电报
     - 去重后保存 JSON 和数据库
-    - 不推送飞书 (盘中频率高，避免消息轰炸)
+    - 每2小时推送一次飞书 (盘中频率高，避免消息轰炸)
     """
     logger.info("=" * 60)
     logger.info("[intraday] 开始执行盘中快讯采集")
@@ -594,6 +637,13 @@ def run_intraday() -> bool:
         except Exception as e:
             logger.error(f"[intraday] 数据库保存失败: {e}")
             traceback.print_exc()
+
+        # 6. 飞书推送（每2小时推送一次汇总）
+        if _intraday_should_push():
+            send_summary_via_feishu(unique_news, "intraday", chat_id="news")
+            _intraday_mark_pushed()
+        else:
+            logger.info("[intraday] 距上次推送不足2小时，跳过飞书推送")
 
         elapsed = time.time() - start_ts
         logger.info(f"[intraday] 执行完成，耗时 {elapsed:.1f}s, 新增 {len(unique_news)} 条")
@@ -647,7 +697,7 @@ def run_evening() -> bool:
             traceback.print_exc()
 
         # 6. 飞书推送摘要
-        send_summary_via_feishu(unique_news, "evening")
+        send_summary_via_feishu(unique_news, "evening", chat_id="news")
 
         elapsed = time.time() - start_ts
         logger.info(f"[evening] 执行完成，耗时 {elapsed:.1f}s, 采集 {len(unique_news)} 条")

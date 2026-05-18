@@ -1,0 +1,192 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-18 13:00:03",
+  "market_status": "trading",
+  "count": 31,
+  "data": [
+    {
+      "title": "上交所：5月18日盘中即时起至收市暂停中韩半导体ETF华泰柏瑞 (513310)_交易业务",
+      "time": "2026-05-18 12:55:18",
+      "category": "{'article_id': 2373926, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101357, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2373926, 'subject_id': 1349, 'subject_name': '公募基金动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373926"
+    },
+    {
+      "title": "国务院国资委组织开展中央企业生态环境保护工作专题学习",
+      "time": "2026-05-18 12:52:59",
+      "category": "{'article_id': 2373925, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56413, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373925, 'subject_id': 1264, 'subject_name': '环保', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 19100, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 293, 'channel': 'cls'},{'article_id': 2373925, 'subject_id': 2693, 'subject_name': '碳中和', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18714, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 515, 'channel': 'cls'},{'article_id': 2373925, 'subject_id': 11409, 'subject_name': '碳中和期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10147, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373925"
+    },
+    {
+      "title": "上海：“十五五”要完善生育保险制度 深入实施多子女家庭差异化住房政策",
+      "time": "2026-05-18 12:52:17",
+      "url": "https://www.cls.cn/detail/2373917"
+    },
+    {
+      "title": "美参议员称要打击伊朗能源设施",
+      "time": "2026-05-18 12:46:26",
+      "category": "{'article_id': 2373915, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47536, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373915, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156028, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373915"
+    },
+    {
+      "title": "英国剑桥科学园推出30亿英镑扩建规划",
+      "time": "2026-05-18 12:44:53",
+      "category": "{'article_id': 2373910, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156028, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373910"
+    },
+    {
+      "title": "内塔尼亚胡称接近完成加沙行动一大目标",
+      "time": "2026-05-18 12:41:49",
+      "category": "{'article_id': 2373909, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47536, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373909"
+    },
+    {
+      "title": "黄海部分海域执行军事任务 禁止驶入",
+      "time": "2026-05-18 12:40:57",
+      "url": "https://www.cls.cn/detail/2373908"
+    },
+    {
+      "title": "《科创板日报》18日讯，消息传出，三星电子近期的高带宽存储器（HBM）用DRAM良率已大幅提升，1b DRAM良率达92%、1c DRAM破75%。",
+      "time": "2026-05-18 12:40:25",
+      "category": "{'article_id': 2373907, 'subject_id': 3063, 'subject_name': '存储器', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8902, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 412, 'channel': 'cls,stib'},{'article_id': 2373907, 'subject_id': 11072, 'subject_name': 'HBM', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10971, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2457, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373907"
+    },
+    {
+      "title": "英杰电气：截至目前公司AI电源相关产品尚未获得北美市场相关厂商认证",
+      "time": "2026-05-18 12:39:43",
+      "related_stocks": "300820",
+      "category": "{'article_id': 2373906, 'subject_id': 1786, 'subject_name': '互动平台精选', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 32275, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373906"
+    },
+    {
+      "title": "财联社5月18日电，巴基斯坦KSE-100指数下跌1%至164,373.60。",
+      "time": "2026-05-18 12:33:54",
+      "category": "{'article_id': 2373904, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156027, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373904"
+    },
+    {
+      "title": "【机构调研】这家公司高端晶圆光刻胶产业化提速，300吨KrF/ArF产线近期投产",
+      "time": "2026-05-18 12:32:58",
+      "url": "https://www.cls.cn/detail/2373896"
+    },
+    {
+      "title": "广西柳州凌晨5.2级地震 当地多家上市公司回应",
+      "time": "2026-05-18 12:32:28",
+      "related_stocks": "603368,000528,601003,600249,600423",
+      "url": "https://www.cls.cn/detail/2373903"
+    },
+    {
+      "title": "财联社5月18日电，花旗银行将英飞凌目标价从52欧元上调至80欧元。",
+      "time": "2026-05-18 12:30:51",
+      "category": "{'article_id': 2373902, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156027, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373902"
+    },
+    {
+      "title": "财联社5月18日电，三星电子工会称，将按原计划进行罢工。",
+      "time": "2026-05-18 12:24:42",
+      "category": "{'article_id': 2373899, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156027, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373899, 'subject_id': 2409, 'subject_name': '存储芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17837, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 412, 'channel': 'cls,stib'},{'article_id': 2373899, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373899"
+    },
+    {
+      "title": "一艘装载中东产液化天然气的运输船抵达日本",
+      "time": "2026-05-18 12:23:09",
+      "category": "{'article_id': 2373895, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56413, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373895, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47536, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373895, 'subject_id': 1522, 'subject_name': '天然气', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 20899, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 30, 'channel': 'cls'},{'article_id': 2373895, 'subject_id': 11394, 'subject_name': '能源类期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8500, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373895, 'subject_id': 11408, 'subject_name': '航运期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8402, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373895, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156027, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373895"
+    },
+    {
+      "title": "财联社5月18日电，英国央行副行长布里登表示，央行不应在利率问题上“操之过急”。",
+      "time": "2026-05-18 12:18:00",
+      "category": "{'article_id': 2373893, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156027, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373893"
+    },
+    {
+      "title": "财联社5月18日电，浙江时迈药业股份有限公司 - B在港交所提交IPO申请，独家保荐人为华泰国际。",
+      "time": "2026-05-18 12:17:28",
+      "category": "{'article_id': 2373892, 'subject_id': 1194, 'subject_name': '港股IPO动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 13804, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373892"
+    },
+    {
+      "title": "水利部启动水利抗震救灾调度指挥机制",
+      "time": "2026-05-18 12:12:42",
+      "category": "{'article_id': 2373889, 'subject_id': 9198, 'subject_name': '地震快讯', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9956, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373889, 'subject_id': 1703, 'subject_name': '水利', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 14197, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 154, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373889"
+    },
+    {
+      "title": "Anthropic将向全球金融监管机构通报Mythos模型相关情况",
+      "time": "2026-05-18 12:11:14",
+      "category": "{'article_id': 2373888, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2373888, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156028, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373888"
+    },
+    {
+      "title": "国家统计局：1—4月份我国高技术产品出口额同比增长27.6% 明显快于全部出口额",
+      "time": "2026-05-18 12:06:14",
+      "category": "{'article_id': 2373886, 'subject_id': 1090, 'subject_name': '汽车大新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28760, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 268, 'channel': 'cls'},{'article_id': 2373886, 'subject_id': 1354, 'subject_name': '新能源汽车', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 46235, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 170, 'channel': 'cls,stib'},{'article_id': 2373886, 'subject_id': 1313, 'subject_name': '锂电池', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37669, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 198, 'channel': 'cls,stib'},{'article_id': 2373886, 'subject_id': 1477, 'subject_name': '光伏', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 43994, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 140, 'channel': 'cls,stib'},{'article_id': 2373886, 'subject_id': 7733, 'subject_name': '促消费举措', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12325, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373886, 'subject_id': 1690, 'subject_name': '盐湖提锂', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 15874, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 93, 'channel': 'cls'},{'article_id': 2373886, 'subject_id': 1286, 'subject_name': '储能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22132, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 197, 'channel': 'cls,stib'},{'article_id': 2373886, 'subject_id': 1225, 'subject_name': '经济数据及解读', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 36877, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373886, 'subject_id': 1340, 'subject_name': '无人机', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12235, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 434, 'channel': 'cls'},{'article_id': 2373886, 'subject_id': 9408, 'subject_name': '数字消费', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10069, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373886"
+    },
+    {
+      "title": "财联社5月18日午间新闻精选",
+      "time": "2026-05-18 12:04:44",
+      "url": "https://www.cls.cn/detail/2373885"
+    },
+    {
+      "title": "恒生指数午盘跌1.35% 恒生科技指数跌2.08%",
+      "time": "2026-05-18 12:02:56",
+      "category": "{'article_id': 2373884, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27460, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373884"
+    },
+    {
+      "title": "上海市发展改革委主任刘健：未来五年新增高技能人才30万人次以上",
+      "time": "2026-05-18 12:00:20",
+      "url": "https://www.cls.cn/detail/2373879"
+    },
+    {
+      "title": "财联社5月18日电，日元兑美元下跌0.2%至159。",
+      "time": "2026-05-18 11:58:03",
+      "category": "{'article_id': 2373883, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156028, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373883"
+    },
+    {
+      "title": "5月18日午间涨停分析",
+      "time": "2026-05-18 11:52:32",
+      "related_stocks": "600578,001259,002552,603779",
+      "category": "{'article_id': 2373869, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175125, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373869"
+    },
+    {
+      "title": "国家铁路局：1—4月份全国铁路累计完成货物发送量17.27亿吨 同比增长2.8%",
+      "time": "2026-05-18 11:52:19",
+      "category": "{'article_id': 2373880, 'subject_id': 1550, 'subject_name': '高铁轨交', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12608, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 135, 'channel': 'cls'},{'article_id': 2373880, 'subject_id': 1503, 'subject_name': '煤炭', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 19751, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 56, 'channel': 'cls'},{'article_id': 2373880, 'subject_id': 1481, 'subject_name': '化肥', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12683, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 150, 'channel': 'cls'},{'article_id': 2373880, 'subject_id': 1369, 'subject_name': '农药', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9395, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 151, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373880"
+    },
+    {
+      "title": "国务院国资委：加快培养“AI+”复合型人才",
+      "time": "2026-05-18 11:48:47",
+      "category": "{'article_id': 2373874, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2373874, 'subject_id': 11460, 'subject_name': '新质生产力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 20892, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373874"
+    },
+    {
+      "title": "财联社5月18日电，印度sensex指数下跌1%至74,484.20点。",
+      "time": "2026-05-18 11:46:06",
+      "category": "{'article_id': 2373872, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156027, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373872"
+    },
+    {
+      "title": "财联社5月18日电，野村将三星电子目标价由34万韩元上调至59万韩元，将SK海力士目标价从234万韩元上调至400万韩元，评级均为“买入”。",
+      "time": "2026-05-18 11:45:26",
+      "category": "{'article_id': 2373871, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156028, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373871, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101356, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2373871, 'subject_id': 2409, 'subject_name': '存储芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17837, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 412, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373871"
+    },
+    {
+      "title": "报道称一架美军无人机在也门被击落",
+      "time": "2026-05-18 11:45:10",
+      "category": "{'article_id': 2373870, 'subject_id': 1340, 'subject_name': '无人机', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12235, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 434, 'channel': 'cls'},{'article_id': 2373870, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47536, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373870"
+    },
+    {
+      "title": "财联社5月18日电，交易员称，印度央行很可能在卢比兑美元汇率接近96.20附近卖出美元。",
+      "time": "2026-05-18 11:42:58",
+      "category": "{'article_id': 2373867, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156027, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373867"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

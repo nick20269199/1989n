@@ -1,174 +1,174 @@
 {
-  "title": "收盘复盘 | 2026-05-14日",
-  "date": "2026-05-14",
-  "time": "15:35:09",
+  "title": "收盘复盘 | 2026-05-18日",
+  "date": "2026-05-18",
+  "time": "15:35:10",
   "is_trading_hours": false,
   "holdings_report": {
     "holdings": [
       {
-        "code": "002156",
-        "name": "通富微电",
-        "sector": "半导体封测",
-        "shares": 2000,
-        "cost": 49.465,
-        "price": 57.4,
-        "high": 61.2,
-        "low": 57.39,
-        "change_pct": -5.69,
-        "volume": 130148166,
+        "code": "000981",
+        "name": "山子高科",
+        "sector": "汽车零部件/房地产",
+        "shares": 8000,
+        "cost": 4.411,
+        "price": 4.18,
+        "high": 4.35,
+        "low": 4.15,
+        "change_pct": -5.22,
+        "volume": 6620155,
         "turnover": 0,
-        "pnl_pct": 16.04,
-        "pnl_amt": 15870.0,
-        "position_value": 114800.0,
-        "stop_loss": 46.99,
-        "dist_to_stop": 18.14,
-        "status": "🟢 大幅盈利"
-      },
-      {
-        "code": "300480",
-        "name": "光力科技",
-        "sector": "半导体划片设备",
-        "shares": 400,
-        "cost": 36.28,
-        "price": 39.42,
-        "high": 40.8,
-        "low": 37.96,
-        "change_pct": 3.98,
-        "volume": 35233511,
-        "turnover": 0,
-        "pnl_pct": 8.65,
-        "pnl_amt": 1256.0,
-        "position_value": 15768.0,
-        "stop_loss": 34.47,
-        "dist_to_stop": 12.56,
-        "status": "🟡 盈利中"
-      },
-      {
-        "code": "002407",
-        "name": "多氟多",
-        "sector": "锂电化工",
-        "shares": 600,
-        "cost": 36.27,
-        "price": 33.15,
-        "high": 34.88,
-        "low": 33.15,
-        "change_pct": -3.18,
-        "volume": 96557034,
-        "turnover": 0,
-        "pnl_pct": -8.6,
-        "pnl_amt": -1872.0,
-        "position_value": 19890.0,
-        "stop_loss": 34.46,
-        "dist_to_stop": -3.95,
+        "pnl_pct": -5.24,
+        "pnl_amt": -1848.0,
+        "position_value": 33440.0,
+        "stop_loss": 4.19,
+        "dist_to_stop": -0.24,
         "status": "🔴 亏损"
-      },
-      {
-        "code": "300342",
-        "name": "天银机电",
-        "sector": "商业航天/军工电子",
-        "shares": 200,
-        "cost": 64.48,
-        "price": 58.91,
-        "high": 63.67,
-        "low": 58.87,
-        "change_pct": -7.71,
-        "volume": 49818841,
-        "turnover": 0,
-        "pnl_pct": -8.64,
-        "pnl_amt": -1114.0,
-        "position_value": 11782.0,
-        "stop_loss": 61.26,
-        "dist_to_stop": -3.99,
-        "status": "🔴 亏损"
-      },
-      {
-        "code": "300792",
-        "name": "壹网壹创",
-        "sector": "电商服务/数字营销",
-        "shares": 100,
-        "cost": 36.76,
-        "price": 35.11,
-        "high": 37.55,
-        "low": 35.08,
-        "change_pct": -4.77,
-        "volume": 7177200,
-        "turnover": 0,
-        "pnl_pct": -4.49,
-        "pnl_amt": -165.0,
-        "position_value": 3511.0,
-        "stop_loss": 34.92,
-        "dist_to_stop": 0.54,
-        "status": "⚠️ 临近止损"
       },
       {
         "code": "601789",
         "name": "宁波建工",
         "sector": "建筑工程/基建",
-        "shares": 2000,
-        "cost": 6.267,
-        "price": 6.13,
-        "high": 6.5,
-        "low": 6.12,
-        "change_pct": -2.08,
-        "volume": 108254136,
+        "shares": 5200,
+        "cost": 6.206,
+        "price": 6.26,
+        "high": 6.45,
+        "low": 6.03,
+        "change_pct": 3.47,
+        "volume": 1167936,
         "turnover": 0,
-        "pnl_pct": -2.19,
-        "pnl_amt": -274.0,
-        "position_value": 12260.0,
-        "stop_loss": 5.95,
-        "dist_to_stop": 2.94,
+        "pnl_pct": 0.87,
+        "pnl_amt": 280.8,
+        "position_value": 32552.0,
+        "stop_loss": 5.9,
+        "dist_to_stop": 5.75,
+        "status": "🟡 微利"
+      },
+      {
+        "code": "002156",
+        "name": "通富微电",
+        "sector": "半导体封测",
+        "shares": 1000,
+        "cost": 44.85,
+        "price": 58.07,
+        "high": 60.11,
+        "low": 57.06,
+        "change_pct": 1.84,
+        "volume": 1347766,
+        "turnover": 0,
+        "pnl_pct": 29.48,
+        "pnl_amt": 13220.0,
+        "position_value": 58070.0,
+        "stop_loss": 42.61,
+        "dist_to_stop": 26.62,
+        "status": "🟢 大幅盈利"
+      },
+      {
+        "code": "002208",
+        "name": "合肥城建",
+        "sector": "房地产",
+        "shares": 900,
+        "cost": 19.849,
+        "price": 22.84,
+        "high": 22.84,
+        "low": 22.84,
+        "change_pct": 10.02,
+        "volume": 62938,
+        "turnover": 0,
+        "pnl_pct": 15.07,
+        "pnl_amt": 2691.9,
+        "position_value": 20556.0,
+        "stop_loss": 18.86,
+        "dist_to_stop": 17.43,
+        "status": "🟢 大幅盈利"
+      },
+      {
+        "code": "300792",
+        "name": "壹网壹创",
+        "sector": "电商服务/数字营销",
+        "shares": 400,
+        "cost": 35.52,
+        "price": 37.03,
+        "high": 37.8,
+        "low": 34.55,
+        "change_pct": 4.96,
+        "volume": 108713,
+        "turnover": 0,
+        "pnl_pct": 4.25,
+        "pnl_amt": 604.0,
+        "position_value": 14812.0,
+        "stop_loss": 33.74,
+        "dist_to_stop": 8.88,
+        "status": "🟡 微利"
+      },
+      {
+        "code": "300339",
+        "name": "润和软件",
+        "sector": "金融科技/鸿蒙",
+        "shares": 300,
+        "cost": 44.91,
+        "price": 44.71,
+        "high": 45.77,
+        "low": 44.41,
+        "change_pct": -0.6,
+        "volume": 223399,
+        "turnover": 0,
+        "pnl_pct": -0.45,
+        "pnl_amt": -60.0,
+        "position_value": 13413.0,
+        "stop_loss": 42.66,
+        "dist_to_stop": 4.59,
         "status": "⚠️ 临近止损"
       },
       {
-        "code": "600236",
-        "name": "桂冠电力",
-        "sector": "水电/电力",
-        "shares": 6100,
-        "cost": 12.303,
-        "price": 11.13,
-        "high": 12.34,
-        "low": 10.79,
-        "change_pct": -7.02,
-        "volume": 67336546,
+        "code": "300136",
+        "name": "信维通信",
+        "sector": "消费电子/射频",
+        "shares": 300,
+        "cost": 115.22,
+        "price": 111.75,
+        "high": 117.0,
+        "low": 101.5,
+        "change_pct": 12.19,
+        "volume": 1327052,
         "turnover": 0,
-        "pnl_pct": -9.53,
-        "pnl_amt": -7155.3,
-        "position_value": 67893.0,
-        "stop_loss": 11.69,
-        "dist_to_stop": -5.03,
-        "status": "🔴 亏损"
+        "pnl_pct": -3.01,
+        "pnl_amt": -1041.0,
+        "position_value": 33525.0,
+        "stop_loss": 109.46,
+        "dist_to_stop": 2.05,
+        "status": "⚠️ 临近止损"
       }
     ],
-    "total_value": 245904.0,
-    "total_cost": 239358.3,
-    "total_pnl": 6545.7,
-    "total_pnl_pct": 2.73
+    "total_value": 206368.0,
+    "total_cost": 192520.3,
+    "total_pnl": 13847.7,
+    "total_pnl_pct": 7.19
   },
   "market_context": {
     "indices": [
       {
         "name": "上证指数",
         "code": "1.000001",
-        "price": 4177.9175,
-        "change_pct": -1.52
+        "price": 4131.5276,
+        "change_pct": -0.09
       },
       {
         "name": "深证成指",
         "code": "0.399001",
-        "price": 15745.736,
-        "change_pct": -2.14
+        "price": 15530.229,
+        "change_pct": -0.2
       },
       {
         "name": "创业板指",
         "code": "0.399006",
-        "price": 3951.14,
-        "change_pct": -2.16
+        "price": 3914.875,
+        "change_pct": -0.36
       },
       {
         "name": "科创50",
         "code": "1.000688",
-        "price": 1725.0932,
-        "change_pct": -2.55
+        "price": 1709.9627,
+        "change_pct": 0.81
       }
     ],
     "breadth": {}
@@ -176,72 +176,52 @@
   "hot_sectors": [],
   "actions": [
     {
-      "code": "002156",
-      "name": "通富微电",
-      "action": "考虑部分止盈",
-      "detail": "浮盈16.0%，评估是否分批锁利",
-      "urgency": "medium"
-    },
-    {
-      "code": "002407",
-      "name": "多氟多",
+      "code": "000981",
+      "name": "山子高科",
       "action": "关注",
-      "detail": "距止损位-4.0%，监控是否企稳",
-      "urgency": "medium"
-    },
-    {
-      "code": "300342",
-      "name": "天银机电",
-      "action": "关注",
-      "detail": "距止损位-4.0%，监控是否企稳",
-      "urgency": "medium"
-    },
-    {
-      "code": "300792",
-      "name": "壹网壹创",
-      "action": "关注",
-      "detail": "距止损位0.5%，监控是否企稳",
+      "detail": "距止损位-0.2%，监控是否企稳",
       "urgency": "medium"
     },
     {
       "code": "601789",
       "name": "宁波建工",
       "action": "关注",
-      "detail": "距止损位2.9%，监控是否企稳",
+      "detail": "距止损位5.8%，监控是否企稳",
       "urgency": "medium"
     },
     {
-      "code": "600236",
-      "name": "桂冠电力",
+      "code": "002156",
+      "name": "通富微电",
+      "action": "考虑部分止盈",
+      "detail": "浮盈29.5%，评估是否分批锁利",
+      "urgency": "medium"
+    },
+    {
+      "code": "002208",
+      "name": "合肥城建",
+      "action": "考虑部分止盈",
+      "detail": "浮盈15.1%，评估是否分批锁利",
+      "urgency": "medium"
+    },
+    {
+      "code": "300339",
+      "name": "润和软件",
       "action": "关注",
-      "detail": "距止损位-5.0%，监控是否企稳",
+      "detail": "距止损位4.6%，监控是否企稳",
+      "urgency": "medium"
+    },
+    {
+      "code": "300136",
+      "name": "信维通信",
+      "action": "关注",
+      "detail": "距止损位2.0%，监控是否企稳",
       "urgency": "medium"
     }
   ],
   "mcp_checklist": {
     "fund_flow_check": [
       {
-        "code": "002156",
-        "tool": "mcp__china-stock__get_fund_flow",
-        "purpose": "验证超大单方向是否与量价模型一致"
-      },
-      {
-        "code": "300480",
-        "tool": "mcp__china-stock__get_fund_flow",
-        "purpose": "验证超大单方向是否与量价模型一致"
-      },
-      {
-        "code": "002407",
-        "tool": "mcp__china-stock__get_fund_flow",
-        "purpose": "验证超大单方向是否与量价模型一致"
-      },
-      {
-        "code": "300342",
-        "tool": "mcp__china-stock__get_fund_flow",
-        "purpose": "验证超大单方向是否与量价模型一致"
-      },
-      {
-        "code": "300792",
+        "code": "000981",
         "tool": "mcp__china-stock__get_fund_flow",
         "purpose": "验证超大单方向是否与量价模型一致"
       },
@@ -251,34 +231,34 @@
         "purpose": "验证超大单方向是否与量价模型一致"
       },
       {
-        "code": "600236",
+        "code": "002156",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "002208",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "300792",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "300339",
+        "tool": "mcp__china-stock__get_fund_flow",
+        "purpose": "验证超大单方向是否与量价模型一致"
+      },
+      {
+        "code": "300136",
         "tool": "mcp__china-stock__get_fund_flow",
         "purpose": "验证超大单方向是否与量价模型一致"
       }
     ],
     "volume_price_phase": [
       {
-        "code": "002156",
-        "tool": "mcp__china-stock__get_hist_data",
-        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
-      },
-      {
-        "code": "300480",
-        "tool": "mcp__china-stock__get_hist_data",
-        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
-      },
-      {
-        "code": "002407",
-        "tool": "mcp__china-stock__get_hist_data",
-        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
-      },
-      {
-        "code": "300342",
-        "tool": "mcp__china-stock__get_hist_data",
-        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
-      },
-      {
-        "code": "300792",
+        "code": "000981",
         "tool": "mcp__china-stock__get_hist_data",
         "purpose": "识别当前处于VCP五阶段中的哪个阶段"
       },
@@ -288,34 +268,34 @@
         "purpose": "识别当前处于VCP五阶段中的哪个阶段"
       },
       {
-        "code": "600236",
+        "code": "002156",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "002208",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "300792",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "300339",
+        "tool": "mcp__china-stock__get_hist_data",
+        "purpose": "识别当前处于VCP五阶段中的哪个阶段"
+      },
+      {
+        "code": "300136",
         "tool": "mcp__china-stock__get_hist_data",
         "purpose": "识别当前处于VCP五阶段中的哪个阶段"
       }
     ],
     "investor_sentiment": [
       {
-        "code": "002156",
-        "tool": "mcp__china-stock__get_investor_sentiment",
-        "purpose": "补充情绪数据辅助判断"
-      },
-      {
-        "code": "300480",
-        "tool": "mcp__china-stock__get_investor_sentiment",
-        "purpose": "补充情绪数据辅助判断"
-      },
-      {
-        "code": "002407",
-        "tool": "mcp__china-stock__get_investor_sentiment",
-        "purpose": "补充情绪数据辅助判断"
-      },
-      {
-        "code": "300342",
-        "tool": "mcp__china-stock__get_investor_sentiment",
-        "purpose": "补充情绪数据辅助判断"
-      },
-      {
-        "code": "300792",
+        "code": "000981",
         "tool": "mcp__china-stock__get_investor_sentiment",
         "purpose": "补充情绪数据辅助判断"
       },
@@ -325,7 +305,27 @@
         "purpose": "补充情绪数据辅助判断"
       },
       {
-        "code": "600236",
+        "code": "002156",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "002208",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "300792",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "300339",
+        "tool": "mcp__china-stock__get_investor_sentiment",
+        "purpose": "补充情绪数据辅助判断"
+      },
+      {
+        "code": "300136",
         "tool": "mcp__china-stock__get_investor_sentiment",
         "purpose": "补充情绪数据辅助判断"
       }

@@ -20,101 +20,51 @@
 import json
 import sys
 import time
-import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import Optional
 
-HEADERS = {"Referer": "https://finance.sina.com.cn"}
+from market_pool import MarketPool
+from market_pool.stock_list import filter_stocks, load_stock_list as mp_load_stock_list
 
-# ── 默认关注池 (备用) ──
-WATCHLIST = [
-    {"code": "002156", "name": "通富微电"},
-    {"code": "603005", "name": "晶丰明源"},
-    {"code": "300782", "name": "卓胜微"},
-    {"code": "688981", "name": "中芯国际"},
-    {"code": "300750", "name": "宁德时代"},
-    {"code": "002594", "name": "比亚迪"},
-    {"code": "601012", "name": "隆基绿能"},
-    {"code": "600030", "name": "中信证券"},
-    {"code": "601688", "name": "华泰证券"},
-    {"code": "600519", "name": "贵州茅台"},
-    {"code": "000858", "name": "五粮液"},
-    {"code": "600276", "name": "恒瑞医药"},
-    {"code": "300760", "name": "迈瑞医疗"},
-    {"code": "000062", "name": "深圳华强"},
-    {"code": "600236", "name": "桂冠电力"},
-    {"code": "000601", "name": "韶能股份"},
-    {"code": "002180", "name": "纳思达"},
-]
+pool = MarketPool()
 
 
 # ═══════════════════════════════════════════════════
 #  数据获取
 # ═══════════════════════════════════════════════════
 
-def fetch(url, timeout=10, encoding="gbk"):
-    req = urllib.request.Request(url, headers=HEADERS)
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return r.read().decode(encoding, errors="replace")
-    except Exception:
-        return None
-
-
 def get_all_a_stocks() -> list[dict]:
-    """新浪全A股列表 (分页, 返回全部 5000+ 只)。"""
-    stocks = []
-    for page in range(1, 100):
-        url = ("https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/"
-               "Market_Center.getHQNodeData?"
-               f"page={page}&num=100&sort=code&asc=1&node=hs_a&symbol=&_s_r_a=page")
-        resp = fetch(url, encoding="utf-8")
-        if not resp or resp.strip() == "null":
-            break
-        try:
-            data = json.loads(resp)
-            if not data:
-                break
-            for item in data:
-                stocks.append({"code": item["code"], "name": item["name"]})
-        except Exception:
-            break
-        if len(data) < 100:
-            break
-    if stocks:
-        return stocks
-    print("⚠ 数据源失效, 使用预设关注池", file=sys.stderr)
-    return WATCHLIST
+    """market_pool 全A股列表 (本地缓存, 毫秒级)。"""
+    stocks = mp_load_stock_list()
+    stocks = filter_stocks(stocks, exclude_st=True, exclude_bj=True, exclude_kcb=True)
+    return stocks
 
 
 def get_kline(code: str, days: int = 120) -> list[dict]:
-    """搜狐 K 线, 正序 (旧→新)。"""
-    end = datetime.now().strftime("%Y%m%d")
-    start = (datetime.now() - timedelta(days=days + 10)).strftime("%Y%m%d")
-    url = f"https://q.stock.sohu.com/hisHq?code=cn_{code.strip()}&start={start}&end={end}"
-    resp = fetch(url, encoding="utf-8")
-    if not resp:
+    """market_pool K线 + 涨跌幅计算, 正序 (旧→新)。"""
+    df = pool.get_kline(code, days)
+    if df is None or df.empty:
         return []
-    try:
-        data = json.loads(resp)
-        if not data or "hq" not in data[0] or not data[0]["hq"]:
-            return []
-        bars = []
-        for row in data[0]["hq"]:
-            bars.append({
-                "date": row[0],
-                "open": float(row[1]),
-                "close": float(row[2]),
-                "change_pct": row[4].replace("%", "").strip(),
-                "low": float(row[5]),
-                "high": float(row[6]),
-                "volume": int(row[7]) if row[7] else 0,
-            })
-        bars.reverse()
-        return bars
-    except Exception:
-        return []
+    bars = []
+    prev_close = None
+    for _, row in df.iterrows():
+        close = float(row["close"])
+        if prev_close is not None:
+            change_pct = (close - prev_close) / prev_close * 100
+        else:
+            change_pct = 0.0
+        prev_close = close
+        bars.append({
+            "date": str(row["date"]),
+            "open": float(row["open"]),
+            "close": close,
+            "high": float(row["high"]),
+            "low": float(row["low"]),
+            "volume": float(row["volume"]),
+            "change_pct": change_pct,
+        })
+    return bars
 
 
 # ═══════════════════════════════════════════════════

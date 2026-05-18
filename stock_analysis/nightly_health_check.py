@@ -13,38 +13,24 @@ import sys
 import json
 import shutil
 import subprocess
-import requests
 from datetime import datetime
 from pathlib import Path
 
-FEISHU_WEBHOOK = "https://open.feishu.cn/open-apis/bot/v2/hook/cli_a952c17c65f85cb2"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from feishu_sender import send_feishu_alert
+from config import FEISHU_ROUTES
+
+_ALERT_CHAT_ID = FEISHU_ROUTES.get("alerts", "")
 
 # ── helpers ──────────────────────────────────────────────
 
 def send_feishu(title, content_lines):
-    """发送飞书富文本消息，返回是否成功"""
-    elements = []
-    for i, line in enumerate(content_lines):
-        elements.append({
-            "tag": "div",
-            "text": {"tag": "lark_md", "content": line}
-        })
-    payload = {
-        "msg_type": "interactive",
-        "card": {
-            "header": {
-                "title": {"tag": "plain_text", "content": title},
-                "template": "red" if "告警" in title else "blue"
-            },
-            "elements": elements
-        }
-    }
-    try:
-        r = requests.post(FEISHU_WEBHOOK, json=payload, timeout=10)
-        return r.status_code == 200
-    except Exception as e:
-        print(f"[ERROR] Feishu send failed: {e}")
+    """发送飞书告警到问题组"""
+    if not _ALERT_CHAT_ID:
+        print("[ERROR] 问题组 chat_id 未配置")
         return False
+    content = "\n".join(content_lines)
+    return send_feishu_alert(title, content, chat_id=_ALERT_CHAT_ID)
 
 
 def check_disk(path, label):
@@ -104,6 +90,23 @@ def check_windows_tasks():
         return [f"检查计划任务异常: {e}"]
 
 
+def _get_cron_threshold(cron_expr: str) -> float:
+    """根据cron表达式返回合适的过期阈值（小时）。
+
+    工作日任务 (1-5) 周末有 ~64h 空档，用 75h 阈值避免周一误报。
+    """
+    parts = cron_expr.split()
+    if len(parts) >= 5:
+        dow = parts[4].strip()
+        # 纯周末：周日(0)和周六(6)，若今天周一且上次周五行，也有类似空档
+        if dow in ("1-5", "1,2,3,4,5"):
+            return 75
+        # * 以外的其它模式也放宽
+        if dow != "*":
+            return 60
+    return 48
+
+
 def check_claude_cron():
     """检查 scheduled_tasks.json，返回告警列表"""
     alerts = []
@@ -131,12 +134,13 @@ def check_claude_cron():
         for t in tasks:
             name = t.get("id", "?")
             cron = t.get("cron", "?")
+            threshold = _get_cron_threshold(cron)
             last_fired = t.get("lastFiredAt")
             if last_fired:
                 hours_since = (now_ts - last_fired) / 3600000
-                if hours_since > 48:
+                if hours_since > threshold:
                     alerts.append(
-                        f"**{cron}** 上次触发 {hours_since:.0f}小时前，可能过期"
+                        f"**{cron}** 上次触发 {hours_since:.0f}小时前（阈值{threshold:.0f}h），可能过期"
                     )
             else:
                 # 新任务还没触发过，不算问题

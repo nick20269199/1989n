@@ -1,11 +1,11 @@
 {
   "85164940078": {
     "name": "好运佛系",
-    "total_videos": 63,
-    "date_range": "2022-01-16 ~ 2026-05-09",
+    "total_videos": 84,
+    "date_range": "2022-01-16 ~ 2026-05-15",
     "sentiment_distribution": {
       "on_strong": 11,
-      "on_normal": 43,
+      "on_normal": 64,
       "on_weak": 9
     },
     "next_day": {
@@ -75,11 +75,11 @@
   },
   "Trader9": {
     "name": "Trader韭",
-    "total_videos": 63,
-    "date_range": "2024-08-28 ~ 2026-05-09",
+    "total_videos": 75,
+    "date_range": "2024-08-28 ~ 2026-05-16",
     "sentiment_distribution": {
       "on_strong": 10,
-      "on_normal": 47,
+      "on_normal": 59,
       "on_weak": 6
     },
     "next_day": {
@@ -149,11 +149,11 @@
   },
   "Cyclequeen": {
     "name": "周期女王",
-    "total_videos": 42,
-    "date_range": "2024-11-29 ~ 2026-05-09",
+    "total_videos": 45,
+    "date_range": "2024-11-29 ~ 2026-05-12",
     "sentiment_distribution": {
       "on_strong": 3,
-      "on_normal": 37,
+      "on_normal": 40,
       "on_weak": 2
     },
     "next_day": {
@@ -223,11 +223,11 @@
   },
   "xiaositv": {
     "name": "小司频道",
-    "total_videos": 62,
-    "date_range": "2024-12-26 ~ 2026-05-08",
+    "total_videos": 65,
+    "date_range": "2024-12-26 ~ 2026-05-14",
     "sentiment_distribution": {
       "on_strong": 9,
-      "on_normal": 47,
+      "on_normal": 50,
       "on_weak": 6
     },
     "next_day": {
@@ -297,11 +297,11 @@
   },
   "Zihui518": {
     "name": "子辉先生",
-    "total_videos": 63,
-    "date_range": "2025-02-02 ~ 2026-05-10",
+    "total_videos": 107,
+    "date_range": "2025-02-02 ~ 2026-05-15",
     "sentiment_distribution": {
       "on_strong": 15,
-      "on_normal": 48,
+      "on_normal": 92,
       "on_weak": 0
     },
     "next_day": {
@@ -371,11 +371,11 @@
   },
   "guojame": {
     "name": "创业魔法师",
-    "total_videos": 63,
-    "date_range": "2025-02-22 ~ 2026-05-10",
+    "total_videos": 151,
+    "date_range": "2025-02-22 ~ 2026-05-16",
     "sentiment_distribution": {
       "on_strong": 7,
-      "on_normal": 55,
+      "on_normal": 143,
       "on_weak": 1
     },
     "next_day": {
@@ -445,11 +445,11 @@
   },
   "kaixin2091": {
     "name": "凯心",
-    "total_videos": 61,
-    "date_range": "2025-09-28 ~ 2026-05-10",
+    "total_videos": 63,
+    "date_range": "2025-09-28 ~ 2026-05-12",
     "sentiment_distribution": {
       "on_strong": 6,
-      "on_normal": 47,
+      "on_normal": 49,
       "on_weak": 8
     },
     "next_day": {
@@ -593,11 +593,11 @@
   },
   "6052m9121": {
     "name": "太阳李博良",
-    "total_videos": 60,
-    "date_range": "2026-03-16 ~ 2026-05-10",
+    "total_videos": 66,
+    "date_range": "2026-03-16 ~ 2026-05-15",
     "sentiment_distribution": {
       "on_strong": 11,
-      "on_normal": 39,
+      "on_normal": 45,
       "on_weak": 10
     },
     "next_day": {
@@ -667,11 +667,11 @@
   },
   "yanbao60": {
     "name": "口罩哥研报60秒",
-    "total_videos": 60,
-    "date_range": "2026-04-29 ~ 2026-05-10",
+    "total_videos": 91,
+    "date_range": "2026-04-29 ~ 2026-05-15",
     "sentiment_distribution": {
       "on_strong": 8,
-      "on_normal": 52,
+      "on_normal": 83,
       "on_weak": 0
     },
     "next_day": {

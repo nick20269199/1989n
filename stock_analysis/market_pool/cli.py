@@ -27,12 +27,13 @@ def setup_logging(verbose=False):
 
 def cmd_update(args):
     pool = MarketPool()
+    days = int(args.get("--days", "5"))
     if args.get("--watch"):
-        result = pool.update_watchlist()
+        result = pool.update_watchlist(days=days)
         print(json.dumps(result, ensure_ascii=False, indent=2))
     else:
         workers = int(args.get("--workers", "15"))
-        result = pool.update_all(workers=workers)
+        result = pool.update_all(days=days, workers=workers)
         print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
@@ -72,6 +73,16 @@ def cmd_stats(args):
     print(f"  元数据: {stats['meta_count']} 只")
     print(f"  磁盘: {stats['size_mb']:.1f} MB")
     print(f"  持仓: {stats['watchlist_count']} 只")
+
+
+def cmd_import_tdx(args):
+    """从通达信导入日线数据到本地缓存"""
+    from .tdx_loader import import_tdx_to_pool
+    workers = int(args.get("--workers", "8"))
+    result = import_tdx_to_pool(workers=workers)
+    print(f"通达信导入完成: {result['imported']}/{result['total']} 只导入, "
+          f"{result['skipped']} 只跳过, {result['failed']} 只失败")
+    return result
 
 
 def cmd_check(args):
@@ -138,6 +149,7 @@ def main():
         "indices": cmd_indices,
         "stats": cmd_stats,
         "check": cmd_check,
+        "import-tdx": cmd_import_tdx,
     }
     fn = commands.get(cmd)
     if fn:

@@ -18,7 +18,7 @@ import os
 
 from feishu_im_sender import send_text as _im_send_text
 from feishu_im_sender import send_card as _im_send_card
-from config import FEISHU_BOT_CHAT_ID
+from config import FEISHU_BOT_CHAT_ID, FEISHU_ROUTES
 
 logger = logging.getLogger("feishu_sender")
 
@@ -26,6 +26,13 @@ _SEND_ENABLED = os.getenv("FEISHU_SEND_ENABLED", "false").lower() in ("1", "true
 
 _MAX_MSGS_PER_MINUTE = 15
 _send_timestamps: deque[float] = deque()
+
+
+def _resolve_chat_id(route_or_id: str = "") -> str:
+    """返回真实 chat_id：支持路由名（如 'news'）或原始 chat_id"""
+    if not route_or_id:
+        return FEISHU_BOT_CHAT_ID
+    return FEISHU_ROUTES.get(route_or_id, route_or_id)
 
 
 def _check_rate_limit() -> None:
@@ -49,21 +56,23 @@ def _validate_config() -> bool:
     return True
 
 
-def send_feishu_message(title: str, content: str) -> bool:
-    """发送 Markdown 格式卡片消息 (标题 + 内容)。"""
-    if not _validate_config():
+def send_feishu_message(title: str, content: str, chat_id: str = "") -> bool:
+    """发送 Markdown 格式卡片消息 (标题 + 内容)。可指定群聊或路由名。"""
+    target = _resolve_chat_id(chat_id)
+    if not target:
         return False
     if not _SEND_ENABLED:
         logger.info(f"[飞书关] 跳过发送: {title}")
         return True
     _check_rate_limit()
     md = f"{content}\n\n---\n*{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*"
-    return _im_send_card(FEISHU_BOT_CHAT_ID, title, md)
+    return _im_send_card(target, title, md)
 
 
-def send_feishu_card(title: str, sections: list[dict]) -> bool:
-    """发送多段卡片消息，每段为 markdown/plain_text。"""
-    if not _validate_config():
+def send_feishu_card(title: str, sections: list[dict], chat_id: str = "") -> bool:
+    """发送多段卡片消息，每段为 markdown/plain_text。可指定群聊或路由名。"""
+    target = _resolve_chat_id(chat_id)
+    if not target:
         return False
     if not _SEND_ENABLED:
         logger.info(f"[飞书关] 跳过发送卡片: {title}")
@@ -75,12 +84,13 @@ def send_feishu_card(title: str, sections: list[dict]) -> bool:
         if content:
             lines.append(content)
     md = "\n\n".join(lines)
-    return _im_send_card(FEISHU_BOT_CHAT_ID, title, md)
+    return _im_send_card(target, title, md)
 
 
-def send_feishu_alert(title: str, content: str) -> bool:
-    """发送高优先级告警消息 (红色标题)。"""
-    if not _validate_config():
+def send_feishu_alert(title: str, content: str, chat_id: str = "") -> bool:
+    """发送高优先级告警消息 (红色标题)。可指定群聊或路由名。"""
+    target = _resolve_chat_id(chat_id)
+    if not target:
         return False
     if not _SEND_ENABLED:
         logger.info(f"[飞书关] 跳过告警: {title}")
@@ -92,18 +102,19 @@ def send_feishu_alert(title: str, content: str) -> bool:
         f"**<font color='red'>[紧急告警]</font>**\n\n"
         f"{content}\n\n---\n告警时间: {timestamp}"
     )
-    return _im_send_card(FEISHU_BOT_CHAT_ID, alert_title, md, color="red")
+    return _im_send_card(target, alert_title, md, color="red")
 
 
-def send_text_message(text: str) -> bool:
-    """发送纯文本消息 (最简单形式)。"""
-    if not _validate_config():
+def send_text_message(text: str, chat_id: str = "") -> bool:
+    """发送纯文本消息。可指定群聊或路由名。"""
+    target = _resolve_chat_id(chat_id)
+    if not target:
         return False
     if not _SEND_ENABLED:
         logger.info(f"[飞书关] 跳过文本: {text[:50]}...")
         return True
     _check_rate_limit()
-    return _im_send_text(FEISHU_BOT_CHAT_ID, text)
+    return _im_send_text(target, text)
 
 
 if __name__ == "__main__":

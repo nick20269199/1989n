@@ -1,16 +1,21 @@
 {
   "holdings": [
-    {"code": "002156", "name": "通富微电",   "shares": 2000, "cost": 49.465, "sector": "半导体封测",     "first_buy": "2026-04-27", "latest_buy": "2026-04-29"},
-    {"code": "300480", "name": "光力科技",   "shares": 400,  "cost": 36.28,  "sector": "半导体划片设备",   "first_buy": "2026-04-30", "latest_buy": "2026-04-30"},
-    {"code": "002407", "name": "多氟多",     "shares": 600,  "cost": 36.27,  "sector": "锂电化工",         "first_buy": "2026-05-06", "latest_buy": "2026-05-07"},
-    {"code": "300342", "name": "天银机电",   "shares": 200,  "cost": 64.48,  "sector": "商业航天/军工电子", "first_buy": "2026-05-08", "latest_buy": "2026-05-08"},
-    {"code": "300792", "name": "壹网壹创",   "shares": 100,  "cost": 36.76,  "sector": "电商服务/数字营销", "first_buy": "2026-05-13", "latest_buy": "2026-05-13"},
-    {"code": "601789", "name": "宁波建工",   "shares": 2000, "cost": 6.267,  "sector": "建筑工程/基建",    "first_buy": "2026-05-05", "latest_buy": "2026-05-13"},
-    {"code": "600236", "name": "桂冠电力",   "shares": 6100, "cost": 12.303, "sector": "水电/电力",       "first_buy": "2026-05-12", "latest_buy": "2026-05-12"}
+    {"code": "000981", "name": "山子高科",   "shares": 8000, "cost": 4.411, "sector": "汽车零部件/房地产",  "first_buy": "2026-05-15", "latest_buy": "2026-05-18"},
+    {"code": "601789", "name": "宁波建工",   "shares": 5200, "cost": 6.206, "sector": "建筑工程/基建",      "first_buy": "2026-05-05", "latest_buy": "2026-05-15"},
+    {"code": "002156", "name": "通富微电",   "shares": 1000, "cost": 44.85, "sector": "半导体封测",         "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
+    {"code": "002208", "name": "合肥城建",   "shares": 900,  "cost": 19.849,"sector": "房地产",             "first_buy": "2026-05-15", "latest_buy": "2026-05-15"},
+    {"code": "300792", "name": "壹网壹创",   "shares": 400,  "cost": 35.52, "sector": "电商服务/数字营销",   "first_buy": "2026-05-13", "latest_buy": "2026-05-18"},
+    {"code": "300339", "name": "润和软件",   "shares": 300,  "cost": 44.91, "sector": "金融科技/鸿蒙",       "first_buy": "2026-05-18", "latest_buy": "2026-05-18"},
+    {"code": "300136", "name": "信维通信",   "shares": 300,  "cost": 115.22,"sector": "消费电子/射频",       "first_buy": "2026-05-18", "latest_buy": "2026-05-18"}
   ],
   "cleared": [
-    {"code": "000062", "name": "深圳华强", "closed_price": 37.2,  "pnl": -160,   "closed_date": "2026-05-12"},
-    {"code": "300739", "name": "明阳电路", "closed_price": 30.35, "pnl": -1740.9, "closed_date": "2026-05-13"}
+    {"code": "000062", "name": "深圳华强", "closed_price": 37.20, "pnl": -160,   "closed_date": "2026-05-12"},
+    {"code": "300739", "name": "明阳电路", "closed_price": 30.35, "pnl": -1741,  "closed_date": "2026-05-13"},
+    {"code": "300480", "name": "光力科技", "closed_price": 39.60, "pnl": 1328,   "closed_date": "2026-05-14"},
+    {"code": "300342", "name": "天银机电", "closed_price": 59.89, "pnl": -1390,  "closed_date": "2026-05-14"},
+    {"code": "600236", "name": "桂冠电力", "closed_price": 10.90, "pnl": -8558,  "closed_date": "2026-05-14"},
+    {"code": "002407", "name": "多氟多",   "closed_price": 36.47, "pnl": 120,    "closed_date": "2026-05-15"},
+    {"code": "002050", "name": "三花智控", "closed_price": 52.96, "pnl": 2447,   "closed_date": "2026-05-18"}
   ],
-  "updated": "2026-05-13"
+  "updated": "2026-05-18"
 }

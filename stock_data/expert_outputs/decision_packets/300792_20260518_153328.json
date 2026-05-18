@@ -1,0 +1,47 @@
+{
+  "symbol": "300792",
+  "name": "壹网壹创",
+  "timestamp": "2026-05-18T15:33:28.122659",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.82,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 1.0,
+      "margin": 0.9,
+      "logic": 0.9
+    },
+    "failures": [],
+    "merged_direction": "观望",
+    "merged_confidence": 0.62,
+    "summary": "三位专家虽方法各异（情绪/技术/资金），但方向高度一致指向‘观望’；专家1报告最完整，覆盖五维全部要素且逻辑闭环，可作为主干依据；专家2与3提供交叉验证与边际补充，整体分析透明、可证伪、具操作性。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.82,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 1.0,\n    \"margin\": 0.9,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"观望\",\n  \"merged_confidence\": 0.62,\n  \"summary\": \"三位专家虽方法各异（情绪/技术/资金），但方向高度一致指向‘观望’；专家1报告最完整，覆盖五维全部要素且逻辑闭环，可作为主干依据；专家2与3提供交叉验证与边际补充，整体分析透明、可证伪、具操作性。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.62,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert1_tech",
+      "direction": "观望",
+      "confidence": 0.4,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

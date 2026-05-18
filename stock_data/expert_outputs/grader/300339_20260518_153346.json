@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.82,
+  "scores": {
+    "direction": 1.0,
+    "method": 1.0,
+    "trajectory": 1.0,
+    "margin": 1.0,
+    "logic": 0.9
+  },
+  "failures": [],
+  "merged_direction": "观望",
+  "merged_confidence": 0.64,
+  "summary": "三位专家均给出明确方向（2×观望、1×空），方法透明、轨迹完整、边际清晰、逻辑闭环；虽专家2持空观点，但其分析亦含明确失效条件与反思，整体符合五维门禁高分标准，综合判定为‘观望’，置信度取加权中位数水平。",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.82,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 1.0,\n    \"margin\": 1.0,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"观望\",\n  \"merged_confidence\": 0.64,\n  \"summary\": \"三位专家均给出明确方向（2×观望、1×空），方法透明、轨迹完整、边际清晰、逻辑闭环；虽专家2持空观点，但其分析亦含明确失效条件与反思，整体符合五维门禁高分标准，综合判定为‘观望’，置信度取加权中位数水平。\"\n}\n```"
+}

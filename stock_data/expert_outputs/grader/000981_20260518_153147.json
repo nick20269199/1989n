@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.82,
+  "scores": {
+    "direction": 1.0,
+    "method": 1.0,
+    "trajectory": 0.93,
+    "margin": 0.87,
+    "logic": 0.93
+  },
+  "failures": [],
+  "merged_direction": "多",
+  "merged_confidence": 0.73,
+  "summary": "三位专家一致看多，方法透明、轨迹清晰、边际完备、逻辑闭环；虽细节颗粒度略有差异（如entry zone宽幅4.15–4.30 vs 精确突破位4.58），但核心驱动（智能驾驶新题材+唯一首板+量价共振+均线多头）高度共识，具备可执行性。分析仅供参考，不构成投资建议。",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.82,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.93,\n    \"margin\": 0.87,\n    \"logic\": 0.93\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.73,\n  \"summary\": \"三位专家一致看多，方法透明、轨迹清晰、边际完备、逻辑闭环；虽细节颗粒度略有差异（如entry zone宽幅4.15–4.30 vs 精确突破位4.58），但核心驱动（智能驾驶新题材+唯一首板+量价共振+均线多头）高度共识，具备可执行性。分析仅供参考，不构成投资建议。\"\n}\n```"
+}

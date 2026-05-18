@@ -1,27 +1,43 @@
 {
-  "Cyclequeen": {
-    "name": "周期女王",
-    "total_videos": 42,
-    "final_score": 41.5,
+  "6052m9121": {
+    "name": "太阳李博良",
+    "total_videos": 66,
+    "final_score": 115.9,
     "breakdown": {
-      "R1_预测密度": 20.0,
-      "R2_话题专注": 0,
-      "R3_行为模式": 9.0,
+      "R1_预测密度": 57.4,
+      "R2_话题专注": 20,
+      "R3_行为模式": 21.0,
       "R4_逆向指标": 12.5,
-      "数据覆盖Bonus": 0
+      "数据覆盖Bonus": 5
     },
     "key_strength": "R1_预测密度",
-    "key_weakness": "R2_话题专注",
-    "recommendation": "C级: 谨慎参考，存在明显短板"
+    "key_weakness": "R4_逆向指标",
+    "recommendation": "A级: 高优先级跟踪，可用于投资决策参考",
+    "note": "非财经号，自我成长/认知类博主，定量高分来自长描述+活跃发帖，但与投资无关"
+  },
+  "Trader9": {
+    "name": "Trader韭",
+    "total_videos": 75,
+    "final_score": 67.5,
+    "breakdown": {
+      "R1_预测密度": 36.4,
+      "R2_话题专注": 11.1,
+      "R3_行为模式": 15.0,
+      "R4_逆向指标": 0.0,
+      "数据覆盖Bonus": 5
+    },
+    "key_strength": "R1_预测密度",
+    "key_weakness": "R4_逆向指标",
+    "recommendation": "A级: 高优先级跟踪，可用于投资决策参考"
   },
   "yanbao60": {
     "name": "口罩哥研报60秒",
-    "total_videos": 60,
-    "final_score": 72.2,
+    "total_videos": 91,
+    "final_score": 75.0,
     "breakdown": {
       "R1_预测密度": 39.8,
-      "R2_话题专注": 15.4,
-      "R3_行为模式": 4.5,
+      "R2_话题专注": 15.2,
+      "R3_行为模式": 7.5,
       "R4_逆向指标": 12.5,
       "数据覆盖Bonus": 0
     },
@@ -32,12 +48,12 @@
   },
   "Zihui518": {
     "name": "子辉先生",
-    "total_videos": 63,
-    "final_score": 93.8,
+    "total_videos": 107,
+    "final_score": 97.0,
     "breakdown": {
       "R1_预测密度": 55.0,
-      "R2_话题专注": 11.2,
-      "R3_行为模式": 12.0,
+      "R2_话题专注": 11.6,
+      "R3_行为模式": 15.0,
       "R4_逆向指标": 12.5,
       "数据覆盖Bonus": 3
     },
@@ -45,19 +61,34 @@
     "key_weakness": "R2_话题专注",
     "recommendation": "A级: 高优先级跟踪，可用于投资决策参考"
   },
-  "xiaositv": {
-    "name": "小司频道",
-    "total_videos": 62,
-    "final_score": 67.8,
+  "85164940078": {
+    "name": "好运佛系",
+    "total_videos": 84,
+    "final_score": 80.0,
     "breakdown": {
-      "R1_预测密度": 19.7,
-      "R2_话题专注": 11.1,
-      "R3_行为模式": 12.0,
+      "R1_预测密度": 37.0,
+      "R2_话题专注": 20,
+      "R3_行为模式": 10.5,
+      "R4_逆向指标": 12.5,
+      "数据覆盖Bonus": 0
+    },
+    "key_strength": "R1_预测密度",
+    "key_weakness": "R3_行为模式",
+    "recommendation": "A级: 高优先级跟踪，可用于投资决策参考"
+  },
+  "kaixin2091": {
+    "name": "凯心",
+    "total_videos": 63,
+    "final_score": 83.9,
+    "breakdown": {
+      "R1_预测密度": 25.4,
+      "R2_话题专注": 20,
+      "R3_行为模式": 13.5,
       "R4_逆向指标": 25.0,
       "数据覆盖Bonus": 0
     },
-    "key_strength": "R4_逆向指标",
-    "key_weakness": "R2_话题专注",
+    "key_strength": "R1_预测密度",
+    "key_weakness": "R3_行为模式",
     "recommendation": "A级: 高优先级跟踪，可用于投资决策参考"
   },
   "HuDaMao.New": {
@@ -75,45 +106,14 @@
     "key_weakness": "R2_话题专注",
     "recommendation": "B级: 可以作为某一维度参考，不盲从"
   },
-  "85164940078": {
-    "name": "好运佛系",
-    "total_videos": 63,
-    "final_score": 83.0,
-    "breakdown": {
-      "R1_预测密度": 37.0,
-      "R2_话题专注": 20,
-      "R3_行为模式": 13.5,
-      "R4_逆向指标": 12.5,
-      "数据覆盖Bonus": 0
-    },
-    "key_strength": "R1_预测密度",
-    "key_weakness": "R4_逆向指标",
-    "recommendation": "A级: 高优先级跟踪，可用于投资决策参考"
-  },
-  "6052m9121": {
-    "name": "太阳李博良",
-    "total_videos": 60,
-    "final_score": 112.9,
-    "breakdown": {
-      "R1_预测密度": 57.4,
-      "R2_话题专注": 20,
-      "R3_行为模式": 18.0,
-      "R4_逆向指标": 12.5,
-      "数据覆盖Bonus": 5
-    },
-    "key_strength": "R1_预测密度",
-    "key_weakness": "R4_逆向指标",
-    "recommendation": "A级: 高优先级跟踪，可用于投资决策参考",
-    "note": "非财经号，自我成长/认知类博主，定量高分来自长描述+活跃发帖，但与投资无关"
-  },
   "guojame": {
     "name": "创业魔法师",
-    "total_videos": 63,
+    "total_videos": 151,
     "final_score": 10,
     "breakdown": {
       "R1_预测密度": 10.0,
       "R2_话题专注": 0,
-      "R3_行为模式": 7.5,
+      "R3_行为模式": 10.5,
       "R4_逆向指标": 12.5,
       "数据覆盖Bonus": 0
     },
@@ -122,34 +122,34 @@
     "recommendation": "D级: 纯流量号，投资价值为零",
     "note": "169万粉丝但95%视频无描述，定量+定性均最低"
   },
-  "kaixin2091": {
-    "name": "凯心",
-    "total_videos": 61,
-    "final_score": 83.9,
+  "Cyclequeen": {
+    "name": "周期女王",
+    "total_videos": 45,
+    "final_score": 41.5,
     "breakdown": {
-      "R1_预测密度": 25.4,
-      "R2_话题专注": 20,
-      "R3_行为模式": 13.5,
-      "R4_逆向指标": 25.0,
+      "R1_预测密度": 20.0,
+      "R2_话题专注": 0,
+      "R3_行为模式": 9.0,
+      "R4_逆向指标": 12.5,
       "数据覆盖Bonus": 0
     },
     "key_strength": "R1_预测密度",
-    "key_weakness": "R3_行为模式",
-    "recommendation": "A级: 高优先级跟踪，可用于投资决策参考"
+    "key_weakness": "R2_话题专注",
+    "recommendation": "C级: 谨慎参考，存在明显短板"
   },
-  "Trader9": {
-    "name": "Trader韭",
-    "total_videos": 63,
-    "final_score": 68.0,
+  "xiaositv": {
+    "name": "小司频道",
+    "total_videos": 65,
+    "final_score": 67.8,
     "breakdown": {
-      "R1_预测密度": 36.4,
-      "R2_话题专注": 11.6,
-      "R3_行为模式": 15.0,
-      "R4_逆向指标": 0.0,
-      "数据覆盖Bonus": 5
+      "R1_预测密度": 19.7,
+      "R2_话题专注": 11.1,
+      "R3_行为模式": 12.0,
+      "R4_逆向指标": 25.0,
+      "数据覆盖Bonus": 0
     },
-    "key_strength": "R1_预测密度",
-    "key_weakness": "R4_逆向指标",
+    "key_strength": "R4_逆向指标",
+    "key_weakness": "R2_话题专注",
     "recommendation": "A级: 高优先级跟踪，可用于投资决策参考"
   }
 }

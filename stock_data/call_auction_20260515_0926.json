@@ -1,0 +1,178 @@
+{
+  "type": "call_auction",
+  "time": "2026-05-15 09:26:46",
+  "date": "2026-05-15",
+  "market_breadth": {
+    "up": 2760,
+    "down": 2760,
+    "flat": 1,
+    "limit_up": 8,
+    "limit_down": 0,
+    "total": 5529,
+    "avg_change": 0.0,
+    "details": [
+      {
+        "code": "001393",
+        "name": "N维通利",
+        "change_pct": 295.0
+      },
+      {
+        "code": "688549",
+        "name": "中巨芯-U",
+        "change_pct": 16.65
+      },
+      {
+        "code": "601678",
+        "name": "滨化股份",
+        "change_pct": 10.04
+      },
+      {
+        "code": "003018",
+        "name": "金富科技",
+        "change_pct": 10.01
+      },
+      {
+        "code": "001259",
+        "name": "利仁科技",
+        "change_pct": 10.0
+      },
+      {
+        "code": "002915",
+        "name": "中欣氟材",
+        "change_pct": 10.0
+      },
+      {
+        "code": "603779",
+        "name": "威龙股份",
+        "change_pct": 9.98
+      },
+      {
+        "code": "002918",
+        "name": "蒙娜丽莎",
+        "change_pct": 9.98
+      },
+      {
+        "code": "300721",
+        "name": "怡达股份",
+        "change_pct": 9.6
+      },
+      {
+        "code": "603505",
+        "name": "金石资源",
+        "change_pct": 9.56
+      },
+      {
+        "code": "300263",
+        "name": "隆华科技",
+        "change_pct": 9.17
+      },
+      {
+        "code": "300632",
+        "name": "光莆股份",
+        "change_pct": 7.88
+      },
+      {
+        "code": "603002",
+        "name": "宏昌电子",
+        "change_pct": 7.03
+      },
+      {
+        "code": "301076",
+        "name": "新瀚新材",
+        "change_pct": 6.2
+      },
+      {
+        "code": "300065",
+        "name": "海兰信",
+        "change_pct": 5.96
+      },
+      {
+        "code": "002407",
+        "name": "多氟多",
+        "change_pct": 5.94
+      },
+      {
+        "code": "300959",
+        "name": "线上线下",
+        "change_pct": 5.83
+      },
+      {
+        "code": "688535",
+        "name": "华海诚科",
+        "change_pct": 5.62
+      },
+      {
+        "code": "300433",
+        "name": "蓝思科技",
+        "change_pct": 5.23
+      },
+      {
+        "code": "603378",
+        "name": "*ST亚士",
+        "change_pct": 5.09
+      }
+    ]
+  },
+  "concept_auction": [],
+  "industry_auction": [],
+  "limit_orders": {
+    "limit_up_strength": [],
+    "limit_down_pressure": []
+  },
+  "portfolio_auction": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "auction_price": 58.0,
+      "prev_close": 57.4,
+      "auction_chg_pct": 1.05,
+      "open_volume": 8541,
+      "sector": "半导体封测"
+    },
+    {
+      "code": "300480",
+      "name": "光力科技",
+      "auction_price": 39.01,
+      "prev_close": 39.42,
+      "auction_chg_pct": -1.04,
+      "open_volume": 1221,
+      "sector": "半导体划片设备"
+    },
+    {
+      "code": "002407",
+      "name": "多氟多",
+      "auction_price": 35.12,
+      "prev_close": 33.15,
+      "auction_chg_pct": 5.94,
+      "open_volume": 44030,
+      "sector": "锂电化工"
+    },
+    {
+      "code": "300792",
+      "name": "壹网壹创",
+      "auction_price": 35.19,
+      "prev_close": 35.11,
+      "auction_chg_pct": 0.23,
+      "open_volume": 205,
+      "sector": "电商服务/数字营销"
+    },
+    {
+      "code": "601789",
+      "name": "宁波建工",
+      "auction_price": 6.17,
+      "prev_close": 6.13,
+      "auction_chg_pct": 0.65,
+      "open_volume": 6905,
+      "sector": "建筑工程/基建"
+    },
+    {
+      "code": "600236",
+      "name": "桂冠电力",
+      "auction_price": 10.7,
+      "prev_close": 11.13,
+      "auction_chg_pct": -3.86,
+      "open_volume": 5641,
+      "sector": "水电/电力"
+    }
+  ]
+}

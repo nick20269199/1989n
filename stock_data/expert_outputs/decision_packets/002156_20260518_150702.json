@@ -1,0 +1,22 @@
+{
+  "symbol": "002156",
+  "name": "通富微电",
+  "timestamp": "2026-05-18T15:07:02.764967",
+  "pipeline_status": "rejected",
+  "grader": {
+    "score": 0,
+    "scores": {},
+    "failures": [
+      "Grader API 调用失败"
+    ],
+    "merged_direction": "不确定",
+    "merged_confidence": 0,
+    "summary": ""
+  },
+  "expert_directions": [],
+  "expert_count": 3,
+  "expert_success": 0,
+  "expert_errors": 3,
+  "mode": "full",
+  "actionable": false
+}

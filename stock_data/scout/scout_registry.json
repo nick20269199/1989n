@@ -1,17 +1,72 @@
 {
   "version": "1.0",
   "created": "2026-05-10",
-  "last_updated": "2026-05-15",
-  "total_discoveries": 25,
+  "last_updated": "2026-05-17",
+  "total_discoveries": 36,
   "by_category": {
-    "trading_strategy": 8,
-    "trading_software": 4,
-    "ai_agent": 7,
+    "trading_strategy": 11,
+    "trading_software": 6,
+    "ai_agent": 11,
     "market_data": 2,
     "infrastructure": 0,
-    "frontier": 4
+    "frontier": 6
   },
   "items": [
+    {
+      "id": "20260517-001",
+      "date": "2026-05-17",
+      "category": "trading_strategy",
+      "name": "Smart Money Concepts (IFVG/CISD) 订单流微观结构",
+      "source_url": "https://github.com/aleks-drozy/fyp-trading-strategy",
+      "one_liner": "Inverse Fair Value Gaps + 供需状态切换检测，回撤仅0.95%，胜率56.94%",
+      "use_for": "tech_scan.py新信号类型——价格未填补缺口区域识别+供需状态切换检测",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260517-002",
+      "date": "2026-05-17",
+      "category": "trading_strategy",
+      "name": "FactorEngine: 程序级因子挖掘",
+      "source_url": "https://arxiv.org/html/2603.16365v1",
+      "one_liner": "LLM+贝叶斯超参优化的程序级因子搜索，CSI 500超额+126%，IC+58%",
+      "use_for": "A股因子发现管道，与AlphaLogics互补——程序搜索vs逻辑驱动",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260517-003",
+      "date": "2026-05-17",
+      "category": "ai_agent",
+      "name": "OpenSage: 自编程Agent生成引擎",
+      "source_url": "https://arxiv.org/html/2602.16891v2",
+      "one_liner": "首个AI-centered ADK，LLM自动创建Agent拓扑+工具集，四级层次化记忆",
+      "use_for": "SEL知识层级架构参考——L1-L4四级记忆系统设计",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260517-004",
+      "date": "2026-05-17",
+      "category": "ai_agent",
+      "name": "Long-Horizon Agents: 2026范式宣言",
+      "source_url": "https://eu.36kr.com/zh/p/3658280070390407",
+      "one_liner": "红杉+LangChain：2026为Long-Horizon Agents元年，自主规划长时间运行",
+      "use_for": "SEL方向确认：当前自进化循环架构正确，Harness比模型能力更重要",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260517-005",
+      "date": "2026-05-17",
+      "category": "frontier",
+      "name": "GPT-5.5-Cyber 网络安全专用模型",
+      "source_url": "https://embed.wionews.com/technology/openai-launches-gpt-5-5-cyber-key-features-to-know-about-the-new-model-1778240980582",
+      "one_liner": "OpenAI网络安全专用变体——漏洞分析、恶意软件检测、安全补丁",
+      "use_for": "信号验证管道安全审计方法论参考，安全升级趋势跟踪",
+      "status": "new",
+      "evaluated_at": null
+    },
     {
       "id": "20260513-001",
       "date": "2026-05-13",
@@ -390,6 +445,120 @@
         "risk": 1,
         "decision": "approved",
         "note": "Nature Machine Intelligence方法，非代码集成但方法论参考价值高。不确定性-aware信号聚合直接对应llm_competence_check()置信度校准。提取核心思路记录到knowledge/tools/llm-confidence.md。"
+      }
+    },
+    {
+      "id": "20260516-001",
+      "date": "2026-05-16",
+      "category": "ai_agent",
+      "name": "Claude Code 2.1.0 Agent Lifecycle Hooks",
+      "source_url": "https://venturebeat.com/orchestration/claude-code-2-1-0-arrives-with-smoother-workflows-and-smarter-agents",
+      "one_liner": "PreToolUse/PostToolUse/Stop钩子、forked sub-agent context、wildcard权限、hot reload",
+      "use_for": "cron任务链checkpoint/rollback + 子Agent编排替代当前token膨胀方案",
+      "status": "approved",
+      "evaluated_at": "2026-05-16",
+      "evaluation": {
+        "match": 4,
+        "maturity": 5,
+        "cost": 1,
+        "risk": 1,
+        "decision": "approved",
+        "note": "Anthropic官方发布。升级即生效——PreToolUse钩子让cron任务链可插入checkpoint/rollback。无需代码修改。"
+      }
+    },
+    {
+      "id": "20260516-002",
+      "date": "2026-05-16",
+      "category": "ai_agent",
+      "name": "Claude Skill-Creator Evals 多Agent评估",
+      "source_url": "https://claude.com/blog/improving-skill-creator-test-measure-and-refine-agent-skills",
+      "one_liner": "技能创建新增Evals/多Agent并行评估/Comparator双版本盲测A/B",
+      "use_for": "每日复盘/daily-compress技能质量量化+版本A/B测试",
+      "status": "approved",
+      "evaluated_at": "2026-05-16",
+      "evaluation": {
+        "match": 4,
+        "maturity": 5,
+        "cost": 1,
+        "risk": 1,
+        "decision": "approved",
+        "note": "Anthropic官方功能——直接使用Evals测试每日复盘等技能的质量并量化跟踪。Comparator盲测用于版本升级决策。"
+      }
+    },
+    {
+      "id": "20260516-003",
+      "date": "2026-05-16",
+      "category": "trading_software",
+      "name": "FinMCP 免费金融数据MCP服务器",
+      "source_url": "https://github.com/Steve-sy/finmcp",
+      "one_liner": "MCP协议连接AI到50+交易所实时数据，15工具，免费开源无API Key",
+      "use_for": "market_pool全球市场补充数据源 + Claude Code直接实时报价查询",
+      "status": "deferred",
+      "evaluated_at": "2026-05-16",
+      "evaluation": {
+        "match": 4,
+        "maturity": 3,
+        "cost": 2,
+        "risk": 2,
+        "decision": "deferred",
+        "note": "匹配度4(全球数据补充)，成熟度3(较新但功能完整)。集成成本低(pip+MCP配)，但Yahoo Finance数据源稳定性不确定。月检跟踪社区活跃度。"
+      }
+    },
+    {
+      "id": "20260516-004",
+      "date": "2026-05-16",
+      "category": "trading_software",
+      "name": "wrtrade Polars极速回测",
+      "source_url": "https://pypi.org/project/wrtrade/",
+      "one_liner": "Polars回测10-50x pandas，Kelly仓位优化，permutation testing验证",
+      "use_for": "trade_backtest.py性能升级 + Kelly优化替代当前固定仓位管理",
+      "status": "deferred",
+      "evaluated_at": "2026-05-16",
+      "evaluation": {
+        "match": 3,
+        "maturity": 2,
+        "cost": 3,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "Polars极速回测概念有价值，但项目极新(2026)，社区未知。当前pandas回测无性能瓶颈。月检关注成熟度。"
+      }
+    },
+    {
+      "id": "20260516-005",
+      "date": "2026-05-16",
+      "category": "trading_strategy",
+      "name": "Hubble LLM因子挖掘安全沙箱",
+      "source_url": "https://arxiv.org/html/2604.09601v1",
+      "one_liner": "AST语法树沙箱保证因子代码100%计算稳定性，无崩溃/异常",
+      "use_for": "StratEvo因子生成的代码校验环节，AST预检查拦截除零等异常",
+      "status": "deferred",
+      "evaluated_at": "2026-05-16",
+      "evaluation": {
+        "match": 4,
+        "maturity": 2,
+        "cost": 4,
+        "risk": 2,
+        "decision": "deferred",
+        "note": "AST沙箱概念直接可用，论文无生产代码。但从零实现AST预检查仅需约50行Python(AST模块自带)。标记为概念参考，需用时再实现。"
+      }
+    },
+    {
+      "id": "20260516-006",
+      "date": "2026-05-16",
+      "category": "frontier",
+      "name": "GPT-5.5 Instant 幻觉降低52.5%",
+      "source_url": "https://s.thepeninsula.qa/article/06/05/2026/openai-launches-gpt-55-instant",
+      "one_liner": "金融/医疗幻觉降低52.5%，新增memory sources透明功能",
+      "use_for": "LLM信号聚合权重上调校准参考",
+      "status": "approved",
+      "evaluated_at": "2026-05-16",
+      "evaluation": {
+        "match": 3,
+        "maturity": 5,
+        "cost": 1,
+        "risk": 1,
+        "decision": "approved",
+        "note": "OpenAI产品级数据。幻觉率减半→LLM信号可信度上调。信息参考项，记录到knowledge/tools/llm-confidence.md。"
       }
     }
   ]

@@ -254,7 +254,7 @@ async def transcribe_batch(account=None, limit=None, force=False, priority=False
                         video_url,
                         headers={"Referer": "https://www.douyin.com/"},
                         impersonate="chrome131",
-                        timeout=60
+                        timeout=300
                     )
 
                     if resp.status_code == 403:
@@ -270,7 +270,7 @@ async def transcribe_batch(account=None, limit=None, force=False, priority=False
                             video_url,
                             headers={"Referer": "https://www.douyin.com/"},
                             impersonate="chrome131",
-                            timeout=60
+                            timeout=300
                         )
 
                     if resp.status_code != 200:

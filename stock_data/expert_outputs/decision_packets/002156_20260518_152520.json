@@ -1,0 +1,41 @@
+{
+  "symbol": "002156",
+  "name": "通富微电",
+  "timestamp": "2026-05-18T15:25:20.882510",
+  "pipeline_status": "rejected",
+  "grader": {
+    "score": 0,
+    "scores": {},
+    "failures": [
+      "无法解析Grader输出"
+    ],
+    "merged_direction": "不确定",
+    "merged_confidence": 0,
+    "summary": ""
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "观望",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.45,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "观望",
+      "confidence": 0.6,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": false
+}

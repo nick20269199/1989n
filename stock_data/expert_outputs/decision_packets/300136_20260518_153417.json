@@ -1,0 +1,51 @@
+{
+  "symbol": "300136",
+  "name": "信维通信",
+  "timestamp": "2026-05-18T15:34:17.059365",
+  "pipeline_status": "rejected",
+  "grader": {
+    "passed": false,
+    "score": 0.52,
+    "scores": {
+      "direction": 0.6666666666666666,
+      "method": 0.8333333333333334,
+      "trajectory": 0.5,
+      "margin": 0.6666666666666666,
+      "logic": 0.4166666666666667
+    },
+    "failures": [
+      "轨迹维度：expert2_money未给出明确入场区间（仅写'观望，不宜入场'，无价格区间），target仅写'下方支撑看MA20'，缺乏上行目标；expert3_sentiment的entry_zone和target高度模糊、非量化（如'需等待板块明确启动信号'）；三者未统一关键价位锚点（如对100元/99.3元/105元等支撑阻力权重不一致），未形成可执行轨迹",
+      "逻辑维度：expert2_money因果链断裂——'上涨缩量、下跌放量'是常见震荡市特征，不能单向推出'主力出货'；未验证是否伴随筹码转移或低位承接；'if_wrong'仅泛泛而谈'洗盘'，未定义证伪标准（如'若3日内收复114.88且量比＞1.5则逻辑失效'）；expert3_sentiment虽指出数据缺失，但未构建'缺失→不可判→必须等待什么数据补全'的闭环逻辑；expert1逻辑较完整，但'中长期均线多头排列'与'短期跌破MA5'之间缺乏时间尺度转换的解释（如MA5失效率在周线级别是否重要？），削弱因果强度",
+      "方向维度虽三人均为'观望'，但expert2_money结论为'空'，报告中却归类为'观望'——存在事实性矛盾，导致方向一致性被破坏；实际三位专家真实方向为：1观、1观、1空，未达成共识，'merged_direction'无法稳健聚合"
+    ],
+    "merged_direction": "观望",
+    "merged_confidence": 0.55,
+    "summary": "三位专家方法论互补但轨迹缺失、逻辑闭环不足，尤其资金面与情绪面报告因数据缺位陷入‘不可证伪’状态，整体不满足可执行交易分析标准。",
+    "_raw": "```json\n{\n  \"passed\": false,\n  \"average_score\": 0.52,\n  \"scores\": {\n    \"direction\": 0.6666666666666666,\n    \"method\": 0.8333333333333334,\n    \"trajectory\": 0.5,\n    \"margin\": 0.6666666666666666,\n    \"logic\": 0.4166666666666667\n  },\n  \"failures\": [\n    \"轨迹维度：expert2_money未给出明确入场区间（仅写'观望，不宜入场'，无价格区间），target仅写'下方支撑看MA20'，缺乏上行目标；expert3_sentiment的entry_zone和target高度模糊、非量化（如'需等待板块明确启动信号'）；三者未统一关键价位锚点（如对100元/99.3元/105元等支撑阻力权重不一致），未形成可执行轨迹\",\n    \"逻辑维度：expert2_money因果链断裂——'上涨缩量、下跌放量'是常见震荡市特征，不能单向推出'主力出货'；未验证是否伴随筹码转移或低位承接；'if_wrong'仅泛泛而谈'洗盘'，未定义证伪标准（如'若3日内收复114.88且量比＞1.5则逻辑失效'）；expert3_sentiment虽指出数据缺失，但未构建'缺失→不可判→必须等待什么数据补全'的闭环逻辑；expert1逻辑较完整，但'中长期均线多头排列'与'短期跌破MA5'之间缺乏时间尺度转换的解释（如MA5失效率在周线级别是否重要？），削弱因果强度\",\n    \"方向维度虽三人均为'观望'，但expert2_money结论为'空'，报告中却归类为'观望'——存在事实性矛盾，导致方向一致性被破坏；实际三位专家真实方向为：1观、1观、1空，未达成共识，'merged_direction'无法稳健聚合\"\n  ],\n  \"merged_direction\": \"观望\",\n  \"merged_confidence\": 0.55,\n  \"summary\": \"三位专家方法论互补但轨迹缺失、逻辑闭环不足，尤其资金面与情绪面报告因数据缺位陷入‘不可证伪’状态，整体不满足可执行交易分析标准。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "观望",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.25,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.8,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": false
+}

@@ -1,23 +1,23 @@
 {
   "85164940078": {
     "name": "好运佛系",
-    "total": 63,
-    "active_days": 21,
-    "span_days": 1574,
-    "posts_per_day": 3.0,
-    "avg_desc_len": 34.0,
-    "has_substance_ratio": 0.032,
-    "pre_market_ratio": 0.19,
+    "total": 84,
+    "active_days": 27,
+    "span_days": 1580,
+    "posts_per_day": 3.1,
+    "avg_desc_len": 35.0,
+    "has_substance_ratio": 0.036,
+    "pre_market_ratio": 0.148,
     "extreme_day_posts": 0,
     "inflection_day_posts": 32,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 62
+      ">180s": 83
     },
-    "score": 45,
+    "score": 35,
     "score_breakdown": {
-      "pre_market_habit": 9,
+      "pre_market_habit": 7,
       "substance": 1,
       "consistency": 10,
       "market_sensitivity": 0,
@@ -26,41 +26,41 @@
     "posts_by_hour_top": [
       [
         11,
-        10
+        14
       ],
       [
         16,
-        7
+        8
       ],
       [
         15,
-        7
+        8
       ],
       [
         20,
-        6
+        8
       ],
       [
-        17,
-        4
+        10,
+        6
       ]
     ]
   },
   "Trader9": {
     "name": "Trader韭",
-    "total": 63,
-    "active_days": 25,
-    "span_days": 619,
-    "posts_per_day": 2.5,
-    "avg_desc_len": 65.0,
-    "has_substance_ratio": 0.81,
+    "total": 75,
+    "active_days": 31,
+    "span_days": 626,
+    "posts_per_day": 2.4,
+    "avg_desc_len": 64.0,
+    "has_substance_ratio": 0.813,
     "pre_market_ratio": 0.0,
     "extreme_day_posts": 0,
     "inflection_day_posts": 31,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 62
+      ">180s": 74
     },
     "score": 50,
     "score_breakdown": {
@@ -73,18 +73,18 @@
     "posts_by_hour_top": [
       [
         10,
-        12
+        16
       ],
       [
         11,
+        10
+      ],
+      [
+        16,
         8
       ],
       [
         12,
-        7
-      ],
-      [
-        16,
         7
       ],
       [
@@ -95,19 +95,19 @@
   },
   "Cyclequeen": {
     "name": "周期女王",
-    "total": 42,
-    "active_days": 40,
-    "span_days": 526,
+    "total": 45,
+    "active_days": 42,
+    "span_days": 529,
     "posts_per_day": 1.1,
     "avg_desc_len": 36.0,
-    "has_substance_ratio": 0.024,
+    "has_substance_ratio": 0.022,
     "pre_market_ratio": 0.0,
     "extreme_day_posts": 3,
     "inflection_day_posts": 6,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 42
+      ">180s": 45
     },
     "score": 30,
     "score_breakdown": {
@@ -123,15 +123,15 @@
         7
       ],
       [
+        22,
+        7
+      ],
+      [
         20,
         6
       ],
       [
         19,
-        6
-      ],
-      [
-        22,
         6
       ],
       [
@@ -142,19 +142,19 @@
   },
   "xiaositv": {
     "name": "小司频道",
-    "total": 62,
-    "active_days": 61,
-    "span_days": 498,
+    "total": 65,
+    "active_days": 64,
+    "span_days": 504,
     "posts_per_day": 1.0,
     "avg_desc_len": 35.0,
-    "has_substance_ratio": 0.048,
+    "has_substance_ratio": 0.046,
     "pre_market_ratio": 0.0,
     "extreme_day_posts": 9,
     "inflection_day_posts": 15,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 62
+      ">180s": 65
     },
     "score": 40,
     "score_breakdown": {
@@ -167,7 +167,7 @@
     "posts_by_hour_top": [
       [
         18,
-        44
+        47
       ],
       [
         12,
@@ -189,24 +189,24 @@
   },
   "Zihui518": {
     "name": "子辉先生",
-    "total": 63,
-    "active_days": 15,
-    "span_days": 462,
-    "posts_per_day": 4.2,
+    "total": 107,
+    "active_days": 20,
+    "span_days": 467,
+    "posts_per_day": 5.3,
     "avg_desc_len": 34.0,
-    "has_substance_ratio": 0.127,
-    "pre_market_ratio": 0.133,
+    "has_substance_ratio": 0.103,
+    "pre_market_ratio": 0.25,
     "extreme_day_posts": 0,
     "inflection_day_posts": 26,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 63
+      ">180s": 107
     },
-    "score": 40,
+    "score": 50,
     "score_breakdown": {
-      "pre_market_habit": 6,
-      "substance": 5,
+      "pre_market_habit": 12,
+      "substance": 4,
       "consistency": 10,
       "market_sensitivity": 0,
       "frequency": 10
@@ -214,45 +214,45 @@
     "posts_by_hour_top": [
       [
         23,
-        10
-      ],
-      [
-        10,
-        9
-      ],
-      [
-        18,
-        7
-      ],
-      [
-        8,
-        6
+        13
       ],
       [
         22,
-        6
+        12
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        18,
+        8
+      ],
+      [
+        16,
+        8
       ]
     ]
   },
   "guojame": {
     "name": "创业魔法师",
-    "total": 63,
-    "active_days": 8,
-    "span_days": 442,
-    "posts_per_day": 7.9,
-    "avg_desc_len": 1.0,
+    "total": 151,
+    "active_days": 14,
+    "span_days": 448,
+    "posts_per_day": 10.8,
+    "avg_desc_len": 0.0,
     "has_substance_ratio": 0.0,
-    "pre_market_ratio": 0.25,
+    "pre_market_ratio": 0.5,
     "extreme_day_posts": 1,
     "inflection_day_posts": 27,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 63
+      ">180s": 150
     },
-    "score": 25,
+    "score": 35,
     "score_breakdown": {
-      "pre_market_habit": 12,
+      "pre_market_habit": 25,
       "substance": 0,
       "consistency": 0,
       "market_sensitivity": 5,
@@ -260,42 +260,42 @@
     },
     "posts_by_hour_top": [
       [
-        22,
-        10
+        23,
+        27
       ],
       [
         12,
-        9
+        17
       ],
       [
-        23,
-        8
+        22,
+        17
       ],
       [
         14,
-        8
+        13
       ],
       [
-        11,
-        4
+        0,
+        12
       ]
     ]
   },
   "kaixin2091": {
     "name": "凯心",
-    "total": 61,
-    "active_days": 51,
-    "span_days": 224,
+    "total": 63,
+    "active_days": 53,
+    "span_days": 226,
     "posts_per_day": 1.2,
     "avg_desc_len": 37.0,
-    "has_substance_ratio": 0.049,
-    "pre_market_ratio": 0.078,
+    "has_substance_ratio": 0.048,
+    "pre_market_ratio": 0.075,
     "extreme_day_posts": 9,
     "inflection_day_posts": 18,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 60
+      ">180s": 62
     },
     "score": 45,
     "score_breakdown": {
@@ -308,7 +308,7 @@
     "posts_by_hour_top": [
       [
         14,
-        9
+        10
       ],
       [
         13,
@@ -323,8 +323,8 @@
         6
       ],
       [
-        11,
-        4
+        16,
+        5
       ]
     ]
   },
@@ -377,21 +377,21 @@
   },
   "6052m9121": {
     "name": "太阳李博良",
-    "total": 60,
-    "active_days": 43,
-    "span_days": 55,
+    "total": 66,
+    "active_days": 48,
+    "span_days": 60,
     "posts_per_day": 1.4,
-    "avg_desc_len": 54.0,
-    "has_substance_ratio": 0.5,
-    "pre_market_ratio": 0.093,
+    "avg_desc_len": 55.0,
+    "has_substance_ratio": 0.515,
+    "pre_market_ratio": 0.083,
     "extreme_day_posts": 14,
     "inflection_day_posts": 25,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 59
+      ">180s": 65
     },
-    "score": 60,
+    "score": 70,
     "score_breakdown": {
       "pre_market_habit": 4,
       "substance": 20,
@@ -402,19 +402,19 @@
     "posts_by_hour_top": [
       [
         22,
-        10
+        11
       ],
       [
         20,
-        9
+        10
       ],
       [
         21,
-        7
+        9
       ],
       [
         18,
-        5
+        6
       ],
       [
         11,
@@ -424,23 +424,23 @@
   },
   "yanbao60": {
     "name": "口罩哥研报60秒",
-    "total": 60,
-    "active_days": 12,
-    "span_days": 11,
-    "posts_per_day": 5.0,
+    "total": 91,
+    "active_days": 17,
+    "span_days": 16,
+    "posts_per_day": 5.4,
     "avg_desc_len": 19.0,
-    "has_substance_ratio": 0.0,
-    "pre_market_ratio": 0.083,
+    "has_substance_ratio": 0.011,
+    "pre_market_ratio": 0.176,
     "extreme_day_posts": 0,
     "inflection_day_posts": 17,
     "duration_profile": {
       "<60s": 0,
       "60-180s": 0,
-      ">180s": 60
+      ">180s": 91
     },
-    "score": 15,
+    "score": 25,
     "score_breakdown": {
-      "pre_market_habit": 4,
+      "pre_market_habit": 8,
       "substance": 0,
       "consistency": 0,
       "market_sensitivity": 0,
@@ -449,23 +449,23 @@
     "posts_by_hour_top": [
       [
         14,
-        10
+        13
       ],
       [
         20,
-        8
+        12
       ],
       [
         12,
-        7
+        10
       ],
       [
         13,
-        5
+        8
       ],
       [
-        17,
-        5
+        18,
+        7
       ]
     ]
   }

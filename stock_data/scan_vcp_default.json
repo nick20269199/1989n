@@ -1,27 +1,75 @@
 {
   "scan_type": "vcp",
   "param": null,
-  "time": "2026-05-14 16:03:09",
-  "count": 4,
+  "time": "2026-05-18 15:30:04",
+  "count": 7,
   "results": [
     {
       "phase": "企稳",
-      "score": 50,
-      "price": 6.13,
-      "volume_ratio": 98,
-      "ma20": 5.88,
+      "score": 70,
+      "price": 44.71,
+      "volume_ratio": 57,
+      "ma20": 44.57,
       "above_ma20": true,
       "range_narrowing": false,
-      "lower_shadows": 2,
+      "lower_shadows": 3,
+      "has_limit_up": false,
+      "code": "300339"
+    },
+    {
+      "phase": "企稳",
+      "score": 55,
+      "price": 6.05,
+      "volume_ratio": 67,
+      "ma20": 5.9,
+      "above_ma20": true,
+      "range_narrowing": false,
+      "lower_shadows": 1,
       "has_limit_up": true,
       "code": "601789"
     },
     {
       "phase": "企稳",
+      "score": 50,
+      "price": 20.76,
+      "volume_ratio": 356,
+      "ma20": 14.25,
+      "above_ma20": true,
+      "range_narrowing": false,
+      "lower_shadows": 2,
+      "has_limit_up": true,
+      "code": "002208"
+    },
+    {
+      "phase": "企稳",
+      "score": 50,
+      "price": 37.03,
+      "volume_ratio": 166,
+      "ma20": 35.78,
+      "above_ma20": true,
+      "range_narrowing": false,
+      "lower_shadows": 2,
+      "has_limit_up": false,
+      "code": "300792"
+    },
+    {
+      "phase": "突破",
       "score": 35,
-      "price": 57.4,
-      "volume_ratio": 114,
-      "ma20": 52.25,
+      "price": 4.41,
+      "volume_ratio": 225,
+      "ma20": 4.02,
+      "above_ma20": true,
+      "range_narrowing": false,
+      "lower_shadows": 0,
+      "has_limit_up": false,
+      "code": "000981"
+    },
+    {
+      "phase": "突破",
+      "score": 35,
+      "price": 57.02,
+      "volume_ratio": 134,
+      "ma20": 52.77,
       "above_ma20": true,
       "range_narrowing": false,
       "lower_shadows": 1,
@@ -29,28 +77,16 @@
       "code": "002156"
     },
     {
-      "phase": "突破",
+      "phase": "企稳",
       "score": 35,
-      "price": 39.42,
-      "volume_ratio": 155,
-      "ma20": 35.9,
+      "price": 111.75,
+      "volume_ratio": 115,
+      "ma20": 92.46,
       "above_ma20": true,
       "range_narrowing": false,
       "lower_shadows": 1,
-      "has_limit_up": false,
-      "code": "300480"
-    },
-    {
-      "phase": "企稳",
-      "score": 35,
-      "price": 11.13,
-      "volume_ratio": 223,
-      "ma20": 10.41,
-      "above_ma20": true,
-      "range_narrowing": false,
-      "lower_shadows": 3,
       "has_limit_up": true,
-      "code": "600236"
+      "code": "300136"
     }
   ]
 }

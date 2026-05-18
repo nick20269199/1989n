@@ -1,0 +1,113 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-18 14:30:02",
+  "market_status": "trading",
+  "count": 18,
+  "data": [
+    {
+      "title": "【研选•数据】居民新增存款/新增M2与权益资产估值",
+      "time": "2026-05-18 14:27:21",
+      "url": "https://www.cls.cn/detail/2374054"
+    },
+    {
+      "title": "财联社5月18日电，汇丰银行将雪佛龙目标股价从217美元上调至221美元；将英国石油目标股价从620便士下调至605便士；将壳牌目标股价从3350便士上调至3700便士。",
+      "time": "2026-05-18 14:24:55",
+      "category": "{'article_id': 2374058, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156032, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374058"
+    },
+    {
+      "title": "朱民：需要形成适当的政策来引领AI使用",
+      "time": "2026-05-18 14:23:29",
+      "url": "https://www.cls.cn/detail/2374055"
+    },
+    {
+      "title": "【盘中宝】随着AI运算需求急剧增长，这类电子元件用量大幅提升，这家公司相关材料已成功批量出口海外市场",
+      "time": "2026-05-18 14:21:39",
+      "url": "https://www.cls.cn/detail/2374048"
+    },
+    {
+      "title": "主力资金监控：电新行业净流出超81亿",
+      "time": "2026-05-18 14:21:32",
+      "related_stocks": "600183,603601,002475,000988,002384,300502,300308,300750",
+      "category": "{'article_id': 2374051, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175130, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374051"
+    },
+    {
+      "title": "国家印发《稳岗扩容提质行动方案》",
+      "time": "2026-05-18 14:20:34",
+      "url": "https://www.cls.cn/detail/2374050"
+    },
+    {
+      "title": "沪深两市成交额突破2.5万亿 较上一日此时缩量超3900亿",
+      "time": "2026-05-18 14:15:01",
+      "category": "{'article_id': 2374047, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175130, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374047"
+    },
+    {
+      "title": "外交部阿富汗事务特使岳晓勇访问阿富汗和卡塔尔",
+      "time": "2026-05-18 14:07:55",
+      "url": "https://www.cls.cn/detail/2374043"
+    },
+    {
+      "title": "财联社5月18日电，日本40年期国债收益率上升13个基点至4.345%。",
+      "time": "2026-05-18 14:07:28",
+      "category": "{'article_id': 2374042, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374042"
+    },
+    {
+      "title": "机构：MLCC价格循环已来到反转向上的关键点",
+      "time": "2026-05-18 14:05:02",
+      "category": "{'article_id': 2374032, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2374032, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101357, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2374032, 'subject_id': 1566, 'subject_name': 'MLCC', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9753, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 424, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374032"
+    },
+    {
+      "title": "财联社5月18日电，迪拜股指在早盘交易中下跌1%。",
+      "time": "2026-05-18 14:04:55",
+      "category": "{'article_id': 2374038, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374038"
+    },
+    {
+      "title": "财联社5月18日电，杰富瑞将联合利华目标价从4300便士下调至3700便士。",
+      "time": "2026-05-18 14:04:28",
+      "category": "{'article_id': 2374036, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374036"
+    },
+    {
+      "title": "创业板指跌逾1% 下跌个股超3500只",
+      "time": "2026-05-18 14:04:15",
+      "related_stocks": "399006",
+      "url": "https://www.cls.cn/detail/2374031"
+    },
+    {
+      "title": "财联社5月18日电，英美资源集团同意以最高38.75亿美元现金出售炼钢煤炭业务。",
+      "time": "2026-05-18 14:04:02",
+      "category": "{'article_id': 2374035, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374035"
+    },
+    {
+      "title": "财联社5月18日电，港股半导体板块午后走弱，华虹半导体跌超1%，英诺赛科跌超8%，兆易创新涨幅收窄至不足6%。",
+      "time": "2026-05-18 14:02:58",
+      "category": "{'article_id': 2374030, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27460, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2374030"
+    },
+    {
+      "title": "财联社5月18日电，中芯国际H股跌超4%。",
+      "time": "2026-05-18 14:01:48",
+      "related_stocks": "688981",
+      "category": "{'article_id': 2374029, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27460, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374029"
+    },
+    {
+      "title": "日均信息量约243.7万条 中消协发布“五一”消费维权舆情分析报告",
+      "time": "2026-05-18 14:01:02",
+      "url": "https://www.cls.cn/detail/2374028"
+    },
+    {
+      "title": "花旗：全球股市大涨后料进入盘整期 投资者或低估风险",
+      "time": "2026-05-18 14:00:10",
+      "category": "{'article_id': 2374027, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374027"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

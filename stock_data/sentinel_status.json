@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-14 23:25:03",
+  "timestamp": "2026-05-18 15:25:07",
   "win_tasks": {
     "found": [
       "StockAnalysis_MorningBrief",
@@ -23,8 +23,6 @@
       "daily-compress",
       "deep-research",
       "weekly-audit",
-      "health_check",
-      "nightly_health",
       "morning_brief",
       "news_scheduler",
       "intraday_report",
@@ -43,8 +41,11 @@
       "盘中",
       "大V"
     ],
-    "missing": [],
-    "total": 25
+    "missing": [
+      "health_check",
+      "nightly_health"
+    ],
+    "total": 24
   },
   "data_files": {
     "ok": [

@@ -1,0 +1,99 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-18 13:30:02",
+  "market_status": "trading",
+  "count": 15,
+  "data": [
+    {
+      "title": "【风口研报·公司】燃气轮机+外骨骼机器人+新能源高毛利产品，这家制造龙头公司积极拓展景气新兴赛道，且具备“ 海外本地化生产+自有港口物流”体系，当前估值具备较高安全边际",
+      "time": "2026-05-18 13:28:54",
+      "url": "https://www.cls.cn/detail/2373849"
+    },
+    {
+      "title": "小摩：数通年复合增长率将达35% 1.6T光模块迎200%爆发式增长",
+      "time": "2026-05-18 13:28:19",
+      "category": "{'article_id': 2373959, 'subject_id': 1298, 'subject_name': '光通信', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 16983, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 189, 'channel': 'cls,stib'},{'article_id': 2373959, 'subject_id': 2381, 'subject_name': '光模块', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11667, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373959"
+    },
+    {
+      "title": "我国具有北斗功能的终端产品总保有量超22亿台/套",
+      "time": "2026-05-18 13:27:46",
+      "category": "{'article_id': 2373958, 'subject_id': 9897, 'subject_name': '北斗导航', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7905, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 112, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373958"
+    },
+    {
+      "title": "摩根士丹利：日本10年期国债收益率预计将在年底前下降",
+      "time": "2026-05-18 13:27:12",
+      "category": "{'article_id': 2373957, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156028, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373957"
+    },
+    {
+      "title": "腾讯设计智能体Ardot公测 设计一键转代码",
+      "time": "2026-05-18 13:26:28",
+      "category": "{'article_id': 2373956, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373956"
+    },
+    {
+      "title": "财联社5月18日电，千问大模型发文称，重量级新朋友即将亮相，更全能、更强大、有深度、有广度，5.20阿里云峰会见。",
+      "time": "2026-05-18 13:24:50",
+      "category": "{'article_id': 2373953, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67790, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373953"
+    },
+    {
+      "title": "人形机器人概念午后活跃 华培动力涨停",
+      "time": "2026-05-18 13:21:16",
+      "related_stocks": "002050,300718,603121,600580,603119,002896,688160,300024",
+      "category": "{'article_id': 2373949, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175127, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373949, 'subject_id': 12683, 'subject_name': '人形机器人', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9686, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2067, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373949"
+    },
+    {
+      "title": "财联社5月18日电，印度5年期隔夜指数互换利率升至6.90%，创2023年10月9日以来最高水平。",
+      "time": "2026-05-18 13:18:39",
+      "category": "{'article_id': 2373947, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156028, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373947"
+    },
+    {
+      "title": "财联社5月18日电，中国地震台网正式测定：05月18日13时07分在新疆阿克苏地区库车市（北纬41.40度，东经83.96度）发生4.5级地震，震源深度13千米。",
+      "time": "2026-05-18 13:12:07",
+      "category": "{'article_id': 2373936, 'subject_id': 9198, 'subject_name': '地震快讯', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9956, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373936"
+    },
+    {
+      "title": "财联社5月18日电，美国30年期国债收益率升至5.159%，为2025年5月以来最高水平。",
+      "time": "2026-05-18 13:11:47",
+      "category": "{'article_id': 2373935, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156028, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373935"
+    },
+    {
+      "title": "光刻胶概念午后异动拉升 广信材料20cm涨停",
+      "time": "2026-05-18 13:10:25",
+      "related_stocks": "300537,002409,603360,688727,300576,000859",
+      "category": "{'article_id': 2373933, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175127, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373933, 'subject_id': 2201, 'subject_name': '光刻胶', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 13105, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 388, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2373933"
+    },
+    {
+      "title": "财联社5月18日电，中国地震台网自动测定：05月18日13时07分在新疆阿克苏地区库车市附近（北纬41.38度，东经83.94度）发生4.3级左右地震，最终结果以正式速报为准。",
+      "time": "2026-05-18 13:09:37",
+      "category": "{'article_id': 2373934, 'subject_id': 9198, 'subject_name': '地震快讯', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9956, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373934"
+    },
+    {
+      "title": "北京朝阳：到2028年IP潮玩产业营收将突破500亿元 年均增速将不低于20%",
+      "time": "2026-05-18 13:07:47",
+      "url": "https://www.cls.cn/detail/2373932"
+    },
+    {
+      "title": "财联社5月18日电，搜狐公司一季度总收入为1.41亿美元，同比增长4%；归于搜狐公司的非美国通用会计准则净亏损为400万美元，上年同期净亏损1600万美元。",
+      "time": "2026-05-18 13:06:56",
+      "category": "{'article_id': 2373931, 'subject_id': 1099, 'subject_name': '中概股情报站', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 26742, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373931"
+    },
+    {
+      "title": "新股N嘉晨涨超530% 触发临停",
+      "time": "2026-05-18 13:02:41",
+      "category": "{'article_id': 2373929, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175127, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373929"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

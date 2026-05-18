@@ -1,110 +1,46 @@
 {
-  "date": "2026-05-13",
-  "time": "09:07:44",
-  "us_market": {
-    "indices": [
-      {
-        "name": "道琼斯",
-        "price": 49760.5586,
-        "change_pct": 0.11,
-        "date": "2026-05-12"
-      },
-      {
-        "name": "纳斯达克",
-        "price": 26088.2031,
-        "change_pct": -0.71,
-        "date": "2026-05-12"
-      },
-      {
-        "name": "标普500",
-        "price": 7400.96,
-        "change_pct": -0.16,
-        "date": "2026-05-12"
-      }
-    ],
-    "sector_leaders": [],
-    "timestamp": "2026-05-13 09:07"
-  },
+  "date": "2026-05-18",
+  "time": "12:25:29",
+  "news_total": 50,
+  "news_annotated": 15,
+  "topics_found": 5,
   "holding_impact": [
     {
       "code": "002156",
-      "name": "通富微电",
-      "sector": "半导体封测",
       "direction": "中性",
-      "news_count": 0,
-      "leader_signals": [],
-      "key_news": [],
-      "us_tailwind": ""
+      "score": 0
     },
     {
-      "code": "300480",
-      "name": "光力科技",
-      "sector": "半导体划片设备",
+      "code": "000981",
       "direction": "中性",
-      "news_count": 0,
-      "leader_signals": [],
-      "key_news": [],
-      "us_tailwind": ""
+      "score": 0
     },
     {
-      "code": "002407",
-      "name": "多氟多",
-      "sector": "锂电化工",
+      "code": "002208",
       "direction": "中性",
-      "news_count": 0,
-      "leader_signals": [],
-      "key_news": [],
-      "us_tailwind": ""
+      "score": 0
     },
     {
-      "code": "300342",
-      "name": "天银机电",
-      "sector": "商业航天/军工电子",
+      "code": "300792",
       "direction": "中性",
-      "news_count": 0,
-      "leader_signals": [],
-      "key_news": [],
-      "us_tailwind": ""
-    },
-    {
-      "code": "300739",
-      "name": "明阳电路",
-      "sector": "PCB/电子",
-      "direction": "略多",
-      "news_count": 3,
-      "leader_signals": [],
-      "key_news": [
-        "三星电子计划在第四季度量产CXL 3.1内存模块",
-        "财联社5月13日电，三星电子称，对调解会谈破裂表示遗憾。将努力继续与工会进行谈判。"
-      ],
-      "us_tailwind": ""
+      "score": 0
     },
     {
       "code": "601789",
-      "name": "宁波建工",
-      "sector": "建筑工程/基建",
       "direction": "中性",
-      "news_count": 0,
-      "leader_signals": [],
-      "key_news": [],
-      "us_tailwind": ""
+      "score": 0
     },
     {
-      "code": "600236",
-      "name": "桂冠电力",
-      "sector": "水电/电力",
+      "code": "002050",
       "direction": "中性",
-      "news_count": 0,
-      "leader_signals": [],
-      "key_news": [],
-      "us_tailwind": ""
+      "score": 0
     }
   ],
-  "announcements": {
-    "contracts": [],
-    "decreases": [],
-    "lockup": [],
-    "unusual": []
-  },
-  "my_news_count": 3
+  "announcement_counts": {
+    "contracts": 0,
+    "decreases": 0,
+    "lockup": 0,
+    "unusual": 0,
+    "restart": 0
+  }
 }

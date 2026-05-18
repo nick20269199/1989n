@@ -177,6 +177,41 @@ class MarketPool:
         store.save_kline(code, bars)
         return store.get_kline_df(code, days)
 
+    # ── TDX 全量重建 ──
+
+    def rebuild_from_tdx(self, codes: Optional[list[str]] = None) -> dict:
+        """用通达信本地数据重建 Parquet 缓存 (amount字段完整)
+
+        Args:
+            codes: 要重建的股票列表, None=重建所有有本地缓存的
+
+        Returns:
+            {total, ok, fail}
+        """
+        if codes is None:
+            # 本地已有缓存的全重建
+            codes = [p.stem for p in store.KLINE_DIR.glob("*.parquet")]
+
+        logger.info("TDX重建缓存: %d 只", len(codes))
+        ok, fail = 0, []
+        for code in codes:
+            try:
+                bars = fetch_kline(code, prefer_online=False)
+                if bars:
+                    store.save_kline(code, bars)
+                    ok += 1
+                else:
+                    fail.append(code)
+            except Exception as e:
+                fail.append(code)
+                logger.debug("TDX重建失败 %s: %s", code, e)
+
+        if ok:
+            store.update_meta([c for c in codes if c not in fail])
+
+        return {"total": len(codes), "ok": ok, "fail": len(fail),
+                "failed_codes": fail[:10]}
+
     # ── 实时行情 ──
 
     def get_quotes(self, codes: list[str], force_refresh=False) -> dict:

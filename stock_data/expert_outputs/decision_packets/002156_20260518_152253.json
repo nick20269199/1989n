@@ -1,0 +1,47 @@
+{
+  "symbol": "002156",
+  "name": "通富微电",
+  "timestamp": "2026-05-18T15:22:53.440762",
+  "pipeline_status": "rejected",
+  "grader": {
+    "score": 0.72,
+    "scores": {
+      "direction": 1.0,
+      "method": 0.83,
+      "trajectory": 0.83,
+      "margin": 0.83,
+      "logic": 0.63
+    },
+    "failures": [
+      "逻辑维度仅得0.63：三位专家均给出'if_wrong'分支，但因果链不完全闭环——未明确说明‘若A不发生，则B不成立’的反事实推演（如：未定义‘MA20企稳+缩量止跌’是否充分必要条件）；专家1和专家3的逻辑中缺少对‘观望’本身有效性的证伪路径（即：什么情况下‘观望’是错的？），专家2虽有情绪锚点缺失的归因，但未构建可证伪的市场状态判据（如：未定义‘unknown’如何量化或观测）"
+    ],
+    "merged_direction": "观望",
+    "merged_confidence": 0.5233333333333333,
+    "summary": "三位专家一致判断为‘观望’，技术面、资金面与情绪面均指向短期方向未明但中期支撑尚存，需等待MA20企稳或板块共振突破信号，分析框架完整、关键水平清晰、失效条件明确，唯逻辑闭环性略欠严谨。"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "观望",
+      "confidence": 0.5,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.52,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "观望",
+      "confidence": 0.55,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": false
+}

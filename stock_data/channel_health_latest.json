@@ -1,15 +1,16 @@
 {
-  "time": "2026-05-13 08:37",
-  "channels": {
-    "sina_stock": false,
-    "sina_index": true,
-    "tencent": true,
-    "sohu_kline": true,
-    "eastmoney": false
-  },
-  "core_healthy": false,
-  "alerts": [
-    "sina_stock: FAIL — 核心个股通道异常，需关注"
+  "time": "2026-05-18 08:37",
+  "sina_stock": false,
+  "sina_index": true,
+  "tdx": false,
+  "tencent": true,
+  "sohu_kline": true,
+  "eastmoney": false,
+  "core_failures": [
+    "sina_stock",
+    "tdx"
   ],
-  "notes": "eastmoney 失败为已知 WAF 阻断，不计入核心告警"
+  "noncore_failures": [
+    "eastmoney"
+  ]
 }

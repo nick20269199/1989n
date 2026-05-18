@@ -1,0 +1,72 @@
+{
+  "type": "30min_analysis",
+  "time": "2026-05-18 11:30",
+  "indices": {
+    "sh": 4126.3543,
+    "sz": 15513.07,
+    "cy": 3909.219,
+    "kc50": 1712.7949
+  },
+  "portfolio": {
+    "total_value": 176749.0,
+    "total_cost": 150480.2,
+    "total_pnl": 26268.8,
+    "total_pnl_pct": 17.46
+  },
+  "holdings": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "price": 58.69,
+      "today_chg": 2.93,
+      "cost": 44.85,
+      "pnl_pct": 30.86,
+      "mv": 93904.0
+    },
+    {
+      "code": "000981",
+      "name": "山子高科",
+      "price": 4.21,
+      "today_chg": -4.54,
+      "cost": 4.501,
+      "pnl_pct": -6.47,
+      "mv": 20629.0
+    },
+    {
+      "code": "002208",
+      "name": "合肥城建",
+      "price": 22.84,
+      "today_chg": 10.02,
+      "cost": 19.849,
+      "pnl_pct": 15.07,
+      "mv": 20556.0
+    },
+    {
+      "code": "300792",
+      "name": "壹网壹创",
+      "price": 35.99,
+      "today_chg": 2.01,
+      "cost": 36.81,
+      "pnl_pct": -2.23,
+      "mv": 3599.0
+    },
+    {
+      "code": "601789",
+      "name": "宁波建工",
+      "price": 6.3,
+      "today_chg": 4.13,
+      "cost": 6.206,
+      "pnl_pct": 1.51,
+      "mv": 32760.0
+    },
+    {
+      "code": "002050",
+      "name": "三花智控",
+      "price": 53.01,
+      "today_chg": 1.82,
+      "cost": 28.49,
+      "pnl_pct": 86.07,
+      "mv": 5301.0
+    }
+  ]
+}

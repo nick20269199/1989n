@@ -1,0 +1,47 @@
+{
+  "symbol": "002156",
+  "name": "通富微电",
+  "timestamp": "2026-05-18T15:14:08.107208",
+  "pipeline_status": "rejected",
+  "grader": {
+    "score": 0.68,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.8333333333333334,
+      "margin": 1.0,
+      "logic": 0.5
+    },
+    "failures": [
+      "逻辑维度仅得0.5分：三位专家均未构建完整因果链（'因为A所以B，若非B则A假'形式不严谨）；expert1逻辑中'近5日均价59.22 > 当前价57.4但呈收敛态势'属经验性描述，未定义'收敛'的量化标准及证伪条件；expert2与expert3的'if_wrong'条款为情景推演而非逻辑反证（如'若跌破55.0则转空'是新判断，未否定原前提A的有效性）；无专家明确指出任一核心前提（如'MA多头排列→趋势向上'）在何种可观测条件下可被证伪，缺失可证伪性设计"
+    ],
+    "merged_direction": "观望",
+    "merged_confidence": 0.5733333333333334,
+    "summary": "报告方向明确、方法透明、轨迹完整、边际清晰，但逻辑链条缺乏可证伪性与严格因果闭环，未达五维门禁的逻辑完整性要求（逻辑=0.5），故整体不通过。综合三位专家意见（1多/2观望），叠加最低置信度约束（0.45→0.55→0.72），取加权中位倾向，维持‘观望’为主导结论。"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.72,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "观望",
+      "confidence": 0.45,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.55,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": false
+}

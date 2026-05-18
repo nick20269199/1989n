@@ -1,0 +1,116 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-18 14:00:02",
+  "market_status": "trading",
+  "count": 18,
+  "data": [
+    {
+      "title": "星宸科技：车载激光雷达芯片预计2027年起将进入规模化量产 目标出货量有望达千万级别",
+      "time": "2026-05-18 13:59:31",
+      "category": "{'article_id': 2374024, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24527, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2374024, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101357, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2374024, 'subject_id': 1309, 'subject_name': '机器人', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 43925, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 201, 'channel': 'cls,stib'},{'article_id': 2374024, 'subject_id': 2710, 'subject_name': '激光', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7236, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 479, 'channel': 'cls,stib'},{'article_id': 2374024, 'subject_id': 2471, 'subject_name': '智能穿戴', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6562, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 420, 'channel': 'cls,stib'},{'article_id': 2374024, 'subject_id': 10322, 'subject_name': '激光雷达', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9108, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1943, 'channel': 'cls,stib'},{'article_id': 2374024, 'subject_id': 11379, 'subject_name': '低空经济', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 23014, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2444, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374024"
+    },
+    {
+      "title": "财联社5月18日电，富时中国A50指数期货跌超1%。",
+      "time": "2026-05-18 13:59:21",
+      "category": "{'article_id': 2374025, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56413, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374025, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175129, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374025, 'subject_id': 11411, 'subject_name': '股指期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12006, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374025"
+    },
+    {
+      "title": "三大运营商异动拉升 中国电信涨超6%",
+      "time": "2026-05-18 13:59:17",
+      "related_stocks": "601728,600050,600941",
+      "category": "{'article_id': 2374023, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175129, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374023, 'subject_id': 10112, 'subject_name': '电信运营', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7647, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 539, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374023"
+    },
+    {
+      "title": "财联社5月18日电，当问及欧洲央行行长拉加德是否对债券抛售感到担忧时，她答道：“我一直都在担忧，这就是我的工作！”",
+      "time": "2026-05-18 13:58:39",
+      "category": "{'article_id': 2374022, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374022"
+    },
+    {
+      "title": "财联社5月18日电，三星电子股价涨幅扩大至5.4%，报28.5万韩元。",
+      "time": "2026-05-18 13:58:08",
+      "category": "{'article_id': 2374020, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374020, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67789, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2374020, 'subject_id': 2409, 'subject_name': '存储芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17838, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 412, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374020"
+    },
+    {
+      "title": "财联社5月18日电，日本20年期国债收益率上升8个基点至3.720%，日本30年期国债收益率上涨9个基点至4.090%。",
+      "time": "2026-05-18 13:52:01",
+      "category": "{'article_id': 2374010, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374010"
+    },
+    {
+      "title": "财联社5月18日电，法国财长称，七国集团财长将讨论全球债券市场的此次回调。",
+      "time": "2026-05-18 13:49:39",
+      "category": "{'article_id': 2374009, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374009"
+    },
+    {
+      "title": "湖北荆州：中心城区停工、停产、停业、停运、停课",
+      "time": "2026-05-18 13:46:41",
+      "category": "{'article_id': 2374008, 'subject_id': 9844, 'subject_name': '天气变化', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8038, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374008"
+    },
+    {
+      "title": "财联社5月18日电，法国财长表示，法国经济第二季度应会反弹，预计今年经济将增长0.9%。",
+      "time": "2026-05-18 13:45:23",
+      "category": "{'article_id': 2374007, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374007"
+    },
+    {
+      "title": "AI眼镜概念震荡走强 视涯科技涨超10%",
+      "time": "2026-05-18 13:41:52",
+      "related_stocks": "688332,688088,688781,301383,603893,688608",
+      "category": "{'article_id': 2374005, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175129, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374005, 'subject_id': 11776, 'subject_name': 'AI眼镜', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10312, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2556, 'channel': 'stib,cls'},{'article_id': 2374005, 'subject_id': 2152, 'subject_name': '虹软科技', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7072, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374005"
+    },
+    {
+      "title": "由常住地提供基本公共服务相关文件将出台",
+      "time": "2026-05-18 13:38:17",
+      "url": "https://www.cls.cn/detail/2374002"
+    },
+    {
+      "title": "财联社5月18日电，台交所加权股价指数收低0.7%，报40,891.82点。",
+      "time": "2026-05-18 13:35:48",
+      "url": "https://www.cls.cn/detail/2373993"
+    },
+    {
+      "title": "世界铂金投资协会：中东战争使第一季铂金市场供过于求 为六个季度以来首见",
+      "time": "2026-05-18 13:35:31",
+      "category": "{'article_id': 2373991, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373991, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56413, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373991, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47537, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2373991, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37109, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'},{'article_id': 2373991, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28090, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373991"
+    },
+    {
+      "title": "财联社5月18日电，低硫燃料油连续主力合约日内涨8%，现报5341元/吨。",
+      "time": "2026-05-18 13:32:18",
+      "category": "{'article_id': 2373980, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56413, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2373980, 'subject_id': 11394, 'subject_name': '能源类期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8500, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373980"
+    },
+    {
+      "title": "内塔尼亚胡再次要求取消涉贪腐案听证会",
+      "time": "2026-05-18 13:31:47",
+      "category": "{'article_id': 2373976, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47537, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373976"
+    },
+    {
+      "title": "财联社5月18日电，花旗集团将马士基目标股价从15350丹麦克朗上调至16440丹麦克朗。",
+      "time": "2026-05-18 13:31:21",
+      "category": "{'article_id': 2373973, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373973"
+    },
+    {
+      "title": "【金牌纪要库·风口会议】AI算力芯片放量拉动探针与测试设备量价齐升",
+      "time": "2026-05-18 13:30:47",
+      "url": "https://www.cls.cn/detail/2373882"
+    },
+    {
+      "title": "财联社5月18日电，印度10年期国债收益率升至7.14%，为2024年5月以来最高水平。",
+      "time": "2026-05-18 13:30:38",
+      "category": "{'article_id': 2373970, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156031, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2373970"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}
