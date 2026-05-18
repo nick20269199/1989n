@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.92,
+  "scores": {
+    "direction": 1.0,
+    "method": 1.0,
+    "trajectory": 1.0,
+    "margin": 1.0,
+    "logic": 0.9
+  },
+  "failures": [],
+  "merged_direction": "多",
+  "merged_confidence": 0.75,
+  "summary": "三位专家一致看多，方法透明（技术/资金/情绪三维度交叉验证），轨迹完整（含区间、目标、时间、关键位），边际清晰（失效条件、置信衰减、黑天鹅应对），逻辑闭环（因果链完整+明确证伪条件）；仅逻辑项微扣0.1分（expert1未显式写出‘if_wrong’反事实推演，其余两位完备）",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.92,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 1.0,\n    \"margin\": 1.0,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.75,\n  \"summary\": \"三位专家一致看多，方法透明（技术/资金/情绪三维度交叉验证），轨迹完整（含区间、目标、时间、关键位），边际清晰（失效条件、置信衰减、黑天鹅应对），逻辑闭环（因果链完整+明确证伪条件）；仅逻辑项微扣0.1分（expert1未显式写出‘if_wrong’反事实推演，其余两位完备）\"\n}\n```"
+}

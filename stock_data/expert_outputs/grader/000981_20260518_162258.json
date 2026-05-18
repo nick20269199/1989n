@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.84,
+  "scores": {
+    "direction": 1.0,
+    "method": 1.0,
+    "trajectory": 1.0,
+    "margin": 0.93,
+    "logic": 0.85
+  },
+  "failures": [],
+  "merged_direction": "多",
+  "merged_confidence": 0.68,
+  "summary": "三位专家均明确看多，方法透明（技术/情绪/资金三维度交叉验证），轨迹完整（含区间、目标、时间、关键位），边际条件清晰（含失效触发、置信衰减、黑天鹅应对），逻辑具备可证伪性（‘if wrong’闭环），综合质量高，符合价值投资辅助决策的严谨性要求。",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 1.0,\n    \"margin\": 0.93,\n    \"logic\": 0.85\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.68,\n  \"summary\": \"三位专家均明确看多，方法透明（技术/情绪/资金三维度交叉验证），轨迹完整（含区间、目标、时间、关键位），边际条件清晰（含失效触发、置信衰减、黑天鹅应对），逻辑具备可证伪性（‘if wrong’闭环），综合质量高，符合价值投资辅助决策的严谨性要求。\"\n}\n```"
+}

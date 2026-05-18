@@ -30,17 +30,17 @@ PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行资金面分析。
 4. **筹码分布**：近期筹码是集中还是分散？获利盘比例？
 5. **成交量结构**：放量是出现在上涨还是下跌中？主动性买盘 vs 卖盘？
 
-最后，输出一个JSON代码块，包含以下字段：
-- direction: "多"/"空"/"观望"
-- method: 使用的分析方法列表
-- trajectory: {{"entry_zone", "target", "timeframe", "key_levels"}}
-- margin: {{"invalidated_if", "confidence_decay", "black_swan"}}
-- logic: {{"because", "so", "if_wrong"}}
-- confidence: 0-1之间的数字
+最后，输出一个JSON代码块，包含以下字段。
+**重要规则：**
+- entry_zone 必须是**数字区间**如"44.5-45.5"，禁止写"待确认""等信号""共振时"等模糊词
+- 没有价格数字时，根据量价关系推算一个合理区间，写明"基于XX推算"
+- invalidated_if 必须写**具体价格+天数**
+- confidence_decay 必须写**具体条件+新置信度**
+- method 必须写明**具体指标+参数**如"超大单净额(逐单L2)""主力资金(5日累计)"
+- if_wrong 必须写出**反向验证条件**
 
-示例格式：
 ```json
-{{"direction": "多", "method": ["主力资金", "超大单分析"], "trajectory": {{"entry_zone": "44-45", "target": "48", "timeframe": "1周", "key_levels": ["43", "46", "48"]}}, "margin": {{"invalidated_if": "主力由流入转流出", "confidence_decay": "持续流出3日降级", "black_swan": "系统性资金撤退"}}, "logic": {{"because": "超大单连续净流入", "so": "看多", "if_wrong": "则大单是出货不是建仓"}}, "confidence": 0.7}}
+{{"direction": "多", "method": ["主力资金(5日累计净额)", "超大单(L2逐单)", "大中小单分布(四象限)", "成交量结构(主动买/卖比)"], "trajectory": {{"entry_zone": "44.5-45.5", "target": "48.0", "timeframe": "1周", "key_levels": ["43.0支撑", "46.0阻力"]}}, "margin": {{"invalidated_if": "主力由流入转流出超2日", "confidence_decay": "连续3日流出→0.3, 缩量横盘5日→0.5", "black_swan": "大盘放量暴跌减仓避险"}}, "logic": {{"because": "超大单连续3日净流入+中单无跟风", "so": "看多", "if_wrong": "如果3日内股价不涨反跌,则超大单可能是对倒出货"}}, "confidence": 0.7}}
 ```"""
 
 

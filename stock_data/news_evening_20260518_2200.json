@@ -1,0 +1,300 @@
+{
+  "type": "财经快讯-evening",
+  "time": "2026-05-18 22:00:03",
+  "market_status": "closed",
+  "count": 49,
+  "data": [
+    {
+      "title": "财联社5月18日电，美国众议院议员提议每年征收130美元的电动汽车费用，以帮助支付道路维修费用。",
+      "time": "2026-05-18 21:59:20",
+      "category": "{'article_id': 2374659, 'subject_id': 1090, 'subject_name': '汽车大新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28761, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 268, 'channel': 'cls'},{'article_id': 2374659, 'subject_id': 12459, 'subject_name': '美国政治', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10267, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374659"
+    },
+    {
+      "title": "美股AI应用软件股普涨",
+      "time": "2026-05-18 21:59:03",
+      "category": "{'article_id': 2374658, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374658"
+    },
+    {
+      "title": "【风口研报·洞察】AIDC燃气发电产能趋于饱和，SOFC（燃料电池）发电规模化应用有望加速，国内相关设备及零部件厂商有望受益；科技行情是否结束",
+      "time": "2026-05-18 21:58:50",
+      "url": "https://www.cls.cn/detail/2374262"
+    },
+    {
+      "title": "广西柳州市柳南区发生5.2级地震",
+      "time": "2026-05-18 21:58:15",
+      "category": "{'article_id': 2374657, 'subject_id': 9198, 'subject_name': '地震快讯', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9956, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374657"
+    },
+    {
+      "title": "伊朗媒体说又一艘伊朗船只突破美国封锁",
+      "time": "2026-05-18 21:57:00",
+      "category": "{'article_id': 2374655, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47552, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374655"
+    },
+    {
+      "title": "财联社5月18日电，现货黄金日内涨幅扩大至1%，报4583.66美元/盎司。",
+      "time": "2026-05-18 21:55:59",
+      "category": "{'article_id': 2374654, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37111, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374654"
+    },
+    {
+      "title": "财联社5月18日电，美股三大指数再次拉升，截至目前，道琼斯指数涨0.37%，标普500指数涨0.25%，纳斯达克综合指数跌0.23%。",
+      "time": "2026-05-18 21:55:10",
+      "category": "{'article_id': 2374653, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374653"
+    },
+    {
+      "title": "杰富瑞“首选股”大换血 纳入亚马逊、AppLovin与麦当劳",
+      "time": "2026-05-18 21:53:59",
+      "category": "{'article_id': 2374652, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374652"
+    },
+    {
+      "title": "美股加密货币、光通信概念股集体走弱",
+      "time": "2026-05-18 21:51:33",
+      "category": "{'article_id': 2374651, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374651"
+    },
+    {
+      "title": "财联社5月18日电，希捷科技跌幅扩大至5%，西部数据跌幅扩大至4%。",
+      "time": "2026-05-18 21:51:14",
+      "category": "{'article_id': 2374650, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374650"
+    },
+    {
+      "title": "财联社5月18日电，现货白银向上触及78美元/盎司，日内上涨2.78%。",
+      "time": "2026-05-18 21:50:05",
+      "category": "{'article_id': 2374647, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156059, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374647, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56431, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374647, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28091, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374647"
+    },
+    {
+      "title": "财联社5月18日电，沙特阿美公司与Pasqal共同推出沙特首台量子计算机以及中东首个商用量子计算即服务平台。",
+      "time": "2026-05-18 21:48:23",
+      "category": "{'article_id': 2374646, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56430, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374646, 'subject_id': 1583, 'subject_name': '原油市场动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 45047, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 316, 'channel': 'cls'},{'article_id': 2374646, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47552, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374646, 'subject_id': 1302, 'subject_name': '国产软件', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22663, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 200, 'channel': 'cls,stib'},{'article_id': 2374646, 'subject_id': 2545, 'subject_name': '沙特阿美', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7214, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374646"
+    },
+    {
+      "title": "美股芯片股走低",
+      "time": "2026-05-18 21:44:22",
+      "category": "{'article_id': 2374644, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374644"
+    },
+    {
+      "title": "财联社5月18日晚间新闻精选",
+      "time": "2026-05-18 21:43:51",
+      "url": "https://www.cls.cn/detail/2374643"
+    },
+    {
+      "title": "证监会：四家公募基金申报REITs指数证券投资基金",
+      "time": "2026-05-18 21:41:29",
+      "category": "{'article_id': 2374642, 'subject_id': 1349, 'subject_name': '公募基金动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374642"
+    },
+    {
+      "title": "SpaceX正式启动“1拆5”拆股计划 为史上最大IPO扫清“高价”障碍",
+      "time": "2026-05-18 21:40:43",
+      "category": "{'article_id': 2374641, 'subject_id': 2681, 'subject_name': '太空探索', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8877, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2374641, 'subject_id': 1425, 'subject_name': '医药商业', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12773, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 408, 'channel': 'cls'},{'article_id': 2374641, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374641"
+    },
+    {
+      "title": "财联社5月18日电，美股三大指数转跌，截至目前，道琼斯指数跌0.04%，标普500指数跌0.06%，纳斯达克综合指数跌0.01%。",
+      "time": "2026-05-18 21:38:55",
+      "category": "{'article_id': 2374639, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60245, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374639"
+    },
+    {
+      "title": "财联社5月18日电，美银给予赛富时“跑输大盘”评级，目标价160美元。",
+      "time": "2026-05-18 21:37:53",
+      "category": "{'article_id': 2374638, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60245, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374638, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24528, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374638"
+    },
+    {
+      "title": "财联社5月18日电，福特汽车盘初下跌0.6%，此前在盘前交易中一度上涨约7%。",
+      "time": "2026-05-18 21:37:31",
+      "category": "{'article_id': 2374637, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60245, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374637"
+    },
+    {
+      "title": "美股商业航天概念板块大幅上涨，火箭实验室股价跃升11%，创下历史新高；直觉机器公司涨幅达到13%。",
+      "time": "2026-05-18 21:35:15",
+      "category": "{'article_id': 2374634, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374634"
+    },
+    {
+      "title": "北京开展网络食品虚假宣传专项整治 划定三大类行为红线",
+      "time": "2026-05-18 21:35:11",
+      "category": "{'article_id': 2374635, 'subject_id': 1600, 'subject_name': '食品安全', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9167, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 275, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374635"
+    },
+    {
+      "title": "中航西飞：目前在商业航天领域的收入占整体营业收入的比例较小",
+      "time": "2026-05-18 21:34:57",
+      "related_stocks": "000768",
+      "category": "{'article_id': 2374633, 'subject_id': 1786, 'subject_name': '互动平台精选', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 32279, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2374633"
+    },
+    {
+      "title": "吴通控股：新能源CCS及软硬连接产品领域开始批量发货 逐步成为新的增长点",
+      "time": "2026-05-18 21:34:37",
+      "related_stocks": "300292",
+      "category": "{'article_id': 2374632, 'subject_id': 7556, 'subject_name': '机构调研动向', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 43457, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374632"
+    },
+    {
+      "title": "费城半导体指数开盘上涨1.3%",
+      "time": "2026-05-18 21:34:21",
+      "category": "{'article_id': 2374631, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60245, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374631, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101383, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2374631"
+    },
+    {
+      "title": "利弗莫尔中概股龙头指数盘初下跌0.5%",
+      "time": "2026-05-18 21:32:46",
+      "category": "{'article_id': 0, 'subject_id': 0, 'subject_name': '利弗莫尔中概股龙头指数', 'subject_img': '', 'subject_description': 'https://h5.jesselivermore.com/cls/chart.html', 'category_id': 0, 'attention_num': 0, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': ''},{'article_id': 2374628, 'subject_id': 1099, 'subject_name': '中概股情报站', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 26743, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374628, 'subject_id': 12776, 'subject_name': '中概股龙头指数', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6758, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374628"
+    },
+    {
+      "title": "美股纳指高开0.2% 芯片股反弹",
+      "time": "2026-05-18 21:31:33",
+      "category": "{'article_id': 2374627, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60246, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374627"
+    },
+    {
+      "title": "航行警告 渤海军事演习",
+      "time": "2026-05-18 21:31:21",
+      "url": "https://www.cls.cn/detail/2374626"
+    },
+    {
+      "title": "伊朗披露穆杰塔巴受伤细节",
+      "time": "2026-05-18 21:30:31",
+      "category": "{'article_id': 2374625, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56431, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374625, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47552, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374625"
+    },
+    {
+      "title": "【风口研报·公司】AI算力的关键环节，公司作为先进封装大陆龙头，国内市占率已超80%，募投产能释放后有望进一步保持领先身位；另有公司拟扩产至近4万PFLOPS，有望贡献第二业绩增长曲线",
+      "time": "2026-05-18 21:29:49",
+      "url": "https://www.cls.cn/detail/2374143"
+    },
+    {
+      "title": "世界卫生大会连续第十年拒绝涉台提案",
+      "time": "2026-05-18 21:29:45",
+      "category": "{'article_id': 2374624, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156059, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374624"
+    },
+    {
+      "title": "港股IPO：广东金晟新能源递表港交所",
+      "time": "2026-05-18 21:28:55",
+      "category": "{'article_id': 2374623, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27463, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2374623, 'subject_id': 1194, 'subject_name': '港股IPO动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 13804, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374623"
+    },
+    {
+      "title": "印度首都或将遭遇45摄氏度高温",
+      "time": "2026-05-18 21:28:26",
+      "category": "{'article_id': 2374621, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56430, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374621, 'subject_id': 9844, 'subject_name': '天气变化', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8038, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374621"
+    },
+    {
+      "title": "财联社5月18日电，据报道，人工智能软件初创公司Decart融资3亿美元，估值接近40亿美元。",
+      "time": "2026-05-18 21:27:51",
+      "category": "{'article_id': 2374620, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156059, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374620"
+    },
+    {
+      "title": "财联社5月18日电，道明尼能源高管在电话会议上表示，与NextEra能源合并后，合并后的公司预计2027年至2032年期间每年资本支出将达到590亿美元。",
+      "time": "2026-05-18 21:26:20",
+      "category": "{'article_id': 2374619, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18486, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374619"
+    },
+    {
+      "title": "财联社5月18日电，美国道明尼资源公司首席执行官预计标准普尔将在收盘时对其评级进行上调。",
+      "time": "2026-05-18 21:19:45",
+      "url": "https://www.cls.cn/detail/2374616"
+    },
+    {
+      "title": "财联社5月18日电，据伊拉克石油部消息，伊拉克4月份原油出口量为988.4万桶。",
+      "time": "2026-05-18 21:13:49",
+      "category": "{'article_id': 2374605, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56430, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374605, 'subject_id': 1583, 'subject_name': '原油市场动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 45047, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 316, 'channel': 'cls'},{'article_id': 2374605, 'subject_id': 1741, 'subject_name': '海外大宗商品', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 33213, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374605, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47552, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374605, 'subject_id': 11394, 'subject_name': '能源类期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8502, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374605"
+    },
+    {
+      "title": "财联社5月18日电，‌英国国民西敏寺银行‌（NatWest）承诺在未来十年内向英格兰北部地区发展投入200亿英镑。",
+      "time": "2026-05-18 21:13:44",
+      "category": "{'article_id': 2374613, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156059, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374613"
+    },
+    {
+      "title": "华为董事侯金龙：全球AIDC装机规模将持续突破",
+      "time": "2026-05-18 21:12:07",
+      "category": "{'article_id': 2374612, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67803, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2374612, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18486, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2374612, 'subject_id': 1700, 'subject_name': '电力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22395, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 145, 'channel': 'cls'},{'article_id': 2374612, 'subject_id': 9086, 'subject_name': '算力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 16886, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 550, 'channel': 'stib,cls'},{'article_id': 2374612, 'subject_id': 10581, 'subject_name': '数据中心', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7744, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 453, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374612"
+    },
+    {
+      "title": "李强在北京调研时强调 推动人工智能与先进制造业深度融合 加快培育塑造经济发展新动能新优势",
+      "time": "2026-05-18 21:08:09",
+      "category": "{'article_id': 2374608, 'subject_id': 9846, 'subject_name': '时政新闻播报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9423, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374608, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67803, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2374608"
+    },
+    {
+      "title": "财联社5月18日电，俄罗斯第一季度经常账户盈余初步数据扩大至122亿美元。",
+      "time": "2026-05-18 21:03:44",
+      "category": "{'article_id': 2374604, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156059, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374604"
+    },
+    {
+      "title": "【财联社早知道】我国“逐日工程”研究取得重大进展，机构预计2026年全球商业航天市场规模将达5530亿美元，这家公司已构建了覆盖“星—地—端”三大应用场景的产品体系",
+      "time": "2026-05-18 21:03:33",
+      "url": "https://www.cls.cn/detail/2374174"
+    },
+    {
+      "title": "财联社5月18日电，据伊朗方面消息，伊朗计划在两年内重建南帕尔斯天然气田。",
+      "time": "2026-05-18 21:02:23",
+      "category": "{'article_id': 2374603, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56431, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374603, 'subject_id': 1522, 'subject_name': '天然气', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 20899, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 30, 'channel': 'cls'},{'article_id': 2374603, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47552, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374603, 'subject_id': 11394, 'subject_name': '能源类期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8502, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374603"
+    },
+    {
+      "title": "财联社5月18日电，花旗与贝莱德旗下HPS签署150亿欧元的私人信贷协议。",
+      "time": "2026-05-18 21:00:59",
+      "category": "{'article_id': 2374602, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156059, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374602, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60245, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374602"
+    },
+    {
+      "title": "财联社5月18日电，国内商品期货夜盘开盘涨跌不一，沪锡涨1.74%，沪银涨1.6%，br橡胶涨1.11%，烧碱涨0.7%，沥青跌2.36%，原油跌1.83%，焦煤跌1.39%。",
+      "time": "2026-05-18 21:00:05",
+      "category": "{'article_id': 2374601, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56431, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374601"
+    },
+    {
+      "title": "财联社5月18日电，据报道，特朗普撤销了针对美国国税局的100亿美元诉讼。",
+      "time": "2026-05-18 20:56:20",
+      "category": "{'article_id': 2374597, 'subject_id': 12459, 'subject_name': '美国政治', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10267, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374597"
+    },
+    {
+      "title": "何立峰会见美国超威半导体公司董事会主席兼首席执行官苏姿丰",
+      "time": "2026-05-18 20:55:52",
+      "category": "{'article_id': 2374595, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101383, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2374595, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156059, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374595"
+    },
+    {
+      "title": "财联社5月18日电，摩根士丹利将英伟达目标价从260美元上调至285美元。",
+      "time": "2026-05-18 20:53:44",
+      "category": "{'article_id': 2374593, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60245, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374593"
+    },
+    {
+      "title": "财联社5月18日电，欧股纷纷转涨，欧洲斯托克50指数涨0.71%，英国富时100指数涨0.91%，法国CAC40指数涨0.25%，德国DAX30指数涨1.61%。",
+      "time": "2026-05-18 20:53:05",
+      "category": "{'article_id': 2374591, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156059, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374591, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56430, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374591"
+    },
+    {
+      "title": "科士达：液冷相关产品当前形成收入占公司整体收入规模不到1%",
+      "time": "2026-05-18 20:53:04",
+      "related_stocks": "002518",
+      "category": "{'article_id': 2374592, 'subject_id': 1555, 'subject_name': 'A股公告速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 214732, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374592"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

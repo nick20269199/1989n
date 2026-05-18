@@ -2,47 +2,79 @@
   "version": 2,
   "date": "2026-05-18",
   "cycle_stage": {
-    "stage": "启动",
-    "confidence": 0.5,
-    "signals": [],
-    "strategy_hint": "确认领头羊，追强不追弱",
-    "next_stage_risk": "主升（确认后）或 冰点（假突破）"
+    "stage": "混沌",
+    "confidence": 0.65,
+    "signals": [
+      "上证-0.09%/深证-0.20%/创业板-0.36%，窄幅震荡",
+      "科创50+0.81%，结构性走强",
+      "KOSPI-4.4%熔断背景下A股独立，外部冲击消化",
+      "组合总市值206k，+7.2%有赚钱效应",
+      "ratio数据采集失败（全为0），无法依赖量化信号"
+    ],
+    "strategy_hint": "外部冲击钝化期，结构性行情聚焦科技线，控制仓位不追高",
+    "next_stage_risk": "如果外部继续恶化（韩日/美股），A股补跌风险仍在"
   },
   "ratio_alerts": {
     "triggered": {},
-    "collision_focus": "连板率×成交量变化率",
-    "data_quality": "from_intraday"
+    "collision_focus": "数据采集失败（所有比率为0），定量信号不可用",
+    "data_quality": "degraded — sina+tdx通道仍不通，收盘ratio未正确采集"
   },
   "expectation_gaps": [
     {
-      "dimension": "辨识度 vs 预期差",
-      "consensus": "资金追逐辨识度最高的标的（龙头）",
-      "potential_gap": "如果龙头被过度定价 → 跟风中存在预期差 → 补涨机会"
+      "dimension": "A股独立性",
+      "consensus": "KOSPI暴跌会拖累A股",
+      "potential_gap": "实际A股仅微跌，科创50逆势走强。资金将韩国避险流出视为A股科技线利好——如果此逻辑延续，半导体封测/存储线可能继续受益"
+    },
+    {
+      "dimension": "存储/存为王叙事",
+      "consensus": "HBM短缺至2027-2028，三星5/21罢工，供需缺口扩大",
+      "potential_gap": "如果三星罢工实际影响低于预期 → 存储股短期回调。但野村研报指向结构性而非事件性机会，Forward PE 6x有安全边际"
+    },
+    {
+      "dimension": "高低切方向",
+      "consensus": "高位震荡放量、低位放量下跌，散户倾向割低追高",
+      "potential_gap": "大V一致认为应是科技内部高低切，不切纯周期/纯脑灯——如果此判断正确，科技低位票有补涨空间"
     }
   ],
   "rules_today": [
     {
-      "id": "R20260509_225741",
-      "condition": "当启动阶段，炸板率出现异常偏离时",
-      "action": "执行操作7-0",
-      "failure_signal": "如果晋级率未同步确认，则规则失效",
-      "is_condensed": true
+      "condition": "当外部市场暴跌（如KOSPI-4%+），但A股指数仅微跌（±0.5%以内），且科创50独立走强",
+      "action": "不恐慌减仓，评估持仓是否在科技线上。如果韩日暴跌与A股科技持仓有共振逻辑（如HBM/存储），视为潜在利好",
+      "failure_signal": "A股无法独立超过3天，第三天开始跟随补跌",
+      "is_condensed": true,
+      "source": "2026-05-18 KOSPI熔断日A股独立走强实盘验证"
+    },
+    {
+      "condition": "portfolio.json更新后，必须同步检查nightly_plan.py的HOLDINGS硬编码列表是否匹配",
+      "action": "调仓后运行sync_portfolio.py --check，同时人工校验trade plan最新输出是否反映当前持仓",
+      "failure_signal": "trade plan仍引用已清仓股票，或遗漏新开仓",
+      "is_condensed": true,
+      "source": "2026-05-18 morning_enhanced交易剧本引用已清仓股票的bug复盘"
     }
   ],
-  "rules_condensed_count": 1,
-  "rules_total_count": 1,
+  "rules_condensed_count": 2,
+  "rules_total_count": 2,
   "self_check": {
-    "mistake": "知识盲区：不熟悉ETF申赎机制，误判了资金流向",
-    "mistake_root_cause": "",
-    "ego_challenge": "",
-    "discipline_breach": "",
-    "feedback": "测试反馈"
+    "mistake": "nightly_plan.py硬编码HOLDINGS，数据源未进同步链。属于架构债务而非当日操作失误",
+    "mistake_root_cause": "架构债务：trade plan生成器使用独立硬编码数据源，未纳入sync_portfolio三路同步链",
+    "ego_challenge": "A股独立性在今天被验证，但仅1天数据不能确认趋势。最大的认知风险是过度相信A股独立叙事而忽略外部系统性风险的滞后传导。科创50在外部暴跌中逆势走强是否只是资金避险的短期行为？需要3天以上连续观察",
+    "discipline_breach": "无。所有流程按定时任务执行，无模式外操作",
+    "feedback": "无用户纠正。portfolio数据结构bug属于自行发现并报告"
   },
   "forecast_updates": {
-    "new": 0
+    "initial_cycle_judgment": "冰点(0.9)",
+    "corrected_cycle": "混沌(0.65)",
+    "correction_reason": "ratio数据全为0（数据通道问题），自动判定误触。手动修正：市场窄幅震荡+结构性走强+外部冲击消化，更符合混沌期特征",
+    "data_channel_note": "sina_stock+tdx通道仍不通，tencent+sohu备份正常。收盘ratio数据采集失败直接影响compress定量分析"
   },
   "efficiency": {
-    "total_calls": 22
+    "compress_pipeline": "定量信号因数据通道问题失效，主观修正耗时增加",
+    "daily_tasks_completed": [
+      "call_auction", "morning_enhanced", "intraday_report",
+      "closing_review", "tech_scan", "daily_compress",
+      "vv_radar_fetch(x2)", "vv_transcribe(x2)", "task_sentinel"
+    ],
+    "anomalies": "portfolio inconsistency发现并定位根因（nightly_plan硬编码），待修复"
   },
-  "compressed_at": "2026-05-09 22:57"
+  "compressed_at": "2026-05-18 16:10"
 }

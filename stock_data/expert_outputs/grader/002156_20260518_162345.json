@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.82,
+  "scores": {
+    "direction": 1.0,
+    "method": 1.0,
+    "trajectory": 1.0,
+    "margin": 0.8,
+    "logic": 0.8
+  },
+  "failures": [],
+  "merged_direction": "观望",
+  "merged_confidence": 0.62,
+  "summary": "三位专家方向分歧（多/空/震荡），方法、轨迹、逻辑均完整透明，但结论不可调和；技术面支撑与压力并存，资金面显出货疑云，情绪面有事件催化但未形成共振，综合判定需等待方向选择确认，建议观望。",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.82,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 1.0,\n    \"margin\": 0.8,\n    \"logic\": 0.8\n  },\n  \"failures\": [],\n  \"merged_direction\": \"观望\",\n  \"merged_confidence\": 0.62,\n  \"summary\": \"三位专家方向分歧（多/空/震荡），方法、轨迹、逻辑均完整透明，但结论不可调和；技术面支撑与压力并存，资金面显出货疑云，情绪面有事件催化但未形成共振，综合判定需等待方向选择确认，建议观望。\"\n}\n```"
+}

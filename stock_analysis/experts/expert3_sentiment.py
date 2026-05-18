@@ -30,19 +30,18 @@ PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行题材情绪面分析。
 4. **新闻事件映射**：最近24h相关新闻是利好还是利空？与股价反应是否一致？
 5. **情绪周期位置**：当前处于情绪上升期/高潮期/退潮期/冰点期？
 
-最后，输出一个JSON代码块，包含以下字段：
-- direction: "多"/"空"/"观望"
-- method: 使用的分析方法列表
-- trajectory: {{"entry_zone", "target", "timeframe", "key_levels"}}
-- margin: {{"invalidated_if", "confidence_decay", "black_swan"}}
-- logic: {{"because", "so", "if_wrong"}}
-- confidence: 0-1之间的数字
+最后，输出一个JSON代码块，包含以下字段。
+**重要规则：**
+- entry_zone 必须写**具体价格区间**（结合技术面数据），禁止"板块启动初期""等信号"等模糊词
+- 情绪相关描述放在trajectory的notes里，entry_zone/target必须用数字
+- method 必须写明**具体数据来源**如"板块涨跌幅(同花顺行业)""涨停家数(全市场)"
+- invalidated_if 必须写**价格条件**+"叠加什么情绪条件"
+- if_wrong 必须写出**反向验证条件**
 
-示例格式：
 ```json
-{{"direction": "多", "method": ["板块分析", "情绪周期"], "trajectory": {{"entry_zone": "板块启动初期", "target": "情绪高潮期", "timeframe": "3-5天", "key_levels": ["龙头涨停", "板块跟涨"]}}, "margin": {{"invalidated_if": "板块龙头炸板", "confidence_decay": "3天无板块效应降级", "black_swan": "政策利空"}}, "logic": {{"because": "板块处于轮动上升期", "so": "看多", "if_wrong": "则板块轮动判断错误"}}, "confidence": 0.7}}
-```"""
-
+{{"direction": "多", "method": ["板块表现(近5日涨跌幅)", "资金流向(板块净额)", "情绪周期(涨停/连板高度)", "新闻映射(24h利好/利空)","龙头联动(板块内排名)"], "trajectory": {{"entry_zone": "44.5-45.5", "target": "48.0", "timeframe": "1周", "key_levels": ["板块龙头涨停", "板块跟涨2%以上"], "notes": "情绪处于上升初期,连板高度3板"}}, "margin": {{"invalidated_if": "跌破44.0+板块龙头炸板", "confidence_decay": "3天无板块效应→0.3, 指数跌1.5%→0.5", "black_swan": "政策利空导致板块退潮减仓"}}, "logic": {{"because": "板块近3日资金净流入+连板高度提升", "so": "看多", "if_wrong": "如果板块3日内没有跟涨,则轮动判断错误"}}, "confidence": 0.7}}
+```
+"""
 
 def analyze(symbol: str, name: str, data_context: dict,
             market_state: str = "unknown", mode: str = "full") -> dict:

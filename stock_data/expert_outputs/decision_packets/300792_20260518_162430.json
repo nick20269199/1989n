@@ -1,0 +1,47 @@
+{
+  "symbol": "300792",
+  "name": "壹网壹创",
+  "timestamp": "2026-05-18T16:24:30.658957",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.9,
+      "margin": 0.9,
+      "logic": 0.9
+    },
+    "failures": [],
+    "merged_direction": "空",
+    "merged_confidence": 0.63,
+    "summary": "三位专家一致看空，技术面（空头排列+价跌量增）、资金面（主力派发+散户承接弱）、情绪面（板块领跌+情绪退潮+个股显著弱于板块）三重验证，逻辑闭环、轨迹清晰、边际明确，具备高一致性与可执行性。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.9,\n    \"margin\": 0.9,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"空\",\n  \"merged_confidence\": 0.63,\n  \"summary\": \"三位专家一致看空，技术面（空头排列+价跌量增）、资金面（主力派发+散户承接弱）、情绪面（板块领跌+情绪退潮+个股显著弱于板块）三重验证，逻辑闭环、轨迹清晰、边际明确，具备高一致性与可执行性。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "空",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

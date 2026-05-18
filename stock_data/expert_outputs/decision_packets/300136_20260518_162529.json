@@ -1,0 +1,52 @@
+{
+  "symbol": "300136",
+  "name": "信维通信",
+  "timestamp": "2026-05-18T16:25:29.510087",
+  "pipeline_status": "rejected",
+  "grader": {
+    "passed": false,
+    "score": 0.52,
+    "scores": {
+      "direction": 1.0,
+      "method": 0.8,
+      "trajectory": 0.8,
+      "margin": 0.4,
+      "logic": 0.6
+    },
+    "failures": [
+      "边际维度普遍缺失置信度衰减的量化触发机制（如expert1的'持有5天不涨→0.4'未定义如何测量'不涨'；expert2/3未说明衰减观测周期与判定标准）",
+      "边际中'black_swan'应对多为被动减仓，缺乏主动对冲或退出路径（如期权保护、反向头寸、跨品种对冲），未体现风险敞口管理",
+      "逻辑维度未完成闭环因果链：三位专家均未建立'若A假，则B必不成立'的可证伪结构（如expert1未说明'MA20上穿MA60'失效时是否必然否定中期多头；expert3未定义'放量下跌=主力出货'的反例检验标准）",
+      "三位专家方向冲突（多/观望/空），但报告未提供加权融合逻辑（如置信度×方法可靠性×数据新鲜度），导致merged_direction无客观依据"
+    ],
+    "merged_direction": "观望",
+    "merged_confidence": 0.45,
+    "summary": "三位专家方向分歧显著且边际控制与逻辑可证伪性不足，技术面多头、资金面空头、情绪面真空形成三重割裂，当前缺乏统一信号锚点，应以观望等待共振为最优策略。",
+    "_raw": "```json\n{\n  \"passed\": false,\n  \"average_score\": 0.52,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 0.8,\n    \"trajectory\": 0.8,\n    \"margin\": 0.4,\n    \"logic\": 0.6\n  },\n  \"failures\": [\n    \"边际维度普遍缺失置信度衰减的量化触发机制（如expert1的'持有5天不涨→0.4'未定义如何测量'不涨'；expert2/3未说明衰减观测周期与判定标准）\",\n    \"边际中'black_swan'应对多为被动减仓，缺乏主动对冲或退出路径（如期权保护、反向头寸、跨品种对冲），未体现风险敞口管理\",\n    \"逻辑维度未完成闭环因果链：三位专家均未建立'若A假，则B必不成立'的可证伪结构（如expert1未说明'MA20上穿MA60'失效时是否必然否定中期多头；expert3未定义'放量下跌=主力出货'的反例检验标准）\",\n    \"三位专家方向冲突（多/观望/空），但报告未提供加权融合逻辑（如置信度×方法可靠性×数据新鲜度），导致merged_direction无客观依据\"\n  },\n  \"merged_direction\": \"观望\",\n  \"merged_confidence\": 0.45,\n  \"summary\": \"三位专家方向分歧显著且边际控制与逻辑可证伪性不足，技术面多头、资金面空头、情绪面真空形成三重割裂，当前缺乏统一信号锚点，应以观望等待共振为最优策略。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.3,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.7,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": false
+}

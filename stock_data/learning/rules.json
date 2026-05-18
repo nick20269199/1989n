@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-14 16:08",
+  "updated": "2026-05-18 16:09",
   "rules": [
     {
       "condition": "当启动阶段，炸板率出现异常偏离时",
@@ -480,6 +480,30 @@
       "last_verified": "",
       "verified_count": 0,
       "id": "R20260514_160834"
+    },
+    {
+      "condition": "当外部市场暴跌（如KOSPI-4%+），但A股指数仅微跌（±0.5%以内），且科创50独立走强",
+      "action": "不恐慌减仓，评估持仓是否在科技线上。如果韩日暴跌与A股科技持仓有共振逻辑（如HBM/存储），视为潜在利好",
+      "failure_signal": "A股无法独立超过3天，第三天开始跟随补跌",
+      "cycle_stage": "混沌",
+      "source": "2026-05-18 KOSPI熔断实盘",
+      "is_condensed": true,
+      "created": "2026-05-18 16:09",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260518_160921"
+    },
+    {
+      "condition": "portfolio.json更新后",
+      "action": "运行sync_portfolio.py --check，同时人工校验所有引用持仓的模块（nightly_plan/trade_plan/morning_enhanced）是否同步",
+      "failure_signal": "trade plan仍引用已清仓股票，或遗漏新开仓",
+      "cycle_stage": "通用",
+      "source": "2026-05-18 morning_enhanced交易剧本bug复盘",
+      "is_condensed": true,
+      "created": "2026-05-18 16:09",
+      "last_verified": "",
+      "verified_count": 0,
+      "id": "R20260518_160921"
     }
   ],
   "stats": {}

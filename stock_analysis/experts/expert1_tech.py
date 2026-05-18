@@ -30,17 +30,17 @@ PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行技术面分析。
 4. **R7信号**：是否有R7超大单信号？信号强度？连续几日？
 5. **关键价位**：最近的支撑位和阻力位在哪？
 
-最后，输出一个JSON代码块，包含以下字段：
-- direction: "多"/"空"/"观望"
-- method: 使用的分析方法列表
-- trajectory: {{"entry_zone", "target", "timeframe", "key_levels"}}
-- margin: {{"invalidated_if", "confidence_decay", "black_swan"}}
-- logic: {{"because", "so", "if_wrong"}}
-- confidence: 0-1之间的数字
+最后，输出一个JSON代码块，包含以下字段。
+**重要规则：**
+- entry_zone 必须是**数字区间**如"44.5-45.5"，不能写"待确认""等待信号"等模糊词
+- invalidated_if 必须写**具体价格+天数**如"跌破43且2天收不回"
+- confidence_decay 必须写**具体条件+新置信度**如"持有5天不涨→0.4"
+- method 必须写明**具体参数**如"MA5/MA20(收盘价,前复权)""量价比(5日均量/20日均量)"
+- method 数量不少于3个分析方法
+- if_wrong 必须写出**反向验证条件**如"如果5日内没涨到45，则均线金叉判断错误"
 
-示例格式：
 ```json
-{{"direction": "多", "method": ["趋势判断", "量价分析"], "trajectory": {{"entry_zone": "44-45", "target": "48", "timeframe": "1周", "key_levels": ["43", "46", "48"]}}, "margin": {{"invalidated_if": "跌破43", "confidence_decay": "持有5天未达目标降级", "black_swan": "板块系统性风险"}}, "logic": {{"because": "均线多头发散", "so": "看多", "if_wrong": "则趋势判断错误"}}, "confidence": 0.7}}
+{{"direction": "多", "method": ["趋势判断(MA5/MA20收盘价前复权)", "量价分析(5日均量/20日均量比)", "支撑阻力(前高前低)","RSI(14)"], "trajectory": {{"entry_zone": "44.5-45.5", "target": "48.0", "timeframe": "1周", "key_levels": ["43.0支撑", "46.0阻力", "48.0目标"]}}, "margin": {{"invalidated_if": "跌破43.0且2天收不回", "confidence_decay": "持有5天不涨→0.4,跌破44→0.2", "black_swan": "大盘单日跌3%以上减半仓"}}, "logic": {{"because": "MA5上穿MA20+量比1.5", "so": "看多", "if_wrong": "如果5日内没到45.0,则均线金叉失效"}}, "confidence": 0.7}}
 ```"""
 
 

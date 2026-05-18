@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-14 16:07",
+  "updated": "2026-05-18 16:08",
   "daily_digest_index": [],
   "digests": [
     {
@@ -145,6 +145,14 @@
       "alerts": 7,
       "rules_condensed": 3,
       "file": "D:\\1989n\\stock_data\\learning\\daily_digest_20260514.json"
+    },
+    {
+      "date": "2026-05-18",
+      "version": 2,
+      "stage": "冰点",
+      "alerts": 7,
+      "rules_condensed": 0,
+      "file": "D:\\1989n\\stock_data\\learning\\daily_digest_2026-05-18.json"
     }
   ]
 }
