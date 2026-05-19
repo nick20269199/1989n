@@ -49,6 +49,7 @@ class ExpertOutput:
         self.logic = {}              # 逻辑
         self.confidence = 0.0
         self.raw_analysis = ""
+        self.full_prompt = ""        # 原始完整prompt，用于repair
         self.error: Optional[str] = None
         self.status = "pending"      # pending / done / error
 
@@ -65,6 +66,7 @@ class ExpertOutput:
             "logic": self.logic,
             "confidence": self.confidence,
             "raw_analysis": self.raw_analysis,
+            "full_prompt": self.full_prompt,
             "error": self.error,
             "status": self.status,
         }
@@ -88,6 +90,7 @@ class ExpertOutput:
         o.logic = d.get("logic", {})
         o.confidence = d.get("confidence", 0.0)
         o.raw_analysis = d.get("raw_analysis", "")
+        o.full_prompt = d.get("full_prompt", "")
         o.error = d.get("error")
         o.status = d.get("status", "done")
         return o
@@ -154,6 +157,8 @@ def run_expert(expert_id: str, symbol: str, name: str,
         format_kwargs = {"symbol": symbol, "name": name, "data": data_str}
         format_kwargs.update(extra_format_kwargs)
         full_prompt_text = prompt_template.format(**format_kwargs)
+
+    output.full_prompt = full_prompt_text
 
     # Call API
     raw = call_llm(expert_id, full_prompt_text, system_prompt)
@@ -359,3 +364,67 @@ def _apply_parsed(output: ExpertOutput, data: dict):
     output.margin = data.get("margin", output.margin)
     output.logic = data.get("logic", output.logic)
     output.confidence = data.get("confidence", output.confidence)
+
+
+# ============================================================
+# Repair — 基于Grader反馈的定向修复
+# ============================================================
+
+REPAIR_SYSTEM_PROMPT = """你是一位交易分析师。你的分析报告被质量审核官驳回了。
+你的任务是根据驳回原因修复报告，而不是辩护。
+保持你的核心判断不变（除非审核明确指出判断依据有误），
+只修复结构性和逻辑性问题。"""
+
+
+def repair_expert(original_output: ExpertOutput,
+                  grader_feedback: str,
+                  data_context: dict | None = None,
+                  market_state: str = "unknown") -> ExpertOutput | None:
+    """Re-run an expert with targeted repair feedback from grader.
+
+    Uses the original full_prompt + grader feedback to generate a fix.
+    If full_prompt is empty (pre-repair era), returns None.
+
+    Returns:
+        New ExpertOutput with repaired analysis, or None if repair not possible
+    """
+    if not original_output.full_prompt:
+        logger.warning(f"{original_output.expert_id}: no full_prompt stored, cannot repair")
+        return None
+
+    expert_id = original_output.expert_id
+    symbol = original_output.symbol
+    name = original_output.name
+
+    # Build repair prompt: original prompt + previous output + grader feedback
+    repair_prompt = (
+        f"{original_output.full_prompt}\n\n"
+        f"===== 修复任务 =====\n"
+        f"你的上一次输出被质量审核驳回。驳回原因：\n{grader_feedback}\n\n"
+        f"你的上一次输出（供参考）：\n{original_output.raw_analysis}\n\n"
+        f"修复要求：\n"
+        f"1. 修复上述所有驳回问题\n"
+        f"2. 保持JSON格式正确（```json ... ```）\n"
+        f"3. 核心判断可以修改——如果审核指出逻辑链断裂（如if_wrong不是逆否命题、因果链缺失），优先保证逻辑闭环，必要时调整direction/confidence\n"
+        f"4. 确保if_wrong使用逆否命题结构（若非Y则X假），并且直接针对thesis的前提条件\n"
+        f"5. 确保invalidated_if包含价格+天数+条件三段，每个条件必须有显式数字阈值（不能说「主力净流出较大」，要说「主力净流出>成交额8%」）\n"
+        f"6. 确保confidence_decay包含至少2组条件→置信度映射，每组条件的数值阈值必须写出具体数字（「10日均量」这种变量名必须附带数字如「10日均量=7亿手」）\n"
+        f"7. black_swan必须是可观测的具体事件（不是「政策突变」「大盘不好」等模糊词）\n"
+        f"8. 检查所有条件是否都有明确的数字/可观测锚点——含糊的立即补数字\n"
+    )
+
+    logger.info(f"Repairing {expert_id} for {symbol}...")
+
+    raw = call_llm(expert_id, repair_prompt, REPAIR_SYSTEM_PROMPT)
+    if raw.startswith("[ERROR]"):
+        logger.error(f"Repair failed for {expert_id}: {raw}")
+        return None
+
+    output = ExpertOutput(expert_id, symbol, name)
+    output.full_prompt = original_output.full_prompt
+    output.raw_analysis = raw
+    output.status = "done"
+
+    _parse_structured_fields(output, raw)
+    output.save()
+    return output

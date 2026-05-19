@@ -24,7 +24,7 @@ from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from experts.base import ExpertOutput
+from experts.base import ExpertOutput, repair_expert
 from experts.config import (
     OUTPUT_DIR, EXPERT_WEIGHTS, EXPERT_TIMEOUT, LEAD_TIMEOUT,
     PORTFOLIO_FILE, STOCK_DB,
@@ -301,8 +301,58 @@ def run_single(symbol: str, name: str = "", mode: str = "full") -> Optional[dict
     grader_result = grade(symbol, name, expert_outputs, thesis=thesis)
     save_grade_result(symbol, name, grader_result)
 
+    # 3b. Repair loop — if grader didn't pass, try repairing LLM-based experts
+    REPAIRABLE_EXPERTS = {"expert1_tech", "expert2_money", "expert3_sentiment"}
+    MAX_REPAIR_ROUNDS = 2
+    repair_round = 0
+
+    while not grader_result.get("passed") and repair_round < MAX_REPAIR_ROUNDS:
+        repair_round += 1
+        failures = grader_result.get("failures", [])
+        grader_summary = grader_result.get("summary", "")
+        scores = grader_result.get("scores", {})
+
+        # Identify failing dimensions
+        weak_dims = [dim for dim, score in scores.items()
+                     if isinstance(score, (int, float)) and score < 0.5]
+        feedback_parts = list(failures)
+        if weak_dims:
+            feedback_parts.append(f"低分维度: {', '.join(weak_dims)}")
+        if grader_summary:
+            feedback_parts.append(f"综合意见: {grader_summary}")
+        feedback_text = "\n".join(feedback_parts)
+
+        logger.info(f"Repair round {repair_round}/{MAX_REPAIR_ROUNDS}: repairing LLM experts. Failures: {len(failures)}, weak dims: {weak_dims}")
+
+        # Repair each LLM-based expert
+        repaired_count = 0
+        for i, eo in enumerate(expert_outputs):
+            if eo.get("status") != "done":
+                continue
+            eid = eo.get("expert_id", "")
+            if eid not in REPAIRABLE_EXPERTS:
+                continue
+
+            # Wrap dict back into ExpertOutput for repair
+            orig = ExpertOutput.from_dict(eo)
+            repaired = repair_expert(orig, feedback_text, data_context, market_state)
+            if repaired and repaired.status == "done":
+                expert_outputs[i] = repaired.to_dict()
+                repaired_count += 1
+                logger.info(f"  Repaired {eid}: dir={repaired.direction}, conf={repaired.confidence}")
+
+        if repaired_count == 0:
+            logger.warning("No experts repaired in this round, aborting repair loop")
+            break
+
+        # Re-grade with repaired outputs
+        grader_result = grade(symbol, name, expert_outputs, thesis=thesis)
+        save_grade_result(symbol, name, grader_result)
+        logger.info(f"Re-grade after repair round {repair_round}: passed={grader_result.get('passed')}, score={grader_result.get('average_score', 0):.2f}")
+
     # 4. Build decision packet
     packet = build_decision_packet(symbol, name, expert_outputs, grader_result)
+    packet["repair_rounds"] = repair_round
     packet_path = save_decision_packet(packet)
     packet["_output_path"] = str(packet_path)
 
