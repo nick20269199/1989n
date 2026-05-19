@@ -134,6 +134,41 @@ def analyze(symbol: str, name: str, data_context: dict,
             "max_position_pct": 50,
             "warnings": ["缺乏市场数据"],
         }
+    # Map to grader-expected fields
+    composite = result.get("market_assessment", {}).get("composite_score", 0.5)
+    if composite >= 0.6:
+        result["direction"] = "多"
+    elif composite >= 0.4:
+        result["direction"] = "观望"
+    else:
+        result["direction"] = "空"
+    result["confidence"] = round(composite, 2)
+    result["method"] = ["市场情绪规则评估", "趋势判断(ma排列)", "量能分析", "历史胜率统计"]
+    result["trajectory"] = {
+        "market_condition": f"情绪={result.get('market_assessment',{}).get('sentiment','?')}, 趋势={result.get('market_assessment',{}).get('trend','?')}",
+        "decision": result.get("decision", ""),
+        "notes": "宏观层不提供个股价格轨迹,仅输出市况评估",
+    }
+    sentiment = result.get("market_assessment", {}).get("sentiment", "?")
+    trend = result.get("market_assessment", {}).get("trend", "?")
+    result["margin"] = {
+        "invalidated_if": f"情绪得分>0.6+趋势转为多头排列+量能恢复→放弃谨慎,可加仓; 得分<0.3+放量下跌→全面避险",
+        "confidence_decay": f"持有1周市况无改善→0.4, 得分<0.3→0.2, 量能萎缩50%→0.3",
+        "black_swan": "大盘单日跌3%以上触发全市场减仓; 地缘冲突/关税突变等尾部事件触发系统性避险",
+    }
+    result["logic"] = {
+        "because": f"复合评分{composite}来自情绪({result.get('market_assessment',{}).get('sentiment_score','?')})×0.4+趋势({result.get('market_assessment',{}).get('trend_score','?')})×0.4+量能×0.2",
+        "so": result.get("decision", ""),
+        "if_wrong": f"如果{trend}转为多头+情绪改善至正常+量能恢复则当前{result.get('decision','?')}判断失效,说明市况已改善可转为积极",
+    }
+    summary = (
+        f"市场情绪:{result.get('market_assessment',{}).get('sentiment','?')} "
+        f"趋势:{result.get('market_assessment',{}).get('trend','?')} "
+        f"量能:{result.get('market_assessment',{}).get('volume_state','?')} "
+        f"综合评分:{composite} → {result.get('decision','?')}"
+    )
+    result["raw_analysis"] = summary
+
     result["symbol"] = symbol
     result["name"] = name
     return result

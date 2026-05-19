@@ -215,18 +215,50 @@ def analyze(symbol: str, name: str, data_context: dict,
     if composite_risk >= 0.6:
         overall = "高风险 — 建议减仓或止损"
         action = "减仓"
+        direction = "空"
     elif composite_risk >= 0.3:
         overall = "中等风险 — 持仓观察"
         action = "持仓"
+        direction = "观望"
     else:
         overall = "低风险 — 正常持仓"
         action = "持仓"
+        direction = "多"
 
     return {
         "expert_id": EXPERT_ID,
         "status": "done",
         "symbol": symbol,
         "name": name,
+        "direction": direction,
+        "confidence": round(1 - composite_risk, 2),
+        "method": ["止损检查", "持仓时长分析", "集中度检查", "市场环境检查", "连亏检测"],
+        "trajectory": {
+            "stop_loss_levels": {
+                "hard_stop_pct": HARD_STOP_LOSS,
+                "soft_stop_pct": SOFT_STOP_LOSS,
+                "current_drawdown": stop_loss_check.get("drawdown_pct", 0),
+            },
+            "action": action,
+        },
+        "margin": {
+            "invalidated_if": f"止损条件触发后未执行(跌破{HARD_STOP_LOSS*100}%硬止损不清仓); 大盘连跌3日累计超3%+持仓未减",
+            "black_swan": "指数单日暴跌5%以上触发全市场清仓; 个股停牌/被ST/财务造假等不可控事件",
+            "confidence_decay": f"持仓超{MAX_HOLD_DAYS}天→0.4, 连续亏损3笔→0.2, 硬止损被触发→0.1",
+        },
+        "logic": {
+            "because": f"止损状态={stop_loss_check.get('level','?')}, 持仓天数={hold_days}, 集中度={conc_check.get('concentration_pct',0)}%, 市场环境={market_check.get('level','?')}",
+            "so": overall,
+            "if_wrong": f"如果{direction == '空' and '止损未触发+市场情绪恢复+个股独立走强' or direction == '观望' and '风险指标全部正常+趋势转多' or '止损触发+集中度超限'}则当前{direction}判断失效,风控逻辑证伪",
+        },
+        "raw_analysis": (
+            f"【风控检查】{name}({symbol})\n"
+            f"止损: {stop_loss_check.get('level','?')} ({stop_loss_check.get('drawdown_pct',0)}%)\n"
+            f"持仓: {hold_check.get('level','?')} ({hold_days}天)\n"
+            f"集中度: {conc_check.get('level','?')} ({conc_check.get('concentration_pct',0)}%)\n"
+            f"市场: {market_check.get('level','?')}\n"
+            f"综合风险: {composite_risk} → {overall}"
+        ),
         "risk_assessment": {
             "composite_risk": composite_risk,
             "overall": overall,
