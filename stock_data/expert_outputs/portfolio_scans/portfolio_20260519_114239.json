@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-05-19T11:42:39.209261",
+  "total": 7,
+  "passed": 4,
+  "rejected": 3,
+  "results": [
+    {
+      "symbol": "000981",
+      "name": "山子高科",
+      "status": "passed",
+      "score": 0.82,
+      "direction": "多",
+      "actionable": true
+    },
+    {
+      "symbol": "601789",
+      "name": "宁波建工",
+      "status": "rejected",
+      "score": 0.5333333333333333,
+      "direction": "观望",
+      "actionable": false
+    },
+    {
+      "symbol": "002156",
+      "name": "通富微电",
+      "status": "passed",
+      "score": 0.84,
+      "direction": "多",
+      "actionable": true
+    },
+    {
+      "symbol": "002208",
+      "name": "合肥城建",
+      "status": "passed",
+      "score": 0.84,
+      "direction": "多",
+      "actionable": true
+    },
+    {
+      "symbol": "300792",
+      "name": "壹网壹创",
+      "status": "rejected",
+      "score": 0.5333333333333333,
+      "direction": "空",
+      "actionable": false
+    },
+    {
+      "symbol": "300339",
+      "name": "润和软件",
+      "status": "passed",
+      "score": 0.84,
+      "direction": "空",
+      "actionable": true
+    },
+    {
+      "symbol": "300136",
+      "name": "信维通信",
+      "status": "rejected",
+      "score": 0.5333333333333333,
+      "direction": "观望",
+      "actionable": false
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "symbol": "002208",
+  "name": "合肥城建",
+  "timestamp": "2026-05-19T11:41:17.445710",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.9,
+      "margin": 0.9,
+      "logic": 0.9
+    },
+    "failures": [],
+    "merged_direction": "多",
+    "merged_confidence": 0.6833333333333333,
+    "summary": "三位专家均明确看多，方法透明（技术/资金/情绪三维度交叉验证），轨迹完整（含差异化入场区间、统一目标位21.5–22.0、时间框架清晰），边际条件具体可执行（含失效触发、置信衰减、黑天鹅应对），逻辑链完整且含反证机制（if_wrong全部显式声明），综合质量高，符合价值投资者对高确定性短线情绪驱动交易的决策支持要求。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.9,\n    \"margin\": 0.9,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.6833333333333333,\n  \"summary\": \"三位专家均明确看多，方法透明（技术/资金/情绪三维度交叉验证），轨迹完整（含差异化入场区间、统一目标位21.5–22.0、时间框架清晰），边际条件具体可执行（含失效触发、置信衰减、黑天鹅应对），逻辑链完整且含反证机制（if_wrong全部显式声明），综合质量高，符合价值投资者对高确定性短线情绪驱动交易的决策支持要求。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "多",
+      "confidence": 0.75,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

@@ -1,16 +1,11 @@
 {
-  "time": "2026-05-18 08:37",
   "sina_stock": false,
   "sina_index": true,
   "tdx": false,
   "tencent": true,
   "sohu_kline": true,
   "eastmoney": false,
-  "core_failures": [
-    "sina_stock",
-    "tdx"
-  ],
-  "noncore_failures": [
-    "eastmoney"
-  ]
+  "healthy": false,
+  "backup_active": true,
+  "note": "sina_stock+tdx\u6301\u7eed\u4e0d\u901a\uff0ctencent+sohu\u5907\u4efd\u6b63\u5e38\u8fd0\u4f5c\u4e2d"
 }

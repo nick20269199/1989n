@@ -41,6 +41,7 @@ from config import (
 from data_source_router import get_quotes as router_get_quotes
 from data_source_router import get_index_quotes as router_get_index_quotes
 from data_source_router import get_us_index_quotes, check_channels, EASTMONEY_BLOCKED
+from data_quality_gate import check_report_quality
 
 # 启动时检测通道健康状态
 _channels_ok = check_channels()
@@ -290,16 +291,14 @@ def _normalize_holdings(raw: list[dict]) -> list[dict]:
 def _fallback_holdings() -> list[dict]:
     """硬编码后备持仓（与 portfolio.json 一致的应急备份）"""
     return [
-        {"code": "002156", "name": "通富微电",   "shares": 1600, "cost": 44.85,  "sector": "半导体封测",         "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
-        {"code": "000981", "name": "山子高科",   "shares": 4900, "cost": 4.501, "sector": "汽车零部件/房地产",  "first_buy": "2026-05-15", "latest_buy": "2026-05-15"},
-        {"code": "002208", "name": "合肥城建",   "shares": 900,  "cost": 19.849,"sector": "房地产",             "first_buy": "2026-05-15", "latest_buy": "2026-05-15"},
-        {"code": "300792", "name": "壹网壹创",   "shares": 100,  "cost": 36.81, "sector": "电商服务/数字营销",   "first_buy": "2026-05-13", "latest_buy": "2026-05-13"},
-        {"code": "601789", "name": "宁波建工",   "shares": 5200, "cost": 6.206, "sector": "建筑工程/基建",      "first_buy": "2026-05-05", "latest_buy": "2026-05-15"},
-        {"code": "002050", "name": "三花智控",   "shares": 100,  "cost": 28.49, "sector": "热管理/制冷控制",     "first_buy": "2026-05-12", "latest_buy": "2026-05-15"},
-    ]
-
-
-# ── 行情获取 ─────────────────────────────────────────────────────
+        {"code": "000981", "name": "山子高科", "shares": 8000, "cost": 4.411, "sector": "汽车零部件/房地产", "first_buy": "2026-05-15", "latest_buy": "2026-05-18"},
+        {"code": "601789", "name": "宁波建工", "shares": 5200, "cost": 6.206, "sector": "建筑工程/基建", "first_buy": "2026-05-05", "latest_buy": "2026-05-15"},
+        {"code": "002156", "name": "通富微电", "shares": 1000, "cost": 44.850, "sector": "半导体封测", "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
+        {"code": "002208", "name": "合肥城建", "shares": 900, "cost": 19.849, "sector": "房地产", "first_buy": "2026-05-15", "latest_buy": "2026-05-15"},
+        {"code": "300792", "name": "壹网壹创", "shares": 400, "cost": 35.520, "sector": "电商服务/数字营销", "first_buy": "2026-05-13", "latest_buy": "2026-05-18"},
+        {"code": "300339", "name": "润和软件", "shares": 300, "cost": 44.910, "sector": "金融科技/鸿蒙", "first_buy": "2026-05-18", "latest_buy": "2026-05-18"},
+        {"code": "300136", "name": "信维通信", "shares": 300, "cost": 115.220, "sector": "消费电子/射频", "first_buy": "2026-05-18", "latest_buy": "2026-05-18"},
+    ]# ── 行情获取 ─────────────────────────────────────────────────────
 
 
 def _market_prefix(code: str) -> str:

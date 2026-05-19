@@ -10,11 +10,26 @@ from experts.base import run_expert
 
 EXPERT_ID = "expert3_sentiment"
 
+
+# ============================================================
+# FILL ZONE 1: Expert role definition
+# Edit the text below to change what this expert focuses on.
+# Current: sector rotation, market sentiment, news mapping
+# ============================================================
 SYSTEM_PROMPT = """你是一位专注A股市场情绪和题材轮动的分析师。你的职责是分析板块效应、市场情绪、新闻事件对个股的影响。
 你只回答题材和情绪面的问题，不涉及具体技术指标。
 分析必须具体到数字和事实，不得使用"市场情绪较好"等模糊表述。
 输出格式：分析文本结束后，输出一个JSON代码块包含结构化数据。"""
+# ============================================================
+# END OF FILL ZONE 1
+# ============================================================
 
+
+# ============================================================
+# FILL ZONE 2: Analysis steps
+# Lines below (the 5 numbered items) are what the expert asks.
+# Change what each step checks, or add/remove steps.
+# ============================================================
 PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行题材情绪面分析。
 
 当前市场状态：{market_state}
@@ -29,6 +44,9 @@ PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行题材情绪面分析。
 3. **市场情绪**：全市场涨跌比、涨停/跌停家数、连板高度、炸板率
 4. **新闻事件映射**：最近24h相关新闻是利好还是利空？与股价反应是否一致？
 5. **情绪周期位置**：当前处于情绪上升期/高潮期/退潮期/冰点期？
+# ============================================================
+# END OF FILL ZONE 2
+# ============================================================
 
 最后，输出一个JSON代码块，包含以下字段。
 **重要规则：**
@@ -42,6 +60,7 @@ PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行题材情绪面分析。
 {{"direction": "多", "method": ["板块表现(近5日涨跌幅)", "资金流向(板块净额)", "情绪周期(涨停/连板高度)", "新闻映射(24h利好/利空)","龙头联动(板块内排名)"], "trajectory": {{"entry_zone": "44.5-45.5", "target": "48.0", "timeframe": "1周", "key_levels": ["板块龙头涨停", "板块跟涨2%以上"], "notes": "情绪处于上升初期,连板高度3板"}}, "margin": {{"invalidated_if": "跌破44.0+板块龙头炸板", "confidence_decay": "3天无板块效应→0.3, 指数跌1.5%→0.5", "black_swan": "政策利空导致板块退潮减仓"}}, "logic": {{"because": "板块近3日资金净流入+连板高度提升", "so": "看多", "if_wrong": "如果板块3日内没有跟涨,则轮动判断错误"}}, "confidence": 0.7}}
 ```
 """
+
 
 def analyze(symbol: str, name: str, data_context: dict,
             market_state: str = "unknown", mode: str = "full") -> dict:

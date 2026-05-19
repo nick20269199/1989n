@@ -1,0 +1,49 @@
+{
+  "symbol": "002156",
+  "name": "通富微电",
+  "timestamp": "2026-05-19T11:40:52.468227",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 1.0,
+      "margin": 1.0,
+      "logic": 0.7
+    },
+    "failures": [
+      "expert3_sentiment 的逻辑链中 'if_wrong' 条件（5月15日早盘未站上57.8且长电低开＞2%）属短期分时阈值，未与中观因果（如合肥长鑫认证落地节奏、封测产能利用率变化）形成闭环验证，因果链完整性略弱于理想状态，故逻辑维度扣0.3分（得0.7而非1.0）"
+    ],
+    "merged_direction": "多",
+    "merged_confidence": 0.65,
+    "summary": "三位专家虽方法论迥异（技术/资金/情绪），但均指向做多共识；技术面提供MA20支撑与VCP形态依据，资金面警示短期压力但未否定中期趋势，情绪面锚定事件驱动拐点与板块相对强度，综合具备高置信度多头信号。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 1.0,\n    \"margin\": 1.0,\n    \"logic\": 0.7\n  },\n  \"failures\": [\n    \"expert3_sentiment 的逻辑链中 'if_wrong' 条件（5月15日早盘未站上57.8且长电低开＞2%）属短期分时阈值，未与中观因果（如合肥长鑫认证落地节奏、封测产能利用率变化）形成闭环验证，因果链完整性略弱于理想状态，故逻辑维度扣0.3分（得0.7而非1.0）\"\n  ],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.65,\n  \"summary\": \"三位专家虽方法论迥异（技术/资金/情绪），但均指向做多共识；技术面提供MA20支撑与VCP形态依据，资金面警示短期压力但未否定中期趋势，情绪面锚定事件驱动拐点与板块相对强度，综合具备高置信度多头信号。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

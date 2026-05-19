@@ -30,6 +30,8 @@ from experts.config import (
     PORTFOLIO_FILE, STOCK_DB,
 )
 from experts.grader import grade, save_grade_result, GRADER_ID
+from lib.tdx_finance import get_financial_metrics as _get_financial_metrics
+from lib.market_stats import get_market_summary as _get_market_summary
 
 # Expert registry — lazy imports inside functions to avoid circular deps
 
@@ -47,6 +49,8 @@ def _load_experts():
         ("experts.expert1_tech", "expert1_tech"),
         ("experts.expert2_money", "expert2_money"),
         ("experts.expert3_sentiment", "expert3_sentiment"),
+        ("experts.expert4_macro", "expert4_macro"),
+        ("experts.expert5_risk", "expert5_risk"),
     ]:
         try:
             mod = __import__(module_name, fromlist=["analyze"])
@@ -156,6 +160,19 @@ def prepare_data_for_expert(symbol: str, name: str, mode: str = "full") -> dict:
         ]
     except Exception as e:
         logger.warning(f"Failed to read news for {symbol}: {e}")
+
+    # 3. Financial metrics from TDX base.dbf (local, zero network)
+    fin = _get_financial_metrics(symbol)
+    if fin:
+        data["financial"] = fin
+
+    # 4. Holdings for risk/concentration checks
+    holdings = load_portfolio()
+    data["holdings"] = holdings
+
+    # 5. Market-wide stats (from all .day files, ~0.9s, cached)
+    summary = _get_market_summary()
+    data["market_summary"] = summary
 
     return data
 

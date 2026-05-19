@@ -1,0 +1,81 @@
+{
+  "type": "30min_analysis",
+  "time": "2026-05-19 15:00",
+  "indices": {
+    "sh": 4170.2887,
+    "sz": 15569.907,
+    "cy": 3908.438,
+    "kc50": 1775.0579
+  },
+  "portfolio": {
+    "total_value": 209277.0,
+    "total_cost": 192520.3,
+    "total_pnl": 16756.7,
+    "total_pnl_pct": 8.7
+  },
+  "holdings": [
+    {
+      "code": "000981",
+      "name": "山子高科",
+      "price": 4.16,
+      "today_chg": -0.48,
+      "cost": 4.411,
+      "pnl_pct": -5.69,
+      "mv": 33280.0
+    },
+    {
+      "code": "601789",
+      "name": "宁波建工",
+      "price": 6.2,
+      "today_chg": -0.96,
+      "cost": 6.206,
+      "pnl_pct": -0.1,
+      "mv": 32240.0
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "price": 58.86,
+      "today_chg": 1.36,
+      "cost": 44.85,
+      "pnl_pct": 31.24,
+      "mv": 58860.0
+    },
+    {
+      "code": "002208",
+      "name": "合肥城建",
+      "price": 25.12,
+      "today_chg": 9.98,
+      "cost": 19.849,
+      "pnl_pct": 26.56,
+      "mv": 22608.0
+    },
+    {
+      "code": "300792",
+      "name": "壹网壹创",
+      "price": 38.34,
+      "today_chg": 3.54,
+      "cost": 35.52,
+      "pnl_pct": 7.94,
+      "mv": 15336.0
+    },
+    {
+      "code": "300339",
+      "name": "润和软件",
+      "price": 45.51,
+      "today_chg": 1.79,
+      "cost": 44.91,
+      "pnl_pct": 1.34,
+      "mv": 13653.0
+    },
+    {
+      "code": "300136",
+      "name": "信维通信",
+      "price": 111.0,
+      "today_chg": -0.67,
+      "cost": 115.22,
+      "pnl_pct": -3.66,
+      "mv": 33300.0
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "symbol": "300792",
+  "name": "壹网壹创",
+  "timestamp": "2026-05-19T11:46:25.488335",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.9,
+      "margin": 0.9,
+      "logic": 0.9
+    },
+    "failures": [],
+    "merged_direction": "空",
+    "merged_confidence": 0.65,
+    "summary": "三位专家一致看空，方法透明（技术/资金/情绪三维度交叉验证），轨迹清晰（含入场区间、目标位、时间框架及关键价格水平），边际完备（含失效条件、置信衰减与黑天鹅应对），逻辑闭环（均指向‘空头结构+量价配合+情绪退潮’因果链），综合质量高。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.9,\n    \"margin\": 0.9,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"空\",\n  \"merged_confidence\": 0.65,\n  \"summary\": \"三位专家一致看空，方法透明（技术/资金/情绪三维度交叉验证），轨迹清晰（含入场区间、目标位、时间框架及关键价格水平），边际完备（含失效条件、置信衰减与黑天鹅应对），逻辑闭环（均指向‘空头结构+量价配合+情绪退潮’因果链），综合质量高。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

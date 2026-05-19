@@ -69,7 +69,7 @@ def query_deepseek(prompt: str, history: Optional[list[dict]] = None) -> str:
                 "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
                 "Content-Type": "application/json",
             },
-            json={"model": DEEPSEEK_MODEL, "messages": messages, "temperature": 0.7, "max_tokens": 1024},
+            json={"model": DEEPSEEK_MODEL, "messages": messages, "temperature": 0.7, "max_tokens": 4096},
             timeout=REQUEST_TIMEOUT,
         )
         r.raise_for_status()
@@ -99,7 +99,7 @@ def query_qwen(prompt: str, history: Optional[list[dict]] = None, channel: str =
                 "Authorization": f"Bearer {key}",
                 "Content-Type": "application/json",
             },
-            json={"model": cfg["model"], "messages": messages, "temperature": 0.7, "max_tokens": 1024},
+            json={"model": cfg["model"], "messages": messages, "temperature": 0.7, "max_tokens": 4096},
             timeout=REQUEST_TIMEOUT,
         )
         r.raise_for_status()

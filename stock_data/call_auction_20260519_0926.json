@@ -1,0 +1,186 @@
+{
+  "type": "call_auction",
+  "time": "2026-05-19 09:26:28",
+  "date": "2026-05-19",
+  "market_breadth": {
+    "up": 0,
+    "down": 0,
+    "flat": 0,
+    "limit_up": 0,
+    "limit_down": 0,
+    "total": 0,
+    "avg_change": 0.0,
+    "details": []
+  },
+  "concept_auction": [],
+  "industry_auction": [],
+  "limit_orders": {
+    "limit_up_strength": [
+      {
+        "code": "300657",
+        "name": "弘信电子",
+        "price": 48.01,
+        "change_pct": 10.62,
+        "volume": 81380,
+        "amount": 3.91,
+        "volume_ratio": 47.6,
+        "turnover_rate": 1.74,
+        "market_cap": 231.47
+      },
+      {
+        "code": "300721",
+        "name": "怡达股份",
+        "price": 34.11,
+        "change_pct": 10.07,
+        "volume": 12964,
+        "amount": 0.44,
+        "volume_ratio": 9.45,
+        "turnover_rate": 0.94,
+        "market_cap": 56.23
+      },
+      {
+        "code": "000417",
+        "name": "合百集团",
+        "price": 8.66,
+        "change_pct": 10.04,
+        "volume": 104747,
+        "amount": 0.91,
+        "volume_ratio": 63.69,
+        "turnover_rate": 1.34,
+        "market_cap": 67.54
+      },
+      {
+        "code": "600506",
+        "name": "统一股份",
+        "price": 19.98,
+        "change_pct": 10.02,
+        "volume": 15670,
+        "amount": 0.31,
+        "volume_ratio": 43.5,
+        "turnover_rate": 0.63,
+        "market_cap": 49.87
+      },
+      {
+        "code": "002067",
+        "name": "景兴纸业",
+        "price": 5.28,
+        "change_pct": 10.0,
+        "volume": 91082,
+        "amount": 0.48,
+        "volume_ratio": 67.27,
+        "turnover_rate": 0.68,
+        "market_cap": 77.87
+      },
+      {
+        "code": "603082",
+        "name": "北自科技",
+        "price": 51.18,
+        "change_pct": 9.99,
+        "volume": 18720,
+        "amount": 0.96,
+        "volume_ratio": 55.23,
+        "turnover_rate": 4.62,
+        "market_cap": 83.03
+      },
+      {
+        "code": "603779",
+        "name": "威龙股份",
+        "price": 12.0,
+        "change_pct": 9.99,
+        "volume": 16094,
+        "amount": 0.19,
+        "volume_ratio": 36.57,
+        "turnover_rate": 0.48,
+        "market_cap": 39.85
+      },
+      {
+        "code": "001259",
+        "name": "利仁科技",
+        "price": 73.17,
+        "change_pct": 9.95,
+        "volume": 5974,
+        "amount": 0.44,
+        "volume_ratio": 81.2,
+        "turnover_rate": 1.26,
+        "market_cap": 53.84
+      },
+      {
+        "code": "002421",
+        "name": "达实智能",
+        "price": 3.88,
+        "change_pct": 9.92,
+        "volume": 248752,
+        "amount": 0.97,
+        "volume_ratio": 39.14,
+        "turnover_rate": 1.24,
+        "market_cap": 82.28
+      }
+    ],
+    "limit_down_pressure": []
+  },
+  "portfolio_auction": [
+    {
+      "code": "000981",
+      "name": "山子高科",
+      "auction_price": 4.17,
+      "prev_close": 4.18,
+      "auction_chg_pct": -0.24,
+      "open_volume": 20257,
+      "sector": "汽车零部件/房地产"
+    },
+    {
+      "code": "601789",
+      "name": "宁波建工",
+      "auction_price": 6.22,
+      "prev_close": 6.26,
+      "auction_chg_pct": -0.64,
+      "open_volume": 5079,
+      "sector": "建筑工程/基建"
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "auction_price": 56.88,
+      "prev_close": 58.07,
+      "auction_chg_pct": -2.05,
+      "open_volume": 11668,
+      "sector": "半导体封测"
+    },
+    {
+      "code": "002208",
+      "name": "合肥城建",
+      "auction_price": 23.5,
+      "prev_close": 22.84,
+      "auction_chg_pct": 2.89,
+      "open_volume": 164978,
+      "sector": "房地产"
+    },
+    {
+      "code": "300792",
+      "name": "壹网壹创",
+      "auction_price": 37.03,
+      "prev_close": 37.03,
+      "auction_chg_pct": 0.0,
+      "open_volume": 255,
+      "sector": "电商服务/数字营销"
+    },
+    {
+      "code": "300339",
+      "name": "润和软件",
+      "auction_price": 44.72,
+      "prev_close": 44.71,
+      "auction_chg_pct": 0.02,
+      "open_volume": 445,
+      "sector": "金融科技/鸿蒙"
+    },
+    {
+      "code": "300136",
+      "name": "信维通信",
+      "auction_price": 111.97,
+      "prev_close": 111.75,
+      "auction_chg_pct": 0.2,
+      "open_volume": 6636,
+      "sector": "消费电子/射频"
+    }
+  ]
+}

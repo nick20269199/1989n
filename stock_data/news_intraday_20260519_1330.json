@@ -1,0 +1,86 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-19 13:30:02",
+  "market_status": "trading",
+  "count": 13,
+  "data": [
+    {
+      "title": "财联社5月19日电，纳斯达克期货跌幅扩大至0.63%，标普500指数期货下跌0.4%。",
+      "time": "2026-05-19 13:27:32",
+      "category": "{'article_id': 2375165, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156145, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375165, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60311, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375165"
+    },
+    {
+      "title": "24岁“华尔街新秀”调仓曝光：Q1大举做空芯片 看涨能源和AI基建",
+      "time": "2026-05-19 13:26:34",
+      "category": "{'article_id': 2375164, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24531, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2375164, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67825, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2375164, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60311, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375164, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101438, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2375164, 'subject_id': 2262, 'subject_name': '台积电', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9880, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2375164, 'subject_id': 2434, 'subject_name': '英特尔', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7748, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2375164, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18486, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375164"
+    },
+    {
+      "title": "财联社5月19日电，钯金期货日内跌1%，现报1406.50美元/盎司。",
+      "time": "2026-05-19 13:26:08",
+      "category": "{'article_id': 2375163, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56451, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375163"
+    },
+    {
+      "title": "沪深两市成交额突破2万亿 较上一日此时缩量超1100亿",
+      "time": "2026-05-19 13:23:39",
+      "category": "{'article_id': 2375158, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175219, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375158"
+    },
+    {
+      "title": "日本执政党讨论安保三文件建议草案",
+      "time": "2026-05-19 13:22:21",
+      "category": "{'article_id': 2375161, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156145, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375161"
+    },
+    {
+      "title": "澳大利亚北领地通报两例墨累河谷脑炎死亡病例",
+      "time": "2026-05-19 13:15:03",
+      "category": "{'article_id': 2375151, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156145, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375151"
+    },
+    {
+      "title": "电力板块持续走高 近十只成分股涨停",
+      "time": "2026-05-19 13:14:45",
+      "related_stocks": "000600,001896,600452,600578,600023,002893,600310,600863",
+      "category": "{'article_id': 2375150, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175219, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375150, 'subject_id': 1700, 'subject_name': '电力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22405, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 145, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375150"
+    },
+    {
+      "title": "财联社5月19日电，据报道，三星电子韩国工会做出了一些让步，双方有可能达成协议。",
+      "time": "2026-05-19 13:14:00",
+      "category": "{'article_id': 2375149, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156145, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375149"
+    },
+    {
+      "title": "【电报解读】明阳电气中标数据中心HVDC预制舱大单，HVDC为英伟达下一代核心架构，机构预计市场规模预计5年增长超10倍，这家公司品可用于HVDC数据中心电源解决",
+      "time": "2026-05-19 13:13:19",
+      "url": "https://www.cls.cn/detail/2375148"
+    },
+    {
+      "title": "财联社5月19日电，港股汽车股震荡走弱，蔚来汽车跌超5%，理想汽车跌超4%。",
+      "time": "2026-05-19 13:10:25",
+      "category": "{'article_id': 2375144, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27471, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375144"
+    },
+    {
+      "title": "美政府批准对韩国逾40亿美元军售",
+      "time": "2026-05-19 13:09:42",
+      "category": "{'article_id': 2375142, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156144, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375142"
+    },
+    {
+      "title": "美债收益率逼近2007年高点 投资人担心错过高收益、又怕更大抛售",
+      "time": "2026-05-19 13:02:49",
+      "category": "{'article_id': 2375130, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156145, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375130"
+    },
+    {
+      "title": "北京上市公司总市值达33.4万亿元",
+      "time": "2026-05-19 13:00:18",
+      "url": "https://www.cls.cn/detail/2375129"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

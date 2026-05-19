@@ -1,49 +1,47 @@
-# 蒸馏简报 — 2026-05-18
+# 蒸馏简报 — 2026-05-19
 
 ## 待蒸馏文件 (匹配规则)
 
 - `closing_review.json` (9.0KB)
-- `git_push.log` (531.1KB)
-- `last_error.txt` (0.4KB)
-- `morning_enhanced.json` (8.2KB)
+- `morning_enhanced.json` (8.7KB)
 - `sentinel_status.json` (1.3KB)
 
-共 5 个文件待蒸馏
+共 3 个文件待蒸馏
 
 ## 今日其他产出
 
-- `analysis_30min_20260518_1130.json` (1.4KB)
-- `analysis_30min_20260518_1130.md` (0.6KB)
-- `analysis_30min_20260518_1500.json` (1.4KB)
-- `analysis_30min_20260518_1500.md` (0.6KB)
-- `analysis_overnight_20260518_2330.json` (0.6KB)
-- `analysis_overnight_20260518_2330.md` (0.2KB)
-- `call_auction_20260518_0926.json` (8.1KB)
-- `call_auction_20260518_0956.json` (12.6KB)
+- `analysis_30min_20260519_1130.json` (1.6KB)
+- `analysis_30min_20260519_1130.md` (0.6KB)
+- `analysis_30min_20260519_1500.json` (1.6KB)
+- `analysis_30min_20260519_1500.md` (0.6KB)
+- `call_auction_20260519_0926.json` (4.4KB)
+- `call_auction_20260519_0956.json` (9.9KB)
 - `channel_health_latest.json` (0.3KB)
-- `closing_review.log` (23.4KB)
+- `closing_review.log` (24.5KB)
 - `closing_review.md` (1.4KB)
-- `concept_mapping.json` (4.0KB)
-- `concept_stocks.json` (8.9KB)
-- `data_guard_report.json` (1.3KB)
-- `distillation_brief.md` (2.0KB)
-- `distill_queue.json` (3.0KB)
-- `intraday_close.log` (46.6KB)
-- `intraday_midday.log` (39.5KB)
-- `morning_brief.log` (88.2KB)
-- `morning_brief_latest.json` (0.8KB)
+- `data_guard_report.json` (1.9KB)
+- `intraday_close.log` (47.5KB)
+- `intraday_midday.log` (40.3KB)
+- `morning_brief.log` (93.0KB)
+- `morning_brief_latest.json` (0.9KB)
+- `morning_brief_latest.md` (2.2KB)
+- `morning_enhanced.md` (1.8KB)
+- `news_intraday_20260519_0930.json` (18.4KB)
+- `news_intraday_20260519_1000.json` (10.4KB)
+- `news_intraday_20260519_1030.json` (14.3KB)
+- `news_intraday_20260519_1100.json` (7.2KB)
 
-... 还有 191 个文件
+... 还有 184 个文件
 
 ## 队列积压 (未蒸馏)
 
-- 2026-05-18: closing_review.json
-- 2026-05-18: last_error.txt
-- 2026-05-18: morning_enhanced.json
 - 2026-05-18: sentinel_status.json
 - 2026-05-18: git_push.log
+- 2026-05-19: closing_review.json
+- 2026-05-19: morning_enhanced.json
+- 2026-05-19: sentinel_status.json
 
-... 还有 19 条
+... 还有 22 条
 
 ---
 
@@ -61,4 +59,4 @@
 4. 如无新知识 → 标记队列条目为 skipped
 5. 推送更新到 GitHub (git_auto_push.py)
 
-> 生成时间: 2026-05-18 23:47
+> 生成时间: 2026-05-19 15:47

@@ -1,0 +1,307 @@
+{
+  "type": "财经快讯-manual",
+  "time": "2026-05-19 08:00:02",
+  "market_status": "closed",
+  "count": 50,
+  "data": [
+    {
+      "title": "财联社5月19日电，日本第一季度名义GDP环比增长0.8%，预估为0.8%；一季度净出口对环比GDP贡献为正0.3个百分点，预估0.1个。",
+      "time": "2026-05-19 07:52:05",
+      "category": "{'article_id': 2374833, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374833"
+    },
+    {
+      "title": "财联社5月19日电，日本第一季度GDP折合年率增长2.1%，预估为1.7%。",
+      "time": "2026-05-19 07:50:42",
+      "category": "{'article_id': 2374829, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374829"
+    },
+    {
+      "title": "中金：美联储年内或难以降息",
+      "time": "2026-05-19 07:47:02",
+      "category": "{'article_id': 2374827, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56441, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374827, 'subject_id': 1605, 'subject_name': '货币政策动向', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27014, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374827, 'subject_id': 7381, 'subject_name': '美国宏观速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18945, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374827, 'subject_id': 3140, 'subject_name': '美联储动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 32208, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374827"
+    },
+    {
+      "title": "【点金互动易】英伟达+液冷散热，高速连接材料与GB300液冷板材料已通过验证并应用，正交背板材料直指下一代Rubin架构服务器，这家公司同时深度切入全球巨头先进封装供应链",
+      "time": "2026-05-19 07:42:33",
+      "url": "https://www.cls.cn/detail/2374665"
+    },
+    {
+      "title": "投资日历：周二资本市场大事提醒",
+      "time": "2026-05-19 07:40:43",
+      "category": "{'article_id': 2374822, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175180, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374822, 'subject_id': 9829, 'subject_name': '提醒电报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 19855, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374822"
+    },
+    {
+      "title": "财联社5月19日电，渣打银行表示，将继续实行严格的人力资源规划，并计划到2030年将公司职能部门的岗位减少15%以上。",
+      "time": "2026-05-19 07:39:32",
+      "category": "{'article_id': 2374825, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374825"
+    },
+    {
+      "title": "刚果（金）埃博拉疫情扩散 116例疑似病例死亡",
+      "time": "2026-05-19 07:36:41",
+      "category": "{'article_id': 2374824, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374824"
+    },
+    {
+      "title": "药捷安康：拟折让18%配售383.6万股H股 净筹约1.52亿港元",
+      "time": "2026-05-19 07:30:30",
+      "category": "{'article_id': 2374823, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374823"
+    },
+    {
+      "title": "财联社5月19日电，澳洲央行助理总裁亨特称，通胀预期走高的风险上升。",
+      "time": "2026-05-19 07:27:52",
+      "category": "{'article_id': 2374821, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374821"
+    },
+    {
+      "title": "算电协同推动虚拟电厂迈入“黄金发展期”",
+      "time": "2026-05-19 07:22:26",
+      "category": "{'article_id': 2374818, 'subject_id': 1700, 'subject_name': '电力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22400, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 145, 'channel': 'cls'},{'article_id': 2374818, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37118, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'},{'article_id': 2374818, 'subject_id': 9086, 'subject_name': '算力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 16908, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 550, 'channel': 'cls,stib'},{'article_id': 2374818, 'subject_id': 9463, 'subject_name': '虚拟电厂', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8732, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 611, 'channel': 'cls,stib'},{'article_id': 2374818, 'subject_id': 10581, 'subject_name': '数据中心', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7746, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 453, 'channel': 'stib,cls'},{'article_id': 2374818, 'subject_id': 11409, 'subject_name': '碳中和期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374818"
+    },
+    {
+      "title": "一季度险资逢低买入 股票持仓继续小幅提升",
+      "time": "2026-05-19 07:19:29",
+      "category": "{'article_id': 2374816, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56441, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374816, 'subject_id': 1094, 'subject_name': '券商策略', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 58851, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374816, 'subject_id': 1088, 'subject_name': 'A股监管动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 38623, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374816"
+    },
+    {
+      "title": "内塔尼亚胡连续两晚开会 为重启对伊朗战事做准备",
+      "time": "2026-05-19 07:07:57",
+      "category": "{'article_id': 2374812, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47562, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374812"
+    },
+    {
+      "title": "财联社5月19日电，韩国央行预计三星电子罢工将拉低韩国GDP增速0.5个百分点。",
+      "time": "2026-05-19 07:04:38",
+      "category": "{'article_id': 2374809, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374809"
+    },
+    {
+      "title": "财联社5月19日电，现货白银日内涨幅扩大至1%，报78.52美元/盎司。",
+      "time": "2026-05-19 07:03:34",
+      "category": "{'article_id': 2374807, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56441, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374807, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28104, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374807"
+    },
+    {
+      "title": "我国首个二氧化碳地热能项目投产",
+      "time": "2026-05-19 07:01:25",
+      "category": "{'article_id': 2374805, 'subject_id': 1463, 'subject_name': '地热', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11536, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374805, 'subject_id': 11409, 'subject_name': '碳中和期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374805"
+    },
+    {
+      "title": "【研选】AI数据中心致光纤价格暴涨，交货期限延长至20周以上，拥有棒纤缆全产业链制造能力的厂商将更加受益；这家公司持续拓展直角坐标机器人、多关节机器人、协作机器人及人形机器人等多元化产品矩阵",
+      "time": "2026-05-19 06:54:17",
+      "url": "https://www.cls.cn/detail/2373635"
+    },
+    {
+      "title": "产业链迎业绩与估值双重驱动 存储芯片板块投资机遇凸显",
+      "time": "2026-05-19 06:53:20",
+      "category": "{'article_id': 2374797, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67815, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2374797, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101417, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2374797, 'subject_id': 9086, 'subject_name': '算力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 16908, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 550, 'channel': 'stib,cls'},{'article_id': 2374797, 'subject_id': 2409, 'subject_name': '存储芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17858, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 412, 'channel': 'cls,stib'},{'article_id': 2374797, 'subject_id': 3063, 'subject_name': '存储器', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8903, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 412, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374797"
+    },
+    {
+      "title": "560GHz频段实现100G级无线通信",
+      "time": "2026-05-19 06:49:49",
+      "category": "{'article_id': 2374802, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374802"
+    },
+    {
+      "title": "可进行计算的混合光物质粒子造出",
+      "time": "2026-05-19 06:49:17",
+      "category": "{'article_id': 2374801, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374801"
+    },
+    {
+      "title": "财联社5月19日电，英特尔CEO陈立武称，14A芯片将于2028年实现生产，2029年将进入量产阶段。",
+      "time": "2026-05-19 06:46:39",
+      "category": "{'article_id': 2374800, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101416, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2374800, 'subject_id': 2434, 'subject_name': '英特尔', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7748, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374800"
+    },
+    {
+      "title": "罗马尼亚确诊一例汉坦病毒感染病例 无关邮轮疫情",
+      "time": "2026-05-19 06:38:21",
+      "category": "{'article_id': 2374799, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374799"
+    },
+    {
+      "title": "智能隐形眼镜有望用于治疗抑郁症",
+      "time": "2026-05-19 06:28:08",
+      "category": "{'article_id': 2374796, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374796"
+    },
+    {
+      "title": "权益类贡献过半 基金年内分红近630亿元",
+      "time": "2026-05-19 06:13:40",
+      "category": "{'article_id': 2374794, 'subject_id': 1349, 'subject_name': '公募基金动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24449, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374794, 'subject_id': 1793, 'subject_name': '分红送转', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18528, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374794"
+    },
+    {
+      "title": "银行理财收益回暖 四月规模增长超预期",
+      "time": "2026-05-19 06:12:48",
+      "category": "{'article_id': 2374793, 'subject_id': 1489, 'subject_name': '银行业动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 34543, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 79, 'channel': 'cls'},{'article_id': 2374793, 'subject_id': 1329, 'subject_name': '银行理财', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12924, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374793"
+    },
+    {
+      "title": "财联社5月19日电，智利央行将风险资产的资本金要求提高至1.0%。",
+      "time": "2026-05-19 06:09:50",
+      "category": "{'article_id': 2374792, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374792"
+    },
+    {
+      "title": "财联社5月19日电，WTI原油期货跌幅扩大至2%，报102.248美元/桶。",
+      "time": "2026-05-19 06:01:39",
+      "category": "{'article_id': 2374791, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374791, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56441, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374791, 'subject_id': 1583, 'subject_name': '原油市场动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 45052, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 316, 'channel': 'cls'},{'article_id': 2374791, 'subject_id': 1741, 'subject_name': '海外大宗商品', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 33216, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374791, 'subject_id': 11394, 'subject_name': '能源类期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8504, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374791"
+    },
+    {
+      "title": "财联社5月19日电，英伟达称，Vera CPU抵达Anthropic、OpenAI、SpaceX、甲骨文的AI实验室。",
+      "time": "2026-05-19 06:01:17",
+      "category": "{'article_id': 2374790, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374790, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60302, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374790"
+    },
+    {
+      "title": "周二（5月19日）重点关注财经事件和经济数据",
+      "time": "2026-05-19 06:00:04",
+      "category": "{'article_id': 2374723, 'subject_id': 9829, 'subject_name': '提醒电报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 19855, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374723"
+    },
+    {
+      "title": "周二你需要知道的隔夜全球要闻：特朗普称将推迟攻击伊朗，沃什据悉将于周五就职美联储主席，欧美股市涨跌不一",
+      "time": "2026-05-19 06:00:00",
+      "category": "{'article_id': 2374788, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175180, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374788"
+    },
+    {
+      "title": "财联社5月19日电，日本官员表示，美国收益率上升可能导致日元贬值。",
+      "time": "2026-05-19 05:55:02",
+      "category": "{'article_id': 2374789, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374789"
+    },
+    {
+      "title": "花旗：铝库存将在未来6至12个月内降至历史新低",
+      "time": "2026-05-19 05:28:14",
+      "category": "{'article_id': 2374786, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56441, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374786, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28104, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374786"
+    },
+    {
+      "title": "财联社5月19日电，富时A50期指连续夜盘收跌0.05%，报15526点。",
+      "time": "2026-05-19 05:22:08",
+      "category": "{'article_id': 2374785, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374785"
+    },
+    {
+      "title": "财联社5月19日电，据知情人士透露，AI芯片初创公司Tenstorrent吸引到众多竞争对手的兴趣。如果达成一份协议，该公司可能会获得超过50亿美元估值。",
+      "time": "2026-05-19 05:21:44",
+      "category": "{'article_id': 2374784, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374784, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60302, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374784, 'subject_id': 1594, 'subject_name': '美股IPO动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 14345, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374784"
+    },
+    {
+      "title": "财联社5月19日电，美国总统特朗普宣布扩大折扣药品定价计划，打折销售的药品规模扩大七倍。",
+      "time": "2026-05-19 05:21:26",
+      "category": "{'article_id': 2374783, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374783"
+    },
+    {
+      "title": "格陵兰岛自治政府总理见美特使 重申“不卖岛”",
+      "time": "2026-05-19 05:19:34",
+      "category": "{'article_id': 2374782, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374782"
+    },
+    {
+      "title": "离岸人民币兑美元较上周五纽约尾盘涨146点",
+      "time": "2026-05-19 05:11:30",
+      "category": "{'article_id': 2374781, 'subject_id': 1282, 'subject_name': '人民币大新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 31310, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374781, 'subject_id': 11410, 'subject_name': '外汇期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8709, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374781"
+    },
+    {
+      "title": "财联社5月19日电，据报道，达尔萨纳资本合伙公司（Darsana Capital Partners）管理资产的近60%为SpaceX股票。如果SpaceX在IPO中的估值达到约1.5万亿美元，前者将获利超过100亿美元。",
+      "time": "2026-05-19 05:11:00",
+      "category": "{'article_id': 2374780, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374780"
+    },
+    {
+      "title": "财联社5月19日电，COMEX黄金期货涨0.16%，报4569.3美元/盎司。",
+      "time": "2026-05-19 04:56:20",
+      "category": "{'article_id': 2374779, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56441, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374779, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28104, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'},{'article_id': 2374779, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37118, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374779"
+    },
+    {
+      "title": "巴勒斯坦法塔赫宣布新一届领导机构选举结果",
+      "time": "2026-05-19 04:53:49",
+      "category": "{'article_id': 2374778, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374778"
+    },
+    {
+      "title": "财联社5月19日电，马斯克表示将就OpenAI案的审判结果向第九巡回法院提起上诉。",
+      "time": "2026-05-19 04:48:57",
+      "category": "{'article_id': 2374777, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374777"
+    },
+    {
+      "title": "柳州地震造成一人受伤 一间无人居住房屋倒塌",
+      "time": "2026-05-19 04:38:37",
+      "category": "{'article_id': 2374776, 'subject_id': 9198, 'subject_name': '地震快讯', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9955, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374776, 'subject_id': 2744, 'subject_name': '消防', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6647, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 513, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374776"
+    },
+    {
+      "title": "伊朗最高领袖重申将考虑开辟新战线",
+      "time": "2026-05-19 04:23:10",
+      "category": "{'article_id': 2374775, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47562, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374775"
+    },
+    {
+      "title": "利弗莫尔中概股龙头指数收跌1.11%",
+      "time": "2026-05-19 04:00:38",
+      "category": "{'article_id': 0, 'subject_id': 0, 'subject_name': '利弗莫尔中概股龙头指数', 'subject_img': '', 'subject_description': 'https://h5.jesselivermore.com/cls/chart.html', 'category_id': 0, 'attention_num': 0, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': ''},{'article_id': 2374773, 'subject_id': 1099, 'subject_name': '中概股情报站', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 26748, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374773, 'subject_id': 12776, 'subject_name': '中概股龙头指数', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6758, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374773, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175180, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374773"
+    },
+    {
+      "title": "美股三大指数收盘涨跌不一 费城半导体指数跌2.47%",
+      "time": "2026-05-19 04:00:24",
+      "category": "{'article_id': 2374772, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374772, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60302, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374772, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175180, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374772"
+    },
+    {
+      "title": "黎以战火重燃以来 黎巴嫩已有超3000人死亡",
+      "time": "2026-05-19 03:53:17",
+      "category": "{'article_id': 2374770, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47562, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374770"
+    },
+    {
+      "title": "黎巴嫩总统：将“竭尽所能”制止以色列对黎战争",
+      "time": "2026-05-19 03:49:56",
+      "category": "{'article_id': 2374769, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47562, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374769"
+    },
+    {
+      "title": "美联储古尔斯比：通胀必须成为沃什担任主席时的首要考虑",
+      "time": "2026-05-19 03:48:18",
+      "category": "{'article_id': 2374768, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156120, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374768"
+    },
+    {
+      "title": "伊朗总统：对话不意味投降 将全力捍卫国家尊严",
+      "time": "2026-05-19 03:27:45",
+      "category": "{'article_id': 2374767, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47562, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374767"
+    },
+    {
+      "title": "特朗普称将推迟对伊朗发动军事打击",
+      "time": "2026-05-19 03:14:17",
+      "category": "{'article_id': 2374766, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47562, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374766"
+    },
+    {
+      "title": "在岸人民币兑美元较上周五夜盘收盘涨145点",
+      "time": "2026-05-19 03:12:16",
+      "category": "{'article_id': 2374765, 'subject_id': 1282, 'subject_name': '人民币大新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 31310, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374765, 'subject_id': 11410, 'subject_name': '外汇期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8709, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374765"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

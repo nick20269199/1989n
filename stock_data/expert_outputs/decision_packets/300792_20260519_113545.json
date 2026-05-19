@@ -1,0 +1,47 @@
+{
+  "symbol": "300792",
+  "name": "壹网壹创",
+  "timestamp": "2026-05-19T11:35:45.350723",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.93,
+      "margin": 0.93,
+      "logic": 0.93
+    },
+    "failures": [],
+    "merged_direction": "空",
+    "merged_confidence": 0.65,
+    "summary": "三位专家一致看空，逻辑链条完整（技术空头排列+主力出货+情绪退潮），轨迹清晰、边际明确，综合置信度中等偏高，符合价值投资者对风险前置识别的要求。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.93,\n    \"margin\": 0.93,\n    \"logic\": 0.93\n  },\n  \"failures\": [],\n  \"merged_direction\": \"空\",\n  \"merged_confidence\": 0.65,\n  \"summary\": \"三位专家一致看空，逻辑链条完整（技术空头排列+主力出货+情绪退潮），轨迹清晰、边际明确，综合置信度中等偏高，符合价值投资者对风险前置识别的要求。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "震荡偏空",
+      "confidence": 0.3,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

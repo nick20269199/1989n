@@ -1,0 +1,147 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-19 14:30:02",
+  "market_status": "trading",
+  "count": 23,
+  "data": [
+    {
+      "title": "高盛策略师认为美股面临“减速带风险”",
+      "time": "2026-05-19 14:27:38",
+      "category": "{'article_id': 2375258, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60314, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375258, 'subject_id': 2223, 'subject_name': '美债动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 14871, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375258, 'subject_id': 1094, 'subject_name': '券商策略', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 58860, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375258"
+    },
+    {
+      "title": "沪深两市成交额突破2.5万亿 较上一日此时缩量超800亿",
+      "time": "2026-05-19 14:26:40",
+      "category": "{'article_id': 2375255, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175224, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375255"
+    },
+    {
+      "title": "半导体硅片股震荡拉升 立昂微涨停",
+      "time": "2026-05-19 14:25:00",
+      "related_stocks": "688233,605358,688783,003026,688126,002129",
+      "category": "{'article_id': 2375249, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175224, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375249, 'subject_id': 2493, 'subject_name': '硅片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8154, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 505, 'channel': 'cls,stib'},{'article_id': 2375249, 'subject_id': 2077, 'subject_name': '神工股份', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6783, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375249"
+    },
+    {
+      "title": "高盛策略师认为股市面临“减速带风险”",
+      "time": "2026-05-19 14:23:50",
+      "category": "{'article_id': 2375246, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375246, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60314, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375246"
+    },
+    {
+      "title": "主力资金监控：新易盛净卖出超23亿",
+      "time": "2026-05-19 14:23:17",
+      "related_stocks": "300274,688012,300502,688521,301308,300394,002131,300308",
+      "category": "{'article_id': 2375240, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175224, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375240, 'subject_id': 2137, 'subject_name': '中微公司', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9566, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375240"
+    },
+    {
+      "title": "特朗普最新表态 “撤回”降息压力",
+      "time": "2026-05-19 14:23:04",
+      "category": "{'article_id': 2375244, 'subject_id': 7381, 'subject_name': '美国宏观速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18947, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375244, 'subject_id': 3140, 'subject_name': '美联储动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 32208, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375244, 'subject_id': 1605, 'subject_name': '货币政策动向', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27017, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375244, 'subject_id': 1622, 'subject_name': '美国经济', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27437, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375244"
+    },
+    {
+      "title": "伊朗延长德黑兰两座国际机场航班运行时间",
+      "time": "2026-05-19 14:22:45",
+      "category": "{'article_id': 2375243, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375243"
+    },
+    {
+      "title": "机构：2026年全球高端封装市场规模预计高达587亿美元 同比增长97%",
+      "time": "2026-05-19 14:20:36",
+      "category": "{'article_id': 2375233, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67828, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2375233, 'subject_id': 9833, 'subject_name': '先进封装', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 13612, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 605, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375233"
+    },
+    {
+      "title": "财联社5月19日电，韩元下跌1%，表现逊于所有亚币。",
+      "time": "2026-05-19 14:17:34",
+      "category": "{'article_id': 2375231, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375231"
+    },
+    {
+      "title": "农业农村部召开生猪产能综合调控部署视频会：要多措并举压减产能 严控新增产能",
+      "time": "2026-05-19 14:16:55",
+      "category": "{'article_id': 2375227, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56453, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375227, 'subject_id': 1531, 'subject_name': '猪肉', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24640, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 7, 'channel': 'cls'},{'article_id': 2375227, 'subject_id': 11407, 'subject_name': '禽畜期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9123, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375227, 'subject_id': 11424, 'subject_name': '上市公司套期保值', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6553, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375227"
+    },
+    {
+      "title": "财联社5月19日电，澳大利亚S&P/ASX 200指数收盘上涨1.2%，报8604.70点。",
+      "time": "2026-05-19 14:15:59",
+      "category": "{'article_id': 2375225, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375225"
+    },
+    {
+      "title": "亚太经合组织第二次高官会在上海举行",
+      "time": "2026-05-19 14:11:51",
+      "url": "https://www.cls.cn/detail/2375218"
+    },
+    {
+      "title": "本周47只新基密集启募 权益产品占比超七成",
+      "time": "2026-05-19 14:10:29",
+      "url": "https://www.cls.cn/detail/2375209"
+    },
+    {
+      "title": "财联社5月19日电，美国银行调查显示，全球基金经理在5月份的股票配置创下新高。",
+      "time": "2026-05-19 14:09:40",
+      "category": "{'article_id': 2375213, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375213"
+    },
+    {
+      "title": "财联社5月19日电，日本20年期国债收益率上行6.5个基点，报3.78%。",
+      "time": "2026-05-19 14:08:08",
+      "category": "{'article_id': 2375212, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375212"
+    },
+    {
+      "title": "财联社5月19日电，恒生科技指数转涨。",
+      "time": "2026-05-19 14:07:44",
+      "category": "{'article_id': 2375211, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27471, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375211"
+    },
+    {
+      "title": "半导体设备板块持续走强 耐科装备20cm涨停创历史新高",
+      "time": "2026-05-19 14:05:57",
+      "related_stocks": "603163,000783,688082,688361,688012,300604,688419,688072",
+      "category": "{'article_id': 2375208, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175224, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375208, 'subject_id': 11055, 'subject_name': '半导体设备', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8888, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 456, 'channel': 'cls,stib'},{'article_id': 2375208, 'subject_id': 2137, 'subject_name': '中微公司', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9566, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375208"
+    },
+    {
+      "title": "中韩半导体ETF再提示溢价风险 年内已提示140次",
+      "time": "2026-05-19 14:05:06",
+      "url": "https://www.cls.cn/detail/2375195"
+    },
+    {
+      "title": "财联社5月19日电，英国4月失业率4.42%，前值4.40%。",
+      "time": "2026-05-19 14:02:46",
+      "category": "{'article_id': 2375200, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375200"
+    },
+    {
+      "title": "受中东战事影响 澳大利亚等主要小麦出口国或减产",
+      "time": "2026-05-19 14:02:25",
+      "category": "{'article_id': 2375198, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56452, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375198, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47570, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375198, 'subject_id': 1385, 'subject_name': '农业种植', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22267, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 147, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375198"
+    },
+    {
+      "title": "金融港股走势分歧 中国人保和招商证券涨超6%",
+      "time": "2026-05-19 14:01:58",
+      "category": "{'article_id': 2375192, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27471, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375192"
+    },
+    {
+      "title": "财联社5月19日电，英国4月失业金申请人数2.65万人，前值由2.68万人修正为0.49万人。",
+      "time": "2026-05-19 14:00:29",
+      "category": "{'article_id': 2375190, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375190"
+    },
+    {
+      "title": "伊朗股市恢复交易",
+      "time": "2026-05-19 13:54:44",
+      "category": "{'article_id': 2375184, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156148, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375184, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47570, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375184"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

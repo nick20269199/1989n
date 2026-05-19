@@ -1,1 +1,1 @@
-# stock_analysis - 股票数据采集与分析系统
+# 财务部 — 多Agent交易分析系统 (stock_analysis)

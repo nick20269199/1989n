@@ -1,0 +1,47 @@
+{
+  "symbol": "002156",
+  "name": "通富微电",
+  "timestamp": "2026-05-19T11:45:40.079043",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 1.0,
+      "margin": 0.8,
+      "logic": 0.9
+    },
+    "failures": [],
+    "merged_direction": "多",
+    "merged_confidence": 0.62,
+    "summary": "三位专家一致看多，方法透明（技术/资金/情绪三维验证），轨迹完整（明确区间、目标、时间、关键位），边际条件清晰（含失效阈值、置信衰减与黑天鹅应对），逻辑闭环（因果链+反证），符合价值投资辅助决策的严谨性要求。分析仅供参考，不构成投资建议。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 1.0,\n    \"margin\": 0.8,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.62,\n  \"summary\": \"三位专家一致看多，方法透明（技术/资金/情绪三维验证），轨迹完整（明确区间、目标、时间、关键位），边际条件清晰（含失效阈值、置信衰减与黑天鹅应对），逻辑闭环（因果链+反证），符合价值投资辅助决策的严谨性要求。分析仅供参考，不构成投资建议。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "多",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

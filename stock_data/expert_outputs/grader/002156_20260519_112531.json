@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "error": "[ERROR] [千问 research 调用失败]",
+  "scores": {},
+  "failures": [
+    "Grader API 调用失败"
+  ]
+}

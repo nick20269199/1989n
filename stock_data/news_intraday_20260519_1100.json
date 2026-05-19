@@ -1,0 +1,79 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-19 11:00:03",
+  "market_status": "trading",
+  "count": 12,
+  "data": [
+    {
+      "title": "主力资金监控：天孚通信净卖出超20亿",
+      "time": "2026-05-19 10:58:25",
+      "related_stocks": "300274,300394,688012,300476,300308,300502,300058,002131",
+      "category": "{'article_id': 2375035, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175212, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375035, 'subject_id': 2137, 'subject_name': '中微公司', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9566, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375035"
+    },
+    {
+      "title": "PCB概念震荡回升 逸豪新材20cm涨停",
+      "time": "2026-05-19 10:54:13",
+      "related_stocks": "301176,603002,300283,301511,002552,300537,301379",
+      "category": "{'article_id': 2375030, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175212, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375030, 'subject_id': 1275, 'subject_name': 'PCB', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12798, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 25, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375030"
+    },
+    {
+      "title": "宗申机车：网传涉及公司赛科龙AQS250低价销售相关信息均为不实、伪造、虚假内容 非公司发布",
+      "time": "2026-05-19 10:53:35",
+      "url": "https://www.cls.cn/detail/2375032"
+    },
+    {
+      "title": "预告：国新办5月22日举行新闻发布会 介绍第四届中国国际供应链促进博览会筹备情况",
+      "time": "2026-05-19 10:52:21",
+      "category": "{'article_id': 2375031, 'subject_id': 9829, 'subject_name': '提醒电报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 19858, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375031"
+    },
+    {
+      "title": "沪深两市成交额突破1.5万亿 较上一日此时缩量超900亿",
+      "time": "2026-05-19 10:46:31",
+      "category": "{'article_id': 2375026, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175212, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375026"
+    },
+    {
+      "title": "财联社5月19日电，韩元兑美元汇率跌破1500关口，跌幅0.71%。",
+      "time": "2026-05-19 10:44:35",
+      "category": "{'article_id': 2375023, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375023, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156140, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375023"
+    },
+    {
+      "title": "【盘中宝】AI深度赋能下行业进入高速成长期，这类产品有望实现渗透率的快速提升，这家公司已与业内头部厂商开展合作",
+      "time": "2026-05-19 10:41:46",
+      "url": "https://www.cls.cn/detail/2375018"
+    },
+    {
+      "title": "三亚启动防汛防风Ⅳ级应急响应",
+      "time": "2026-05-19 10:40:09",
+      "category": "{'article_id': 2375020, 'subject_id': 9844, 'subject_name': '天气变化', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8040, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375020, 'subject_id': 1545, 'subject_name': '海南自贸港', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17002, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 13, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375020"
+    },
+    {
+      "title": "财联社5月19日电，据船运调查机构SGS公布数据显示，预计马来西亚5月1-15日棕榈油出口量为430474吨，较上月同期出口的453941吨减少5.17%。",
+      "time": "2026-05-19 10:38:04",
+      "category": "{'article_id': 2375017, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375017, 'subject_id': 11406, 'subject_name': '油脂油料期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6483, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375017"
+    },
+    {
+      "title": "【风口研报·公司】深耕“光棒-光纤-光缆”和液冷，分析师强call公司“电能+算力+AI”战略已带来实质拐点，2025年营收创历史新高，今年业绩更将十倍增长",
+      "time": "2026-05-19 10:36:33",
+      "url": "https://www.cls.cn/detail/2375011"
+    },
+    {
+      "title": "财联社5月19日电，数据显示，今日MMLC电池级碳酸锂（早盘）价格较昨日下跌3200元/吨，中间价报187600元/吨。",
+      "time": "2026-05-19 10:33:15",
+      "category": "{'article_id': 2375009, 'subject_id': 1690, 'subject_name': '盐湖提锂', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 15877, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 93, 'channel': 'cls'},{'article_id': 2375009, 'subject_id': 1313, 'subject_name': '锂电池', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37677, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 198, 'channel': 'cls,stib'},{'article_id': 2375009, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175212, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375009, 'subject_id': 11409, 'subject_name': '碳中和期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10149, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375009"
+    },
+    {
+      "title": "国家金融与发展实验室理事长李扬：要大力发展资本市场 尤其要完善股票市场的各种制度",
+      "time": "2026-05-19 10:31:44",
+      "url": "https://www.cls.cn/detail/2375004"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

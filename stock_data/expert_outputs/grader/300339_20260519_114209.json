@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.84,
+  "scores": {
+    "direction": 1.0,
+    "method": 1.0,
+    "trajectory": 0.9,
+    "margin": 0.9,
+    "logic": 0.9
+  },
+  "failures": [],
+  "merged_direction": "空",
+  "merged_confidence": 0.67,
+  "summary": "三位专家均明确看空润和软件（300339），方法透明（技术/资金/情绪多维交叉验证），轨迹完整（含差异化入场区间、目标位、时间框架及关键价格），边际清晰（含失效条件、置信衰减与黑天鹅应对），逻辑闭环（因果链完整且含‘如果错了’的证伪路径）；综合判断短期空头主导，需跟踪44.0-44.4支撑有效性及计算机板块情绪修复信号。",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.9,\n    \"margin\": 0.9,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"空\",\n  \"merged_confidence\": 0.67,\n  \"summary\": \"三位专家均明确看空润和软件（300339），方法透明（技术/资金/情绪多维交叉验证），轨迹完整（含差异化入场区间、目标位、时间框架及关键价格），边际清晰（含失效条件、置信衰减与黑天鹅应对），逻辑闭环（因果链完整且含‘如果错了’的证伪路径）；综合判断短期空头主导，需跟踪44.0-44.4支撑有效性及计算机板块情绪修复信号。\"\n}\n```"
+}

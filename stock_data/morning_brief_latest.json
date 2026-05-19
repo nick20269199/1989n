@@ -1,9 +1,9 @@
 {
-  "date": "2026-05-18",
-  "time": "12:25:29",
-  "news_total": 50,
-  "news_annotated": 15,
-  "topics_found": 5,
+  "date": "2026-05-19",
+  "time": "09:07:41",
+  "news_total": 12,
+  "news_annotated": 2,
+  "topics_found": 1,
   "holding_impact": [
     {
       "code": "002156",
@@ -31,7 +31,12 @@
       "score": 0
     },
     {
-      "code": "002050",
+      "code": "300339",
+      "direction": "中性",
+      "score": 0
+    },
+    {
+      "code": "300136",
       "direction": "中性",
       "score": 0
     }

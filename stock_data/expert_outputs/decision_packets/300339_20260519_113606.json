@@ -1,0 +1,47 @@
+{
+  "symbol": "300339",
+  "name": "润和软件",
+  "timestamp": "2026-05-19T11:36:06.152053",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.9,
+      "margin": 0.9,
+      "logic": 0.9
+    },
+    "failures": [],
+    "merged_direction": "空",
+    "merged_confidence": 0.65,
+    "summary": "三位专家一致看空润和软件（300339），基于资金面放量下跌、技术面均线空头排列与缩量破位、情绪面板块分化+退潮初期三重验证，轨迹清晰、边际明确、逻辑闭环，符合价值投资风控要求。分析仅供参考，不构成投资建议。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.9,\n    \"margin\": 0.9,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"空\",\n  \"merged_confidence\": 0.65,\n  \"summary\": \"三位专家一致看空润和软件（300339），基于资金面放量下跌、技术面均线空头排列与缩量破位、情绪面板块分化+退潮初期三重验证，轨迹清晰、边际明确、逻辑闭环，符合价值投资风控要求。分析仅供参考，不构成投资建议。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert1_tech",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "空",
+      "confidence": 0.65,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

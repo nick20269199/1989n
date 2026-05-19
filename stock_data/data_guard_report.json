@@ -1,49 +1,70 @@
 {
-  "timestamp": "2026-05-18 08:34:14",
-  "json_issues": [],
+  "timestamp": "2026-05-19 08:37:14",
+  "json_issues": [
+    {
+      "file": "Table.json",
+      "issue": "encoding error: 'utf-8' codec can't decode byte 0xcd in position 2: invalid continuation byte",
+      "severity": "high"
+    }
+  ],
   "critical_issues": [],
   "stale_issues": [
     {
       "file": "news_manual_20260511_0800.json",
-      "issue": "stale (168.6h > 12h threshold)",
+      "issue": "stale (192.6h > 12h threshold)",
       "severity": "medium"
     },
     {
       "file": "news_manual_20260512_0800.json",
-      "issue": "stale (144.6h > 12h threshold)",
+      "issue": "stale (168.6h > 12h threshold)",
       "severity": "medium"
     },
     {
       "file": "news_manual_20260513_0800.json",
-      "issue": "stale (120.6h > 12h threshold)",
+      "issue": "stale (144.6h > 12h threshold)",
       "severity": "medium"
     },
     {
       "file": "news_manual_20260513_0835.json",
-      "issue": "stale (120.0h > 12h threshold)",
+      "issue": "stale (144.0h > 12h threshold)",
       "severity": "medium"
     },
     {
       "file": "news_manual_20260515_0800.json",
-      "issue": "stale (72.6h > 12h threshold)",
+      "issue": "stale (96.6h > 12h threshold)",
       "severity": "medium"
     },
     {
       "file": "news_manual_20260515_0835.json",
-      "issue": "stale (72.0h > 12h threshold)",
+      "issue": "stale (96.0h > 12h threshold)",
       "severity": "medium"
     },
     {
       "file": "news_manual_20260517_0800.json",
+      "issue": "stale (48.6h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260518_0800.json",
       "issue": "stale (24.6h > 12h threshold)",
       "severity": "medium"
     },
     {
-      "file": "morning_brief_latest.md",
-      "issue": "stale (71.5h > 12h threshold)",
+      "file": "news_manual_20260518_0835.json",
+      "issue": "stale (24.0h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260518_1141.json",
+      "issue": "stale (20.9h > 12h threshold)",
+      "severity": "medium"
+    },
+    {
+      "file": "news_manual_20260518_1145.json",
+      "issue": "stale (20.9h > 12h threshold)",
       "severity": "medium"
     }
   ],
-  "total_issues": 8,
+  "total_issues": 12,
   "healthy": false
 }

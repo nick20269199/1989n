@@ -1,0 +1,101 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-19 10:00:02",
+  "market_status": "trading",
+  "count": 14,
+  "data": [
+    {
+      "title": "半导体材料板块震荡调整 中船特气跌超10%",
+      "time": "2026-05-19 09:56:41",
+      "related_stocks": "301611,600641,688545,688234,688146",
+      "category": "{'article_id': 2374961, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175203, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374961, 'subject_id': 11056, 'subject_name': '半导体材料', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11492, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 455, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374961"
+    },
+    {
+      "title": "财联社5月19日电，富时中国A50指数期货盘中跌逾1%。",
+      "time": "2026-05-19 09:55:53",
+      "category": "{'article_id': 2374959, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56445, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374959, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175203, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374959, 'subject_id': 11411, 'subject_name': '股指期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12011, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374959"
+    },
+    {
+      "title": "财联社5月19日电，韩国KOSPI指数跌幅扩大至4%。",
+      "time": "2026-05-19 09:52:26",
+      "category": "{'article_id': 2374953, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156137, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374953"
+    },
+    {
+      "title": "香港特区行政长官李家超将出访中亚",
+      "time": "2026-05-19 09:48:11",
+      "url": "https://www.cls.cn/detail/2374952"
+    },
+    {
+      "title": "影视院线概念震荡拉升 幸福蓝海涨超14%",
+      "time": "2026-05-19 09:47:52",
+      "related_stocks": "300528,601595,001330,600977,000802",
+      "category": "{'article_id': 2374951, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175204, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374951, 'subject_id': 10498, 'subject_name': '影视', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10047, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 427, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374951"
+    },
+    {
+      "title": "光伏概念逆势活跃 正泰电源直线涨停",
+      "time": "2026-05-19 09:44:36",
+      "related_stocks": "000591,300345,002506,300118,002150,300274,600481",
+      "category": "{'article_id': 2374940, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175204, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374940, 'subject_id': 1477, 'subject_name': '光伏', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 43999, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 140, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374940"
+    },
+    {
+      "title": "MLCC概念反复走强 风华高科涨停",
+      "time": "2026-05-19 09:44:23",
+      "related_stocks": "000636,301566,688260,300285,300408",
+      "category": "{'article_id': 2374941, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175203, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374941, 'subject_id': 1566, 'subject_name': 'MLCC', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9763, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 424, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374941"
+    },
+    {
+      "title": "算力租赁概念延续强势 弘信电子20cm2连板",
+      "time": "2026-05-19 09:40:16",
+      "related_stocks": "603206,300657,603220,603636,300166",
+      "category": "{'article_id': 2374937, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175203, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374937, 'subject_id': 10723, 'subject_name': '算力租赁', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8958, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2066, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374937"
+    },
+    {
+      "title": "港股脑机接口概念股走强 脑动极光涨超28%",
+      "time": "2026-05-19 09:38:50",
+      "category": "{'article_id': 2374932, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27468, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374932"
+    },
+    {
+      "title": "绿电概念异动拉升 华能蒙电直线涨停",
+      "time": "2026-05-19 09:38:44",
+      "related_stocks": "002218,000600,600578,601991,600863,600475",
+      "category": "{'article_id': 2374933, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175203, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374933, 'subject_id': 10053, 'subject_name': '绿色电力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7980, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 544, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374933"
+    },
+    {
+      "title": "体育概念延续调整 中体产业等多股2连跌停",
+      "time": "2026-05-19 09:33:12",
+      "related_stocks": "600158,300651,605099,002395,002878,002181,605299",
+      "category": "{'article_id': 2374928, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175203, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374928, 'subject_id': 1665, 'subject_name': '体育产业', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10696, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 226, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374928"
+    },
+    {
+      "title": "吉林省出台20项举措助力具身智能等未来产业发展",
+      "time": "2026-05-19 09:31:51",
+      "category": "{'article_id': 2374926, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18486, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2374926, 'subject_id': 1309, 'subject_name': '机器人', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 43944, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 201, 'channel': 'cls,stib'},{'article_id': 2374926, 'subject_id': 1286, 'subject_name': '储能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22137, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 197, 'channel': 'cls,stib'},{'article_id': 2374926, 'subject_id': 1320, 'subject_name': '氢能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 32541, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 92, 'channel': 'cls,stib'},{'article_id': 2374926, 'subject_id': 12683, 'subject_name': '人形机器人', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9701, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2067, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374926"
+    },
+    {
+      "title": "脑机接口概念表现活跃 倍益康涨超10%",
+      "time": "2026-05-19 09:31:34",
+      "related_stocks": "600775,688626,002173,301293,300753",
+      "category": "{'article_id': 2374923, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175203, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374923, 'subject_id': 9473, 'subject_name': '人脑工程', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8784, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 290, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374923"
+    },
+    {
+      "title": "机器人概念反复走强 北自科技4连板",
+      "time": "2026-05-19 09:31:11",
+      "related_stocks": "688585,605488,002067,002421,688360,603082,301413",
+      "category": "{'article_id': 2374922, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175203, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374922, 'subject_id': 1309, 'subject_name': '机器人', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 43944, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 201, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374922"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

@@ -174,43 +174,188 @@ def run_expert(expert_id: str, symbol: str, name: str,
     return output
 
 
-def _parse_structured_fields(output: ExpertOutput, text: str):
-    """Parse JSON-like structured output from expert's response.
+DIRECTION_MAP = {
+    "多": "多", "看多": "多", "做多": "多", "多头": "多",
+    "谨慎看多": "多", "谨慎做多": "多",
+    "空": "空", "看空": "空", "做空": "空", "空头": "空",
+    "谨慎看空": "空", "谨慎做空": "空",
+    "观望": "观望", "中性": "观望", "震荡": "观望", "持有": "观望",
+    "多转震荡": "多", "震荡偏多": "多", "偏多": "多",
+    "震荡偏空": "空", "偏空": "空", "中性偏多": "观望",
+    "中性偏空": "观望", "中性偏谨慎": "观望",
+}
 
-    Experts are instructed to output a JSON block at the end of their analysis.
-    We try to extract and parse it.
+
+def _normalize_direction(raw: str) -> str:
+    """Map non-standard direction labels to 多/空/观望."""
+    raw = raw.strip()
+    if not raw:
+        return "观望"
+    return DIRECTION_MAP.get(raw, "观望")
+
+
+def _repair_truncated_json(text: str) -> str | None:
+    """Try to fix a truncated JSON block — find the outermost {} and close it.
+
+    Handles cases where the model output was cut off mid-JSON.
     """
+    start = text.find("{")
+    if start == -1:
+        return None
+
+    # Walk char by char counting brace depth
+    depth = 0
+    last_valid_end = -1
+    i = start
+    in_string = False
+    escape = False
+
+    while i < len(text):
+        ch = text[i]
+        if escape:
+            escape = False
+        elif ch == "\\":
+            escape = True
+        elif ch == '"' and not escape:
+            in_string = not in_string
+        elif not in_string:
+            if ch == "{":
+                if depth == 0:
+                    start = i  # outermost opening brace
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    last_valid_end = i  # complete close
+                elif depth < 0:
+                    return None  # mismatched
+        i += 1
+
+    if last_valid_end > 0:
+        # Found properly closed JSON
+        return text[start : last_valid_end + 1]
+
+    if depth > 0 and start >= 0:
+        # JSON was truncated — close remaining braces
+        partial = text[start:]
+        # Try to find the last complete key-value pair
+        # Simple approach: append closing braces and try to parse
+        closed = partial + "}" * depth
+        try:
+            json.loads(closed)
+            return closed
+        except json.JSONDecodeError:
+            pass
+
+        # More aggressive: strip trailing incomplete value, then close
+        # Find last `"key":` pattern and truncate after it if incomplete
+        import re
+        lines = partial.rstrip().split("\n")
+        clean_lines = []
+        for line in lines:
+            stripped = line.rstrip()
+            if stripped.endswith(","):
+                clean_lines.append(stripped)
+            elif stripped.endswith((":", "[")):
+                break
+            elif re.match(r'\s*"[^"]*"\s*:\s*("[^"]*"|\d+\.?\d*|true|false|null)\s*,?\s*$', stripped):
+                clean_lines.append(stripped.rstrip(","))
+            elif re.match(r'\s*"[^"]*"\s*:\s*\{', stripped):
+                clean_lines.append(stripped)
+            elif re.match(r'\s*\}', stripped):
+                clean_lines.append(stripped)
+            elif re.match(r'\s*\]', stripped):
+                clean_lines.append(stripped)
+            elif re.match(r'\s*"[^"]*"\s*:\s*$', stripped):
+                # Incomplete value — truncate this line
+                break
+            elif re.match(r'\s*"[^"]*"\s*:\s*\[', stripped):
+                # Array start — keep
+                clean_lines.append(stripped)
+            else:
+                # Unknown content — skip if it's after we've started JSON
+                if clean_lines:
+                    break
+
+        if clean_lines:
+            repaired = "\n".join(clean_lines)
+            repaired += "}" * depth
+            try:
+                json.loads(repaired)
+                return repaired
+            except json.JSONDecodeError:
+                pass
+
+    return None
+
+
+def _parse_structured_fields(output: ExpertOutput, text: str):
+    """Parse JSON-like structured output from expert's response."""
     import re
 
-    # Try to find JSON block between ```json and ```
+    # Strategy 1: find ```json ... ``` block
     json_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', text, re.DOTALL)
     if json_match:
-        try:
-            data = json.loads(json_match.group(1))
-            output.direction = data.get("direction", output.direction)
-            output.method = data.get("method", output.method)
-            output.trajectory = data.get("trajectory", output.trajectory)
-            output.margin = data.get("margin", output.margin)
-            output.logic = data.get("logic", output.logic)
-            output.confidence = data.get("confidence", output.confidence)
+        raw = json_match.group(1)
+        data = _try_parse_json(raw)
+        if data:
+            _apply_parsed(output, data)
             return
-        except json.JSONDecodeError:
-            pass
 
-    # Fallback: try to find lone {...} at the end of text
+    # Strategy 2: find ```json ... (unclosed) block
+    uq_match = re.search(r'```(?:json)?\s*(\{[\s\S]*?)\s*$', text)
+    if uq_match:
+        raw = uq_match.group(1)
+        repaired = _repair_truncated_json(raw)
+        if repaired:
+            data = _try_parse_json(repaired)
+            if data:
+                output.direction = _normalize_direction(data.get("direction", ""))
+                output.method = data.get("method", output.method)
+                output.trajectory = data.get("trajectory", output.trajectory)
+                output.margin = data.get("margin", output.margin)
+                output.logic = data.get("logic", output.logic)
+                output.confidence = data.get("confidence", output.confidence)
+                logger.warning(f"{output.expert_id}: JSON was truncated, repaired {len(raw)}->{len(repaired)} chars")
+                return
+
+    # Strategy 3: find lone {...} containing "confidence"
     brace_match = re.search(r'(\{[\s\S]*"confidence"[\s\S]*\})', text)
     if brace_match:
-        try:
-            data = json.loads(brace_match.group(1))
-            output.direction = data.get("direction", output.direction)
-            output.method = data.get("method", output.method)
-            output.trajectory = data.get("trajectory", output.trajectory)
-            output.margin = data.get("margin", output.margin)
-            output.logic = data.get("logic", output.logic)
-            output.confidence = data.get("confidence", output.confidence)
+        raw = brace_match.group(1)
+        data = _try_parse_json(raw)
+        if data:
+            _apply_parsed(output, data)
             return
-        except json.JSONDecodeError:
-            pass
 
-    # Last resort: leave raw text only, set low confidence
+    # Strategy 4: lone truncated {...}
+    brace_match2 = re.search(r'(\{[\s\S]*"direction"[\s\S]*\})', text)
+    if brace_match2:
+        raw = brace_match2.group(1)
+        repaired = _repair_truncated_json(raw)
+        if repaired:
+            data = _try_parse_json(repaired)
+            if data:
+                _apply_parsed(output, data)
+                return
+
+    # Last resort: leave raw text, set low confidence
     output.confidence = 0.3
+
+
+def _try_parse_json(text: str) -> dict | None:
+    """Try to parse JSON, returns dict or None."""
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return None
+
+
+def _apply_parsed(output: ExpertOutput, data: dict):
+    """Apply parsed JSON dict to ExpertOutput fields."""
+    output.direction = _normalize_direction(data.get("direction", ""))
+    output.method = data.get("method", output.method)
+    output.trajectory = data.get("trajectory", output.trajectory)
+    output.margin = data.get("margin", output.margin)
+    output.logic = data.get("logic", output.logic)
+    output.confidence = data.get("confidence", output.confidence)

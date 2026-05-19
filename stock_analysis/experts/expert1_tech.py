@@ -10,11 +10,26 @@ from experts.base import run_expert
 
 EXPERT_ID = "expert1_tech"
 
+
+# ============================================================
+# FILL ZONE 1: Expert role definition
+# Edit the text below to change what this expert focuses on.
+# Current: volume-price, moving averages, patterns, R7 signal
+# ============================================================
 SYSTEM_PROMPT = """你是一位专注A股技术面的分析师。你的职责是分析量价关系、均线系统、技术形态和R7信号。
 你只回答技术面的问题，不涉及基本面、消息面、资金面。
 分析必须具体到数字，不得使用"走势尚可""表现不错"等模糊表述。
 输出格式：分析文本结束后，输出一个JSON代码块包含结构化数据。"""
+# ============================================================
+# END OF FILL ZONE 1
+# ============================================================
 
+
+# ============================================================
+# FILL ZONE 2: Analysis steps
+# Lines 27-32: the 5 analysis steps the expert follows.
+# Change/add/remove steps as you like. Each step is a numbered item.
+# ============================================================
 PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行技术面分析。
 
 当前市场状态：{market_state}
@@ -29,6 +44,9 @@ PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行技术面分析。
 3. **均线系统**：股价与MA5/MA10/MA20/MA60的关系，多头发散还是空头排列？
 4. **R7信号**：是否有R7超大单信号？信号强度？连续几日？
 5. **关键价位**：最近的支撑位和阻力位在哪？
+# ============================================================
+# END OF FILL ZONE 2 — above 5 steps are what you customize
+# ============================================================
 
 最后，输出一个JSON代码块，包含以下字段。
 **重要规则：**

@@ -1,0 +1,50 @@
+{
+  "symbol": "300339",
+  "name": "润和软件",
+  "timestamp": "2026-05-19T11:26:38.341631",
+  "pipeline_status": "rejected",
+  "grader": {
+    "passed": false,
+    "score": 0.52,
+    "scores": {
+      "direction": 0.5,
+      "method": 1.0,
+      "trajectory": 0.8,
+      "margin": 0.6,
+      "logic": 0.7
+    },
+    "failures": [
+      "方向维度仅得0.5分：三位专家结论冲突（震荡偏多/空/观望），无统一、明确的最终方向判断；报告未对分歧进行加权整合或给出主导逻辑，仅并列呈现，导致用户无法获得清晰操作指引",
+      "平均分0.52 < 0.6，且方向得分虽达0.5但未达‘清晰判断’（1.0）要求，不满足pass条件中‘方向得分 >= 0.5’的最低门槛——注意：该条款为‘且’关系，需同时满足‘平均分>=0.6’与‘方向得分>=0.5’，当前方向得分为0.5（符合下限），但平均分不达标，故整体未通过"
+    ],
+    "merged_direction": "观望",
+    "merged_confidence": 0.53,
+    "summary": "三位专家方法论透明、轨迹与边际较完整，但方向严重分歧且无调和机制，技术面（偏多）、资金面（偏空）、情绪面（明确观望）三重信号背离，叠加置信度均值仅0.53，缺乏主导逻辑支撑，当前应以观望为审慎共识。",
+    "_raw": "```json\n{\n  \"passed\": false,\n  \"average_score\": 0.52,\n  \"scores\": {\n    \"direction\": 0.5,\n    \"method\": 1.0,\n    \"trajectory\": 0.8,\n    \"margin\": 0.6,\n    \"logic\": 0.7\n  },\n  \"failures\": [\n    \"方向维度仅得0.5分：三位专家结论冲突（震荡偏多/空/观望），无统一、明确的最终方向判断；报告未对分歧进行加权整合或给出主导逻辑，仅并列呈现，导致用户无法获得清晰操作指引\",\n    \"平均分0.52 < 0.6，且方向得分虽达0.5但未达‘清晰判断’（1.0）要求，不满足pass条件中‘方向得分 >= 0.5’的最低门槛——注意：该条款为‘且’关系，需同时满足‘平均分>=0.6’与‘方向得分>=0.5’，当前方向得分为0.5（符合下限），但平均分不达标，故整体未通过\"\n  },\n  \"merged_direction\": \"观望\",\n  \"merged_confidence\": 0.53,\n  \"summary\": \"三位专家方法论透明、轨迹与边际较完整，但方向严重分歧且无调和机制，技术面（偏多）、资金面（偏空）、情绪面（明确观望）三重信号背离，叠加置信度均值仅0.53，缺乏主导逻辑支撑，当前应以观望为审慎共识。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "震荡偏多",
+      "confidence": 0.55,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "空",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "观望",
+      "confidence": 0.45,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": false
+}

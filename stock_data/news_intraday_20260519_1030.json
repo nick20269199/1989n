@@ -1,0 +1,119 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-19 10:30:02",
+  "market_status": "trading",
+  "count": 18,
+  "data": [
+    {
+      "title": "大众汽车将发行30亿元熊猫债",
+      "time": "2026-05-19 10:29:41",
+      "category": "{'article_id': 2375000, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375000, 'subject_id': 1090, 'subject_name': '汽车大新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28762, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 268, 'channel': 'cls'},{'article_id': 2375000, 'subject_id': 1282, 'subject_name': '人民币大新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 31311, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375000"
+    },
+    {
+      "title": "产能将激增 前三星芯片负责人预测明年下半年内存将显著降价",
+      "time": "2026-05-19 10:25:15",
+      "category": "{'article_id': 2374997, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24529, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2374997, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101426, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2374997, 'subject_id': 2409, 'subject_name': '存储芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17862, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 412, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2374997"
+    },
+    {
+      "title": "国家金融与发展实验室理事长李扬：抓好“六张网”投资建设",
+      "time": "2026-05-19 10:23:36",
+      "category": "{'article_id': 2374996, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374996, 'subject_id': 1350, 'subject_name': '中国央行动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 682847, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374996, 'subject_id': 1605, 'subject_name': '货币政策动向', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27016, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374996, 'subject_id': 11826, 'subject_name': '并购重组', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 15580, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2562, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374996"
+    },
+    {
+      "title": "中央气象台5月19日10时继续发布暴雨黄色预警",
+      "time": "2026-05-19 10:19:46",
+      "category": "{'article_id': 2374992, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374992, 'subject_id': 9844, 'subject_name': '天气变化', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8040, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374992, 'subject_id': 1545, 'subject_name': '海南自贸港', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17002, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 13, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374992"
+    },
+    {
+      "title": "电力板块持续走强 上海电力直线涨停",
+      "time": "2026-05-19 10:19:40",
+      "related_stocks": "600578,001258,600021,600452,000899,600863",
+      "category": "{'article_id': 2374981, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175204, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374981, 'subject_id': 1700, 'subject_name': '电力', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22401, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 145, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374981"
+    },
+    {
+      "title": "阿根廷与美国启动全球公共资源保护计划",
+      "time": "2026-05-19 10:18:02",
+      "category": "{'article_id': 2374991, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374991, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18486, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374991"
+    },
+    {
+      "title": "CPO概念持续下挫 天孚通信等多股跌超9%",
+      "time": "2026-05-19 10:17:46",
+      "related_stocks": "300308,301205,688808,002384,688167,688205,300548,300394,688195",
+      "category": "{'article_id': 2374985, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175204, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374985, 'subject_id': 10407, 'subject_name': 'CPO', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9477, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1937, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374985"
+    },
+    {
+      "title": "福建：支持光电装备企业参与高世代及Micro LED高端显示产线设备国产化替代进程",
+      "time": "2026-05-19 10:17:18",
+      "category": "{'article_id': 2374990, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374990, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101426, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2374990, 'subject_id': 9844, 'subject_name': '天气变化', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8040, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374990, 'subject_id': 2710, 'subject_name': '激光', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7237, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 479, 'channel': 'cls,stib'},{'article_id': 2374990, 'subject_id': 1175, 'subject_name': 'LED', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9892, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 190, 'channel': 'cls'},{'article_id': 2374990, 'subject_id': 3034, 'subject_name': '第三代半导体', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 16542, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 503, 'channel': 'cls,stib'},{'article_id': 2374990, 'subject_id': 2201, 'subject_name': '光刻胶', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 13108, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 388, 'channel': 'cls,stib'},{'article_id': 2374990, 'subject_id': 2404, 'subject_name': '靶材', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9684, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 391, 'channel': 'cls,stib'},{'article_id': 2374990, 'subject_id': 11056, 'subject_name': '半导体材料', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11492, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 455, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374990"
+    },
+    {
+      "title": "财联社5月19日电，现货钯金跌幅达2.00%，报1388.03美元/盎司。",
+      "time": "2026-05-19 10:15:59",
+      "category": "{'article_id': 2374989, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374989"
+    },
+    {
+      "title": "福建：到2030年全省光电产业集群营收规模超3000亿元 加快推动高速光模块研发",
+      "time": "2026-05-19 10:13:47",
+      "category": "{'article_id': 2374984, 'subject_id': 1298, 'subject_name': '光通信', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17015, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 189, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374984"
+    },
+    {
+      "title": "财联社5月19日电，印尼卢比早盘跌至报1美元兑17,690卢比的历史低点。",
+      "time": "2026-05-19 10:09:45",
+      "category": "{'article_id': 2374980, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156138, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374980"
+    },
+    {
+      "title": "财联社5月19日电，港股存储概念集体回落，南方两倍做多海力士跌超12%，南方两倍做多三星电子跌超11%，澜起科技跌超7%，兆易创新跌超5%。",
+      "time": "2026-05-19 10:09:25",
+      "category": "{'article_id': 2374977, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24529, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2374977, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27469, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374977"
+    },
+    {
+      "title": "海军辽宁舰航母编队赴西太平洋开展演训活动",
+      "time": "2026-05-19 10:06:46",
+      "url": "https://www.cls.cn/detail/2374974"
+    },
+    {
+      "title": "沪深两市成交额突破1万亿 较上一日此时缩量超1100亿",
+      "time": "2026-05-19 10:06:37",
+      "category": "{'article_id': 2374973, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175204, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374973"
+    },
+    {
+      "title": "财联社5月19日电，台交所加权股价指数下跌1%至40,480.24点。",
+      "time": "2026-05-19 10:03:16",
+      "url": "https://www.cls.cn/detail/2374969"
+    },
+    {
+      "title": "财联社5月19日电，三井住友、富士通、软银集团达成联盟协议，共同打造日本自主研发的可持续医疗保健平台。",
+      "time": "2026-05-19 10:02:56",
+      "category": "{'article_id': 2374968, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56446, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2374968, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156138, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2374968"
+    },
+    {
+      "title": "创业板指跌逾2% 算力硬件领跌",
+      "time": "2026-05-19 10:01:53",
+      "related_stocks": "399006",
+      "category": "{'article_id': 2374964, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175204, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374964, 'subject_id': 1298, 'subject_name': '光通信', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 17015, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 189, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374964"
+    },
+    {
+      "title": "三大运营商再度走强 中国电信涨超8%",
+      "time": "2026-05-19 10:00:17",
+      "related_stocks": "601728,600941,600050",
+      "category": "{'article_id': 2374963, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175204, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2374963, 'subject_id': 10112, 'subject_name': '电信运营', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7653, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 539, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2374963"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

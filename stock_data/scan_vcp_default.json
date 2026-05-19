@@ -1,9 +1,21 @@
 {
   "scan_type": "vcp",
   "param": null,
-  "time": "2026-05-18 16:03:13",
+  "time": "2026-05-19 15:30:04",
   "count": 7,
   "results": [
+    {
+      "phase": "收缩",
+      "score": 100,
+      "price": 45.51,
+      "volume_ratio": 70,
+      "ma20": 44.81,
+      "above_ma20": true,
+      "range_narrowing": true,
+      "lower_shadows": 4,
+      "has_limit_up": false,
+      "code": "300339"
+    },
     {
       "phase": "企稳",
       "score": 70,
@@ -19,14 +31,14 @@
     {
       "phase": "企稳",
       "score": 70,
-      "price": 44.71,
-      "volume_ratio": 57,
-      "ma20": 44.57,
+      "price": 111.0,
+      "volume_ratio": 79,
+      "ma20": 94.52,
       "above_ma20": true,
       "range_narrowing": false,
-      "lower_shadows": 3,
-      "has_limit_up": false,
-      "code": "300339"
+      "lower_shadows": 2,
+      "has_limit_up": true,
+      "code": "300136"
     },
     {
       "phase": "企稳",
@@ -43,9 +55,9 @@
     {
       "phase": "企稳",
       "score": 50,
-      "price": 37.03,
-      "volume_ratio": 166,
-      "ma20": 35.78,
+      "price": 38.34,
+      "volume_ratio": 206,
+      "ma20": 35.91,
       "above_ma20": true,
       "range_narrowing": false,
       "lower_shadows": 2,
@@ -75,18 +87,6 @@
       "lower_shadows": 1,
       "has_limit_up": true,
       "code": "601789"
-    },
-    {
-      "phase": "企稳",
-      "score": 35,
-      "price": 111.75,
-      "volume_ratio": 115,
-      "ma20": 92.46,
-      "above_ma20": true,
-      "range_narrowing": false,
-      "lower_shadows": 1,
-      "has_limit_up": true,
-      "code": "300136"
     }
   ]
 }

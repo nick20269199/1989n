@@ -1,16 +1,10 @@
 {
-  "title": "盘前简报 | 2026-05-18日",
-  "date": "2026-05-18",
-  "time": "09:58:08",
+  "title": "盘前简报 | 2026-05-19日",
+  "date": "2026-05-19",
+  "time": "09:58:10",
   "market_status": "交易中",
   "economic_calendar": {
     "monthly_events": [
-      {
-        "date": "05/18",
-        "event": "LPR报价",
-        "status": "待发布",
-        "importance": "★★★"
-      },
       {
         "date": "05/20",
         "event": "规模以上工业企业利润",
@@ -54,6 +48,12 @@
         "event": "70城房价",
         "status": "已发布",
         "importance": "★★★"
+      },
+      {
+        "date": "05/18",
+        "event": "LPR报价",
+        "status": "已发布",
+        "importance": "★★★"
       }
     ]
   },
@@ -61,38 +61,38 @@
     "indices": [
       {
         "name": "上证指数",
-        "price": 4140.1581,
-        "change_pct": 0.12
+        "price": 4127.2694,
+        "change_pct": -0.1
       },
       {
         "name": "深证成指",
-        "price": 15621.861,
-        "change_pct": 0.39
+        "price": 15361.579,
+        "change_pct": -1.09
       },
       {
         "name": "创业板指",
-        "price": 3948.397,
-        "change_pct": 0.49
+        "price": 3853.527,
+        "change_pct": -1.57
       },
       {
         "name": "科创50",
-        "price": 1743.8865,
-        "change_pct": 2.81
+        "price": 1692.2669,
+        "change_pct": -1.03
       },
       {
         "name": "道琼斯",
-        "price": 49526.1719,
-        "change_pct": -1.07
+        "price": 49686.1211,
+        "change_pct": 0.32
       },
       {
         "name": "纳斯达克",
-        "price": 26225.1445,
-        "change_pct": -1.54
+        "price": 26090.7344,
+        "change_pct": -0.51
       },
       {
         "name": "标普500",
-        "price": 7408.5,
-        "change_pct": -1.24
+        "price": 7403.0498,
+        "change_pct": -0.07
       }
     ],
     "commodities": [],
@@ -101,59 +101,17 @@
   "portfolio_scan": {
     "holdings": [
       {
-        "code": "002156",
-        "name": "通富微电",
-        "shares": 1600,
-        "cost": 44.85,
-        "price": 59.8,
-        "change_pct": 4.88,
-        "pnl_pct": 33.33,
-        "sector": "半导体封测",
-        "alerts": [
-          "⏰ 超时 D21",
-          "💰 +15%全止盈",
-          "📈 移动止损激活 33.3%"
-        ]
-      },
-      {
         "code": "000981",
         "name": "山子高科",
-        "shares": 4900,
-        "cost": 4.501,
-        "price": 4.3,
-        "change_pct": -2.49,
-        "pnl_pct": -4.47,
+        "shares": 8000,
+        "cost": 4.411,
+        "price": 4.18,
+        "change_pct": 0.0,
+        "pnl_pct": -5.24,
         "sector": "汽车零部件/房地产",
         "alerts": [
-          "⚡ 软止损触发 -4.5%",
-          "🔶 危险区 D3 -4.5%"
-        ]
-      },
-      {
-        "code": "002208",
-        "name": "合肥城建",
-        "shares": 900,
-        "cost": 19.849,
-        "price": 22.84,
-        "change_pct": 10.02,
-        "pnl_pct": 15.07,
-        "sector": "房地产",
-        "alerts": [
-          "💰 +15%全止盈",
-          "📈 移动止损激活 15.1%"
-        ]
-      },
-      {
-        "code": "300792",
-        "name": "壹网壹创",
-        "shares": 100,
-        "cost": 36.81,
-        "price": 35.74,
-        "change_pct": 1.3,
-        "pnl_pct": -2.91,
-        "sector": "电商服务/数字营销",
-        "alerts": [
-          "🔶 危险区 D5 -2.9%"
+          "⚠ 接近硬止损 -5.2%",
+          "🔶 危险区 D4 -5.2%"
         ]
       },
       {
@@ -161,115 +119,177 @@
         "name": "宁波建工",
         "shares": 5200,
         "cost": 6.206,
-        "price": 6.12,
-        "change_pct": 1.16,
-        "pnl_pct": -1.39,
+        "price": 6.24,
+        "change_pct": -0.32,
+        "pnl_pct": 0.55,
         "sector": "建筑工程/基建",
         "alerts": [
-          "⏰ 超时 D13"
+          "⏰ 超时 D14"
         ]
       },
       {
-        "code": "002050",
-        "name": "三花智控",
-        "shares": 100,
-        "cost": 28.49,
-        "price": 52.7,
-        "change_pct": 1.23,
-        "pnl_pct": 84.98,
-        "sector": "热管理/制冷控制",
+        "code": "002156",
+        "name": "通富微电",
+        "shares": 1000,
+        "cost": 44.85,
+        "price": 56.24,
+        "change_pct": -3.15,
+        "pnl_pct": 25.4,
+        "sector": "半导体封测",
+        "alerts": [
+          "⏰ 超时 D22",
+          "💰 +15%全止盈",
+          "📈 移动止损激活 25.4%"
+        ]
+      },
+      {
+        "code": "002208",
+        "name": "合肥城建",
+        "shares": 900,
+        "cost": 19.849,
+        "price": 24.33,
+        "change_pct": 6.52,
+        "pnl_pct": 22.58,
+        "sector": "房地产",
         "alerts": [
           "💰 +15%全止盈",
-          "📈 移动止损激活 85.0%"
+          "📈 移动止损激活 22.6%"
         ]
+      },
+      {
+        "code": "300792",
+        "name": "壹网壹创",
+        "shares": 400,
+        "cost": 35.52,
+        "price": 38.54,
+        "change_pct": 4.08,
+        "pnl_pct": 8.5,
+        "sector": "电商服务/数字营销",
+        "alerts": [
+          "💰 +8%止盈一半",
+          "📈 移动止损激活 8.5%"
+        ]
+      },
+      {
+        "code": "300339",
+        "name": "润和软件",
+        "shares": 300,
+        "cost": 44.91,
+        "price": 45.93,
+        "change_pct": 2.73,
+        "pnl_pct": 2.27,
+        "sector": "金融科技/鸿蒙",
+        "alerts": []
+      },
+      {
+        "code": "300136",
+        "name": "信维通信",
+        "shares": 300,
+        "cost": 115.22,
+        "price": 112.49,
+        "change_pct": 0.66,
+        "pnl_pct": -2.37,
+        "sector": "消费电子/射频",
+        "alerts": []
       }
     ],
-    "total": 177974.0
+    "total": 206967.0
   },
   "today_focus": {
     "top_news": [],
     "signals": [
       {
-        "code": "002050",
+        "code": "601789",
         "name": "",
-        "price": 52.06,
+        "price": 6.26,
         "change_pct": 0.0,
         "ma_alignment": "多头排列",
-        "rsi": 65.18,
-        "macd_signal": "金叉",
-        "volume_status": "放量",
-        "score": 100
-      },
-      {
-        "code": "002156",
-        "name": "",
-        "price": 57.02,
-        "change_pct": 0.0,
-        "ma_alignment": "多头排列",
-        "rsi": 60.33,
+        "rsi": 57.7,
         "macd_signal": "金叉",
         "volume_status": "正常",
         "score": 92
       },
       {
-        "code": "002208",
+        "code": "002156",
         "name": "",
-        "price": 20.76,
+        "price": 58.07,
         "change_pct": 0.0,
         "ma_alignment": "多头排列",
-        "rsi": 85.84,
+        "rsi": 62.09,
         "macd_signal": "金叉",
-        "volume_status": "放量",
-        "score": 85
+        "volume_status": "正常",
+        "score": 92
       },
       {
-        "code": "601789",
+        "code": "300136",
         "name": "",
-        "price": 6.05,
+        "price": 111.75,
         "change_pct": 0.0,
         "ma_alignment": "多头排列",
-        "rsi": 53.24,
+        "rsi": 67.06,
         "macd_signal": "金叉",
-        "volume_status": "缩量",
-        "score": 85
+        "volume_status": "正常",
+        "score": 92
       },
       {
-        "code": "000981",
+        "code": "300792",
         "name": "",
-        "price": 4.41,
+        "price": 37.03,
         "change_pct": 0.0,
         "ma_alignment": "交叉震荡",
-        "rsi": 62.47,
+        "rsi": 55.29,
         "macd_signal": "金叉",
         "volume_status": "放量",
         "score": 83
       },
       {
-        "code": "300792",
+        "code": "000981",
         "name": "",
-        "price": 35.28,
+        "price": 4.18,
         "change_pct": 0.0,
         "ma_alignment": "交叉震荡",
-        "rsi": 47.5,
+        "rsi": 52.44,
         "macd_signal": "金叉",
         "volume_status": "正常",
         "score": 75
+      },
+      {
+        "code": "002208",
+        "name": "",
+        "price": 22.84,
+        "change_pct": 0.0,
+        "ma_alignment": "多头排列",
+        "rsi": 88.64,
+        "macd_signal": "金叉",
+        "volume_status": "缩量",
+        "score": 70
+      },
+      {
+        "code": "300339",
+        "name": "",
+        "price": 44.71,
+        "change_pct": 0.0,
+        "ma_alignment": "交叉震荡",
+        "rsi": 51.29,
+        "macd_signal": "死叉",
+        "volume_status": "缩量",
+        "score": 38
       }
     ],
     "risks": []
   },
   "trade_plan": {
-    "for_date": "2026-05-18",
-    "generated_at": "2026-05-17 15:40",
+    "for_date": "2026-05-19",
+    "generated_at": "2026-05-18 15:40",
     "can_open_new": true,
-    "emergency_count": 4,
-    "total_pnl_pct": 2.15,
+    "emergency_count": 2,
+    "total_pnl_pct": 3.57,
     "positions": [
       {
         "code": "000062",
         "name": "深圳华强",
-        "pnl_pct": -13.87,
-        "hold_days": 17,
+        "pnl_pct": -14.08,
+        "hold_days": 18,
         "priority": "紧急",
         "danger_zone": false,
         "trail_active": false,
@@ -278,38 +298,38 @@
       {
         "code": "002156",
         "name": "通富微电",
-        "pnl_pct": 14.57,
-        "hold_days": 20,
+        "pnl_pct": 16.68,
+        "hold_days": 21,
+        "priority": "正常",
+        "danger_zone": false,
+        "trail_active": true,
+        "key_action": "全部止盈，不犹豫"
+      },
+      {
+        "code": "300480",
+        "name": "光力科技",
+        "pnl_pct": 8.54,
+        "hold_days": 18,
         "priority": "正常",
         "danger_zone": false,
         "trail_active": true,
         "key_action": "止盈一半，剩余设移动止损"
       },
       {
-        "code": "300480",
-        "name": "光力科技",
-        "pnl_pct": 7.22,
-        "hold_days": 17,
-        "priority": "正常",
-        "danger_zone": false,
-        "trail_active": true,
-        "key_action": "持有，移动止损线+2%，回撤即清"
-      },
-      {
         "code": "002407",
         "name": "多氟多",
-        "pnl_pct": 0.61,
-        "hold_days": 11,
+        "pnl_pct": 4.25,
+        "hold_days": 12,
         "priority": "正常",
         "danger_zone": false,
         "trail_active": false,
-        "key_action": "超时11天 → 强制清仓"
+        "key_action": "超时12天 → 强制清仓"
       },
       {
         "code": "300342",
         "name": "天银机电",
-        "pnl_pct": -9.98,
-        "hold_days": 9,
+        "pnl_pct": -9.82,
+        "hold_days": 10,
         "priority": "紧急",
         "danger_zone": false,
         "trail_active": false,
@@ -318,22 +338,22 @@
       {
         "code": "300739",
         "name": "明阳电路",
-        "pnl_pct": -4.95,
-        "hold_days": 24,
-        "priority": "紧急",
+        "pnl_pct": -1.11,
+        "hold_days": 25,
+        "priority": "正常",
         "danger_zone": false,
         "trail_active": false,
-        "key_action": "减半仓"
+        "key_action": "超时25天 → 强制清仓"
       },
       {
         "code": "601789",
         "name": "宁波建工",
-        "pnl_pct": -4.87,
-        "hold_days": 12,
-        "priority": "紧急",
+        "pnl_pct": -1.57,
+        "hold_days": 13,
+        "priority": "正常",
         "danger_zone": false,
         "trail_active": false,
-        "key_action": "减半仓"
+        "key_action": "超时13天 → 强制清仓"
       }
     ]
   }

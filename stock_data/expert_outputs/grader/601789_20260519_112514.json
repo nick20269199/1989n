@@ -1,0 +1,19 @@
+{
+  "passed": false,
+  "average_score": 0.52,
+  "scores": {
+    "direction": 0.5,
+    "method": 1.0,
+    "trajectory": 0.8,
+    "margin": 0.6,
+    "logic": 0.7
+  },
+  "failures": [
+    "方向维度仅得0.5分：三位专家结论冲突（expert1_tech：震荡偏多；expert3_sentiment：中性偏谨慎；expert2_money：空），无明确统一方向判断，未提供加权/共识机制或优先级说明，导致最终‘方向’不清晰、不可执行",
+    "平均分0.52 < 0.6阈值，且方向得分未达0.6（仅0.5），不满足pass双条件"
+  ],
+  "merged_direction": "观望",
+  "merged_confidence": 0.55,
+  "summary": "技术面呈中期多头但短期受阻，情绪面缺乏催化且板块滞涨，资金面显派发迹象；三重信号分化，未形成合力，当前宜观望等待方向确认。",
+  "_raw_grader": "```json\n{\n  \"passed\": false,\n  \"average_score\": 0.52,\n  \"scores\": {\n    \"direction\": 0.5,\n    \"method\": 1.0,\n    \"trajectory\": 0.8,\n    \"margin\": 0.6,\n    \"logic\": 0.7\n  },\n  \"failures\": [\n    \"方向维度仅得0.5分：三位专家结论冲突（expert1_tech：震荡偏多；expert3_sentiment：中性偏谨慎；expert2_money：空），无明确统一方向判断，未提供加权/共识机制或优先级说明，导致最终‘方向’不清晰、不可执行\",\n    \"平均分0.52 < 0.6阈值，且方向得分未达0.6（仅0.5），不满足pass双条件\"\n  },\n  \"merged_direction\": \"观望\",\n  \"merged_confidence\": 0.55,\n  \"summary\": \"技术面呈中期多头但短期受阻，情绪面缺乏催化且板块滞涨，资金面显派发迹象；三重信号分化，未形成合力，当前宜观望等待方向确认。\"\n}\n```"
+}

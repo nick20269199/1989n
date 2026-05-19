@@ -1,0 +1,2010 @@
+{
+  "generated_at": "2026-05-19T15:12:40.051060",
+  "metadata": {
+    "total_samples": 3605,
+    "overall_win_rate": 46.9,
+    "total_rules_mined": 191,
+    "min_samples": 30,
+    "min_win_rate_entry": 55,
+    "max_win_rate_exit": 45
+  },
+  "rules": {
+    "entry": {
+      "single_feature": [
+        {
+          "feature": "price_position_20",
+          "condition": "(0.884, 1.0]",
+          "n": 721,
+          "wins": 494,
+          "win_rate": 68.5,
+          "avg_profit_pct": 5.01,
+          "type": "entry",
+          "layer": "single_feature"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "price_position_20",
+          "condition": "price_position_20=high",
+          "n": 225,
+          "wins": 154,
+          "win_rate": 68.4,
+          "market_baseline": 49.4,
+          "avg_profit_pct": 4.24,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "feature_pair": [
+            "price_position_20",
+            "hold_days"
+          ],
+          "condition": "price_position_20=high & hold_days=low",
+          "n": 625,
+          "wins": 424,
+          "win_rate": 67.8,
+          "avg_profit_pct": 4.03,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=high & price_position_20=high",
+          "n": 689,
+          "wins": 451,
+          "win_rate": 65.5,
+          "avg_profit_pct": 3.42,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature": "price_ma5_ratio",
+          "condition": "(1.082, 1.311]",
+          "n": 721,
+          "wins": 464,
+          "win_rate": 64.4,
+          "avg_profit_pct": 4.03,
+          "type": "entry",
+          "layer": "single_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma20_ratio=high & hold_days=low",
+          "n": 637,
+          "wins": 406,
+          "win_rate": 63.7,
+          "avg_profit_pct": 2.98,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma60_ratio=high & hold_days=low",
+          "n": 627,
+          "wins": 398,
+          "win_rate": 63.5,
+          "avg_profit_pct": 2.74,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma20_ratio=high & price_position_20=high",
+          "n": 829,
+          "wins": 523,
+          "win_rate": 63.1,
+          "avg_profit_pct": 3.22,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=mid & price_position_20=high",
+          "n": 476,
+          "wins": 300,
+          "win_rate": 63.0,
+          "avg_profit_pct": 2.98,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=high & price_position_20=high",
+          "n": 830,
+          "wins": 518,
+          "win_rate": 62.4,
+          "avg_profit_pct": 3.2,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=high & price_position_20=high",
+          "n": 625,
+          "wins": 384,
+          "win_rate": 61.4,
+          "avg_profit_pct": 3.58,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=mid & price_position_20=high",
+          "n": 310,
+          "wins": 190,
+          "win_rate": 61.3,
+          "avg_profit_pct": 2.73,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature": "price_ma10_ratio",
+          "condition": "(1.166, 1.586]",
+          "n": 721,
+          "wins": 440,
+          "win_rate": 61.0,
+          "avg_profit_pct": 3.16,
+          "type": "entry",
+          "layer": "single_feature"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "volatility_20",
+          "condition": "volatility_20=mid",
+          "n": 238,
+          "wins": 145,
+          "win_rate": 60.9,
+          "market_baseline": 51.3,
+          "avg_profit_pct": 2.62,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "price_position_20",
+          "condition": "price_position_20=high",
+          "n": 467,
+          "wins": 284,
+          "win_rate": 60.8,
+          "market_baseline": 47.3,
+          "avg_profit_pct": 2.91,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=high",
+          "n": 222,
+          "wins": 133,
+          "win_rate": 59.9,
+          "market_baseline": 49.4,
+          "avg_profit_pct": 1.97,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "hold_days"
+          ],
+          "condition": "rsi_14=high & hold_days=low",
+          "n": 622,
+          "wins": 370,
+          "win_rate": 59.5,
+          "avg_profit_pct": 2.38,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_position_20",
+            "hold_days"
+          ],
+          "condition": "price_position_20=high & hold_days=mid",
+          "n": 286,
+          "wins": 169,
+          "win_rate": 59.1,
+          "avg_profit_pct": 2.79,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "rsi_14"
+          ],
+          "condition": "volume_ratio=low & rsi_14=high",
+          "n": 85,
+          "wins": 50,
+          "win_rate": 58.8,
+          "avg_profit_pct": 0.99,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature": "hold_days",
+          "condition": "hold_days in 6-7天",
+          "n": 106,
+          "wins": 62,
+          "win_rate": 58.5,
+          "avg_profit_pct": 0.75,
+          "type": "entry",
+          "layer": "hold_duration"
+        }
+      ],
+      "double_feature": [
+        {
+          "feature_pair": [
+            "price_position_20",
+            "hold_days"
+          ],
+          "condition": "price_position_20=high & hold_days=low",
+          "n": 625,
+          "wins": 424,
+          "win_rate": 67.8,
+          "avg_profit_pct": 4.03,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=high & price_position_20=high",
+          "n": 689,
+          "wins": 451,
+          "win_rate": 65.5,
+          "avg_profit_pct": 3.42,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma20_ratio=high & hold_days=low",
+          "n": 637,
+          "wins": 406,
+          "win_rate": 63.7,
+          "avg_profit_pct": 2.98,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma60_ratio=high & hold_days=low",
+          "n": 627,
+          "wins": 398,
+          "win_rate": 63.5,
+          "avg_profit_pct": 2.74,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma20_ratio=high & price_position_20=high",
+          "n": 829,
+          "wins": 523,
+          "win_rate": 63.1,
+          "avg_profit_pct": 3.22,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=mid & price_position_20=high",
+          "n": 476,
+          "wins": 300,
+          "win_rate": 63.0,
+          "avg_profit_pct": 2.98,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=high & price_position_20=high",
+          "n": 830,
+          "wins": 518,
+          "win_rate": 62.4,
+          "avg_profit_pct": 3.2,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=high & price_position_20=high",
+          "n": 625,
+          "wins": 384,
+          "win_rate": 61.4,
+          "avg_profit_pct": 3.58,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=mid & price_position_20=high",
+          "n": 310,
+          "wins": 190,
+          "win_rate": 61.3,
+          "avg_profit_pct": 2.73,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "hold_days"
+          ],
+          "condition": "rsi_14=high & hold_days=low",
+          "n": 622,
+          "wins": 370,
+          "win_rate": 59.5,
+          "avg_profit_pct": 2.38,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_position_20",
+            "hold_days"
+          ],
+          "condition": "price_position_20=high & hold_days=mid",
+          "n": 286,
+          "wins": 169,
+          "win_rate": 59.1,
+          "avg_profit_pct": 2.79,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "rsi_14"
+          ],
+          "condition": "volume_ratio=low & rsi_14=high",
+          "n": 85,
+          "wins": 50,
+          "win_rate": 58.8,
+          "avg_profit_pct": 0.99,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_ma60_ratio"
+          ],
+          "condition": "price_ma20_ratio=high & price_ma60_ratio=low",
+          "n": 41,
+          "wins": 24,
+          "win_rate": 58.5,
+          "avg_profit_pct": -0.31,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma20_ratio=low & price_position_20=high",
+          "n": 41,
+          "wins": 24,
+          "win_rate": 58.5,
+          "avg_profit_pct": 0.69,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "volume_ratio"
+          ],
+          "condition": "price_ma20_ratio=high & volume_ratio=low",
+          "n": 77,
+          "wins": 45,
+          "win_rate": 58.4,
+          "avg_profit_pct": 1.0,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_ma60_ratio"
+          ],
+          "condition": "rsi_14=high & price_ma60_ratio=high",
+          "n": 771,
+          "wins": 442,
+          "win_rate": 57.3,
+          "avg_profit_pct": 1.66,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma20_ratio=mid & price_position_20=high",
+          "n": 332,
+          "wins": 190,
+          "win_rate": 57.2,
+          "avg_profit_pct": 3.01,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=low & price_position_20=high",
+          "n": 176,
+          "wins": 100,
+          "win_rate": 56.8,
+          "avg_profit_pct": 2.9,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_ma60_ratio"
+          ],
+          "condition": "price_ma20_ratio=high & price_ma60_ratio=high",
+          "n": 921,
+          "wins": 521,
+          "win_rate": 56.6,
+          "avg_profit_pct": 1.36,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "rsi_14"
+          ],
+          "condition": "price_ma20_ratio=high & rsi_14=high",
+          "n": 953,
+          "wins": 538,
+          "win_rate": 56.5,
+          "avg_profit_pct": 1.54,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_ma60_ratio"
+          ],
+          "condition": "volume_ratio=high & price_ma60_ratio=high",
+          "n": 502,
+          "wins": 283,
+          "win_rate": 56.4,
+          "avg_profit_pct": 1.38,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "volume_ratio"
+          ],
+          "condition": "price_ma20_ratio=high & volume_ratio=mid",
+          "n": 416,
+          "wins": 234,
+          "win_rate": 56.2,
+          "avg_profit_pct": 1.32,
+          "type": "entry",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=mid & price_position_20=high",
+          "n": 337,
+          "wins": 186,
+          "win_rate": 55.2,
+          "avg_profit_pct": 2.46,
+          "type": "entry",
+          "layer": "double_feature"
+        }
+      ],
+      "market_stratified": [
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "price_position_20",
+          "condition": "price_position_20=high",
+          "n": 225,
+          "wins": 154,
+          "win_rate": 68.4,
+          "market_baseline": 49.4,
+          "avg_profit_pct": 4.24,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "volatility_20",
+          "condition": "volatility_20=mid",
+          "n": 238,
+          "wins": 145,
+          "win_rate": 60.9,
+          "market_baseline": 51.3,
+          "avg_profit_pct": 2.62,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "price_position_20",
+          "condition": "price_position_20=high",
+          "n": 467,
+          "wins": 284,
+          "win_rate": 60.8,
+          "market_baseline": 47.3,
+          "avg_profit_pct": 2.91,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=high",
+          "n": 222,
+          "wins": 133,
+          "win_rate": 59.9,
+          "market_baseline": 49.4,
+          "avg_profit_pct": 1.97,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "hold_days",
+          "condition": "hold_days=low",
+          "n": 283,
+          "wins": 164,
+          "win_rate": 58.0,
+          "market_baseline": 51.3,
+          "avg_profit_pct": 1.29,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "volatility_20",
+          "condition": "volatility_20=high",
+          "n": 223,
+          "wins": 129,
+          "win_rate": 57.8,
+          "market_baseline": 49.4,
+          "avg_profit_pct": 1.84,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "volume_ratio",
+          "condition": "volume_ratio=high",
+          "n": 235,
+          "wins": 134,
+          "win_rate": 57.0,
+          "market_baseline": 51.3,
+          "avg_profit_pct": 1.62,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "price_position_20",
+          "condition": "price_position_20=high",
+          "n": 235,
+          "wins": 134,
+          "win_rate": 57.0,
+          "market_baseline": 51.3,
+          "avg_profit_pct": 1.98,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=high",
+          "n": 464,
+          "wins": 262,
+          "win_rate": 56.5,
+          "market_baseline": 47.3,
+          "avg_profit_pct": 1.97,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "rsi_14",
+          "condition": "rsi_14=high",
+          "n": 235,
+          "wins": 132,
+          "win_rate": 56.2,
+          "market_baseline": 51.3,
+          "avg_profit_pct": 1.04,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "hold_days",
+          "condition": "hold_days=mid",
+          "n": 216,
+          "wins": 121,
+          "win_rate": 56.0,
+          "market_baseline": 51.3,
+          "avg_profit_pct": 1.7,
+          "type": "entry",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "volume_ratio",
+          "condition": "volume_ratio=mid",
+          "n": 225,
+          "wins": 124,
+          "win_rate": 55.1,
+          "market_baseline": 49.4,
+          "avg_profit_pct": 1.94,
+          "type": "entry",
+          "layer": "market_stratified"
+        }
+      ]
+    },
+    "exit": {
+      "single_feature": [
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=high & price_position_20=low",
+          "n": 104,
+          "wins": 25,
+          "win_rate": 24.0,
+          "avg_profit_pct": -3.73,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_position_20",
+            "hold_days"
+          ],
+          "condition": "price_position_20=mid & hold_days=mid",
+          "n": 325,
+          "wins": 93,
+          "win_rate": 28.6,
+          "avg_profit_pct": -3.52,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "price_position_20",
+          "condition": "price_position_20=mid",
+          "n": 274,
+          "wins": 85,
+          "win_rate": 31.0,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -3.33,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "volume_ratio",
+          "condition": "volume_ratio=high",
+          "n": 271,
+          "wins": 84,
+          "win_rate": 31.0,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -1.72,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=mid & price_position_20=mid",
+          "n": 408,
+          "wins": 127,
+          "win_rate": 31.1,
+          "avg_profit_pct": -2.62,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=high & price_position_20=mid",
+          "n": 473,
+          "wins": 150,
+          "win_rate": 31.7,
+          "avg_profit_pct": -2.94,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "volume_ratio"
+          ],
+          "condition": "price_ma20_ratio=low & volume_ratio=high",
+          "n": 66,
+          "wins": 21,
+          "win_rate": 31.8,
+          "avg_profit_pct": -1.61,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=high & price_position_20=mid",
+          "n": 348,
+          "wins": 111,
+          "win_rate": 31.9,
+          "avg_profit_pct": -3.42,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "volatility_20",
+          "condition": "volatility_20=low",
+          "n": 277,
+          "wins": 89,
+          "win_rate": 32.1,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -1.7,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=low & price_position_20=mid",
+          "n": 300,
+          "wins": 99,
+          "win_rate": 33.0,
+          "avg_profit_pct": -1.88,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_ma60_ratio"
+          ],
+          "condition": "volume_ratio=high & price_ma60_ratio=low",
+          "n": 260,
+          "wins": 87,
+          "win_rate": 33.5,
+          "avg_profit_pct": -0.76,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "rsi_14"
+          ],
+          "condition": "volume_ratio=high & rsi_14=mid",
+          "n": 356,
+          "wins": 120,
+          "win_rate": 33.7,
+          "avg_profit_pct": -1.08,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma20_ratio=high & price_position_20=mid",
+          "n": 347,
+          "wins": 123,
+          "win_rate": 35.4,
+          "avg_profit_pct": -3.63,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma20_ratio=mid & price_position_20=mid",
+          "n": 686,
+          "wins": 244,
+          "win_rate": 35.6,
+          "avg_profit_pct": -1.7,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=high & price_position_20=mid",
+          "n": 413,
+          "wins": 150,
+          "win_rate": 36.3,
+          "avg_profit_pct": -3.44,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "hold_days",
+          "condition": "hold_days=mid",
+          "n": 218,
+          "wins": 80,
+          "win_rate": 36.7,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -3.02,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "hold_days",
+          "condition": "hold_days=high",
+          "n": 205,
+          "wins": 76,
+          "win_rate": 37.1,
+          "market_baseline": 51.3,
+          "avg_profit_pct": -2.38,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "feature": "market_sentiment",
+          "condition": "sentiment=恐慌",
+          "n": 43,
+          "wins": 16,
+          "win_rate": 37.2,
+          "avg_profit_pct": -3.57,
+          "type": "exit",
+          "layer": "sentiment"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=mid & price_position_20=mid",
+          "n": 593,
+          "wins": 221,
+          "win_rate": 37.3,
+          "avg_profit_pct": -1.61,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma60_ratio=high & hold_days=high",
+          "n": 280,
+          "wins": 105,
+          "win_rate": 37.5,
+          "avg_profit_pct": -2.92,
+          "type": "exit",
+          "layer": "double_feature"
+        }
+      ],
+      "double_feature": [
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=high & price_position_20=low",
+          "n": 104,
+          "wins": 25,
+          "win_rate": 24.0,
+          "avg_profit_pct": -3.73,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_position_20",
+            "hold_days"
+          ],
+          "condition": "price_position_20=mid & hold_days=mid",
+          "n": 325,
+          "wins": 93,
+          "win_rate": 28.6,
+          "avg_profit_pct": -3.52,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=mid & price_position_20=mid",
+          "n": 408,
+          "wins": 127,
+          "win_rate": 31.1,
+          "avg_profit_pct": -2.62,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_position_20"
+          ],
+          "condition": "volume_ratio=high & price_position_20=mid",
+          "n": 473,
+          "wins": 150,
+          "win_rate": 31.7,
+          "avg_profit_pct": -2.94,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "volume_ratio"
+          ],
+          "condition": "price_ma20_ratio=low & volume_ratio=high",
+          "n": 66,
+          "wins": 21,
+          "win_rate": 31.8,
+          "avg_profit_pct": -1.61,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=high & price_position_20=mid",
+          "n": 348,
+          "wins": 111,
+          "win_rate": 31.9,
+          "avg_profit_pct": -3.42,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=low & price_position_20=mid",
+          "n": 300,
+          "wins": 99,
+          "win_rate": 33.0,
+          "avg_profit_pct": -1.88,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "price_ma60_ratio"
+          ],
+          "condition": "volume_ratio=high & price_ma60_ratio=low",
+          "n": 260,
+          "wins": 87,
+          "win_rate": 33.5,
+          "avg_profit_pct": -0.76,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "volume_ratio",
+            "rsi_14"
+          ],
+          "condition": "volume_ratio=high & rsi_14=mid",
+          "n": 356,
+          "wins": 120,
+          "win_rate": 33.7,
+          "avg_profit_pct": -1.08,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma20_ratio=high & price_position_20=mid",
+          "n": 347,
+          "wins": 123,
+          "win_rate": 35.4,
+          "avg_profit_pct": -3.63,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma20_ratio=mid & price_position_20=mid",
+          "n": 686,
+          "wins": 244,
+          "win_rate": 35.6,
+          "avg_profit_pct": -1.7,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=high & price_position_20=mid",
+          "n": 413,
+          "wins": 150,
+          "win_rate": 36.3,
+          "avg_profit_pct": -3.44,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=mid & price_position_20=mid",
+          "n": 593,
+          "wins": 221,
+          "win_rate": 37.3,
+          "avg_profit_pct": -1.61,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma60_ratio=high & hold_days=high",
+          "n": 280,
+          "wins": 105,
+          "win_rate": 37.5,
+          "avg_profit_pct": -2.92,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_position_20",
+            "hold_days"
+          ],
+          "condition": "price_position_20=mid & hold_days=low",
+          "n": 559,
+          "wins": 211,
+          "win_rate": 37.7,
+          "avg_profit_pct": -1.7,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma60_ratio=low & hold_days=low",
+          "n": 515,
+          "wins": 194,
+          "win_rate": 37.7,
+          "avg_profit_pct": -0.75,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_ma60_ratio"
+          ],
+          "condition": "price_ma20_ratio=mid & price_ma60_ratio=low",
+          "n": 324,
+          "wins": 122,
+          "win_rate": 37.7,
+          "avg_profit_pct": -0.52,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma20_ratio=high & hold_days=high",
+          "n": 267,
+          "wins": 101,
+          "win_rate": 37.8,
+          "avg_profit_pct": -2.42,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "volume_ratio"
+          ],
+          "condition": "price_ma20_ratio=mid & volume_ratio=high",
+          "n": 429,
+          "wins": 163,
+          "win_rate": 38.0,
+          "avg_profit_pct": -0.34,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=mid & price_position_20=mid",
+          "n": 486,
+          "wins": 187,
+          "win_rate": 38.5,
+          "avg_profit_pct": -0.96,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "rsi_14"
+          ],
+          "condition": "price_ma20_ratio=mid & rsi_14=high",
+          "n": 243,
+          "wins": 94,
+          "win_rate": 38.7,
+          "avg_profit_pct": -0.42,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "hold_days"
+          ],
+          "condition": "price_ma20_ratio=mid & hold_days=low",
+          "n": 561,
+          "wins": 220,
+          "win_rate": 39.2,
+          "avg_profit_pct": -1.08,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma60_ratio",
+            "price_position_20"
+          ],
+          "condition": "price_ma60_ratio=low & price_position_20=low",
+          "n": 726,
+          "wins": 286,
+          "win_rate": 39.4,
+          "avg_profit_pct": -0.77,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "rsi_14"
+          ],
+          "condition": "price_ma20_ratio=mid & rsi_14=low",
+          "n": 205,
+          "wins": 81,
+          "win_rate": 39.5,
+          "avg_profit_pct": -0.98,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_ma60_ratio"
+          ],
+          "condition": "rsi_14=mid & price_ma60_ratio=low",
+          "n": 362,
+          "wins": 145,
+          "win_rate": 40.1,
+          "avg_profit_pct": 0.32,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "hold_days"
+          ],
+          "condition": "rsi_14=high & hold_days=high",
+          "n": 261,
+          "wins": 105,
+          "win_rate": 40.2,
+          "avg_profit_pct": -1.52,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_position_20",
+            "hold_days"
+          ],
+          "condition": "price_position_20=low & hold_days=low",
+          "n": 518,
+          "wins": 209,
+          "win_rate": 40.3,
+          "avg_profit_pct": -0.73,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_position_20"
+          ],
+          "condition": "rsi_14=low & price_position_20=mid",
+          "n": 258,
+          "wins": 104,
+          "win_rate": 40.3,
+          "avg_profit_pct": -1.19,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "rsi_14",
+            "price_ma60_ratio"
+          ],
+          "condition": "rsi_14=low & price_ma60_ratio=low",
+          "n": 750,
+          "wins": 303,
+          "win_rate": 40.4,
+          "avg_profit_pct": -0.81,
+          "type": "exit",
+          "layer": "double_feature"
+        },
+        {
+          "feature_pair": [
+            "price_ma20_ratio",
+            "price_ma60_ratio"
+          ],
+          "condition": "price_ma20_ratio=low & price_ma60_ratio=low",
+          "n": 837,
+          "wins": 339,
+          "win_rate": 40.5,
+          "avg_profit_pct": -0.51,
+          "type": "exit",
+          "layer": "double_feature"
+        }
+      ],
+      "market_stratified": [
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "price_position_20",
+          "condition": "price_position_20=mid",
+          "n": 274,
+          "wins": 85,
+          "win_rate": 31.0,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -3.33,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "volume_ratio",
+          "condition": "volume_ratio=high",
+          "n": 271,
+          "wins": 84,
+          "win_rate": 31.0,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -1.72,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "volatility_20",
+          "condition": "volatility_20=low",
+          "n": 277,
+          "wins": 89,
+          "win_rate": 32.1,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -1.7,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "hold_days",
+          "condition": "hold_days=mid",
+          "n": 218,
+          "wins": 80,
+          "win_rate": 36.7,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -3.02,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "hold_days",
+          "condition": "hold_days=high",
+          "n": 205,
+          "wins": 76,
+          "win_rate": 37.1,
+          "market_baseline": 51.3,
+          "avg_profit_pct": -2.38,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "volume_ratio",
+          "condition": "volume_ratio=low",
+          "n": 278,
+          "wins": 105,
+          "win_rate": 37.8,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -1.12,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "price_position_20",
+          "condition": "price_position_20=low",
+          "n": 227,
+          "wins": 86,
+          "win_rate": 37.9,
+          "market_baseline": 49.4,
+          "avg_profit_pct": -0.17,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "price_position_20",
+          "condition": "price_position_20=mid",
+          "n": 467,
+          "wins": 179,
+          "win_rate": 38.3,
+          "market_baseline": 47.3,
+          "avg_profit_pct": -1.15,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "rsi_14",
+          "condition": "rsi_14=low",
+          "n": 276,
+          "wins": 106,
+          "win_rate": 38.4,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -0.87,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "rsi_14",
+          "condition": "rsi_14=high",
+          "n": 270,
+          "wins": 105,
+          "win_rate": 38.9,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -1.08,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=low",
+          "n": 276,
+          "wins": 108,
+          "win_rate": 39.1,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -0.88,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=mid",
+          "n": 274,
+          "wins": 107,
+          "win_rate": 39.1,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -1.97,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "volatility_20",
+          "condition": "volatility_20=low",
+          "n": 230,
+          "wins": 92,
+          "win_rate": 40.0,
+          "market_baseline": 49.4,
+          "avg_profit_pct": -0.02,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "rsi_14",
+          "condition": "rsi_14=low",
+          "n": 468,
+          "wins": 188,
+          "win_rate": 40.2,
+          "market_baseline": 47.3,
+          "avg_profit_pct": -0.14,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "hold_days",
+          "condition": "hold_days=low",
+          "n": 436,
+          "wins": 176,
+          "win_rate": 40.4,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -0.41,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=low",
+          "n": 226,
+          "wins": 92,
+          "win_rate": 40.7,
+          "market_baseline": 49.4,
+          "avg_profit_pct": 0.86,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=low",
+          "n": 471,
+          "wins": 193,
+          "win_rate": 41.0,
+          "market_baseline": 47.3,
+          "avg_profit_pct": -0.23,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏多",
+          "feature": "price_position_20",
+          "condition": "price_position_20=mid",
+          "n": 224,
+          "wins": 94,
+          "win_rate": 42.0,
+          "market_baseline": 49.4,
+          "avg_profit_pct": -0.98,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "price_position_20",
+          "condition": "price_position_20=low",
+          "n": 277,
+          "wins": 118,
+          "win_rate": 42.6,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -0.38,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "price_position_20",
+          "condition": "price_position_20=low",
+          "n": 468,
+          "wins": 200,
+          "win_rate": 42.7,
+          "market_baseline": 47.3,
+          "avg_profit_pct": -0.36,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "volatility_20",
+          "condition": "volatility_20=low",
+          "n": 469,
+          "wins": 201,
+          "win_rate": 42.9,
+          "market_baseline": 47.3,
+          "avg_profit_pct": -0.13,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "volatility_20",
+          "condition": "volatility_20=mid",
+          "n": 275,
+          "wins": 120,
+          "win_rate": 43.6,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -0.61,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=high",
+          "n": 273,
+          "wins": 119,
+          "win_rate": 43.6,
+          "market_baseline": 40.6,
+          "avg_profit_pct": 0.44,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=短期偏空",
+          "feature": "volume_ratio",
+          "condition": "volume_ratio=mid",
+          "n": 233,
+          "wins": 102,
+          "win_rate": 43.8,
+          "market_baseline": 51.3,
+          "avg_profit_pct": -0.66,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=空头排列",
+          "feature": "rsi_14",
+          "condition": "rsi_14=mid",
+          "n": 277,
+          "wins": 123,
+          "win_rate": 44.4,
+          "market_baseline": 40.6,
+          "avg_profit_pct": -0.47,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "price_ma20_ratio",
+          "condition": "price_ma20_ratio=mid",
+          "n": 467,
+          "wins": 208,
+          "win_rate": 44.5,
+          "market_baseline": 47.3,
+          "avg_profit_pct": -0.33,
+          "type": "exit",
+          "layer": "market_stratified"
+        },
+        {
+          "market_filter": "market_trend=多头排列",
+          "feature": "volume_ratio",
+          "condition": "volume_ratio=low",
+          "n": 468,
+          "wins": 210,
+          "win_rate": 44.9,
+          "market_baseline": 47.3,
+          "avg_profit_pct": 0.22,
+          "type": "exit",
+          "layer": "market_stratified"
+        }
+      ],
+      "hold_duration": [
+        {
+          "feature": "hold_days",
+          "condition": "hold_days in 3天",
+          "n": 539,
+          "wins": 210,
+          "win_rate": 39.0,
+          "avg_profit_pct": -1.09,
+          "type": "exit",
+          "layer": "hold_duration"
+        },
+        {
+          "feature": "hold_days",
+          "condition": "hold_days in 1天",
+          "n": 417,
+          "wins": 178,
+          "win_rate": 42.7,
+          "avg_profit_pct": -0.6,
+          "type": "exit",
+          "layer": "hold_duration"
+        }
+      ],
+      "sentiment": [
+        {
+          "feature": "market_sentiment",
+          "condition": "sentiment=偏弱",
+          "n": 1200,
+          "wins": 538,
+          "win_rate": 44.8,
+          "avg_profit_pct": -0.56,
+          "type": "exit",
+          "layer": "sentiment"
+        },
+        {
+          "feature": "market_sentiment",
+          "condition": "sentiment=偏强",
+          "n": 1866,
+          "wins": 920,
+          "win_rate": 49.3,
+          "avg_profit_pct": 1.07,
+          "type": "neutral",
+          "layer": "sentiment"
+        },
+        {
+          "feature": "market_sentiment",
+          "condition": "sentiment=弱势",
+          "n": 361,
+          "wins": 149,
+          "win_rate": 41.3,
+          "avg_profit_pct": -1.1,
+          "type": "exit",
+          "layer": "sentiment"
+        },
+        {
+          "feature": "market_sentiment",
+          "condition": "sentiment=强势",
+          "n": 135,
+          "wins": 69,
+          "win_rate": 51.1,
+          "avg_profit_pct": 1.14,
+          "type": "neutral",
+          "layer": "sentiment"
+        },
+        {
+          "feature": "market_sentiment",
+          "condition": "sentiment=恐慌",
+          "n": 43,
+          "wins": 16,
+          "win_rate": 37.2,
+          "avg_profit_pct": -3.57,
+          "type": "exit",
+          "layer": "sentiment"
+        }
+      ]
+    }
+  },
+  "top_10_entry_rules": [
+    {
+      "feature": "price_position_20",
+      "condition": "(0.884, 1.0]",
+      "n": 721,
+      "wins": 494,
+      "win_rate": 68.5,
+      "avg_profit_pct": 5.01,
+      "type": "entry",
+      "layer": "single_feature"
+    },
+    {
+      "market_filter": "market_trend=短期偏多",
+      "feature": "price_position_20",
+      "condition": "price_position_20=high",
+      "n": 225,
+      "wins": 154,
+      "win_rate": 68.4,
+      "market_baseline": 49.4,
+      "avg_profit_pct": 4.24,
+      "type": "entry",
+      "layer": "market_stratified"
+    },
+    {
+      "feature_pair": [
+        "price_position_20",
+        "hold_days"
+      ],
+      "condition": "price_position_20=high & hold_days=low",
+      "n": 625,
+      "wins": 424,
+      "win_rate": 67.8,
+      "avg_profit_pct": 4.03,
+      "type": "entry",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "price_ma60_ratio",
+        "price_position_20"
+      ],
+      "condition": "price_ma60_ratio=high & price_position_20=high",
+      "n": 689,
+      "wins": 451,
+      "win_rate": 65.5,
+      "avg_profit_pct": 3.42,
+      "type": "entry",
+      "layer": "double_feature"
+    },
+    {
+      "feature": "price_ma5_ratio",
+      "condition": "(1.082, 1.311]",
+      "n": 721,
+      "wins": 464,
+      "win_rate": 64.4,
+      "avg_profit_pct": 4.03,
+      "type": "entry",
+      "layer": "single_feature"
+    },
+    {
+      "feature_pair": [
+        "price_ma20_ratio",
+        "hold_days"
+      ],
+      "condition": "price_ma20_ratio=high & hold_days=low",
+      "n": 637,
+      "wins": 406,
+      "win_rate": 63.7,
+      "avg_profit_pct": 2.98,
+      "type": "entry",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "price_ma60_ratio",
+        "hold_days"
+      ],
+      "condition": "price_ma60_ratio=high & hold_days=low",
+      "n": 627,
+      "wins": 398,
+      "win_rate": 63.5,
+      "avg_profit_pct": 2.74,
+      "type": "entry",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "price_ma20_ratio",
+        "price_position_20"
+      ],
+      "condition": "price_ma20_ratio=high & price_position_20=high",
+      "n": 829,
+      "wins": 523,
+      "win_rate": 63.1,
+      "avg_profit_pct": 3.22,
+      "type": "entry",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "volume_ratio",
+        "price_position_20"
+      ],
+      "condition": "volume_ratio=mid & price_position_20=high",
+      "n": 476,
+      "wins": 300,
+      "win_rate": 63.0,
+      "avg_profit_pct": 2.98,
+      "type": "entry",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "rsi_14",
+        "price_position_20"
+      ],
+      "condition": "rsi_14=high & price_position_20=high",
+      "n": 830,
+      "wins": 518,
+      "win_rate": 62.4,
+      "avg_profit_pct": 3.2,
+      "type": "entry",
+      "layer": "double_feature"
+    }
+  ],
+  "top_10_exit_rules": [
+    {
+      "feature_pair": [
+        "volume_ratio",
+        "price_position_20"
+      ],
+      "condition": "volume_ratio=high & price_position_20=low",
+      "n": 104,
+      "wins": 25,
+      "win_rate": 24.0,
+      "avg_profit_pct": -3.73,
+      "type": "exit",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "price_position_20",
+        "hold_days"
+      ],
+      "condition": "price_position_20=mid & hold_days=mid",
+      "n": 325,
+      "wins": 93,
+      "win_rate": 28.6,
+      "avg_profit_pct": -3.52,
+      "type": "exit",
+      "layer": "double_feature"
+    },
+    {
+      "market_filter": "market_trend=空头排列",
+      "feature": "price_position_20",
+      "condition": "price_position_20=mid",
+      "n": 274,
+      "wins": 85,
+      "win_rate": 31.0,
+      "market_baseline": 40.6,
+      "avg_profit_pct": -3.33,
+      "type": "exit",
+      "layer": "market_stratified"
+    },
+    {
+      "market_filter": "market_trend=空头排列",
+      "feature": "volume_ratio",
+      "condition": "volume_ratio=high",
+      "n": 271,
+      "wins": 84,
+      "win_rate": 31.0,
+      "market_baseline": 40.6,
+      "avg_profit_pct": -1.72,
+      "type": "exit",
+      "layer": "market_stratified"
+    },
+    {
+      "feature_pair": [
+        "volume_ratio",
+        "price_position_20"
+      ],
+      "condition": "volume_ratio=mid & price_position_20=mid",
+      "n": 408,
+      "wins": 127,
+      "win_rate": 31.1,
+      "avg_profit_pct": -2.62,
+      "type": "exit",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "volume_ratio",
+        "price_position_20"
+      ],
+      "condition": "volume_ratio=high & price_position_20=mid",
+      "n": 473,
+      "wins": 150,
+      "win_rate": 31.7,
+      "avg_profit_pct": -2.94,
+      "type": "exit",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "price_ma20_ratio",
+        "volume_ratio"
+      ],
+      "condition": "price_ma20_ratio=low & volume_ratio=high",
+      "n": 66,
+      "wins": 21,
+      "win_rate": 31.8,
+      "avg_profit_pct": -1.61,
+      "type": "exit",
+      "layer": "double_feature"
+    },
+    {
+      "feature_pair": [
+        "rsi_14",
+        "price_position_20"
+      ],
+      "condition": "rsi_14=high & price_position_20=mid",
+      "n": 348,
+      "wins": 111,
+      "win_rate": 31.9,
+      "avg_profit_pct": -3.42,
+      "type": "exit",
+      "layer": "double_feature"
+    },
+    {
+      "market_filter": "market_trend=空头排列",
+      "feature": "volatility_20",
+      "condition": "volatility_20=low",
+      "n": 277,
+      "wins": 89,
+      "win_rate": 32.1,
+      "market_baseline": 40.6,
+      "avg_profit_pct": -1.7,
+      "type": "exit",
+      "layer": "market_stratified"
+    },
+    {
+      "feature_pair": [
+        "price_ma60_ratio",
+        "price_position_20"
+      ],
+      "condition": "price_ma60_ratio=low & price_position_20=mid",
+      "n": 300,
+      "wins": 99,
+      "win_rate": 33.0,
+      "avg_profit_pct": -1.88,
+      "type": "exit",
+      "layer": "double_feature"
+    }
+  ]
+}

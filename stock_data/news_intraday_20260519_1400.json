@@ -1,0 +1,96 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-19 14:00:02",
+  "market_status": "trading",
+  "count": 16,
+  "data": [
+    {
+      "title": "IMF警告中东冲突削弱英国经济增长前景",
+      "time": "2026-05-19 13:56:11",
+      "category": "{'article_id': 2375187, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156147, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375187"
+    },
+    {
+      "title": "新一轮生猪产能调控目标确定 严查产能逆势扩张行为",
+      "time": "2026-05-19 13:55:51",
+      "category": "{'article_id': 2375181, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56450, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375181, 'subject_id': 1531, 'subject_name': '猪肉', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24638, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 7, 'channel': 'cls'},{'article_id': 2375181, 'subject_id': 11407, 'subject_name': '禽畜期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9122, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375181"
+    },
+    {
+      "title": "助力人工智能发展 我国正前瞻布局一批数据领域前沿标准",
+      "time": "2026-05-19 13:55:20",
+      "url": "https://www.cls.cn/detail/2375186"
+    },
+    {
+      "title": "伊朗证券交易所停市80天后恢复交易",
+      "time": "2026-05-19 13:54:44",
+      "category": "{'article_id': 2375184, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156147, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375184, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47567, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375184"
+    },
+    {
+      "title": "【盘中宝】短期内难以缓解的战略性稀缺资源，AI数据中心的大规模建设极大拉动该产品需求，这家公司相关产品可用于该领域",
+      "time": "2026-05-19 13:54:26",
+      "url": "https://www.cls.cn/detail/2375172"
+    },
+    {
+      "title": "财联社5月19日电，2年期日本国债收益率上涨2.0个基点至1.440%。",
+      "time": "2026-05-19 13:53:58",
+      "category": "{'article_id': 2375183, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156147, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375183"
+    },
+    {
+      "title": "最高人民检察院公布最新侵犯公民人身自由赔偿金标准",
+      "time": "2026-05-19 13:51:48",
+      "url": "https://www.cls.cn/detail/2375180"
+    },
+    {
+      "title": "外交部亚洲司司长刘劲松会见印度新任驻华大使魏嘉盟",
+      "time": "2026-05-19 13:49:45",
+      "url": "https://www.cls.cn/detail/2375179"
+    },
+    {
+      "title": "国债期货午后涨幅扩大 30年期主力合约涨0.45%",
+      "time": "2026-05-19 13:46:18",
+      "url": "https://www.cls.cn/detail/2375177"
+    },
+    {
+      "title": "财联社5月19日电，日本10年期国债收益率上升5个基点至2.79%。",
+      "time": "2026-05-19 13:45:59",
+      "url": "https://www.cls.cn/detail/2375176"
+    },
+    {
+      "title": "CPO概念震荡回升 光迅科技逼近涨停续创历史新高",
+      "time": "2026-05-19 13:45:46",
+      "related_stocks": "300632,002384,688609,603031,003031,002281,000988",
+      "category": "{'article_id': 2375171, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175220, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375171, 'subject_id': 10407, 'subject_name': 'CPO', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9478, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1937, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2375171"
+    },
+    {
+      "title": "【风口研报·公司】卡位全球储能+AIDC+新型电力细分赛道，这家公司下游需求延伸至电力系统、数据中心配电室/电池室/机房等均需配置，有望绑定行业龙头充分享受高增速",
+      "time": "2026-05-19 13:42:58",
+      "url": "https://www.cls.cn/detail/2375041"
+    },
+    {
+      "title": "水利部针对赣鄂湘粤桂黔琼七省区启动洪水防御Ⅳ级应急响应",
+      "time": "2026-05-19 13:42:35",
+      "url": "https://www.cls.cn/detail/2375174"
+    },
+    {
+      "title": "财联社5月19日电，三星电子股转涨，抹去早盘5.3%的跌幅。",
+      "time": "2026-05-19 13:41:50",
+      "category": "{'article_id': 2375173, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156147, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375173"
+    },
+    {
+      "title": "财联社5月19日电，台交所加权股价指数收低1.8%，报40,175.56点。",
+      "time": "2026-05-19 13:35:51",
+      "url": "https://www.cls.cn/detail/2375169"
+    },
+    {
+      "title": "武汉通报“昌盛泡花碱厂环境问题”：成立联合调查组",
+      "time": "2026-05-19 13:30:40",
+      "url": "https://www.cls.cn/detail/2375166"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

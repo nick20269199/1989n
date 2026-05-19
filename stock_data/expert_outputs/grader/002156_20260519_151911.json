@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.72,
+  "scores": {
+    "direction": 1.0,
+    "method": 0.9,
+    "trajectory": 0.85,
+    "margin": 0.75,
+    "logic": 0.8
+  },
+  "failures": [],
+  "merged_direction": "多",
+  "merged_confidence": 0.67,
+  "summary": "三位专家（tech/sentiment/money）一致看多，技术面多头排列+VCP缩量回踩、情绪面封测板块结构性回暖+事件催化、资金面量价背离未破位，方向明确、方法透明、轨迹具体、边际可控、逻辑闭环，具备较高实操参考价值。",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.72,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 0.9,\n    \"trajectory\": 0.85,\n    \"margin\": 0.75,\n    \"logic\": 0.8\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.67,\n  \"summary\": \"三位专家（tech/sentiment/money）一致看多，技术面多头排列+VCP缩量回踩、情绪面封测板块结构性回暖+事件催化、资金面量价背离未破位，方向明确、方法透明、轨迹具体、边际可控、逻辑闭环，具备较高实操参考价值。\"\n}\n```"
+}

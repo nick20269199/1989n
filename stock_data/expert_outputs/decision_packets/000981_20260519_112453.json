@@ -1,0 +1,47 @@
+{
+  "symbol": "000981",
+  "name": "山子高科",
+  "timestamp": "2026-05-19T11:24:53.769199",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.9,
+      "margin": 0.9,
+      "logic": 0.9
+    },
+    "failures": [],
+    "merged_direction": "多",
+    "merged_confidence": 0.6833333333333333,
+    "summary": "三位专家一致看多，方法透明（技术/资金/情绪三维度交叉验证），轨迹清晰含多档关键位与时间框架，边际条件完备（含失效、衰减、黑天鹅），逻辑闭环且均含‘if_wrong’反思；唯一微瑕是专家1轨迹中支撑位描述截断（'4.1...'），但未影响整体完整性。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.9,\n    \"margin\": 0.9,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.6833333333333333,\n  \"summary\": \"三位专家一致看多，方法透明（技术/资金/情绪三维度交叉验证），轨迹清晰含多档关键位与时间框架，边际条件完备（含失效、衰减、黑天鹅），逻辑闭环且均含‘if_wrong’反思；唯一微瑕是专家1轨迹中支撑位描述截断（'4.1...'），但未影响整体完整性。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "多",
+      "confidence": 0.75,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

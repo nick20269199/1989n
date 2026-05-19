@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.84,
+  "scores": {
+    "direction": 1.0,
+    "method": 1.0,
+    "trajectory": 0.93,
+    "margin": 0.93,
+    "logic": 0.88
+  },
+  "failures": [],
+  "merged_direction": "多",
+  "merged_confidence": 0.68,
+  "summary": "三位专家一致看多，技术面（多头排列+量比2.15+突破前高）、资金面（连续涨停+主力净流入）、情绪面（双题材共振+板块领涨+卡位属性）三重验证，轨迹与边际条件清晰可执行，逻辑闭环完整。分析质量优秀，符合价值投资辅助决策标准。",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.93,\n    \"margin\": 0.93,\n    \"logic\": 0.88\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.68,\n  \"summary\": \"三位专家一致看多，技术面（多头排列+量比2.15+突破前高）、资金面（连续涨停+主力净流入）、情绪面（双题材共振+板块领涨+卡位属性）三重验证，轨迹与边际条件清晰可执行，逻辑闭环完整。分析质量优秀，符合价值投资辅助决策标准。\"\n}\n```"
+}

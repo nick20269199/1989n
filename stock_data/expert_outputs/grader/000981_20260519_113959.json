@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "average_score": 0.82,
+  "scores": {
+    "direction": 1.0,
+    "method": 1.0,
+    "trajectory": 1.0,
+    "margin": 0.8,
+    "logic": 0.8
+  },
+  "failures": [],
+  "merged_direction": "多",
+  "merged_confidence": 0.67,
+  "summary": "三位专家虽视角不同（技术/资金/情绪），但均指向短期多头主导，方向一致、方法透明、轨迹清晰、边际可控、逻辑自洽；情绪面支撑最强（置信度0.75），技术与资金面提供验证，综合判断为‘多’，适合短线博弈智能驾驶题材卡位行情。",
+  "_raw_grader": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.82,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 1.0,\n    \"margin\": 0.8,\n    \"logic\": 0.8\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.67,\n  \"summary\": \"三位专家虽视角不同（技术/资金/情绪），但均指向短期多头主导，方向一致、方法透明、轨迹清晰、边际可控、逻辑自洽；情绪面支撑最强（置信度0.75），技术与资金面提供验证，综合判断为‘多’，适合短线博弈智能驾驶题材卡位行情。\"\n}\n```"
+}

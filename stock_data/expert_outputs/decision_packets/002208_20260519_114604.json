@@ -1,0 +1,51 @@
+{
+  "symbol": "002208",
+  "name": "合肥城建",
+  "timestamp": "2026-05-19T11:46:04.944951",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.72,
+    "scores": {
+      "direction": 1.0,
+      "method": 0.93,
+      "trajectory": 0.87,
+      "margin": 0.73,
+      "logic": 0.65
+    },
+    "failures": [
+      "专家1未明确说明R7信号缺失是否影响逻辑完整性，且‘原始分析’中关键价位部分被截断（‘...’），削弱轨迹完整性；",
+      "三位专家均未对‘如果错了’进行反事实归因推演（如：若跌破18.0，是主力诱多？情绪幻觉？还是题材证伪？），逻辑链止于现象级条件判断，未达强因果（A↔B双向可证）；",
+      "边际中的置信度衰减参数（如0.4/0.2）缺乏校准依据（未说明历史回测或概率支撑），属经验赋值，削弱边际维度严谨性"
+    ],
+    "merged_direction": "多",
+    "merged_confidence": 0.63,
+    "summary": "三位专家一致看多，方法互补（技术+资金+情绪），轨迹清晰、边际可控，逻辑具备基本因果闭环，符合价值投机框架下的短期高胜率交易建议。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.72,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 0.93,\n    \"trajectory\": 0.87,\n    \"margin\": 0.73,\n    \"logic\": 0.65\n  },\n  \"failures\": [\n    \"专家1未明确说明R7信号缺失是否影响逻辑完整性，且‘原始分析’中关键价位部分被截断（‘...’），削弱轨迹完整性；\",\n    \"三位专家均未对‘如果错了’进行反事实归因推演（如：若跌破18.0，是主力诱多？情绪幻觉？还是题材证伪？），逻辑链止于现象级条件判断，未达强因果（A↔B双向可证）；\",\n    \"边际中的置信度衰减参数（如0.4/0.2）缺乏校准依据（未说明历史回测或概率支撑），属经验赋值，削弱边际维度严谨性\"\n  },\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.63,\n  \"summary\": \"三位专家一致看多，方法互补（技术+资金+情绪），轨迹清晰、边际可控，逻辑具备基本因果闭环，符合价值投机框架下的短期高胜率交易建议。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "多",
+      "confidence": 0.6,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

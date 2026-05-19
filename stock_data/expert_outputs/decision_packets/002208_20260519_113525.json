@@ -1,0 +1,47 @@
+{
+  "symbol": "002208",
+  "name": "合肥城建",
+  "timestamp": "2026-05-19T11:35:25.788060",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.84,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.93,
+      "margin": 0.87,
+      "logic": 0.85
+    },
+    "failures": [],
+    "merged_direction": "多",
+    "merged_confidence": 0.6833333333333333,
+    "summary": "三位专家一致看多，方法透明、轨迹清晰、边际完备、逻辑闭环，具备可执行性；虽入场区间存在微小分歧（18.0–19.6），但关键支撑/阻力与目标位高度协同，综合置信度稳健。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.84,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.93,\n    \"margin\": 0.87,\n    \"logic\": 0.85\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.6833333333333333,\n  \"summary\": \"三位专家一致看多，方法透明、轨迹清晰、边际完备、逻辑闭环，具备可执行性；虽入场区间存在微小分歧（18.0–19.6），但关键支撑/阻力与目标位高度协同，综合置信度稳健。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "多",
+      "confidence": 0.75,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

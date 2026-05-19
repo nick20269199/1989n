@@ -1,0 +1,136 @@
+{
+  "type": "财经快讯-intraday",
+  "time": "2026-05-19 13:00:02",
+  "market_status": "trading",
+  "count": 22,
+  "data": [
+    {
+      "title": "海军辽宁舰航母编队赴西太平洋开展演训活动",
+      "time": "2026-05-19 12:58:17",
+      "url": "https://www.cls.cn/detail/2375128"
+    },
+    {
+      "title": "“微笑”卫星今天发射 为空间天气预报提供科学支撑",
+      "time": "2026-05-19 12:53:51",
+      "url": "https://www.cls.cn/detail/2375123"
+    },
+    {
+      "title": "汇丰：即使美伊达成和平协议 更多央行仍可能加息",
+      "time": "2026-05-19 12:49:04",
+      "category": "{'article_id': 2375122, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156143, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375122"
+    },
+    {
+      "title": "财联社5月19日电，印尼股票基准指数下跌3%。",
+      "time": "2026-05-19 12:46:43",
+      "category": "{'article_id': 2375120, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156143, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375120"
+    },
+    {
+      "title": "普京说期待在北京相见",
+      "time": "2026-05-19 12:40:25",
+      "url": "https://www.cls.cn/detail/2375115"
+    },
+    {
+      "title": "【机构调研】一季度收入创历史新高，这家半导体硅片制造商12英寸硅片进入放量期",
+      "time": "2026-05-19 12:36:51",
+      "url": "https://www.cls.cn/detail/2375110"
+    },
+    {
+      "title": "报道称美对古巴“动武”可能性在增加",
+      "time": "2026-05-19 12:34:24",
+      "category": "{'article_id': 2375111, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156143, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375111"
+    },
+    {
+      "title": "财联社5月19日电，汇丰将美光科技目标价从750美元上调至1100美元。",
+      "time": "2026-05-19 12:32:30",
+      "category": "{'article_id': 2375109, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156143, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375109, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60311, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375109"
+    },
+    {
+      "title": "报道称中东多国领导人希望美国暂缓打击伊朗",
+      "time": "2026-05-19 12:31:05",
+      "category": "{'article_id': 2375108, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56450, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375108, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47567, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375108, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18486, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2375108"
+    },
+    {
+      "title": "农业农村部：到2027年底 力争农垦水肥一体化技术应用面积达到3000万亩左右",
+      "time": "2026-05-19 12:29:33",
+      "category": "{'article_id': 2375107, 'subject_id': 1367, 'subject_name': '农垦', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8019, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375107"
+    },
+    {
+      "title": "机构：QD-OLED面板供应助力 Q1全球OLED显示器出货年增78%",
+      "time": "2026-05-19 12:28:44",
+      "category": "{'article_id': 2375106, 'subject_id': 2483, 'subject_name': '面板', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10911, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 502, 'channel': 'cls,stib'},{'article_id': 2375106, 'subject_id': 1272, 'subject_name': 'OLED', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12743, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 191, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375106"
+    },
+    {
+      "title": "杭州1宗宅地溢价15.69%成交",
+      "time": "2026-05-19 12:26:19",
+      "category": "{'article_id': 2375103, 'subject_id': 10697, 'subject_name': '土地', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 9873, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375103"
+    },
+    {
+      "title": "财联社5月19日电，泰国商业团体维持2026年GDP增长预测不变，区间为1.2%至1.6%；预测2026年泰国出口将下降0.5%至1.5%；预测2026年泰国通胀率将处于2.0%至3.0%区间。",
+      "time": "2026-05-19 12:24:56",
+      "category": "{'article_id': 2375102, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56450, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375102, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156143, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375102"
+    },
+    {
+      "title": "俄总统新闻秘书：俄中元首每次会晤都给双边关系注入动力",
+      "time": "2026-05-19 12:21:30",
+      "category": "{'article_id': 2375098, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156143, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375098"
+    },
+    {
+      "title": "古巴国家主席：美国对古巴人民实施的集体惩罚是种族灭绝行为",
+      "time": "2026-05-19 12:19:44",
+      "category": "{'article_id': 2375094, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156143, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375094"
+    },
+    {
+      "title": "独家|龙湖提前兑付15.54亿元公司债 年内到期境内债券仅余10亿",
+      "time": "2026-05-19 12:13:56",
+      "category": "{'article_id': 2375089, 'subject_id': 1260, 'subject_name': '公司债券动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12268, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375089"
+    },
+    {
+      "title": "以色列海法发生枪击事件 一名男子受伤",
+      "time": "2026-05-19 12:12:59",
+      "category": "{'article_id': 2375090, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47567, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375090"
+    },
+    {
+      "title": "【研选•行业数据】工控行业已经历三年多下行周期，当前需求复苏超预期，有望开启新一轮上行周期",
+      "time": "2026-05-19 12:12:50",
+      "url": "https://www.cls.cn/detail/2375085"
+    },
+    {
+      "title": "阿根廷卫生团队抵达乌斯怀亚调查汉坦病毒",
+      "time": "2026-05-19 12:12:27",
+      "category": "{'article_id': 2375088, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156143, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375088"
+    },
+    {
+      "title": "田轩：金融赋能创新需要更加\"包容\"的创投市场 更加稳定的宏观政策导向",
+      "time": "2026-05-19 12:09:05",
+      "category": "{'article_id': 2375086, 'subject_id': 1527, 'subject_name': '创投风向标', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 26672, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 181, 'channel': 'cls,stib'},{'article_id': 2375086, 'subject_id': 10361, 'subject_name': '创投', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6946, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 181, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375086"
+    },
+    {
+      "title": "财联社5月19日电，谷歌DeepMind的德米斯·哈萨比斯成为Anthropic的早期投资者。",
+      "time": "2026-05-19 12:08:47",
+      "category": "{'article_id': 2375087, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67824, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375087"
+    },
+    {
+      "title": "恒生指数午盘收涨0.39% 恒生科技指数跌0.11%",
+      "time": "2026-05-19 12:03:49",
+      "category": "{'article_id': 2375083, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27471, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375083"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}

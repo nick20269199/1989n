@@ -1,0 +1,47 @@
+{
+  "symbol": "000981",
+  "name": "山子高科",
+  "timestamp": "2026-05-19T11:34:05.432999",
+  "pipeline_status": "passed",
+  "grader": {
+    "passed": true,
+    "score": 0.72,
+    "scores": {
+      "direction": 1.0,
+      "method": 1.0,
+      "trajectory": 0.9,
+      "margin": 0.8,
+      "logic": 0.9
+    },
+    "failures": [],
+    "merged_direction": "多",
+    "merged_confidence": 0.65,
+    "summary": "三位专家一致看多，技术面（多头排列+放量突破）、情绪面（智能驾驶题材卡位+逆势涨停）、资金面（超大单驱动但需观察分歧）形成三角印证；虽expert2提出‘多转震荡’倾向，但其方向仍属做多前提下的节奏修正，未否定上行趋势，综合判定为明确多头机会，建议在4.15–4.40区间分批介入，目标4.58–4.70，严守4.14–4.30支撑带。",
+    "_raw": "```json\n{\n  \"passed\": true,\n  \"average_score\": 0.72,\n  \"scores\": {\n    \"direction\": 1.0,\n    \"method\": 1.0,\n    \"trajectory\": 0.9,\n    \"margin\": 0.8,\n    \"logic\": 0.9\n  },\n  \"failures\": [],\n  \"merged_direction\": \"多\",\n  \"merged_confidence\": 0.65,\n  \"summary\": \"三位专家一致看多，技术面（多头排列+放量突破）、情绪面（智能驾驶题材卡位+逆势涨停）、资金面（超大单驱动但需观察分歧）形成三角印证；虽expert2提出‘多转震荡’倾向，但其方向仍属做多前提下的节奏修正，未否定上行趋势，综合判定为明确多头机会，建议在4.15–4.40区间分批介入，目标4.58–4.70，严守4.14–4.30支撑带。\"\n}\n```"
+  },
+  "expert_directions": [
+    {
+      "expert": "expert1_tech",
+      "direction": "多",
+      "confidence": 0.65,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert3_sentiment",
+      "direction": "多",
+      "confidence": 0.75,
+      "weight": 1.0
+    },
+    {
+      "expert": "expert2_money",
+      "direction": "多转震荡",
+      "confidence": 0.55,
+      "weight": 1.0
+    }
+  ],
+  "expert_count": 3,
+  "expert_success": 3,
+  "expert_errors": 0,
+  "mode": "full",
+  "actionable": true
+}

@@ -1,0 +1,125 @@
+{
+  "type": "财经快讯-manual",
+  "time": "2026-05-19 12:06:25",
+  "market_status": "closed",
+  "count": 19,
+  "data": [
+    {
+      "title": "财联社5月19日午间新闻精选",
+      "time": "2026-05-19 12:04:45",
+      "url": "https://www.cls.cn/detail/2375084"
+    },
+    {
+      "title": "财联社5月19日电，港股午间收盘，恒生指数涨0.39%，恒生科技指数跌0.11%。",
+      "time": "2026-05-19 12:03:49",
+      "category": "{'article_id': 2375083, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27469, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375083"
+    },
+    {
+      "title": "财联社5月19日电，现货白银日内跌幅扩大至2%，报76.08美元/盎司。",
+      "time": "2026-05-19 12:01:32",
+      "category": "{'article_id': 2375081, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56448, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375081, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28112, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375081"
+    },
+    {
+      "title": "IDC：2026年第一季度中国消费平板市场出货量同比下降5.6%",
+      "time": "2026-05-19 12:00:40",
+      "category": "{'article_id': 2375080, 'subject_id': 2222, 'subject_name': '消费电子', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24768, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 397, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375080"
+    },
+    {
+      "title": "融信告知投资人：预计境内债重整方案6月推出 选项包括现金、长债以及资产信托份额等",
+      "time": "2026-05-19 11:59:28",
+      "category": "{'article_id': 2375078, 'subject_id': 1097, 'subject_name': '港股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27469, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2375078"
+    },
+    {
+      "title": "财联社5月19日电，日本40年期国债收益率上升1个基点至4.355%，创纪录高位。",
+      "time": "2026-05-19 11:56:59",
+      "category": "{'article_id': 2375077, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156142, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375077"
+    },
+    {
+      "title": "明阳电气中标数据中心HVDC预制舱大单",
+      "time": "2026-05-19 11:54:24",
+      "related_stocks": "301291",
+      "category": "{'article_id': 2375073, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24529, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2375073, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67821, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'stib,cls'},{'article_id': 2375073, 'subject_id': 10581, 'subject_name': '数据中心', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7747, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 453, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375073"
+    },
+    {
+      "title": "美国夏威夷檀香山一港口发生石油泄漏事故",
+      "time": "2026-05-19 11:50:50",
+      "url": "https://www.cls.cn/detail/2375071"
+    },
+    {
+      "title": "5月19日午间涨停分析",
+      "time": "2026-05-19 11:49:44",
+      "related_stocks": "001259,002552,600578,603779",
+      "category": "{'article_id': 2375068, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175217, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375068"
+    },
+    {
+      "title": "东山精密：已与外部硅光企业开展合作 并布局自研硅光模块产品",
+      "time": "2026-05-19 11:45:53",
+      "related_stocks": "002384",
+      "category": "{'article_id': 2375066, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101433, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2375066, 'subject_id': 1786, 'subject_name': '互动平台精选', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 32295, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'},{'article_id': 2375066, 'subject_id': 2710, 'subject_name': '激光', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 7237, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 479, 'channel': 'cls,stib'},{'article_id': 2375066, 'subject_id': 2381, 'subject_name': '光模块', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11673, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2375066, 'subject_id': 2376, 'subject_name': '光芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6762, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375066"
+    },
+    {
+      "title": "国家药监局批准鼻中隔可吸收钉固定器上市",
+      "time": "2026-05-19 11:38:15",
+      "category": "{'article_id': 2375065, 'subject_id': 1423, 'subject_name': '医疗器械', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22755, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 576, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2375065"
+    },
+    {
+      "title": "【大佬持仓跟踪】机器人+AI服务器，年度交付近70万件人形机器人精密组件，海外出货占8成，这家公司服务器、交换机高速连接线已送样",
+      "time": "2026-05-19 11:32:22",
+      "url": "https://www.cls.cn/detail/2375040"
+    },
+    {
+      "title": "午评：科创50指数探底回升涨超1% 电力板块集体爆发",
+      "time": "2026-05-19 11:31:40",
+      "related_stocks": "000688",
+      "category": "{'article_id': 2375060, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175217, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375060"
+    },
+    {
+      "title": "国内期货主力合约涨跌不一 碳酸锂跌近4%",
+      "time": "2026-05-19 11:31:28",
+      "category": "{'article_id': 2375059, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56448, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375059, 'subject_id': 1741, 'subject_name': '海外大宗商品', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 33217, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375059, 'subject_id': 1690, 'subject_name': '盐湖提锂', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 15877, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 93, 'channel': 'cls'},{'article_id': 2375059, 'subject_id': 1454, 'subject_name': '玻璃', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 14503, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 84, 'channel': 'cls'},{'article_id': 2375059, 'subject_id': 1313, 'subject_name': '锂电池', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37678, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 198, 'channel': 'stib,cls'},{'article_id': 2375059, 'subject_id': 1795, 'subject_name': '建材', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8459, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 315, 'channel': 'cls'},{'article_id': 2375059, 'subject_id': 1523, 'subject_name': '铁矿石', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 15501, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 182, 'channel': 'cls'},{'article_id': 2375059, 'subject_id': 1530, 'subject_name': '家禽', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8905, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 9, 'channel': 'cls'},{'article_id': 2375059, 'subject_id': 1753, 'subject_name': '橡塑', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10082, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 241, 'channel': 'cls'},{'article_id': 2375059, 'subject_id': 11409, 'subject_name': '碳中和期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10149, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375059"
+    },
+    {
+      "title": "【研选•数据】美债重回4.5%后的前景和影响",
+      "time": "2026-05-19 11:27:20",
+      "url": "https://www.cls.cn/detail/2375053"
+    },
+    {
+      "title": "财联社5月19日电，据软通计算机官微19日消息，软通计算机成功中标中国移动2026年至2027年PC服务器产品集中采购项目，中标金额超17.53亿元。",
+      "time": "2026-05-19 11:22:44",
+      "related_stocks": "600941",
+      "category": "{'article_id': 2375051, 'subject_id': 1302, 'subject_name': '国产软件', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 22667, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 200, 'channel': 'cls,stib'},{'article_id': 2375051, 'subject_id': 10599, 'subject_name': '服务器', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6814, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1971, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375051"
+    },
+    {
+      "title": "AI将继续“发力”？知名投行：标普500年内有望涨至9000点",
+      "time": "2026-05-19 11:18:03",
+      "category": "{'article_id': 2375048, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24529, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2375048, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67821, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'stib,cls'},{'article_id': 2375048, 'subject_id': 1094, 'subject_name': '券商策略', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 58858, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375048, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60311, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375048"
+    },
+    {
+      "title": "中钨在线：后市关注供需边际实质性调整及大型钨企下半月报价",
+      "time": "2026-05-19 11:05:22",
+      "category": "{'article_id': 2375042, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56448, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375042, 'subject_id': 1101, 'subject_name': '能源行业新闻', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18486, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2375042, 'subject_id': 1549, 'subject_name': '有色·钨', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12867, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 119, 'channel': 'cls'},{'article_id': 2375042, 'subject_id': 11408, 'subject_name': '航运期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8403, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375042"
+    },
+    {
+      "title": "电网设备板块异动拉升 可立克5天3板",
+      "time": "2026-05-19 11:03:11",
+      "related_stocks": "002782,301179,301291,603333,002350,002927,301120",
+      "category": "{'article_id': 2375037, 'subject_id': 1103, 'subject_name': '盘面直播', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 175217, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375037, 'subject_id': 1857, 'subject_name': '智能电网', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 15771, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 327, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375037"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}
