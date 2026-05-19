@@ -200,6 +200,7 @@ def _try_parse_json(text: str) -> dict | None:
     - Brace/bracket mismatch
     """
     import json
+    import re
 
     # Attempt 1: direct parse
     try:
@@ -207,14 +208,14 @@ def _try_parse_json(text: str) -> dict | None:
     except json.JSONDecodeError:
         pass
 
-    # Attempt 2: strict=False (handles trailing commas)
+    # Attempt 2: remove trailing commas before } or ] (common LLM mistake)
     try:
-        return json.loads(text, strict=False)
+        cleaned = re.sub(r',\s*([}\]])', r'\1', text)
+        return json.loads(cleaned)
     except json.JSONDecodeError:
         pass
 
-    # Attempt 3: fix bracket/brace mismatch
-    # Common pattern: Qwen closes [...] with } instead of ]
+    # Attempt 3: fix bracket/brace mismatch — [...] } → [...] ]
     # Walk from right, replace } with ] and retry
     for i in range(len(text) - 1, -1, -1):
         if text[i] == '}':

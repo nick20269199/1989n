@@ -20,6 +20,10 @@ stock_data/vv_transcripts/
 # 数据库（太大，只在本地用）
 stock_data/stock.db
 
+# 自动生成的数据产物（非源码）
+stock_data/expert_outputs/
+stock_data/cognitive_output/
+
 # 缓存文件（每日重新生成）
 stock_data/index_cache.json
 stock_data/index_cache_full.json

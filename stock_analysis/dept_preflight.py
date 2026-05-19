@@ -33,13 +33,26 @@ logger = logging.getLogger("preflight")
 
 
 # ── 依赖定义 ───────────────────────────────────────────────────────────
+# 以下从 stock_data/status/dependencies.json 加载
 # 每个部门依赖的另一个部门（谁的状态需要检查）
 # engineering 不依赖 front-office（独立运行）
 # front-office 依赖 engineering（规则库验证）
-DEPENDENCY_MAP = {
-    "front-office": ["engineering"],
-    "engineering": [],
-}
+_DEP_MAP_PATH = STOCK_DATA / "status" / "dependencies.json"
+
+def _load_dependency_map() -> dict:
+    """从 JSON 文件加载依赖映射。文件不存在时返回空字典。"""
+    if not _DEP_MAP_PATH.exists():
+        logger.warning("依赖映射文件不存在: %s", _DEP_MAP_PATH)
+        return {}
+    try:
+        return json.loads(_DEP_MAP_PATH.read_text(encoding="utf-8"))
+    except Exception as e:
+        logger.warning("加载依赖映射失败: %s", e)
+        return {}
+
+def _get_deps(dept: str) -> list[str]:
+    """获取某部门的依赖列表。"""
+    return _load_dependency_map().get(dept, [])
 
 # 关键数据文件及其最大新鲜度（小时）
 CRITICAL_DATA = {
@@ -129,7 +142,8 @@ def check_dependency_cycle() -> dict:
     """检测依赖图是否有循环（A等B, B等A）。"""
     result = {"check": "dependency_cycle", "severity": "ok", "detail": "无循环依赖"}
 
-    all_depts = list(DEPENDENCY_MAP.keys())
+    dep_map = _load_dependency_map()
+    all_depts = list(dep_map.keys())
     for dept in all_depts:
         visited = set()
         queue = [dept]
@@ -140,7 +154,7 @@ def check_dependency_cycle() -> dict:
                 result["detail"] = f"检测到循环依赖: {dept} → ... → {current}"
                 return result
             visited.add(current)
-            for dep in DEPENDENCY_MAP.get(current, []):
+            for dep in dep_map.get(current, []):
                 if dep in all_depts:
                     queue.append(dep)
 
@@ -160,7 +174,7 @@ def run_preflight(dept: str) -> dict:
         return _build_report(dept, checks)
 
     # 2) 被依赖部门状态检查
-    for dep in DEPENDENCY_MAP.get(dept, []):
+    for dep in _get_deps(dept):
         checks.append(check_other_dept_status(dep))
 
     # 3) 数据文件新鲜度

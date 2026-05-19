@@ -93,17 +93,20 @@ def check_windows_tasks():
 def _get_cron_threshold(cron_expr: str) -> float:
     """根据cron表达式返回合适的过期阈值（小时）。
 
-    工作日任务 (1-5) 周末有 ~64h 空档，用 75h 阈值避免周一误报。
+    工作日任务 (1-5): 周末 ~64h 空档 → 75h
+    周任务 (单DOW如"6"): 最大间隔168h → 172h
+    多DOW如"0,6","1,3,5": 保守取168h安全
+    *: 日多次 → 48h
     """
     parts = cron_expr.split()
     if len(parts) >= 5:
         dow = parts[4].strip()
-        # 纯周末：周日(0)和周六(6)，若今天周一且上次周五行，也有类似空档
         if dow in ("1-5", "1,2,3,4,5"):
             return 75
-        # * 以外的其它模式也放宽
-        if dow != "*":
-            return 60
+        if dow == "*":
+            return 48
+        # 单天（如"6"=周六）或 多天列表 — 周任务，~168h间隔
+        return 172
     return 48
 
 
@@ -122,6 +125,7 @@ def check_claude_cron():
             break
     if not cron_file:
         return [f"Claude Code cron 持久化文件不存在，检查过: {cron_candidates}"]
+    print(f"[OK] Claude cron 文件: {cron_file}")
 
     try:
         with open(cron_file, "r", encoding="utf-8") as f:

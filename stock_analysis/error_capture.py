@@ -32,7 +32,7 @@ ERROR_FILE = Path("D:/1989n/stock_data/last_error.txt")
 
 
 def _save_error(exc_type, exc_value, exc_tb) -> None:
-    """Save the full traceback to last_error.txt."""
+    """Save the full traceback to last_error.txt, then fire the KB hook."""
     tb_lines = traceback.format_exception(exc_type, exc_value, exc_tb)
     tb_text = "".join(tb_lines)
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -54,6 +54,13 @@ def _save_error(exc_type, exc_value, exc_tb) -> None:
         record_error(f"{script}: {error_msg}")
     except Exception:
         pass
+
+    # 错误→知识钩子：计算签名→匹配索引→写匹配报告
+    try:
+        from error_kb_hook import run_hook
+        run_hook(exc_type, exc_value, script)
+    except Exception:
+        pass  # hook 失败不影响主流程
 
 
 def trap() -> None:

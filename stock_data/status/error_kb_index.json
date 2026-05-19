@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "patterns": [
+    {
+      "id": "eastmoney_blocked",
+      "description": "东方财富 WAF 封锁，数据通道自动回退",
+      "match": {
+        "any_script": true,
+        "error_text_contains": ["EASTMONEY_BLOCKED", "RemoteDisconnected"],
+        "error_type_contains": ["ConnectionError", "OSError"]
+      },
+      "knowledge": [
+        {"path": "knowledge/tools/stock-data-sources.md", "section": "东方财富"},
+        {"path": "project/multi-source-data-architecture.md", "section": "通道状态"}
+      ],
+      "diagnosis": "东方财富WAF封锁中，系统已自动回退到腾讯/搜狐通道",
+      "action": "检查 stock_data/channel_health_latest.json 确认回退通道正常"
+    },
+    {
+      "id": "task_missing",
+      "description": "Windows 计划任务或 Claude cron 丢失",
+      "match": {
+        "script_contains": ["task_sentinel"],
+        "error_text_contains": ["missing", "丢失", "未注册", "not found"]
+      },
+      "knowledge": [
+        {"path": "feedback/feedback_scheduled_task_reliability.md"},
+        {"path": "feedback/feedback_task_registration_no_delete.md"},
+        {"path": "feedback/feedback_cron_durable.md"},
+        {"path": "project/bug-registry.md", "section": "OPEN#1"}
+      ],
+      "diagnosis": "定时任务缺失——可能是 7 天 cron 过期、先删后建、或 WorkingDirectory 丢失",
+      "action": "运行 register_tasks.ps1 重建；检查是否犯了先删后建错误"
+    },
+    {
+      "id": "portfolio_sync_fail",
+      "description": "持仓数据同步校验失败",
+      "match": {
+        "script_contains": ["sync_portfolio", "portfolio", "position_manager"],
+        "error_type_contains": ["KeyError", "AssertionError", "ValidationError", "JSONDecodeError"]
+      },
+      "knowledge": [
+        {"path": "feedback/feedback_portfolio_data_sync.md"},
+        {"path": "feedback/feedback_cross_verify_holdings.md"},
+        {"path": "user/portfolio.md"}
+      ],
+      "diagnosis": "持仓数据不一致——调仓后未三路同步",
+      "action": "三路校验: portfolio.json ↔ memory/user/portfolio.md ↔ database"
+    },
+    {
+      "id": "channel_dead",
+      "description": "数据通道连接失败（非东方财富 WAF）",
+      "match": {
+        "script_contains": ["data_source_router", "daily_task", "morning_brief", "stock_quote"],
+        "error_text_contains": ["timeout", "ConnectionError", "通道", "refused", "reset"],
+        "error_type_contains": ["ConnectionError", "Timeout", "OSError"]
+      },
+      "knowledge": [
+        {"path": "project/multi-source-data-architecture.md", "section": "故障转移"},
+        {"path": "knowledge/tools/stock-data-sources.md", "section": "回退策略"}
+      ],
+      "diagnosis": "数据通道故障，自动回退链已触发",
+      "action": "检查 channel_health_latest.json 确认回退状态；检查 sina/tencent/sohu 各通道状态"
+    },
+    {
+      "id": "vv_playwright_crash",
+      "description": "大V雷达 Playwright 浏览器自动化崩溃",
+      "match": {
+        "script_contains": ["vv_"],
+        "error_text_contains": ["Playwright", "Browser.close", "crash", "无响应", "Page.goto"]
+      },
+      "knowledge": [
+        {"path": "vv-radar-analysis-2026-05-12.md"},
+        {"path": "vv-radar-credibility-v2.md"},
+        {"path": "vv-radar-capability-v3.md"}
+      ],
+      "diagnosis": "抖音反爬虫拦截 Playwright 无头浏览器",
+      "action": "检查 cookie 有效性；积压视频自动排入次日重试队列"
+    },
+    {
+      "id": "data_stale",
+      "description": "关键数据文件过期或缺失",
+      "match": {
+        "script_contains": ["data_guard"],
+        "error_text_contains": ["过期", "stale", "missing", "不存在", "empty"]
+      },
+      "knowledge": [
+        {"path": "feedback/feedback_file_timestamp_vs_filename.md"},
+        {"path": "project/data-d-drive-migration.md"},
+        {"path": "project/multi-source-data-architecture.md"}
+      ],
+      "diagnosis": "数据文件新鲜度检查不通过",
+      "action": "检查 mtime 而非文件名日期；确认 stock_data/ 路径正确"
+    },
+    {
+      "id": "cron_expired",
+      "description": "Claude Code durable cron 7 天过期",
+      "match": {
+        "any_script": true,
+        "error_text_contains": ["cron", "scheduled_task", "durable", "过期"],
+        "error_type_contains": ["RuntimeError", "KeyError"]
+      },
+      "knowledge": [
+        {"path": "feedback/feedback_cron_durable.md"},
+        {"path": "project/bug-registry.md", "section": "已知限制#1"}
+      ],
+      "diagnosis": "durable cron 7 天自动过期",
+      "action": "运行每周六自续任务或手动 re-register"
+    }
+  ]
+}

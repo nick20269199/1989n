@@ -24,6 +24,7 @@ from pathlib import Path
 from typing import Optional
 
 import requests
+import akshare as ak
 
 from config import (
     STOCK_DATA_DIR,
@@ -41,7 +42,7 @@ from config import (
 from data_source_router import get_quotes as router_get_quotes
 from data_source_router import get_index_quotes as router_get_index_quotes
 from data_source_router import get_us_index_quotes, check_channels, EASTMONEY_BLOCKED
-from data_quality_gate import check_report_quality
+from data_quality_gate import preflight_scan, freshness_check, require_fresh
 from dept_status_protocol import publish_status
 
 # 启动时检测通道健康状态
@@ -826,9 +827,38 @@ def fetch_hot_stocks_eastmoney() -> list[dict]:
     return results
 
 
+def fetch_hot_stocks_zt_pool() -> list[dict]:
+    """从 akshare 涨停板池获取热门股票（替代已死的10jqka/东方财富）"""
+    today = datetime.now().strftime("%Y%m%d")
+    try:
+        df = ak.stock_zt_pool_em(date=today)
+        if df is None or df.empty:
+            logger.info("涨停板池: 无数据")
+            return []
+    except Exception as e:
+        logger.warning(f"涨停板池接口失败: {e}")
+        return []
+
+    results = []
+    for i, (_, row) in enumerate(df.iterrows()):
+        results.append({
+            "code": str(row.get("代码", "")),
+            "name": str(row.get("名称", "")),
+            "price": float(row.get("最新价", 0)),
+            "change_pct": round(float(row.get("涨跌幅", 0)), 2),
+            "amount": float(row.get("成交额", 0)),
+            "market_cap": float(row.get("总市值", 0)),
+            "turnover_rate": float(row.get("换手率", 0)),
+            "rank": i + 1,
+            "sources": ["涨停板池"],
+        })
+    logger.info(f"涨停板池: {len(results)} 只")
+    return results
+
+
 def collect_hot_stocks() -> list[dict]:
     """汇总多来源热门股票数据，去重并排序"""
-    all_stocks = fetch_hot_stocks_10jqka() + fetch_hot_stocks_eastmoney()
+    all_stocks = fetch_hot_stocks_10jqka() + fetch_hot_stocks_eastmoney() + fetch_hot_stocks_zt_pool()
 
     # 按code去重，合并来源
     merged: dict[str, dict] = {}
@@ -1400,9 +1430,15 @@ def run_closing_review():
         for r in recommendations:
             feishu_content += f"- {r['name']}: {r['action']} ({r['urgency']})\n"
 
-    ok = send_feishu_message(f"收盘复盘 | {date_str}", feishu_content, chat_id="closing")
-    logger.info(f"飞书发送: {'成功' if ok else '失败'}")
-
+    # 发送前保鲜检查
+    preflight = preflight_scan(["portfolio.json", "closing_review.json"])
+    if preflight["healthy"]:
+        ok = send_feishu_message(f"收盘复盘 | {date_str}", feishu_content, chat_id="closing")
+        logger.info(f"飞书发送: {'成功' if ok else '失败'}")
+    else:
+        logger.warning(f"收盘复盘跳过发送: {preflight['summary']}")
+        send_feishu_message(f"⚠ 收盘复盘跳过 | {date_str}",
+                           f"数据保鲜检查未通过:\n{preflight['summary']}", chat_id="alerts")
     logger.info("closing_review 完成")
     return output
 
@@ -1547,12 +1583,16 @@ def run_hot_stocks():
         except Exception as e:
             logger.warning(f"数据库保存失败: {e}")
 
-    # 飞书摘要（仅发送 Top 10）
-    lines = ["**热门股票 Top 10**\n"]
-    for s in stocks[:10]:
-        sign = "+" if s.get("change_pct", 0) >= 0 else ""
-        lines.append(f"- {s.get('rank','')}. {s['name']}({s['code']}) {s.get('price','')} ({sign}{s.get('change_pct',0):.2f}%)")
-    ok = send_feishu_message(f"热门股票 | {datetime.now().strftime('%H:%M')}", "\n".join(lines), chat_id="midday")
+    # 保鲜检查：采集到空数据时不发送
+    if not stocks:
+        logger.warning("hot_stocks 采集结果为空，跳过飞书发送")
+    else:
+        # 飞书摘要（仅发送 Top 10）
+        lines = ["**热门股票 Top 10**\n"]
+        for s in stocks[:10]:
+            sign = "+" if s.get("change_pct", 0) >= 0 else ""
+            lines.append(f"- {s.get('rank','')}. {s['name']}({s['code']}) {s.get('price','')} ({sign}{s.get('change_pct',0):.2f}%)")
+        ok = send_feishu_message(f"热门股票 | {datetime.now().strftime('%H:%M')}", "\n".join(lines), chat_id="midday")
     logger.info(f"飞书发送: {'成功' if ok else '失败'}")
 
     logger.info("hot_stocks 完成")

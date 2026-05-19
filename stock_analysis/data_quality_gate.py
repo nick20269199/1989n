@@ -1,107 +1,162 @@
 """
-data_quality_gate.py — 发送前数据质量校验
+data_quality_gate.py — 发送前数据保鲜校验
 
-所有飞书报告在发送前必须经过此关卡。
-数据质量不达标 → 不发送报告 → 改发简短告警。
+所有输出（飞书/文件）在发送前必须经过 freshness_check。
+过时数据 → 阻止发送 → 改发 STALE 告警。
+
+用法:
+    from data_quality_gate import freshness_check, preflight_scan
+    result = freshness_check("hot_stocks.json", max_hours=6)
+    if not result["pass"]:
+        send_alert(f"数据过期: {result['file']} 已 {result['age_hours']:.0f}h")
 """
+
+import json
 import logging
-from datetime import datetime, date
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 
 logger = logging.getLogger("data_quality_gate")
 
+CST = timezone(timedelta(hours=8))
+STOCK_DATA = Path("D:/1989n/stock_data")
 PROJECT_DIR = Path(__file__).parent
-PORTFOLIO_FILE = PROJECT_DIR / "data" / "portfolio.json"
-CLAUDE_MD = PROJECT_DIR.parent / "CLAUDE.md"
 
-# 阈值配置
-MIN_PRICE_VALID_RATIO = 0.6   # 至少 60% 的持仓有有效行情才发送
-MAX_ALLOWABLE_STALE_DAYS = 3  # portfolio.json 超过3天未更新 → 告警但不阻止
+# ── 文件路径映射（部分文件不在 stock_data/ 下）──
+FILE_PATHS = {
+    "portfolio.json": PROJECT_DIR / "data" / "portfolio.json",
+    "concept_mapping.json": PROJECT_DIR / "data" / "concept_mapping.json",
+}
+
+# ── 各类数据的保鲜阈值 ──
+FRESHNESS_RULES = {
+    "portfolio.json": {"max_hours": 24, "severity": "critical"},
+    "concept_mapping.json": {"max_hours": 48, "severity": "high"},
+    "concept_stocks.json": {"max_hours": 48, "severity": "medium"},
+    "stock_name_lookup.json": {"max_hours": 72, "severity": "low"},
+    "hot_stocks.json": {"max_hours": 6, "severity": "medium"},  # 交易时段6h
+    "morning_brief_latest.md": {"max_hours": 12, "severity": "medium"},
+    "morning_brief_latest.json": {"max_hours": 12, "severity": "medium"},
+    "closing_review.json": {"max_hours": 24, "severity": "medium"},
+    "call_auction_latest.json": {"max_hours": 1, "severity": "low"},  # 集合竞价1h内有效
+}
 
 
-def check_report_quality(
-    report_name: str,
-    holdings_data: list[dict],
-) -> dict:
-    """发送前数据质量校验。
+def freshness_check(filepath: Path, max_hours: Optional[float] = None,
+                    severity: str = "medium") -> dict:
+    """检查单个数据文件的时效性。
 
     Args:
-        report_name: 报告名称（用于日志）
-        holdings_data: 即将发送的持仓数据列表（每项含 code, name, price, pnl_pct 等）
+        filepath: 数据文件路径
+        max_hours: 最大允许时效（覆盖规则表）
+        severity: 过期严重度（默认 medium）
 
     Returns:
-        {"pass": True/False, "should_send": True/False, "reasons": [str]}
-        - pass: 数据质量是否合格
-        - should_send: 是否应该发送（True=发报告, False=发告警替代）
-        - reasons: 质量问题的具体描述
+        {"pass": bool, "file": str, "age_hours": float,
+         "max_hours": float, "severity": str, "warning": str or None}
     """
-    reasons = []
+    rel = filepath.name
+    if max_hours is None:
+        rule = FRESHNESS_RULES.get(rel, {})
+        max_hours = rule.get("max_hours", 24)
+        severity = rule.get("severity", severity)
 
-    # ── 检查 1: portfolio.json 时效性 ──
-    portfolio_stale_days = _check_portfolio_freshness()
-    if portfolio_stale_days is not None and portfolio_stale_days > MAX_ALLOWABLE_STALE_DAYS:
-        reasons.append(
-            f"portfolio.json 已 {portfolio_stale_days} 天未更新"
-        )
-
-    # ── 检查 2: 价格数据完整性 ──
-    total = len(holdings_data)
-    valid = sum(1 for h in holdings_data if h.get("pnl_pct") is not None)
-    invalid = total - valid
-    ratio = valid / total if total > 0 else 0
-
-    if invalid > 0:
-        names = [
-            h.get("name", h.get("code", "?"))
-            for h in holdings_data if h.get("pnl_pct") is None
-        ]
-        reasons.append(f"{invalid}/{total} 只持仓无行情数据: {', '.join(names)}")
-
-    if total > 0 and ratio < MIN_PRICE_VALID_RATIO:
-        # 严重: 大部分数据缺失 → 不发送报告
-        logger.warning(
-            "[%s] 数据质量 FAIL: 有效行情 %.0f%% (%d/%d), 低于阈值 %.0f%%",
-            report_name, ratio * 100, valid, total, MIN_PRICE_VALID_RATIO * 100,
-        )
+    if not filepath.exists():
         return {
-            "pass": False,
-            "should_send": False,
-            "reasons": reasons + [
-                f"有效行情仅 {valid}/{total} 只 ({ratio:.0%}), "
-                f"低于最低要求 {MIN_PRICE_VALID_RATIO:.0%}, 跳过本次报告"
-            ],
+            "pass": False, "file": rel,
+            "age_hours": -1, "max_hours": max_hours,
+            "severity": "critical",
+            "warning": f"{rel} 不存在",
         }
 
-    # ── 检查 3: 数据合理性 — pnl_pct 不应全部为 0.0 ──
-    if total > 0:
-        all_zero_pnl = all(
-            h.get("pnl_pct") == 0 for h in holdings_data if h.get("pnl_pct") is not None
-        )
-        if all_zero_pnl:
-            reasons.append("所有持仓盈亏均为 0.0%, 疑似行情源异常")
+    mtime = datetime.fromtimestamp(filepath.stat().st_mtime, tz=CST)
+    age = datetime.now(CST) - mtime
+    age_hours = age.total_seconds() / 3600
 
-    # ── 结果 ──
-    if reasons:
-        logger.info("[%s] 数据质量 OK (有注意事项): %s", report_name, "; ".join(reasons))
-        return {"pass": True, "should_send": True, "reasons": reasons}
+    if age_hours > max_hours:
+        warning = f"{rel} 已 {age_hours:.1f}h 未更新 (阈值 {max_hours}h)"
+        logger.warning(f"[STALE] {warning}")
+        return {
+            "pass": False, "file": rel,
+            "age_hours": round(age_hours, 1),
+            "max_hours": max_hours,
+            "severity": severity,
+            "warning": warning,
+        }
 
-    logger.info("[%s] 数据质量 OK", report_name)
-    return {"pass": True, "should_send": True, "reasons": []}
+    return {
+        "pass": True, "file": rel,
+        "age_hours": round(age_hours, 1),
+        "max_hours": max_hours,
+        "severity": severity,
+        "warning": None,
+    }
 
 
-def _check_portfolio_freshness() -> Optional[int]:
-    """检查 portfolio.json 的最后更新距今多少天。"""
-    if not PORTFOLIO_FILE.exists():
-        return None
-    try:
-        import json
-        data = json.loads(PORTFOLIO_FILE.read_text(encoding="utf-8"))
-        updated = data.get("updated", "")
-        if not updated:
-            return None
-        updated_date = datetime.strptime(updated, "%Y-%m-%d").date()
-        delta = (date.today() - updated_date).days
-        return delta
-    except Exception:
-        return None
+def preflight_scan(categories: Optional[list[str]] = None) -> dict:
+    """扫描指定的数据文件列表，返回全面体检报告。
+
+    Args:
+        categories: 要检查的数据类别（默认全部）
+
+    Returns:
+        {"healthy": bool, "checks": [dict], "summary": str}
+    """
+    if categories is None:
+        categories = list(FRESHNESS_RULES.keys())
+
+    checks = []
+    for rel in categories:
+        # 优先使用自定义路径
+        if rel in FILE_PATHS:
+            fp = FILE_PATHS[rel]
+        else:
+            fp = STOCK_DATA / rel
+
+        if not fp.exists():
+            # 尝试用 glob 匹配（有些文件带时间戳后缀）
+            matches = list(STOCK_DATA.glob(f"{rel}*"))
+            if matches:
+                fp = max(matches, key=lambda p: p.stat().st_mtime)
+            else:
+                checks.append({
+                    "pass": False, "file": rel,
+                    "age_hours": -1, "max_hours": 0,
+                    "severity": "critical",
+                    "warning": f"{rel} 不存在",
+                })
+                continue
+
+        result = freshness_check(fp)
+        checks.append(result)
+
+    stale = [c for c in checks if not c["pass"]]
+    healthy = len(stale) == 0
+
+    if stale:
+        summary = f"⚠ {len(stale)}/{len(checks)} 项数据过期"
+        for s in stale:
+            summary += f"\n  [{s['severity']}] {s['warning']}"
+    else:
+        summary = f"✓ {len(checks)}/{len(checks)} 项数据新鲜"
+
+    return {"healthy": healthy, "checks": checks, "summary": summary}
+
+
+def require_fresh(filepath: Path, max_hours: float, label: str = "") -> bool:
+    """守卫函数：数据过期则阻止后续操作。
+
+    Args:
+        filepath: 数据文件路径
+        max_hours: 最大允许时效
+        label: 操作名称（用于日志）
+
+    Returns:
+        True=数据新鲜可继续, False=数据过期应阻止
+    """
+    result = freshness_check(filepath, max_hours=max_hours)
+    if not result["pass"]:
+        logger.error(f"[BLOCKED] {label}: {result['warning']}")
+        return False
+    return True
