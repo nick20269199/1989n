@@ -1,7 +1,7 @@
 {
   "scan_type": "vcp",
   "param": null,
-  "time": "2026-05-19 15:30:04",
+  "time": "2026-05-19 16:05:12",
   "count": 7,
   "results": [
     {
@@ -19,18 +19,6 @@
     {
       "phase": "企稳",
       "score": 70,
-      "price": 22.84,
-      "volume_ratio": 12,
-      "ma20": 14.78,
-      "above_ma20": true,
-      "range_narrowing": false,
-      "lower_shadows": 2,
-      "has_limit_up": true,
-      "code": "002208"
-    },
-    {
-      "phase": "企稳",
-      "score": 70,
       "price": 111.0,
       "volume_ratio": 79,
       "ma20": 94.52,
@@ -42,13 +30,25 @@
     },
     {
       "phase": "企稳",
+      "score": 65,
+      "price": 4.16,
+      "volume_ratio": 91,
+      "ma20": 4.03,
+      "above_ma20": true,
+      "range_narrowing": true,
+      "lower_shadows": 1,
+      "has_limit_up": false,
+      "code": "000981"
+    },
+    {
+      "phase": "企稳",
       "score": 50,
-      "price": 58.07,
-      "volume_ratio": 110,
-      "ma20": 53.32,
+      "price": 58.86,
+      "volume_ratio": 111,
+      "ma20": 53.86,
       "above_ma20": true,
       "range_narrowing": false,
-      "lower_shadows": 2,
+      "lower_shadows": 3,
       "has_limit_up": true,
       "code": "002156"
     },
@@ -65,28 +65,28 @@
       "code": "300792"
     },
     {
-      "phase": "突破",
-      "score": 35,
-      "price": 4.18,
-      "volume_ratio": 148,
-      "ma20": 4.03,
-      "above_ma20": true,
-      "range_narrowing": false,
-      "lower_shadows": 0,
-      "has_limit_up": false,
-      "code": "000981"
-    },
-    {
       "phase": "企稳",
       "score": 35,
-      "price": 6.26,
-      "volume_ratio": 103,
-      "ma20": 5.93,
+      "price": 6.2,
+      "volume_ratio": 80,
+      "ma20": 5.95,
       "above_ma20": true,
       "range_narrowing": false,
       "lower_shadows": 1,
       "has_limit_up": true,
       "code": "601789"
+    },
+    {
+      "phase": "突破",
+      "score": 35,
+      "price": 25.12,
+      "volume_ratio": 381,
+      "ma20": 15.42,
+      "above_ma20": true,
+      "range_narrowing": false,
+      "lower_shadows": 1,
+      "has_limit_up": true,
+      "code": "002208"
     }
   ]
 }

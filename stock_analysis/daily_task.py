@@ -42,6 +42,7 @@ from data_source_router import get_quotes as router_get_quotes
 from data_source_router import get_index_quotes as router_get_index_quotes
 from data_source_router import get_us_index_quotes, check_channels, EASTMONEY_BLOCKED
 from data_quality_gate import check_report_quality
+from dept_status_protocol import publish_status
 
 # 启动时检测通道健康状态
 _channels_ok = check_channels()
@@ -2024,6 +2025,15 @@ def main():
             handler()
     except Exception as e:
         logger.exception(f"模式 {mode} 执行异常: {e}")
+        # 发布故障状态
+        try:
+            publish_status("front-office", {
+                "health": "degraded",
+                "pipeline": {mode: {"status": "error", "error": str(e)[:200]}},
+                "issues": [{"area": mode, "severity": "high", "message": str(e)[:200]}],
+            })
+        except Exception:
+            pass
         # 飞书告警
         try:
             send_feishu_message(
@@ -2036,6 +2046,27 @@ def main():
 
     elapsed = time.time() - start_time
     logger.info(f"模式 {mode} 完成，耗时 {elapsed:.1f}s")
+
+    # ── 发布前厅部状态 ─────────────────────────────────────────────
+    try:
+        pipeline_status = {
+            mode: {
+                "status": "ok",
+                "at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "elapsed_s": round(elapsed, 1),
+            }
+        }
+        # 检查数据通道健康（从模块级变量获取）
+        ch_ok = {k: "ok" if v else "blocked" for k, v in _channels_ok.items()}
+        publish_status("front-office", {
+            "health": "healthy",
+            "pipeline": pipeline_status,
+            "data_channels": ch_ok,
+            "artifacts": [],
+            "issues": [],
+        })
+    except Exception as e:
+        logger.warning("前厅部状态发布失败: %s", e)
 
 
 if __name__ == "__main__":

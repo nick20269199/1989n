@@ -18,11 +18,11 @@ if not exist %LOG_DIR% mkdir %LOG_DIR%
 echo [%date% %time%] 工程部 start >> %LOG_FILE%
 
 if "%1"=="--local" (
-    python sel_lint.py >> %LOG_FILE% 2>&1
+    python lint_wrapper.py >> %LOG_FILE% 2>&1
     set EXIT_CODE=%ERRORLEVEL%
 ) else (
     set FEISHU_SEND_ENABLED=true
-    python sel_lint.py >> %LOG_FILE% 2>&1
+    python lint_wrapper.py >> %LOG_FILE% 2>&1
     set EXIT_CODE=%ERRORLEVEL%
 )
 

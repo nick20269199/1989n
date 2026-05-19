@@ -3,10 +3,11 @@
 ## 待蒸馏文件 (匹配规则)
 
 - `closing_review.json` (9.0KB)
+- `git_push.log` (556.6KB)
 - `morning_enhanced.json` (8.7KB)
 - `sentinel_status.json` (1.3KB)
 
-共 3 个文件待蒸馏
+共 4 个文件待蒸馏
 
 ## 今日其他产出
 
@@ -14,34 +15,34 @@
 - `analysis_30min_20260519_1130.md` (0.6KB)
 - `analysis_30min_20260519_1500.json` (1.6KB)
 - `analysis_30min_20260519_1500.md` (0.6KB)
+- `analysis_overnight_20260519_2330.json` (0.6KB)
+- `analysis_overnight_20260519_2330.md` (0.2KB)
 - `call_auction_20260519_0926.json` (4.4KB)
 - `call_auction_20260519_0956.json` (9.9KB)
 - `channel_health_latest.json` (0.3KB)
 - `closing_review.log` (24.5KB)
 - `closing_review.md` (1.4KB)
+- `concept_mapping.json` (4.5KB)
 - `data_guard_report.json` (1.9KB)
+- `distillation_brief.md` (2.0KB)
+- `distill_queue.json` (3.5KB)
 - `intraday_close.log` (47.5KB)
 - `intraday_midday.log` (40.3KB)
 - `morning_brief.log` (93.0KB)
 - `morning_brief_latest.json` (0.9KB)
 - `morning_brief_latest.md` (2.2KB)
-- `morning_enhanced.md` (1.8KB)
-- `news_intraday_20260519_0930.json` (18.4KB)
-- `news_intraday_20260519_1000.json` (10.4KB)
-- `news_intraday_20260519_1030.json` (14.3KB)
-- `news_intraday_20260519_1100.json` (7.2KB)
 
-... 还有 184 个文件
+... 还有 207 个文件
 
 ## 队列积压 (未蒸馏)
 
-- 2026-05-18: sentinel_status.json
 - 2026-05-18: git_push.log
 - 2026-05-19: closing_review.json
 - 2026-05-19: morning_enhanced.json
 - 2026-05-19: sentinel_status.json
+- 2026-05-19: git_push.log
 
-... 还有 22 条
+... 还有 23 条
 
 ---
 
@@ -59,4 +60,4 @@
 4. 如无新知识 → 标记队列条目为 skipped
 5. 推送更新到 GitHub (git_auto_push.py)
 
-> 生成时间: 2026-05-19 15:47
+> 生成时间: 2026-05-19 23:47

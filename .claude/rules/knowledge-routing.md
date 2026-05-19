@@ -13,6 +13,8 @@
 | 市场分析/交易决策/投资判断 | knowledge-economics + knowledge-chinese-civ | 安全边际/Mr.Market/乘数定位/乘法质量/实时校准 |
 | 系统架构/模块设计/重构 | knowledge-economics + knowledge-chinese-civ | 可逆装配/渐进重构/嵌套分层/榫卯接口 |
 | 知识管理/学习路径/认知进化 | knowledge-physics + knowledge-religion | 无标度知识/优先连接/致曲专精/Ghazali三阶段 |
+| 工程部/Lint/知识库维护/SEL | project/session-engineering-manifest.md | 工程部上下文规范 — Lint任务/认知审计 |
+| 前厅部/交易/持仓/盘前简报 | project/session-front-office-manifest.md | 前厅部上下文规范 — 股票分析/决策 |
 
 ## 触发条件
 

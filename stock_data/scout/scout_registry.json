@@ -1,15 +1,15 @@
 {
   "version": "1.0",
   "created": "2026-05-10",
-  "last_updated": "2026-05-18",
-  "total_discoveries": 35,
+  "last_updated": "2026-05-19",
+  "total_discoveries": 42,
   "by_category": {
-    "trading_strategy": 12,
-    "trading_software": 7,
-    "ai_agent": 9,
+    "trading_strategy": 14,
+    "trading_software": 9,
+    "ai_agent": 11,
     "market_data": 2,
     "infrastructure": 0,
-    "frontier": 5
+    "frontier": 6
   },
   "items": [
     {
@@ -609,8 +609,16 @@
       "source_url": "https://arxiv.org/abs/2605.15412",
       "one_liner": "LLM Miner通过RL策略更新内化历史优化，Diversity-Complementarity Reward避免因子同质化",
       "use_for": "因子挖掘管道——RL策略更新替代累积prompt解决context膨胀，Diversity Reward作为因子去重逻辑",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-19",
+      "evaluation": {
+        "match": 4,
+        "maturity": 2,
+        "cost": 4,
+        "risk": 2,
+        "decision": "deferred",
+        "note": "LLM因子挖掘RL微调方向有匹配度。纯论文级(2026-05-14 arXiv)，无代码发布。RL管道从零实现成本极高。StratEvo已覆盖因子搜索基础。月检关注代码发布。"
+      }
     },
     {
       "id": "20260518-002",
@@ -620,8 +628,16 @@
       "source_url": "https://pypi.org/project/abel-edge/",
       "one_liner": "Agent原生量化运行时，内建验证门防look-ahead bias/过拟合/数据泄露",
       "use_for": "trade_backtest.py验证链——验证门设计模式参考，确定性执行保证回测可复现",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-19",
+      "evaluation": {
+        "match": 3,
+        "maturity": 3,
+        "cost": 2,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "Abel AI的验证运行时，内建Lo-adjusted Sharpe/Position-Return IC/Omega三指标验证。PyPI可安装但项目新(GitHub: Abel-ai-causality/Abel-edge)。验证门设计模式有价值，但当前回测管道无瓶颈需要此级别验证。月检跟踪成熟度。"
+      }
     },
     {
       "id": "20260518-003",
@@ -631,8 +647,16 @@
       "source_url": "https://pypi.org/project/nanoback/",
       "one_liner": "C++20事件驱动回测，Python API，内置WFO/Monte Carlo验证+Streamlit看板",
       "use_for": "trade_backtest.py性能升级候选——C++20回测比pandas快10-50x，WFO+MC验证方法论参考",
-      "status": "new",
-      "evaluated_at": null
+      "status": "deferred",
+      "evaluated_at": "2026-05-19",
+      "evaluation": {
+        "match": 3,
+        "maturity": 3,
+        "cost": 3,
+        "risk": 3,
+        "decision": "deferred",
+        "note": "C++20事件驱动回测性能亮眼(v1.0 PyPI已发布)，但当前pandas回测无性能瓶颈。C++绑定在Windows兼容性待验证。WFO+MC方法有参考价值但非必须。月检关注社区增长。"
+      }
     },
     {
       "id": "20260518-004",
@@ -642,6 +666,91 @@
       "source_url": "https://github.com/PAT0216/paper-trader",
       "one_liner": "动量/XGBoost/LSTM在S&P500上自动比拼，GitHub Actions每日运行+Streamlit看板",
       "use_for": "daily_task.py信号聚合架构参考——多模型集成对比设计模式，5bps滑点模型供trade_engine参考",
+      "status": "deferred",
+      "evaluated_at": "2026-05-19",
+      "evaluation": {
+        "match": 3,
+        "maturity": 2,
+        "cost": 2,
+        "risk": 1,
+        "decision": "deferred",
+        "note": "三策略对比框架设计模式有参考价值(动量+XGBoost+LSTM并行运行)，但：1)仅8星个人项目，维护持续性不确定；2)S&P 500聚焦非A股；3)已停止更新(最后运行2026-02)。月检。"
+      }
+    },
+    {
+      "id": "20260519-001",
+      "date": "2026-05-19",
+      "category": "trading_strategy",
+      "name": "Awesome-LLM-Quantitative-Trading-Papers curated collection",
+      "source_url": "https://github.com/Tom-roujiang/Awesome-LLM-Quantitative-Trading-Papers",
+      "one_liner": "ICLR/KDD/ACL 2026量化交易论文精选集，因子挖掘+Trading Agents+RL交易",
+      "use_for": "替代零散搜索——直接获得2026顶会量化论文全景图，因子挖掘和RL交易方向可对标",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260519-002",
+      "date": "2026-05-19",
+      "category": "trading_strategy",
+      "name": "Daily Return Information Factor (DRIF)",
+      "source_url": "https://alphaarchitect.com/daily-stock-returns/",
+      "one_liner": "日收益率时序模式因子，月收益1.57%，Sharpe 1.23，超越150+已知异象",
+      "use_for": "候选因子集成到tech_scan.py信号体系，与三倍量/动量因子互补",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260519-003",
+      "date": "2026-05-19",
+      "category": "ai_agent",
+      "name": "Tool Attention: 两阶段惰性加载消除工具Token税",
+      "source_url": "https://browse-export.arxiv.org/abs/2604.21816",
+      "one_liner": "两阶段惰性schema加载减少95%工具调用token(47.3k→2.4k)，上下文利用率24%→91%",
+      "use_for": "cron任务链context膨胀问题——惰性加载模式参考设计checkpoint/rollback机制",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260519-004",
+      "date": "2026-05-19",
+      "category": "ai_agent",
+      "name": "EnvFactory: 可执行环境合成RL训练工具Agent",
+      "source_url": "https://arxiv.org/html/2605.18703v1",
+      "one_liner": "自动创建有状态工具环境+合成轨迹训练Agentic RL，BFCLv3 +15%, MCP-Atlas +8.6%",
+      "use_for": "SEL Growth Loop自动化——环境合成+RL训练管道参考架构",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260519-005",
+      "date": "2026-05-19",
+      "category": "trading_software",
+      "name": "SEC EDGAR Open Dataset 43B tokens",
+      "source_url": "https://www.daft.ai/blog/sec-edgar-case-study",
+      "one_liner": "SEC全部历史披露开源数据集——8M样本/590GB/43B tokens，2026-04发布，MIT",
+      "use_for": "基本面分析数据源——美股年报/季报/重大事项自动化分析管道",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260519-006",
+      "date": "2026-05-19",
+      "category": "trading_software",
+      "name": "FinMCP 免费金融数据MCP服务器",
+      "source_url": "https://github.com/Steve-sy/finmcp",
+      "one_liner": "MCP协议连接AI到50+交易所实时数据/期权/分析，免费无API Key",
+      "use_for": "market_pool全球数据补充通道——Claude Code直接实时报价查询",
+      "status": "new",
+      "evaluated_at": null
+    },
+    {
+      "id": "20260519-007",
+      "date": "2026-05-19",
+      "category": "frontier",
+      "name": "Qwen3.6-27B 单GPU跑赢397B MoE",
+      "source_url": "",
+      "one_liner": "27B参数击败397B MoE，仅18GB显存单GPU可运行，支持本地部署",
+      "use_for": "本地部署候选——因子生成/信号聚合等推理任务离线运行，降低成本+延迟",
       "status": "new",
       "evaluated_at": null
     }

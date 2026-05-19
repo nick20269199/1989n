@@ -1,0 +1,312 @@
+{
+  "type": "财经快讯-evening",
+  "time": "2026-05-19 22:00:03",
+  "market_status": "closed",
+  "count": 50,
+  "data": [
+    {
+      "title": "美股AI应用软件股逆势走强",
+      "time": "2026-05-19 21:53:46",
+      "category": "{'article_id': 2375938, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375938"
+    },
+    {
+      "title": "以财长：国际刑事法院拟对其发出“秘密逮捕令”",
+      "time": "2026-05-19 21:52:39",
+      "category": "{'article_id': 2375936, 'subject_id': 10986, 'subject_name': '中东冲突', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 47581, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375936"
+    },
+    {
+      "title": "财联社5月19日晚间新闻精选",
+      "time": "2026-05-19 21:47:06",
+      "url": "https://www.cls.cn/detail/2375931"
+    },
+    {
+      "title": "【风口研报·洞察】芯片测试重要性与价值量显著提升，先进逻辑、存储器及AI相关产能扩张持续拉动先进封装产能的进一步上修，以解决当前AI算力交付的主要瓶颈；EPS上调速度与利率上行速度的较量",
+      "time": "2026-05-19 21:47:03",
+      "url": "https://www.cls.cn/detail/2375524"
+    },
+    {
+      "title": "财联社5月19日电，美国10年期国债收益率上升至4.663%，为2025年1月以来最高水平。",
+      "time": "2026-05-19 21:46:14",
+      "category": "{'article_id': 2375933, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156178, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375933"
+    },
+    {
+      "title": "财联社5月19日电，人工智能芯片制造商Cerebras涨幅回落，最新上涨5%。",
+      "time": "2026-05-19 21:44:46",
+      "category": "{'article_id': 2375932, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375932, 'subject_id': 1321, 'subject_name': '人工智能', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 67851, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 207, 'channel': 'cls,stib'},{'article_id': 2375932, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101466, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375932"
+    },
+    {
+      "title": "美股光通信概念股走强",
+      "time": "2026-05-19 21:42:12",
+      "category": "{'article_id': 2375927, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375927"
+    },
+    {
+      "title": "财联社5月19日电，美股存储概念股由跌转涨，美光科技涨超2%，闪迪涨超1%，西部数据涨0.7%，希捷科技涨0.5%。",
+      "time": "2026-05-19 21:38:26",
+      "category": "{'article_id': 2375924, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375924"
+    },
+    {
+      "title": "财联社5月19日电，南非主要股指下跌1.1%至113,698.80点。",
+      "time": "2026-05-19 21:34:44",
+      "category": "{'article_id': 2375922, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156177, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375922"
+    },
+    {
+      "title": "美股黄金股盘初普跌",
+      "time": "2026-05-19 21:33:56",
+      "category": "{'article_id': 2375921, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375921"
+    },
+    {
+      "title": "美股SaaS板块开盘逆势走高 ServiceNow涨超4%",
+      "time": "2026-05-19 21:33:49",
+      "category": "{'article_id': 2375920, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375920, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24534, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2375920"
+    },
+    {
+      "title": "财联社5月19日电，费城半导体指数下跌2.2%。",
+      "time": "2026-05-19 21:32:11",
+      "category": "{'article_id': 2375918, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375918"
+    },
+    {
+      "title": "财联社5月19日电，现货黄金日内跌幅扩大至2%，报4470.45美元/盎司。",
+      "time": "2026-05-19 21:32:08",
+      "category": "{'article_id': 2375917, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375917, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28121, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'},{'article_id': 2375917, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37128, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375917"
+    },
+    {
+      "title": "利弗莫尔中概股龙头指数盘初涨0.1%",
+      "time": "2026-05-19 21:31:56",
+      "category": "{'article_id': 0, 'subject_id': 0, 'subject_name': '利弗莫尔中概股龙头指数', 'subject_img': '', 'subject_description': 'https://h5.jesselivermore.com/cls/chart.html', 'category_id': 0, 'attention_num': 0, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': ''},{'article_id': 2375916, 'subject_id': 1099, 'subject_name': '中概股情报站', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 26750, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375916, 'subject_id': 12776, 'subject_name': '中概股龙头指数', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 6758, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375916"
+    },
+    {
+      "title": "财联社5月19日电，美元指数短线拉升，现报99.36点，日内涨幅为0.4%。消息面上，美国30年期国债收益率上升至5.177%，为2007年以来的最高水平。",
+      "time": "2026-05-19 21:31:48",
+      "category": "{'article_id': 2375915, 'subject_id': 11410, 'subject_name': '外汇期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8710, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375915"
+    },
+    {
+      "title": "财联社5月19日电，沪金期货主力合约跌1.36%，报986元/克；沪银期货主力合约跌4.39%，报18013元/千克。",
+      "time": "2026-05-19 21:31:24",
+      "category": "{'article_id': 2375914, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375914"
+    },
+    {
+      "title": "美股纳指低开0.56% 芯片股走低",
+      "time": "2026-05-19 21:31:00",
+      "category": "{'article_id': 2375913, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375913"
+    },
+    {
+      "title": "财联社5月19日电，美国交投最活跃的原油期货合约扭转跌势，触及盘中高点。",
+      "time": "2026-05-19 21:30:17",
+      "category": "{'article_id': 2375912, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156177, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375912, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375912, 'subject_id': 1583, 'subject_name': '原油市场动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 45054, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 316, 'channel': 'cls'},{'article_id': 2375912, 'subject_id': 11394, 'subject_name': '能源类期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8506, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375912, 'subject_id': 1741, 'subject_name': '海外大宗商品', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 33223, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375912"
+    },
+    {
+      "title": "财联社5月19日电，现货白银日内跌幅扩大至5%，报73.63美元/盎司。",
+      "time": "2026-05-19 21:29:49",
+      "category": "{'article_id': 2375911, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375911, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28121, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375911"
+    },
+    {
+      "title": "财联社5月19日电，洲际交易所伦敦可可期货涨幅超3%，报每吨2969英镑。",
+      "time": "2026-05-19 21:27:32",
+      "category": "{'article_id': 2375907, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375907, 'subject_id': 11402, 'subject_name': '农产品期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 11115, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375907"
+    },
+    {
+      "title": "现货黄金跌破4500美元 现货白银日内大跌近5%",
+      "time": "2026-05-19 21:26:57",
+      "category": "{'article_id': 2375906, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375906, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28121, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'},{'article_id': 2375906, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37128, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375906"
+    },
+    {
+      "title": "全球最大华龙一号核电基地完成首修",
+      "time": "2026-05-19 21:25:17",
+      "category": "{'article_id': 2375905, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375905, 'subject_id': 1210, 'subject_name': '核电', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 18116, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 53, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375905"
+    },
+    {
+      "title": "美国30年期国债收益率升至近20年最高水平",
+      "time": "2026-05-19 21:23:50",
+      "category": "{'article_id': 2375904, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375904, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156178, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375904, 'subject_id': 1098, 'subject_name': '美股动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 60339, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375904"
+    },
+    {
+      "title": "西班牙成为欧盟中最大的俄罗斯天然气进口国",
+      "time": "2026-05-19 21:23:16",
+      "category": "{'article_id': 2375903, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375903, 'subject_id': 1522, 'subject_name': '天然气', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 20902, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 30, 'channel': 'cls'},{'article_id': 2375903, 'subject_id': 11394, 'subject_name': '能源类期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8506, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375903, 'subject_id': 11410, 'subject_name': '外汇期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8710, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375903"
+    },
+    {
+      "title": "财联社5月19日电，现货白银向下跌破75美元/盎司，日内下跌3.44%。",
+      "time": "2026-05-19 21:22:47",
+      "category": "{'article_id': 2375902, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375902, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28121, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375902"
+    },
+    {
+      "title": "财联社5月19日电，华尔街银行周二启动了华纳兄弟的贷款出售；此次发售包括一笔50亿美元贷款和一笔10亿欧元贷款。",
+      "time": "2026-05-19 21:10:46",
+      "category": "{'article_id': 2375892, 'subject_id': 1489, 'subject_name': '银行业动态', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 34545, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 79, 'channel': 'cls'},{'article_id': 2375892, 'subject_id': 11410, 'subject_name': '外汇期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8710, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375892"
+    },
+    {
+      "title": "ST洲际：股票交易严重异常波动 不存在应披露而未披露的重大信息",
+      "time": "2026-05-19 21:09:55",
+      "related_stocks": "600759",
+      "category": "{'article_id': 2375891, 'subject_id': 1555, 'subject_name': 'A股公告速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 215022, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375891"
+    },
+    {
+      "title": "美国国债收益率持续攀升 5年期至30年期国债收益率触及2026年高位",
+      "time": "2026-05-19 21:09:41",
+      "category": "{'article_id': 2375890, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156178, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375890"
+    },
+    {
+      "title": "财联社5月19日电，英国国债抹去涨幅；英国10年期国债收益率持稳在5.10%，此前为5.05%。",
+      "time": "2026-05-19 21:09:25",
+      "category": "{'article_id': 2375889, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156177, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375889"
+    },
+    {
+      "title": "财联社5月19日电，现货白银日内跌幅扩大至3%，报75.3美元/盎司。",
+      "time": "2026-05-19 21:08:26",
+      "category": "{'article_id': 2375888, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156177, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375888, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375888, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28121, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375888"
+    },
+    {
+      "title": "财联社5月19日电，现货黄金日内跌幅达1%，现报4516.51美元/盎司。",
+      "time": "2026-05-19 21:08:13",
+      "category": "{'article_id': 2375887, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'},{'article_id': 2375887, 'subject_id': 1171, 'subject_name': '有色金属', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 28121, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2412, 'channel': 'cls'},{'article_id': 2375887, 'subject_id': 1483, 'subject_name': '黄金', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 37128, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 1377, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375887"
+    },
+    {
+      "title": "【财联社早知道】估值1600亿元！“国产3D NAND第一股”要来了，机构称存储行业缺货预计延续至2027年，这家公司专注于半导体探针测试领域，长江存储是其客户",
+      "time": "2026-05-19 21:07:23",
+      "url": "https://www.cls.cn/detail/2375409"
+    },
+    {
+      "title": "财联社5月19日电，欧洲央行数据显示，外汇储备维持在3408亿欧元不变。",
+      "time": "2026-05-19 21:02:54",
+      "category": "{'article_id': 2375882, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156177, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375882"
+    },
+    {
+      "title": "C天海：连接器产品配套张雪机车",
+      "time": "2026-05-19 21:02:08",
+      "related_stocks": "001365",
+      "category": "{'article_id': 2375881, 'subject_id': 1786, 'subject_name': '互动平台精选', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 32304, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2375881"
+    },
+    {
+      "title": "财联社5月19日电，国内商品期货夜盘开盘涨跌不一，沪金跌0.19%，沪银跌逾1%，沪铝涨0.7%，沪镍涨2.3%，铁矿涨0.19%，焦煤涨0.54%，原油涨逾1%，沥青涨1.19%。",
+      "time": "2026-05-19 21:00:01",
+      "category": "{'article_id': 2375880, 'subject_id': 1501, 'subject_name': '期货市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 56467, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 88, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375880"
+    },
+    {
+      "title": "“爱达•花城号”将于11月22日从广州首航",
+      "time": "2026-05-19 20:57:04",
+      "category": "{'article_id': 2375873, 'subject_id': 1680, 'subject_name': '船舶', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 14375, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375873, 'subject_id': 11408, 'subject_name': '航运期货', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8404, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375873"
+    },
+    {
+      "title": "葡萄牙队官宣：41岁C罗将第六次征战世界杯",
+      "time": "2026-05-19 20:55:58",
+      "category": "{'article_id': 2375878, 'subject_id': 1665, 'subject_name': '体育产业', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10698, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 226, 'channel': 'cls'},{'article_id': 2375878, 'subject_id': 1438, 'subject_name': '足球盛宴2026', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10771, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 226, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375878"
+    },
+    {
+      "title": "5月19日周二《新闻联播》要闻24条",
+      "time": "2026-05-19 20:54:28",
+      "url": "https://www.cls.cn/detail/2375857"
+    },
+    {
+      "title": "*ST易录：法院决定对公司启动预重整",
+      "time": "2026-05-19 20:53:43",
+      "related_stocks": "300212",
+      "category": "{'article_id': 2375872, 'subject_id': 1555, 'subject_name': 'A股公告速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 215022, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375872"
+    },
+    {
+      "title": "财联社5月19日电，据报道，空中客车公司计划在全球不确定性和供应障碍下削减10%的成本。",
+      "time": "2026-05-19 20:53:36",
+      "category": "{'article_id': 2375871, 'subject_id': 1450, 'subject_name': '大飞机', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12920, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 235, 'channel': 'cls,stib'},{'article_id': 2375871, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156178, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375871"
+    },
+    {
+      "title": "巴基斯坦继续对印度飞机关闭领空至6月24日",
+      "time": "2026-05-19 20:51:43",
+      "category": "{'article_id': 2375870, 'subject_id': 1811, 'subject_name': '民航机场', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8739, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 278, 'channel': 'cls'},{'article_id': 2375870, 'subject_id': 3058, 'subject_name': '机场', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 8387, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 137, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375870"
+    },
+    {
+      "title": "国家数据局：因地制宜开展城市全域数字化转型试点建设",
+      "time": "2026-05-19 20:50:30",
+      "category": "{'article_id': 2375868, 'subject_id': 1635, 'subject_name': '基建投资', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 21683, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 321, 'channel': 'cls'},{'article_id': 2375868, 'subject_id': 1264, 'subject_name': '环保', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 19103, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 293, 'channel': 'cls'},{'article_id': 2375868, 'subject_id': 1250, 'subject_name': '乡村振兴', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10892, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 172, 'channel': 'cls'},{'article_id': 2375868, 'subject_id': 2605, 'subject_name': '数字乡村', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10329, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 372, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375868"
+    },
+    {
+      "title": "达瑞电子：拟7000万元收购风冷和液冷散热公司东莞运宏70%股权",
+      "time": "2026-05-19 20:49:21",
+      "related_stocks": "300976",
+      "category": "{'article_id': 2375867, 'subject_id': 1555, 'subject_name': 'A股公告速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 215022, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'stib,cls'}",
+      "url": "https://www.cls.cn/detail/2375867"
+    },
+    {
+      "title": "*ST宝鹰：撤销退市风险警示及其他风险警示 股票简称变更为“宝鹰股份”",
+      "time": "2026-05-19 20:48:22",
+      "related_stocks": "002047",
+      "category": "{'article_id': 2375864, 'subject_id': 1555, 'subject_name': 'A股公告速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 215022, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375864"
+    },
+    {
+      "title": "岱勒新材：实际控制人段志明拟减持不超3%股份",
+      "time": "2026-05-19 20:48:15",
+      "related_stocks": "300700",
+      "category": "{'article_id': 2375863, 'subject_id': 1555, 'subject_name': 'A股公告速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 215022, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375863"
+    },
+    {
+      "title": "财联社5月19日电，美国财长贝森特称，他认为日本经济的基本面强劲，（谈日本）汇率波动过大是不可取的。",
+      "time": "2026-05-19 20:47:08",
+      "category": "{'article_id': 2375862, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156178, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375862"
+    },
+    {
+      "title": "三星HBM3E和HBM4 DRAM良率提高",
+      "time": "2026-05-19 20:46:53",
+      "category": "{'article_id': 2375861, 'subject_id': 1279, 'subject_name': '半导体芯片', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 101466, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 457, 'channel': 'cls,stib'},{'article_id': 2375861, 'subject_id': 1089, 'subject_name': 'TMT行业观察', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 24534, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'},{'article_id': 2375861, 'subject_id': 11072, 'subject_name': 'HBM', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 10972, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 2457, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375861"
+    },
+    {
+      "title": "*ST阳光：5月21日起撤销退市风险警示 证券简称变更为阳光股份",
+      "time": "2026-05-19 20:45:55",
+      "related_stocks": "000608",
+      "category": "{'article_id': 2375860, 'subject_id': 1555, 'subject_name': 'A股公告速递', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 215022, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls,stib'}",
+      "url": "https://www.cls.cn/detail/2375860"
+    },
+    {
+      "title": "应对地震及强降雨 国铁南宁局临时停运部分列车",
+      "time": "2026-05-19 20:45:24",
+      "category": "{'article_id': 2375859, 'subject_id': 1550, 'subject_name': '高铁轨交', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 12609, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 135, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375859"
+    },
+    {
+      "title": "财联社5月19日电，美财长贝森特认为日本经济的基本面强劲，相信植田和男将成功指导政策。",
+      "time": "2026-05-19 20:44:39",
+      "category": "{'article_id': 2375858, 'subject_id': 1605, 'subject_name': '货币政策动向', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 27021, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'},{'article_id': 2375858, 'subject_id': 1556, 'subject_name': '环球市场情报', 'subject_img': '', 'subject_description': '', 'category_id': 0, 'attention_num': 156178, 'is_attention': False, 'is_reporter_subject': False, 'plate_id': 0, 'channel': 'cls'}",
+      "url": "https://www.cls.cn/detail/2375858"
+    }
+  ],
+  "fields": "title,time,related_stocks,category,url"
+}
