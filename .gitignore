@@ -48,6 +48,10 @@ stock_data/bilibili_relevant_videos.json
 .claude/backups/
 .claude/scripts/
 .claude/projects/
+.claude/memory/
+
+# 本地工具状态
+.cc-switch/
 
 # 备份
 backups/
