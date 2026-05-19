@@ -1,9 +1,0 @@
-=== LAST ERROR [2026-05-18 12:27:38] ===
-Script: test_verification.py
-Command: D:/1989n/stock_analysis/test_verification.py
-
-Traceback (most recent call last):
-  File "D:\1989n\stock_analysis\test_verification.py", line 29, in <module>
-    check("金正恩", _is_noise_news("金正恩要求加强守卫"))
-                    ^^^^^^^^^^^^^^
-NameError: name '_is_noise_news' is not defined

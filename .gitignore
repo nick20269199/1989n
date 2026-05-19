@@ -23,6 +23,12 @@ stock_data/stock.db
 # 自动生成的数据产物（非源码）
 stock_data/expert_outputs/
 stock_data/cognitive_output/
+stock_data/hot_stocks.json
+stock_data/last_error.txt
+stock_data/morning_brief_latest.*
+stock_data/task_dashboard.md
+stock_data/status/front-office_status.json
+stock_data/status/error_kb_hook_report.json
 
 # 缓存文件（每日重新生成）
 stock_data/index_cache.json
