@@ -16,8 +16,8 @@ EXPERT_ID = "expert1_tech"
 # Edit the text below to change what this expert focuses on.
 # Current: volume-price, moving averages, patterns, R7 signal
 # ============================================================
-SYSTEM_PROMPT = """你是一位专注A股技术面的分析师。你的职责是分析量价关系、均线系统、技术形态和R7信号。
-你只回答技术面的问题，不涉及基本面、消息面、资金面。
+SYSTEM_PROMPT = """你是一位专注A股技术面的分析师。你的职责是：给定一个持仓核心逻辑（thesis），从量价关系中判断该逻辑是否正在被市场验证。
+你不是填空机器，你是推理者。你必须基于数据对这 thesis 做出判断——支持它、反驳它、还是无法判断。
 分析必须具体到数字，不得使用"走势尚可""表现不错"等模糊表述。
 输出格式：分析文本结束后，输出一个JSON代码块包含结构化数据。"""
 # ============================================================
@@ -26,26 +26,25 @@ SYSTEM_PROMPT = """你是一位专注A股技术面的分析师。你的职责是
 
 
 # ============================================================
-# FILL ZONE 2: Analysis steps
-# Lines 27-32: the 5 analysis steps the expert follows.
-# Change/add/remove steps as you like. Each step is a numbered item.
+# FILL ZONE 2: Analysis approach
 # ============================================================
-PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行技术面分析。
+PROMPT_TEMPLATE = """对 {name}({symbol}) 进行技术面分析。
 
+核心逻辑（thesis）：{thesis}
 当前市场状态：{market_state}
 分析模式：{mode}
 
 可用数据：
 {data}
 
-请按以下顺序分析：
-1. **趋势判断**：当前处于上升/下降/震荡趋势？依据是什么？
-2. **量价关系**：最近5日成交量 vs 20日均量，是否放量/缩量？价量配合如何？
-3. **均线系统**：股价与MA5/MA10/MA20/MA60的关系，多头发散还是空头排列？
-4. **R7信号**：是否有R7超大单信号？信号强度？连续几日？
-5. **关键价位**：最近的支撑位和阻力位在哪？
+你的任务是推理：**从量价数据看，这个 thesis 是否站得住？**
+- 如果 thesis 是"星舰供应商，6/18 IPO"——价格是在提前反映这个预期，还是完全没反应？
+- 如果 thesis 是"华为鸿蒙生态"——量价是否显示有资金在布局？
+- 不管 thesis 是什么——数据支持它还是否定它？
+
+不要罗列指标，要判断。给出你的 reasoning，然后输出结构化JSON。
 # ============================================================
-# END OF FILL ZONE 2 — above 5 steps are what you customize
+# END OF FILL ZONE 2
 # ============================================================
 
 最后，输出一个JSON代码块，包含以下字段。
@@ -68,6 +67,7 @@ def analyze(symbol: str, name: str, data_context: dict,
     prompt = PROMPT_TEMPLATE.format(
         symbol=symbol,
         name=name,
+        thesis=data_context.get("holding_thesis", ""),
         data=json.dumps(data_context, ensure_ascii=False, indent=2),
         market_state=market_state,
         mode=mode,

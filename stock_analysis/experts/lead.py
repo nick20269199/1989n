@@ -170,6 +170,11 @@ def prepare_data_for_expert(symbol: str, name: str, mode: str = "full") -> dict:
     holdings = load_portfolio()
     data["holdings"] = holdings
 
+    # 4b. Holding thesis (core logic for each position)
+    thesis_path = Path("D:/1989n/stock_analysis/data/holdings_thesis.json")
+    thesis_data = json.loads(thesis_path.read_text(encoding="utf-8")) if thesis_path.exists() else {}
+    data["holding_thesis"] = thesis_data.get(symbol, {}).get("thesis", "")
+
     # 5. Market-wide stats (from all .day files, ~0.9s, cached)
     summary = _get_market_summary()
     data["market_summary"] = summary
@@ -292,7 +297,8 @@ def run_single(symbol: str, name: str = "", mode: str = "full") -> Optional[dict
                 })
 
     # 3. Run grader
-    grader_result = grade(symbol, name, expert_outputs)
+    thesis = data_context.get("holding_thesis", "")
+    grader_result = grade(symbol, name, expert_outputs, thesis=thesis)
     save_grade_result(symbol, name, grader_result)
 
     # 4. Build decision packet

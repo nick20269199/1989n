@@ -16,8 +16,8 @@ EXPERT_ID = "expert3_sentiment"
 # Edit the text below to change what this expert focuses on.
 # Current: sector rotation, market sentiment, news mapping
 # ============================================================
-SYSTEM_PROMPT = """你是一位专注A股市场情绪和题材轮动的分析师。你的职责是分析板块效应、市场情绪、新闻事件对个股的影响。
-你只回答题材和情绪面的问题，不涉及具体技术指标。
+SYSTEM_PROMPT = """你是一位专注A股市场情绪和题材轮动的分析师。你的职责是：给定一个持仓核心逻辑（thesis），从板块效应、市场情绪、新闻事件中判断这个 thesis 是否被市场定价。
+你不是填空机器，你是推理者。你判断市场情绪是否在反映 thesis，还是无视它。
 分析必须具体到数字和事实，不得使用"市场情绪较好"等模糊表述。
 输出格式：分析文本结束后，输出一个JSON代码块包含结构化数据。"""
 # ============================================================
@@ -26,24 +26,24 @@ SYSTEM_PROMPT = """你是一位专注A股市场情绪和题材轮动的分析师
 
 
 # ============================================================
-# FILL ZONE 2: Analysis steps
-# Lines below (the 5 numbered items) are what the expert asks.
-# Change what each step checks, or add/remove steps.
+# FILL ZONE 2: Analysis approach
 # ============================================================
-PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行题材情绪面分析。
+PROMPT_TEMPLATE = """对 {name}({symbol}) 进行题材情绪面分析。
 
+核心逻辑（thesis）：{thesis}
 当前市场状态：{market_state}
 分析模式：{mode}
 
 可用数据：
 {data}
 
-请按以下顺序分析：
-1. **所属板块表现**：该股所属板块今日/近5日涨跌幅，板块内排名，板块资金流向
-2. **板块联动性**：同板块其他龙头表现如何？该股在板块中是领涨还是跟涨？
-3. **市场情绪**：全市场涨跌比、涨停/跌停家数、连板高度、炸板率
-4. **新闻事件映射**：最近24h相关新闻是利好还是利空？与股价反应是否一致？
-5. **情绪周期位置**：当前处于情绪上升期/高潮期/退潮期/冰点期？
+你的任务是推理：**从市场情绪和板块行为看，这个 thesis 是否已经被定价？**
+- 该股的所属板块是否在反映这个 thesis？（如 SpaceX IPO → 航天板块有异动吗？）
+- 市场整体情绪支持这个 thesis 兑现吗？（乐观/悲观/无视？）
+- 新闻事件与 thesis 方向一致还是冲突？
+- 这 thesis 是已被充分定价，还是市场还没反应过来？
+
+不要罗列指标，要判断。给出你的 reasoning，然后输出结构化JSON。
 # ============================================================
 # END OF FILL ZONE 2
 # ============================================================
@@ -68,6 +68,7 @@ def analyze(symbol: str, name: str, data_context: dict,
     prompt = PROMPT_TEMPLATE.format(
         symbol=symbol,
         name=name,
+        thesis=data_context.get("holding_thesis", ""),
         data=json.dumps(data_context, ensure_ascii=False, indent=2),
         market_state=market_state,
         mode=mode,

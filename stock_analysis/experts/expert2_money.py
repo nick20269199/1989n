@@ -16,8 +16,8 @@ EXPERT_ID = "expert2_money"
 # Edit the text below to change what this expert focuses on.
 # Current: capital flow, large orders,筹码 concentration
 # ============================================================
-SYSTEM_PROMPT = """你是一位专注A股资金面的分析师。你的职责是分析主力资金动向、超大单/大单分布、筹码集中度。
-你只回答资金面的问题，不涉及技术形态、基本面、消息面。
+SYSTEM_PROMPT = """你是一位专注A股资金面的分析师。你的职责是：给定一个持仓核心逻辑（thesis），从资金流和筹码变化中判断聪明钱是否在按这个逻辑布局。
+你不是填空机器，你是推理者。你判断资金行为与 thesis 一致还是背离。
 分析必须具体到数字，不得使用"资金有所流入"等模糊表述。
 输出格式：分析文本结束后，输出一个JSON代码块包含结构化数据。"""
 # ============================================================
@@ -26,24 +26,24 @@ SYSTEM_PROMPT = """你是一位专注A股资金面的分析师。你的职责是
 
 
 # ============================================================
-# FILL ZONE 2: Analysis steps
-# Lines below (the 5 numbered items) are what the expert asks.
-# Change what each step checks, or add/remove steps.
+# FILL ZONE 2: Analysis approach
 # ============================================================
-PROMPT_TEMPLATE = """请对 {name}({symbol}) 进行资金面分析。
+PROMPT_TEMPLATE = """对 {name}({symbol}) 进行资金面分析。
 
+核心逻辑（thesis）：{thesis}
 当前市场状态：{market_state}
 分析模式：{mode}
 
 可用数据：
 {data}
 
-请按以下顺序分析：
-1. **主力资金流向**：最近5日主力净流入/流出趋势，与股价是否背离？
-2. **超大单异动**：是否有R7或类似的大单异动信号？持续性和强度如何？
-3. **大中小单分布**：超大单、大单、中单、小单的占比变化，散户在接盘还是出货？
-4. **筹码分布**：近期筹码是集中还是分散？获利盘比例？
-5. **成交量结构**：放量是出现在上涨还是下跌中？主动性买盘 vs 卖盘？
+你的任务是推理：**从资金行为看，这个 thesis 有没有聪明钱在布局？**
+- 主力资金流动方向与 thesis 预期的方向一致吗？
+- 是否有异常的大单/超大单活动？是埋伏还是出货？
+- 筹码在集中还是分散？谁在买谁在卖？
+- 资金行为是提前反应 thesis，还是无视 thesis 在跑？
+
+不要罗列指标，要判断。给出你的 reasoning，然后输出结构化JSON。
 # ============================================================
 # END OF FILL ZONE 2
 # ============================================================
@@ -68,6 +68,7 @@ def analyze(symbol: str, name: str, data_context: dict,
     prompt = PROMPT_TEMPLATE.format(
         symbol=symbol,
         name=name,
+        thesis=data_context.get("holding_thesis", ""),
         data=json.dumps(data_context, ensure_ascii=False, indent=2),
         market_state=market_state,
         mode=mode,

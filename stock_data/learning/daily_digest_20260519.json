@@ -3,53 +3,58 @@
   "date": "2026-05-19",
   "cycle_stage": {
     "stage": "启动",
-    "confidence": 0.5,
-    "signals": [],
-    "strategy_hint": "确认领头羊，追强不追弱",
-    "next_stage_risk": "主升（确认后）或 冰点（假突破）"
+    "confidence": 0.4,
+    "signals": ["信维通信宁波建工多头排列评分92", "润和软件死叉45分垫底", "7只持仓change_pct=0%"],
+    "strategy_hint": "持仓thesis已注入专家prompt，等技术与资金数据验证",
+    "next_stage_risk": "主升（共振确认后）或 持续震荡（thesis与量价背离）"
   },
   "ratio_alerts": {
     "triggered": {},
-    "collision_focus": "连板率×成交量变化率",
-    "data_quality": "from_intraday"
+    "collision_focus": "专家方向冲突（技术/资金看空 vs 情绪看多）",
+    "data_quality": "change_pct=0%可能为非全日数据"
   },
   "expectation_gaps": [
     {
-      "dimension": "辨识度 vs 预期差",
-      "consensus": "资金追逐辨识度最高的标的（龙头）",
-      "potential_gap": "如果龙头被过度定价 → 跟风中存在预期差 → 补涨机会"
+      "dimension": "thesis vs 价格行为",
+      "consensus": "信维通信（星舰IPO 6/18）+ 宁波建工（商业航天+物理算力）thesis成立",
+      "potential_gap": "市场尚未定价→技术与资金面偏弱说明主力还没动手→提前布局窗口 vs 等确认信号"
+    },
+    {
+      "dimension": "专家范式转变",
+      "consensus": "专家不是填空机，是推理者",
+      "potential_gap": "prompt已从checklist改为thesis推理，但输出JSON字段method/trajectory仍不稳"
     }
   ],
   "rules_today": [
     {
-      "id": "R20260509_225741",
-      "condition": "当启动阶段，炸板率出现异常偏离时",
-      "action": "执行操作8-0",
-      "failure_signal": "如果晋级率未同步确认，则规则失效",
-      "is_condensed": false
+      "id": "R20260519_001",
+      "condition": "当LLM专家输出缺method/trajectory字段时",
+      "action": "强化promt中JSON格式示例",
+      "failure_signal": "专家给了高质量文本但漏掉结构化字段",
+      "is_condensed": true
     },
     {
-      "id": "R20260509_225741",
-      "condition": "当启动阶段，晋级率出现异常偏离时",
-      "action": "执行操作8-1",
-      "failure_signal": "如果涨跌停比未同步确认，则规则失效",
-      "is_condensed": false
+      "id": "R20260519_002",
+      "condition": "当Grader拒绝thesis-based推理时",
+      "action": "区分thesis质疑(越界) vs 推理质量审查(职责)",
+      "failure_signal": "Grader误判为事实核查",
+      "is_condensed": true
     }
   ],
-  "rules_condensed_count": 0,
+  "rules_condensed_count": 2,
   "rules_total_count": 2,
   "self_check": {
-    "mistake": "数据滞后：用了T-2的数据做T+0判断",
-    "mistake_root_cause": "惯性输出",
-    "ego_challenge": "",
+    "mistake": "一开始把thesis硬塞进prompt当指令，而不是让专家自己用thesis推理",
+    "mistake_root_cause": "把LLM当模板引擎用，低估了推理能力",
+    "ego_challenge": "用户说'专家不是摆设'——prompt设计理念需要迭代",
     "discipline_breach": "",
-    "feedback": "测试反馈"
+    "feedback": "专家应自主推理查证，不是被动执行指令"
   },
   "forecast_updates": {
-    "new": 1
+    "new": 0
   },
   "efficiency": {
-    "total_calls": 21
+    "total_calls": 18
   },
-  "compressed_at": "2026-05-09 22:57"
+  "compressed_at": "2026-05-19 16:10"
 }

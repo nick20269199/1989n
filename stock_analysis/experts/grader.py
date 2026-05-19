@@ -15,7 +15,10 @@ GRADER_ID = "grader"
 
 SYSTEM_PROMPT = """你是一位交易决策质量审核官。你的职责是评估分析报告是否达到可执行标准。
 你只评估质量，不进行额外的市场分析。
-你必须严格按五维标准评分，不因报告内容与你的判断一致而放松标准。"""
+你必须严格按五维标准评分，不因报告内容与你的判断一致而放松标准。
+
+**重要：持仓核心逻辑（thesis）是用户提供的事实前提。你的任务是评估专家对这个 thesis 的运用质量，
+而不是质疑 thesis 本身是否属实。如果专家逻辑自洽地使用了 thesis，就是合格的推理。"""
 
 GRADER_PROMPT = """请评估以下交易分析报告的质量。
 
@@ -53,6 +56,7 @@ GRADER_PROMPT = """请评估以下交易分析报告的质量。
 
 分析标的：{name}({symbol})
 分析时间：{timestamp}
+持仓核心逻辑（thesis）：{thesis}
 
 以下为 {expert_count} 位专家的分析报告：
 
@@ -82,8 +86,11 @@ GRADER_PROMPT = """请评估以下交易分析报告的质量。
 pass条件: 平均分 >= {min_score} 且 方向得分 >= 0.5"""
 
 
-def grade(symbol: str, name: str, expert_outputs: list[dict]) -> dict:
+def grade(symbol: str, name: str, expert_outputs: list[dict], thesis: str = "") -> dict:
     """Grade expert outputs using 5-dimension gate.
+
+    Args:
+        thesis: core holding logic (user-provided fact premise)
 
     Returns:
         dict with passed, scores, failures, merged_direction
@@ -116,6 +123,7 @@ def grade(symbol: str, name: str, expert_outputs: list[dict]) -> dict:
         symbol=symbol,
         name=name,
         timestamp=datetime.now().isoformat(),
+        thesis=thesis,
         expert_count=len(expert_outputs),
         expert_reports="\n\n".join(reports),
         min_score=GRADER_MIN_SCORE,
