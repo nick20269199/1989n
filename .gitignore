@@ -35,11 +35,17 @@ stock_data/morning_brief_latest.*
 stock_data/task_dashboard.md
 stock_data/news_*.json
 stock_data/call_auction_*.json
-stock_data/status/front-office_status.json
-stock_data/status/error_kb_hook_report.json
+stock_data/scan_*.json
+stock_data/closing_review.*
+stock_data/Table.txt
+stock_data/analysis_30min_*
+stock_data/reading_notes/
+stock_data/status/*.json
+stock_data/*.db
 
 # 自动推送时间戳
 stock_analysis/data/intraday_push_stamp
+stock_analysis/data/portfolio.json
 
 # 缓存文件（每日重新生成）
 stock_data/index_cache.json
