@@ -37,6 +37,7 @@ from config import (
     STOCK_DATA_DIR, HEADERS, EASTMONEY_QUOTE_URL,
     DATABASE_PATH, FEISHU_BOT_CHAT_ID, PORTFOLIO_FILE,
 )
+from news_scheduler import is_a_share_relevant
 
 CST = timezone(timedelta(hours=8))
 
@@ -516,10 +517,12 @@ def generate_report(snapshot: dict, catalysts: list, news: list,
             )
         lines.append("")
 
-    # ── 快讯 ──
+    # ── 快讯 (A股相关性过滤) ──
     if news:
-        lines.append(f"## 快讯 ({len(news)}条)")
-        for n in news[:8]:
+        relevant_news = [n for n in news if is_a_share_relevant(n.get("title", ""))]
+        filtered = len(news) - len(relevant_news)
+        lines.append(f"## 快讯 ({len(relevant_news)}条" + (f", 过滤{filtered}条" if filtered else "") + ")")
+        for n in relevant_news[:8]:
             t_str = n.get("time", n.get("pub_time", ""))
             if len(t_str) >= 16:
                 t_str = t_str[11:16]
