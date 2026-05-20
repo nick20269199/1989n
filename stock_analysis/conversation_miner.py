@@ -32,13 +32,18 @@ from typing import Optional
 
 # ── 路径配置 ──
 
-JSONL_DIR = Path("C:/Users/1989n/.claude/projects/C--Users-1989n")
-MEMORY_DIR = Path("C:/Users/1989n/.claude/projects/C--Users-1989n/memory")
-INTERACTION_DIR = MEMORY_DIR / "interaction"
-SESSIONS_DIR = INTERACTION_DIR / "sessions"
-DAILY_DIR = INTERACTION_DIR / "daily"
-STATE_FILE = INTERACTION_DIR / ".miner_state.json"
-MEMORY_INDEX = MEMORY_DIR / "MEMORY.md"
+BASE_DATA = Path("D:/1989n/stock_data/interaction")
+INTERACTION_DIR = BASE_DATA
+SESSIONS_DIR = BASE_DATA / "sessions"
+DAILY_DIR = BASE_DATA / "daily"
+DEEP_MINE_DIR = BASE_DATA / "deep_mine"
+STATE_FILE = BASE_DATA / ".miner_state.json"
+
+# JSONL 读取源（C 盘 Claude Code 项目目录，只读不写）
+C_JSONL_DIRS = [
+    Path("C:/Users/1989n/.claude/projects/d--1989n"),
+    Path("C:/Users/1989n/.claude/projects/C--Users-1989n"),
+]
 
 STOCK_ANALYSIS = Path("D:/1989n/stock_analysis")
 sys.path.insert(0, str(STOCK_ANALYSIS))
@@ -47,7 +52,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger("conversation_miner")
 
 # ── 确保目录 ──
-for d in [INTERACTION_DIR, SESSIONS_DIR, DAILY_DIR]:
+MEMORY_INDEX = Path("C:/Users/1989n/.claude/projects/d--1989n/memory/MEMORY.md")
+
+for d in [INTERACTION_DIR, SESSIONS_DIR, DAILY_DIR, DEEP_MINE_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
 
@@ -67,25 +74,26 @@ def save_state(state: dict):
 
 
 def scan_jsonl_files(full_scan: bool = False) -> list[tuple[Path, int]]:
-    """扫描 JSONL 目录，返回 (文件路径, 起始行号) 列表。
+    """遍历 C_JSONL_DIRS，返回 (文件路径, 起始行号) 列表。
 
-    Args:
-        full_scan: True=全量重扫, False=只处理新行
+    state key 用 {dir_name}/{file_name} 避免两个目录文件名冲突。
     """
     state = load_state()
     offsets = state.get("file_offsets", {})
 
-    files = sorted(JSONL_DIR.glob("*.jsonl"), key=lambda p: p.stat().st_mtime, reverse=True)
-
     to_process = []
-    for fp in files:
-        fname = fp.name
-        current_lines = sum(1 for _ in fp.open(encoding="utf-8", errors="replace"))
-        last_offset = 0 if full_scan else offsets.get(fname, 0)
+    for src_dir in C_JSONL_DIRS:
+        if not src_dir.exists():
+            continue
+        for fp in sorted(src_dir.glob("*.jsonl"), key=lambda p: p.stat().st_mtime, reverse=True):
+            key = f"{src_dir.name}/{fp.name}"
+            current_lines = sum(1 for _ in fp.open(encoding="utf-8", errors="replace"))
+            # 兼容旧 state key（无目录前缀的 RAW_DIR 时期）
+            last_offset = 0 if full_scan else offsets.get(key, offsets.get(fp.name, 0))
 
-        if current_lines > last_offset:
-            to_process.append((fp, last_offset))
-            offsets[fname] = current_lines
+            if current_lines > last_offset:
+                to_process.append((fp, last_offset))
+                offsets[key] = current_lines
 
     state["file_offsets"] = offsets
     save_state(state)
@@ -564,25 +572,34 @@ def persist_daily_report(analysis: dict):
 
 
 def update_memory_index():
-    """确保 MEMORY.md 中有交互模式入口。"""
+    """在 MEMORY.md 写入指针（实际数据在 D 盘）。"""
     if not MEMORY_INDEX.exists():
         return
 
+    # 写指针文件到 memory 目录（MEMORY.md 只认同级文件）
+    pointer_path = MEMORY_INDEX.parent / "interaction-patterns.md"
+    pointer_path.write_text(
+        "---\n"
+        "name: interaction-patterns\n"
+        "description: 交互模式档案（数据位于 D 盘）\n"
+        "metadata:\n"
+        "  type: user\n"
+        "---\n"
+        "\n"
+        "# 交互模式档案\n\n"
+        "实际数据文件: `D:/1989n/stock_data/interaction/interaction-patterns.md`\n"
+        "每日日报: `D:/1989n/stock_data/interaction/daily/`\n"
+        "原始会话: `D:/1989n/stock_data/interaction/raw/`\n",
+        encoding="utf-8",
+    )
+
     content = MEMORY_INDEX.read_text(encoding="utf-8")
-    marker = "- [交互模式档案](interaction/interaction-patterns.md)"
+    marker = "- [交互模式档案](interaction-patterns.md)"
 
     if marker not in content:
-        # 插入到用户画像 section
-        insert_point = content.find("## 用户画像 (user/)")
-        if insert_point >= 0:
-            section_end = content.find("\n## ", insert_point + 3)
-            if section_end < 0:
-                section_end = len(content)
-            insert_at = section_end
-            new_entry = f"\n- [交互模式档案](interaction/interaction-patterns.md) — 对话挖掘 → 任务模式/反馈信号/决策脉络/隐性偏好\n"
-            new_content = content[:insert_at] + new_entry + content[insert_at:]
-            MEMORY_INDEX.write_text(new_content, encoding="utf-8")
-            logger.info("MEMORY.md 已添加交互模式入口")
+        content += f"\n{marker} — 对话挖掘输出，数据在 D 盘\n"
+        MEMORY_INDEX.write_text(content, encoding="utf-8")
+        logger.info("MEMORY.md 已添加交互模式指针")
 
 
 # ════════════════════════════════════════════════════════════════
@@ -590,16 +607,12 @@ def update_memory_index():
 # ════════════════════════════════════════════════════════════════
 
 def validate_jsonl_dir():
-    """验证 JSONL 目录可访问。"""
-    if not JSONL_DIR.exists():
-        logger.error(f"JSONL 目录不存在: {JSONL_DIR}")
-        return False
-    files = list(JSONL_DIR.glob("*.jsonl"))
-    if not files:
-        logger.warning(f"JSONL 目录无 .jsonl 文件: {JSONL_DIR}")
-        return False
-    logger.info(f"JSONL 目录: {len(files)} 个文件")
-    return True
+    """检查 C_JSONL_DIRS 中至少一个有 .jsonl 文件。"""
+    for src_dir in C_JSONL_DIRS:
+        if src_dir.exists() and list(src_dir.glob("*.jsonl")):
+            return True
+    logger.error(f"C_JSONL_DIRS 均无 .jsonl 文件: {[str(d) for d in C_JSONL_DIRS]}")
+    return False
 
 
 def main():
