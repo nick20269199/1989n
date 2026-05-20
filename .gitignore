@@ -17,18 +17,29 @@ stock_data/vv_transcripts/
 *.wav
 *.webm
 
+# 文档/二进制数据（非源码）
+*.pdf
+Documents/localmarket_3/
+
 # 数据库（太大，只在本地用）
 stock_data/stock.db
 
 # 自动生成的数据产物（非源码）
 stock_data/expert_outputs/
 stock_data/cognitive_output/
+stock_data/interaction/
+stock_data/learning/
 stock_data/hot_stocks.json
 stock_data/last_error.txt
 stock_data/morning_brief_latest.*
 stock_data/task_dashboard.md
+stock_data/news_*.json
+stock_data/call_auction_*.json
 stock_data/status/front-office_status.json
 stock_data/status/error_kb_hook_report.json
+
+# 自动推送时间戳
+stock_analysis/data/intraday_push_stamp
 
 # 缓存文件（每日重新生成）
 stock_data/index_cache.json
@@ -52,6 +63,9 @@ stock_data/bilibili_relevant_videos.json
 
 # 本地工具状态
 .cc-switch/
+
+# 图谱构建产物（自动生成）
+graphify-out/
 
 # 备份
 backups/
