@@ -1,12 +1,16 @@
 ---
 name: code-review
-description: 逻辑漏洞检查 + 边界风险 + 回归风险扫描，改提交过一遍再走
+description: 逻辑漏洞检查 + 边界风险 + 回归风险扫描，改提交过一遍再走。TRIGGER when: 编辑/写入代码文件后自动建议review、提交前、重构后、合入PR前。DO NOT TRIGGER when: 只改注释/文档/测试/配置、用户明确说不review。
 origin: 1989n
 ---
 
 # Code Review
 
 > 在任何代码改动合入前，系统性地过一遍**逻辑正确性、边界条件、回归影响**。
+
+## 自动触发
+
+编辑/写入 `.py` 等代码文件后，自动建议运行 `/code-review`。不阻塞，仅建议。
 
 ## 通用 Review 清单
 

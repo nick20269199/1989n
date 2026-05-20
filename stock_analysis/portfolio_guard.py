@@ -24,19 +24,48 @@ from daily_compress import (
     RATIO_BASELINES_FILE, KEY_RATIOS,
 )
 
-# 当前持仓（与 CLAUDE.md 同步）
-PORTFOLIO = [
-    {"code": "000062", "name": "深圳华强", "shares": 2000, "cost": 36.88,
-     "stop": 34.30, "sector": "电子元器件分销", "type": "题材"},
-    {"code": "002156", "name": "通富微电", "shares": 2300, "cost": 49.79,
-     "stop": 46.30, "sector": "半导体封测", "type": "成长"},
-    {"code": "300480", "name": "光力科技", "shares": 700, "cost": 36.29,
-     "stop": 33.75, "sector": "半导体设备", "type": "成长"},
-    {"code": "002407", "name": "多氟多", "shares": 400, "cost": 35.60,
-     "stop": 33.11, "sector": "锂电化工", "type": "周期"},
-    {"code": "300342", "name": "天银机电", "shares": 200, "cost": 64.50,
-     "stop": 59.99, "sector": "商业航天/军工", "type": "题材"},
-]
+# 从 portfolio.json 动态加载持仓（唯一信源）
+PROJECT_DIR = Path(__file__).parent
+PORTFOLIO_FILE = PROJECT_DIR / "data" / "portfolio.json"
+
+# 简单持仓类型映射（成本价越高越接近成长，越低越接近题材）
+def _classify_type(sector: str, cost: float) -> str:
+    sector_lower = sector.lower()
+    if any(k in sector_lower for k in ["银行", "保险", "电力", "公用", "交通", "高速"]):
+        return "价值"
+    if any(k in sector_lower for k in ["半导体", "芯片", "软件", "生物", "医疗", "新能源"]):
+        return "成长"
+    if any(k in sector_lower for k in ["地产", "化工", "有色", "钢铁", "煤炭", "基建"]):
+        return "周期"
+    return "题材"
+
+def _load_portfolio() -> list[dict]:
+    """从 portfolio.json 加载持仓，自动计算止损价（-7%）。"""
+    if not PORTFOLIO_FILE.exists():
+        print(f"[WARN] {PORTFOLIO_FILE} 不存在，使用空持仓")
+        return []
+    try:
+        data = json.loads(PORTFOLIO_FILE.read_text(encoding="utf-8"))
+        holdings = data.get("holdings", [])
+        portfolio = []
+        for h in holdings:
+            cost = h["cost"]
+            stop = round(cost * 0.93, 2)  # -7% 硬止损
+            portfolio.append({
+                "code": h["code"],
+                "name": h["name"],
+                "shares": h["shares"],
+                "cost": cost,
+                "stop": stop,
+                "sector": h.get("sector", ""),
+                "type": _classify_type(h.get("sector", ""), cost),
+            })
+        return portfolio
+    except Exception as e:
+        print(f"[ERROR] 加载持仓失败: {e}")
+        return []
+
+PORTFOLIO = _load_portfolio()
 
 # 各周期阶段的持仓策略
 STAGE_PORTFOLIO_RULES = {

@@ -14,6 +14,13 @@ try:
 except Exception:
     pass
 
+# Apply global requests timeout patch (覆盖 akshare 等不设 timeout 的调用)
+try:
+    from _patch_timeout import apply as _apply_timeout_patch
+    _apply_timeout_patch()
+except Exception:
+    pass
+
 # === 路径配置 ===
 PROJECT_DIR = Path(__file__).parent
 STOCK_DATA_DIR = Path(os.getenv("STOCK_DATA_DIR", "D:/1989n/stock_data"))

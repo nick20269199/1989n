@@ -41,7 +41,7 @@ from config import (
 # ── 多源数据路由 (自动健康检查 + 回退) ──
 from data_source_router import get_quotes as router_get_quotes
 from data_source_router import get_index_quotes as router_get_index_quotes
-from data_source_router import get_us_index_quotes, check_channels, EASTMONEY_BLOCKED
+from data_source_router import get_us_index_quotes, check_channels, EASTMONEY_BLOCKED, safe_akshare_call
 from data_quality_gate import preflight_scan, freshness_check, require_fresh
 from dept_status_protocol import publish_status
 
@@ -296,12 +296,12 @@ def _fallback_holdings() -> list[dict]:
         {"code": "000981", "name": "山子高科", "shares": 8000, "cost": 4.411, "sector": "汽车零部件/房地产", "first_buy": "2026-05-15", "latest_buy": "2026-05-18"},
         {"code": "601789", "name": "宁波建工", "shares": 5200, "cost": 6.206, "sector": "建筑工程/基建", "first_buy": "2026-05-05", "latest_buy": "2026-05-15"},
         {"code": "002156", "name": "通富微电", "shares": 1000, "cost": 44.850, "sector": "半导体封测", "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
-        {"code": "002208", "name": "合肥城建", "shares": 900, "cost": 19.849, "sector": "房地产", "first_buy": "2026-05-15", "latest_buy": "2026-05-15"},
+        {"code": "002208", "name": "合肥城建", "shares": 900, "cost": 23.500, "sector": "房地产", "first_buy": "2026-05-15", "latest_buy": "2026-05-19"},
+        {"code": "600860", "name": "京城股份", "shares": 3700, "cost": 11.060, "sector": "气体储运/氢能源", "first_buy": "2026-05-19", "latest_buy": "2026-05-19"},
         {"code": "300792", "name": "壹网壹创", "shares": 400, "cost": 35.520, "sector": "电商服务/数字营销", "first_buy": "2026-05-13", "latest_buy": "2026-05-18"},
         {"code": "300339", "name": "润和软件", "shares": 300, "cost": 44.910, "sector": "金融科技/鸿蒙", "first_buy": "2026-05-18", "latest_buy": "2026-05-18"},
         {"code": "300136", "name": "信维通信", "shares": 300, "cost": 115.220, "sector": "消费电子/射频", "first_buy": "2026-05-18", "latest_buy": "2026-05-18"},
-    ]# ── 行情获取 ─────────────────────────────────────────────────────
-
+    ]
 
 def _market_prefix(code: str) -> str:
     """根据代码返回交易所前缀: sz 或 sh"""
@@ -831,7 +831,7 @@ def fetch_hot_stocks_zt_pool() -> list[dict]:
     """从 akshare 涨停板池获取热门股票（替代已死的10jqka/东方财富）"""
     today = datetime.now().strftime("%Y%m%d")
     try:
-        df = ak.stock_zt_pool_em(date=today)
+        df = safe_akshare_call(ak.stock_zt_pool_em, date=today)
         if df is None or df.empty:
             logger.info("涨停板池: 无数据")
             return []
@@ -1593,7 +1593,7 @@ def run_hot_stocks():
             sign = "+" if s.get("change_pct", 0) >= 0 else ""
             lines.append(f"- {s.get('rank','')}. {s['name']}({s['code']}) {s.get('price','')} ({sign}{s.get('change_pct',0):.2f}%)")
         ok = send_feishu_message(f"热门股票 | {datetime.now().strftime('%H:%M')}", "\n".join(lines), chat_id="midday")
-    logger.info(f"飞书发送: {'成功' if ok else '失败'}")
+        logger.info(f"飞书发送: {'成功' if ok else '失败'}")
 
     logger.info("hot_stocks 完成")
     return output

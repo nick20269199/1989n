@@ -119,7 +119,8 @@ def fetch_market_snapshot() -> dict:
     # 1.2 市场广度 — 用 akshare 获取完整涨跌统计
     try:
         import akshare as ak
-        spot = ak.stock_zh_a_spot_em()
+        from data_source_router import safe_akshare_call
+        spot = safe_akshare_call(ak.stock_zh_a_spot_em)
         up_mask = spot['涨跌幅'] > 0
         down_mask = spot['涨跌幅'] < 0
         zt_mask = spot['涨跌幅'] >= 9.8

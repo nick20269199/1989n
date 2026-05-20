@@ -166,10 +166,11 @@ def load_sector_rankings() -> dict:
         {"industry_top": [...], "concept_top": [...], "fund_flow_top": [...], "fund_flow_bottom": [...]}
     """
     import akshare as ak
+    from data_source_router import safe_akshare_call
     result = {"industry_top": [], "concept_top": [], "fund_flow_top": [], "fund_flow_bottom": []}
 
     try:
-        df = ak.stock_board_industry_name_em()
+        df = safe_akshare_call(ak.stock_board_industry_name_em)
         if df is not None and not df.empty:
             cols = ["板块名称", "涨跌幅", "上涨家数", "下跌家数", "领涨股票"]
             available = [c for c in cols if c in df.columns]
@@ -180,7 +181,7 @@ def load_sector_rankings() -> dict:
         logger.warning(f"行业板块获取失败: {e}")
 
     try:
-        df = ak.stock_board_concept_name_em()
+        df = safe_akshare_call(ak.stock_board_concept_name_em)
         if df is not None and not df.empty:
             cols = ["板块名称", "涨跌幅", "上涨家数", "下跌家数"]
             available = [c for c in cols if c in df.columns]
@@ -191,7 +192,7 @@ def load_sector_rankings() -> dict:
         logger.warning(f"概念板块获取失败: {e}")
 
     try:
-        df = ak.stock_sector_fund_flow_rank(indicator="今日", sector_type="行业资金流向")
+        df = safe_akshare_call(ak.stock_sector_fund_flow_rank, indicator="今日", sector_type="行业资金流向")
         if df is not None and not df.empty:
             cols = ["名称", "主力净流入-净额", "主力净流入-净占比", "今日涨跌幅"]
             available = [c for c in cols if c in df.columns]

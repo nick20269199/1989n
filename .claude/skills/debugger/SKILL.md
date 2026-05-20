@@ -1,6 +1,6 @@
 ---
 name: debugger
-description: 复现步骤 → 定位根因 → 最小修复，不靠猜不闷头重试
+description: 复现步骤 → 定位根因 → 最小修复，不靠猜不闷头重试。TRIGGER when: 用户说"报错了"/"出错了"/"崩了"/"挂了"/"跑不起来"、last_error.txt 有内容、脚本非零退出、构建失败。DO NOT TRIGGER when: 用户明确说"没事"、已知预期错误。
 origin: 1989n
 ---
 

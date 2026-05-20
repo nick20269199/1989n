@@ -304,6 +304,35 @@ def get_index_quotes() -> list[dict]:
     return result
 
 
+# ═══════════════════════════════════════════
+# akshare 超时包装: 解决东方财富/WAF 挂起问题
+# ═══════════════════════════════════════════
+
+_AKSHARE_TIMEOUT = 15  # 所有 akshare 调用的硬超时（秒）
+
+def safe_akshare_call(func, *args, **kwargs):
+    """Run akshare function with timeout protection (Windows-safe, no signal).
+
+    用法::
+        df = safe_akshare_call(ak.stock_zt_pool_em, date="20260520")
+        # 而不是: df = ak.stock_zt_pool_em(date="20260520")
+
+    超时后返回 None, 不抛异常。
+    """
+    from concurrent.futures import ThreadPoolExecutor, TimeoutError as _TimeoutError
+    timeout = kwargs.pop("_timeout", _AKSHARE_TIMEOUT)
+    with ThreadPoolExecutor(1) as pool:
+        future = pool.submit(func, *args, **kwargs)
+        try:
+            return future.result(timeout=timeout)
+        except _TimeoutError:
+            logger.warning(f"akshare 调用超时 ({timeout}s): {func.__name__}")
+            return None
+        except Exception:
+            # akshare 自身异常由调用方 try/except 处理
+            raise
+
+
 def get_us_index_quotes() -> list[dict]:
     """通过akshare获取美股指数收盘数据 (盘前使用前一日数据)。
     返回 [{name, price, change_pct, date}, ...]"""
@@ -317,7 +346,7 @@ def get_us_index_quotes() -> list[dict]:
     symbols = [("道琼斯", ".DJI"), ("纳斯达克", ".IXIC"), ("标普500", ".INX")]
     for name, symbol in symbols:
         try:
-            df = ak.index_us_stock_sina(symbol=symbol)
+            df = safe_akshare_call(ak.index_us_stock_sina, symbol=symbol)
             if df is not None and len(df) >= 2:
                 last = df.iloc[-1]
                 prev = df.iloc[-2]

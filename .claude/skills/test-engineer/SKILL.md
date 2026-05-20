@@ -1,6 +1,6 @@
 ---
 name: test-engineer
-description: 关键路径要有证据 — 找出最值得补的测试，提供验证方案和数据
+description: 关键路径要有证据 — 找出最值得补的测试，提供验证方案和数据。TRIGGER when: 新增功能/模块没有测试、修改了关键路径代码（涨停池/保鲜门禁/持仓加载/grader/飞书路由/JSONL解析）、测试覆盖率明显不足。DO NOT TRIGGER when: 只改测试本身、纯配置/文档变更、明确不测的边界。
 origin: 1989n
 ---
 

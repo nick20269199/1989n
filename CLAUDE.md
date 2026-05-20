@@ -1,13 +1,92 @@
 # 1989n 量化交易系统
 
-## 当前持仓 — 以 data/portfolio.json 为唯一准 (最后同步: 2026-05-19)
+## 开发环境
+
+```bash
+# Python 解释器
+/d/Python314/python
+
+# 运行测试（全部）
+/d/Python314/python -m pytest stock_analysis/tests/ -v
+
+# 运行单个测试文件
+/d/Python314/python -m pytest stock_analysis/tests/test_grader.py -v
+
+# 运行单个测试用例
+/d/Python314/python -m pytest stock_analysis/tests/test_grader.py::test_grade_below_threshold -v
+
+# 运行脚本（必须从 stock_analysis 目录）
+cd D:/1989n/stock_analysis && /d/Python314/python -m script_name
+
+# SEL 知识库健康检查
+/d/Python314/python D:/1989n/stock_analysis/_sel_lint.py
+```
+
+## 架构概览
+
+### 数据流
+
+```text
+外部数据源 (TDX/新浪/腾讯/搜狐/财联社)
+  → data_source_router.py (自动健康检查+通道回退)
+    → 采集脚本 (daily_task.py / call_auction.py / news_scheduler.py)
+      → JSON/DB 写入 D:/1989n/stock_data/
+        → 分析层 (晨报/复盘/盘中) → 飞书推送
+```
+
+关键设计：**无单点故障**。每类数据至少 2 个独立通道，东方财富 WAF 封锁后自动跳过。
+
+### 多 Agent 分析管线 (experts/)
+
+```bash
+experts/
+  lead.py          — 编排器：并行调度 5 专家 → 汇总 → 送 grader
+  grader.py        — 五维门禁 (方向/方式/轨迹/边际/逻辑)，评分<阈值阻断
+  expert1_tech.py  — 技术面 (价格/均线/量能)
+  expert2_money.py — 资金面 (主力流向/大单分布)
+  expert3_sentiment.py — 情绪面 (涨停/跌停/市场情绪)
+  expert4_macro.py — 宏观面 (市场体制/板块轮动)
+  expert5_risk.py  — 风控 (止损/集中度/持仓时长)
+  base.py          — 基类 + LLM 调用 + 自修复装饰器
+  config.py        — 权重/超时/路径配置
+```
+
+触发：`python -m stock_analysis.experts.lead --symbol 002156 --name 通富微电` 或 `--portfolio` 全持仓扫描。
+
+### 调度层
+
+Windows Task Scheduler (~15 个任务) → `run_*.bat` → Python 入口脚本。所有 .bat 在 `stock_analysis/` 下。
+
+### 输出层
+
+`feishu_sender.py` — 基于飞书 IM API (tenant_access_token)，支持 4 种消息类型 + 7 路群路由 + 15条/分钟限流。
+
+### 错误处理链
+
+脚本入口调 `error_capture.trap()` → 异常自动写 `D:/1989n/stock_data/last_error.txt` → 同时触发 error_kb_hook 匹配知识库 + session_tracker 记录。
+
+### 测试策略 (stock_analysis/tests/)
+
+| 文件 | 覆盖路径 | 等级 |
+|------|---------|------|
+| test_portfolio_loader.py | 持仓加载 + 后备方案 + 字段标准化 | critical |
+| test_data_quality_gate.py | 保鲜门禁 + 过期检测 + 空文件 | critical |
+| test_hot_stocks_pipeline.py | 涨停池数据转换 (akshare mock) | critical |
+| test_grader.py | 评分逻辑 + 阻断条件 | high |
+| test_feishu_router.py | 路由解析 + 限流 + 发送开关 | high |
+| test_conversation_miner.py | JSONL 解析 + 消息提取 | medium |
+
+运行：`/d/Python314/python -m pytest stock_analysis/tests/ -v`
+
+## 当前持仓 — 以 data/portfolio.json 为唯一准 (最后同步: 2026-05-20)
 
 | 代码 | 名称 | 持仓(股) | 成本价 | 行业 |
 |------|------|---------|--------|------|
 | 000981 | 山子高科 | 8000 | 4.411 | 汽车零部件/房地产 |
 | 601789 | 宁波建工 | 5200 | 6.206 | 建筑工程/基建 |
 | 002156 | 通富微电 | 1000 | 44.850 | 半导体封测 |
-| 002208 | 合肥城建 | 900 | 19.849 | 房地产 |
+| 002208 | 合肥城建 | 900 | 23.500 | 房地产 |
+| 600860 | 京城股份 | 3700 | 11.060 | 气体储运/氢能源 |
 | 300792 | 壹网壹创 | 400 | 35.520 | 电商服务/数字营销 |
 | 300339 | 润和软件 | 300 | 44.910 | 金融科技/鸿蒙 |
 | 300136 | 信维通信 | 300 | 115.220 | 消费电子/射频 |
