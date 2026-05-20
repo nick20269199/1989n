@@ -293,16 +293,14 @@ def _normalize_holdings(raw: list[dict]) -> list[dict]:
 def _fallback_holdings() -> list[dict]:
     """硬编码后备持仓（与 portfolio.json 一致的应急备份）"""
     return [
-        {"code": "000981", "name": "山子高科", "shares": 8000, "cost": 4.411, "sector": "汽车零部件/房地产", "first_buy": "2026-05-15", "latest_buy": "2026-05-18"},
         {"code": "601789", "name": "宁波建工", "shares": 5200, "cost": 6.206, "sector": "建筑工程/基建", "first_buy": "2026-05-05", "latest_buy": "2026-05-15"},
         {"code": "002156", "name": "通富微电", "shares": 1000, "cost": 44.850, "sector": "半导体封测", "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
-        {"code": "002208", "name": "合肥城建", "shares": 900, "cost": 23.500, "sector": "房地产", "first_buy": "2026-05-15", "latest_buy": "2026-05-19"},
-        {"code": "600860", "name": "京城股份", "shares": 3700, "cost": 11.060, "sector": "气体储运/氢能源", "first_buy": "2026-05-19", "latest_buy": "2026-05-19"},
+        {"code": "002208", "name": "合肥城建", "shares": 3000, "cost": 24.599, "sector": "房地产", "first_buy": "2026-05-15", "latest_buy": "2026-05-20"},
         {"code": "300792", "name": "壹网壹创", "shares": 400, "cost": 35.520, "sector": "电商服务/数字营销", "first_buy": "2026-05-13", "latest_buy": "2026-05-18"},
         {"code": "300339", "name": "润和软件", "shares": 300, "cost": 44.910, "sector": "金融科技/鸿蒙", "first_buy": "2026-05-18", "latest_buy": "2026-05-18"},
-        {"code": "300136", "name": "信维通信", "shares": 300, "cost": 115.220, "sector": "消费电子/射频", "first_buy": "2026-05-18", "latest_buy": "2026-05-18"},
+        {"code": "300136", "name": "信维通信", "shares": 400, "cost": 113.605, "sector": "消费电子/射频", "first_buy": "2026-05-18", "latest_buy": "2026-05-20"},
+        {"code": "600498", "name": "烽火通信", "shares": 300, "cost": 57.210, "sector": "通信设备", "first_buy": "2026-05-20", "latest_buy": "2026-05-20"},
     ]
-
 def _market_prefix(code: str) -> str:
     """根据代码返回交易所前缀: sz 或 sh"""
     if code.startswith(("0", "3")):

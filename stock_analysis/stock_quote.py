@@ -1,6 +1,6 @@
 """
-stock_quote.py — 多源行情工具 v2.0
-通道: 新浪(实时) + 腾讯(实时) + 搜狐(K线) + CLS(新闻经由morning_brief.py)
+stock_quote.py — 多源行情工具 v2.1
+通道: 通达信(pytdx直连, 主) → 新浪(备) → 腾讯(备) → 搜狐(K线)
 东方财富WAF封锁不影响本工具。
 
 用法:
@@ -112,15 +112,12 @@ def sohu_kline(code, days=60):
         return bars
     except: return None
 
-# ── 混合行情（新浪主用 → 腾讯备用） ────────────
+# ── 混合行情（通达信主用 → 新浪 → 腾讯 三级回退） ──
 
 def get_quotes(codes):
-    q = sina_quotes(codes)
-    missing = [c for c in codes if c not in q]
-    if missing:
-        q2 = tencent_quotes(missing)
-        q.update(q2)
-    return q
+    """通达信(主) → 新浪(备) → 腾讯(备), 逐级回退。"""
+    from data_source_router import get_quotes as router_get_quotes
+    return router_get_quotes(codes)
 
 # ── 持仓配置 ─────────────────────────────────────
 
@@ -196,7 +193,7 @@ def cmd_check(args):
     print("-" * 65)
     total_pnl = total_mkt - total_cost
     print(f"总成本 {total_cost:>10.2f} | 总市值 {total_mkt:>10.2f} | 总盈亏 {total_pnl:>+10.2f} ({total_pnl/total_cost*100:>+.2f}%)")
-    print(f"数据源: 新浪(主) + 腾讯(备)\n")
+    print(f"数据源: 通达信(主) + 新浪(备) + 腾讯(备)\n")
 
 def cmd_kline(args):
     if not args: print("用法: python stock_quote.py kline CODE [--days N]"); return
@@ -216,11 +213,23 @@ def cmd_kline(args):
 def cmd_sources(args):
     code = args[0] if args else '002156'
     print(f"\n=== 数据源诊断 | {code} ===\n")
+
+    # TDX 实时
+    try:
+        from data_source_router import fetch_quotes_tdx
+        q = fetch_quotes_tdx([code])
+        if q and code in q:
+            print(f"  ✅ 通达信TDX: 现价 {q[code]['current']} ({q[code].get('name','')})")
+        else:
+            print(f"  ❌ 通达信TDX: 无数据")
+    except Exception as e:
+        print(f"  ❌ 通达信TDX: {e}")
+
     for name, fn in [('新浪实时', lambda: sina_quotes([code])), ('腾讯实时', lambda: tencent_quotes([code]))]:
         try:
             q = fn()
             if q and code in q:
-                print(f"  ✅ {name}: 现价 {q[code]['current']} ({q[code].get('name','')})")
+                print(f"  {'✅' if name != '腾讯实时' else '⚠'} {name}: 现价 {q[code]['current']} ({q[code].get('name','')})")
             else:
                 print(f"  ❌ {name}: 无数据")
         except Exception as e:
