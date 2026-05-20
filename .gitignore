@@ -70,6 +70,29 @@ graphify-out/
 # 备份
 backups/
 
+# Claude Code 安装提取产物（已从磁盘删除）
+claude-code-source/
+claude-code-package/
+claude-code-extracted/
+claude-code-2.1.88.tgz
+ponponon_claude_code_src/
+claude_code_src_npm.tgz
+claude_code_src_api.zip
+
+# 一次性工具脚本（本地使用，不提交）
+download_*.py
+extract_sourcemap.py
+verify_source.py
+compare_source_binary.py
+test_dir.txt
+memories.db
+
+# 运行测试输出 / 抖音 cookie（不提交）
+stock_analysis/douyin_cookies*.txt
+stock_analysis/run*.txt
+stock_analysis/run_quick.txt
+stock_analysis/test_20runs*.py
+
 # Python
 __pycache__/
 *.pyc
