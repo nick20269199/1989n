@@ -1,0 +1,30 @@
+{
+  "title": "隔夜分析 | 2026-05-20日",
+  "date": "2026-05-20",
+  "time": "23:30:04",
+  "us_market": [
+    {
+      "name": "道琼斯",
+      "price": 49363.8789,
+      "change_pct": -0.65,
+      "date": "2026-05-19",
+      "source": "akshare"
+    },
+    {
+      "name": "纳斯达克",
+      "price": 25870.709,
+      "change_pct": -0.84,
+      "date": "2026-05-19",
+      "source": "akshare"
+    },
+    {
+      "name": "标普500",
+      "price": 7353.6099,
+      "change_pct": -0.67,
+      "date": "2026-05-19",
+      "source": "akshare"
+    }
+  ],
+  "key_developments": [],
+  "next_day_outlook": "正常交易"
+}

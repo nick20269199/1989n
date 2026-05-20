@@ -3,9 +3,10 @@
 ## 待蒸馏文件 (匹配规则)
 
 - `closing_review.json` (8.8KB)
+- `git_push.log` (561.3KB)
 - `last_error.txt` (0.2KB)
 
-共 2 个文件待蒸馏
+共 3 个文件待蒸馏
 
 ## 今日其他产出
 
@@ -13,34 +14,34 @@
 - `analysis_30min_20260520_1130.md` (0.6KB)
 - `analysis_30min_20260520_1500.json` (1.6KB)
 - `analysis_30min_20260520_1500.md` (0.6KB)
+- `analysis_overnight_20260520_2330.json` (0.6KB)
+- `analysis_overnight_20260520_2330.md` (0.2KB)
 - `call_auction_20260520_0926.json` (1.8KB)
 - `closing_review.log` (25.7KB)
 - `closing_review.md` (1.3KB)
-- `cognitive_agent.log` (6.9KB)
+- `cognitive_agent.log` (11.1KB)
 - `concept_mapping.json` (5.3KB)
+- `distillation_brief.md` (2.0KB)
+- `distill_queue.json` (3.9KB)
+- `evening.log` (1.4KB)
 - `hot_stocks.json` (14.8KB)
-- `hot_stocks.log` (275.4KB)
+- `hot_stocks.log` (281.1KB)
 - `intraday_close.log` (48.6KB)
 - `intraday_midday.log` (41.4KB)
 - `morning_brief_latest.json` (0.2KB)
 - `morning_brief_latest.md` (7.7KB)
-- `news_intraday_20260520_0930.json` (26.3KB)
-- `news_intraday_20260520_1000.json` (11.3KB)
-- `news_intraday_20260520_1030.json` (15.8KB)
-- `news_intraday_20260520_1100.json` (11.7KB)
-- `news_intraday_20260520_1300.json` (31.7KB)
 
-... 还有 1120 个文件
+... 还有 1127 个文件
 
 ## 队列积压 (未蒸馏)
 
-- 2026-05-19: morning_enhanced.json
 - 2026-05-19: sentinel_status.json
 - 2026-05-19: git_push.log
 - 2026-05-20: closing_review.json
 - 2026-05-20: last_error.txt
+- 2026-05-20: git_push.log
 
-... 还有 25 条
+... 还有 26 条
 
 ---
 
@@ -58,4 +59,4 @@
 4. 如无新知识 → 标记队列条目为 skipped
 5. 推送更新到 GitHub (git_auto_push.py)
 
-> 生成时间: 2026-05-20 15:47
+> 生成时间: 2026-05-20 23:47
