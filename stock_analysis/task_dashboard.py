@@ -53,7 +53,9 @@ def get_win_task_status(task_name: str) -> dict:
             icon = state_icon.get(state, "❓")
 
             # 结果转图标
-            result_icon = "✅" if last_result == "0" else f"❌({last_result})"
+            # 良性退出码白名单: STATUS_CONTROL_C_EXIT (Python/akshare退出时子进程发送Ctrl+C)
+            _BENIGN_CODES = {"0", "3221225786", "-1073741510"}
+            result_icon = "✅" if last_result in _BENIGN_CODES else f"❌({last_result})"
             if last_result in ("267011", "2147942401"):  # 从未运行过
                 result_icon = "—"
 

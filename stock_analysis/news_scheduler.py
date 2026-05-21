@@ -818,6 +818,27 @@ def main(mode: str = "auto") -> int:
     Returns:
         int: 0 成功, 1 失败
     """
+    # 将 stderr 重定向到日志文件，定时任务直接跑 Python 时 crash traceback 不会丢失
+    _log_dir = STOCK_DATA_DIR / "logs"
+    _log_dir.mkdir(parents=True, exist_ok=True)
+    _log_file = _log_dir / f"news_{mode}.log"
+    try:
+        import io
+        _log_fh = open(_log_file, "a", encoding="utf-8")
+        # 保留原始 stderr 引用以防递归，追加到日志
+        _orig_stderr = sys.stderr
+        _stderr_buf = io.TextIOWrapper(_log_fh.buffer, encoding="utf-8", line_buffering=True)
+        class _TeeStderr:
+            def write(self, text):
+                _orig_stderr.write(text)
+                _stderr_buf.write(text)
+            def flush(self):
+                _orig_stderr.flush()
+                _stderr_buf.flush()
+        sys.stderr = _TeeStderr()
+    except Exception:
+        pass
+
     logger.info(f"News Scheduler 启动 | 模式: {mode} | 时间: {timestamp_str()}")
 
     # auto 模式: 自动判断

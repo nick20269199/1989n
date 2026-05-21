@@ -21,12 +21,16 @@ logger = logging.getLogger("health_check")
 
 # Windows tasks expected (StockNews_* and StockNightlyHealth are Claude Code crons)
 WIN_TASKS = [
+    "StockAnalysis_HealthCheck",
     "StockAnalysis_MorningBrief",
-    "StockAnalysis_ClosingReview",
+    "StockAnalysis_CallAuction",
     "StockAnalysis_HotStocks",
     "StockAnalysis_IntradayMidday",
     "StockAnalysis_IntradayClose",
+    "StockAnalysis_ClosingReview",
     "StockAnalysis_TechScan",
+    "StockAnalysis_NightlyPlan",
+    "StockAnalysis_Evening",
     "StockAnalysis_Overnight",
 ]
 
