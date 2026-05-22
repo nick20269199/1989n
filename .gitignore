@@ -29,6 +29,7 @@ stock_data/expert_outputs/
 stock_data/cognitive_output/
 stock_data/interaction/
 stock_data/learning/
+stock_data/market_pool/
 stock_data/hot_stocks.json
 stock_data/last_error.txt
 stock_data/morning_brief_latest.*
