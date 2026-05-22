@@ -68,13 +68,14 @@ def save_kline(code: str, bars: list[dict]):
         return
 
     df_new = pd.DataFrame(bars)
-    df_new["date"] = df_new["date"].astype(str)
+    # 统一日期格式为 YYYYMMDD（去掉横线，兼容 YYYY-MM-DD 和 YYYYMMDD 两种输入）
+    df_new["date"] = df_new["date"].astype(str).str.replace("-", "")
     df_new = df_new.sort_values("date").drop_duplicates(subset="date")
 
     fpath = _kline_path(code)
     if fpath.exists():
         df_old = pd.read_parquet(fpath)
-        df_old["date"] = df_old["date"].astype(str)
+        df_old["date"] = df_old["date"].astype(str).str.replace("-", "")
         combined = pd.concat([df_old, df_new], ignore_index=True)
         combined = combined.sort_values("date").drop_duplicates(subset="date", keep="last")
         combined = combined.reset_index(drop=True)

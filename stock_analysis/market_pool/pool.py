@@ -59,7 +59,8 @@ class MarketPool:
         for code in codes:
             last_date = store.get_latest_kline_date(code)
             if last_date:
-                today_str = datetime.now().strftime("%Y-%m-%d")
+                # 统一为 YYYYMMDD 格式再比较（store 返回 YYYYMMDD）
+                today_str = datetime.now().strftime("%Y%m%d")
                 if last_date >= today_str:
                     skipped += 1
                     continue
@@ -105,7 +106,7 @@ class MarketPool:
         return result
 
     def _update_one(self, code: str, days: int) -> bool:
-        """更新单只股票的K线缓存"""
+        """更新单只股票的K线缓存 (TDX优先, 通达信数据)"""
         try:
             bars = fetch_kline(code, days)
             if not bars:
