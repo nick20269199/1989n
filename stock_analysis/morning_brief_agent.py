@@ -30,19 +30,20 @@ sys.path.insert(0, str(Path(__file__).parent))
 from data_quality_gate import preflight_scan
 from morning_brief import (
     load_latest_news, fetch_us_market, load_stock_lookup,
-    load_concept_map, annotate_news_with_stocks,
+    load_concept_map, load_holdings, annotate_news_with_stocks,
     detect_topics, extract_announcements_v2, assess_holding_impact_v2,
 )
 from cognitive_engine import load_context, deepseek_reason, send_output, save_output
-from config import STOCK_DATA_DIR
+from vv_insights import load_vv_insights, format_vv_for_prompt
+from config import STOCK_DATA_DIR, PORTFOLIO_FILE
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s %(message)s")
 logger = logging.getLogger("morning_brief_agent")
 
 CST = timezone(timedelta(hours=8))
 STOCK_DATA = Path(STOCK_DATA_DIR)
-OUTPUT_MD = STOCK_DATA / "morning_brief_latest.md"
-OUTPUT_JSON = STOCK_DATA / "morning_brief_latest.json"
+OUTPUT_MD = STOCK_DATA / "morning_brief_agent_latest.md"
+OUTPUT_JSON = STOCK_DATA / "morning_brief_agent_latest.json"
 DB_PATH = STOCK_DATA / "stock.db"
 
 
@@ -337,6 +338,7 @@ def build_market_prompt(
     holding_impact: list, sector_rank: dict,
     auction: dict, market_state: dict, hot_stocks: list,
     hot_trend: str = "", news_themes: str = "",
+    vv_prompt: str = "", recon_report: str = "",
 ) -> str:
     """构建给 DeepSeek 的完整 prompt，含所有市场温度数据。"""
     today = datetime.now(CST)
@@ -396,6 +398,17 @@ def build_market_prompt(
                              f"{s.get('price','?')} {s.get('change_pct','?')}%")
             else:
                 lines.append(f"- {s}")
+        lines.append("")
+
+    # ── 五B、大V雷达（观点摘要，需验证可靠性） ──
+    if vv_prompt and vv_prompt != "（近48小时无大V视频）":
+        lines.append(vv_prompt)
+        lines.append("")
+
+    # ── 五C、侦查日报（昨日收盘后机会发现） ──
+    if recon_report:
+        lines.append("## 侦查日报引用（昨日收盘后机会发现）")
+        lines.append(recon_report)
         lines.append("")
 
     # ── 六、新闻列表 ──
@@ -465,6 +478,11 @@ def main():
     start = time.time()
     logger.info("Morning Brief Agent v2 starting...")
 
+    # 周末守卫
+    if datetime.now(CST).weekday() >= 5:
+        logger.info("非交易日，跳过")
+        return
+
     # ── 知识上下文 ──
     context = load_context(["knowledge/stocks/morning-brief-architecture.md"])
 
@@ -478,7 +496,7 @@ def main():
     us_data = fetch_us_market()
     lookup = load_stock_lookup()
     concept_map = load_concept_map()
-    holdings = concept_map.get("holdings", {})
+    holdings = load_holdings()
 
     annotated = annotate_news_with_stocks(news, lookup)
     topics = detect_topics(annotated)
@@ -494,6 +512,31 @@ def main():
     # 数据库趋势数据（不受实时API限制）
     hot_trend = load_hot_stocks_trend()
     news_themes = load_recent_news_themes()
+
+    # 大V雷达（近期观点，需 DeepSeek 验证可靠性）
+    vv_data = load_vv_insights(hours=96)
+    vv_prompt = format_vv_for_prompt(vv_data)
+    if vv_data["total_videos"] > 0:
+        logger.info(f"大V雷达: {vv_data['author_count']}位大V, {vv_data['total_videos']}条视频")
+
+    # 侦查日报（昨日收盘后产出，包含机会发现和盯盘清单）
+    recon_report = ""
+    try:
+        recon_path = STOCK_DATA / f"recon_report_{datetime.now(CST).strftime('%Y%m%d')}.md"
+        if not recon_path.exists():
+            # 尝试昨日
+            recon_path = STOCK_DATA / f"recon_report_{(datetime.now(CST) - timedelta(days=1)).strftime('%Y%m%d')}.md"
+        if recon_path.exists():
+            recon_text = recon_path.read_text(encoding="utf-8")
+            # 提取机会发现和盯盘清单部分（去掉元信息）
+            sections = recon_text.split("## ")
+            for s in sections:
+                if s.startswith("一、机会发现") or s.startswith("三、明日盯盘"):
+                    recon_report += f"## {s[:200]}\n"
+            if recon_report:
+                logger.info(f"侦查日报: 引用 {recon_path.name}")
+    except Exception as e:
+        logger.warning(f"侦查日报加载失败: {e}")
 
     annotated_count = sum(1 for n in annotated if n["matched_stocks"])
     logger.info(
@@ -513,6 +556,7 @@ def main():
         news_data, us_data, holdings, holding_impact,
         sector_rank, auction, market_state, hot_stocks_list,
         hot_trend=hot_trend, news_themes=news_themes,
+        vv_prompt=vv_prompt, recon_report=recon_report,
     )
 
     system_prompt = f"""你是专业 A 股盘前分析师。你的核心能力是：
@@ -520,6 +564,7 @@ def main():
 2. **板块温度判断** — 结合板块涨幅排名+资金流向+竞价数据，判断今日主线
 3. **持仓映射** — 8只持仓中哪些受益/受损于今日板块格局
 4. **给出可操作判断** — 不只是罗列数据，要给出今日态度
+5. **引用侦查日报** — 如果有「侦查日报引用」板块，将其中的机会发现和盯盘清单纳入今日判断，但你的判断优先级更高
 
 晨报架构参考:
 {context}
@@ -546,7 +591,8 @@ def main():
 4. **板块温度**：结合板块涨幅+资金流向，判断今日主线题材。**要给出判断，不止列数据**
 5. **持仓影响**：逐只评估8只持仓，结合板块位置+新闻+美股信号
 6. **公告精选**：减持/合同/异动分类
-7. **今日策略**：关注什么、回避什么、操作思路"""
+7. **今日策略**：关注什么、回避什么、操作思路
+8. **大V观点验证**：对「大V雷达」中的板块/标的逐条判断——基于你已有的市场数据，大V的看多/看空是否站得住脚。认可的打✓，质疑的打✗并说明原因。不要盲信大V观点。"""
 
     logger.info("调用 DeepSeek...")
     result = deepseek_reason(
@@ -576,7 +622,7 @@ def main():
     save_output("morning_brief", result)
 
     # 发送前保鲜检查
-    preflight = preflight_scan(["morning_brief_latest.json", "portfolio.json"])
+    preflight = preflight_scan(["morning_brief_agent_latest.json", "portfolio.json"])
     if preflight["healthy"] or datetime.now(CST).hour < 10:
         # 早间 10:00 之前即使数据略旧也发送（隔夜数据在开盘前无更新）
         send_output("盘前晨报", result, route="main")

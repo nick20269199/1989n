@@ -597,6 +597,11 @@ def cmd_latest():
 
 
 def main():
+    # 周末守卫：非交易日跳过
+    if datetime.now().weekday() >= 5:
+        print("非交易日，跳过 nightly_plan")
+        return
+
     if len(sys.argv) < 2:
         print("用法:")
         print("  python nightly_plan.py generate   # 生成隔夜交易计划")

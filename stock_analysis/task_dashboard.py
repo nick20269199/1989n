@@ -54,7 +54,7 @@ def get_win_task_status(task_name: str) -> dict:
 
             # 结果转图标
             # 良性退出码白名单: STATUS_CONTROL_C_EXIT (Python/akshare退出时子进程发送Ctrl+C)
-            _BENIGN_CODES = {"0", "3221225786", "-1073741510"}
+            _BENIGN_CODES = {"0", "3221225786", "-1073741510", "267009"}
             result_icon = "✅" if last_result in _BENIGN_CODES else f"❌({last_result})"
             if last_result in ("267011", "2147942401"):  # 从未运行过
                 result_icon = "—"
@@ -115,7 +115,7 @@ def get_all_tasks() -> list[dict]:
 def get_dept_health() -> dict:
     """读取各部门健康状态。"""
     health = {}
-    for dept in ["front-office", "engineering"]:
+    for dept in ["front-office", "engineering", "intelligence", "logistics"]:
         status = read_other_dept(dept)
         if status:
             h = status.get("health", "unknown")
@@ -135,7 +135,9 @@ DEPT_DATA_FILES = {
                "analysis_30min_*.json", "analysis_overnight_*.json", "scan_*.json", "recon_report_*.md",
                "trade_plans/plan_*.json", "vv_radar.db", "position_check.json"],
     "工程部": ["_lint_history.json"],
-    "其他": None,  # None = 不在前两个部门的全部文件
+    "情报部": ["intel/intel_latest.json"],
+    "后勤部": ["task_dashboard.md"],
+    "其他": None,  # None = 不在前四部门的全部文件
 }
 
 def _build_dept_file_map() -> dict[str, str]:

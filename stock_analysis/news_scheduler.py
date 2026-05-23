@@ -822,11 +822,10 @@ def main(mode: str = "auto") -> int:
     _log_dir = STOCK_DATA_DIR / "logs"
     _log_dir.mkdir(parents=True, exist_ok=True)
     _log_file = _log_dir / f"news_{mode}.log"
+    _orig_stderr = sys.stderr
     try:
         import io
         _log_fh = open(_log_file, "a", encoding="utf-8")
-        # 保留原始 stderr 引用以防递归，追加到日志
-        _orig_stderr = sys.stderr
         _stderr_buf = io.TextIOWrapper(_log_fh.buffer, encoding="utf-8", line_buffering=True)
         class _TeeStderr:
             def write(self, text):
@@ -850,6 +849,7 @@ def main(mode: str = "auto") -> int:
         hour = now_cst().hour
         if hour < 8 or hour > 18:
             logger.warning(f"[intraday] 拒绝在非交易时段执行 (当前 {hour}:00, 允许 8:00-18:00)")
+            sys.stderr = _orig_stderr
             return 0
 
     # 路由到对应处理器
@@ -862,14 +862,17 @@ def main(mode: str = "auto") -> int:
     handler = handlers.get(mode)
     if handler is None:
         logger.error(f"未知模式: {mode}，支持: morning / intraday / evening / auto")
+        sys.stderr = _orig_stderr
         return 1
 
     try:
         success = handler()
+        sys.stderr = _orig_stderr
         return 0 if success else 1
     except Exception as e:
         logger.error(f"模式 {mode} 执行崩溃: {e}")
         traceback.print_exc()
+        sys.stderr = _orig_stderr
         return 1
 
 

@@ -233,6 +233,11 @@ def generate_report() -> str:
 
 
 def main():
+    # 周末守卫：非交易日跳过
+    if datetime.now().weekday() >= 5:
+        print("非交易日，跳过 forecast_closer")
+        return
+
     if "--extract" in sys.argv:
         idx = sys.argv.index("--extract")
         date_str = sys.argv[idx + 1] if idx + 1 < len(sys.argv) else ""
