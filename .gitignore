@@ -109,6 +109,7 @@ stock_data/22.txt
 Documents/cefCache/
 
 # 缓存
+stock_data/kline_cache/
 stock_data/reading_sources/
 download_*.py
 extract_sourcemap.py

@@ -292,8 +292,13 @@ def fetch_sina_news(knum: int = 50) -> list[dict]:
                 if not title:
                     continue
                 ctime = item.get("ctime", "")
-                # ctime 格式为 "2026-05-23 21:35:00"
-                pub_time = ctime if ctime else ""
+                # ctime 可能为 Unix 秒 (如 1779525429) 或格式化字符串
+                pub_time = ""
+                if ctime:
+                    try:
+                        pub_time = datetime.fromtimestamp(int(ctime), tz=CST).strftime("%Y-%m-%d %H:%M:%S")
+                    except (ValueError, OSError, TypeError):
+                        pub_time = str(ctime)  # 保持原样
                 link = item.get("link", "")
                 items.append({
                     "title": _clean_html(title),
@@ -762,8 +767,12 @@ def _truncate_title(title: str, max_len: int = 100) -> str:
     return title[:max_len - 3] + "..."
 
 
-def generate_markdown_summary(news_items: list[dict], mode: str) -> str:
-    """生成 Markdown 格式的新闻摘要，用于飞书推送。"""
+def generate_markdown_summary(news_items: list[dict], mode: str, sources: list[str] = None) -> str:
+    """生成 Markdown 格式的新闻摘要，用于飞书推送。
+
+    Args:
+        sources: 成功采集的源名称列表，用于页脚显示
+    """
     now = now_cst()
     mode_label = {"morning": "盘前早报", "intraday": "盘中快讯", "evening": "盘后晚报"}.get(mode, "新闻快讯")
 
@@ -771,6 +780,12 @@ def generate_markdown_summary(news_items: list[dict], mode: str) -> str:
     total_before = len(news_items)
     news_items = [n for n in news_items if is_a_share_relevant(n.get("title", ""))]
     filtered = total_before - len(news_items)
+
+    # 按源统计
+    source_stats = {}
+    for item in news_items:
+        src = item.get("source", "未知")
+        source_stats[src] = source_stats.get(src, 0) + 1
 
     lines = [
         f"**采集时间**: {now.strftime('%Y-%m-%d %H:%M:%S')}",
@@ -792,7 +807,9 @@ def generate_markdown_summary(news_items: list[dict], mode: str) -> str:
         for item in important[:20]:  # 最多20条重要新闻
             t = _format_brief_time(item.get("pub_time", ""))
             title = _truncate_title(item.get("title", ""))
-            lines.append(f"- [{t}] {title}")
+            src = item.get("source", "")
+            src_tag = f" [{src}]" if src else ""
+            lines.append(f"- [{t}]{src_tag} {title}")
         lines.append("")
 
     if regular:
@@ -802,7 +819,9 @@ def generate_markdown_summary(news_items: list[dict], mode: str) -> str:
         for item in regular[:15]:
             t = _format_brief_time(item.get("pub_time", ""))
             title = _truncate_title(item.get("title", ""))
-            lines.append(f"- [{t}] {title}")
+            src = item.get("source", "")
+            src_tag = f" [{src}]" if src else ""
+            lines.append(f"- [{t}]{src_tag} {title}")
 
         remaining = len(regular) - 15
         if remaining > 0:
@@ -810,12 +829,15 @@ def generate_markdown_summary(news_items: list[dict], mode: str) -> str:
         lines.append("")
 
     lines.append("---")
-    lines.append(f"数据来源: 财联社 (cls.cn) | 自动采集于 {now.strftime('%Y-%m-%d %H:%M')}")
+    if sources:
+        lines.append(f"数据来源: {' + '.join(sources)} | 自动采集于 {now.strftime('%Y-%m-%d %H:%M')}")
+    else:
+        lines.append(f"数据来源: 财联社 (cls.cn) | 自动采集于 {now.strftime('%Y-%m-%d %H:%M')}")
 
     return "\n".join(lines)
 
 
-def send_summary_via_feishu(news_items: list[dict], mode: str, chat_id: str = "") -> bool:
+def send_summary_via_feishu(news_items: list[dict], mode: str, sources: list[str] = None, chat_id: str = "") -> bool:
     """通过飞书推送新闻摘要。可指定群聊（路由名或原始 chat_id）。"""
     target = FEISHU_ROUTES.get(chat_id) or chat_id or FEISHU_BOT_CHAT_ID
     if not target:
@@ -828,7 +850,7 @@ def send_summary_via_feishu(news_items: list[dict], mode: str, chat_id: str = ""
 
     mode_label = {"morning": "盘前早报", "intraday": "盘中快讯", "evening": "盘后晚报"}.get(mode, mode)
     title = f"财经快讯 - {mode_label} - {now_cst().strftime('%m/%d %H:%M')}"
-    content = generate_markdown_summary(news_items, mode)
+    content = generate_markdown_summary(news_items, mode, sources)
 
     try:
         ok = send_feishu_message(title=title, content=content, chat_id=target)
@@ -924,7 +946,7 @@ def run_intraday() -> bool:
     """
     盘中模式: 采集实时快讯。
     - 检查市场是否开盘，休市则跳过
-    - 拉取最新 50 条电报
+    - 多源采集 (财联社 + 新浪财经 + 东方财富)
     - 去重后保存 JSON 和数据库
     - 每2小时推送一次飞书 (盘中频率高，避免消息轰炸)
     """
@@ -939,28 +961,26 @@ def run_intraday() -> bool:
     start_ts = time.time()
 
     try:
-        # 1. 拉取数据
-        raw_items = fetch_cls_telegraph(rn=CLS_API_RN, pn=0)
-        if not raw_items:
-            logger.warning("[intraday] CLS API 未返回数据")
+        # 1. 多源采集
+        all_items, sources = collect_from_all_sources()
+        if not all_items:
+            logger.warning("[intraday] 所有数据源均未返回数据")
             return False
 
-        # 2. 转换格式
-        transformed = transform_news(raw_items)
-        logger.debug(f"[intraday] 转换 {len(transformed)} 条新闻")
+        logger.debug(f"[intraday] 多源采集: {len(all_items)} 条, 来源: {sources}")
 
-        # 3. 去重 (盘中只检查最近2小时，避免漏过不同时段的相同标题)
+        # 2. 去重 (盘中只检查最近2小时)
         existing_titles = get_existing_titles(hours=2)
-        unique_news = deduplicate_news(transformed, existing_titles)
+        unique_news = deduplicate_news(all_items, existing_titles)
 
         if not unique_news:
             logger.info("[intraday] 无新新闻")
             return True
 
-        # 4. 保存 JSON
+        # 3. 保存 JSON
         save_news_json(unique_news, "intraday")
 
-        # 5. 存入数据库
+        # 4. 存入数据库
         try:
             save_news(unique_news)
             logger.info(f"[intraday] 保存 {len(unique_news)} 条到数据库")
@@ -968,9 +988,9 @@ def run_intraday() -> bool:
             logger.error(f"[intraday] 数据库保存失败: {e}")
             traceback.print_exc()
 
-        # 6. 飞书推送（每2小时推送一次汇总）
+        # 5. 飞书推送（每2小时推送一次汇总）
         if _intraday_should_push():
-            send_summary_via_feishu(unique_news, "intraday", chat_id="news")
+            send_summary_via_feishu(unique_news, "intraday", sources, chat_id="news")
             _intraday_mark_pushed()
         else:
             logger.info("[intraday] 距上次推送不足2小时，跳过飞书推送")
@@ -988,7 +1008,7 @@ def run_intraday() -> bool:
 def run_evening() -> bool:
     """
     晚间模式: 采集盘后/晚间新闻摘要。
-    - 拉取 cls.cn 最新 50 条电报
+    - 多源采集 (财联社 + 新浪财经 + 东方财富)
     - 去重后保存 JSON 和数据库
     - 生成 Markdown 摘要并推送飞书
     """
@@ -997,28 +1017,26 @@ def run_evening() -> bool:
     start_ts = time.time()
 
     try:
-        # 1. 拉取数据
-        raw_items = fetch_cls_telegraph(rn=CLS_API_RN, pn=0)
-        if not raw_items:
-            logger.warning("[evening] CLS API 未返回数据")
+        # 1. 多源采集
+        all_items, sources = collect_from_all_sources()
+        if not all_items:
+            logger.warning("[evening] 所有数据源均未返回数据")
             return False
 
-        # 2. 转换格式
-        transformed = transform_news(raw_items)
-        logger.info(f"[evening] 转换 {len(transformed)} 条新闻")
+        logger.info(f"[evening] 多源采集: {len(all_items)} 条, 来源: {sources}")
 
-        # 3. 去重
+        # 2. 去重
         existing_titles = get_existing_titles(hours=DEDUP_WINDOW_HOURS)
-        unique_news = deduplicate_news(transformed, existing_titles)
+        unique_news = deduplicate_news(all_items, existing_titles)
 
         if not unique_news:
             logger.info("[evening] 无新新闻 (全部已存在)")
             return True
 
-        # 4. 保存 JSON
+        # 3. 保存 JSON
         save_news_json(unique_news, "evening")
 
-        # 5. 存入数据库
+        # 4. 存入数据库
         try:
             save_news(unique_news)
             logger.info(f"[evening] 保存 {len(unique_news)} 条到数据库")
@@ -1026,8 +1044,8 @@ def run_evening() -> bool:
             logger.error(f"[evening] 数据库保存失败: {e}")
             traceback.print_exc()
 
-        # 6. 飞书推送摘要
-        send_summary_via_feishu(unique_news, "evening", chat_id="news")
+        # 5. 飞书推送摘要
+        send_summary_via_feishu(unique_news, "evening", sources, chat_id="news")
 
         elapsed = time.time() - start_ts
         logger.info(f"[evening] 执行完成，耗时 {elapsed:.1f}s, 采集 {len(unique_news)} 条")
