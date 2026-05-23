@@ -178,6 +178,22 @@ def _read_market_data(date_str: str = "") -> dict:
         except Exception:
             pass
 
+    # 如果以上数据源都没提供真实数据 → 走通达信本地 .day 文件
+    if market["up_count"] == 0 and market["down_count"] == 0:
+        try:
+            from lib.market_stats import load_market_data as tdx_load
+            tdx = tdx_load()
+            meta = tdx.get("meta", {})
+            if meta.get("total", 0) > 0:
+                market["up_count"] = meta.get("up", 0)
+                market["down_count"] = meta.get("down", 0)
+                market["total_stocks"] = meta.get("total", 5000)
+                market["limit_up"] = max(market["limit_up"], meta.get("limit_up", 0))
+                market["limit_down"] = max(market["limit_down"], meta.get("limit_down", 0))
+                market["data_quality"] = "from_tdx_day"
+        except Exception as e:
+            print(f"  [warn] TDX数据源不可用: {e}")
+
     # 读取早间增强报告（获取新闻情绪）
     morning = STOCK_DATA_DIR / "morning_enhanced.json"
     if morning.exists():
@@ -261,6 +277,15 @@ def judge_cycle_stage(market_data: dict = None, date_str: str = "") -> dict:
     if consecutive_max <= 3 and red_ratio < 0.45:
         scores["衰退"] += 2
 
+    # 当连板高度数据缺失(consecutive_max==0)时，用红盘比作为主升/启动的补充判定
+    if consecutive_max == 0 and total > 1000:
+        if red_ratio >= 0.65:
+            scores["主升"] += 3
+            signals.append(f"红盘比{red_ratio:.0%}普涨(连板数据缺失)，主升特征")
+        elif red_ratio >= 0.50:
+            scores["启动"] += 2
+            signals.append(f"红盘比{red_ratio:.0%}改善(连板数据缺失)，启动特征")
+
     # 混沌：当没有明确信号或多个信号打架
     top_score = max(scores.values())
     if top_score == 0:
@@ -329,12 +354,28 @@ def record_ratios(date_str: str = "", market_data: dict = None,
                 "value": raw, "definition": definition["description"],
                 "source": "manual",
             }
-        else:
-            # 从现有数据推算（不准确，标注）
-            snapshot["ratios"][ratio_name] = {
-                "value": 0, "definition": definition["description"],
-                "source": "placeholder", "note": "需要实际市场数据填充",
-            }
+            continue
+
+        # 从 market_data 推算
+        ratio_val = 0
+        source = "placeholder"
+        up = market_data.get("up_count", 0)
+        down = market_data.get("down_count", 0)
+        total = max(market_data.get("total_stocks", 1), 1)
+        lu = market_data.get("limit_up", 0)
+        ld = market_data.get("limit_down", 0)
+
+        if ratio_name == "红盘比" and (up + down) > 0:
+            ratio_val = round(up / (up + down), 3)
+            source = "from_tdx_day"
+        elif ratio_name == "涨跌停比" and (lu + ld) > 0:
+            ratio_val = round(lu / max(ld, 1), 1)
+            source = "from_tdx_day"
+
+        snapshot["ratios"][ratio_name] = {
+            "value": ratio_val, "definition": definition["description"],
+            "source": source,
+        }
 
     # 追加到 baselines 文件
     baselines = load_json(RATIO_BASELINES_FILE)

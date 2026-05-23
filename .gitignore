@@ -67,6 +67,7 @@ stock_data/bilibili_relevant_videos.json
 .claude/scripts/
 .claude/projects/
 .claude/memory/
+.claude/scheduled_tasks.json
 
 # 本地工具状态
 .cc-switch/
@@ -86,7 +87,29 @@ ponponon_claude_code_src/
 claude_code_src_npm.tgz
 claude_code_src_api.zip
 
-# 一次性工具脚本（本地使用，不提交）
+# 发现看板/晨报产物（每日重新生成）
+morning_brief_agent_latest.*
+report_evening_*
+analysis_overnight_*
+recon_report_*
+trade_plans/
+intel/
+sector_daily/
+sector_weekly/
+decision_backtest_report.json
+dreamer_report.json
+
+# 截图（本地调试用）
+screenshots/
+
+# 一次性/临时文件
+stock_analysis/daily_task.py.bak
+stock_data/21.txt
+stock_data/22.txt
+Documents/cefCache/
+
+# 缓存
+stock_data/reading_sources/
 download_*.py
 extract_sourcemap.py
 verify_source.py

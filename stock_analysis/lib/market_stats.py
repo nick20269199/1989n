@@ -145,6 +145,20 @@ def load_market_data() -> dict:
     down = sum(1 for s in latest.values() if s["change_pct"] < 0)
     flat = sum(1 for s in latest.values() if s["change_pct"] == 0)
 
+    # 统计涨停/跌停（按涨跌幅阈值近似）
+    limit_up = limit_down = 0
+    for c, s in latest.items():
+        chg = s["change_pct"]
+        if abs(chg) < 0.01:
+            continue
+        # 科创(688) 和 创业(300/301) 是20%涨跌幅，其余10%
+        is_20pct = c.startswith(("300", "301", "688"))
+        thresh = 19.5 if is_20pct else 9.5
+        if chg >= thresh:
+            limit_up += 1
+        elif chg <= -thresh:
+            limit_down += 1
+
     sector_stats = {}
     for sec, changes in sector_changes.items():
         sector_stats[sec] = {
@@ -171,6 +185,8 @@ def load_market_data() -> dict:
             "total": len(latest),
             "up": up, "down": down, "flat": flat,
             "up_ratio": round(up / max(1, up + down), 3),
+            "limit_up": limit_up,
+            "limit_down": limit_down,
         },
         "sector_performance": dict(sorted(
             sector_stats.items(), key=lambda x: x[1]["avg_change"], reverse=True

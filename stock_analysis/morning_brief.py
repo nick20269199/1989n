@@ -28,7 +28,7 @@ from pathlib import Path
 import akshare as ak
 import requests
 
-from config import STOCK_DATA_DIR, HEADERS
+from config import STOCK_DATA_DIR, HEADERS, PORTFOLIO_FILE
 
 STOCK_DATA = Path(STOCK_DATA_DIR)
 CONCEPT_MAP_FILE = STOCK_DATA / "concept_mapping.json"
@@ -214,6 +214,16 @@ def load_concept_stocks() -> dict:
     if CONCEPT_STOCKS_FILE.exists():
         return json.loads(CONCEPT_STOCKS_FILE.read_text(encoding="utf-8"))
     return {}
+
+
+def load_holdings() -> dict:
+    """从 portfolio.json 加载当前持仓（唯一权威来源）。"""
+    try:
+        data = json.loads(PORTFOLIO_FILE.read_text(encoding="utf-8"))
+        return {h["code"]: {"name": h["name"], "sector": h.get("sector", "")} for h in data.get("holdings", [])}
+    except Exception as e:
+        logger.warning(f"持仓加载失败: {e}")
+        return {}
 
 
 # 概念关键词→查表名称映射
@@ -898,7 +908,7 @@ def main():
     us_data = fetch_us_market()
     lookup = load_stock_lookup()
     concept_map = load_concept_map()
-    holdings = concept_map.get("holdings", {})
+    holdings = load_holdings()
 
     # 新闻标注
     annotated = annotate_news_with_stocks(news, lookup)
