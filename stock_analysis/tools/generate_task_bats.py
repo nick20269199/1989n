@@ -256,7 +256,7 @@ _META = {}
 
 def _sort_key(task: dict) -> tuple:
     """按部门 + cron 时间排序"""
-    dept_order = {"front-office": 0, "engineering": 1, "logistics": 2, "finance": 3}
+    dept_order = {"front-office": 0, "intelligence": 1, "engineering": 2, "logistics": 3, "finance": 4}
     dept = task.get("dept", "zzz")
     cron = task.get("cron", "")
     if isinstance(cron, list):
@@ -416,14 +416,13 @@ def generate_register_ps1(meta: dict, tasks: list[dict]) -> str:
             # Multi-trigger
             lines.append(f"# {task['description']}")
             lines.append(f"$triggers = @(")
-            for c in cron_list:
+            for i, c in enumerate(cron_list):
                 sched = _cron_to_schtasks(c)
                 if sched["days"]:
-                    # Convert string "MON,TUE,..." to PowerShell DayOfWeek array
-                    days_ps = "@(" + ",".join(f"[DayOfWeek]'{d}'" for d in sched["days"].split(",")) + ")"
-                    lines.append(f"    @{{StartTime='{sched['st']}'; Days={days_ps}}},")
+                    days_ps = "'" + "','".join(sched["days"].split(",")) + "'"
+                    lines.append(f"    @{{StartTime='{sched['st']}'; Days=@({days_ps})}}" + ("," if i < len(cron_list)-1 else ""))
                 else:
-                    lines.append(f"    @{{StartTime='{sched['st']}'; Days=''}},")
+                    lines.append(f"    @{{StartTime='{sched['st']}'; Days=''}}" + ("," if i < len(cron_list)-1 else ""))
             lines.append(")")
             lines.append(
                 f"Register-MultiTriggerTask -Name '{name}' -ScriptPath '{script_path}' -Triggers $triggers"
@@ -438,10 +437,11 @@ def generate_register_ps1(meta: dict, tasks: list[dict]) -> str:
         "$allOk = $true",
         "$checkNames = @(",
     ])
-    for task in enabled_tasks:
+    for i, task in enumerate(enabled_tasks):
         name = task.get("name")
         if name:
-            lines.append(f"    '{name}',")
+            sep = "," if i < len(enabled_tasks) - 1 else ""
+            lines.append(f"    '{name}'{sep}")
     lines.extend([
         ")",
         "foreach ($n in $checkNames) {",
@@ -532,7 +532,7 @@ def main():
 def generate_summary(meta: dict, tasks: list[dict]) -> str:
     """生成 tasks_summary.md"""
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
-    dept_names = {"front-office": "前厅部", "engineering": "工程部", "logistics": "后勤部", "finance": "财务部"}
+    dept_names = {"front-office": "前厅部", "intelligence": "情报部", "engineering": "工程部", "logistics": "后勤部", "finance": "财务部"}
 
     lines = [
         f"# 定时任务一览 | {now}",

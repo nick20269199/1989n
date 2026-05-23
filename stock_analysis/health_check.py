@@ -7,7 +7,7 @@ import logging
 import shutil
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import requests
@@ -17,8 +17,11 @@ from config import (
     FEISHU_APP_SECRET,
     FEISHU_BOT_CHAT_ID,
 )
+from dept_status_protocol import publish_status
 
 logger = logging.getLogger("health_check")
+
+STOCK_DATA = Path("D:/1989n/stock_data")
 
 # Windows tasks expected — loaded from data/tasks.json
 TASKS_JSON = Path(__file__).parent / "data" / "tasks.json"
@@ -172,6 +175,28 @@ def generate_report(
     return "\n".join(lines)
 
 
+def _write_channel_health():
+    """快速通道连通性检测，写 channel_health_latest.json。"""
+    import urllib.request
+    channels = {
+        "sina_stock": "https://vip.stock.finance.sina.com.cn/",
+        "tencent": "https://web.ifzq.gtimg.cn/",
+        "eastmoney": "https://push2.eastmoney.com/",
+    }
+    result = {}
+    for name, url in channels.items():
+        try:
+            urllib.request.urlopen(url, timeout=5)
+            result[name] = True
+        except Exception:
+            result[name] = False
+    result["healthy"] = any(result.values())
+    (STOCK_DATA / "channel_health_latest.json").write_text(
+        json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    logger.info("通道健康已更新: %d/3 可用", sum(1 for v in result.values() if v))
+
+
 def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
@@ -186,6 +211,17 @@ def main():
 
     # Send report to Feishu
     send_alert(report)
+
+    # 后勤部状态发布
+    issues = []
+    if win_missing:
+        issues.append(f"缺失计划任务: {', '.join(win_missing)}")
+    if not disk["ok"]:
+        issues.append(f"D盘空间不足: 仅剩 {disk['free_gb']}GB")
+    publish_status("logistics", {"health": "healthy" if not issues else "degraded", "issues": issues, "consumers": []})
+
+    # 通道健康快照 — 供 dept_preflight 保鲜检查
+    _write_channel_health()
 
     # Print for local log
     print(report)

@@ -185,6 +185,36 @@
       "file": "git_push.log",
       "status": "pending",
       "size_kb": 561.3
+    },
+    {
+      "date": "2026-05-21",
+      "file": "closing_review.json",
+      "status": "pending",
+      "size_kb": 9.2
+    },
+    {
+      "date": "2026-05-21",
+      "file": "git_push.log",
+      "status": "pending",
+      "size_kb": 562.6
+    },
+    {
+      "date": "2026-05-22",
+      "file": "closing_review.json",
+      "status": "pending",
+      "size_kb": 6.7
+    },
+    {
+      "date": "2026-05-22",
+      "file": "git_push.log",
+      "status": "pending",
+      "size_kb": 566.0
+    },
+    {
+      "date": "2026-05-23",
+      "file": "last_error.txt",
+      "status": "pending",
+      "size_kb": 0.5
     }
   ],
   "last_distilled": null

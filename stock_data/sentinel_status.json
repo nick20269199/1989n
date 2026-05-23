@@ -1,51 +1,70 @@
 {
-  "timestamp": "2026-05-19 08:25:01",
+  "timestamp": "2026-05-23 15:02:29",
   "win_tasks": {
     "found": [
-      "StockAnalysis_MorningBrief",
+      "StockAnalysis_HealthCheck",
+      "StockAnalysis_CallAuction",
+      "Cognitive_MorningBrief",
+      "StockNews_Morning",
+      "StockNews_Intraday",
+      "StockNews_Evening",
+      "SEL_MorningLint",
+      "SEL_Digest",
+      "SEL_Maintain",
+      "SEL_Connect",
+      "SEL_Prune",
       "StockAnalysis_HotStocks",
+      "SEL_EvolveRead",
+      "SEL_EvolveOp",
       "StockAnalysis_IntradayMidday",
       "StockAnalysis_IntradayClose",
       "StockAnalysis_ClosingReview",
       "StockAnalysis_TechScan",
       "StockAnalysis_NightlyPlan",
-      "StockAnalysis_Overnight"
+      "StockAnalysis_Recon",
+      "StockAnalysis_VVRadar",
+      "StockAnalysis_VVRadar_Afternoon",
+      "StockForecastCloser",
+      "StockNightlyHealth",
+      "StockAnalysis_Evening",
+      "StockAnalysis_Overnight",
+      "Cognitive_TaskDashboard",
+      "Cognitive_ConversationMiner",
+      "StockAnalysis_DailyCompress",
+      "StockAnalysis_DecisionBacktest",
+      "StockAnalysis_SectorCollect",
+      "Intel_Recon",
+      "Intel_Deduce",
+      "StockAnalysis_Dreamer",
+      "SEL_DistillQueue",
+      "SEL_TaskSentinel"
     ],
     "missing": []
   },
   "cron_tasks": {
     "found": [
-      "morning_enhanced",
       "call_auction",
+      "weekly-audit",
+      "morning_brief",
+      "news_scheduler",
+      "intraday_report",
+      "集合竞价",
+      "压缩",
+      "新闻",
+      "盘中"
+    ],
+    "missing": [
+      "morning_enhanced",
       "closing_review",
       "tech_scan",
       "daily-load",
       "daily-compress",
       "deep-research",
-      "weekly-audit",
-      "morning_brief",
-      "news_scheduler",
-      "intraday_report",
-      "vv_radar",
-      "盘前",
-      "集合竞价",
-      "收盘",
-      "技术形态",
-      "晨间",
-      "压缩",
-      "深度研究",
-      "健康检查",
-      "夜间",
-      "盘前晨报",
-      "新闻",
-      "盘中",
-      "大V"
-    ],
-    "missing": [
       "health_check",
-      "nightly_health"
+      "nightly_health",
+      "vv_radar"
     ],
-    "total": 23
+    "total": 6
   },
   "data_files": {
     "ok": [
@@ -58,5 +77,7 @@
     "empty": []
   },
   "actions": [],
-  "alerts": []
+  "alerts": [
+    "CRON_MISSING: 9 keywords"
+  ]
 }

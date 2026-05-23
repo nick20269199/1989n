@@ -1,47 +1,45 @@
-# 蒸馏简报 — 2026-05-20
+# 蒸馏简报 — 2026-05-23
 
 ## 待蒸馏文件 (匹配规则)
 
-- `closing_review.json` (8.8KB)
-- `git_push.log` (561.3KB)
-- `last_error.txt` (0.2KB)
+- `last_error.txt` (0.5KB)
 
-共 3 个文件待蒸馏
+共 1 个文件待蒸馏
 
 ## 今日其他产出
 
-- `analysis_30min_20260520_1130.json` (1.6KB)
-- `analysis_30min_20260520_1130.md` (0.6KB)
-- `analysis_30min_20260520_1500.json` (1.6KB)
-- `analysis_30min_20260520_1500.md` (0.6KB)
-- `analysis_overnight_20260520_2330.json` (0.6KB)
-- `analysis_overnight_20260520_2330.md` (0.2KB)
-- `call_auction_20260520_0926.json` (1.8KB)
-- `closing_review.log` (25.7KB)
-- `closing_review.md` (1.3KB)
-- `cognitive_agent.log` (11.1KB)
-- `concept_mapping.json` (5.3KB)
+- `call_auction.log` (1.6KB)
+- `cognitive_agent.log` (51.4KB)
+- `decision_backtest_report.json` (0.3KB)
 - `distillation_brief.md` (2.0KB)
-- `distill_queue.json` (3.9KB)
-- `evening.log` (1.4KB)
-- `hot_stocks.json` (14.8KB)
-- `hot_stocks.log` (281.1KB)
-- `intraday_close.log` (48.6KB)
-- `intraday_midday.log` (41.4KB)
-- `morning_brief_latest.json` (0.2KB)
-- `morning_brief_latest.md` (7.7KB)
+- `distill_queue.json` (4.5KB)
+- `dreamer_report.json` (1.1KB)
+- `health_check.log` (0.6KB)
+- `hot_stocks.json` (14.9KB)
+- `hot_stocks.log` (307.5KB)
+- `intraday_midday.log` (43.6KB)
+- `morning_brief_agent_latest.json` (0.2KB)
+- `morning_brief_agent_latest.md` (7.4KB)
+- `news_manual_20260523_0800.json` (29.1KB)
+- `nightly_health.log` (7.9KB)
+- `recon_report_20260523.md` (5.3KB)
+- `task_dashboard.md` (2.9KB)
+- `vv_radar.log` (5.4KB)
+- `cognitive_output/morning_brief_20260523_0838.md` (7.4KB)
+- `intel/intel_deduce_2026-05-23.json` (0.6KB)
+- `intel/intel_deduce_2026-05-23.md` (0.3KB)
 
-... 还有 1127 个文件
+... 还有 5309 个文件
 
 ## 队列积压 (未蒸馏)
 
-- 2026-05-19: sentinel_status.json
-- 2026-05-19: git_push.log
-- 2026-05-20: closing_review.json
-- 2026-05-20: last_error.txt
-- 2026-05-20: git_push.log
+- 2026-05-21: closing_review.json
+- 2026-05-21: git_push.log
+- 2026-05-22: closing_review.json
+- 2026-05-22: git_push.log
+- 2026-05-23: last_error.txt
 
-... 还有 26 条
+... 还有 31 条
 
 ---
 
@@ -59,4 +57,4 @@
 4. 如无新知识 → 标记队列条目为 skipped
 5. 推送更新到 GitHub (git_auto_push.py)
 
-> 生成时间: 2026-05-20 23:47
+> 生成时间: 2026-05-23 14:58

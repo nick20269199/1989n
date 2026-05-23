@@ -445,15 +445,16 @@
     },
     {
       "id": "daily_compress_agent",
-      "name": null,
-      "description": "每日复盘压缩 (未注册定时任务)",
+      "name": "StockAnalysis_DailyCompress",
+      "description": "每日复盘压缩",
       "enabled": true,
-      "type": "manual_bat",
+      "type": "win_task",
       "command": "daily_compress_agent.py",
       "args": [],
+      "cron": "0 23 * * *",
       "log_path": "stock_data\\cognitive_agent.log",
       "dept": "logistics",
-      "bat_style": "timestamp"
+      "bat_style": "simple"
     },
     {
       "id": "weekly_audit_agent",
@@ -489,19 +490,33 @@
       "args": ["backtest"],
       "log_path": null,
       "dept": "front-office",
-      "bat_style": "pause"
+      "bat_style": "simple"
+    },
+    {
+      "id": "decision_backtest",
+      "name": "StockAnalysis_DecisionBacktest",
+      "description": "决策 T+5 定时回测",
+      "enabled": true,
+      "type": "win_task",
+      "command": "daily_task.py",
+      "args": ["backtest"],
+      "cron": "30 16 * * 1-5",
+      "log_path": "stock_data\\logs\\decision_backtest.log",
+      "dept": "front-office",
+      "bat_style": "simple"
     },
     {
       "id": "sector_collect",
-      "name": null,
-      "description": "板块日数据采集 (手动)",
+      "name": "StockAnalysis_SectorCollect",
+      "description": "板块日数据采集",
       "enabled": true,
-      "type": "manual_bat",
+      "type": "win_task",
       "command": "daily_task.py",
       "args": ["sector_collect"],
+      "cron": "20 15 * * 1-5",
       "log_path": null,
       "dept": "front-office",
-      "bat_style": "pause",
+      "bat_style": "simple",
       "outputs": [
         {"path": "stock_data/sector_daily/*.json", "max_hours": 48, "severity": "low"}
       ]
@@ -517,6 +532,91 @@
       "log_path": null,
       "dept": "front-office",
       "bat_style": "pause"
+    },
+    {
+      "id": "intel_recon",
+      "name": "Intel_Recon",
+      "description": "情报部盘前侦察",
+      "enabled": true,
+      "type": "win_task",
+      "command": "intelligence_service.py",
+      "args": ["recon"],
+      "cron": "50 08 * * 1-5",
+      "log_path": "stock_data/logs/intel_recon.log",
+      "dept": "intelligence",
+      "bat_style": "timestamp",
+      "outputs": [
+        {"path": "stock_data/intel/intel_recon_*.md", "max_hours": 12, "severity": "medium"},
+        {"path": "stock_data/intel/intel_latest.json", "max_hours": 12, "severity": "medium"}
+      ]
+    },
+    {
+      "id": "intel_deduce",
+      "name": "Intel_Deduce",
+      "description": "情报部收盘推演",
+      "enabled": true,
+      "type": "win_task",
+      "command": "intelligence_service.py",
+      "args": ["deduce"],
+      "cron": "45 15 * * 1-5",
+      "log_path": "stock_data/logs/intel_deduce.log",
+      "dept": "intelligence",
+      "bat_style": "timestamp",
+      "outputs": [
+        {"path": "stock_data/intel/intel_deduce_*.md", "max_hours": 24, "severity": "medium"},
+        {"path": "stock_data/intel/intel_latest.json", "max_hours": 24, "severity": "medium"}
+      ]
+    },
+    {
+      "id": "multi_angle_analysis",
+      "name": null,
+      "description": "多角度交叉分析 (手动执行, 10路DeepSeek并行)",
+      "enabled": true,
+      "type": "manual_bat",
+      "command": "multi_angle_analysis.py",
+      "args": [],
+      "log_path": null,
+      "dept": "front-office",
+      "bat_style": "simple"
+    },
+    {
+      "id": "dreamer",
+      "name": "StockAnalysis_Dreamer",
+      "description": "决策梦境推演 — 专家权重动态调整",
+      "enabled": true,
+      "type": "win_task",
+      "command": "experts/dreamer.py",
+      "args": [],
+      "cron": "0 17 * * 1-5",
+      "log_path": "stock_data\\logs\\dreamer.log",
+      "dept": "front-office",
+      "bat_style": "simple"
+    },
+    {
+      "id": "distill_queue",
+      "name": "SEL_DistillQueue",
+      "description": "蒸馏队列扫描 — 扫描当日产出加入队列",
+      "enabled": true,
+      "type": "win_task",
+      "command": "distill_queue.py",
+      "args": [],
+      "cron": ["45 15 * * 1-5", "45 23 * * *"],
+      "log_path": "stock_data\\logs\\distill_queue.log",
+      "dept": "engineering",
+      "bat_style": "simple"
+    },
+    {
+      "id": "task_sentinel",
+      "name": "SEL_TaskSentinel",
+      "description": "任务哨兵 — 检查定时任务+数据文件健康",
+      "enabled": true,
+      "type": "win_task",
+      "command": "task_sentinel.py",
+      "args": [],
+      "cron": "0 10 * * *",
+      "log_path": "stock_data\\logs\\task_sentinel.log",
+      "dept": "engineering",
+      "bat_style": "simple"
     }
   ]
 }

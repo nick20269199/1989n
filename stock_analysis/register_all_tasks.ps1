@@ -48,6 +48,9 @@ Register-SimpleTask -Name 'StockAnalysis_IntradayClose' -ScriptPath 'D:\1989n\st
 # 收盘复盘 (带退出码修复)
 Register-SimpleTask -Name 'StockAnalysis_ClosingReview' -ScriptPath 'D:\1989n\stock_analysis\run_closing_review.bat' -Schedule 'WEEKLY' -StartTime '15:15' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
+# 板块日数据采集
+Register-SimpleTask -Name 'StockAnalysis_SectorCollect' -ScriptPath 'D:\1989n\stock_analysis\run_sector_collect.bat' -Schedule 'WEEKLY' -StartTime '15:20' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+
 # 侦查日报 (收盘后探索层)
 Register-SimpleTask -Name 'StockAnalysis_Recon' -ScriptPath 'D:\1989n\stock_analysis\run_recon_daily.bat' -Schedule 'WEEKLY' -StartTime '15:30' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
@@ -56,6 +59,12 @@ Register-SimpleTask -Name 'StockAnalysis_TechScan' -ScriptPath 'D:\1989n\stock_a
 
 # 隔夜交易计划生成
 Register-SimpleTask -Name 'StockAnalysis_NightlyPlan' -ScriptPath 'D:\1989n\stock_analysis\run_nightly_plan.bat' -Schedule 'WEEKLY' -StartTime '15:40' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+
+# 决策 T+5 定时回测
+Register-SimpleTask -Name 'StockAnalysis_DecisionBacktest' -ScriptPath 'D:\1989n\stock_analysis\run_decision_backtest.bat' -Schedule 'WEEKLY' -StartTime '16:30' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+
+# 决策梦境推演 — 专家权重动态调整
+Register-SimpleTask -Name 'StockAnalysis_Dreamer' -ScriptPath 'D:\1989n\stock_analysis\run_dreamer.bat' -Schedule 'WEEKLY' -StartTime '17:00' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
 # 预测追踪闭环
 Register-SimpleTask -Name 'StockForecastCloser' -ScriptPath 'D:\1989n\stock_analysis\run_forecast_closer.bat' -Schedule 'WEEKLY' -StartTime '17:05' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
@@ -74,19 +83,35 @@ Register-SimpleTask -Name 'StockAnalysis_CallAuction' -ScriptPath 'D:\1989n\stoc
 
 # 热门股票采集 + 大V雷达联动
 $triggers = @(
-    @{StartTime='09:35'; Days=@([DayOfWeek]'MON',[DayOfWeek]'TUE',[DayOfWeek]'WED',[DayOfWeek]'THU',[DayOfWeek]'FRI')},
-    @{StartTime='13:00'; Days=@([DayOfWeek]'MON',[DayOfWeek]'TUE',[DayOfWeek]'WED',[DayOfWeek]'THU',[DayOfWeek]'FRI')},
+    @{StartTime='09:35'; Days=@('MON','TUE','WED','THU','FRI')},
+    @{StartTime='13:00'; Days=@('MON','TUE','WED','THU','FRI')}
 )
 Register-MultiTriggerTask -Name 'StockAnalysis_HotStocks' -ScriptPath 'D:\1989n\stock_analysis\run_hot_stocks.bat' -Triggers $triggers
 
 # 大V雷达 (09:35)
 Register-SimpleTask -Name 'StockAnalysis_VVRadar' -ScriptPath 'D:\1989n\stock_analysis\run_vv_radar.bat' -Schedule 'DAILY' -StartTime '09:35'
 
+# 情报部盘前侦察
+Register-SimpleTask -Name 'Intel_Recon' -ScriptPath 'D:\1989n\stock_analysis\run_intel_recon.bat' -Schedule 'WEEKLY' -StartTime '08:50' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+
+# 情报部收盘推演
+Register-SimpleTask -Name 'Intel_Deduce' -ScriptPath 'D:\1989n\stock_analysis\run_intel_deduce.bat' -Schedule 'WEEKLY' -StartTime '15:45' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+
+# 任务哨兵 — 检查定时任务+数据文件健康
+Register-SimpleTask -Name 'SEL_TaskSentinel' -ScriptPath 'D:\1989n\stock_analysis\run_task_sentinel.bat' -Schedule 'DAILY' -StartTime '10:00'
+
 # 工程部 Evolve — 知识阅读
 Register-SimpleTask -Name 'SEL_EvolveRead' -ScriptPath 'D:\1989n\stock_analysis\run_evolve_read.bat' -Schedule 'DAILY' -StartTime '12:00'
 
 # 工程部 Evolve — 知识操作化
 Register-SimpleTask -Name 'SEL_EvolveOp' -ScriptPath 'D:\1989n\stock_analysis\run_evolve_op.bat' -Schedule 'DAILY' -StartTime '12:15'
+
+# 蒸馏队列扫描 — 扫描当日产出加入队列
+$triggers = @(
+    @{StartTime='15:45'; Days=@('MON','TUE','WED','THU','FRI')},
+    @{StartTime='23:45'; Days=''}
+)
+Register-MultiTriggerTask -Name 'SEL_DistillQueue' -ScriptPath 'D:\1989n\stock_analysis\run_distill_queue.bat' -Triggers $triggers
 
 # 工程部 Morning Lint — 6项检测
 Register-SimpleTask -Name 'SEL_MorningLint' -ScriptPath 'D:\1989n\stock_analysis\run_lint.bat' -Schedule 'DAILY' -StartTime '08:30'
@@ -115,6 +140,9 @@ Register-SimpleTask -Name 'StockNews_Evening' -ScriptPath 'D:\1989n\stock_analys
 # 对话挖掘
 Register-SimpleTask -Name 'Cognitive_ConversationMiner' -ScriptPath 'D:\1989n\stock_analysis\run_conversation_miner.bat' -Schedule 'DAILY' -StartTime '22:30'
 
+# 每日复盘压缩
+Register-SimpleTask -Name 'StockAnalysis_DailyCompress' -ScriptPath 'D:\1989n\stock_analysis\run_daily_compress_agent.bat' -Schedule 'DAILY' -StartTime '23:00'
+
 # 系统健康检查
 Register-SimpleTask -Name 'StockAnalysis_HealthCheck' -ScriptPath 'D:\1989n\stock_analysis\run_health_check.bat' -Schedule 'DAILY' -StartTime '07:03'
 
@@ -133,9 +161,12 @@ $checkNames = @(
     'StockAnalysis_VVRadar_Afternoon',
     'StockAnalysis_IntradayClose',
     'StockAnalysis_ClosingReview',
+    'StockAnalysis_SectorCollect',
     'StockAnalysis_Recon',
     'StockAnalysis_TechScan',
     'StockAnalysis_NightlyPlan',
+    'StockAnalysis_DecisionBacktest',
+    'StockAnalysis_Dreamer',
     'StockForecastCloser',
     'StockAnalysis_Evening',
     'StockAnalysis_Overnight',
@@ -143,8 +174,12 @@ $checkNames = @(
     'StockAnalysis_CallAuction',
     'StockAnalysis_HotStocks',
     'StockAnalysis_VVRadar',
+    'Intel_Recon',
+    'Intel_Deduce',
+    'SEL_TaskSentinel',
     'SEL_EvolveRead',
     'SEL_EvolveOp',
+    'SEL_DistillQueue',
     'SEL_MorningLint',
     'SEL_Digest',
     'SEL_Connect',
@@ -154,9 +189,10 @@ $checkNames = @(
     'Cognitive_TaskDashboard',
     'StockNews_Evening',
     'Cognitive_ConversationMiner',
+    'StockAnalysis_DailyCompress',
     'StockAnalysis_HealthCheck',
     'StockNews_Morning',
-    'StockNews_Intraday',
+    'StockNews_Intraday'
 )
 foreach ($n in $checkNames) {
     $q = schtasks /Query /TN $n /FO LIST 2>&1

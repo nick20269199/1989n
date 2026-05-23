@@ -28,6 +28,7 @@ TASKS_JSON = PROJECT_DIR / "data" / "tasks.json"
 FILE_PATHS = {
     "portfolio.json": PROJECT_DIR / "data" / "portfolio.json",
     "concept_mapping.json": PROJECT_DIR / "data" / "concept_mapping.json",
+    "_lint_history.json": Path("D:/1989n/.claude/memory/daily/_lint_history.json"),
 }
 
 # ── 硬编码保鲜阈值（后备默认值）──

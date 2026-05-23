@@ -53,6 +53,8 @@ def _get_deps(dept: str) -> list[str]:
 DEPT_DATA_FILES = {
     "front-office": ["portfolio.json", "closing_review.json", "channel_health_latest.json", "sentinel_status.json"],
     "engineering": ["_lint_history.json"],
+    "intelligence": ["intel/intel_latest.json"],
+    "logistics": ["task_dashboard.md", "news_manual_*.json"],
 }
 
 
@@ -208,7 +210,7 @@ def print_report(report: dict):
 
 def main():
     parser = argparse.ArgumentParser(description="跨部门预检")
-    parser.add_argument("--dept", choices=["front-office", "engineering"], help="部门名称")
+    parser.add_argument("--dept", choices=["front-office", "engineering", "intelligence", "logistics"], help="部门名称")
     parser.add_argument("--all", action="store_true", help="检查全部部门")
     args = parser.parse_args()
 
@@ -216,7 +218,7 @@ def main():
         parser.print_help()
         sys.exit(2)
 
-    depts = ["front-office", "engineering"] if args.all else [args.dept]
+    depts = ["front-office", "engineering", "intelligence", "logistics"] if args.all else [args.dept]
 
     all_reports = []
     overall_blocking = False

@@ -11,6 +11,70 @@
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
   },
   "includeCoAuthoredBy": false,
-  "permissions": {},
-  "skipDangerousModePermissionPrompt": true
+  "permissions": {
+    "allow": [
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python -m pytest *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python daily_task.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python news_scheduler.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python health_check.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python call_auction.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python _sel_lint.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python conversation_miner.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python task_sentinel.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python intraday_report.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python -m stock_analysis.*)",
+      "Bash(cd *stock_analysis* && /d/Python314/python *.py *)",
+      "Bash(/d/Python314/python d:/1989n/stock_analysis/*)",
+      "Bash(/d/Python314/python d:/1989n/_scan*)",
+      "Bash(/d/Python314/python D:/1989n/stock_data/*)",
+      "Bash(cmd.exe //c \"schtasks /Query *)",
+      "Bash(cmd.exe //c \"dir *)",
+      "Bash(cmd.exe /c \"dir *)",
+      "Bash(MSYS2_ARG_CONV_EXCL=* cmd.exe //c \"schtasks *)",
+      "Bash(powershell -Command \"*schtasks /Query *\")",
+      "Bash(powershell -Command \"*Get-ScheduledTask *\")",
+      "Bash(powershell -Command \"*Get-AppxPackage *\")",
+      "Bash(*)"
+    ],
+    "mode": "accept-all"
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {
+    "SessionStart": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "cd D:\\1989n\\stock_analysis && D:\\Python314\\python session_hook.py start",
+        "timeout": 10
+      }],
+      "description": "Start session tracking",
+      "id": "session:start"
+    }],
+    "SessionEnd": [{
+      "matcher": "*",
+      "hooks": [{
+        "type": "command",
+        "command": "cd D:\\1989n\\stock_analysis && D:\\Python314\\python session_hook.py stop",
+        "timeout": 10
+      }],
+      "description": "Stop session tracking",
+      "id": "session:stop"
+    }],
+    "PostToolUseFailure": [{
+      "matcher": "Bash",
+      "hooks": [{
+        "type": "command",
+        "timeout": 10,
+        "command": "/d/Python314/python -c \"import json; print(json.dumps({'systemMessage': '命令失败了。先读 D:\\\\1989n\\\\stock_data\\\\last_error.txt 追踪调用链找到根因，再修。不要跳过查因直接改代码。'}))\""
+      }]
+    }],
+    "PostToolUse": [{
+      "matcher": "Edit|Write",
+      "hooks": [{
+        "type": "command",
+        "timeout": 10,
+        "command": "/d/Python314/python -c \"import json; print(json.dumps({'hookSpecificOutput': {'hookEventName': 'PostToolUse', 'additionalContext': '刚改了代码，下一步必须做：跑一次脚本或测试验证它能工作，确认正常再报告完成。如果改的是错误修复，先确认 root cause 确实被解决了。'}}))\""
+      }]
+    }]
+  }
 }

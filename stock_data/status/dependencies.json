@@ -1,4 +1,6 @@
 {
   "front-office": ["engineering"],
-  "engineering": []
+  "engineering": [],
+  "intelligence": ["front-office", "logistics"],
+  "logistics": []
 }
