@@ -1,5 +1,5 @@
 @echo off
-REM 收盘复盘 - 每日 15:15 执行
+REM 收盘复盘 (带退出码修复) - 工作日 15:15
 REM 注意: Python + akshare 退出时可能产生 STATUS_CONTROL_C_EXIT (3221225786)
 REM 此为误报(脚本已完成工作)，映射为 0
 cd /d D:\1989n\stock_analysis

@@ -28,9 +28,29 @@ SENTINEL_LOG = STOCK_DATA / "sentinel_status.json"
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("task-sentinel")
 
-# ── 期望的 Windows 计划任务 ──
-EXPECTED_WIN_TASKS = [
-    "StockAnalysis_MorningBrief",
+# ── 期望的 Windows 计划任务 (从 data/tasks.json 加载) ──
+
+TASKS_JSON = SCRIPT_DIR / "data" / "tasks.json"
+
+
+def _load_expected_win_tasks() -> list[str]:
+    """从 tasks.json 加载所有 enabled win_task 的 name。"""
+    if not TASKS_JSON.exists():
+        logger.warning(f"{TASKS_JSON} not found, using fallback list")
+        return _FALLBACK_WIN_TASKS
+    try:
+        data = json.loads(TASKS_JSON.read_text(encoding="utf-8"))
+        return [
+            t["name"] for t in data.get("tasks", [])
+            if t.get("enabled") and t.get("type") == "win_task" and t.get("name")
+        ]
+    except Exception as e:
+        logger.warning(f"Failed to load {TASKS_JSON}: {e}")
+        return _FALLBACK_WIN_TASKS
+
+
+_FALLBACK_WIN_TASKS = [
+    "Cognitive_MorningBrief",
     "StockAnalysis_HotStocks",
     "StockAnalysis_IntradayMidday",
     "StockAnalysis_IntradayClose",
@@ -39,6 +59,8 @@ EXPECTED_WIN_TASKS = [
     "StockAnalysis_NightlyPlan",
     "StockAnalysis_Overnight",
 ]
+
+EXPECTED_WIN_TASKS = _load_expected_win_tasks()
 
 # ── 期望的 Claude cron 任务关键词 ──
 EXPECTED_CRON_KEYWORDS = [
@@ -78,10 +100,10 @@ def check_win_tasks() -> dict:
 
 
 def repair_win_tasks() -> bool:
-    """调用 register_tasks.ps1 安全重建所有任务 (/F 覆盖，不先删)。"""
-    ps1 = SCRIPT_DIR / "register_tasks.ps1"
+    """调用 register_all_tasks.ps1 安全重建所有任务 (/F 覆盖，不先删)。"""
+    ps1 = SCRIPT_DIR / "register_all_tasks.ps1"
     if not ps1.exists():
-        logger.error(f"register_tasks.ps1 not found at {ps1}")
+        logger.error(f"register_all_tasks.ps1 not found at {ps1}")
         return False
     try:
         result = subprocess.run(

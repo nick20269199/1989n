@@ -4,7 +4,7 @@ task_dashboard.py — 定时任务一键看板
 汇总 Windows 定时任务 + 部门健康 + 数据保鲜度 → 一张表发飞书。
 
 用法:
-    cd D:\1989n\stock_analysis && /d/Python314/python task_dashboard.py
+    cd D:/1989n/stock_analysis && /d/Python314/python task_dashboard.py
 """
 
 import json
@@ -72,24 +72,40 @@ def get_win_task_status(task_name: str) -> dict:
 
 
 def get_all_tasks() -> list[dict]:
-    """获取所有需要监控的任务状态。"""
-    task_names = [
-        "Cognitive_MorningBrief",      # 08:37 晨报
-        "Cognitive_ConversationMiner", # 22:30 对话挖掘
-        "StockAnalysis_HotStocks",     # 09:15起每小时 热门股票
-        "StockAnalysis_MorningBrief",  # 08:27 盘前简报(旧,已禁用)
-        "StockAnalysis_ClosingReview", # 15:05 收盘复盘
-        "StockAnalysis_Evening",       # 22:00 晚间总结
-        "StockAnalysis_IntradayMidday",# 11:30 盘中快照
-        "StockAnalysis_IntradayClose", # 14:00 盘中快照
-        "StockAnalysis_TechScan",      # 15:30 技术扫描
-        "StockAnalysis_NightlyPlan",   # 22:00 晚间计划
-        "StockAnalysis_Overnight",     # 23:30 隔夜分析
-        "StockNightlyHealth",          # 02:00 夜间健康
-        "StockNews_Morning",           # 08:00 早间新闻
-        "StockNews_Intraday",          # 盘中新闻
-        "StockNews_Evening",           # 晚间新闻
-    ]
+    """获取所有需要监控的任务状态 (从 data/tasks.json 加载)。"""
+    # Load from tasks.json
+    tasks_json = STOCK_ANALYSIS / "data" / "tasks.json"
+    task_names = []
+    if tasks_json.exists():
+        try:
+            data = json.loads(tasks_json.read_text(encoding="utf-8"))
+            task_names = [
+                t["name"] for t in data.get("tasks", [])
+                if t.get("name") and t.get("type") == "win_task"
+            ]
+        except Exception as e:
+            logger.warning(f"Failed to load {tasks_json}: {e}")
+
+    # Fallback if loading failed
+    if not task_names:
+        task_names = [
+            "Cognitive_MorningBrief",
+            "Cognitive_ConversationMiner",
+            "StockAnalysis_HotStocks",
+            "StockAnalysis_MorningBrief",
+            "StockAnalysis_ClosingReview",
+            "StockAnalysis_Evening",
+            "StockAnalysis_IntradayMidday",
+            "StockAnalysis_IntradayClose",
+            "StockAnalysis_TechScan",
+            "StockAnalysis_NightlyPlan",
+            "StockAnalysis_Overnight",
+            "StockNightlyHealth",
+            "StockNews_Morning",
+            "StockNews_Intraday",
+            "StockNews_Evening",
+        ]
+
     results = []
     for name in task_names:
         results.append(get_win_task_status(name))
@@ -134,7 +150,6 @@ def build_report(tasks: list[dict], dept_health: dict, data_fresh: str) -> str:
     lines.append("| 任务 | 状态 | 上次运行 | 结果 |")
     lines.append("|------|------|----------|------|")
     for t in tasks:
-        # 截断任务名便于阅读
         # 显示名映射（短名可读）
         display_names = {
             "Cognitive_MorningBrief": "晨报(DeepSeek)",
@@ -149,13 +164,25 @@ def build_report(tasks: list[dict], dept_health: dict, data_fresh: str) -> str:
             "StockAnalysis_NightlyPlan": "晚间计划",
             "StockAnalysis_Overnight": "隔夜分析",
             "StockAnalysis_Evening": "晚间总结",
+            "StockAnalysis_HealthCheck": "健康检查",
+            "StockAnalysis_CallAuction": "集合竞价",
+            "StockAnalysis_Recon": "侦查日报",
+            "StockAnalysis_VVRadar": "大V雷达(早)",
+            "StockAnalysis_VVRadar_Afternoon": "大V雷达(午)",
             "StockNightlyHealth": "夜间健康",
+            "StockForecastCloser": "预测闭环",
             "StockNews_Morning": "早间新闻",
             "StockNews_Intraday": "盘中新闻",
             "StockNews_Evening": "晚间新闻",
-            "Stock_CallAuction": "集合竞价",
         }
-        name = display_names.get(t["name"], t["name"])
+        # 未知任务保留原名, 去掉 StockAnalysis_/StockNews_/Cognitive_ 前缀
+        short = t["name"]
+        if short not in display_names:
+            for prefix in ["StockAnalysis_", "StockNews_", "Cognitive_", "Stock"]:
+                if short.startswith(prefix):
+                    short = short[len(prefix):]
+                    break
+        name = display_names.get(t["name"], short)
         lines.append(f"| {name} | {t['state']} | {t['last_run']} | {t['result']} |")
 
     lines.append("")

@@ -1,5 +1,5 @@
 @echo off
-REM 工程部 Morning Lint — Win Task Scheduler wrapper v2
+REM 工程部 Morning Lint — 6项检测 - 08:30
 REM 注册: SEL_MorningLint (08:30 每日)
 
 cd /d D:\1989n\stock_analysis

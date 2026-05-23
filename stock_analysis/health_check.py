@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import sys
 from datetime import datetime
+from pathlib import Path
 
 import requests
 
@@ -19,10 +20,11 @@ from config import (
 
 logger = logging.getLogger("health_check")
 
-# Windows tasks expected (StockNews_* and StockNightlyHealth are Claude Code crons)
-WIN_TASKS = [
+# Windows tasks expected — loaded from data/tasks.json
+TASKS_JSON = Path(__file__).parent / "data" / "tasks.json"
+_FALLBACK_WIN_TASKS = [
     "StockAnalysis_HealthCheck",
-    "StockAnalysis_MorningBrief",
+    "Cognitive_MorningBrief",
     "StockAnalysis_CallAuction",
     "StockAnalysis_HotStocks",
     "StockAnalysis_IntradayMidday",
@@ -33,6 +35,22 @@ WIN_TASKS = [
     "StockAnalysis_Evening",
     "StockAnalysis_Overnight",
 ]
+
+
+def _load_win_tasks() -> list[str]:
+    if TASKS_JSON.exists():
+        try:
+            data = json.loads(TASKS_JSON.read_text(encoding="utf-8"))
+            return [
+                t["name"] for t in data.get("tasks", [])
+                if t.get("enabled") and t.get("type") == "win_task" and t.get("name")
+            ]
+        except Exception:
+            pass
+    return _FALLBACK_WIN_TASKS
+
+
+WIN_TASKS = _load_win_tasks()
 
 # Claude Code cron tasks expected (by description keyword)
 CRON_KEYWORDS = [

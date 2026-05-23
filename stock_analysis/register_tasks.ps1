@@ -1,22 +1,17 @@
 # Register all stock_analysis scheduled tasks
 # Usage: powershell -ExecutionPolicy Bypass -File register_tasks.ps1
 # Design: CREATE-only with /F (force update), NEVER delete before create
-# Encoding: ASCII-safe, no non-ASCII chars to avoid GBK/UTF-8 corruption
+# Encoding: ASCII-safe only (avoid GBK/UTF-8 corruption)
 
 $projectDir = "D:\1989n\stock_analysis"
 $pythonExe = "D:\Python314\python.exe"
 
 $tasks = @(
-    # ── 前厅部 ───────────────────────────────────────────────────────
+    # -- Front Office -------------------------------------------------
     @{
         Name = "StockAnalysis_HealthCheck"
         Script = "$projectDir\run_health_check.bat"
         Time = "07:03"
-    },
-    @{
-        Name = "StockAnalysis_MorningBrief"
-        Script = "$projectDir\run_morning_brief.bat"
-        Time = "22:40"
     },
     @{
         Name = "StockAnalysis_CallAuction"
@@ -26,7 +21,7 @@ $tasks = @(
     @{
         Name = "StockAnalysis_HotStocks"
         Script = "$projectDir\run_hot_stocks.bat"
-        Time = "09:35 / 13:00 # 见下方 PS 多触发器注册"
+        Time = "09:35 / 13:00"
     },
     @{
         Name = "StockAnalysis_IntradayMidday"
@@ -54,6 +49,11 @@ $tasks = @(
         Time = "15:40"
     },
     @{
+        Name = "StockAnalysis_Recon"
+        Script = "$projectDir\run_recon_daily.bat"
+        Time = "15:30"
+    },
+    @{
         Name = "StockAnalysis_Evening"
         Script = "$projectDir\run_evening.bat"
         Time = "22:00"
@@ -63,7 +63,7 @@ $tasks = @(
         Script = "$projectDir\run_overnight.bat"
         Time = "23:30"
     },
-    # ── 后勤部 新闻采集 ──────────────────────────────────────────────────
+    # -- Logistics News -----------------------------------------------
     @{
         Name = "StockNews_Morning"
         Script = "$projectDir\run_news_morning.bat"
@@ -72,14 +72,14 @@ $tasks = @(
     @{
         Name = "StockNews_Intraday"
         Script = "$projectDir\run_news_intraday.bat"
-        Time = "09:30 / 每30分钟 至 15:00"
+        Time = "09:30 / every 30min to 15:00"
     },
     @{
         Name = "StockNews_Evening"
         Script = "$projectDir\run_news_evening.bat"
         Time = "21:55"
     },
-    # ── 后勤部 健康监控 + 认知任务 ──────────────────────────────────────
+    # -- Logistics Health + Cognitive ---------------------------------
     @{
         Name = "StockNightlyHealth"
         Script = "$projectDir\run_nightly_health.bat"
@@ -100,9 +100,9 @@ $tasks = @(
         Script = "$projectDir\run_morning_brief_agent.bat"
         Time = "08:37"
     },
-    # ── 工程部 Morning Maintenance ──────────────────────────────────────
-    # 时间线: 08:30→09:00→09:05→09:10→09:15
-    # 全部在前厅部 09:26 CallAuction 之前完成
+    # -- Engineering Morning Maintenance -------------------------------
+    # Timeline: 08:30->09:00->09:05->09:10->09:15
+    # All before Front Office 09:26 CallAuction
     @{
         Name = "SEL_MorningLint"
         Script = "$projectDir\run_lint.bat"
@@ -128,8 +128,8 @@ $tasks = @(
         Script = "$projectDir\run_prune.bat"
         Time = "09:15"
     },
-    # ── 工程部 Midday Evolution ────────────────────────────────────────
-    # 休盘时段执行，避开前厅部交易时段
+    # -- Engineering Midday Evolution ---------------------------------
+    # Runs during lunch break to avoid trading hours
     @{
         Name = "SEL_EvolveRead"
         Script = "$projectDir\run_evolve_read.bat"
@@ -153,19 +153,19 @@ foreach ($task in $tasks) {
     if ($taskName -eq "StockAnalysis_HotStocks") {
         $displayTime = "09:35 / 13:00"
     } elseif ($taskName -eq "StockNews_Intraday") {
-        $displayTime = "09:30 / 每30分钟 至 15:00"
+        $displayTime = "09:30 / every 30min to 15:00"
     } else {
         $displayTime = $taskTime
     }
 
     if ($taskName -eq "StockAnalysis_HotStocks") {
-        # 使用 PowerShell 注册多触发器（09:35 / 13:00 各一次）
+        # Use PowerShell to register multi-trigger (09:35 / 13:00)
         $t1 = New-ScheduledTaskTrigger -Daily -At 09:35
         $t2 = New-ScheduledTaskTrigger -Daily -At 13:00
         $act = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c $scriptPath"
         Register-ScheduledTask -TaskName $taskName -Trigger @($t1, $t2) -Action $act -RunLevel Limited -Force | Out-Null
     } elseif ($taskName -eq "StockNews_Intraday") {
-        # 盘中 09:30→每30分钟重复→至15:00
+        # Intraday 09:30->every 30min->until 15:00
         schtasks /Create /TN $taskName `
             /TR "cmd /c `"$scriptPath`"" `
             /SC DAILY `
