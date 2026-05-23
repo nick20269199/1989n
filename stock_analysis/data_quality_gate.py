@@ -22,6 +22,7 @@ logger = logging.getLogger("data_quality_gate")
 CST = timezone(timedelta(hours=8))
 STOCK_DATA = Path("D:/1989n/stock_data")
 PROJECT_DIR = Path(__file__).parent
+TASKS_JSON = PROJECT_DIR / "data" / "tasks.json"
 
 # ── 文件路径映射（部分文件不在 stock_data/ 下）──
 FILE_PATHS = {
@@ -29,18 +30,57 @@ FILE_PATHS = {
     "concept_mapping.json": PROJECT_DIR / "data" / "concept_mapping.json",
 }
 
-# ── 各类数据的保鲜阈值 ──
-FRESHNESS_RULES = {
+# ── 硬编码保鲜阈值（后备默认值）──
+_HARDCODED_RULES = {
     "portfolio.json": {"max_hours": 24, "severity": "critical"},
     "concept_mapping.json": {"max_hours": 48, "severity": "high"},
     "concept_stocks.json": {"max_hours": 48, "severity": "medium"},
     "stock_name_lookup.json": {"max_hours": 72, "severity": "low"},
-    "hot_stocks.json": {"max_hours": 6, "severity": "medium"},  # 交易时段6h
+    "hot_stocks.json": {"max_hours": 6, "severity": "medium"},
     "morning_brief_latest.md": {"max_hours": 12, "severity": "medium"},
     "morning_brief_latest.json": {"max_hours": 12, "severity": "medium"},
+    "morning_brief_agent_latest.md": {"max_hours": 12, "severity": "medium"},
+    "morning_brief_agent_latest.json": {"max_hours": 12, "severity": "medium"},
     "closing_review.json": {"max_hours": 24, "severity": "medium"},
-    "call_auction_latest.json": {"max_hours": 1, "severity": "low"},  # 集合竞价1h内有效
+    "call_auction_*.json": {"max_hours": 1, "severity": "low"},
 }
+
+
+def _load_outputs_from_tasksjson() -> dict:
+    """从 data/tasks.json 读取各任务的 outputs 字段，合并到保鲜规则。
+
+    返回 {filename/pattern: {max_hours, severity}} 的 dict。
+    tasks.json 不可用时返回空 dict，确保降级到硬编码后备。
+    """
+    if not TASKS_JSON.exists():
+        return {}
+    try:
+        data = json.loads(TASKS_JSON.read_text(encoding="utf-8"))
+        rules = {}
+        for task in data.get("tasks", []):
+            for out in task.get("outputs", []):
+                # path 形如 stock_data/closing_review.json 或 stock_data/analysis_30min_*.json
+                path = out.get("path", "")
+                # 去掉 stock_data/ 前缀
+                key = path[len("stock_data/"):] if path.startswith("stock_data/") else path
+                if key and "max_hours" in out:
+                    rules[key] = {
+                        "max_hours": out["max_hours"],
+                        "severity": out.get("severity", "medium"),
+                    }
+        if rules:
+            logger.info(f"[data_quality_gate] 从 tasks.json 加载 {len(rules)} 条保鲜规则")
+        return rules
+    except Exception as e:
+        logger.warning(f"[data_quality_gate] 加载 tasks.json 失败: {e}")
+        return {}
+
+
+# 合并: tasks.json 中定义的 outputs 覆盖硬编码默认值
+# 这样新增的任务只需在 tasks.json 加 outputs，不需改此文件
+_TASK_OUTPUTS = _load_outputs_from_tasksjson()
+
+FRESHNESS_RULES = {**_HARDCODED_RULES, **_TASK_OUTPUTS}
 
 
 def freshness_check(filepath: Path, max_hours: Optional[float] = None,
@@ -108,6 +148,10 @@ def preflight_scan(categories: Optional[list[str]] = None) -> dict:
 
     checks = []
     for rel in categories:
+        rule = FRESHNESS_RULES.get(rel, {})
+        max_hours = rule.get("max_hours", 24)
+        severity = rule.get("severity", "medium")
+
         # 优先使用自定义路径
         if rel in FILE_PATHS:
             fp = FILE_PATHS[rel]
@@ -115,20 +159,21 @@ def preflight_scan(categories: Optional[list[str]] = None) -> dict:
             fp = STOCK_DATA / rel
 
         if not fp.exists():
-            # 尝试用 glob 匹配（有些文件带时间戳后缀）
-            matches = list(STOCK_DATA.glob(f"{rel}*"))
+            # 尝试用 glob 匹配（时间戳文件 / 子目录）
+            glob_pattern = f"{rel}*"
+            matches = list(STOCK_DATA.glob(glob_pattern))
             if matches:
                 fp = max(matches, key=lambda p: p.stat().st_mtime)
             else:
                 checks.append({
                     "pass": False, "file": rel,
-                    "age_hours": -1, "max_hours": 0,
+                    "age_hours": -1, "max_hours": max_hours,
                     "severity": "critical",
                     "warning": f"{rel} 不存在",
                 })
                 continue
 
-        result = freshness_check(fp)
+        result = freshness_check(fp, max_hours=max_hours, severity=severity)
         checks.append(result)
 
     stale = [c for c in checks if not c["pass"]]

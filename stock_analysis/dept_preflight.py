@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import Optional
 
 from dept_status_protocol import read_other_dept, is_status_fresh
+from data_quality_gate import preflight_scan, FRESHNESS_RULES
 
 CST = timezone(timedelta(hours=8))
 STOCK_DATA = Path("D:/1989n/stock_data")
@@ -33,14 +34,9 @@ logger = logging.getLogger("preflight")
 
 
 # ── 依赖定义 ───────────────────────────────────────────────────────────
-# 以下从 stock_data/status/dependencies.json 加载
-# 每个部门依赖的另一个部门（谁的状态需要检查）
-# engineering 不依赖 front-office（独立运行）
-# front-office 依赖 engineering（规则库验证）
 _DEP_MAP_PATH = STOCK_DATA / "status" / "dependencies.json"
 
 def _load_dependency_map() -> dict:
-    """从 JSON 文件加载依赖映射。文件不存在时返回空字典。"""
     if not _DEP_MAP_PATH.exists():
         logger.warning("依赖映射文件不存在: %s", _DEP_MAP_PATH)
         return {}
@@ -51,20 +47,12 @@ def _load_dependency_map() -> dict:
         return {}
 
 def _get_deps(dept: str) -> list[str]:
-    """获取某部门的依赖列表。"""
     return _load_dependency_map().get(dept, [])
 
-# 关键数据文件及其最大新鲜度（小时）
-CRITICAL_DATA = {
-    "front-office": [
-        ("portfolio.json", 48),
-        ("closing_review.json", 24),
-        ("channel_health_latest.json", 2),
-        ("sentinel_status.json", 24),
-    ],
-    "engineering": [
-        ("_lint_history.json", 48),
-    ],
+# 部门数据文件映射 — 文件名列表, 阈值从 FRESHNESS_RULES 统一获取
+DEPT_DATA_FILES = {
+    "front-office": ["portfolio.json", "closing_review.json", "channel_health_latest.json", "sentinel_status.json"],
+    "engineering": ["_lint_history.json"],
 }
 
 
@@ -102,39 +90,32 @@ def check_other_dept_status(dept: str) -> dict:
 
 
 def check_data_freshness(dept: str) -> list[dict]:
-    """检查本部门依赖的数据文件。"""
+    """检查本部门依赖的数据文件 (通过 data_quality_gate.preflight_scan)。"""
+    files = DEPT_DATA_FILES.get(dept, [])
+    if not files:
+        return []
+
+    scan = preflight_scan(files)
     results = []
-    files = CRITICAL_DATA.get(dept, [])
-
-    for rel_path, max_hours in files:
-        full_path = STOCK_DATA / rel_path
-        entry = {
-            "check": "data_freshness",
-            "target": rel_path,
-            "severity": "ok",
-            "detail": "",
-        }
-
-        if not full_path.exists():
-            entry["severity"] = "fail" if max_hours <= 24 else "advisory"
-            entry["detail"] = f"{rel_path} 不存在"
-            results.append(entry)
-            continue
-
-        mtime = datetime.fromtimestamp(full_path.stat().st_mtime, tz=CST)
-        age_hours = (datetime.now(CST) - mtime).total_seconds() / 3600
-
-        if age_hours > max_hours * 2:
-            entry["severity"] = "fail"
-            entry["detail"] = f"{rel_path} 过期 ({age_hours:.0f}h > {max_hours}h 阈值)"
-        elif age_hours > max_hours:
-            entry["severity"] = "advisory"
-            entry["detail"] = f"{rel_path} 接近过期 ({age_hours:.0f}h, 阈值{max_hours}h)"
+    for check in scan["checks"]:
+        age = check["age_hours"]
+        max_h = check["max_hours"]
+        if age < 0:
+            severity = "fail" if max_h <= 24 else "advisory"
+            detail = f"{check['file']} 不存在"
+        elif age > max_h * 2:
+            severity = "fail"
+            detail = f"{check['file']} 过期 ({age:.0f}h > {max_h}h 阈值)"
+        elif age > max_h:
+            severity = "advisory"
+            detail = f"{check['file']} 接近过期 ({age:.0f}h, 阈值{max_h}h)"
         else:
-            entry["detail"] = f"{rel_path} 正常 (更新于{age_hours:.0f}h前)"
-
-        results.append(entry)
-
+            severity = "ok"
+            detail = f"{check['file']} 正常 (更新于{age:.0f}h前)"
+        results.append({
+            "check": "data_freshness", "target": check["file"],
+            "severity": severity, "detail": detail,
+        })
     return results
 
 

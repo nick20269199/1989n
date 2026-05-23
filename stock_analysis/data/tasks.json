@@ -44,7 +44,10 @@
       "cron": "27 8 * * 1-5",
       "log_path": "stock_data\\morning_brief.log",
       "dept": "front-office",
-      "bat_style": "simple"
+      "bat_style": "simple",
+      "outputs": [
+        {"path": "stock_data/call_auction_*.json", "max_hours": 1, "severity": "low"}
+      ]
     },
     {
       "id": "morning_brief_agent",
@@ -57,7 +60,11 @@
       "cron": "37 8 * * 1-5",
       "log_path": "stock_data\\cognitive_agent.log",
       "dept": "front-office",
-      "bat_style": "timestamp"
+      "bat_style": "timestamp",
+      "outputs": [
+        {"path": "stock_data/morning_brief_agent_latest.json", "max_hours": 12, "severity": "medium"},
+        {"path": "stock_data/morning_brief_agent_latest.md", "max_hours": 12, "severity": "medium"}
+      ]
     },
     {
       "id": "news_morning",
@@ -70,7 +77,10 @@
       "cron": "0 8 * * *",
       "log_path": "stock_data\\logs\\news_morning.log",
       "dept": "logistics",
-      "bat_style": "simple_exit"
+      "bat_style": "simple_exit",
+      "outputs": [
+        {"path": "stock_data/news_manual_*.json", "max_hours": 12, "severity": "medium"}
+      ]
     },
     {
       "id": "news_intraday",
@@ -84,7 +94,10 @@
       "repeat": {"interval_min": 30, "duration_min": 330},
       "log_path": "stock_data\\logs\\news_intraday.log",
       "dept": "logistics",
-      "bat_style": "simple_exit"
+      "bat_style": "simple_exit",
+      "outputs": [
+        {"path": "stock_data/news_intraday_*.json", "max_hours": 1, "severity": "medium"}
+      ]
     },
     {
       "id": "news_evening",
@@ -97,7 +110,10 @@
       "cron": "55 21 * * *",
       "log_path": "stock_data\\logs\\news_evening.log",
       "dept": "logistics",
-      "bat_style": "simple_exit"
+      "bat_style": "simple_exit",
+      "outputs": [
+        {"path": "stock_data/news_evening_*.json", "max_hours": 12, "severity": "medium"}
+      ]
     },
     {
       "id": "lint",
@@ -176,7 +192,10 @@
       ],
       "cron": ["35 9 * * 1-5", "0 13 * * 1-5"],
       "dept": "front-office",
-      "bat_style": "multi_step"
+      "bat_style": "multi_step",
+      "outputs": [
+        {"path": "stock_data/hot_stocks.json", "max_hours": 6, "severity": "medium"}
+      ]
     },
     {
       "id": "evolve_read",
@@ -216,7 +235,10 @@
       "log_path": "stock_data\\intraday_midday.log",
       "dept": "front-office",
       "bat_style": "powershell_hidden",
-      "bat_note": "使用 powershell -WindowStyle Hidden 避免弹窗"
+      "outputs": [
+        {"path": "stock_data/analysis_30min_*.json", "max_hours": 6, "severity": "medium"},
+        {"path": "stock_data/analysis_30min_*.md", "max_hours": 6, "severity": "low"}
+      ]
     },
     {
       "id": "intraday_close",
@@ -229,7 +251,11 @@
       "cron": "0 15 * * 1-5",
       "log_path": "stock_data\\intraday_close.log",
       "dept": "front-office",
-      "bat_style": "powershell_hidden"
+      "bat_style": "powershell_hidden",
+      "outputs": [
+        {"path": "stock_data/analysis_30min_*.json", "max_hours": 6, "severity": "medium"},
+        {"path": "stock_data/analysis_30min_*.md", "max_hours": 6, "severity": "low"}
+      ]
     },
     {
       "id": "closing_review",
@@ -242,7 +268,11 @@
       "cron": "15 15 * * 1-5",
       "log_path": "stock_data\\closing_review.log",
       "dept": "front-office",
-      "bat_style": "closing_review"
+      "bat_style": "closing_review",
+      "outputs": [
+        {"path": "stock_data/closing_review.json", "max_hours": 24, "severity": "medium"},
+        {"path": "stock_data/closing_review.md", "max_hours": 24, "severity": "low"}
+      ]
     },
     {
       "id": "tech_scan",
@@ -255,7 +285,11 @@
       "cron": "33 15 * * 1-5",
       "log_path": "stock_data\\tech_scan.log",
       "dept": "front-office",
-      "bat_style": "simple"
+      "bat_style": "simple",
+      "outputs": [
+        {"path": "stock_data/scan_vcp_default.json", "max_hours": 24, "severity": "low"},
+        {"path": "stock_data/scan_watchlist_tech_default.json", "max_hours": 24, "severity": "low"}
+      ]
     },
     {
       "id": "nightly_plan",
@@ -268,7 +302,10 @@
       "cron": "40 15 * * 1-5",
       "log_path": "stock_data\\nightly_plan.log",
       "dept": "front-office",
-      "bat_style": "simple"
+      "bat_style": "simple",
+      "outputs": [
+        {"path": "stock_data/trade_plans/plan_*.json", "max_hours": 48, "severity": "low"}
+      ]
     },
     {
       "id": "recon_daily",
@@ -281,7 +318,10 @@
       "cron": "30 15 * * 1-5",
       "log_path": "stock_data\\recon_daily.log",
       "dept": "front-office",
-      "bat_style": "simple"
+      "bat_style": "simple",
+      "outputs": [
+        {"path": "stock_data/recon_report_*.md", "max_hours": 48, "severity": "low"}
+      ]
     },
     {
       "id": "vv_radar",
@@ -294,7 +334,10 @@
       "cron": "35 9 * * *",
       "log_path": "stock_data\\vv_radar.log",
       "dept": "front-office",
-      "bat_style": "simple"
+      "bat_style": "simple",
+      "outputs": [
+        {"path": "stock_data/vv_radar.db", "max_hours": 24, "severity": "low"}
+      ]
     },
     {
       "id": "vv_radar_afternoon",
@@ -307,7 +350,10 @@
       "cron": "0 13 * * *",
       "log_path": "stock_data\\vv_radar.log",
       "dept": "front-office",
-      "bat_style": "simple"
+      "bat_style": "simple",
+      "outputs": [
+        {"path": "stock_data/vv_radar.db", "max_hours": 24, "severity": "low"}
+      ]
     },
     {
       "id": "forecast_closer",
@@ -348,7 +394,11 @@
       ],
       "cron": "0 22 * * *",
       "dept": "front-office",
-      "bat_style": "multi_step"
+      "bat_style": "multi_step",
+      "outputs": [
+        {"path": "stock_data/news_evening_*_2200.json", "max_hours": 16, "severity": "medium"},
+        {"path": "stock_data/report_evening_*.md", "max_hours": 24, "severity": "low"}
+      ]
     },
     {
       "id": "overnight",
@@ -361,7 +411,11 @@
       "cron": "37 23 * * 1-5",
       "log_path": "stock_data\\overnight.log",
       "dept": "front-office",
-      "bat_style": "powershell_hidden"
+      "bat_style": "powershell_hidden",
+      "outputs": [
+        {"path": "stock_data/analysis_overnight_*.json", "max_hours": 16, "severity": "medium"},
+        {"path": "stock_data/analysis_overnight_*.md", "max_hours": 16, "severity": "low"}
+      ]
     },
     {
       "id": "task_dashboard",
@@ -447,7 +501,10 @@
       "args": ["sector_collect"],
       "log_path": null,
       "dept": "front-office",
-      "bat_style": "pause"
+      "bat_style": "pause",
+      "outputs": [
+        {"path": "stock_data/sector_daily/*.json", "max_hours": 48, "severity": "low"}
+      ]
     },
     {
       "id": "weekly_sector",

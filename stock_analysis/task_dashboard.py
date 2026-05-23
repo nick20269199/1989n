@@ -128,19 +128,43 @@ def get_dept_health() -> dict:
     return health
 
 
-def get_data_freshness() -> str:
-    """汇总关键数据保鲜度。"""
+# 部门数据文件映射 (与 dept_preflight 同步)
+DEPT_DATA_FILES = {
+    "前厅部": ["portfolio.json", "closing_review.json", "channel_health_latest.json", "sentinel_status.json",
+               "hot_stocks.json", "morning_brief_agent_latest.json", "call_auction_*.json",
+               "analysis_30min_*.json", "analysis_overnight_*.json", "scan_*.json", "recon_report_*.md",
+               "trade_plans/plan_*.json", "vv_radar.db", "position_check.json"],
+    "工程部": ["_lint_history.json"],
+    "其他": None,  # None = 不在前两个部门的全部文件
+}
+
+def _build_dept_file_map() -> dict[str, str]:
+    """构建 文件名 → 部门名 的映射。"""
+    m = {}
+    for dept, files in DEPT_DATA_FILES.items():
+        if files is None:
+            continue
+        for f in files:
+            m[f] = dept
+    return m
+
+_DEPT_FILE_MAP = _build_dept_file_map()
+
+
+def get_data_freshness() -> dict:
+    """汇总关键数据保鲜度，按部门分组。"""
     scan = dqg.preflight_scan()
-    if scan["healthy"]:
-        return "✅ 全部新鲜"
-    stale = [c for c in scan["checks"] if not c["pass"]]
-    parts = []
-    for s in stale[:5]:
-        parts.append(f"  ⚠ {s['file']}: {s['age_hours']:.0f}h (阈值{s.get('max_hours', 0):.0f}h)")
-    return "⚠ " + ", ".join(f"{s['file']}({s['age_hours']:.0f}h)" for s in stale[:5])
+    checks = scan["checks"]
+
+    by_dept: dict[str, list] = {"前厅部": [], "工程部": [], "其他": []}
+    for c in checks:
+        dept = _DEPT_FILE_MAP.get(c["file"], "其他")
+        by_dept[dept].append(c)
+
+    return {"healthy": scan["healthy"], "by_dept": by_dept, "all_checks": checks}
 
 
-def build_report(tasks: list[dict], dept_health: dict, data_fresh: str) -> str:
+def build_report(tasks: list[dict], dept_health: dict, data_fresh: dict) -> str:
     """生成 markdown 看板。"""
     now = datetime.now(CST).strftime("%Y-%m-%d %H:%M")
     lines = [f"## 📊 系统看板 | {now}", ""]
@@ -191,9 +215,20 @@ def build_report(tasks: list[dict], dept_health: dict, data_fresh: str) -> str:
         if "_issues" not in dept:
             lines.append(f"- {dept}: {health}")
 
+    # 数据保鲜 — 按部门分组
     lines.append("")
-    lines.append(f"### 数据保鲜")
-    lines.append(data_fresh)
+    lines.append("### 数据保鲜")
+    if data_fresh["healthy"]:
+        lines.append("✅ 全部新鲜")
+    else:
+        for dept_name in ["前厅部", "工程部", "其他"]:
+            checks = data_fresh["by_dept"].get(dept_name, [])
+            stale = [c for c in checks if not c["pass"]]
+            if not stale:
+                continue
+            lines.append(f"**{dept_name}** ({len(stale)}项过期):")
+            for s in stale:
+                lines.append(f"  ⚠ {s['file']}: {s['age_hours']:.0f}h (阈值{s.get('max_hours', 0):.0f}h)")
 
     # 风险汇总
     lines.append("")
@@ -224,6 +259,12 @@ def main():
     data_fresh = get_data_freshness()
 
     report = build_report(tasks, dept_health, data_fresh)
+
+    # 数据保鲜告警（过多过期项）
+    stale_checks = [c for c in data_fresh["all_checks"] if not c["pass"]]
+    if len(stale_checks) > 3:
+        stale_summary = "\n".join(f"- {s['file']}: {s['age_hours']:.0f}h" for s in stale_checks)
+        send_feishu_message("⚠ 数据保鲜告警", f"{len(stale_checks)} 项数据过期:\n{stale_summary}", chat_id="alerts")
 
     # 输出到文件
     out_dir = STOCK_ANALYSIS / ".." / "stock_data"
