@@ -600,7 +600,7 @@ def main():
 
     # 7. 存 JSON
     STOCK_DATA_DIR.mkdir(parents=True, exist_ok=True)
-    fname = f"intel_report_{t.strftime('%Y%m%d_%H%M')}.json"
+    fname = f"intraday_report_{t.strftime('%Y%m%d_%H%M')}.json"
     json_path = STOCK_DATA_DIR / fname
     json_path.write_text(json.dumps({
         "time": t.strftime("%Y-%m-%d %H:%M:%S"),

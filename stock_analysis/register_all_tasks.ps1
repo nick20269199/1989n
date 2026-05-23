@@ -92,10 +92,10 @@ Register-MultiTriggerTask -Name 'StockAnalysis_HotStocks' -ScriptPath 'D:\1989n\
 Register-SimpleTask -Name 'StockAnalysis_VVRadar' -ScriptPath 'D:\1989n\stock_analysis\run_vv_radar.bat' -Schedule 'DAILY' -StartTime '09:35'
 
 # 情报部盘前侦察
-Register-SimpleTask -Name 'Intel_Recon' -ScriptPath 'D:\1989n\stock_analysis\run_intel_recon.bat' -Schedule 'WEEKLY' -StartTime '08:50' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+Register-SimpleTask -Name 'Intel_Recon' -ScriptPath 'D:\1989n\stock_analysis\run_intel_recon.bat' -Schedule 'WEEKLY' -StartTime '08:32' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
 # 情报部收盘推演
-Register-SimpleTask -Name 'Intel_Deduce' -ScriptPath 'D:\1989n\stock_analysis\run_intel_deduce.bat' -Schedule 'WEEKLY' -StartTime '15:45' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+Register-SimpleTask -Name 'Intel_Deduce' -ScriptPath 'D:\1989n\stock_analysis\run_intel_deduce.bat' -Schedule 'WEEKLY' -StartTime '15:35' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
 # 任务哨兵 — 检查定时任务+数据文件健康
 Register-SimpleTask -Name 'SEL_TaskSentinel' -ScriptPath 'D:\1989n\stock_analysis\run_task_sentinel.bat' -Schedule 'DAILY' -StartTime '10:00'

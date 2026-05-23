@@ -405,10 +405,15 @@ def build_market_prompt(
         lines.append(vv_prompt)
         lines.append("")
 
-    # ── 五C、侦查日报（昨日收盘后机会发现） ──
-    if recon_report:
-        lines.append("## 侦查日报引用（昨日收盘后机会发现）")
-        lines.append(recon_report)
+    # ── 五C、情报部侦察 + 侦查日报 ──
+    if recon_report or recon_extra:
+        lines.append("## 情报部侦察 + 侦查日报")
+        if recon_report:
+            lines.append(recon_report)
+        if recon_extra:
+            if recon_report:
+                lines.append("")
+            lines.append(recon_extra)
         lines.append("")
 
     # ── 六、新闻列表 ──
@@ -519,22 +524,36 @@ def main():
     if vv_data["total_videos"] > 0:
         logger.info(f"大V雷达: {vv_data['author_count']}位大V, {vv_data['total_videos']}条视频")
 
-    # 侦查日报（昨日收盘后产出，包含机会发现和盯盘清单）
+    # 情报部侦察信号（intel_recon 08:32产出，包含新闻→概念→VCP共振信号）
     recon_report = ""
     try:
-        recon_path = STOCK_DATA / f"recon_report_{datetime.now(CST).strftime('%Y%m%d')}.md"
-        if not recon_path.exists():
-            # 尝试昨日
-            recon_path = STOCK_DATA / f"recon_report_{(datetime.now(CST) - timedelta(days=1)).strftime('%Y%m%d')}.md"
-        if recon_path.exists():
-            recon_text = recon_path.read_text(encoding="utf-8")
-            # 提取机会发现和盯盘清单部分（去掉元信息）
-            sections = recon_text.split("## ")
-            for s in sections:
-                if s.startswith("一、机会发现") or s.startswith("三、明日盯盘"):
-                    recon_report += f"## {s[:200]}\n"
-            if recon_report:
-                logger.info(f"侦查日报: 引用 {recon_path.name}")
+        intel_dir = STOCK_DATA / "intel"
+        date_str = datetime.now(CST).strftime("%Y-%m-%d")
+        intel_path = intel_dir / f"intel_recon_{date_str}.md"
+        if not intel_path.exists():
+            intel_path = intel_dir / f"intel_recon_{(datetime.now(CST) - timedelta(days=1)).strftime('%Y-%m-%d')}.md"
+        if intel_path.exists():
+            recon_report = intel_path.read_text(encoding="utf-8").strip()
+            if "---" in recon_report:
+                recon_report = recon_report.split("---")[0].strip()
+            logger.info(f"情报部侦察: 引用 {intel_path.name}")
+    except Exception as e:
+        logger.warning(f"情报部侦察加载失败: {e}")
+
+    # 侦查日报（recon_daily 15:30产出，DeepSeek 驱动的机会发现）
+    recon_extra = ""
+    try:
+        date_y4 = datetime.now(CST).strftime("%Y%m%d")
+        rr_path = STOCK_DATA / f"recon_report_{date_y4}.md"
+        if not rr_path.exists():
+            rr_path = STOCK_DATA / f"recon_report_{(datetime.now(CST) - timedelta(days=1)).strftime('%Y%m%d')}.md"
+        if rr_path.exists():
+            rr_text = rr_path.read_text(encoding="utf-8").strip()
+            # 去掉头部的 # 侦查日报 标题行和尾部签名行
+            lines = rr_text.split("\n")
+            body = [l for l in lines if not l.startswith("---") and not l.startswith("*数据源")]
+            recon_extra = "\n".join(body).strip()
+            logger.info(f"侦查日报: 引用 {rr_path.name}")
     except Exception as e:
         logger.warning(f"侦查日报加载失败: {e}")
 
@@ -545,6 +564,10 @@ def main():
         f"竞价{'有' if auction else '无'} "
         f"市场状态{'有' if market_state else '无'}"
     )
+
+    # 合并情报部侦察 + 侦查日报
+    if recon_extra:
+        recon_report = (recon_report + "\n\n" + recon_extra) if recon_report else recon_extra
 
     # ── 构建 prompt ──
     news_data = {
@@ -564,7 +587,7 @@ def main():
 2. **板块温度判断** — 结合板块涨幅排名+资金流向+竞价数据，判断今日主线
 3. **持仓映射** — 8只持仓中哪些受益/受损于今日板块格局
 4. **给出可操作判断** — 不只是罗列数据，要给出今日态度
-5. **引用侦查日报** — 如果有「侦查日报引用」板块，将其中的机会发现和盯盘清单纳入今日判断，但你的判断优先级更高
+5. **引用情报部侦察** — 如果有「情报部侦察」板块，将其中的多源交叉验证信号纳入今日判断，但你的判断优先级更高
 
 晨报架构参考:
 {context}

@@ -59,6 +59,8 @@ EASTMONEY_QUOTE_URL = "https://push2.eastmoney.com/api/qt/stock/get"
 TENCENT_KLINE_URL = "https://web.ifzq.gtimg.cn/appstock/app/kline/mkline"
 THS_HOT_STOCKS_URL = "https://www.10jqka.com.cn/api/hotstock"
 SINA_QUOTE_URL = "https://hq.sinajs.cn/list="
+SINA_NEWS_ROLL_URL = "https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2516&knum=50"
+EASTMONEY_NEWS_URL = "https://push2.eastmoney.com/api/qt/ulist.np/get"
 
 # === 请求头 ===
 HEADERS = {

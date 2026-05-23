@@ -1,4 +1,4 @@
-# 定时任务一览 | 2026-05-23 15:02
+# 定时任务一览 | 2026-05-23 15:56
 
 Python: `D:\Python314\python`
 工作目录: `D:\1989n\stock_analysis`
@@ -8,7 +8,7 @@ Python: `D:\Python314\python`
 
 ## 汇总
 
-- 任务总数: 42 (启用 41, 禁用 1)
+- 任务总数: 42 (启用 40, 禁用 2)
 - Windows 定时任务: 37
 - 手动脚本: 5
 
@@ -35,7 +35,7 @@ Python: `D:\Python314\python`
 | StockAnalysis_HotStocks | 热门股票采集 + 大V雷达联动 | 工作日 09:35 / 工作日 13:00 | `daily_task.py` (+1步) |
 | StockAnalysis_VVRadar | 大V雷达 (09:35) | 09:35 | `vv_radar.py` |
 | monitor_000062 | 00062深圳华强专项监控 (未注册定时任务) | 手动执行 | `monitor_000062.py` |
-| backtest | 决策 T+5 回测 (手动) | 手动执行 | `daily_task.py` |
+| backtest ⛔ | 决策 T+5 回测 (手动) | 手动执行 | `daily_task.py` |
 | weekly_sector | 周度板块轮动报告 (手动) | 手动执行 | `daily_task.py` |
 | multi_angle_analysis | 多角度交叉分析 (手动执行, 10路DeepSeek并行) | 手动执行 | `multi_angle_analysis.py` |
 
@@ -43,8 +43,8 @@ Python: `D:\Python314\python`
 
 | 任务 | 说明 | 时间 | 脚本 |
 |------|------|------|------|
-| Intel_Recon | 情报部盘前侦察 | 工作日 08:50 | `intelligence_service.py` |
-| Intel_Deduce | 情报部收盘推演 | 工作日 15:45 | `intelligence_service.py` |
+| Intel_Recon | 情报部盘前侦察 | 工作日 08:32 | `intelligence_service.py` |
+| Intel_Deduce | 情报部收盘推演 | 工作日 15:35 | `intelligence_service.py` |
 
 ### 工程部
 
@@ -75,4 +75,4 @@ Python: `D:\Python314\python`
 | weekly_audit_agent | 周审计 (未注册定时任务) | 手动执行 | `weekly_audit_agent.py` |
 
 ---
-*自动生成于 2026-05-23 15:02 | 修改 tasks.json 后重新运行 `python tools/generate_task_bats.py`*
+*自动生成于 2026-05-23 15:56 | 修改 tasks.json 后重新运行 `python tools/generate_task_bats.py`*

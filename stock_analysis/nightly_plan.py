@@ -8,6 +8,7 @@ import os
 import sys
 import glob
 from datetime import datetime, timedelta
+from pathlib import Path
 from dataclasses import dataclass, field
 from typing import List, Dict, Optional, Tuple
 
@@ -19,21 +20,39 @@ os.makedirs(PLAN_DIR, exist_ok=True)
 # 持仓 (与 CLAUDE.md + position_manager.py 同步)
 # ============================================================
 HOLDINGS = [
-    {"code": "000062", "name": "深圳华强", "qty": 2000, "cost": 37.28, "sector": "电子元器件分销",
-     "buy_date": "2026-04-30", "first_buy": "2026-04-30", "latest_buy": "2026-05-06"},
-    {"code": "002156", "name": "通富微电", "qty": 2200, "cost": 49.77, "sector": "半导体封测",
-     "buy_date": "2026-04-27", "first_buy": "2026-04-27", "latest_buy": "2026-04-29"},
-    {"code": "300480", "name": "光力科技", "qty": 400,  "cost": 36.28, "sector": "半导体划片设备",
-     "buy_date": "2026-04-30", "first_buy": "2026-04-30", "latest_buy": "2026-04-30"},
-    {"code": "002407", "name": "多氟多",   "qty": 600,  "cost": 36.25, "sector": "锂电化工",
-     "buy_date": "2026-05-06", "first_buy": "2026-05-06", "latest_buy": "2026-05-07"},
-    {"code": "300342", "name": "天银机电", "qty": 200,  "cost": 64.56, "sector": "商业航天/军工",
-     "buy_date": "2026-05-08", "first_buy": "2026-05-08", "latest_buy": "2026-05-08"},
-    {"code": "300739", "name": "明阳电路", "qty": 100,  "cost": 29.72, "sector": "PCB/电子",
-     "buy_date": "2026-04-23", "first_buy": "2026-04-23", "latest_buy": "2026-04-23"},
-    {"code": "601789", "name": "宁波建工", "qty": 600,  "cost": 6.36,  "sector": "建筑工程/基建",
-     "buy_date": "2026-05-05", "first_buy": "2026-05-05", "latest_buy": "2026-05-05"},
+    {"code": "002156", "name": "通富微电", "qty": 400, "cost": -1.032, "sector": "半导体封测",
+     "buy_date": "2026-04-27", "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
+    {"code": "300136", "name": "信维通信", "qty": 500, "cost": 108.006, "sector": "消费电子/射频",
+     "buy_date": "2026-05-18", "first_buy": "2026-05-18", "latest_buy": "2026-05-22"},
+    {"code": "600498", "name": "烽火通信", "qty": 800, "cost": 57.132, "sector": "通信设备",
+     "buy_date": "2026-05-20", "first_buy": "2026-05-20", "latest_buy": "2026-05-22"},
+    {"code": "002077", "name": "大港股份", "qty": 2500, "cost": 18.684, "sector": "半导体/EDA",
+     "buy_date": "2026-05-21", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
+    {"code": "300058", "name": "蓝色光标", "qty": 800, "cost": 18.24, "sector": "AI营销/出海",
+     "buy_date": "2026-05-21", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
 ]
+PORTFOLIO_JSON = os.path.join(os.path.dirname(__file__), "data", "portfolio.json")
+
+
+def load_portfolio_holdings() -> list[dict]:
+    """从 portfolio.json 加载当前持仓，后备用模块级 HOLDINGS。"""
+    try:
+        if os.path.exists(PORTFOLIO_JSON):
+            with open(PORTFOLIO_JSON, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            raw = data.get("holdings", [])
+            if raw:
+                return [
+                    {"code": h["code"], "name": h["name"], "qty": h["shares"],
+                     "cost": h["cost"], "sector": h.get("sector", ""),
+                     "buy_date": h.get("first_buy", ""), "first_buy": h.get("first_buy", ""),
+                     "latest_buy": h.get("latest_buy", "")}
+                    for h in raw if h.get("code")
+                ]
+    except Exception as e:
+        print(f"  加载 portfolio.json 失败: {e}, 使用模块级后备")
+    return HOLDINGS
+
 
 # ============================================================
 # 规则 (与 trade_engine 一致)
@@ -54,8 +73,10 @@ def load_market_calendar():
     return {}
 
 
-def get_latest_closing_prices():
+def get_latest_closing_prices(holdings: list[dict] = None):
     """获取收盘价：优先用已验证的批量行情接口 → 30min文件回退"""
+    if holdings is None:
+        holdings = HOLDINGS
     prices = {}
     source = ""
 
@@ -63,7 +84,7 @@ def get_latest_closing_prices():
     try:
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         from daily_task import fetch_quotes_batch
-        codes = [h["code"] for h in HOLDINGS]
+        codes = [h["code"] for h in holdings]
         quotes = fetch_quotes_batch(codes)
         for code, q in quotes.items():
             if q.get("price", 0) > 0:
@@ -108,6 +129,21 @@ def get_recent_digest():
         with open(files[-1], "r") as f:
             return json.load(f)
     return {}
+
+
+def load_intel_signals() -> dict:
+    """加载情报部收盘推演信号 (intel_deduce)。"""
+    intel_file = os.path.join(DATA_DIR, "intel", "intel_latest.json")
+    if not os.path.exists(intel_file):
+        return {}
+    try:
+        with open(intel_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if data.get("kind") not in ("deduce", "recon"):
+            return {}
+        return data
+    except (json.JSONDecodeError, IOError):
+        return {}
 
 
 def build_position_plan(holding: dict, close_price: float, market: dict,
@@ -294,7 +330,7 @@ def _determine_normal_action(pnl_pct: float, hold_days: int, cost: float) -> str
     return "持有，观察盘中走势"
 
 
-def build_market_outlook(calendar: dict, digest: dict) -> dict:
+def build_market_outlook(calendar: dict, digest: dict, intel: dict = None) -> dict:
     """构建明天市场展望"""
     today = datetime.now().strftime("%Y-%m-%d")
     mkt_today = calendar.get(today, {})
@@ -350,6 +386,19 @@ def build_market_outlook(calendar: dict, digest: dict) -> dict:
         if alerts:
             outlook["watch_notes"].append(f"比率警报: {list(alerts.keys())}")
 
+    # 情报部收盘推演信号
+    if intel and intel.get("signals"):
+        for s in intel["signals"]:
+            sig_text = s.get("signal", "")
+            chain = s.get("logic_chain", [])
+            if "流出" in sig_text or "谨慎" in sig_text:
+                outlook["can_open_new"] = False
+                outlook["restrictions"].append(f"情报信号: {sig_text} — {'; '.join(chain[:2])}")
+            elif "流入" in sig_text or "偏暖" in sig_text:
+                outlook["watch_notes"].append(f"情报信号: {sig_text} — {'; '.join(chain[:2])}")
+            else:
+                outlook["watch_notes"].append(f"情报信号: {sig_text}")
+
     return outlook
 
 
@@ -376,20 +425,25 @@ def generate_full_plan():
     print(f"  生成时间: {now.strftime('%Y-%m-%d %H:%M')}")
     print(f"{'='*65}")
 
-    # 加载数据
+    # 加载数据（持仓优先从 portfolio.json）
     calendar = load_market_calendar()
     digest = get_recent_digest()
-    prices, price_source = get_latest_closing_prices()
+    intel = load_intel_signals()
+    holdings = load_portfolio_holdings()
+    prices, price_source = get_latest_closing_prices(holdings)
 
     print(f"\n  价格来源: {price_source}")
 
     # 市场展望
-    outlook = build_market_outlook(calendar, digest)
+    outlook = build_market_outlook(calendar, digest, intel)
 
     print(f"\n  ── 明日市场展望 ──")
     print(f"  今日收盘: 趋势{outlook['today_market'].get('trend','?')}  "
           f"量能{outlook['today_market'].get('volume_state','?')}  "
           f"情绪{outlook['today_market'].get('sentiment','?')}")
+
+    if intel and intel.get("signals"):
+        print(f"  情报部: {intel['signal_count']}条推演信号")
 
     if outlook["can_open_new"]:
         print(f"  ✅ 明日可以开新仓")
@@ -401,18 +455,27 @@ def generate_full_plan():
     for n in outlook["watch_notes"]:
         print(f"    - {n}")
 
+    # 情报部推演信号详情
+    if intel and intel.get("signals"):
+        print(f"\n  ── 情报部收盘推演 ──")
+        for s in intel["signals"]:
+            conf = {"high": "★★★", "medium": "★★", "low": "★"}.get(s.get("confidence", ""), "★")
+            print(f"  {conf} {s['signal']}")
+            for step in s.get("logic_chain", [])[:2]:
+                print(f"      {step}")
+
     # 逐个持仓计划
     positions_plan = []
     emergency_count = 0
 
     print(f"\n  {'='*65}")
-    print(f"  持仓交易计划 ({len(HOLDINGS)}只)")
+    print(f"  持仓交易计划 ({len(holdings)}只)")
     print(f"  {'='*65}")
 
     total_value = 0
     total_pnl = 0
 
-    for h in HOLDINGS:
+    for h in holdings:
         code = h["code"]
         name = h["name"]
         close = prices.get(code, h["cost"])  # 无价格用成本价
@@ -458,7 +521,7 @@ def generate_full_plan():
         print(f"  └{'─'*40}")
 
     # 组合总览
-    total_cost = sum(h["cost"] * h["qty"] for h in HOLDINGS)
+    total_cost = sum(h["cost"] * h["qty"] for h in holdings)
     print(f"\n  {'='*65}")
     print(f"  组合总览")
     print(f"  {'='*65}")

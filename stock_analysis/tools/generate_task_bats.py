@@ -199,7 +199,7 @@ def _abs_log(path: str) -> str:
     但 .bat 需要绝对路径，因为 cd 到 work_dir 后 stock_data 会解析为 work_dir/stock_data/。
     """
     if not path:
-        return ""
+        return "nul"
     if path.startswith("D:") or path.startswith("\\"):
         return path
     # Relative path — prepend data root
@@ -313,6 +313,8 @@ def generate_all_bats(meta: dict, tasks: list[dict], dry_run: bool = False) -> d
     registered_bats = set()
 
     for task in tasks:
+        if not task.get("enabled", True):
+            continue
         bat_style = task.get("bat_style", "simple")
         generator = BAT_GENERATORS.get(bat_style)
         if not generator:
@@ -490,13 +492,13 @@ def main():
 
     # Generate .bat files
     bat_outputs = generate_all_bats(meta, tasks, dry_run=dry_run)
-    enabled_count = sum(1 for t in tasks if t.get("enabled", True) and t.get("type") == "win_task")
-    manual_count = sum(1 for t in tasks if t.get("type") == "manual_bat")
-    print(f"[generate_task_bats] 生成 {len(bat_outputs)} 个 .bat 文件 ({enabled_count} 定时 + {manual_count} 手动)")
+    enabled_win = sum(1 for t in tasks if t.get("enabled", True) and t.get("type") == "win_task")
+    enabled_manual = sum(1 for t in tasks if t.get("enabled", True) and t.get("type") == "manual_bat")
+    print(f"[generate_task_bats] 生成 {len(bat_outputs)} 个 .bat 文件 ({enabled_win} 定时 + {enabled_manual} 手动)")
 
     # Generate register_all_tasks.ps1
     ps1_content = generate_register_ps1(meta, tasks)
-    print(f"[generate_task_bats] 生成 register_all_tasks.ps1 ({enabled_count} 任务注册)")
+    print(f"[generate_task_bats] 生成 register_all_tasks.ps1 ({enabled_win} 任务注册)")
 
     # Generate tasks_summary.md
     summary_content = generate_summary(meta, tasks)

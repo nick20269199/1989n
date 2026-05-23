@@ -40,8 +40,10 @@ from config import (
     FEISHU_BOT_CHAT_ID,
     FEISHU_ROUTES,
     DATABASE_PATH,
+    SINA_NEWS_ROLL_URL,
 )
 from database import save_news, get_db
+from data_source_router import EASTMONEY_BLOCKED
 
 # 飞书发送器 (可选依赖)
 try:
@@ -249,6 +251,241 @@ def fetch_cls_telegraph(rn: int = CLS_API_RN, pn: int = 0) -> list[dict]:
 
     logger.error("[CLS API] 所有端点尝试均失败，返回空列表")
     return []
+
+
+# ============================================================================
+#  新浪财经滚动新闻
+# ============================================================================
+
+def fetch_sina_news(knum: int = 50) -> list[dict]:
+    """
+    从新浪财经滚动新闻 API 拉取新闻。
+
+    API: feed.mix.sina.com.cn/api/roll/get
+    Params: pageid=153, lid=2516 (国内财经), knum=N
+
+    Returns:
+        list[dict]: 统一格式新闻列表
+    """
+    headers = {**HEADERS, "Referer": "https://finance.sina.com.cn/"}
+    for attempt in range(MAX_RETRIES):
+        try:
+            resp = requests.get(
+                SINA_NEWS_ROLL_URL,
+                params={"pageid": 153, "lid": 2516, "knum": knum},
+                headers=headers,
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            body = resp.json()
+            result = body.get("result", {})
+            data = result.get("data", [])
+            if not isinstance(data, list) or not data:
+                logger.warning(f"[新浪] API 返回空数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
+                if attempt < MAX_RETRIES - 1:
+                    time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+                continue
+
+            items = []
+            for item in data:
+                title = item.get("title", "").strip()
+                if not title:
+                    continue
+                ctime = item.get("ctime", "")
+                # ctime 格式为 "2026-05-23 21:35:00"
+                pub_time = ctime if ctime else ""
+                link = item.get("link", "")
+                items.append({
+                    "title": _clean_html(title),
+                    "source": "新浪财经",
+                    "url": link if link.startswith("http") else "",
+                    "sentiment": "",
+                    "related_stocks": "",
+                    "category": item.get("cat", ""),
+                    "pub_time": pub_time,
+                })
+
+            logger.info(f"[新浪] 获取成功: {len(items)} 条新闻")
+            return items
+
+        except (requests.exceptions.RequestException, json.JSONDecodeError, ValueError) as e:
+            logger.warning(f"[新浪] 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+
+    logger.error("[新浪] 所有尝试均失败，返回空列表")
+    return []
+
+
+# ============================================================================
+#  东方财富快讯 (受 WAF 限制，可能不可用)
+# ============================================================================
+
+def fetch_eastmoney_news() -> list[dict]:
+    """
+    从东方财富获取财经快讯/资讯。
+
+    受 WAF 封锁影响 (EASTMONEY_BLOCKED)，如果已封锁则直接跳过。
+    使用 push2 行情接口的公告字段作为替代。
+
+    Returns:
+        list[dict]: 统一格式新闻列表
+    """
+    if EASTMONEY_BLOCKED:
+        logger.debug("[东方财富] WAF 封锁中，跳过")
+        return []
+
+    headers = {**HEADERS, "Referer": "https://www.eastmoney.com/"}
+    items = []
+
+    for attempt in range(MAX_RETRIES):
+        try:
+            # 使用东方财富 push2 快讯接口
+            resp = requests.get(
+                "https://push2.eastmoney.com/api/qt/ulist.np/get",
+                params={
+                    "fltt": 2,
+                    "fields": "f2,f3,f4,f12,f14",
+                    "secids": "1.000001,0.399001,0.399006",
+                    "ut": "fa5fd1943c7b386f172d6893dbf38dc7",
+                },
+                headers=headers,
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            body = resp.json()
+            data = body.get("data", {})
+            diff = data.get("diff", [])
+            if not diff:
+                logger.warning(f"[东方财富] 无返回数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
+                if attempt < MAX_RETRIES - 1:
+                    time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+                continue
+
+            # 这个接口返回的是指数行情，不是新闻
+            # 尝试另一个接口获取快讯
+            break
+        except requests.exceptions.RequestException as e:
+            logger.warning(f"[东方财富] API 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            if "403" in str(e) or "WAF" in str(e):
+                logger.warning("[东方财富] 触发 WAF 封锁，标记为不可用")
+                # 注意：这里不修改全局 EASTMONEY_BLOCKED，避免影响行情模块
+                return []
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+
+    # 尝试东方财富资讯列表接口
+    for attempt in range(MAX_RETRIES):
+        try:
+            resp = requests.get(
+                "https://push2ex.eastmoney.com/getStockNews",
+                params={
+                    "code": "000001",
+                    "market": 1,
+                    "pagesize": 50,
+                    "pageindex": 0,
+                },
+                headers=headers,
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            body = resp.json()
+            news_list = body.get("data", {}).get("list", []) if isinstance(body, dict) else []
+            if not news_list:
+                logger.warning(f"[东方财富-资讯] 无返回数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
+                if attempt < MAX_RETRIES - 1:
+                    time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+                continue
+
+            for item in news_list:
+                title = item.get("title", item.get("Art_Title", "")).strip()
+                if not title:
+                    continue
+                pub_time = item.get("ShowDate", item.get("Art_CreateTime", ""))
+                art_code = item.get("Art_Code", item.get("art_code", ""))
+                items.append({
+                    "title": _clean_html(title),
+                    "source": "东方财富",
+                    "url": f"https://www.eastmoney.com/a/{art_code}.html" if art_code else "",
+                    "sentiment": "",
+                    "related_stocks": "",
+                    "category": item.get("categories", ""),
+                    "pub_time": str(pub_time) if pub_time else "",
+                })
+
+            logger.info(f"[东方财富] 获取成功: {len(items)} 条新闻")
+            return items
+
+        except requests.exceptions.RequestException as e:
+            logger.warning(f"[东方财富-资讯] 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            if "403" in str(e):
+                return []  # WAF 封锁，不重试
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+        except (json.JSONDecodeError, ValueError, TypeError) as e:
+            logger.warning(f"[东方财富-资讯] 解析失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+
+    logger.warning("[东方财富] 所有接口尝试均失败")
+    return []
+
+
+# ============================================================================
+#  多源聚合
+# ============================================================================
+
+def collect_from_all_sources() -> tuple[list[dict], list[str]]:
+    """
+    从所有可用新闻源采集，合并返回。
+
+    顺序: 财联社 → 新浪财经 → 东方财富 (未封锁时)
+    每个源独立 try/except，一个源失败不影响其他源。
+
+    Returns:
+        tuple: (all_news_items, source_names)
+        - all_news_items: 合并后的新闻列表（未去重）
+        - source_names: 成功采集的源名称列表
+    """
+    all_items: list[dict] = []
+    sources: list[str] = []
+
+    # 1. 财联社 (主源)
+    try:
+        cls_raw = fetch_cls_telegraph(rn=CLS_API_RN)
+        if cls_raw:
+            cls_items = transform_news(cls_raw)
+            all_items.extend(cls_items)
+            sources.append("财联社")
+            logger.info(f"[多源] 财联社: {len(cls_items)} 条")
+    except Exception as e:
+        logger.warning(f"[多源] 财联社采集异常: {e}")
+
+    # 2. 新浪财经
+    try:
+        sina_items = fetch_sina_news()
+        if sina_items:
+            all_items.extend(sina_items)
+            sources.append("新浪财经")
+            logger.info(f"[多源] 新浪财经: {len(sina_items)} 条")
+    except Exception as e:
+        logger.warning(f"[多源] 新浪财经采集异常: {e}")
+
+    # 3. 东方财富 (仅当未被 WAF 封锁)
+    if not EASTMONEY_BLOCKED:
+        try:
+            em_items = fetch_eastmoney_news()
+            if em_items:
+                all_items.extend(em_items)
+                sources.append("东方财富")
+                logger.info(f"[多源] 东方财富: {len(em_items)} 条")
+        except Exception as e:
+            logger.warning(f"[多源] 东方财富采集异常: {e}")
+    else:
+        logger.info("[多源] 东方财富 WAF 封锁中，跳过")
+
+    logger.info(f"[多源] 共采集 {len(all_items)} 条, 来源: {sources}")
+    return all_items, sources
 
 
 # ============================================================================
@@ -613,7 +850,7 @@ def send_summary_via_feishu(news_items: list[dict], mode: str, chat_id: str = ""
 def run_morning() -> bool:
     """
     早间模式: 采集盘前新闻摘要。
-    - 拉取 cls.cn 最新 50 条电报
+    - 多源采集 (财联社 + 新浪财经 + 东方财富)
     - 去重后保存 JSON 和数据库
     - 生成 Markdown 摘要并推送飞书
     """
@@ -622,28 +859,26 @@ def run_morning() -> bool:
     start_ts = time.time()
 
     try:
-        # 1. 拉取数据
-        raw_items = fetch_cls_telegraph(rn=CLS_API_RN, pn=0)
-        if not raw_items:
-            logger.warning("[morning] CLS API 未返回数据")
+        # 1. 多源采集
+        all_items, sources = collect_from_all_sources()
+        if not all_items:
+            logger.warning("[morning] 所有数据源均未返回数据")
             return False
 
-        # 2. 转换格式
-        transformed = transform_news(raw_items)
-        logger.info(f"[morning] 转换 {len(transformed)} 条新闻")
+        logger.info(f"[morning] 多源采集: {len(all_items)} 条, 来源: {sources}")
 
-        # 3. 去重
+        # 2. 去重
         existing_titles = get_existing_titles(hours=DEDUP_WINDOW_HOURS)
-        unique_news = deduplicate_news(transformed, existing_titles)
+        unique_news = deduplicate_news(all_items, existing_titles)
 
         if not unique_news:
             logger.info("[morning] 无新新闻 (全部已存在)")
             return True
 
-        # 4. 保存 JSON
+        # 3. 保存 JSON
         save_news_json(unique_news, "morning")
 
-        # 5. 存入数据库
+        # 4. 存入数据库
         try:
             save_news(unique_news)
             logger.info(f"[morning] 保存 {len(unique_news)} 条到数据库")
@@ -651,8 +886,8 @@ def run_morning() -> bool:
             logger.error(f"[morning] 数据库保存失败: {e}")
             traceback.print_exc()
 
-        # 6. 飞书推送摘要
-        send_summary_via_feishu(unique_news, "morning", chat_id="news")
+        # 5. 飞书推送摘要
+        send_summary_via_feishu(unique_news, "morning", sources, chat_id="news")
 
         elapsed = time.time() - start_ts
         logger.info(f"[morning] 执行完成，耗时 {elapsed:.1f}s, 采集 {len(unique_news)} 条")

@@ -96,7 +96,7 @@ def test_missing_portfolio_uses_fallback(tmp_path: Path, monkeypatch):
     monkeypatch.setattr("daily_task._DB_AVAILABLE", False)
     from daily_task import load_portfolio
     result = load_portfolio()
-    assert len(result) >= 6  # fallback 有至少6只
+    assert len(result) >= 5  # fallback 至少5只（当前持仓数量）
 
 
 def test_corrupted_json_uses_fallback(tmp_path: Path, monkeypatch):
@@ -106,7 +106,7 @@ def test_corrupted_json_uses_fallback(tmp_path: Path, monkeypatch):
     monkeypatch.setattr("daily_task._DB_AVAILABLE", False)
     from daily_task import load_portfolio
     result = load_portfolio()
-    assert len(result) >= 6
+    assert len(result) >= 5
 
 
 def test_empty_holdings_list_uses_fallback(tmp_path: Path, monkeypatch):
@@ -116,7 +116,7 @@ def test_empty_holdings_list_uses_fallback(tmp_path: Path, monkeypatch):
     monkeypatch.setattr("daily_task._DB_AVAILABLE", False)
     from daily_task import load_portfolio
     result = load_portfolio()
-    assert len(result) >= 6
+    assert len(result) >= 5
 
 
 def test_real_portfolio_file_parses():
@@ -125,8 +125,8 @@ def test_real_portfolio_file_parses():
     from config import PORTFOLIO_FILE
     assert PORTFOLIO_FILE.exists(), f"{PORTFOLIO_FILE} not found"
     result = load_portfolio()
-    assert len(result) >= 6
+    assert len(result) >= 5
     for h in result:
         assert len(h["code"]) == 6  # all zfilled
         assert h["shares"] > 0
-        assert h["cost"] > 0
+        # cost 可能为负（盈利清仓后成本摊薄），不做 >0 断言

@@ -29,6 +29,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger("intel")
 
 HOLDINGS_JSON = STOCK_DATA / "concept_mapping.json"
+PORTFOLIO_JSON = Path("D:/1989n/stock_analysis/data/portfolio.json")
 
 # ── 数据加载 ───────────────────────────────────────────────────────────
 
@@ -80,9 +81,12 @@ def _load_vcp() -> list[dict]:
 
 
 def _load_portfolio() -> dict:
-    """加载当前持仓。"""
-    d = _load_json(HOLDINGS_JSON, {})
-    return d.get("holdings", {})
+    """加载当前持仓。从 portfolio.json 读取，转为 {code: info} 格式。"""
+    d = _load_json(PORTFOLIO_JSON, {})
+    raw = d.get("holdings", [])
+    if isinstance(raw, list):
+        return {h["code"]: h for h in raw if h.get("code")}
+    return raw  # already dict-keyed
 
 
 def _load_sector() -> dict:
