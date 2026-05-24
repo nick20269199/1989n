@@ -1002,35 +1002,35 @@ if __name__ == '__main__':
     if 'daily_task' not in sys.modules:
         sys.modules['daily_task'] = sys.modules['__main__']
 
-from _dt_morning import run_morning_enhanced
-from _dt_closing import run_closing_review
-from _dt_intraday import run_intraday_analysis
-from _dt_hot import run_hot_stocks
-from _dt_evening import run_evening
-from _dt_overnight import run_overnight
-from _dt_tech import run_tech_scan
-from _dt_poscheck import run_position_check
-from experts.decision_backtest import run_smart_backtest_and_dreamer
-from experts.sector_tracker import collect_daily_snapshot, generate_rotation_report
+    from _dt_morning import run_morning_enhanced
+    from _dt_closing import run_closing_review
+    from _dt_intraday import run_intraday_analysis
+    from _dt_hot import run_hot_stocks
+    from _dt_evening import run_evening
+    from _dt_overnight import run_overnight
+    from _dt_tech import run_tech_scan
+    from _dt_poscheck import run_position_check
+    from experts.decision_backtest import run_smart_backtest_and_dreamer
+    from experts.sector_tracker import collect_daily_snapshot, generate_rotation_report
 
-MODE_HANDLERS = {
-    "morning_enhanced": (run_morning_enhanced, "盘前增强简报"),
-    "morning": (run_morning_enhanced, "盘前简报(别名)"),
-    "closing_review": (run_closing_review, "收盘复盘"),
-    "closing": (run_closing_review, "收盘复盘(别名)"),
-    "intraday_analysis": (run_intraday_analysis, "盘中30分钟快照"),
-    "intraday": (run_intraday_analysis, "盘中快照(别名)"),
-    "hot_stocks": (run_hot_stocks, "热门股票采集"),
-    "evening": (run_evening, "晚间总结"),
-    "overnight": (run_overnight, "隔夜分析"),
-    "tech_scan": (run_tech_scan, "技术形态扫描"),
-    "scan": (run_tech_scan, "技术扫描(别名)"),
-    "position_check": (run_position_check, "持仓三层检查"),
-    "pos": (run_position_check, "持仓检查(别名)"),
-    "backtest": (run_smart_backtest_and_dreamer, "决策T+5回测+Dreamer权重更新"),
-    "sector_collect": (collect_daily_snapshot, "板块日数据采集"),
-    "weekly_sector": (generate_rotation_report, "周度板块轮动报告"),
-}
+    MODE_HANDLERS = {
+        "morning_enhanced": (run_morning_enhanced, "盘前增强简报"),
+        "morning": (run_morning_enhanced, "盘前简报(别名)"),
+        "closing_review": (run_closing_review, "收盘复盘"),
+        "closing": (run_closing_review, "收盘复盘(别名)"),
+        "intraday_analysis": (run_intraday_analysis, "盘中30分钟快照"),
+        "intraday": (run_intraday_analysis, "盘中快照(别名)"),
+        "hot_stocks": (run_hot_stocks, "热门股票采集"),
+        "evening": (run_evening, "晚间总结"),
+        "overnight": (run_overnight, "隔夜分析"),
+        "tech_scan": (run_tech_scan, "技术形态扫描"),
+        "scan": (run_tech_scan, "技术扫描(别名)"),
+        "position_check": (run_position_check, "持仓三层检查"),
+        "pos": (run_position_check, "持仓检查(别名)"),
+        "backtest": (run_smart_backtest_and_dreamer, "决策T+5回测+Dreamer权重更新"),
+        "sector_collect": (collect_daily_snapshot, "板块日数据采集"),
+        "weekly_sector": (generate_rotation_report, "周度板块轮动报告"),
+    }
 
 def main():
     """主入口：按 mode 参数调度任务"""

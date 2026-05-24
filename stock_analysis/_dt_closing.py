@@ -10,6 +10,8 @@ from daily_task import (
     format_indices_feishu, format_holdings_feishu,
     preflight_scan,
 )
+from database import save_market_data
+from knowledge_db import log_decision
 
 
 def run_closing_review():
@@ -25,6 +27,43 @@ def run_closing_review():
     logger.info("计算持仓盈亏...")
     holdings = load_portfolio()
     holdings_report = calculate_position_report(holdings)
+
+    # 1a) 保存行情到数据库
+    try:
+        from daily_task import fetch_quotes_batch
+        codes = [h["code"] for h in holdings]
+        quotes = fetch_quotes_batch(codes)
+        market_data = []
+        for code, q in quotes.items():
+            if q.get("price", 0) > 0:
+                market_data.append({
+                    "code": code,
+                    "price": q.get("price", 0),
+                    "change_pct": q.get("change_pct", 0),
+                    "volume": q.get("volume", 0),
+                    "amount": q.get("amount", 0),
+                    "turnover_rate": q.get("turnover_rate"),
+                    "pe": q.get("pe"),
+                    "market_cap": q.get("market_cap"),
+                })
+        if market_data:
+            save_market_data(market_data)
+            logger.info(f"数据库行情写入: {len(market_data)} 只")
+    except Exception as e:
+        logger.warning(f"数据库行情写入失败(不影响主流程): {e}")
+
+    # 1b) 记录决策日志
+    try:
+        for h in holdings_report["holdings"]:
+            decision_type = "closing_review"
+            pnl = h.get("pnl_pct", 0)
+            status = "profit" if pnl >= 0 else "loss"
+            summary = f"收盘复盘: {h['name']}({h['code']}) {pnl:+.1f}%, 距止损{h['dist_to_stop']:.1f}%"
+            log_decision(h["code"], h["name"], decision_type, summary,
+                         confidence="medium", factors=[f"pnl_{pnl:+.1f}%", f"dist_to_stop_{h['dist_to_stop']:.1f}%"])
+        logger.info(f"决策日志写入: {len(holdings_report['holdings'])} 条")
+    except Exception as e:
+        logger.warning(f"决策日志写入失败(不影响主流程): {e}")
 
     # 2) 市场背景
     logger.info("获取指数行情...")
