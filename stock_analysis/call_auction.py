@@ -42,6 +42,17 @@ try:
 except ImportError:
     _FEISHU_OK = False
 
+try:
+    from database import save_auction_data, batch_check_auction_volume
+    from l2_parser import sync_l2_to_db
+    _DB_OK = True
+except ImportError:
+    _DB_OK = False
+
+    def save_auction_data(data): pass
+    def batch_check_auction_volume(data, **kw): return []
+    def sync_l2_to_db(code): return {"status": "import_error"}
+
 # ── 日志 ─────────────────────────────────────────────────────────
 CST = timezone(timedelta(hours=8))
 LOG_DIR = Path(__file__).parent / "logs"
@@ -538,6 +549,46 @@ def main():
         json_path = STOCK_DATA_DIR / fname
         json_path.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
         logger.info(f"[JSON] {json_path}")
+
+        # 7a. 竞价数据落库 + 放量信号
+        if _DB_OK and portfolio_auction:
+            try:
+                save_auction_data(portfolio_auction)
+                logger.info(f"[DB] 竞价数据写入 {len(portfolio_auction)} 只")
+                signals = batch_check_auction_volume(portfolio_auction)
+                vol_up = [s for s in signals if s.get("signal") == "放量"]
+                vol_down = [s for s in signals if s.get("signal") == "缩量"]
+                if vol_up:
+                    detail = "; ".join(f"{s['name']}({s['code']}) {s['ratio']}x" for s in vol_up)
+                    logger.info(f"[竞价放量] {len(vol_up)} 只: {detail}")
+                output["volume_signals"] = signals
+
+                # L2 逐笔成交同步
+                l2_signals = []
+                for p in portfolio_auction:
+                    try:
+                        l2 = sync_l2_to_db(p["code"])
+                        if l2.get("status") in ("synced", "cached") and l2.get("buy_ratio") is not None:
+                            l2_signals.append({
+                                "code": p["code"], "name": p.get("name", ""),
+                                "l2_buy_ratio": l2["buy_ratio"],
+                                "l2_net_flow": l2["net_flow"],
+                                "l2_records": l2["records"],
+                            })
+                    except Exception:
+                        pass
+                if l2_signals:
+                    output["l2_signals"] = l2_signals
+                    high_buy = [s for s in l2_signals if s["l2_buy_ratio"] >= 0.6]
+                    high_sell = [s for s in l2_signals if s["l2_buy_ratio"] <= 0.4]
+                    if high_buy:
+                        detail = "; ".join(f"{s['name']}({s['code']}) 买盘{s['l2_buy_ratio']:.0%}" for s in high_buy)
+                        logger.info(f"[L2买盘主导] {detail}")
+                    if high_sell:
+                        detail = "; ".join(f"{s['name']}({s['code']}) 卖盘{(1-s['l2_buy_ratio']):.0%}" for s in high_sell)
+                        logger.info(f"[L2卖盘主导] {detail}")
+            except Exception as e:
+                logger.warning(f"[DB] 竞价落库异常(非关键): {e}")
 
         # 8. 飞书推送
         send_auction_feishu(output)

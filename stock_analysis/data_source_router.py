@@ -236,7 +236,7 @@ A_INDICES = [
     ('000688', '科创50'),
 ]
 
-EASTMONEY_BLOCKED = True  # 2026-05 WAF封锁, 恢复后设为False
+EASTMONEY_BLOCKED = False  # 由 check_channels() 自动检测
 
 
 def get_quotes(codes: list[str]) -> dict:
@@ -413,17 +413,31 @@ def check_channels() -> dict:
     except Exception:
         status['sohu_kline'] = False
 
-    # Eastmoney (检测是否恢复)
+    # Eastmoney — /api/qt/stock/get 被 WAF 封锁, clist/get 仍可用
     try:
-        import urllib.request as _ur
-        req = _ur.Request(
-            "https://push2.eastmoney.com/api/qt/stock/get",
-            headers={"User-Agent": "Mozilla/5.0"},
+        import requests as _req
+        resp = _req.get(
+            "https://push2.eastmoney.com/api/qt/clist/get",
+            params={
+                "pn": "1", "pz": "1", "po": "1", "np": "1",
+                "ut": "bd1d9ddb04089700cf9c27f6f7426281",
+                "fltt": "2", "invt": "2", "fid": "f3",
+                "fs": "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23",
+                "fields": "f2,f3,f12,f14",
+            },
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                              "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Referer": "https://quote.eastmoney.com/",
+            },
+            timeout=10,
         )
-        _ur.urlopen(req, timeout=5)
-        status['eastmoney'] = True
+        resp.raise_for_status()
+        data = resp.json()
+        ok = data.get("data") is not None and data["data"].get("total", 0) > 0
+        status['eastmoney'] = ok
         global EASTMONEY_BLOCKED
-        EASTMONEY_BLOCKED = False
+        EASTMONEY_BLOCKED = not ok
     except Exception:
         status['eastmoney'] = False
         EASTMONEY_BLOCKED = True
