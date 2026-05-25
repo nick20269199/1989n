@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "description": "集合竞价数据",
+  "files": ["call_auction_*.json"],
+  "required_fields": ["type", "time", "date", "portfolio_auction"],
+  "field_types": {
+    "type": "string",
+    "time": "string",
+    "date": "string",
+    "market_breadth": "dict",
+    "portfolio_auction": "list"
+  },
+  "list_item_fields": {
+    "list_key": "portfolio_auction",
+    "required_fields": ["code", "name", "auction_price"],
+    "field_types": {
+      "code": "string",
+      "name": "string",
+      "auction_price": "number",
+      "prev_close": "number",
+      "auction_chg_pct": "number",
+      "open_volume": "number"
+    }
+  },
+  "freshness_hours": 48
+}

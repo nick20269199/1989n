@@ -376,11 +376,130 @@ def load_portfolio() -> list[dict]:
     ]
 
 
+def fetch_auction_detail(code: str) -> Optional[dict]:
+    """
+    [A方案] 从 push2 API 获取逐笔委托明细，解析竞价全过程。
+
+    details/get 返回格式: "time,price,volume,unk,type"
+      type=1: 买盘委托
+      type=2: 卖盘委托
+      type=4: 竞价虚拟撮合
+
+    返回:
+      {code, name, auction_price, prev_close, auction_chg_pct,
+       open_volume, match_volume, match_amount,
+       auction_high, auction_low, auction_trend: [{time,price,vol,type}],
+       buy_orders, sell_orders, source: "push2_api"}
+    """
+    secid = f"{_prefix(code)}.{code}"
+    try:
+        r = safe_get("https://push2.eastmoney.com/api/qt/stock/details/get", params={
+            "secid": secid,
+            "fields1": "f1,f2,f3,f4",
+            "fields2": "f51,f52,f53,f54,f55",
+            "pos": "0",
+            "ut": "fa5fd1943c7b386f172d6893dbd97f6b",
+        })
+        if not r or not r.json().get("data"):
+            return None
+
+        data = r.json()["data"]
+        details = data.get("details", [])
+        if not details:
+            return None
+
+        # 解析竞价时段 (09:15-09:26)
+        auction_trend = []
+        buy_orders = []
+        sell_orders = []
+        match_price = None
+        match_volume = 0
+        match_amount = 0.0
+        auction_high = 0.0
+        auction_low = 999999.0
+
+        for d in details:
+            parts = d.split(",")
+            time_str = parts[0]
+            if not ("09:15" <= time_str <= "09:26"):
+                continue
+            price = float(parts[1])
+            volume = int(parts[2])
+            typ = int(parts[3]) if len(parts) > 3 else 0
+
+            point = {"time": time_str, "price": price, "volume": volume, "type": typ}
+            auction_trend.append(point)
+
+            if "09:25" <= time_str <= "09:26":
+                if match_price is None:
+                    match_price = price
+                match_volume += volume
+                match_amount += price * volume
+            else:
+                if typ == 1:
+                    buy_orders.append(point)
+                elif typ == 2:
+                    sell_orders.append(point)
+
+            if price > auction_high:
+                auction_high = price
+            if price < auction_low:
+                auction_low = price
+
+        if match_price is None and auction_trend:
+            match_price = auction_trend[-1]["price"]
+            match_volume = auction_trend[-1]["volume"]
+
+        if auction_low == 999999.0:
+            auction_low = match_price or 0
+
+        # 取前收盘价
+        prev_close = data.get("prePrice", 0) or 0
+        if prev_close == 0 and match_price:
+            prev_close = match_price
+        change_pct = ((match_price - prev_close) / prev_close * 100) if prev_close else 0
+
+        return {
+            "code": code,
+            "name": data.get("name", ""),
+            "auction_price": round(match_price, 2) if match_price else 0,
+            "prev_close": round(prev_close, 2),
+            "auction_chg_pct": round(change_pct, 2),
+            "open_volume": match_volume,
+            "match_volume": match_volume,
+            "match_amount": round(match_amount, 2),
+            "auction_high": round(auction_high, 2),
+            "auction_low": round(auction_low, 2),
+            "auction_trend": auction_trend,
+            "buy_orders": len(buy_orders),
+            "sell_orders": len(sell_orders),
+            "source": "push2_api",
+        }
+    except Exception as e:
+        logger.warning(f"[A方案] {code} API竞价明细失败: {e}")
+        return None
+
+
 def fetch_portfolio_auction(holdings: list[dict]) -> list[dict]:
-    """获取持仓股竞价表现"""
+    """
+    获取持仓股竞价表现。
+    优先用 A 方案 (push2 details API → 完整竞价过程)，
+    A 方案失败则回退到 B 方案 (基础行情 API → 仅价格/量)。
+    """
     results = []
     for h in holdings:
         code = h["code"]
+
+        # A 方案: 竞价明细 API
+        detail = fetch_auction_detail(code)
+        if detail:
+            detail["sector"] = h.get("sector", "")
+            detail["shares"] = h.get("shares", 0)
+            detail["_source"] = "A"
+            results.append(detail)
+            continue
+
+        # B 方案: 基础行情 API
         secid = f"{_prefix(code)}.{code}"
         try:
             params = {
@@ -403,10 +522,14 @@ def fetch_portfolio_auction(holdings: list[dict]) -> list[dict]:
                     "auction_chg_pct": round(change_pct, 2),
                     "open_volume": d.get("f47", 0),
                     "sector": h.get("sector", ""),
+                    "shares": h.get("shares", 0),
+                    "_source": "B",
                 })
         except Exception as e:
-            logger.warning(f"[竞价] {code} 失败: {e}")
-    logger.info(f"[竞价] 持仓: {len(results)}/{len(holdings)} 只")
+            logger.warning(f"[B方案] {code} 基础行情失败: {e}")
+    logger.info(f"[竞价] 持仓: {len(results)}/{len(holdings)} 只 "
+                f"(A方案:{sum(1 for r in results if r.get('_source')=='A')} "
+                f"B方案:{sum(1 for r in results if r.get('_source')=='B')})")
     return results
 
 

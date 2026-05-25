@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "description": "热门股票/涨停数据",
+  "files": ["hot_stocks.json"],
+  "required_fields": ["update_time", "top"],
+  "field_types": {
+    "update_time": "string",
+    "top": "list"
+  },
+  "freshness_hours": 12,
+  "non_null_fields": ["update_time", "top"]
+}

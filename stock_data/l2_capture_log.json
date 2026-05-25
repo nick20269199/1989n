@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-05-25 11:23:25",
+  "codes_attempted": [
+    "002156",
+    "300136",
+    "600498",
+    "002077",
+    "300058"
+  ],
+  "results": [
+    {
+      "code": "002156",
+      "time": "11:23:03",
+      "status": "switched"
+    },
+    {
+      "code": "300136",
+      "time": "11:23:08",
+      "status": "switched"
+    },
+    {
+      "code": "600498",
+      "time": "11:23:13",
+      "status": "switched"
+    },
+    {
+      "code": "002077",
+      "time": "11:23:19",
+      "status": "switched"
+    },
+    {
+      "code": "300058",
+      "time": "11:23:24",
+      "status": "switched"
+    }
+  ]
+}

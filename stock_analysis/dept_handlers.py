@@ -14,6 +14,9 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+from feishu_inbox import inbox_append
+from dept_ops import OpsGate, ingest_excel, crosscheck_excel_vs_portfolio, excel_bs_summary
+
 logger = logging.getLogger("dept_handlers")
 
 STOCK_DATA = Path("D:/1989n/stock_data")
@@ -22,6 +25,29 @@ PYTHON = r"D:\Python314\python"
 TASK_QUEUE = STOCK_DATA / "task_queue.json"
 
 # ── 数据校验工具 ──
+
+def _wrap(dept_alias: str, content: str, sources: list[str] = None) -> str:
+    """每个部门输出必须经过 OpsGate 包裹 — 注入预检+交叉验证+来源声明。"""
+    try:
+        gate = OpsGate(dept_alias)
+        default_sources = ["data_source_router"]
+        if "持仓" in content or "盈亏" in content or "portfolio" in content.lower():
+            default_sources.append("portfolio.json")
+        result = gate.wrap(content, sources=sources or default_sources)
+        # 财务相关输出: 强制注入 Excel 交叉验证
+        if dept_alias in ("财务部", "finance") or "盈亏" in content or "持仓" in content:
+            excel_report = excel_bs_summary()
+            if excel_report:
+                # 插入到来源声明之前
+                parts = result.split("\n---\n**来源声明**")
+                if len(parts) == 2:
+                    result = parts[0] + excel_report + "\n---\n**来源声明**" + parts[1]
+                else:
+                    result = result + excel_report
+        return result
+    except Exception as e:
+        logger.warning("OpsGate wrap failed for %s: %s", dept_alias, e)
+        return content
 
 def _validate_price(price, max_pct=20) -> bool:
     """价格合理性检查: >0 且涨跌幅不异常。"""
@@ -497,6 +523,17 @@ DEPT_KEYWORDS = {
 }
 
 
+def _inject_ops(result: dict, matched_dept: str = "") -> dict:
+    """所有部门输出必须经过神经层包裹。在 route_message 中统一调用。"""
+    try:
+        dept = matched_dept or result.get("source", "").split(":")[0].replace("dept:", "")
+        if dept and dept not in ("general", "error"):
+            result["content"] = _wrap(dept, result["content"])
+    except Exception:
+        pass
+    return result
+
+
 def route_message(text: str, chat_id: str = "") -> dict:
     """解析消息，路由到对应部门处理器。
 
@@ -504,26 +541,27 @@ def route_message(text: str, chat_id: str = "") -> dict:
     1. 明确 @部门名 → 直接路由
     2. 关键词匹配 → 推测路由 (低置信度入队)
     3. 都不匹配 → 通用问答 (DeepSeek Agent)
+
+    所有部门输出经过 dept_ops.OpsGate 注入预检+交叉验证+来源声明。
     """
     text = text.strip()
 
     # ── 第1层: 明确 @部门名 ──
     for dept_name, handler in DEPT_MAP.items():
         if dept_name in text:
-            # 提取部门名之后的文本作为查询
             idx = text.index(dept_name)
             query = text[idx + len(dept_name):].strip()
             action = _extract_action(query)
             params = _extract_params(query)
             result = handler(action, params, query)
             if result:
-                return result
+                return _inject_ops(result, dept_name)
 
     # ── 第2层: 关键词模糊匹配 ──
     matched_depts = []
     for dept_name, keywords in DEPT_KEYWORDS.items():
         score = sum(1 for kw in keywords if kw in text)
-        if score >= 2:  # 至少匹配 2 个关键词
+        if score >= 2:
             matched_depts.append((dept_name, score))
 
     if matched_depts:
@@ -533,9 +571,9 @@ def route_message(text: str, chat_id: str = "") -> dict:
         action = _extract_action(text)
         result = handler(action, _extract_params(text), text)
         if result:
-            return result
+            return _inject_ops(result, dept_name)
 
-    # ── 第3层: 通用问答 ──
+    # ── 第3层: 通用问答 → DeepSeek Agent (不包裹，它有自己的系统提示) ──
     return handle_general(text, chat_id)
 
 

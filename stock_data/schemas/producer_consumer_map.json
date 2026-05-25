@@ -1,0 +1,56 @@
+{
+  "_description": "生产型模块 → 产出文件 → 消费者映射。consistency_gate 校验每个产出至少有一个消费者。",
+  "producers": [
+    {
+      "module": "call_auction.py",
+      "produces": ["call_auction_*.json"],
+      "consumers": ["morning_brief_agent.py", "intraday_report.py", "experts/lead.py"]
+    },
+    {
+      "module": "news_scheduler.py",
+      "produces": ["news_headlines_*.json", "news_enriched_*.json"],
+      "consumers": ["morning_brief_agent.py", "intraday_report.py", "nightly_plan.py"]
+    },
+    {
+      "module": "morning_brief_agent.py",
+      "produces": ["morning_brief_agent_latest.json"],
+      "consumers": ["feishu_sender.py", "intraday_report.py"]
+    },
+    {
+      "module": "daily_task.py",
+      "produces": ["closing_review.json", "hot_stocks.json", "market_scan_*.json"],
+      "consumers": ["nightly_plan.py", "feishu_sender.py", "experts/lead.py"]
+    },
+    {
+      "module": "intraday_report.py",
+      "produces": ["analysis_30min_*.json"],
+      "consumers": ["feishu_sender.py", "nightly_plan.py"]
+    },
+    {
+      "module": "nightly_plan.py",
+      "produces": ["nightly_plan_*.json"],
+      "consumers": ["feishu_sender.py"]
+    },
+    {
+      "module": "data_source_router.py",
+      "produces": ["channel_health_latest.json"],
+      "consumers": ["health_check.py", "consistency_gate.py", "daily_task.py"]
+    },
+    {
+      "module": "call_auction.py (L2 capture)",
+      "produces": ["l2_auction_*.json"],
+      "consumers": ["morning_brief_agent.py", "intraday_report.py"]
+    },
+    {
+      "module": "_trade_analysis.py",
+      "produces": ["portfolio.json"],
+      "consumers": ["consistency_gate.py", "morning_brief_agent.py", "intraday_report.py"]
+    }
+  ],
+  "critical_outputs": [
+    "D:/1989n/stock_data/channel_health_latest.json",
+    "D:/1989n/stock_data/status/logistics_status.json",
+    "D:/1989n/stock_data/status/engineering_status.json",
+    "D:/1989n/stock_analysis/data/portfolio.json"
+  ]
+}

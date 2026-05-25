@@ -124,7 +124,7 @@ def run_backtest(days: int = 90, limit: int = 500) -> dict:
         rows = db.execute(
             """SELECT id, timestamp, stock_code, stock_name, factors
                FROM decision_log
-               WHERE (outcome IS NULL OR outcome = '待回测') AND timestamp >= ?
+               WHERE outcome = '待回测' AND timestamp >= ?
                ORDER BY timestamp DESC LIMIT ?""",
             (cutoff, limit),
         ).fetchall()
@@ -153,6 +153,10 @@ def run_backtest(days: int = 90, limit: int = 500) -> dict:
         try:
             packet = json.loads(row["factors"])
         except (json.JSONDecodeError, TypeError):
+            skipped += 1
+            continue
+
+        if not isinstance(packet, dict):
             skipped += 1
             continue
 

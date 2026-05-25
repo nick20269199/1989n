@@ -84,7 +84,9 @@ def check_other_dept_status(dept: str) -> dict:
     if health == "degraded":
         result["severity"] = "advisory"
         issues = status.get("issues", [])
-        result["detail"] = f"{dept} 状态 degraded: {[i['message'] for i in issues[:3]]}"
+        # issues 可能是字符串列表或字典列表，统一处理
+        issue_texts = [i.get("message", str(i)) if isinstance(i, dict) else str(i) for i in issues[:3]]
+        result["detail"] = f"{dept} 状态 degraded: {issue_texts}"
         return result
 
     result["detail"] = f"{dept} 状态 healthy (更新于 {status.get('timestamp', '?')})"

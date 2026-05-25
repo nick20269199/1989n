@@ -20,6 +20,7 @@ data_source_router.py — 多源行情路由 v1.1
 """
 import json
 import logging
+import time
 import urllib.request
 from datetime import datetime, timedelta
 from typing import Optional
@@ -413,34 +414,52 @@ def check_channels() -> dict:
     except Exception:
         status['sohu_kline'] = False
 
-    # Eastmoney — /api/qt/stock/get 被 WAF 封锁, clist/get 仍可用
-    try:
-        import requests as _req
-        resp = _req.get(
-            "https://push2.eastmoney.com/api/qt/clist/get",
-            params={
-                "pn": "1", "pz": "1", "po": "1", "np": "1",
-                "ut": "bd1d9ddb04089700cf9c27f6f7426281",
-                "fltt": "2", "invt": "2", "fid": "f3",
-                "fs": "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23",
-                "fields": "f2,f3,f12,f14",
-            },
-            headers={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                              "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                "Referer": "https://quote.eastmoney.com/",
-            },
-            timeout=10,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-        ok = data.get("data") is not None and data["data"].get("total", 0) > 0
-        status['eastmoney'] = ok
-        global EASTMONEY_BLOCKED
-        EASTMONEY_BLOCKED = not ok
-    except Exception:
-        status['eastmoney'] = False
-        EASTMONEY_BLOCKED = True
+    # Eastmoney — WAF 间歇性/频率限制，用 push2 details/get (最稳定)
+    # 连续失败 3 次才标记 blocked，防止偶发频率限制误判
+    global EASTMONEY_BLOCKED
+    time.sleep(0.5)
+    em_ok = False
+    for attempt in range(2):
+        try:
+            import requests as _req
+            resp = _req.get(
+                "https://push2.eastmoney.com/api/qt/stock/details/get",
+                params={
+                    "secid": "1.600498",
+                    "fields1": "f1,f2,f3,f4",
+                    "fields2": "f51,f52,f53,f54,f55",
+                    "pos": "0",
+                    "ut": "fa5fd1943c7b386f172d6893dbd97f6b",
+                },
+                headers={
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                                  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    "Referer": "https://quote.eastmoney.com/",
+                },
+                timeout=15,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            if data.get("data") is not None:
+                em_ok = True
+                break
+        except Exception:
+            if attempt == 0:
+                time.sleep(2)
+
+    # 连续失败计数: 防止偶发 WAF 频率限制导致全天误封锁
+    if em_ok:
+        status['eastmoney'] = "ok"
+        EASTMONEY_BLOCKED = False
+        _em_fail_streak = 0
+    else:
+        _em_fail_streak = getattr(check_channels, '_em_fail_streak', 0) + 1
+        if _em_fail_streak >= 3:
+            status['eastmoney'] = "blocked"
+            EASTMONEY_BLOCKED = True
+        else:
+            status['eastmoney'] = f"degraded({_em_fail_streak}/3)"
+    check_channels._em_fail_streak = _em_fail_streak
 
     logger.info("Channel health: %s", json.dumps(status))
     return status

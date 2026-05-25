@@ -24,6 +24,20 @@ def get_db():
 
 def init_db():
     with get_db() as db:
+        # ── schema_version 迁移机制 ──
+        db.execute("CREATE TABLE IF NOT EXISTS schema_version (version INTEGER PRIMARY KEY)")
+        row = db.execute("SELECT version FROM schema_version").fetchone()
+        current_ver = row["version"] if row else 0
+
+        if current_ver < 2:
+            # V1→V2: l2_tick marker(TEXT) → trade_time(INTEGER)，旧数据作废
+            db.execute("DROP TABLE IF EXISTS l2_tick")
+            db.execute("DROP TABLE IF EXISTS l2_auction_summary")
+
+        if current_ver < 3:
+            # V2→V3: l2_auction_summary 增加 neutral_volume + has_directional 字段
+            db.execute("DROP TABLE IF EXISTS l2_auction_summary")
+
         db.executescript("""
         CREATE TABLE IF NOT EXISTS stocks (
             code TEXT PRIMARY KEY,
@@ -105,12 +119,12 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             stock_code TEXT NOT NULL,
             trade_date TEXT NOT NULL,
-            marker TEXT NOT NULL,
+            trade_time INTEGER NOT NULL,
             seq INTEGER NOT NULL,
             price REAL,
             volume INTEGER,
             direction INTEGER,
-            UNIQUE(stock_code, trade_date, marker, seq)
+            UNIQUE(stock_code, trade_date, trade_time, seq)
         );
         CREATE INDEX IF NOT EXISTS idx_l2_tick_code_date ON l2_tick(stock_code, trade_date);
         CREATE TABLE IF NOT EXISTS l2_auction_summary (
@@ -119,11 +133,13 @@ def init_db():
             auction_price REAL,
             buy_volume INTEGER,
             sell_volume INTEGER,
+            neutral_volume INTEGER,
             net_flow INTEGER,
             buy_ratio REAL,
             vwap REAL,
             tick_count INTEGER,
             depth_snapshot_count INTEGER,
+            has_directional INTEGER DEFAULT 1,
             UNIQUE(stock_code, trade_date)
         );
         CREATE INDEX IF NOT EXISTS idx_l2_summary_code_date ON l2_auction_summary(stock_code, trade_date);
@@ -134,6 +150,8 @@ def init_db():
             UNIQUE(stock_code)
         );
         """)
+        if current_ver < 3:
+            db.execute("INSERT OR REPLACE INTO schema_version (version) VALUES (3)")
     return True
 
 
@@ -307,9 +325,9 @@ def save_l2_tick(code: str, trade_date: str, records: list[dict]):
                    (code, trade_date))
         db.executemany(
             """INSERT OR REPLACE INTO l2_tick
-               (stock_code, trade_date, marker, seq, price, volume, direction)
+               (stock_code, trade_date, trade_time, seq, price, volume, direction)
                VALUES (?, ?, ?, ?, ?, ?, ?)""",
-            [(code, trade_date, r["marker"], r["seq"],
+            [(code, trade_date, r["trade_time"], r["seq"],
               r["price"], r["volume"], r["direction"]) for r in records],
         )
 
@@ -320,11 +338,14 @@ def save_l2_auction_summary(code: str, trade_date: str, summary: dict):
         db.execute(
             """INSERT OR REPLACE INTO l2_auction_summary
                (stock_code, trade_date, auction_price, buy_volume, sell_volume,
-                net_flow, buy_ratio, vwap, tick_count, depth_snapshot_count)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                neutral_volume, net_flow, buy_ratio, vwap, tick_count,
+                depth_snapshot_count, has_directional)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (code, trade_date, summary["auction_price"], summary["buy_volume"],
-             summary["sell_volume"], summary["net_flow"], summary["buy_ratio"],
-             summary["vwap"], summary["tick_count"], summary["depth_snapshot_count"]),
+             summary["sell_volume"], summary.get("neutral_volume", 0),
+             summary["net_flow"], summary["buy_ratio"],
+             summary["vwap"], summary["tick_count"], summary["depth_snapshot_count"],
+             1 if summary.get("has_directional") else 0),
         )
 
 

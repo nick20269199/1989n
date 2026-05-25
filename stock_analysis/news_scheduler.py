@@ -18,6 +18,7 @@ from error_capture import trap; trap()
 import json
 import logging
 import os
+import re
 import sqlite3
 import sys
 import time
@@ -41,6 +42,9 @@ from config import (
     FEISHU_ROUTES,
     DATABASE_PATH,
     SINA_NEWS_ROLL_URL,
+    THS_NEWS_URL,
+    WALLSTREETCN_LIVES_URL,
+    XUEQIU_TIMELINE_URL,
 )
 from database import save_news, get_db
 from data_source_router import EASTMONEY_BLOCKED
@@ -170,7 +174,6 @@ def deduce_auto_mode() -> str:
 
 def _clean_html(raw: str) -> str:
     """清理 HTML 标签和实体，保留纯文本。"""
-    import re
     text = raw.replace("&nbsp;", " ").replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
     text = re.sub(r"<[^>]+>", "", text)
     text = re.sub(r"\s+", " ", text)
@@ -328,10 +331,10 @@ def fetch_sina_news(knum: int = 50) -> list[dict]:
 
 def fetch_eastmoney_news() -> list[dict]:
     """
-    从东方财富获取财经快讯/资讯。
+    从东方财富获取财经新闻/快讯。
 
     受 WAF 封锁影响 (EASTMONEY_BLOCKED)，如果已封锁则直接跳过。
-    使用 push2 行情接口的公告字段作为替代。
+    使用快讯/资讯接口尝试获取。
 
     Returns:
         list[dict]: 统一格式新闻列表
@@ -343,43 +346,6 @@ def fetch_eastmoney_news() -> list[dict]:
     headers = {**HEADERS, "Referer": "https://www.eastmoney.com/"}
     items = []
 
-    for attempt in range(MAX_RETRIES):
-        try:
-            # 使用东方财富 push2 快讯接口
-            resp = requests.get(
-                "https://push2.eastmoney.com/api/qt/ulist.np/get",
-                params={
-                    "fltt": 2,
-                    "fields": "f2,f3,f4,f12,f14",
-                    "secids": "1.000001,0.399001,0.399006",
-                    "ut": "fa5fd1943c7b386f172d6893dbf38dc7",
-                },
-                headers=headers,
-                timeout=REQUEST_TIMEOUT,
-            )
-            resp.raise_for_status()
-            body = resp.json()
-            data = body.get("data", {})
-            diff = data.get("diff", [])
-            if not diff:
-                logger.warning(f"[东方财富] 无返回数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
-                if attempt < MAX_RETRIES - 1:
-                    time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
-                continue
-
-            # 这个接口返回的是指数行情，不是新闻
-            # 尝试另一个接口获取快讯
-            break
-        except requests.exceptions.RequestException as e:
-            logger.warning(f"[东方财富] API 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
-            if "403" in str(e) or "WAF" in str(e):
-                logger.warning("[东方财富] 触发 WAF 封锁，标记为不可用")
-                # 注意：这里不修改全局 EASTMONEY_BLOCKED，避免影响行情模块
-                return []
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
-
-    # 尝试东方财富资讯列表接口
     for attempt in range(MAX_RETRIES):
         try:
             resp = requests.get(
@@ -397,7 +363,7 @@ def fetch_eastmoney_news() -> list[dict]:
             body = resp.json()
             news_list = body.get("data", {}).get("list", []) if isinstance(body, dict) else []
             if not news_list:
-                logger.warning(f"[东方财富-资讯] 无返回数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
+                logger.warning(f"[东方财富] 无返回数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
                 if attempt < MAX_RETRIES - 1:
                     time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
                 continue
@@ -406,7 +372,14 @@ def fetch_eastmoney_news() -> list[dict]:
                 title = item.get("title", item.get("Art_Title", "")).strip()
                 if not title:
                     continue
-                pub_time = item.get("ShowDate", item.get("Art_CreateTime", ""))
+                # 归一化时间戳：ShowDate 格式不定，尝试统一为 YYYY-MM-DD HH:MM:SS
+                pub_time_raw = item.get("ShowDate", item.get("Art_CreateTime", ""))
+                pub_time = ""
+                if pub_time_raw:
+                    try:
+                        pub_time = str(pub_time_raw).replace("T", " ")[:19]
+                    except Exception:
+                        pub_time = str(pub_time_raw)
                 art_code = item.get("Art_Code", item.get("art_code", ""))
                 items.append({
                     "title": _clean_html(title),
@@ -415,24 +388,292 @@ def fetch_eastmoney_news() -> list[dict]:
                     "sentiment": "",
                     "related_stocks": "",
                     "category": item.get("categories", ""),
-                    "pub_time": str(pub_time) if pub_time else "",
+                    "pub_time": pub_time,
                 })
 
             logger.info(f"[东方财富] 获取成功: {len(items)} 条新闻")
             return items
 
         except requests.exceptions.RequestException as e:
-            logger.warning(f"[东方财富-资讯] 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
-            if "403" in str(e):
+            logger.warning(f"[东方财富] 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            if "403" in str(e) or "WAF" in str(e):
                 return []  # WAF 封锁，不重试
             if attempt < MAX_RETRIES - 1:
                 time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
         except (json.JSONDecodeError, ValueError, TypeError) as e:
-            logger.warning(f"[东方财富-资讯] 解析失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            logger.warning(f"[东方财富] 解析失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
             if attempt < MAX_RETRIES - 1:
                 time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
 
-    logger.warning("[东方财富] 所有接口尝试均失败")
+    logger.warning("[东方财富] 所有尝试均失败")
+    return []
+
+
+# ============================================================================
+#  同花顺快讯 (10jqka)
+# ============================================================================
+
+def fetch_10jqka_news(page: int = 1) -> list[dict]:
+    """
+    从同花顺快讯接口获取财经新闻。
+
+    API: news.10jqka.com.cn/tapp/news/push/stock
+    返回 JSON，含 title/stock 关联/重要性标记(color=2=重要)/时间戳。
+
+    Returns:
+        list[dict]: 统一格式新闻列表
+    """
+    headers = {**HEADERS, "Referer": "https://www.10jqka.com.cn/"}
+    for attempt in range(MAX_RETRIES):
+        try:
+            resp = requests.get(
+                THS_NEWS_URL,
+                params={"page": page, "tag": "", "track": "website"},
+                headers=headers,
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            body = resp.json()
+            data = body.get("data", {})
+            news_list = data.get("list", [])
+            if not isinstance(news_list, list) or not news_list:
+                logger.warning(f"[同花顺] 无返回数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
+                if attempt < MAX_RETRIES - 1:
+                    time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+                continue
+
+            items = []
+            for item in news_list:
+                title = (item.get("title", "") or "").strip()
+                if not title:
+                    continue
+                rtime = item.get("rtime", 0)
+                pub_time = ""
+                if rtime:
+                    try:
+                        ts = int(rtime)
+                        if ts > 1e12:  # 毫秒 → 秒
+                            ts //= 1000
+                        pub_time = datetime.fromtimestamp(ts, tz=CST).strftime("%Y-%m-%d %H:%M:%S")
+                    except (ValueError, OSError, TypeError):
+                        pass
+                # 提取关联股票
+                stocks = item.get("stock") or item.get("field") or []
+                related = ",".join(
+                    s.get("stockCode", "") for s in stocks
+                    if isinstance(s, dict) and s.get("stockCode")
+                )
+                items.append({
+                    "title": _clean_html(title),
+                    "source": "同花顺",
+                    "url": "",
+                    "sentiment": "",
+                    "related_stocks": related,
+                    "category": "重要" if item.get("color") == "2" else "",
+                    "pub_time": pub_time,
+                })
+
+            logger.info(f"[同花顺] 获取成功: {len(items)} 条")
+            return items
+
+        except (requests.exceptions.RequestException, json.JSONDecodeError, ValueError, TypeError) as e:
+            logger.warning(f"[同花顺] 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+
+    logger.warning("[同花顺] 所有尝试均失败")
+    return []
+
+
+# ============================================================================
+#  华尔街见闻实时快讯 (wallstreetcn)
+# ============================================================================
+
+def fetch_wallstreetcn_news(limit: int = 40) -> list[dict]:
+    """
+    从华尔街见闻获取实时财经快讯。
+
+    API: api-prod.wallstreetcn.com/apiv1/content/lives
+    纯 JSON，内容含 content_text/display_time/categorySet。
+
+    Returns:
+        list[dict]: 统一格式新闻列表
+    """
+    headers = {**HEADERS, "Referer": "https://wallstreetcn.com/"}
+    for attempt in range(MAX_RETRIES):
+        try:
+            resp = requests.get(
+                WALLSTREETCN_LIVES_URL,
+                params={"channel": "global-channel", "client": "pc", "cursor": 0, "limit": limit},
+                headers=headers,
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            body = resp.json()
+            items_raw = body.get("data", {}).get("items", [])
+            if not isinstance(items_raw, list) or not items_raw:
+                logger.warning(f"[华尔街见闻] 无返回数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
+                if attempt < MAX_RETRIES - 1:
+                    time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+                continue
+
+            items = []
+            for item in items_raw:
+                title = (item.get("content_text", "") or "").strip()
+                if not title:
+                    continue
+                # display_time 可能为秒或毫秒
+                raw_ts = item.get("display_time", 0)
+                pub_time = ""
+                if raw_ts:
+                    try:
+                        ts = int(raw_ts)
+                        if ts > 1e12:  # 毫秒 → 秒
+                            ts //= 1000
+                        pub_time = datetime.fromtimestamp(ts, tz=CST).strftime("%Y-%m-%d %H:%M:%S")
+                    except (ValueError, OSError, TypeError):
+                        pass
+                # 提取分类
+                cat_set = item.get("categorySet", {}) or {}
+                cat_name = ""
+                if isinstance(cat_set, dict):
+                    cat_name = cat_set.get("name", "")
+                elif isinstance(cat_set, list):
+                    cat_name = ",".join(c.get("name", "") for c in cat_set if isinstance(c, dict))
+                items.append({
+                    "title": _clean_html(title),
+                    "source": "华尔街见闻",
+                    "url": "",
+                    "sentiment": "",
+                    "related_stocks": "",
+                    "category": cat_name,
+                    "pub_time": pub_time,
+                })
+
+            logger.info(f"[华尔街见闻] 获取成功: {len(items)} 条")
+            return items
+
+        except (requests.exceptions.RequestException, json.JSONDecodeError, ValueError, TypeError) as e:
+            logger.warning(f"[华尔街见闻] 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+
+    logger.warning("[华尔街见闻] 所有尝试均失败")
+    return []
+
+
+# ============================================================================
+#  雪球 (xueqiu) — 先取 cookie 再请求 API
+# ============================================================================
+
+_XUEQIU_SESSION: Optional[requests.Session] = None
+_XUEQIU_SESSION_TS: float = 0.0
+_XUEQIU_MAX_AGE = 21600  # 6 小时过期
+
+
+def _get_xueqiu_session(force: bool = False) -> Optional[requests.Session]:
+    """获取带 cookie 的雪球 session（自动初始化+6小时过期轮换）。"""
+    global _XUEQIU_SESSION, _XUEQIU_SESSION_TS
+    if not force and _XUEQIU_SESSION is not None and (time.time() - _XUEQIU_SESSION_TS) < _XUEQIU_MAX_AGE:
+        return _XUEQIU_SESSION
+    _XUEQIU_SESSION = None  # 清除过期 session
+    try:
+        s = requests.Session()
+        s.headers.update(HEADERS)
+        s.get("https://xueqiu.com/", timeout=REQUEST_TIMEOUT)
+        if "xq_a_token" in s.cookies:
+            _XUEQIU_SESSION = s
+            _XUEQIU_SESSION_TS = time.time()
+            logger.info("[雪球] session 初始化成功")
+            return s
+        logger.warning("[雪球] 初始 cookie 获取失败 (无 xq_a_token)")
+        return None
+    except Exception as e:
+        logger.warning(f"[雪球] session 初始化异常: {e}")
+        return None
+
+
+def fetch_xueqiu_news() -> list[dict]:
+    """
+    从雪球获取热门讨论/新闻。
+
+    使用 v4/statuses/public_timeline_by_category endpoint。
+    需要先访问首页获取 cookie (xq_a_token)，然后请求 JSON API。
+    session 被缓存复用，约一周过期后自动重新获取。
+
+    Returns:
+        list[dict]: 统一格式新闻列表
+    """
+    session = _get_xueqiu_session()
+    if not session:
+        logger.warning("[雪球] 无可用 session，跳过")
+        return []
+
+    for attempt in range(MAX_RETRIES):
+        try:
+            resp = session.get(
+                XUEQIU_TIMELINE_URL,
+                params={"category": 6, "page": 1},
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            body = resp.json()
+            list_data = body.get("list", [])
+            if not isinstance(list_data, list) or not list_data:
+                logger.warning(f"[雪球] 无返回数据 (尝试 {attempt + 1}/{MAX_RETRIES})")
+                if attempt < MAX_RETRIES - 1:
+                    time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+                continue
+
+            items = []
+            for item in list_data:
+                # item 结构: {"id":..., "category":6, "data":"{...json...}"}
+                raw_data = item.get("data", "")
+                if isinstance(raw_data, str):
+                    try:
+                        data = json.loads(raw_data)
+                    except (json.JSONDecodeError, TypeError):
+                        data = item
+                else:
+                    data = raw_data if isinstance(raw_data, dict) else item
+
+                title = (data.get("title", "") or data.get("text", "") or "").strip()
+                if not title:
+                    continue
+                created_at = data.get("created_at", 0)
+                pub_time = ""
+                if created_at:
+                    try:
+                        ts = int(created_at)
+                        if ts > 1e12:
+                            ts //= 1000
+                        pub_time = datetime.fromtimestamp(ts, tz=CST).strftime("%Y-%m-%d %H:%M:%S")
+                    except (ValueError, OSError, TypeError):
+                        pass
+                items.append({
+                    "title": _clean_html(title),
+                    "source": "雪球",
+                    "url": "",
+                    "sentiment": "",
+                    "related_stocks": "",
+                    "category": data.get("type", ""),
+                    "pub_time": pub_time,
+                })
+
+            logger.info(f"[雪球] 获取成功: {len(items)} 条")
+            return items
+
+        except (requests.exceptions.RequestException, json.JSONDecodeError, ValueError, TypeError) as e:
+            logger.warning(f"[雪球] 请求失败 (尝试 {attempt + 1}/{MAX_RETRIES}): {e}")
+            # cookie 可能过期，立即刷新 session 再重试
+            if "403" in str(e) or "401" in str(e):
+                session = _get_xueqiu_session(force=True)
+                if not session:
+                    break
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAY_BASE * (2 ** attempt))
+
+    logger.warning("[雪球] 所有尝试均失败")
     return []
 
 
@@ -444,7 +685,7 @@ def collect_from_all_sources() -> tuple[list[dict], list[str]]:
     """
     从所有可用新闻源采集，合并返回。
 
-    顺序: 财联社 → 新浪财经 → 东方财富 (未封锁时)
+    顺序: 财联社 → 新浪财经 → 东方财富 → 同花顺 → 华尔街见闻 → 雪球
     每个源独立 try/except，一个源失败不影响其他源。
 
     Returns:
@@ -489,6 +730,36 @@ def collect_from_all_sources() -> tuple[list[dict], list[str]]:
     else:
         logger.info("[多源] 东方财富 WAF 封锁中，跳过")
 
+    # 4. 同花顺快讯
+    try:
+        ths_items = fetch_10jqka_news()
+        if ths_items:
+            all_items.extend(ths_items)
+            sources.append("同花顺")
+            logger.info(f"[多源] 同花顺: {len(ths_items)} 条")
+    except Exception as e:
+        logger.warning(f"[多源] 同花顺采集异常: {e}")
+
+    # 5. 华尔街见闻
+    try:
+        wscn_items = fetch_wallstreetcn_news()
+        if wscn_items:
+            all_items.extend(wscn_items)
+            sources.append("华尔街见闻")
+            logger.info(f"[多源] 华尔街见闻: {len(wscn_items)} 条")
+    except Exception as e:
+        logger.warning(f"[多源] 华尔街见闻采集异常: {e}")
+
+    # 6. 雪球 (依赖 cookie session)
+    try:
+        xq_items = fetch_xueqiu_news()
+        if xq_items:
+            all_items.extend(xq_items)
+            sources.append("雪球")
+            logger.info(f"[多源] 雪球: {len(xq_items)} 条")
+    except Exception as e:
+        logger.warning(f"[多源] 雪球采集异常: {e}")
+
     logger.info(f"[多源] 共采集 {len(all_items)} 条, 来源: {sources}")
     return all_items, sources
 
@@ -517,11 +788,13 @@ def get_existing_titles(hours: int = DEDUP_WINDOW_HOURS) -> set[str]:
 
 
 def deduplicate_news(raw_items: list[dict], existing_titles: set[str]) -> list[dict]:
-    """去除已在数据库中的重复新闻 (按标题匹配)。"""
+    """去除已在数据库中的重复新闻 (按标题匹配，含批次内跨源去重)。"""
+    seen = set(existing_titles)
     unique = []
     for item in raw_items:
         title = item.get("title", "")
-        if title not in existing_titles:
+        if title not in seen:
+            seen.add(title)
             unique.append(item)
         else:
             logger.debug(f"[去重] 跳过重复: {title[:80]}...")
@@ -580,7 +853,7 @@ def transform_news(cls_items: list[dict]) -> list[dict]:
 
         results.append({
             "title": title,
-            "source": "cls.cn",
+            "source": "财联社",
             "url": f"https://www.cls.cn/detail/{news_id}" if news_id else "",
             "sentiment": "",  # 快讯不含情绪标签
             "related_stocks": related_stocks,
@@ -705,10 +978,8 @@ _A_SHARE_POSITIVE_KEYWORDS = [
 ]
 
 _A_SHARE_HOLDING_NAMES = [
-    "山子高科", "宁波建工", "通富微电", "合肥城建",
-    "京城股份", "壹网壹创", "润和软件", "信维通信",
-    "000981", "601789", "002156", "002208",
-    "600860", "300792", "300339", "300136",
+    "通富微电", "信维通信", "烽火通信", "大港股份", "蓝色光标",
+    "002156", "300136", "600498", "002077", "300058",
 ]
 
 # 明确非A股信号 — 仅提及外股/外企/外市的新闻
@@ -720,7 +991,7 @@ _A_SHARE_NEGATIVE_PATTERNS = [
     "英特尔陈立武", "英特尔CEO",
     "巴斯夫", "丰田",
     "首艘韩国", "霍尔木兹", "超级油轮",
-    "三星电子", "SK海力士", "台积电.*美股",
+    "三星电子", "SK海力士",
 ]
 
 
@@ -755,8 +1026,9 @@ def is_a_share_relevant(title: str) -> bool:
 
 def _format_brief_time(pub_time: str) -> str:
     """从完整时间戳提取简短的 HH:MM 时间。"""
-    if len(pub_time) >= 16:
-        return pub_time[11:16]
+    m = re.search(r"(\d{2}):(\d{2})", pub_time)
+    if m:
+        return f"{m.group(1)}:{m.group(2)}"
     return pub_time or "--:--"
 
 
@@ -908,7 +1180,21 @@ def run_morning() -> bool:
             logger.error(f"[morning] 数据库保存失败: {e}")
             traceback.print_exc()
 
-        # 5. 飞书推送摘要
+        # 5. 正文增强 — 后置钩子, 失败不影响主流程
+        try:
+            from news_enricher import enrich_latest_news  # type: ignore
+            enrich_latest_news("morning")
+        except Exception:
+            logger.warning("[morning] 正文增强异常 (非关键)")
+
+        # 6. 巨潮公告采集 — 仅早间, 后置钩子
+        try:
+            from news_cninfo import fetch_and_save  # type: ignore
+            fetch_and_save()
+        except Exception:
+            logger.warning("[morning] 巨潮公告异常 (非关键)")
+
+        # 7. 飞书推送摘要
         send_summary_via_feishu(unique_news, "morning", sources, chat_id="news")
 
         elapsed = time.time() - start_ts
@@ -1044,7 +1330,14 @@ def run_evening() -> bool:
             logger.error(f"[evening] 数据库保存失败: {e}")
             traceback.print_exc()
 
-        # 5. 飞书推送摘要
+        # 5. 正文增强 — 后置钩子
+        try:
+            from news_enricher import enrich_latest_news  # type: ignore
+            enrich_latest_news("evening")
+        except Exception:
+            logger.warning("[evening] 正文增强异常 (非关键)")
+
+        # 6. 飞书推送摘要
         send_summary_via_feishu(unique_news, "evening", sources, chat_id="news")
 
         elapsed = time.time() - start_ts

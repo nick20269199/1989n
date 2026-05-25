@@ -21,6 +21,8 @@ from feishu_sender import send_feishu_alert
 from config import FEISHU_ROUTES
 
 _ALERT_CHAT_ID = FEISHU_ROUTES.get("alerts", "")
+TOOLS_DIR = Path(__file__).parent / "tools"
+STATUS_DIR = Path("D:/1989n/stock_data/status")
 
 # ── helpers ──────────────────────────────────────────────
 
@@ -154,6 +156,88 @@ def check_claude_cron():
         return [f"检查Claude cron异常: {e}"]
 
 
+def check_consistency_gate() -> tuple[list[str], dict | None]:
+    """运行一致性门禁，写 consistency_report.json，返回告警列表。"""
+    alerts = []
+    result = None
+    try:
+        r = subprocess.run(
+            [sys.executable, str(TOOLS_DIR / "consistency_gate.py"), "--json"],
+            capture_output=True, text=True, timeout=30,
+        )
+        result = json.loads(r.stdout)
+    except (json.JSONDecodeError, subprocess.TimeoutExpired) as e:
+        alerts.append(f"一致性门禁执行失败: {e}")
+        return alerts, None
+
+    # 写报告
+    STATUS_DIR.mkdir(parents=True, exist_ok=True)
+    (STATUS_DIR / "consistency_report.json").write_text(
+        json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+    v = result.get("violations", 0)
+    if v > 0:
+        for d in result.get("details", []):
+            if d.get("status") == "violation":
+                alerts.append(f"一致性 {d['check']}: {d['detail']}")
+        print(f"[WARN] 一致性门禁: {v} 项违规")
+    else:
+        print(f"[OK] 一致性门禁: 全部 {result.get('checks', 0)} 项检查通过")
+    return alerts, result
+
+
+def check_bug_pattern_miner() -> tuple[list[str], dict | None]:
+    """运行 Bug 模式挖掘，写 pending_patterns.json，返回告警列表。"""
+    alerts = []
+    result = None
+    try:
+        r = subprocess.run(
+            [sys.executable, str(TOOLS_DIR / "bug_pattern_miner.py"), "--json"],
+            capture_output=True, text=True, timeout=30,
+        )
+        result = json.loads(r.stdout)
+    except (json.JSONDecodeError, subprocess.TimeoutExpired) as e:
+        alerts.append(f"Bug模式挖掘执行失败: {e}")
+        return alerts, None
+
+    new_c = result.get("candidates_new", 0)
+    total_c = result.get("candidates_total", 0)
+    if new_c > 0:
+        alerts.append(f"发现 {new_c} 个新 Bug 候选模式 (累计 {total_c})，请审核 pending_patterns.json")
+        print(f"[WARN] Bug模式挖掘: {new_c} 个新候选")
+    else:
+        print(f"[OK] Bug模式挖掘: 累计 {total_c} 个候选，无新增")
+    return alerts, result
+
+
+def check_error_trend() -> tuple[list[str], dict | None]:
+    """运行错误趋势分析，写 error_trends.json，返回告警列表。"""
+    alerts = []
+    result = None
+    try:
+        r = subprocess.run(
+            [sys.executable, str(TOOLS_DIR / "error_trend.py"), "--json"],
+            capture_output=True, text=True, timeout=30,
+        )
+        result = json.loads(r.stdout)
+    except (json.JSONDecodeError, subprocess.TimeoutExpired) as e:
+        alerts.append(f"错误趋势分析执行失败: {e}")
+        return alerts, None
+
+    if result.get("alert"):
+        alerts.append(
+            f"错误趋势预警: 近7天 {result['last_7_count']} 次错误 "
+            f"(较前7天 {result['change_pct']:+.0f}%)，趋势上升"
+        )
+        print(f"[WARN] 错误趋势: 上升 ({result['change_pct']:+.0f}%)")
+    else:
+        direction = result.get("direction", "stable")
+        total = result.get("total_entries_in_window", 0)
+        print(f"[OK] 错误趋势: {direction}, 窗口内 {total} 条")
+    return alerts, result
+
+
 # ── main ─────────────────────────────────────────────────
 
 def main():
@@ -180,7 +264,19 @@ def main():
     if not cron_alerts:
         print("[OK] Claude Code cron 正常")
 
-    # 4. 汇总
+    # 4. 一致性门禁
+    consistency_alerts, consistency_result = check_consistency_gate()
+    alerts.extend(consistency_alerts)
+
+    # 5. Bug 模式挖掘
+    miner_alerts, miner_result = check_bug_pattern_miner()
+    alerts.extend(miner_alerts)
+
+    # 6. 错误趋势分析
+    trend_alerts, trend_result = check_error_trend()
+    alerts.extend(trend_alerts)
+
+    # 7. 汇总
     if alerts:
         title = f"夜间健康告警 ({timestamp})"
         content = [f"共 **{len(alerts)}** 项异常:\n"] + [f"- {a}" for a in alerts]

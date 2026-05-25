@@ -22,6 +22,7 @@ from dept_status_protocol import publish_status
 logger = logging.getLogger("health_check")
 
 STOCK_DATA = Path("D:/1989n/stock_data")
+TOOLS_DIR = Path(__file__).parent / "tools"
 
 # Windows tasks expected — loaded from data/tasks.json
 TASKS_JSON = Path(__file__).parent / "data" / "tasks.json"
@@ -139,8 +140,36 @@ def check_feishu_push() -> bool:
     return send_alert("[系统健康检查] 定时推送测试通过")
 
 
+def check_import_gate() -> dict:
+    """Run syntax gate scan, return {gate, passed, failures, details}."""
+    try:
+        result = subprocess.run(
+            [sys.executable, str(TOOLS_DIR / "import_gate.py"), "--full", "--json"],
+            capture_output=True, text=True, timeout=30,
+        )
+        return json.loads(result.stdout)
+    except (json.JSONDecodeError, KeyError, subprocess.TimeoutExpired) as e:
+        return {"gate": "import_syntax", "passed": False, "failures": 1,
+                "details": [{"file": "_subprocess", "msg": str(e)[:200]}]}
+
+
+def check_schema_gate() -> dict:
+    """Run schema gate scan, return {files_checked, passed, violations}."""
+    try:
+        result = subprocess.run(
+            [sys.executable, str(TOOLS_DIR / "schema_gate.py"), "--json"],
+            capture_output=True, text=True, timeout=30,
+        )
+        return json.loads(result.stdout)
+    except (json.JSONDecodeError, KeyError, subprocess.TimeoutExpired) as e:
+        return {"files_checked": 0, "passed": False,
+                "violations": [{"file": "_subprocess", "issues": [{"detail": str(e)[:200]}]}]}
+
+
 def generate_report(
-    win_ok: list, win_missing: list, disk: dict, feishu_ok: bool
+    win_ok: list, win_missing: list, disk: dict, feishu_ok: bool,
+    import_gate: dict | None = None,
+    schema_gate: dict | None = None,
 ) -> str:
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     lines = [f"系统健康检查报告 {now}", "=" * 30]
@@ -163,11 +192,25 @@ def generate_report(
     # Claude Code cron tasks (note: can't check from script, skip)
     lines.append(" Claude Code cron: 需在Claude内检查 (见下方)")
 
+    # ── 门禁状态 ──
+    ig = import_gate or {}
+    lines.append(f" 语法门禁: {'通过' if ig.get('passed') else '异常'}"
+                 f" ({ig.get('failures', '?')} 个错误)")
+
+    sg = schema_gate or {}
+    v_count = sum(len(v.get("issues", [])) for v in sg.get("violations", []))
+    lines.append(f" Schema门禁: {'通过' if sg.get('passed') else '异常'}"
+                 f" (校验 {sg.get('files_checked', 0)} 个文件, {v_count} 个问题)")
+
     alerts = []
     if win_missing:
         alerts.append(f"缺失计划任务: {', '.join(win_missing)}")
     if not disk["ok"]:
         alerts.append(f"D盘空间不足: 仅剩 {disk['free_gb']}GB")
+    if not ig.get("passed", True):
+        alerts.append(f"语法错误: {ig.get('failures', '?')} 个")
+    if not sg.get("passed", True):
+        alerts.append(f"Schema违规: {v_count} 项")
 
     if alerts:
         lines.insert(1, " 异常: " + "; ".join(alerts))
@@ -206,7 +249,12 @@ def main():
     # win_tasks are checked from this script
     win_ok, win_missing = check_windows_tasks()
 
-    report = generate_report(win_ok, win_missing, disk, feishu_ok)
+    # ── 门禁检查 (工程部) ──
+    import_gate_result = check_import_gate()
+    schema_gate_result = check_schema_gate()
+
+    report = generate_report(win_ok, win_missing, disk, feishu_ok,
+                             import_gate_result, schema_gate_result)
     logger.info("Health check complete")
 
     # Send report to Feishu
@@ -219,6 +267,17 @@ def main():
     if not disk["ok"]:
         issues.append(f"D盘空间不足: 仅剩 {disk['free_gb']}GB")
     publish_status("logistics", {"health": "healthy" if not issues else "degraded", "issues": issues, "consumers": []})
+
+    # 工程部门禁状态发布
+    eng_issues = []
+    if not import_gate_result.get("passed", True):
+        eng_issues.append(f"语法门禁: {import_gate_result.get('failures', '?')} 个错误")
+    sg = schema_gate_result or {}
+    v_count = sum(len(v.get("issues", [])) for v in sg.get("violations", []))
+    if not sg.get("passed", True):
+        eng_issues.append(f"Schema门禁: {v_count} 项违规")
+    eng_health = "healthy" if not eng_issues else "degraded"
+    publish_status("engineering", {"health": eng_health, "issues": eng_issues, "consumers": ["logistics"]})
 
     # 通道健康快照 — 供 dept_preflight 保鲜检查
     _write_channel_health()

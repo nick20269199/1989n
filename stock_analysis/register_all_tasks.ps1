@@ -42,6 +42,9 @@ Register-SimpleTask -Name 'StockAnalysis_IntradayMidday' -ScriptPath 'D:\1989n\s
 # 大V雷达 (13:00下午)
 Register-SimpleTask -Name 'StockAnalysis_VVRadar_Afternoon' -ScriptPath 'D:\1989n\stock_analysis\run_vv_radar_afternoon.bat' -Schedule 'DAILY' -StartTime '13:00'
 
+# 大V雷达每日管线 (转录+分析+日报)
+Register-SimpleTask -Name 'StockAnalysis_VVDaily' -ScriptPath 'D:\1989n\stock_analysis\run_vv_daily_afternoon.bat' -Schedule 'WEEKLY' -StartTime '13:10' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+
 # 收盘30分钟分析
 Register-SimpleTask -Name 'StockAnalysis_IntradayClose' -ScriptPath 'D:\1989n\stock_analysis\run_intraday_close.bat' -Schedule 'WEEKLY' -StartTime '15:00' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
@@ -65,9 +68,6 @@ Register-SimpleTask -Name 'StockAnalysis_DecisionBacktest' -ScriptPath 'D:\1989n
 
 # 决策梦境推演 — 专家权重动态调整
 Register-SimpleTask -Name 'StockAnalysis_Dreamer' -ScriptPath 'D:\1989n\stock_analysis\run_dreamer.bat' -Schedule 'WEEKLY' -StartTime '17:00' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
-
-# 预测追踪闭环
-Register-SimpleTask -Name 'StockForecastCloser' -ScriptPath 'D:\1989n\stock_analysis\run_forecast_closer.bat' -Schedule 'WEEKLY' -StartTime '17:05' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
 # 晚间总结 + 大V雷达 + 预测闭环
 Register-SimpleTask -Name 'StockAnalysis_Evening' -ScriptPath 'D:\1989n\stock_analysis\run_evening.bat' -Schedule 'DAILY' -StartTime '22:00'
@@ -159,6 +159,7 @@ $allOk = $true
 $checkNames = @(
     'StockAnalysis_IntradayMidday',
     'StockAnalysis_VVRadar_Afternoon',
+    'StockAnalysis_VVDaily',
     'StockAnalysis_IntradayClose',
     'StockAnalysis_ClosingReview',
     'StockAnalysis_SectorCollect',
@@ -167,7 +168,6 @@ $checkNames = @(
     'StockAnalysis_NightlyPlan',
     'StockAnalysis_DecisionBacktest',
     'StockAnalysis_Dreamer',
-    'StockForecastCloser',
     'StockAnalysis_Evening',
     'StockAnalysis_Overnight',
     'Cognitive_MorningBrief',

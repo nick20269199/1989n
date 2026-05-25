@@ -10,6 +10,7 @@
     "API_TIMEOUT_MS": "3000000",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
   },
+  "autoMemoryDirectory": "D:\\1989n\\.claude\\memory",
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
@@ -64,16 +65,28 @@
       "matcher": "Bash",
       "hooks": [{
         "type": "command",
-        "timeout": 10,
-        "command": "/d/Python314/python -c \"import json; print(json.dumps({'systemMessage': '命令失败了。先读 D:\\\\1989n\\\\stock_data\\\\last_error.txt 追踪调用链找到根因，再修。不要跳过查因直接改代码。'}))\""
+        "timeout": 15,
+        "command": "D:/Python314/python D:/1989n/stock_analysis/tools/failure_analyzer.py --from-file",
+        "description": "失败分析器 — 自动读取 last_error.txt 定位根因"
       }]
     }],
     "PostToolUse": [{
       "matcher": "Edit|Write",
       "hooks": [{
         "type": "command",
+        "timeout": 30,
+        "command": "cd D:/1989n/stock_analysis && D:/Python314/python tools/import_gate.py --changed-only --json",
+        "description": "Gate 1: 语法门禁 — 检查改过的 .py 文件语法"
+      }, {
+        "type": "command",
+        "timeout": 120,
+        "command": "cd D:/1989n/stock_analysis && D:/Python314/python tools/auto_verify.py",
+        "description": "Gate 3: 交付自验 — 改了什么跑什么测试"
+      }, {
+        "type": "command",
         "timeout": 10,
-        "command": "/d/Python314/python -c \"import json; print(json.dumps({'hookSpecificOutput': {'hookEventName': 'PostToolUse', 'additionalContext': '刚改了代码，下一步必须做：跑一次脚本或测试验证它能工作，确认正常再报告完成。如果改的是错误修复，先确认 root cause 确实被解决了。'}}))\""
+        "command": "/d/Python314/python -c \"import json; print(json.dumps({'hookSpecificOutput': {'hookEventName': 'PostToolUse', 'additionalContext': '刚改了代码，下一步必须做：跑一次脚本或测试验证它能工作，确认正常再报告完成。如果改的是错误修复，先确认 root cause 确实被解决了。'}}))\"",
+        "description": "验证提醒"
       }]
     }]
   }

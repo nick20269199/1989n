@@ -54,6 +54,8 @@ logger = logging.getLogger("conversation_miner")
 # ── 确保目录 ──
 MEMORY_INDEX = Path("C:/Users/1989n/.claude/projects/d--1989n/memory/MEMORY.md")
 
+RULES_INTERACTION = Path("D:/1989n/.claude/rules/interaction-patterns.md")
+
 for d in [INTERACTION_DIR, SESSIONS_DIR, DAILY_DIR, DEEP_MINE_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
@@ -538,6 +540,13 @@ def persist_interaction_patterns(analysis: dict):
     out_path = INTERACTION_DIR / "interaction-patterns.md"
     out_path.write_text("\n".join(lines), encoding="utf-8")
     logger.info(f"交互模式写入: {out_path}")
+    # 同步写入规则目录（自动注入用）
+    try:
+        RULES_INTERACTION.parent.mkdir(parents=True, exist_ok=True)
+        RULES_INTERACTION.write_text("\n".join(lines), encoding="utf-8")
+        logger.info(f"规则同步: {RULES_INTERACTION}")
+    except Exception as e:
+        logger.warning(f"规则同步失败: {e}")
 
 
 def persist_daily_report(analysis: dict):

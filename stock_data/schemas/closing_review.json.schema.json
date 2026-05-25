@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "description": "收盘复盘数据",
+  "files": ["closing_review.json"],
+  "required_fields": ["title", "date", "holdings_report"],
+  "field_types": {
+    "title": "string",
+    "date": "string",
+    "time": "string",
+    "is_trading_hours": "bool"
+  },
+  "freshness_hours": 48,
+  "non_null_fields": ["title", "date", "holdings_report"]
+}

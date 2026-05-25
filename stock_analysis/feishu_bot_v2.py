@@ -26,6 +26,7 @@ from lark_oapi.api.im.v1.model.p2_im_message_receive_v1 import P2ImMessageReceiv
 
 from config import FEISHU_APP_ID, FEISHU_APP_SECRET, FEISHU_BOT_CHAT_ID, FEISHU_ENCRYPT_KEY
 from feishu_im_sender import send_text, send_card
+from feishu_inbox import inbox_append, start_outbox_watcher
 from dept_handlers import route_message
 
 logger = logging.getLogger("feishu_bot_v2")
@@ -168,6 +169,17 @@ def _on_im_message(event: P2ImMessageReceiveV1) -> None:
         logger.debug("Bot not mentioned in group, skip: %s", text[:50])
         return
 
+    # 写入 inbox → Claude Code 可读取
+    try:
+        sender_id = ""
+        if hasattr(evt_data, 'sender') and evt_data.sender:
+            sid = getattr(evt_data.sender, 'sender_id', None)
+            if sid:
+                sender_id = getattr(sid, 'open_id', '') or ''
+    except Exception:
+        sender_id = ""
+    inbox_append(chat_id, text, dept="routing", chat_type=chat_type, user_name=sender_id)
+
     # 后台线程处理，不阻塞 WebSocket 事件循环
     def process():
         try:
@@ -238,6 +250,9 @@ def main():
         send_text(FEISHU_BOT_CHAT_ID, f"[Bot v2] 上线 {_start_time}\n6部门路由已激活: 前厅/情报/工程/财务/研发/读书郎")
     except Exception:
         logger.warning("启动通知发送失败")
+
+    # 启动 outbox 监控 → Claude Code 回复自动发回飞书
+    start_outbox_watcher(send_text, interval=3.0)
 
     delay = INITIAL_RECONNECT_DELAY
 

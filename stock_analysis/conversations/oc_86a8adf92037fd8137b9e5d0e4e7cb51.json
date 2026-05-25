@@ -1,0 +1,197 @@
+[
+  {
+    "role": "user",
+    "content": "查飞书"
+  },
+  {
+    "role": "assistant",
+    "content": "好的，我来查一下飞书相关的信息。先看看当前目录下有什么数据文件。",
+    "tool_calls": [
+      {
+        "id": "call_00_j2mnXOLNxzD93NUjOFw63797",
+        "type": "function",
+        "function": {
+          "name": "list_directory",
+          "arguments": "{\"path\": \".\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_00_j2mnXOLNxzD93NUjOFw63797",
+    "content": "目录: .  (221 项)\n  .pytest_cache/\n  __pycache__/\n  conversations/\n  data/\n  experts/\n  lib/\n  logs/\n  market_pool/\n  modules/\n  output/\n  responses/\n  scripts/\n  sources/\n  tests/\n  tools/\n  .env  (2,198 bytes)\n  .env.example  (645 bytes)\n  3倍量B点.py  (15,243 bytes)\n  CLAUDE.md  (3,721 bytes)\n  __init__.py  (60 bytes)\n  _dt_closing.py  (8,890 bytes)\n  _dt_evening.py  (2,673 bytes)\n  _dt_hot.py  (1,632 bytes)\n  _dt_intraday.py  (7,031 bytes)\n  _dt_morning.py  (16,431 bytes)\n  _dt_overnight.py  (3,079 bytes)\n  _dt_poscheck.py  (8,606 bytes)\n  _dt_tech.py  (2,485 bytes)\n  _extract_cookies.py  (1,210 bytes)\n  _patch_timeout.py  (1,092 bytes)\n  _test_auction_channels.py  (19,745 bytes)\n  ai_router.py  (6,055 bytes)\n  alert_bridge.py  (7,805 bytes)\n  architecture_checklist.md  (7,439 bytes)\n  backfill_auction.py  (2,414 bytes)\n  backfill_hot_stocks.py  (4,885 bytes)\n  batch_transcribe.py  (2,328 bytes)\n  bilibili_scraper.py  (15,044 bytes)\n  bot.log  (3,734,121 bytes)\n  bot_test.log  (4,073 bytes)\n  bot_v2.log  (3,884 bytes)\n  bot_v2_guardian.log  (2,789 bytes)\n  bot_v2_guardian.py  (3,479 bytes)\n  bot_v2_state.json  (100 bytes)\n  bot_v2_stdout.log  (1,993 bytes)\n  bot_当前Bot.log  (17,018,693 bytes)\n  bot_海盗船长.log  (15,997,203 bytes)\n  bot_街溜子.log  (19,206,706 bytes)\n  bridge_config.py  (1,212 bytes)\n  bridge_nlp.py  (9,093 bytes)\n  bridge_sender.py  (6,362 bytes)\n  bs_analyzer.py  (9,218 bytes)\n  bs_comprehensive_analysis.py  (16,714 bytes)\n  bs_full_analysis.py  (20,898 bytes)\n  call_auction.py  (29,307 bytes)\n  cognitive_engine.py  (5,140 bytes)\n  config.py  (4,513 bytes)\n  conversation_miner.py  (27,745 bytes)\n  create_scheduled_task.ps1  (658 bytes)\n  daily_checklist.py  (14,190 bytes)\n  daily_compress.py  (34,515 bytes)\n  daily_compress_agent.py  (1,211 bytes)\n  daily_task.py  (44,746 bytes)\n  daily_task.py.bak  (93,614 bytes)\n  data_guard.py  (4,440 bytes)\n  data_quality_gate.py  (7,640 bytes)\n  data_source_router.py  (18,553 bytes)\n  database.py  (14,255 bytes)\n  deep_mine.py  (12,064 bytes)\n  deep_research.py  (10,174 bytes)\n  deepseek_multi.py  (5,669 bytes)\n  dept_handlers.py  (29,256 bytes)\n  dept_preflight.py  (8,921 bytes)\n  dept_status_protocol.py  (3,510 bytes)\n  desktop_auto.py  (12,881 bytes)\n  distill_queue.py  (7,548 bytes)\n  dns_fix.py  (1,652 bytes)\n  ecosystem_plan.md  (5,814 bytes)\n  ecosystem_survey.md  (4,707 bytes)\n  emotional_analysis.py  (15,592 bytes)\n  error_capture.py  (2,448 bytes)\n  error_kb_hook.py  (5,069 bytes)\n  evolve_capture.py  (12,011 bytes)\n  feishu_bot.py  (5,635 bytes)\n  feishu_bot_v2.py  (8,753 bytes)\n  feishu_bridge.py  (10,607 bytes)\n  feishu_claude_agent.py  (17,419 bytes)\n  feishu_doc.py  (13,706 bytes)\n  feishu_event_handler.py  (4,510 bytes)\n  feishu_im_sender.py  (4,873 bytes)\n  feishu_inbox.py  (6,622 bytes)\n  feishu_multi_bot.py  (3,048 bytes)\n  feishu_sender.py  (4,406 bytes)\n  feishu_table_sync.py  (16,272 bytes)\n  fix_ghost_refs.py  (6,867 bytes)\n  forecast_closer.py  (10,011 bytes)\n  git_auto_push.bat  (64 bytes)\n  git_auto_push.py  (1,937 bytes)\n  health_check.py  (9,612 bytes)\n  index_all.py  (3,657 bytes)\n  intelligence_service.py  (15,574 bytes)\n  intraday_report.py  (23,780 bytes)\n  knowledge_db.py  (17,983 bytes)\n  l2_auction_capture.py  (9,102 bytes)\n  l2_parser.py  (19,372 bytes)\n  lint_wrapper.py  (3,583 bytes)\n  market_context.py  (9,167 bytes)\n  monitor_000062.py  (18,389 bytes)\n  morning_brief.py  (38,077 bytes)\n  morning_brief_agent.py  (28,843 bytes)\n  morning_brief_v2_design.md  (3,458 bytes)\n  multi_angle_analysis.py  (13,537 bytes)\n  multiagent_architecture.md  (13,375 bytes)\n  news_cninfo.py  (5,934 bytes)\n  news_enricher.py  (14,234 bytes)\n  news_scheduler.py  (53,098 bytes)\n  nightly_health_check.py  (10,295 bytes)\n  nightly_plan.py  (27,164 bytes)\n  ocr_image.py  (10,415 bytes)\n  portfolio_guard.py  (13,301 bytes)\n  position_manager.py  (18,091 bytes)\n  ppt_to_feishu.py  (15,931 bytes)\n  recon_daily.py  (14,087 bytes)\n  register_all_tasks.ps1  (10,634 bytes)\n  register_tasks.ps1  (6,555 bytes)\n  render_data.json  (134,661 bytes)\n  response_urls.txt  (48,760 bytes)\n  rule_miner_features.py  (15,564 bytes)\n  rule_miner_mine.py  (13,421 bytes)\n  rule_verifier.py  (12,434 bytes)\n  run_bot_v2_guardian.bat  (181 bytes)\n  run_call_auction.bat  (172 bytes)\n  run_closing_review.bat  (402 bytes)\n  run_connect.bat  (138 bytes)\n  run_conversation_miner.bat  (313 bytes)\n  run_daily_compress_agent.bat  (167 bytes)\n  run_decision_backtest.bat  (188 bytes)\n  run_digest.bat  (139 bytes)\n  run_distill_queue.bat  (216 bytes)\n  run_dreamer.bat  (198 bytes)\n  run_evening.bat  (504 bytes)\n  run_evolve_op.bat  (142 bytes)\n  run_evolve_read.bat  (141 bytes)\n  run_feishu_bot_v2.bat  (156 bytes)\n  run_forecast_closer.bat  (181 bytes)\n  run_health_check.bat  (156 bytes)\n  run_hot_stocks.bat  (290 bytes)\n  run_intel_deduce.bat  (332 bytes)\n  run_intel_recon.bat  (328 bytes)\n  run_intraday_close.bat  (236 bytes)\n  run_intraday_midday.bat  (238 bytes)\n  run_l2_capture.bat  (275 bytes)\n  run_lint.bat  (356 bytes)\n  run_maintain.bat  (143 bytes)\n  run_monitor_000062.bat  (202 bytes)\n  run_morning_brief.bat  (167 bytes)\n  run_morning_brief_agent.bat  (316 bytes)\n  run_multi_angle_analysis.bat  (177 bytes)\n  run_news_evening.bat  (193 bytes)\n  run_news_intraday.bat  (253 bytes)\n  run_news_morning.bat  (193 bytes)\n  run_nightly_health.bat  (166 bytes)\n  run_nightly_plan.bat  (177 bytes)\n  run_overnight.bat  (231 bytes)\n  run_prune.bat  (134 bytes)\n  run_recon_daily.bat  (179 bytes)\n  run_sector_collect.bat  (189 bytes)\n  run_task_dashboard.bat  (301 bytes)\n  run_task_sentinel.bat  (199 bytes)\n  run_tech_scan.bat  (171 bytes)\n  run_vv_radar.bat  (154 bytes)\n  run_vv_radar_afternoon.bat  (160 bytes)\n  run_weekly_audit_agent.bat  (313 bytes)\n  run_weekly_sector.bat  (222 bytes)\n  sanbei_menu.py  (2,921 bytes)\n  sanbei_strategy.py  (9,888 bytes)\n  sel_connect.py  (5,398 bytes)\n  sel_digest.py  (3,903 bytes)\n  sel_evolve_op.py  (5,416 bytes)\n  sel_evolve_read.py  (4,894 bytes)\n  sel_lint.py  (23,283 bytes)\n  sel_maintain.py  (3,196 bytes)\n  sel_prune.py  (4,335 bytes)\n  session_hook.py  (698 bytes)\n  session_tracker.py  (4,607 bytes)\n  stage_context.py  (6,809 bytes)\n  start_bot.bat  (104 bytes)\n  start_bridge.bat  (109 bytes)\n  stock_quote.py  (10,817 bytes)\n  stock_skill.py  (33,706 bytes)\n  stratevo_wrapper.py  (2,611 bytes)\n  sync_portfolio.py  (4,797 bytes)\n  task_dashboard.py  (11,084 bytes)\n  task_sentinel.py  (7,766 bytes)\n  tasks_summary.md  (4,693 bytes)\n  test_cognitive_loop.py  (19,515 bytes)\n  test_expert_repair.py  (3,509 bytes)\n  test_final.py  (2,290 bytes)\n  test_fix_verify.py  (2,616 bytes)\n  test_portfolio_repair.py  (4,732 bytes)\n  test_session_stress.py  (12,509 bytes)\n  trade_backtest.py  (13,910 bytes)\n  trade_engine.py  (18,742 bytes)\n  trade_probability.py  (24,419 bytes)\n  trading_ecosystem_v2.md  (18,514 bytes)\n  verify_changes.py  (8,143 bytes)\n  video_learn.py  (19,627 bytes)\n  vision.py  (9,048 bytes)\n  vv_insights.py  (6,767 bytes)\n  vv_login.py  (2,983 bytes)\n  vv_radar.py  (14,814 bytes)\n  vv_round1_timeline.py  (7,147 bytes)\n  vv_round2_topics.py  (9,558 bytes)\n  vv_round3_behavior.py  (8,634 bytes)\n  vv_round4_fusion.py  (7,407 bytes)\n  vv_round5_final.py  (6,983 bytes)\n  vv_transcribe.py  (13,500 bytes)\n  weekly_audit_agent.py  (1,015 bytes)\n  zt_hc.py  (13,111 bytes)\n  zt_hc_run_summary.txt  (2,870 bytes)\n  弹窗监控.bat  (108 bytes)"
+  },
+  {
+    "role": "assistant",
+    "content": "我看到这个项目里有很多飞书相关的文件。让我看看这些文件的内容来给你一个全面的介绍。",
+    "tool_calls": [
+      {
+        "id": "call_00_j0eLLJwfypUepdL3mANe4172",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_bot.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_01_Cz6zh5Kdw9zhfeUgfKAi1610",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_bot_v2.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_02_y8KX2RBiOgfvlNQdvr3d7880",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_bridge.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_03_HVmEiULUt8FCvnLaJYiB9768",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_doc.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_04_raaFBPM6flDddDQJum6S2364",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_im_sender.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_05_KLo7k0zp93YfPjndHUAY7023",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_inbox.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_06_hONK7VqSq3lDNPrePxsV8304",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_multi_bot.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_07_SnHt0ZD1SSeZBj6LsfvK0981",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_sender.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_08_glS0meCFzBhBq0HbC4gt2713",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_table_sync.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_09_Y6PZWbEECdO358qap0DD0537",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_event_handler.py\", \"max_lines\": 50}"
+        }
+      },
+      {
+        "id": "call_10_P1dnJH0WXT0lZqIjkNMc8199",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"feishu_claude_agent.py\", \"max_lines\": 50}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_00_j0eLLJwfypUepdL3mANe4172",
+    "content": "\"\"\"\nFeishu Group Bot — WebSocket long-connection mode via lark_oapi SDK.\n支持多 Bot 模式（primary/passive）+ 回复自动分类。\n\"\"\"\nimport datetime\nimport json\nimport logging\nimport os\nimport sys\nimport threading\nfrom pathlib import Path\n\nfrom lark_oapi.ws import Client\nfrom lark_oapi.event.dispatcher_handler import EventDispatcherHandler\nfrom lark_oapi.core.enum import LogLevel\nfrom lark_oapi.api.im.v1.model.p2_im_message_receive_v1 import P2ImMessageReceiveV1\n\nfrom config import FEISHU_APP_ID, FEISHU_APP_SECRET, FEISHU_BOT_CHAT_ID, FEISHU_ENCRYPT_KEY\nfrom feishu_im_sender import send_text, send_card\nfrom feishu_claude_agent import process_message\n\nlogger = logging.getLogger(\"feishu_bot\")\n\nPROJECT_DIR = Path(__file__).parent\nRESPONSES_DIR = PROJECT_DIR / \"responses\"\nRESPONSES_DIR.mkdir(exist_ok=True)\nBOT_OPEN_ID = \"ou_22c94d299bc015d17b3db7a4f926c357\"\nBOT_MODE = os.environ.get(\"BOT_MODE\", \"primary\")  # primary | passive\nBOT_NAME = os.environ.get(\"BOT_NAME\", \"\")\n\n# 分类 → 卡片颜色映射\nCATEGORY_COLORS = {\n    \"📊 行情分析\": \"blue\",\n    \"📈 持仓报告\": \"green\",\n    \"⚠️ 风险提醒\": \"red\",\n    \"💬 问答\": \"indigo\",\n}\nDEFAULT_CATEGORY = \"💬 问答\"\nDEFAULT_COLOR = \"blue\"\n\n\ndef _parse_category(response: str) -> tuple[str, str, str]:\n    \"\"\"解析回复中的分类标签，返回 (分类, 标题, 正文)\"\"\"\n    lines = response.strip().split(\"\\n\", 2)\n    first_line = lines[0].strip()\n\n    if first_line in CATEGORY_COLORS:\n        category = first_line\n        title = category  # 直接用 emoji + 分类名做标题\n        body = lines[2].strip() if len(lines) > 2 else lines[1].strip() if len(lines) > 1 else \"\"\n\n... (共 184 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_01_Cz6zh5Kdw9zhfeUgfKAi1610",
+    "content": "\"\"\"\nfeishu_bot_v2.py — 飞书 Bot v2 双向通信\n\nv2 改进:\n  - 部门路由: 6个部门 + 通用AI fallback\n  - @mention 过滤: 只回复明确 @bot 或私聊的消息\n  - 数据准确性: 全部走 data_source_router / dept_handlers\n  - 自动重连: WebSocket 断线指数退避重连\n  - 健康监控: 心跳日志 + 重启守护兼容\n\n用法: python feishu_bot_v2.py\n\"\"\"\nimport json\nimport logging\nimport os\nimport sys\nimport threading\nimport time\nfrom datetime import datetime\nfrom pathlib import Path\n\nfrom lark_oapi.ws import Client\nfrom lark_oapi.event.dispatcher_handler import EventDispatcherHandler\nfrom lark_oapi.core.enum import LogLevel\nfrom lark_oapi.api.im.v1.model.p2_im_message_receive_v1 import P2ImMessageReceiveV1\n\nfrom config import FEISHU_APP_ID, FEISHU_APP_SECRET, FEISHU_BOT_CHAT_ID, FEISHU_ENCRYPT_KEY\nfrom feishu_im_sender import send_text, send_card\nfrom feishu_inbox import inbox_append, start_outbox_watcher\nfrom dept_handlers import route_message\n\nlogger = logging.getLogger(\"feishu_bot_v2\")\n\nPROJECT_DIR = Path(__file__).parent\nRESPONSES_DIR = PROJECT_DIR / \"responses\"\nRESPONSES_DIR.mkdir(exist_ok=True)\nSTATE_FILE = PROJECT_DIR / \"bot_v2_state.json\"\n\n# Bot 自身 open_id (从飞书应用详情获取)\nBOT_OPEN_ID = os.environ.get(\"BOT_OPEN_ID\", \"ou_22c94d299bc015d17b3db7a4f926c357\")\n\n# 重连配置\nMAX_RECONNECT_DELAY = 300       # 最大重连间隔 (秒)\nINITIAL_RECONNECT_DELAY = 5    # 初始重连间隔 (秒)\nRECONNECT_BACKOFF = 2          # 指数退避倍数\n\n# ── 状态持久化 ──\n_reconnect_count = 0\n_start_time: str = \"\"\n\n\n... (共 285 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_02_y8KX2RBiOgfvlNQdvr3d7880",
+    "content": "\"\"\"\nFeishu Bridge Service\n飞书桥接服务 - 连接 NLP 分析到飞书消息推送\n\n作为后台服务运行，将分析报告和告警实时发送到飞书。\n启动方式: python feishu_bridge.py 或通过 start_bridge.bat\n\"\"\"\nimport json\nimport logging\nimport signal\nimport sys\nimport threading\nimport time\nfrom datetime import datetime\nfrom pathlib import Path\nfrom typing import Any\n\nfrom config import STOCK_DATA_DIR, FEISHU_WEBHOOK_URL\nfrom feishu_sender import (\n    send_feishu_alert,\n    send_feishu_card,\n    send_feishu_message,\n)\n\nlogger = logging.getLogger(\"feishu_bridge\")\n\n# === 可选模块: bridge_nlp, bridge_sender ===\n# 这些模块可能尚未创建，bridge 在缺失时降级运行\n_NLP_AVAILABLE = False\n_SENDER_AVAILABLE = False\n_bridge_nlp = None\n_bridge_sender = None\n\ntry:\n    import bridge_nlp as _bridge_nlp  # type: ignore[import-untyped]\n\n    _NLP_AVAILABLE = True\n    logger.info(\"[桥接] bridge_nlp 已加载\")\nexcept ImportError:\n    logger.info(\"[桥接] bridge_nlp 未找到，NLP 分析功能不可用\")\n\ntry:\n    import bridge_sender as _bridge_sender  # type: ignore[import-untyped]\n\n    _SENDER_AVAILABLE = True\n    logger.info(\"[桥接] bridge_sender 已加载\")\nexcept ImportError:\n    logger.info(\"[桥接] bridge_sender 未找到，使用 feishu_sender 直接发送\")\n\n\n\n... (共 361 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_03_HVmEiULUt8FCvnLaJYiB9768",
+    "content": "\"\"\"\nfeishu_doc — Feishu Document Creator\n\n把分析报告写成飞书文档（docx），不走卡片消息的长度限制。\n通过 IM API 把文档链接推送到群里，点开就是完整内容。\n\n用法:\n    doc = FeishuDoc()\n    url = doc.create_from_markdown(\"今日复盘\", long_markdown_content)\n    doc.send_to_chat(url, \"今日复盘\")\n\"\"\"\nimport json\nimport logging\nimport re\nimport time\nfrom datetime import datetime\n\nimport requests\n\nfrom config import FEISHU_APP_ID, FEISHU_APP_SECRET, FEISHU_BOT_CHAT_ID\nfrom feishu_im_sender import send_card\n\nlogger = logging.getLogger(\"feishu_doc\")\n\n# ── Feishu Open API ──\nBASE_URL = \"https://open.feishu.cn/open-apis\"\nDOCX_URL = f\"{BASE_URL}/docx/v1/documents\"\nIM_MESSAGE_URL = f\"{BASE_URL}/im/v1/messages\"\n\n# ── Block types (飞书服务端API数值枚举) ──\n# 参考: https://open.feishu.cn/document/server-docs/docs/docx-v1/docx-structure\n_BLOCK_TYPE = {\n    \"text\": 2,       # 普通段落 (key=\"text\")\n    \"heading1\": 3, \"heading2\": 4, \"heading3\": 5,\n    \"heading4\": 6, \"heading5\": 7, \"heading6\": 8,\n    \"heading7\": 9, \"heading8\": 10, \"heading9\": 11,\n    \"bullet\": 12, \"ordered\": 13,\n    \"code\": 14, \"quote\": 15,\n    \"divider\": 22,\n}\n\nBATCH_SIZE = 40  # blocks per API call (max 50)\n\n\n# ═══════════════════════════════════════════════════════\n# Token (reuse same cached token from feishu_im_sender)\n# ═══════════════════════════════════════════════════════\n\ndef _get_token() -> str:\n    \"\"\"Get tenant_access_token (reuses cache from feishu_im_sender).\"\"\"\n\n... (共 400 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_04_raaFBPM6flDddDQJum6S2364",
+    "content": "\"\"\"\nFeishu IM API sender — post messages to chats via tenant_access_token.\n\"\"\"\nimport json\nimport logging\nimport threading\nimport time\nfrom typing import Optional\n\nimport requests\n\nfrom config import (\n    FEISHU_APP_ID,\n    FEISHU_APP_SECRET,\n    FEISHU_BOT_CHAT_ID,\n)\n\nlogger = logging.getLogger(\"feishu_im\")\n\nIM_MESSAGE_URL = \"https://open.feishu.cn/open-apis/im/v1/messages\"\nTOKEN_URL = \"https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal\"\nTOKEN_TTL = 7000  # safety margin below real 7200\nREQUEST_TIMEOUT = 15\n\n_lock = threading.Lock()\n_cached_token: str = \"\"\n_token_expiry: float = 0.0\n\n\ndef _get_token() -> str:\n    global _cached_token, _token_expiry\n    now = time.time()\n    if _cached_token and now < _token_expiry:\n        return _cached_token\n    with _lock:\n        if _cached_token and now < _token_expiry:\n            return _cached_token\n        try:\n            r = requests.post(\n                TOKEN_URL,\n                json={\"app_id\": FEISHU_APP_ID, \"app_secret\": FEISHU_APP_SECRET},\n                timeout=REQUEST_TIMEOUT,\n            )\n            r.raise_for_status()\n            data = r.json()\n        except Exception:\n            logger.exception(\"Failed to fetch tenant_access_token\")\n            return \"\"\n        if data.get(\"code\") != 0:\n            logger.error(\"Token API error: %s\", data.get(\"msg\", \"\"))\n\n... (共 161 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_05_KLo7k0zp93YfPjndHUAY7023",
+    "content": "\"\"\"\nFeishu ↔ Claude Code 双向桥接层\n\nInbox:  Bot v2 收到消息 → 写入 feishu_inbox.jsonl\nOutbox: Claude Code 回复 → 写入 feishu_outbox.jsonl → Bot 自动发送\n\n用法:\n  from feishu_inbox import inbox_append, outbox_append, inbox_unread, outbox_flush\n\"\"\"\n\nimport json\nimport logging\nimport threading\nimport time\nfrom datetime import datetime\nfrom pathlib import Path\n\nlogger = logging.getLogger(\"feishu_inbox\")\n\nSTOCK_DATA = Path(\"D:/1989n/stock_data\")\nINBOX_FILE = STOCK_DATA / \"feishu_inbox.jsonl\"\nOUTBOX_FILE = STOCK_DATA / \"feishu_outbox.jsonl\"\nSENT_MARKER = STOCK_DATA / \"feishu_sent.jsonl\"  # 已发送归档\n\n# ── Inbox: Bot → Claude ──────────────────────────────────────\n\ndef inbox_append(chat_id: str, user_text: str, dept: str = \"unknown\",\n                 chat_type: str = \"group\", user_name: str = \"\") -> dict:\n    \"\"\"Bot 收到消息时调用，写入 inbox 供 Claude 读取。\"\"\"\n    entry = {\n        \"ts\": datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\"),\n        \"chat_id\": chat_id,\n        \"chat_type\": chat_type,\n        \"user_name\": user_name,\n        \"dept\": dept,\n        \"text\": user_text,\n        \"status\": \"unread\",\n    }\n    try:\n        with open(INBOX_FILE, \"a\", encoding=\"utf-8\") as f:\n            f.write(json.dumps(entry, ensure_ascii=False) + \"\\n\")\n        logger.info(\"Inbox: [%s] %s\", dept, user_text[:60])\n    except Exception:\n        logger.exception(\"Inbox write failed\")\n    return entry\n\n\ndef inbox_unread() -> list[dict]:\n    \"\"\"Claude Code 读取所有未读消息。\"\"\"\n    if not INBOX_FILE.exists():\n\n... (共 196 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_06_hONK7VqSq3lDNPrePxsV8304",
+    "content": "\"\"\"\n飞书多 Bot 启动器 — 同时运行 3 个 Bot 实例\n每个 Bot 作为独立子进程运行，互不干扰\n\"\"\"\nimport os\nimport subprocess\nimport sys\nimport time\nfrom pathlib import Path\n\nPROJECT_DIR = Path(__file__).parent\nPYTHON = r\"D:\\Python314\\python.exe\"\n\n# 三个 Bot 配置\n# 注：这些凭证来自用户截图的飞书开发者后台，用于多 Bot 并行接收消息\nBOTS = [\n    {\n        \"name\": \"街溜子\",\n        \"env\": {\n            \"FEISHU_APP_ID\": \"cli_a952c17c65f85cb2\",\n            \"FEISHU_APP_SECRET\": \"weklMoClfUCJprDC1wNZUgbfiFRSDmin\",\n            \"FEISHU_ENCRYPT_KEY\": \"\",\n            \"FEISHU_BOT_CHAT_ID\": \"oc_983693a765e4284d1dc7bbeaf56cf1a9\",\n        },\n    },\n    {\n        \"name\": \"海盗船长\",\n        \"env\": {\n            \"FEISHU_APP_ID\": \"cli_a935549489381bc4\",\n            \"FEISHU_APP_SECRET\": \"vaSeTzmLgyuDo5VlRIxvmcaehuqv6dHJ\",\n            \"FEISHU_ENCRYPT_KEY\": \"\",\n            \"FEISHU_BOT_CHAT_ID\": \"oc_983693a765e4284d1dc7bbeaf56cf1a9\",\n        },\n    },\n    {\n        \"name\": \"当前Bot\",\n        \"env\": {\n            # 从 .env 读取默认值，这里留空触发 config.py 的逻辑\n            \"FEISHU_BOT_CHAT_ID\": \"oc_983693a765e4284d1dc7bbeaf56cf1a9\",\n        },\n    },\n]\n\n\ndef main():\n    processes = []\n\n    for bot in BOTS:\n        name = bot[\"name\"]\n        bot_env = os.environ.copy()\n\n... (共 107 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_07_SnHt0ZD1SSeZBj6LsfvK0981",
+    "content": "\"\"\"\nFeishu (Lark) Message Sender\n发送飞书消息 — 基于 IM API (tenant_access_token)，无需 webhook。\n\n支持:\n- Markdown 文本消息\n- 卡片消息 (Card)\n- 紧急告警消息 (红色高优先级)\n\nRate Limit: ~20 条/分钟\n\"\"\"\nimport logging\nimport time\nfrom collections import deque\nfrom datetime import datetime\n\nimport os\n\nfrom feishu_im_sender import send_text as _im_send_text\nfrom feishu_im_sender import send_card as _im_send_card\nfrom config import FEISHU_BOT_CHAT_ID, FEISHU_ROUTES\n\nlogger = logging.getLogger(\"feishu_sender\")\n\n_SEND_ENABLED = os.getenv(\"FEISHU_SEND_ENABLED\", \"false\").lower() in (\"1\", \"true\", \"yes\")\n\n_MAX_MSGS_PER_MINUTE = 15\n_send_timestamps: deque[float] = deque()\n\n\ndef _resolve_chat_id(route_or_id: str = \"\") -> str:\n    \"\"\"返回真实 chat_id：支持路由名（如 'news'）或原始 chat_id\"\"\"\n    if not route_or_id:\n        return FEISHU_BOT_CHAT_ID\n    return FEISHU_ROUTES.get(route_or_id, route_or_id)\n\n\ndef _check_rate_limit() -> None:\n    now = time.time()\n    window_start = now - 60.0\n    while _send_timestamps and _send_timestamps[0] < window_start:\n        _send_timestamps.popleft()\n    if len(_send_timestamps) >= _MAX_MSGS_PER_MINUTE:\n        wait_time = _send_timestamps[0] - window_start + 1.0\n        if wait_time > 0:\n            logger.info(f\"[速率限制] 等待 {wait_time:.1f}s\")\n            time.sleep(wait_time)\n        _send_timestamps.popleft()\n    _send_timestamps.append(now)\n\n\n... (共 137 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_08_glS0meCFzBhBq0HbC4gt2713",
+    "content": "\"\"\"\nFeishu (Lark) Table Sync\n飞书表格同步 - 通过 Feishu Sheets API 同步持仓/报告/新闻到飞书表格\n\n使用飞书开放平台 API:\n- Tenant Access Token (2小时过期，自动刷新)\n- Sheets v2 API (https://open.feishu.cn/open-apis/sheets/v2/...)\n\n需要环境变量:\n- FEISHU_APP_ID: 飞书应用 ID\n- FEISHU_APP_SECRET: 飞书应用密钥\n\"\"\"\nimport json\nimport logging\nimport time\nfrom datetime import datetime\nfrom pathlib import Path\nfrom typing import Any\n\nimport requests\n\nfrom config import (\n    FEISHU_APP_ID,\n    FEISHU_APP_SECRET,\n    FEISHU_NEWS_SHEET_ID,\n    FEISHU_PORTFOLIO_SHEET_ID,\n    FEISHU_REPORT_SHEET_ID,\n    FEISHU_SPREADSHEET_TOKEN,\n    HEADERS,\n    PORTFOLIO_FILE,\n    STOCK_DATA_DIR,\n)\n\nlogger = logging.getLogger(\"feishu_table_sync\")\n\n# API 端点\n_TOKEN_URL = (\n    \"https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal\"\n)\n_SHEETS_BASE = \"https://open.feishu.cn/open-apis/sheets/v2\"\n_SPREADSHEETS_URL = f\"{_SHEETS_BASE}/spreadsheets\"\n\n# === Token 管理 ===\n_token_cache: dict[str, Any] = {\n    \"token\": \"\",\n    \"expires_at\": 0.0,\n}\n_TOKEN_LOCK = __import__(\"threading\").Lock()\n\n\n\n... (共 554 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_09_Y6PZWbEECdO358qap0DD0537",
+    "content": "\"\"\"\nFeishu Event Subscription handler — AES-256-CBC decryption, URL verification,\nand message event parsing.\n\"\"\"\nimport base64\nimport hashlib\nimport json\nimport logging\nfrom dataclasses import dataclass\nfrom typing import Optional\n\nfrom config import FEISHU_ENCRYPT_KEY\n\nlogger = logging.getLogger(\"feishu_event\")\n\n\ndef _aes_key() -> bytes:\n    return hashlib.sha256(FEISHU_ENCRYPT_KEY.encode(\"utf-8\")).digest()\n\n\ndef decrypt_event(encrypt_str: str) -> dict:\n    \"\"\"Decrypt a Feishu event payload (AES-256-CBC, PKCS7 padding).\n\n    Ciphertext = base64( IV(16 bytes) + encrypted_data )\n    Key = SHA-256(encrypt_key)\n    \"\"\"\n    try:\n        raw = base64.b64decode(encrypt_str)\n    except Exception:\n        logger.exception(\"Base64 decode failed\")\n        return {}\n    if len(raw) < 17:\n        logger.error(\"Ciphertext too short: %d bytes\", len(raw))\n        return {}\n    iv = raw[:16]\n    ciphertext = raw[16:]\n\n    try:\n        from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes\n        cipher = Cipher(algorithms.AES(_aes_key()), modes.CBC(iv))\n        decryptor = cipher.decryptor()\n        padded = decryptor.update(ciphertext) + decryptor.finalize()\n    except ImportError:\n        # Pure-Python fallback — only works if pycryptodome is available,\n        # otherwise the user must pip install cryptography\n        from Crypto.Cipher import AES\n        cipher = AES.new(_aes_key(), AES.MODE_CBC, iv=iv)\n        padded = cipher.decrypt(ciphertext)\n    except Exception:\n        logger.exception(\"AES decrypt failed\")\n\n... (共 148 行，仅显示前 50)"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_10_P1dnJH0WXT0lZqIjkNMc8199",
+    "content": "\"\"\"\n飞书 Claude Agent — Tool-calling 引擎\n通过 OpenAI SDK 调 DeepSeek，支持代码执行 + 本地数据读取。\n\"\"\"\nimport json\nimport logging\nimport os\nimport subprocess\nimport sys\nimport textwrap\nimport time\nimport uuid\nfrom pathlib import Path\nfrom typing import Any\n\nfrom openai import OpenAI\n\nfrom config import DEEPSEEK_API_KEY, PROJECT_DIR\n\nlogger = logging.getLogger(\"claude_agent\")\n\n# ── API 配置 ──────────────────────────────────────────────\nDEEPSEEK_BASE_URL = \"https://api.deepseek.com/v1\"\nMODEL = \"deepseek-chat\"\nCODE_TIMEOUT = 60  # Python 代码执行超时（秒）\nMAX_HISTORY = 30   # 每会话保留最大消息数\nMAX_TOOL_OPS = 25  # 单次处理最大工具调用轮次\n\nALLOWED_DIRS = [\n    PROJECT_DIR.resolve(),\n    Path(\"D:/1989n/stock_data\").resolve(),\n    Path(\"D:/1989n/.claude\").resolve(),\n]\n\nCONVERSATIONS_DIR = PROJECT_DIR / \"conversations\"\nCONVERSATIONS_DIR.mkdir(exist_ok=True)\n\n# ── API Key 获取（settings.json 回退）────────────────────\ndef _resolve_api_key() -> str:\n    \"\"\"获取 DeepSeek API Key。优先用 settings.json 中 Claude 在用的 key。\"\"\"\n    candidates = [\n        PROJECT_DIR.parent / \".claude\" / \"settings.json\",\n        PROJECT_DIR.parent / \".claude\" / \"settings.local.json\",\n    ]\n    for p in candidates:\n        try:\n            if p.exists():\n                cfg = json.loads(p.read_text(encoding=\"utf-8\"))\n                env = cfg.get(\"env\", {})\n                for k in (\"ANTHROPIC_AUTH_TOKEN\", \"DEEPSEEK_API_KEY\"):\n\n... (共 494 行，仅显示前 50)"
+  },
+  {
+    "role": "assistant",
+    "content": "现在让我看看配置文件中的飞书相关设置。",
+    "tool_calls": [
+      {
+        "id": "call_00_LtRAhXlnv1UZC3gPNYJy1393",
+        "type": "function",
+        "function": {
+          "name": "read_file",
+          "arguments": "{\"path\": \"config.py\", \"max_lines\": 80}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_00_LtRAhXlnv1UZC3gPNYJy1393",
+    "content": "\"\"\"\n系统配置 - 所有路径、API密钥、常量定义\n\"\"\"\nimport os\nfrom pathlib import Path\nfrom dotenv import load_dotenv\n\nload_dotenv(Path(__file__).parent / \".env\")\n\n# Apply DNS fix before any network calls\ntry:\n    from dns_fix import apply as _apply_dns_fix\n    _apply_dns_fix()\nexcept Exception:\n    pass\n\n# Apply global requests timeout patch (覆盖 akshare 等不设 timeout 的调用)\ntry:\n    from _patch_timeout import apply as _apply_timeout_patch\n    _apply_timeout_patch()\nexcept Exception:\n    pass\n\n# === 路径配置 ===\nPROJECT_DIR = Path(__file__).parent\nSTOCK_DATA_DIR = Path(os.getenv(\"STOCK_DATA_DIR\", \"D:/1989n/stock_data\"))\nSCREENSHOT_DIR = Path(os.getenv(\"SCREENSHOT_DIR\", \"D:/1989n/screenshots\"))\nDATABASE_PATH = os.getenv(\"DATABASE_PATH\", str(STOCK_DATA_DIR / \"stock.db\"))\nLOG_DIR = PROJECT_DIR / \"logs\"\nOUTPUT_DIR = PROJECT_DIR / \"output\"\n\n# === API 配置 ===\nFEISHU_WEBHOOK_URL = os.getenv(\"FEISHU_WEBHOOK_URL\", \"\")\nFEISHU_APP_ID = os.getenv(\"FEISHU_APP_ID\", \"\")\nFEISHU_APP_SECRET = os.getenv(\"FEISHU_APP_SECRET\", \"\")\nSTOCKAPI_TOKEN = os.getenv(\"STOCKAPI_TOKEN\", \"\")\nDASHSCOPE_API_KEY = os.getenv(\"DASHSCOPE_API_KEY\", \"\")\nDASHSCOPE_API_KEY_RESEARCH = os.getenv(\"DASHSCOPE_API_KEY_RESEARCH\", \"\")\nDASHSCOPE_API_KEY_PARALLEL = os.getenv(\"DASHSCOPE_API_KEY_PARALLEL\", \"\")\nDEEPSEEK_API_KEY = os.getenv(\"DEEPSEEK_API_KEY\", \"\")\nDEEPSEEK_API_KEY_RESEARCH = os.getenv(\"DEEPSEEK_API_KEY_RESEARCH\", \"\")\nDEEPSEEK_API_KEY_PARALLEL = os.getenv(\"DEEPSEEK_API_KEY_PARALLEL\", \"\")\nDEEPSEEK_API_KEY_INTRADAY = os.getenv(\"DEEPSEEK_API_KEY_INTRADAY\", \"\")\nDEEPSEEK_API_KEY_REVIEW = os.getenv(\"DEEPSEEK_API_KEY_REVIEW\", \"\")\nDEEPSEEK_API_KEY_NEWS = os.getenv(\"DEEPSEEK_API_KEY_NEWS\", \"\")\nFEISHU_BOT_PORT = int(os.getenv(\"FEISHU_BOT_PORT\", \"19899\"))\nFEISHU_BOT_CHAT_ID = os.getenv(\"FEISHU_BOT_CHAT_ID\", \"oc_983693a765e4284d1dc7bbeaf56cf1a9\")\nFEISHU_ENCRYPT_KEY = os.getenv(\"FEISHU_ENCRYPT_KEY\", \"\")\n\n# === 飞书表格配置 ===\nFEISHU_SPREADSHEET_TOKEN = os.getenv(\"FEISHU_SPREADSHEET_TOKEN\", \"\")\nFEISHU_PORTFOLIO_SHEET_ID = os.getenv(\"FEISHU_PORTFOLIO_SHEET_ID\", \"\")\nFEISHU_REPORT_SHEET_ID = os.getenv(\"FEISHU_REPORT_SHEET_ID\", \"\")\nFEISHU_NEWS_SHEET_ID = os.getenv(\"FEISHU_NEWS_SHEET_ID\", \"\")\n\n# === 数据源URL ===\nCLS_NEWS_FLASH_URL = \"https://www.cls.cn/api/sw?app=CailianpressWeb&os=web&sv=8.4.6\"\nEASTMONEY_QUOTE_URL = \"https://push2.eastmoney.com/api/qt/stock/get\"\nTENCENT_KLINE_URL = \"https://web.ifzq.gtimg.cn/appstock/app/kline/mkline\"\nTHS_HOT_STOCKS_URL = \"https://www.10jqka.com.cn/api/hotstock\"\nSINA_QUOTE_URL = \"https://hq.sinajs.cn/list=\"\nSINA_NEWS_ROLL_URL = \"https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2516&knum=50\"\nEASTMONEY_NEWS_URL = \"https://push2.eastmoney.com/api/qt/ulist.np/get\"\nTHS_NEWS_URL = \"https://news.10jqka.com.cn/tapp/news/push/stock\"\nWALLSTREETCN_LIVES_URL = \"https://api-prod.wallstreetcn.com/apiv1/content/lives\"\nXUEQIU_TIMELINE_URL = \"https://xueqiu.com/v4/statuses/public_timeline_by_category.json\"\n\n# === 请求头 ===\nHEADERS = {\n    \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \"\n                  \"(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\",\n    \"Accept\": \"application/json, text/plain, */*\",\n    \"Accept-Language\": \"zh-CN,zh;q=0.9,en;q=0.8\",\n}\n\n# === 日志配置 ===\nLOG_LEVEL = os.getenv(\"LOG_LEVEL\", \"INFO\")\nLOG_FORMAT = \"%(asctime)s [%(levelname)s] %(name)s: %(message)s\"\nLOG_DATE_FORMAT = \"%Y-%m-%d %H:%M:%S\"\n\n\n... (共 110 行，仅显示前 80)"
+  },
+  {
+    "role": "assistant",
+    "content": "💬 问答\n\n好的，我来给你梳理一下这个项目里**飞书**相关的完整体系。\n\n---\n\n## 📋 飞书模块总览\n\n这个项目深度集成了飞书开放平台，构建了一套 **\"多Bot消息收发 + 文档推送 + 表格同步 + 事件处理\"** 的完整体系。以下是各模块的功能：\n\n---\n\n### 🤖 1. 飞书 Bot（消息机器人）\n\n| 文件 | 功能 |\n|------|------|\n| **`feishu_bot.py`** | v1 版 Bot，WebSocket 长连接，支持多 Bot 模式（primary/passive），回复自动分类（行情/持仓/风险/问答），卡片消息彩色展示 |\n| **`feishu_bot_v2.py`** | v2 版 Bot，**部门路由**（6个部门 + AI fallback），@mention 过滤，指数退避自动重连，健康监控 |\n| **`feishu_multi_bot.py`** | 多 Bot 启动器，同时运行 **3 个 Bot 实例**（\"街溜子\"、\"海盗船长\"、\"当前Bot\"），各自独立进程 |\n\n**3个Bot的分工：**\n- **街溜子** — `cli_a952c17c65f85cb2`\n- **海盗船长** — `cli_a935549489381bc4`\n- **当前Bot** — 从 `.env` 读取默认配置\n\n---\n\n### 📨 2. 消息发送层\n\n| 文件 | 功能 |\n|------|------|\n| **`feishu_im_sender.py`** | 底层 IM API 封装，通过 `tenant_access_token` 发送文本/卡片消息，带 token 缓存（7000s 刷新） |\n| **`feishu_sender.py`** | 上层封装，支持路由名发送（如 `news`），**速率限制**（15条/分钟），紧急告警（红色高优先级） |\n| **`feishu_bridge.py`** | 桥接服务，后台运行，将 NLP 分析报告和告警实时推送到飞书 |\n\n---\n\n### 📄 3. 文档与表格\n\n| 文件 | 功能 |\n|------|------|\n| **`feishu_doc.py`** | 飞书文档创建器，把 Markdown 分析报告转为飞书 Docx 文档，支持标题/列表/代码块/引用等格式，通过 IM API 推送文档链接到群 |\n| **`feishu_table_sync.py`** | 飞书表格同步，通过 Sheets API 将 **持仓/报告/新闻** 数据同步到飞书电子表格，自动刷新 Token |\n\n---\n\n### 🔄 4. 双向通信（Inbox/Outbox）\n\n| 文件 | 功能 |\n|------|------|\n| **`feishu_inbox.py`** | **Bot ↔ Claude Code 双向桥接**：Bot 收到的消息写入 `feishu_inbox.jsonl`，Claude Code 的回复写入 `feishu_outbox.jsonl`，Bot 自动发送 |\n\n---\n\n### 🧠 5. AI 引擎\n\n| 文件 | 功能 |\n|------|------|\n| **`feishu_claude_agent.py`** | Tool-calling 引擎，通过 DeepSeek API 驱动，支持代码执行 + 本地数据读取，处理飞书消息中的复杂查询 |\n\n---\n\n### 🔐 6. 安全与事件\n\n| 文件 | 功能 |\n|------|------|\n| **`feishu_event_handler.py`** | 飞书事件订阅处理，AES-256-CBC 解密、URL 验证、消息事件解析 |\n\n---\n\n### ⚙️ 配置（config.py）\n\n飞书相关环境变量：\n```\nFEISHU_APP_ID          — 飞书应用 ID\nFEISHU_APP_SECRET      — 飞书应用密钥\nFEISHU_ENCRYPT_KEY     — 事件订阅加密密钥\nFEISHU_BOT_CHAT_ID     — 默认群聊 ID（oc_983693a765e4284d1dc7bbeaf56cf1a9）\nFEISHU_BOT_PORT        — Bot 端口（19899）\nFEISHU_SPREADSHEET_TOKEN — 表格 Token\nFEISHU_PORTFOLIO_SHEET_ID — 持仓表 ID\nFEISHU_REPORT_SHEET_ID    — 报告表 ID\nFEISHU_NEWS_SHEET_ID      — 新闻表 ID\n```\n\n---\n\n### 🔄 工作流程\n\n```\n用户发消息 → 飞书群\n    ↓\nfeishu_bot_v2.py (WebSocket 接收)\n    ↓\n部门路由 (dept_handlers) → 6个部门分类\n    ↓\nfeishu_inbox.py (写入 inbox.jsonl)\n    ↓\nfeishu_claude_agent.py (DeepSeek AI 处理)\n    ↓\nfeishu_inbox.py (写入 outbox.jsonl)\n    ↓\nfeishu_im_sender.py (发送卡片/文本消息回群)\n```\n\n同时，**定时任务**通过 `feishu_bridge.py` / `feishu_sender.py` 推送行情分析、持仓报告、风险提醒等到群里；**长报告**通过 `feishu_doc.py` 转为飞书文档链接；**数据同步**通过 `feishu_table_sync.py` 写入飞书表格。\n\n---\n\n有什么具体想了解的？比如某个 Bot 的详细逻辑，或者想查当前飞书消息的收发状态？"
+  }
+]

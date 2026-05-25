@@ -220,14 +220,13 @@ def save_videos_to_db(vv_id, videos):
 
     conn.commit()
 
-    # 更新关注列表
-    if new_count > 0:
-        c.execute("""
-            UPDATE vv_follows SET
-                last_fetch_at = ?,
-                total_videos = total_videos + ?
-            WHERE id = ?
-        """, (datetime.now(TZ_SH).isoformat(), new_count, vv_id))
+    # 更新关注列表（无论是否有新视频都更新抓取时间）
+    c.execute("""
+        UPDATE vv_follows SET
+            last_fetch_at = ?,
+            total_videos = total_videos + ?
+        WHERE id = ?
+    """, (datetime.now(TZ_SH).isoformat(), new_count, vv_id))
 
     conn.commit()
     conn.close()

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "description": "数据通道健康状态",
+  "files": ["channel_health_latest.json"],
+  "required_fields": ["sina_stock", "tencent", "eastmoney"],
+  "field_types": {
+    "sina_stock": "bool",
+    "tencent": "bool",
+    "eastmoney": "bool",
+    "healthy": "bool"
+  },
+  "freshness_hours": 6
+}

@@ -1,0 +1,66 @@
+{
+  "time": "2026-05-25 13:15:02",
+  "indices": {},
+  "breadth": {
+    "total": 0,
+    "up": 0,
+    "down": 0,
+    "flat": 0,
+    "limit_up": 0,
+    "limit_down": 0
+  },
+  "catalysts": [],
+  "holdings": [
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "price": 69.78,
+      "chg_pct": 9.99,
+      "pnl_pct": 0,
+      "amount": 113.4692010911,
+      "turnover": 11.24,
+      "vol_ratio": 1.65
+    },
+    {
+      "code": "300136",
+      "name": "信维通信",
+      "price": 117.1,
+      "chg_pct": -1.58,
+      "pnl_pct": 8.42,
+      "amount": 104.0331128074,
+      "turnover": 10.59,
+      "vol_ratio": 1.43
+    },
+    {
+      "code": "600498",
+      "name": "烽火通信",
+      "price": 53.78,
+      "chg_pct": -2.48,
+      "pnl_pct": -5.87,
+      "amount": 27.46401329,
+      "turnover": 4.0,
+      "vol_ratio": 0.95
+    },
+    {
+      "code": "002077",
+      "name": "大港股份",
+      "price": 18.77,
+      "chg_pct": 4.51,
+      "pnl_pct": 0.46,
+      "amount": 7.4924905488,
+      "turnover": 7.01,
+      "vol_ratio": 1.5
+    },
+    {
+      "code": "300058",
+      "name": "蓝色光标",
+      "price": 16.96,
+      "chg_pct": -0.88,
+      "pnl_pct": -7.02,
+      "amount": 39.7448254205,
+      "turnover": 6.72,
+      "vol_ratio": 1.04
+    }
+  ],
+  "news_count": 37
+}

@@ -119,6 +119,54 @@ def save_transcript(aweme_id, transcript_text, transcript_path):
     conn.close()
 
 
+def _download_with_retry(video_url, page, aweme_id, max_retries=3):
+    """带重试的视频下载，curl timeout / DNS / 403 都自动重试"""
+    from curl_cffi import requests as curl_requests
+
+    last_error = ""
+    for attempt in range(1, max_retries + 1):
+        try:
+            if attempt > 1:
+                print(f"  重试 {attempt}/{max_retries}...")
+                time.sleep(2 * attempt)  # 渐进等待
+
+            resp = curl_requests.get(
+                video_url,
+                headers={"Referer": "https://www.douyin.com/"},
+                impersonate="chrome131",
+                timeout=300 + 60 * attempt,
+            )
+
+            if resp.status_code == 403:
+                print(f"  URL过期(403)，重新获取...")
+                video_url = asyncio.run(get_video_url_api(page, aweme_id))
+                if not video_url:
+                    continue
+                resp = curl_requests.get(
+                    video_url,
+                    headers={"Referer": "https://www.douyin.com/"},
+                    impersonate="chrome131",
+                    timeout=300 + 60 * attempt,
+                )
+
+            if resp.status_code != 200:
+                last_error = f"HTTP {resp.status_code}"
+                continue
+
+            return resp.content, video_url  # 成功
+
+        except Exception as e:
+            last_error = str(e)
+            err_str = str(e)
+            # curl timeout / DNS 错误可重试，其他直接抛
+            if "timed out" not in err_str and "Could not resolve host" not in err_str \
+               and "end of response" not in err_str and "Connection refused" not in err_str:
+                break
+            continue
+
+    raise RuntimeError(f"下载失败（{max_retries}次重试）: {last_error}")
+
+
 def mark_failed(aweme_id, error_msg):
     """标记转录失败"""
     conn = sqlite3.connect(DB_PATH)
@@ -249,42 +297,11 @@ async def transcribe_batch(account=None, limit=None, force=False, priority=False
                 print(f"  下载视频...")
                 video_file = AUDIO_DIR / f"{aweme_id}.mp4"
                 try:
-                    from curl_cffi import requests as curl_requests
-                    resp = curl_requests.get(
-                        video_url,
-                        headers={"Referer": "https://www.douyin.com/"},
-                        impersonate="chrome131",
-                        timeout=300
-                    )
-
-                    if resp.status_code == 403:
-                        # URL过期，重新获取
-                        print(f"  URL过期，重新获取...")
-                        video_url = await get_video_url_api(page, aweme_id)
-                        if not video_url:
-                            print(f"  -> 重新获取URL也失败")
-                            mark_failed(aweme_id, "无法获取视频URL")
-                            failed += 1
-                            continue
-                        resp = curl_requests.get(
-                            video_url,
-                            headers={"Referer": "https://www.douyin.com/"},
-                            impersonate="chrome131",
-                            timeout=300
-                        )
-
-                    if resp.status_code != 200:
-                        print(f"  -> 下载失败 (HTTP {resp.status_code})")
-                        mark_failed(aweme_id, f"CDN下载失败 HTTP {resp.status_code}")
-                        failed += 1
-                        continue
-
-                    video_bytes = resp.content
+                    video_bytes, video_url = _download_with_retry(video_url, page, aweme_id)
                     print(f"  下载完成: {len(video_bytes)/1024/1024:.1f}MB")
                     video_file.write_bytes(video_bytes)
-
                 except Exception as e:
-                    print(f"  -> 下载异常: {e}")
+                    print(f"  -> 下载失败 ({e})")
                     mark_failed(aweme_id, str(e))
                     failed += 1
                     continue

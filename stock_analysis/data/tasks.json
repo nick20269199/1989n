@@ -472,8 +472,27 @@
       ]
     },
     {
+      "id": "vv_daily_afternoon",
+      "name": "StockAnalysis_VVDaily",
+      "description": "大V雷达每日管线 (转录+分析+日报)",
+      "enabled": true,
+      "type": "win_task",
+      "command": "vv_daily.py",
+      "args": [],
+      "cron": "10 13 * * 1-5",
+      "log_path": "stock_data\\vv_daily.log",
+      "dept": "front-office",
+      "bat_style": "simple",
+      "outputs": [
+        {
+          "path": "stock_data/vv_radar.db",
+          "max_hours": 24,
+          "severity": "low"
+        }
+      ]
+    },
+    {
       "id": "forecast_closer",
-      "name": "StockForecastCloser",
       "description": "预测追踪闭环",
       "enabled": true,
       "type": "win_task",
@@ -527,6 +546,15 @@
             "--report"
           ],
           "log_path": "stock_data\\forecast_closer.log"
+        },
+        {
+          "command": "vv_daily.py",
+          "args": [
+            "--no-push",
+            "--limit",
+            "8"
+          ],
+          "log_path": "stock_data\\vv_daily.log"
         }
       ],
       "cron": "0 22 * * *",
@@ -675,7 +703,7 @@
         "sector_collect"
       ],
       "cron": "20 15 * * 1-5",
-      "log_path": null,
+      "log_path": "stock_data\\logs\\sector_collect.log",
       "dept": "front-office",
       "bat_style": "simple",
       "outputs": [

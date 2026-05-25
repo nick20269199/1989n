@@ -389,7 +389,7 @@ def detect_topics(news_items: list[dict]) -> list[dict]:
     # 每条新闻匹配主题
     topic_items = defaultdict(list)
     for item in news_items:
-        title = item.get("title", "") + " " + item.get("content", "")
+        title = (item.get("title") or "") + " " + (item.get("content") or "")
         matched = False
         for topic, keywords in topic_keywords.items():
             if any(kw in title for kw in keywords):

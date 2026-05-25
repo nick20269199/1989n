@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "description": "哨兵状态（任务健康监控）",
+  "files": ["sentinel_status.json"],
+  "required_fields": ["timestamp", "win_tasks", "cron_tasks"],
+  "field_types": {
+    "timestamp": "string",
+    "win_tasks": "dict",
+    "cron_tasks": "dict",
+    "data_files": "dict",
+    "actions": "list"
+  },
+  "freshness_hours": 48
+}

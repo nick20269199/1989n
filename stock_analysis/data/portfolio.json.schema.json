@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "description": "持仓数据",
+  "files": ["portfolio.json"],
+  "required_fields": ["holdings"],
+  "field_types": {
+    "holdings": "list"
+  },
+  "list_item_fields": {
+    "required_fields": ["code", "name", "shares"],
+    "field_types": {
+      "code": "string",
+      "name": "string",
+      "shares": "number",
+      "cost": "number",
+      "sector": "string"
+    },
+    "non_null_fields": ["code", "name", "shares"]
+  },
+  "min_rows": 1,
+  "freshness_hours": 48
+}

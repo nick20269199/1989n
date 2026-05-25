@@ -406,29 +406,45 @@ def build_market_prompt(
         lines.append("")
 
     # ── 五C、情报部侦察 + 侦查日报 ──
-    if recon_report or recon_extra:
+    if recon_report:
         lines.append("## 情报部侦察 + 侦查日报")
-        if recon_report:
-            lines.append(recon_report)
-        if recon_extra:
-            if recon_report:
-                lines.append("")
-            lines.append(recon_extra)
+        lines.append(recon_report)
         lines.append("")
 
     # ── 六、新闻列表 ──
     lines.append("## 六、重要新闻")
     for i, item in enumerate(news_data["items"], 1):
         title = item.get("title", "")
-        content = item.get("content", "")[:150]
+        content = item.get("content", "") or ""
+        importance = item.get("importance", 1)
+        category_group = item.get("category_group", "")
         stocks = item.get("matched_stocks", [])
         sstr = ", ".join(f"{s['name']}({s['code']})" for s in stocks[:4]) if stocks else "无"
-        lines.append(f"{i}. **{title}**")
-        if content:
-            lines.append(f"   {content}")
-        lines.append(f"   标的: {sstr}")
+
+        # 分类标签
+        tag = f"[{category_group}]" if category_group and category_group != "industry" else ""
+
+        line = f"{i}. {tag}[重要度:{importance}] **{title}**"
+        lines.append(line)
+
+        # 正文: 持仓相关/重要性高 → 全文; 其他 → 精简
+        matched_sectors = item.get("matched_sectors") or []
+        if matched_sectors or importance >= 5:
+            show = content[:600] if content else ""
+        elif importance >= 3:
+            show = content[:200] if content else ""
+        else:
+            show = content[:80] if content else ""
+
+        if show:
+            lines.append(f"   {show}")
+        if matched_sectors and len(matched_sectors) <= 5:
+            lines.append(f"   关联持仓: {' '.join(matched_sectors)}")
+        else:
+            lines.append(f"   标的: {sstr}")
         if i >= 25:
-            lines.append(f"   ...共{news_data['total']}条，仅显示前25条")
+            total = news_data.get("total", len(news_data["items"]))
+            lines.append(f"   ...共{total}条，仅显示前25条")
             break
     lines.append("")
 
@@ -583,7 +599,7 @@ def main():
     )
 
     system_prompt = f"""你是专业 A 股盘前分析师。你的核心能力是：
-1. **刷选重要消息** — 19条新闻里只有3-5条真正影响今日盘面，甄别出来
+1. **刷选重要消息** — 大量新闻里只有3-5条真正影响今日盘面，甄别出来
 2. **板块温度判断** — 结合板块涨幅排名+资金流向+竞价数据，判断今日主线
 3. **持仓映射** — 8只持仓中哪些受益/受损于今日板块格局
 4. **给出可操作判断** — 不只是罗列数据，要给出今日态度
