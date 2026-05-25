@@ -302,6 +302,50 @@ def generate_brief(cycle: dict, alerts: list, results: list) -> str:
     return "\n".join(lines)
 
 
+def check_and_execute(cycle: dict) -> list[dict]:
+    """检查所有持仓并执行止损（如果触发）。"""
+    from stop_loss_executor import check_all_positions
+
+    holdings = []
+    for h in PORTFOLIO:
+        holdings.append({
+            "code": h["code"], "name": h["name"],
+            "shares": h["shares"], "cost": h["cost"],
+            "stop": h["stop"],
+        })
+
+    # 读取当前价格（优先从最新盘中分析）
+    prices = {}
+    reports = sorted(Path(__file__).parent.parent.glob("stock_data/analysis_30min_*.json"), reverse=True)
+    if reports:
+        try:
+            data = json.loads(reports[0].read_text(encoding="utf-8"))
+            for h in data.get("holdings", []):
+                prices[h["code"]] = h.get("price", 0)
+        except Exception:
+            pass
+
+    if not prices:
+        for h in holdings:
+            prices[h["code"]] = h["cost"]
+
+    stage = cycle.get("stage", "主升")
+    results = check_all_positions(holdings, prices, stage)
+
+    executed = [r for r in results if r["status"] == "executed"]
+    blocked = [r for r in results if r["status"] == "blocked"]
+    if executed:
+        print(f"  自动止损: {len(executed)} 单已执行")
+        for r in executed:
+            o = r.get("orders", [{}])[0]
+            print(f"    {o.get('code','')} {o.get('quantity',0)}股@{o.get('price',0)}")
+    if blocked:
+        print(f"  止损拦截: {len(blocked)} 单被安全护栏拦截")
+        for r in blocked:
+            print(f"    {r['reason'][:60]}")
+    return results
+
+
 def main():
     cycle = judge_cycle_stage()
     alerts = get_alerts()

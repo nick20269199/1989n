@@ -69,6 +69,9 @@ Register-SimpleTask -Name 'StockAnalysis_DecisionBacktest' -ScriptPath 'D:\1989n
 # 决策梦境推演 — 专家权重动态调整
 Register-SimpleTask -Name 'StockAnalysis_Dreamer' -ScriptPath 'D:\1989n\stock_analysis\run_dreamer.bat' -Schedule 'WEEKLY' -StartTime '17:00' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
+# 预测追踪闭环
+Register-SimpleTask -Name 'StockForecastCloser' -ScriptPath 'D:\1989n\stock_analysis\run_forecast_closer.bat' -Schedule 'WEEKLY' -StartTime '17:05' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
+
 # 晚间总结 + 大V雷达 + 预测闭环
 Register-SimpleTask -Name 'StockAnalysis_Evening' -ScriptPath 'D:\1989n\stock_analysis\run_evening.bat' -Schedule 'DAILY' -StartTime '22:00'
 
@@ -168,6 +171,7 @@ $checkNames = @(
     'StockAnalysis_NightlyPlan',
     'StockAnalysis_DecisionBacktest',
     'StockAnalysis_Dreamer',
+    'StockForecastCloser',
     'StockAnalysis_Evening',
     'StockAnalysis_Overnight',
     'Cognitive_MorningBrief',

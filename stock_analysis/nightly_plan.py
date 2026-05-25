@@ -19,18 +19,7 @@ os.makedirs(PLAN_DIR, exist_ok=True)
 # ============================================================
 # 持仓 (与 CLAUDE.md + position_manager.py 同步)
 # ============================================================
-HOLDINGS = [
-    {"code": "002156", "name": "通富微电", "qty": 400, "cost": -1.032, "sector": "半导体封测",
-     "buy_date": "2026-04-27", "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
-    {"code": "300136", "name": "信维通信", "qty": 500, "cost": 108.006, "sector": "消费电子/射频",
-     "buy_date": "2026-05-18", "first_buy": "2026-05-18", "latest_buy": "2026-05-22"},
-    {"code": "600498", "name": "烽火通信", "qty": 800, "cost": 57.132, "sector": "通信设备",
-     "buy_date": "2026-05-20", "first_buy": "2026-05-20", "latest_buy": "2026-05-22"},
-    {"code": "002077", "name": "大港股份", "qty": 2500, "cost": 18.684, "sector": "半导体/EDA",
-     "buy_date": "2026-05-21", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
-    {"code": "300058", "name": "蓝色光标", "qty": 800, "cost": 18.24, "sector": "AI营销/出海",
-     "buy_date": "2026-05-21", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
-]
+HOLDINGS = []  # 由 load_portfolio_holdings() 从 portfolio.json 动态加载，此处仅作空后备
 PORTFOLIO_JSON = os.path.join(os.path.dirname(__file__), "data", "portfolio.json")
 
 
@@ -494,6 +483,35 @@ def generate_full_plan():
                 pass
 
         pos_plan = build_position_plan(h, close, calendar.get(today_str, {}), hold_days)
+
+        # 止损执行检查: 如果当前价接近或触发硬止损 → 标记紧急
+        hard_stop = pos_plan["levels"]["hard_stop"]
+        if close <= hard_stop:
+            pos_plan["priority"] = "紧急"
+            pos_plan["scenarios"].append({
+                "name": "止损执行",
+                "trigger": f"现价{close:.2f} ≤ 硬止损{hard_stop:.2f}",
+                "action": f"开盘即市价卖出{h['qty']}股，不等待反弹",
+            })
+            try:
+                from stop_loss_executor import stop_loss_no_reason
+                sl_result = stop_loss_no_reason(
+                    {"code": code, "name": name, "shares": h["qty"],
+                     "cost": h["cost"], "stop": hard_stop},
+                    close, cycle_stage=digest.get("cycle_stage", {}).get("stage", ""),
+                    recent_volume=-1,
+                )
+                if sl_result["status"] == "blocked":
+                    for c in sl_result.get("safety_checks", []):
+                        if not c["passed"]:
+                            pos_plan["scenarios"].append({
+                                "name": "止损拦截",
+                                "trigger": c["gate"],
+                                "action": c["detail"],
+                            })
+            except Exception as e:
+                print(f"  ⚠ 止损执行检查失败: {e}")
+
         positions_plan.append(pos_plan)
 
         if pos_plan["priority"] == "紧急":

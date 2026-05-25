@@ -302,6 +302,12 @@
       "file": "schemas/sentinel_status.json.schema.json",
       "status": "pending",
       "size_kb": 0.3
+    },
+    {
+      "date": "2026-05-25",
+      "file": "git_push.log",
+      "status": "pending",
+      "size_kb": 577.2
     }
   ],
   "last_distilled": null

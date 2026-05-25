@@ -1,4 +1,4 @@
-# 定时任务一览 | 2026-05-25 15:31
+# 定时任务一览 | 2026-05-25 15:47
 
 Python: `D:\Python314\python`
 工作目录: `D:\1989n\stock_analysis`
@@ -27,7 +27,7 @@ Python: `D:\Python314\python`
 | StockAnalysis_NightlyPlan | 隔夜交易计划生成 | 工作日 15:40 | `nightly_plan.py` |
 | StockAnalysis_DecisionBacktest | 决策 T+5 定时回测 | 工作日 16:30 | `daily_task.py` |
 | StockAnalysis_Dreamer | 决策梦境推演 — 专家权重动态调整 | 工作日 17:00 | `experts/dreamer.py` |
-| forecast_closer | 预测追踪闭环 | 工作日 17:05 | `forecast_closer.py` |
+| StockForecastCloser | 预测追踪闭环 | 工作日 17:05 | `forecast_closer.py` |
 | StockAnalysis_Evening | 晚间总结 + 大V雷达 + 预测闭环 | 22:00 | `vv_radar.py` (+3步) |
 | StockAnalysis_Overnight | 隔夜分析 (美股+次日展望) | 工作日 23:37 | `daily_task.py` |
 | StockAnalysis_MorningBrief ⛔ | 盘前晨报 v1 (旧版) | 工作日 08:27 | `morning_brief.py` |
@@ -76,4 +76,4 @@ Python: `D:\Python314\python`
 | weekly_audit_agent | 周审计 (未注册定时任务) | 手动执行 | `weekly_audit_agent.py` |
 
 ---
-*自动生成于 2026-05-25 15:31 | 修改 tasks.json 后重新运行 `python tools/generate_task_bats.py`*
+*自动生成于 2026-05-25 15:47 | 修改 tasks.json 后重新运行 `python tools/generate_task_bats.py`*

@@ -440,7 +440,7 @@
       "cron": "35 9 * * *",
       "log_path": "stock_data\\vv_radar.log",
       "dept": "front-office",
-      "bat_style": "simple",
+      "bat_style": "powershell_hidden",
       "outputs": [
         {
           "path": "stock_data/vv_radar.db",
@@ -462,7 +462,7 @@
       "cron": "0 13 * * *",
       "log_path": "stock_data\\vv_radar.log",
       "dept": "front-office",
-      "bat_style": "simple",
+      "bat_style": "powershell_hidden",
       "outputs": [
         {
           "path": "stock_data/vv_radar.db",
@@ -482,7 +482,7 @@
       "cron": "10 13 * * 1-5",
       "log_path": "stock_data\\vv_daily.log",
       "dept": "front-office",
-      "bat_style": "simple",
+      "bat_style": "powershell_hidden",
       "outputs": [
         {
           "path": "stock_data/vv_radar.db",
@@ -493,6 +493,7 @@
     },
     {
       "id": "forecast_closer",
+      "name": "StockForecastCloser",
       "description": "预测追踪闭环",
       "enabled": true,
       "type": "win_task",

@@ -1,0 +1,61 @@
+{
+  "date": "2026-05-26",
+  "type": "nightly_plan",
+  "generated": "2026-05-25 22:36",
+  "cycle_stage": "主升 (confidence 0.9)",
+  "alerts": [
+    "炸板率z=-2.39",
+    "晋级率z=-2.41",
+    "强势占比z=-2.6",
+    "北向强度z=-2.31",
+    "大单强度z=-2.63"
+  ],
+  "watch_items": [
+    {
+      "priority": "P0",
+      "item": "通富微电 成交量确认",
+      "reason": "今日4.5倍均量巨阳，需要明日量能确认是控盘换手还是鱼尾。缩量=健康，继续放量=警惕",
+      "action": "开盘30分钟量能对比：若<今日30%，持有；若继续放量>今日70%，考虑减仓"
+    },
+    {
+      "priority": "P0",
+      "item": "蓝色光标 止损决策",
+      "reason": "成本18.24，当前可能已触发-8%，但不在止损系统中。需人工确认是否执行止损",
+      "action": "开盘前确认最新价格，若低于16.97(-7%)则触发硬止损决策"
+    },
+    {
+      "priority": "P1",
+      "item": "数据层级修复：止损系统过期价格",
+      "reason": "今日发现止损系统使用过期价格(深水规院-44%，威派格-37.8%)触发假警报。根本原因是系统读取的是历史收盘价而非最新价",
+      "action": "排查 stop_loss_executions.json 的数据源链，确认是否使用当日行情而非缓存数据"
+    },
+    {
+      "priority": "P1",
+      "item": "大港股份 CLAUDE.md 分类还原",
+      "reason": "linter 将分类从\"半导体/测试服务\"回退为\"半导体/EDA\"。确认是否需要修",
+      "action": "与用户确认后修改"
+    },
+    {
+      "priority": "P2",
+      "item": "50涨停分散=无主线 — 次日验证",
+      "reason": "今日50涨停分布6-7板块，无明确主线。明日如果涨停数收缩至30以下且集中到1-2板块=主线确立",
+      "action": "收盘后验证涨停分布，据此调整策略"
+    },
+    {
+      "priority": "P2",
+      "item": "生益科技 新仓位观察",
+      "reason": "今日新开仓400@114.145，高成本位，需密切跟踪",
+      "action": "盘中监控量价，成本位-7%=106.15作为硬止损线"
+    }
+  ],
+  "schedule": {
+    "08:03": "news_scheduler.py morning",
+    "08:37": "morning_brief_agent.py",
+    "09:26": "call_auction.py",
+    "09:03-15:03": "intraday_report.py 每30min",
+    "15:05": "daily_task.py closing_review",
+    "15:33": "daily_task.py tech_scan",
+    "15:40": "nightly_plan.py auto",
+    "22:07": "news_scheduler.py evening"
+  }
+}
