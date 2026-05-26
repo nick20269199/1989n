@@ -156,18 +156,18 @@ def run_research(question_text: str, question_id: str = "", use_dual: bool = Tru
     print(f"[{datetime.now().strftime('%H:%M:%S')}] 周期: {cycle.get('stage')}, 警报: {len(alerts)}")
     print(f"  研究: {question_text[:80]}...")
 
-    prompt = question_text  # 用户消息简洁
-
     if use_dual:
         print("  使用双通道 (Ch2+Ch3)...")
-        results = dual_research(prompt, system=system_prompt)
+        # dual_research 不支持 system 参数，合并到 prompt 中
+        merged_prompt = f"{system_prompt}\n\n---\n\n## 用户研究请求\n\n{question_text}"
+        results = dual_research(merged_prompt)
         ch2 = results.get("research", "")
         ch3 = results.get("parallel", "")
         merged = f"## 主研究 (Ch2)\n\n{ch2}\n\n## 交叉验证 (Ch3)\n\n{ch3}"
         return merged
     else:
         print("  使用 Ch2 单通道...")
-        return research(prompt, system=system_prompt)
+        return research(question_text, system=system_prompt)
 
 
 def main():

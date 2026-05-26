@@ -20,6 +20,7 @@ EXPERT_ID = "expert5_risk"
 DATA_DIR = Path("D:/1989n/stock_data")
 ML_DIR = DATA_DIR / "ml"
 RULES_PATH = ML_DIR / "rules.json"
+TRADING_RULES_PATH = DATA_DIR / "trading_rules.json"
 
 # ============================================================
 # Config
@@ -44,6 +45,109 @@ def _load_rules():
         else:
             _rules_cache = {"rules": {"exit": {}}}
     return _rules_cache
+
+
+# ============================================================
+# Trading rules (从对抗审查提炼的硬约束)
+# ============================================================
+
+_trading_rules_cache = None
+
+def _load_trading_rules() -> list[dict]:
+    """加载 trading_rules.json — 对抗审查提炼的交易规则。"""
+    global _trading_rules_cache
+    if _trading_rules_cache is None:
+        if TRADING_RULES_PATH.exists():
+            with open(TRADING_RULES_PATH, encoding="utf-8") as f:
+                data = json.load(f)
+            _trading_rules_cache = [r for r in data.get("rules", []) if r.get("status") == "active"]
+        else:
+            _trading_rules_cache = []
+    return _trading_rules_cache
+
+
+def check_trading_rules(position: dict, data_context: dict) -> dict:
+    """检查持仓是否触犯 trading_rules.json 中的活跃规则。
+
+    R001 画饼禁重仓: 需要新业务营收数据 (不在当前数据中则跳过)
+    R002 52周高涨幅禁追: 需要52周K线高点和当前价 (从 kline 提取)
+    R003 单分析师覆盖预警: 需要机构覆盖数 (不在当前数据中则跳过)
+    R004 叙事vs业绩剪刀差: 需要52周涨幅+利润数据 (部分可从 kline 估算)
+    """
+    rules = _load_trading_rules()
+    triggered = []
+
+    if not rules:
+        return {"level": "normal", "triggered": [], "note": "无活跃交易规则"}
+
+    kline = data_context.get("kline", {})
+    price = kline.get("latest_price", 0)
+    cost = position.get("cost", 0)
+
+    for r in rules:
+        rid = r.get("id", "")
+        name = r.get("name", "")
+        trigger = r.get("trigger", "")
+
+        # R002: 52周高涨幅禁追 — 检查当前价距52周高点是否>150%
+        if rid == "R002" and price > 0:
+            high_52w = kline.get("high_52w") or kline.get("high", 0)
+            if high_52w and high_52w > 0:
+                gain_from_low = (price / max(high_52w * 0.4, 1)) - 1
+                if gain_from_low > 1.5:
+                    triggered.append({
+                        "rule": rid, "name": name,
+                        "detail": f"当前价{price:.2f}, 52周低点~{high_52w*0.4:.2f}, 涨幅{gain_from_low*100:.0f}% > 150%阈值",
+                        "action": r.get("action", ""),
+                    })
+
+        # R001: 画饼禁重仓 — 检查仓位占比
+        if rid == "R001" and cost > 0:
+            holdings = data_context.get("holdings", [])
+            total_value = sum(h.get("shares", 0) * h.get("cost", 0) for h in holdings if h.get("cost", 0) > 0)
+            if total_value > 0:
+                pos_value = position.get("shares", 0) * cost
+                pos_pct = pos_value / total_value * 100
+                if pos_pct > 3:
+                    triggered.append({
+                        "rule": rid, "name": name,
+                        "detail": f"仓位占比{pos_pct:.1f}% > 3%阈值（新业务零营收标的限制）",
+                        "action": r.get("action", ""),
+                    })
+
+        # R003: 单分析师覆盖预警 — 检查仓位占比(数据不可用时跳过)
+        if rid == "R003" and cost > 0:
+            # 机构覆盖数不在当前数据中，仅当仓位>3%时提醒数据缺失
+            holdings = data_context.get("holdings", [])
+            total_value = sum(h.get("shares", 0) * h.get("cost", 0) for h in holdings if h.get("cost", 0) > 0)
+            if total_value > 0:
+                pos_value = position.get("shares", 0) * cost
+                pos_pct = pos_value / total_value * 100
+                if pos_pct > 3:
+                    triggered.append({
+                        "rule": rid, "name": name,
+                        "detail": f"仓位占比{pos_pct:.1f}% > 3%阈值, 但机构覆盖数不可用, 无法完全验证规则",
+                        "action": "需人工核查机构覆盖数",
+                    })
+
+        # R004: 叙事vs业绩剪刀差 — 需要利润数据, kline仅能估算价格部分
+        if rid == "R004":
+            high_52w = kline.get("high_52w") or kline.get("high", 0)
+            if high_52w and high_52w > 0 and price > 0:
+                annual_gain = (price / max(high_52w * 0.4, 1)) - 1
+                if annual_gain > 1.0:
+                    triggered.append({
+                        "rule": rid, "name": name,
+                        "detail": f"年度涨幅估算{annual_gain*100:.0f}% > 100%阈值（需利润数据验证剪刀差）",
+                        "action": r.get("action", ""),
+                    })
+
+    if not triggered:
+        return {"level": "normal", "triggered": [], "note": f"{len(rules)}条规则检查通过"}
+
+    levels = [t["rule"] for t in triggered]
+    return {"level": "warning", "triggered": triggered,
+            "note": f"触发规则: {', '.join(levels)}"}
 
 
 # ============================================================
@@ -200,6 +304,7 @@ def analyze(symbol: str, name: str, data_context: dict,
     hold_check = check_hold_days(hold_days)
     conc_check = check_concentration(holdings, symbol)
     market_check = check_market_downdraft(data_context.get("market_summary", {}))
+    trading_check = check_trading_rules(current_pos, data_context)
 
     # Composite risk score: 0 (safe) to 1 (danger)
     risk_scores = {
@@ -209,8 +314,9 @@ def analyze(symbol: str, name: str, data_context: dict,
     r2 = risk_scores.get(hold_check.get("level", "normal"), 0.2)
     r3 = risk_scores.get(conc_check.get("level", "normal"), 0.2)
     r4 = risk_scores.get(market_check.get("level", "normal"), 0.2)
+    r5 = 0.5 if trading_check.get("triggered") else 0  # 触发交易规则即加分
 
-    composite_risk = round((r1 * 0.4 + r2 * 0.2 + r3 * 0.2 + r4 * 0.2), 2)
+    composite_risk = round((r1 * 0.35 + r2 * 0.15 + r3 * 0.15 + r4 * 0.15 + r5 * 0.2), 2)
 
     if composite_risk >= 0.6:
         overall = "高风险 — 建议减仓或止损"
@@ -232,7 +338,7 @@ def analyze(symbol: str, name: str, data_context: dict,
         "name": name,
         "direction": direction,
         "confidence": round(1 - composite_risk, 2),
-        "method": ["止损检查", "持仓时长分析", "集中度检查", "市场环境检查", "连亏检测"],
+        "method": ["止损检查", "持仓时长分析", "集中度检查", "市场环境检查", "连亏检测", "交易规则检查"],
         "trajectory": {
             "stop_loss_levels": {
                 "hard_stop_pct": HARD_STOP_LOSS,
@@ -268,6 +374,7 @@ def analyze(symbol: str, name: str, data_context: dict,
                 "hold_duration": hold_check,
                 "concentration": conc_check,
                 "market_environment": market_check,
+                "trading_rules": trading_check,
             },
         },
     }
