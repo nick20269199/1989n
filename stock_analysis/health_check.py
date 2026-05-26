@@ -4,6 +4,7 @@ Run as a daily Claude Code cron to monitor system health.
 """
 import json
 import logging
+import os
 import shutil
 import subprocess
 import sys
@@ -240,6 +241,67 @@ def _write_channel_health():
     logger.info("通道健康已更新: %d/3 可用", sum(1 for v in result.values() if v))
 
 
+def check_department_readiness() -> dict:
+    """三部晨间就绪检查 — 前厅部/情报部/读书郎 开工前置条件"""
+    import glob
+    now = datetime.now()
+    checks = {}
+    cst = timezone(timedelta(hours=8))
+
+    # ── 情报部: 通道健康 + 新闻管道 ──
+    ch_path = STOCK_DATA / "channel_health_latest.json"
+    if ch_path.exists():
+        ch = json.loads(ch_path.read_text(encoding="utf-8"))
+        active = [k for k, v in ch.items() if v is True and k != "healthy"]
+        checks["情报部_通道"] = {"ok": len(active) > 0, "detail": f"活跃: {active}"}
+    else:
+        checks["情报部_通道"] = {"ok": False, "detail": "通道状态未知"}
+
+    # ── 前厅部: 关键产出新鲜度 ──
+    ANALYSIS_DATA = Path(__file__).parent / "data"
+    critical = {
+        "portfolio.json": {"path": ANALYSIS_DATA, "max_h": 72},                    # 持仓
+        "closing_review.json": {"path": STOCK_DATA, "max_h": 30},                 # 收盘复盘
+        "analysis_overnight": {"path": STOCK_DATA, "max_h": 18, "glob": "analysis_overnight_*.json"},  # 隔夜
+        "morning_brief":      {"path": STOCK_DATA, "max_h": 12, "glob": "morning_brief_agent_latest.*"}, # 晨报
+    }
+    stale_items = []
+    for name, info in critical.items():
+        search_dir = info.get("path", STOCK_DATA)
+        pattern = info.get("glob", name)
+        files = list(search_dir.glob(pattern))
+        if files:
+            latest = max(files, key=os.path.getmtime)
+            age_h = (now - datetime.fromtimestamp(os.path.getmtime(latest))).total_seconds() / 3600
+            if age_h > info["max_h"]:
+                stale_items.append(f"{name}({age_h:.0f}h)")
+        else:
+            stale_items.append(f"{name}(无文件)")
+    checks["前厅部_数据新鲜度"] = {"ok": len(stale_items) == 0, "detail": "; ".join(stale_items) if stale_items else "全部新鲜"}
+
+    # ── 读书郎: 笔记索引新鲜度 ──
+    idx_path = STOCK_DATA / "status" / "reading_index.json"
+    if idx_path.exists():
+        age_h = (now - datetime.fromtimestamp(os.path.getmtime(idx_path))).total_seconds() / 3600
+        checks["读书郎_索引"] = {"ok": age_h < 48, "detail": f"{age_h:.0f}h前更新"}
+    else:
+        checks["读书郎_索引"] = {"ok": False, "detail": "索引不存在"}
+
+    # Print summary
+    print("\n=== 三部晨间就绪检查 ===")
+    all_ok = True
+    for name, result in checks.items():
+        icon = "✅" if result["ok"] else "⚠️"
+        print(f" {icon} {name}: {result['detail']}")
+        if not result["ok"]:
+            all_ok = False
+    if all_ok:
+        print(" 三部就绪状态: 全部正常")
+    else:
+        print(" 三部就绪状态: 有异常项")
+    return checks
+
+
 def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
@@ -253,6 +315,9 @@ def main():
     import_gate_result = check_import_gate()
     schema_gate_result = check_schema_gate()
 
+    # ── 三部就绪预检 (工程部前置维护) ──
+    dept_readiness = check_department_readiness()
+
     report = generate_report(win_ok, win_missing, disk, feishu_ok,
                              import_gate_result, schema_gate_result)
     logger.info("Health check complete")
@@ -260,24 +325,23 @@ def main():
     # Send report to Feishu
     send_alert(report)
 
-    # 后勤部状态发布
+    # 工程部状态发布 (整合原后勤部健康检查/系统看板职能)
     issues = []
     if win_missing:
         issues.append(f"缺失计划任务: {', '.join(win_missing)}")
     if not disk["ok"]:
         issues.append(f"D盘空间不足: 仅剩 {disk['free_gb']}GB")
-    publish_status("logistics", {"health": "healthy" if not issues else "degraded", "issues": issues, "consumers": []})
-
-    # 工程部门禁状态发布
-    eng_issues = []
     if not import_gate_result.get("passed", True):
-        eng_issues.append(f"语法门禁: {import_gate_result.get('failures', '?')} 个错误")
+        issues.append(f"语法门禁: {import_gate_result.get('failures', '?')} 个错误")
     sg = schema_gate_result or {}
     v_count = sum(len(v.get("issues", [])) for v in sg.get("violations", []))
     if not sg.get("passed", True):
-        eng_issues.append(f"Schema门禁: {v_count} 项违规")
-    eng_health = "healthy" if not eng_issues else "degraded"
-    publish_status("engineering", {"health": eng_health, "issues": eng_issues, "consumers": ["logistics"]})
+        issues.append(f"Schema门禁: {v_count} 项违规")
+    for name, result in dept_readiness.items():
+        if not result["ok"]:
+            issues.append(f"晨间预检 {name}: {result['detail']}")
+    eng_health = "healthy" if not issues else "degraded"
+    publish_status("engineering", {"health": eng_health, "issues": issues, "consumers": ["front-office", "intelligence"]})
 
     # 通道健康快照 — 供 dept_preflight 保鲜检查
     _write_channel_health()

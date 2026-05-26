@@ -2,7 +2,7 @@
 """
 工程部 Morning Lint v2 — 确定性6项检测，不修复。
 
-Changes from v1 (_sel_lint.py):
+Changes from v1:
 - Parses frontmatter last_reviewed (not mtime) for knowledge rot
 - Parses frontmatter status field for draft detection
 - Ghost reference check (broken [[wiki-links]])

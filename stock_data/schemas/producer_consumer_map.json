@@ -49,8 +49,9 @@
   ],
   "critical_outputs": [
     "D:/1989n/stock_data/channel_health_latest.json",
-    "D:/1989n/stock_data/status/logistics_status.json",
     "D:/1989n/stock_data/status/engineering_status.json",
-    "D:/1989n/stock_analysis/data/portfolio.json"
+    "D:/1989n/stock_analysis/data/portfolio.json",
+    "D:/1989n/stock_data/status/front-office_status.json",
+    "D:/1989n/stock_data/status/intelligence_status.json"
   ]
 }

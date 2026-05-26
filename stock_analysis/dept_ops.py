@@ -8,8 +8,8 @@ dept_ops.py — 部门操作神经层 v1
 
 用法:
   from dept_ops import OpsGate
-  gate = OpsGate("finance")
-  result = gate.wrap(content, sources=[...], crosscheck_with=["front-office"])
+  gate = OpsGate("前厅部")
+  result = gate.wrap(content, sources=[...], crosscheck_with=["engineering"])
 """
 
 import json
@@ -22,30 +22,34 @@ from dept_status_protocol import read_other_dept, is_status_fresh
 from dept_preflight import run_preflight
 
 CST = timezone(timedelta(hours=8))
-STOCK_DATA = Path("D:/1989n/stock_data")
-PROJECT_DIR = Path("D:/1989n/stock_analysis")
+
+# 路径 — 从 config.py 单一权威来源
+import sys
+sys.path.insert(0, str(Path(__file__).parent))
+from config import STOCK_DATA_DIR, PROJECT_DIR as CONFIG_PROJECT_DIR
+STOCK_DATA = STOCK_DATA_DIR
+PROJECT_DIR = CONFIG_PROJECT_DIR
 
 logger = logging.getLogger("dept_ops")
 
 # ── 部门注册表 ──────────────────────────────────────────────
 # 飞书部门名 → 系统部门名映射
+# 五部架构: 前厅部/情报部/工程部/研发部/读书郎
 DEPT_ALIAS = {
     "前厅部": "front-office",
     "情报部": "intelligence",
     "工程部": "engineering",
-    "财务部": "finance",       # 财务是前厅的子部门
-    "研发部": "engineering",   # 研发映射到工程部
-    "读书郎": "logistics",     # 读书笔记在后勤
-    "后勤部": "logistics",
+    "研发部": "rd",           # 独立研发部 — 想法→规则/工具
+    "读书郎": "reader",       # 独立知识管理 — 读书→交易穿透
 }
 
 # 依赖映射 (与 dependencies.json 保持一致)
 DEPT_DEPS = {
     "front-office": ["engineering"],
-    "finance": ["front-office", "engineering"],
-    "intelligence": ["front-office", "logistics"],
+    "intelligence": ["front-office", "engineering"],
     "engineering": [],
-    "logistics": [],
+    "rd": ["engineering", "front-office"],        # 研发依赖工程(基础设施)和前厅(交易反馈)
+    "reader": [],                                  # 读书郎独立，无运行时依赖
 }
 
 # 数据源清单 (用于来源声明)
@@ -342,7 +346,7 @@ def crosscheck_excel_vs_portfolio(excel_data: dict) -> dict:
 
 
 def excel_bs_summary(excel_path: str = None) -> str:
-    """生成 Excel 交叉验证摘要，供财务部输出使用。"""
+    """生成 Excel 交叉验证摘要，供前厅部输出使用。"""
     path = excel_path or "D:/1989n/Table.xlsx"
     excel_data = ingest_excel(path)
     if "error" in excel_data:
@@ -367,8 +371,8 @@ def excel_bs_summary(excel_path: str = None) -> str:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-    # 测试财务部
-    gate = OpsGate("财务部")
-    content = "**盈亏明细**\n\n通富微电 002156: 现价 69.78 | 盈亏 +1,810"
+    # 测试前厅部（含原财务部PnL职能）
+    gate = OpsGate("前厅部")
+    content = "**持仓明细**\n\n通富微电 002156: 现价 69.78 | 盈亏 +1,810"
     result = gate.wrap(content, sources=["portfolio.json", "data_source_router"])
     print(result)

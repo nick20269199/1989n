@@ -20,7 +20,7 @@ from dept_ops import OpsGate, ingest_excel, crosscheck_excel_vs_portfolio, excel
 logger = logging.getLogger("dept_handlers")
 
 STOCK_DATA = Path("D:/1989n/stock_data")
-PROJECT_DIR = Path("D:/1989n/stock_analysis")
+PROJECT_DIR = Path(__file__).parent
 PYTHON = r"D:\Python314\python"
 TASK_QUEUE = STOCK_DATA / "task_queue.json"
 
@@ -34,8 +34,8 @@ def _wrap(dept_alias: str, content: str, sources: list[str] = None) -> str:
         if "持仓" in content or "盈亏" in content or "portfolio" in content.lower():
             default_sources.append("portfolio.json")
         result = gate.wrap(content, sources=sources or default_sources)
-        # 财务相关输出: 强制注入 Excel 交叉验证
-        if dept_alias in ("财务部", "finance") or "盈亏" in content or "持仓" in content:
+        # 前厅部输出: 强制注入 Excel 交叉验证
+        if dept_alias in ("前厅部", "front-office") or "盈亏" in content or "持仓" in content:
             excel_report = excel_bs_summary()
             if excel_report:
                 # 插入到来源声明之前
@@ -173,11 +173,12 @@ def handle_front_office(action: str, params: dict, raw_text: str) -> dict | None
                 mv = current * shares if current > 0 else 0
                 cost_total = cost * shares
                 pnl = mv - cost_total if mv > 0 else 0
+                pnl_pct = ((current - cost) / cost * 100) if cost and current > 0 else 0
                 arrow = "↑" if chg_pct > 0 else "↓" if chg_pct < 0 else "→"
                 pnl_sign = "+" if pnl > 0 else ""
                 lines.append(
                     f"**{name}** {code}: {current:.2f} {arrow}{abs(chg_pct):.2f}% | "
-                    f"市值 {mv:,.0f} | 盈亏 {pnl_sign}{pnl:,.0f}"
+                    f"成本 {cost:.2f} | 盈亏 {pnl_sign}{pnl:,.0f} ({pnl_sign}{pnl_pct:.1f}%)"
                 )
                 total_value += mv
                 total_cost += cost_total
@@ -192,6 +193,35 @@ def handle_front_office(action: str, params: dict, raw_text: str) -> dict | None
         except Exception as e:
             logger.exception("Portfolio overview failed")
             return {"title": "前厅部 · 持仓", "content": f"获取持仓失败: {e}", "source": "dept:front-office|error"}
+
+    # 已清仓结算 (原财务部职能)
+    if any(kw in raw_text for kw in ("已清仓", "结算", "历史", "清仓")):
+        try:
+            pf = json.loads((PROJECT_DIR / "data" / "portfolio.json").read_text("utf-8"))
+            cleared = pf.get("cleared", [])
+            if not cleared:
+                return {"title": "前厅部 · 已清仓", "content": "无已清仓记录。", "source": "dept:front-office|portfolio.json"}
+            sorted_cl = sorted(cleared, key=lambda x: x.get("realized_pnl", 0))
+            total_pnl = sum(c.get("realized_pnl", 0) for c in cleared)
+            lines = [f"**已清仓结算** (共{len(cleared)}只) **合计: {total_pnl:,.0f}**\n"]
+            lines.append("**最大亏损 TOP 10:**")
+            for c in sorted_cl[:10]:
+                pnl = c.get("realized_pnl", 0)
+                name = c.get("name", c.get("code", "?"))
+                code = c.get("code", "")
+                rt = c.get("round_trips", 0)
+                lines.append(f"  {name} {code}: {pnl:,.0f} ({rt}笔)")
+            lines.append("\n**最大盈利 TOP 10:**")
+            for c in reversed(sorted_cl[-10:]):
+                pnl = c.get("realized_pnl", 0)
+                name = c.get("name", c.get("code", "?"))
+                code = c.get("code", "")
+                rt = c.get("round_trips", 0)
+                lines.append(f"  {name} {code}: +{pnl:,.0f} ({rt}笔)")
+            return {"title": "前厅部 · 已清仓结算", "content": "\n".join(lines),
+                    "source": "dept:front-office|portfolio.json"}
+        except Exception as e:
+            return {"title": "前厅部 · 已清仓", "content": f"查询异常: {e}", "source": "dept:front-office|error"}
 
     # 盘前简报 → B类任务 (需要 Claude 深度分析)
     if action in ("盘前", "早报", "morning") or any(kw in raw_text for kw in ("盘前", "晨报", "早间")):
@@ -308,12 +338,12 @@ def handle_engineering(action: str, params: dict, raw_text: str) -> dict | None:
     if any(kw in raw_text for kw in ("lint", "SEL", "巡检")):
         try:
             result = subprocess.run(
-                [PYTHON, str(PROJECT_DIR / "_sel_lint.py")],
+                [PYTHON, str(PROJECT_DIR / "sel_lint.py")],
                 capture_output=True, text=True, timeout=30, cwd=str(PROJECT_DIR)
             )
             output = result.stdout.strip()[:2000] or "(无输出)"
             return {"title": "工程部 · SEL 巡检", "content": f"```\n{output}\n```\n\n{_ts()}",
-                    "source": "dept:engineering|_sel_lint"}
+                    "source": "dept:engineering|sel_lint"}
         except Exception as e:
             return {"title": "工程部 · SEL", "content": f"SEL 巡检异常: {e}", "source": "dept:engineering|error"}
 
@@ -324,104 +354,61 @@ def handle_engineering(action: str, params: dict, raw_text: str) -> dict | None:
 
 
 # ═══════════════════════════════════════════
-# 4. 财务部 — 盈亏/成本/收益
-# ═══════════════════════════════════════════
-
-def handle_finance(action: str, params: dict, raw_text: str) -> dict | None:
-    """财务部: 持仓盈亏明细、已清仓结算、交易成本。"""
-    try:
-        pf = json.loads((PROJECT_DIR / "data" / "portfolio.json").read_text("utf-8"))
-    except Exception:
-        return {"title": "财务部", "content": "无法读取持仓数据。", "source": "dept:finance|error"}
-
-    # 已清仓结算
-    if any(kw in raw_text for kw in ("已清仓", "结算", "历史", "清仓")):
-        cleared = pf.get("cleared", [])
-        if not cleared:
-            return {"title": "财务部 · 已清仓", "content": "无已清仓记录。", "source": "dept:finance|portfolio.json"}
-        lines = ["**已清仓结算**\n"]
-        total_pnl = 0
-        for c in cleared:
-            name = c.get("name", "?")
-            code = c.get("code", "?")
-            exit_price = float(c.get("exit_price", c.get("price", 0)))
-            cost = float(c.get("cost", 0))
-            shares = int(c.get("shares", 0))
-            pnl = (exit_price - cost) * shares
-            pnl_sign = "+" if pnl > 0 else ""
-            total_pnl += pnl
-            exit_date = c.get("exit_date", c.get("date", "?"))
-            lines.append(f"{name} {code}: 出清 {exit_price:.2f} | 盈亏 {pnl_sign}{pnl:,.0f} | {exit_date}")
-        total_sign = "+" if total_pnl > 0 else ""
-        lines.append(f"\n累计清仓盈亏: **{total_sign}{total_pnl:,.0f}**")
-        return {"title": "财务部 · 已清仓结算", "content": "\n".join(lines),
-                "source": "dept:finance|portfolio.json"}
-
-    # 持仓盈亏 (默认)
-    try:
-        from data_source_router import get_quotes
-        holdings = pf.get("holdings", [])
-        codes = [h["code"] for h in holdings]
-        quotes = get_quotes(codes)
-        lines = ["**盈亏明细**\n"]
-        total_pnl = 0
-        for h in holdings:
-            code = h["code"]
-            name = h["name"]
-            shares = int(h.get("shares", 0))
-            cost = float(h.get("cost", 0))
-            q = quotes.get(code, {})
-            current = q.get("current", 0) if q else 0
-            pnl = (current - cost) * shares if current > 0 else 0
-            pnl_pct = ((current - cost) / cost * 100) if cost and current > 0 else 0
-            total_pnl += pnl
-            pnl_sign = "+" if pnl > 0 else ""
-            price_str = f"{current:.2f}" if current else "?"
-            lines.append(
-                f"**{name}** {code}: 成本 {cost:.2f} -> 现价 {price_str} | "
-                f"盈亏 {pnl_sign}{pnl:,.0f} ({pnl_sign}{pnl_pct:.1f}%)"
-            )
-        total_sign = "+" if total_pnl > 0 else ""
-        lines.append(f"\n浮动盈亏合计: **{total_sign}{total_pnl:,.0f}**")
-        lines.append(f"数据源: data_source_router | {_ts()}")
-        return {"title": "财务部 · 盈亏明细", "content": "\n".join(lines),
-                "source": "dept:finance|portfolio.json|data_source_router"}
-    except Exception as e:
-        return {"title": "财务部 · 盈亏", "content": f"盈亏计算异常: {e}", "source": "dept:finance|error"}
-
-
-# ═══════════════════════════════════════════
-# 5. 研发部 — 代码查询/bug追踪
+# 4. 研发部 — 想法→规则/工具/优化
 # ═══════════════════════════════════════════
 
 def handle_rd(action: str, params: dict, raw_text: str) -> dict | None:
-    """研发部: 函数定义查询、调用链追踪、最近 bug 状态。"""
+    """研发部: 把你的想法转化成各部门可用的规则/工具/约束。
 
-    # Bug 状态
-    if any(kw in raw_text for kw in ("bug", "模式", "pattern", "pending")):
-        pp = STOCK_DATA / "status" / "pending_patterns.json"
-        if pp.exists():
-            data = json.loads(pp.read_text("utf-8"))
-            candidates = data.get("candidates", [])
-            auto_blocked = data.get("auto_blocked_ids", [])
-            lines = [f"**Bug 模式** 候选: {len(candidates)} 个, 自动阻断: {len(auto_blocked)} 个\n"]
-            for c in candidates[:5]:
-                desc = c.get("description", "?")
-                occ = c.get("occurrences", 0)
-                blocked = "🚫" if c.get("auto_block") else ""
-                lines.append(f"- {blocked} [{occ}次] {desc[:80]}")
-            return {"title": "研发部 · Bug 追踪", "content": "\n".join(lines),
-                    "source": "dept:rd|pending_patterns.json"}
-        return {"title": "研发部 · Bug", "content": "无 bug 模式记录。", "source": "dept:rd"}
+    工作流程:
+      你说想法 → 研发部评估 → 转化为:
+        - 规则 (写入 trading_rules.json / 部门配置)
+        - 工具 (新脚本/新看板)
+        - 约束 (质量门禁/风控条件)
+        - 优化 (流程改进/数据源增强)
 
-    # 代码查询 → 入队 (需要 Claude 理解代码)
-    task_id = _enqueue_task("rd", action or "代码查询", raw_text)
-    return {"title": "研发部 · 任务已入队",
-            "content": f"代码相关查询已入队 [{task_id}]。Claude 接续后处理。", "source": "dept:rd|task_queue"}
+    产出落地后, 反哺情报部(更快)、前厅部(更准)、工程部(更稳)。
+    """
+
+    # 想法管道 — 查看当前待处理/进行中/已完成的想法
+    if any(kw in raw_text for kw in ("管道", "待办", "列表", "清单", "进度")):
+        ideas_file = STOCK_DATA / "status" / "rd_ideas.json"
+        if not ideas_file.exists():
+            return {"title": "研发部 · 想法管道", "content": "当前无待处理想法。有新想法随时说。",
+                    "source": "dept:rd"}
+        try:
+            data = json.loads(ideas_file.read_text("utf-8"))
+            items = data.get("items", [])
+            if not items:
+                return {"title": "研发部 · 想法管道", "content": "管道为空。",
+                        "source": "dept:rd"}
+            pending = [i for i in items if i.get("status") == "pending"]
+            working = [i for i in items if i.get("status") == "working"]
+            done = [i for i in items if i.get("status") == "done"]
+            lines = [f"**研发想法管道**\n"]
+            lines.append(f"待处理: {len(pending)} | 进行中: {len(working)} | 已完成: {len(done)}\n")
+            if working:
+                lines.append("**进行中:**")
+                for i in working[:3]:
+                    lines.append(f"  - {i.get('title', '?')}")
+            if pending:
+                lines.append("\n**待处理:**")
+                for i in pending[:5]:
+                    lines.append(f"  - {i.get('title', '?')} ({i.get('created', '?')})")
+            return {"title": "研发部 · 想法管道", "content": "\n".join(lines),
+                    "source": "dept:rd|rd_ideas.json"}
+        except Exception as e:
+            return {"title": "研发部 · 管道", "content": f"读取失败: {e}", "source": "dept:rd|error"}
+
+    # 新想法 → 入队
+    task_id = _enqueue_task("rd", "新想法落地", raw_text)
+    return {"title": "研发部 · 想法已入队",
+            "content": f"收到: 「{raw_text[:120]}」\n已入队 [{task_id}]。\n\n我会评估你的想法并转化为:\n  - 规则/约束 → 注入相关部门\n  - 工具/脚本 → 提升效率\n  - 优化调整 → 更快更准\n\n完成后推送结果。",
+            "source": "dept:rd|task_queue"}
 
 
 # ═══════════════════════════════════════════
-# 6. 读书郎 — 读书笔记/交易穿透
+# 5. 读书郎 — 读书笔记/交易穿透
 # ═══════════════════════════════════════════
 
 def handle_reader(action: str, params: dict, raw_text: str) -> dict | None:
@@ -479,7 +466,7 @@ def handle_reader(action: str, params: dict, raw_text: str) -> dict | None:
 
 
 # ═══════════════════════════════════════════
-# 7. 通用问答 — 走 DeepSeek Agent
+# 6. 通用问答 — 走 DeepSeek Agent
 # ═══════════════════════════════════════════
 
 def handle_general(raw_text: str, chat_id: str = "") -> dict:
@@ -500,25 +487,27 @@ def handle_general(raw_text: str, chat_id: str = "") -> dict:
 
 
 # ═══════════════════════════════════════════
-# 路由表
+# 7. 路由表 — 五部架构
 # ═══════════════════════════════════════════
 
 DEPT_MAP = {
     "前厅部": handle_front_office,
     "情报部": handle_intelligence,
     "工程部": handle_engineering,
-    "财务部": handle_finance,
     "研发部": handle_rd,
     "读书郎": handle_reader,
 }
 
 # 每个部门的触发关键词 (用于模糊匹配)
 DEPT_KEYWORDS = {
-    "前厅部": ("前厅", "front", "行情", "持仓", "收盘", "复盘", "盘前", "晨报", "盘中"),
+    "前厅部": ("前厅", "front", "行情", "持仓", "盈亏", "成本", "收益",
+               "清仓", "结算", "收盘", "复盘", "盘前", "晨报", "盘中",
+               "财务", "fin", "赚", "亏"),
     "情报部": ("情报", "intel", "新闻", "大V", "涨停", "情绪", "雷达"),
-    "工程部": ("工程", "eng", "健康", "lint", "错误", "error", "测试", "SEL"),
-    "财务部": ("财务", "fin", "盈亏", "成本", "收益", "清仓", "结算"),
-    "研发部": ("研发", "rd", "代码", "函数", "bug", "pattern"),
+    "工程部": ("工程", "eng", "健康", "lint", "错误", "error", "测试",
+               "SEL", "bug", "故障", "pattern", "pending"),
+    "研发部": ("研发", "rd", "想法", "规则", "优化", "策略", "实验", "工具",
+               "管道", "待办", "pipeline"),
     "读书郎": ("读书", "read", "书单", "穿透", "笔记"),
 }
 
@@ -593,6 +582,8 @@ def _extract_action(text: str) -> str:
         "大V": "vv", "雷达": "vv", "视频": "vv",
         "书单": "进度", "进度": "进度", "读了": "进度",
         "读书": "穿透", "穿透": "穿透", "笔记": "穿透",
+        "想法": "想法", "灵感": "想法", "主意": "想法",
+        "管道": "管道", "待办": "管道", "清单": "管道",
     }
     for kw, act in action_map.items():
         if kw in text:
@@ -619,7 +610,7 @@ if __name__ == "__main__":
         "前厅部 查行情 002156",
         "情报部 今天有什么新闻",
         "工程部 系统健康检查",
-        "财务部 持仓盈亏",
+        "前厅部 持仓盈亏",
         "读书郎 读书进度",
         "帮我分析一下通富微电",
     ]

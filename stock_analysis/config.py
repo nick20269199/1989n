@@ -21,11 +21,13 @@ try:
 except Exception:
     pass
 
-# === 路径配置 ===
+# === 路径配置（单信源：所有模块从 config 导入，不自行定义） ===
 PROJECT_DIR = Path(__file__).parent
 STOCK_DATA_DIR = Path(os.getenv("STOCK_DATA_DIR", "D:/1989n/stock_data"))
 SCREENSHOT_DIR = Path(os.getenv("SCREENSHOT_DIR", "D:/1989n/screenshots"))
 DATABASE_PATH = os.getenv("DATABASE_PATH", str(STOCK_DATA_DIR / "stock.db"))
+LEARNING_DIR = STOCK_DATA_DIR / "learning"
+ERROR_FILE = STOCK_DATA_DIR / "last_error.txt"
 LOG_DIR = PROJECT_DIR / "logs"
 OUTPUT_DIR = PROJECT_DIR / "output"
 

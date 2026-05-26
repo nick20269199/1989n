@@ -213,13 +213,32 @@ def run_closing_review():
         for r in recommendations:
             feishu_content += f"- {r['name']}: {r['action']} ({r['urgency']})\n"
 
+    # ── 额外保鲜检查：今日有交易文件但 portfolio.json 未更新？ ──
+    from pathlib import Path
+    trade_dir = Path("D:/1989n/stock_data")
+    today_str = date_today().replace("-", ".")
+    today_trade_files = list(trade_dir.glob(f"Table.xls.{today_str}*"))
+    pf_path = Path("D:/1989n/stock_analysis/data/portfolio.json")
+    portfolio_stale = False
+    if today_trade_files and pf_path.exists():
+        pf_mtime = datetime.fromtimestamp(pf_path.stat().st_mtime)
+        trade_mtime = max(f.stat().st_mtime for f in today_trade_files)
+        if datetime.fromtimestamp(trade_mtime) > pf_mtime:
+            portfolio_stale = True
+
     preflight = preflight_scan(["portfolio.json", "closing_review.json"])
-    if preflight["healthy"]:
+    if preflight["healthy"] and not portfolio_stale:
         ok = send_feishu_message(f"收盘复盘 | {date_str}", feishu_content, chat_id="closing")
         logger.info(f"飞书发送: {'成功' if ok else '失败'}")
     else:
-        logger.warning(f"收盘复盘跳过发送: {preflight['summary']}")
+        stale_warnings = []
+        if portfolio_stale:
+            stale_warnings.append(f"今日交易文件已存在({today_trade_files[0].name})，但 portfolio.json 未更新，持仓数据可能不准确")
+        if not preflight["healthy"]:
+            stale_warnings.append(preflight["summary"])
+        warning_text = ";\n".join(stale_warnings)
+        logger.warning(f"收盘复盘跳过发送: {warning_text}")
         send_feishu_message(f"⚠ 收盘复盘跳过 | {date_str}",
-                           f"数据保鲜检查未通过:\n{preflight['summary']}", chat_id="alerts")
+                           f"数据保鲜检查未通过:\n{warning_text}", chat_id="alerts")
     logger.info("closing_review 完成")
     return output

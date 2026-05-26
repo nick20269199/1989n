@@ -1,0 +1,8 @@
+C:\Users\1989n\AppData\Roaming\Python\Python314\site-packages\lark_oapi\ws\pb\google\__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  __import__('pkg_resources').declare_namespace(__name__)
+2026-05-26 12:59:24,402 [INFO] === Feishu Bot v2 starting at 2026-05-26 12:59:24 ===
+2026-05-26 12:59:25,519 [INFO] Message sent to oc_983693a765e4284d1dc7bbeaf56cf1a9
+2026-05-26 12:59:25,520 [INFO] Outbox watcher started (interval=3.0s)
+2026-05-26 12:59:25,521 [INFO] WebSocket connecting (reconnect_count=0)...
+[Lark] [2026-05-26 12:59:26,131] [INFO] connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644060642946075598&access_key=6e2f6db326d1323551251fd13a367fdb&service_id=33554678&ticket=fb84ee11-a47a-414e-aa93-7e2efcdafd1e [conn_id=7644060642946075598]
+2026-05-26 12:59:26,131 [INFO] connected to wss://msg-frontier.feishu.cn/ws/v2?fpid=493&aid=552564&device_id=7644060642946075598&access_key=6e2f6db326d1323551251fd13a367fdb&service_id=33554678&ticket=fb84ee11-a47a-414e-aa93-7e2efcdafd1e [conn_id=7644060642946075598]

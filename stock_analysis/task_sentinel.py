@@ -125,8 +125,16 @@ def repair_win_tasks() -> bool:
 
 def check_claude_cron() -> dict:
     """检查 Claude cron 任务。读取项目 .claude/scheduled_tasks.json"""
-    cron_file = Path(r"C:\Users\1989n\.claude\scheduled_tasks.json")
-    if not cron_file.exists():
+    cron_candidates = [
+        Path("D:/1989n/.claude/scheduled_tasks.json"),
+        Path(r"C:\Users\1989n\.claude\scheduled_tasks.json"),
+    ]
+    cron_file = None
+    for p in cron_candidates:
+        if p.exists():
+            cron_file = p
+            break
+    if not cron_file:
         return {"found": [], "missing": EXPECTED_CRON_KEYWORDS, "total": 0}
     try:
         data = json.loads(cron_file.read_text(encoding="utf-8"))

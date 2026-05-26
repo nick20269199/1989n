@@ -54,7 +54,8 @@ DEPT_DATA_FILES = {
     "front-office": ["portfolio.json", "closing_review.json", "channel_health_latest.json", "sentinel_status.json"],
     "engineering": ["_lint_history.json"],
     "intelligence": ["intel/intel_latest.json"],
-    "logistics": ["task_dashboard.md", "news_manual_*.json"],
+    "rd": ["status/rd_ideas.json"],
+    "reading": ["status/reading_index.json"],
 }
 
 
@@ -123,25 +124,36 @@ def check_data_freshness(dept: str) -> list[dict]:
     return results
 
 
+def _detect_cycle_dfs(dep_map: dict, node: str, visited: set,
+                       rec_stack: set) -> bool:
+    """DFS 检测有向环 — 用递归栈跟踪当前路径。"""
+    visited.add(node)
+    rec_stack.add(node)
+    for dep in dep_map.get(node, []):
+        if dep not in dep_map:  # 外部节点跳过
+            continue
+        if dep not in visited:
+            if _detect_cycle_dfs(dep_map, dep, visited, rec_stack):
+                return True
+        elif dep in rec_stack:  # 在递归栈中 = 环
+            return True
+    rec_stack.discard(node)
+    return False
+
+
 def check_dependency_cycle() -> dict:
     """检测依赖图是否有循环（A等B, B等A）。"""
     result = {"check": "dependency_cycle", "severity": "ok", "detail": "无循环依赖"}
 
     dep_map = _load_dependency_map()
     all_depts = list(dep_map.keys())
+    visited = set()
     for dept in all_depts:
-        visited = set()
-        queue = [dept]
-        while queue:
-            current = queue.pop(0)
-            if current in visited:
+        if dept not in visited:
+            if _detect_cycle_dfs(dep_map, dept, visited, set()):
                 result["severity"] = "fail"
-                result["detail"] = f"检测到循环依赖: {dept} → ... → {current}"
+                result["detail"] = f"检测到循环依赖: 涉及 {dept}"
                 return result
-            visited.add(current)
-            for dep in dep_map.get(current, []):
-                if dep in all_depts:
-                    queue.append(dep)
 
     return result
 
@@ -212,7 +224,7 @@ def print_report(report: dict):
 
 def main():
     parser = argparse.ArgumentParser(description="跨部门预检")
-    parser.add_argument("--dept", choices=["front-office", "engineering", "intelligence", "logistics"], help="部门名称")
+    parser.add_argument("--dept", choices=["front-office", "engineering", "intelligence", "rd", "reading"], help="部门名称")
     parser.add_argument("--all", action="store_true", help="检查全部部门")
     args = parser.parse_args()
 
@@ -220,7 +232,7 @@ def main():
         parser.print_help()
         sys.exit(2)
 
-    depts = ["front-office", "engineering", "intelligence", "logistics"] if args.all else [args.dept]
+    depts = ["front-office", "engineering", "intelligence", "rd", "reading"] if args.all else [args.dept]
 
     all_reports = []
     overall_blocking = False

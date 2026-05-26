@@ -39,10 +39,9 @@ DAILY_DIR = BASE_DATA / "daily"
 DEEP_MINE_DIR = BASE_DATA / "deep_mine"
 STATE_FILE = BASE_DATA / ".miner_state.json"
 
-# JSONL 读取源（C 盘 Claude Code 项目目录，只读不写）
+# JSONL 读取源（Claude Code 项目目录，直连不写）
 C_JSONL_DIRS = [
-    Path("C:/Users/1989n/.claude/projects/d--1989n"),
-    Path("C:/Users/1989n/.claude/projects/C--Users-1989n"),
+    Path("D:/1989n/.claude/projects/d--1989n"),
 ]
 
 STOCK_ANALYSIS = Path("D:/1989n/stock_analysis")
@@ -52,7 +51,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger("conversation_miner")
 
 # ── 确保目录 ──
-MEMORY_INDEX = Path("C:/Users/1989n/.claude/projects/d--1989n/memory/MEMORY.md")
+MEMORY_INDEX = Path("D:/1989n/.claude/projects/d--1989n/memory/MEMORY.md")
 
 RULES_INTERACTION = Path("D:/1989n/.claude/rules/interaction-patterns.md")
 

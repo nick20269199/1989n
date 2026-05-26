@@ -17,7 +17,7 @@
       "args": [],
       "cron": "3 7 * * *",
       "log_path": "stock_data\\health_check.log",
-      "dept": "logistics",
+      "dept": "engineering",
       "bat_style": "simple"
     },
     {
@@ -90,7 +90,7 @@
       ],
       "cron": "0 8 * * *",
       "log_path": "stock_data\\logs\\news_morning.log",
-      "dept": "logistics",
+      "dept": "intelligence",
       "bat_style": "simple_exit",
       "outputs": [
         {
@@ -116,7 +116,7 @@
         "duration_min": 330
       },
       "log_path": "stock_data\\logs\\news_intraday.log",
-      "dept": "logistics",
+      "dept": "intelligence",
       "bat_style": "simple_exit",
       "outputs": [
         {
@@ -138,7 +138,7 @@
       ],
       "cron": "55 21 * * *",
       "log_path": "stock_data\\logs\\news_evening.log",
-      "dept": "logistics",
+      "dept": "intelligence",
       "bat_style": "simple_exit",
       "outputs": [
         {
@@ -516,7 +516,7 @@
       "args": [],
       "cron": "30 0 * * *",
       "log_path": "stock_data\\nightly_health.log",
-      "dept": "logistics",
+      "dept": "engineering",
       "bat_style": "simple"
     },
     {
@@ -611,7 +611,7 @@
       "args": [],
       "cron": "0 20 * * *",
       "log_path": "stock_data\\cognitive_agent.log",
-      "dept": "logistics",
+      "dept": "engineering",
       "bat_style": "timestamp"
     },
     {
@@ -624,7 +624,7 @@
       "args": [],
       "cron": "30 22 * * *",
       "log_path": "stock_data\\cognitive_agent.log",
-      "dept": "logistics",
+      "dept": "engineering",
       "bat_style": "timestamp"
     },
     {
@@ -637,7 +637,7 @@
       "args": [],
       "cron": "0 23 * * *",
       "log_path": "stock_data\\cognitive_agent.log",
-      "dept": "logistics",
+      "dept": "engineering",
       "bat_style": "simple"
     },
     {
@@ -649,7 +649,7 @@
       "command": "weekly_audit_agent.py",
       "args": [],
       "log_path": "stock_data\\cognitive_agent.log",
-      "dept": "logistics",
+      "dept": "engineering",
       "bat_style": "timestamp"
     },
     {

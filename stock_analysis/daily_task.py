@@ -294,15 +294,13 @@ def _normalize_holdings(raw: list[dict]) -> list[dict]:
 def _fallback_holdings() -> list[dict]:
     """硬编码后备持仓（与 portfolio.json 一致的应急备份）"""
     return [
-        {"code": "002156", "name": "通富微电", "shares": 100, "cost": 51.679, "sector": "半导体封测", "first_buy": "2026-04-27", "latest_buy": "2026-05-15"},
-        {"code": "300136", "name": "信维通信", "shares": 300, "cost": 111.145, "sector": "消费电子/射频", "first_buy": "2026-05-18", "latest_buy": "2026-05-22"},
-        {"code": "600498", "name": "烽火通信", "shares": 800, "cost": 57.132, "sector": "通信设备", "first_buy": "2026-05-20", "latest_buy": "2026-05-22"},
-        {"code": "002077", "name": "大港股份", "shares": 1700, "cost": 18.684, "sector": "半导体/EDA", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
-        {"code": "300058", "name": "蓝色光标", "shares": 800, "cost": 18.240, "sector": "AI营销/出海", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
-        {"code": "002050", "name": "三花智控", "shares": 300, "cost": 53.830, "sector": "", "first_buy": "2026-05-25", "latest_buy": "2026-05-25"},
-        {"code": "600183", "name": "生益科技", "shares": 400, "cost": 114.145, "sector": "", "first_buy": "2026-05-25", "latest_buy": "2026-05-25"},
+        {"code": "002077", "name": "大港股份", "shares": 1700, "cost": 18.554, "sector": "半导体/EDA", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
+        {"code": "600498", "name": "烽火通信", "shares": 800, "cost": 57.112, "sector": "通信设备", "first_buy": "2026-05-20", "latest_buy": "2026-05-22"},
+        {"code": "600183", "name": "生益科技", "shares": 200, "cost": 121.050, "sector": "", "first_buy": "2026-05-25", "latest_buy": "2026-05-26"},
+        {"code": "300136", "name": "信维通信", "shares": 700, "cost": 103.331, "sector": "消费电子/射频", "first_buy": "2026-05-18", "latest_buy": "2026-05-26"},
+        {"code": "002050", "name": "三花智控", "shares": 500, "cost": 48.833, "sector": "制冷控制件", "first_buy": "2026-05-14", "latest_buy": "2026-05-26"},
+        {"code": "300083", "name": "创世纪", "shares": 800, "cost": 10.960, "sector": "", "first_buy": "2026-05-26", "latest_buy": "2026-05-26"},
     ]
-
 def _market_prefix(code: str) -> str:
     """根据代码返回交易所前缀: sz 或 sh"""
     if code.startswith(("0", "3")):

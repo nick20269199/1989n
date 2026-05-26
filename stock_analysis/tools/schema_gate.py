@@ -67,7 +67,7 @@ def _is_nullish(value) -> bool:
     return False
 
 
-def validate_file(data_path: Path, schema: dict) -> list[dict]:
+def validate_file(data_path: Path, schema: dict, skip_freshness: bool = False) -> list[dict]:
     """用 schema 校验一个数据文件，返回违规列表。"""
     issues = []
     data = _read_file_content(data_path, schema)
@@ -160,7 +160,7 @@ def validate_file(data_path: Path, schema: dict) -> list[dict]:
                        "detail": f"顶层应为 dict 或 list, 实际 {type(data).__name__}"})
 
     # 保鲜检查
-    if freshness_hours > 0 and data_path.exists():
+    if not skip_freshness and freshness_hours > 0 and data_path.exists():
         elapsed = (datetime.now() - datetime.fromtimestamp(data_path.stat().st_mtime)).total_seconds()
         if elapsed > freshness_hours * 3600:
             issues.append({
@@ -230,14 +230,29 @@ def scan_all() -> dict:
         if not resolved_files:
             continue
 
-        for data_path in resolved_files:
-            issues = validate_file(data_path, schema)
-            if issues:
-                all_violations.append({
-                    "file": data_path.name,
-                    "issues": issues,
-                })
-            files_checked += 1
+        freshness_latest_only = schema.get("freshness_latest_only", False)
+        # Sort by mtime so latest_only picks the most recent
+        if freshness_latest_only and len(resolved_files) > 1:
+            resolved_files.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+            latest = resolved_files[0]
+            # Keep all files for validation, but only latest for freshness
+            for data_path in resolved_files:
+                issues = validate_file(data_path, schema, skip_freshness=(data_path != latest))
+                if issues:
+                    all_violations.append({
+                        "file": data_path.name,
+                        "issues": issues,
+                    })
+                files_checked += 1
+        else:
+            for data_path in resolved_files:
+                issues = validate_file(data_path, schema)
+                if issues:
+                    all_violations.append({
+                        "file": data_path.name,
+                        "issues": issues,
+                    })
+                files_checked += 1
 
     return {
         "files_checked": files_checked,

@@ -1,6 +1,7 @@
 {
   "front-office": ["engineering"],
   "engineering": [],
-  "intelligence": ["front-office", "logistics"],
-  "logistics": []
+  "intelligence": ["front-office", "engineering"],
+  "rd": ["engineering", "front-office"],
+  "reader": []
 }

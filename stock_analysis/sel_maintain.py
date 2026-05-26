@@ -20,10 +20,49 @@ from datetime import date, datetime, timezone, timedelta
 from pathlib import Path
 
 BASE = Path("D:/1989n/.claude/memory")
+STOCK_DATA = Path("D:/1989n/stock_data")
 TODAY = date.today()
 CST = timezone(timedelta(hours=8))
 
 fixed = {"frontmatter": 0, "ghost_refs": 0}
+
+
+def update_reading_status():
+    """刷新 reading_status.json — 读书郎部门状态。"""
+    try:
+        notes_dir = STOCK_DATA / "reading_notes"
+        note_files = list(notes_dir.glob("*.md"))
+        # Load existing index to get note titles
+        index_file = STOCK_DATA / "status" / "reading_index.json"
+        if index_file.exists():
+            import json
+            idx = json.loads(index_file.read_text(encoding="utf-8"))
+            note_list = idx.get("notes", [])
+        else:
+            note_list = []
+
+        latest_note = max(note_files, key=lambda f: f.stat().st_mtime) if note_files else None
+        last_reading = ""
+        if latest_note:
+            from datetime import datetime as dt
+            mtime = dt.fromtimestamp(latest_note.stat().st_mtime)
+            last_reading = mtime.strftime("%Y-%m-%d (%H:%M)")
+
+        reading_status = {
+            "department": "reading",
+            "timestamp": datetime.now(CST).isoformat(),
+            "health": "ok",
+            "notes_count": len(note_files),
+            "notes": [n.get("title") or Path(n.get("file", "")).stem or n.get("filename", "?") for n in note_list[-20:]],
+            "last_reading": last_reading,
+            "pattern": "text-to-trade-penetration",
+            "issues": [],
+        }
+        status_file = STOCK_DATA / "status" / "reading_status.json"
+        status_file.write_text(json.dumps(reading_status, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"[maintain] reading_status.json 已刷新 ({len(note_files)} 篇笔记)")
+    except Exception as e:
+        print(f"[maintain] reading_status 更新失败: {e}")
 
 
 def fix_frontmatter():
@@ -74,6 +113,7 @@ def main():
     print(f"[maintain] === SEL Maintain {TODAY} ===")
     fix_frontmatter()
     fix_ghost_refs()
+    update_reading_status()
 
     total = sum(fixed.values())
     print(f"[maintain] 修复汇总: frontmatter={fixed['frontmatter']} "
@@ -84,6 +124,9 @@ def main():
     if status_file.exists():
         import json
         status = json.loads(status_file.read_text(encoding="utf-8"))
+        # 兼容两种格式：原生 pipeline 结构 vs publish_status 精简结构
+        if "pipeline" not in status:
+            status["pipeline"] = {}
         status["pipeline"]["maintain"] = {
             "status": "ok",
             "at": TODAY.isoformat(),

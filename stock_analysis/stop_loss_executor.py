@@ -196,7 +196,8 @@ def stop_loss_no_reason(holding: dict, current_price: float,
         "safety_checks": safety_checks,
         "trigger_info": {"cost": cost, "current": current_price,
                          "triggered_pct": round(triggered_pct, 1),
-                         "hard_stop_pct": hard_stop_pct},
+                         "hard_stop_pct": hard_stop_pct,
+                         "price_as_of": datetime.now().isoformat()},
     }
 
     if not stop_triggered:
@@ -286,6 +287,7 @@ def _record_execution(result: dict, code: str = ""):
         "status": result["status"],
         "reason": result["reason"],
         "trigger_info": result.get("trigger_info", {}),
+        "price_as_of": result.get("trigger_info", {}).get("price_as_of", datetime.now().isoformat()),
     })
     if len(entries) > 500:
         entries = entries[-500:]

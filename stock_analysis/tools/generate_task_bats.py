@@ -256,7 +256,7 @@ _META = {}
 
 def _sort_key(task: dict) -> tuple:
     """按部门 + cron 时间排序"""
-    dept_order = {"front-office": 0, "intelligence": 1, "engineering": 2, "logistics": 3, "finance": 4}
+    dept_order = {"front-office": 0, "intelligence": 1, "engineering": 2, "rd": 3, "reader": 4}
     dept = task.get("dept", "zzz")
     cron = task.get("cron", "")
     if isinstance(cron, list):
@@ -534,7 +534,7 @@ def main():
 def generate_summary(meta: dict, tasks: list[dict]) -> str:
     """生成 tasks_summary.md"""
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
-    dept_names = {"front-office": "前厅部", "intelligence": "情报部", "engineering": "工程部", "logistics": "后勤部", "finance": "财务部"}
+    dept_names = {"front-office": "前厅部", "intelligence": "情报部", "engineering": "工程部", "rd": "研发部", "reader": "读书郎"}
 
     lines = [
         f"# 定时任务一览 | {now}",

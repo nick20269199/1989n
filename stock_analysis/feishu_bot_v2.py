@@ -10,6 +10,7 @@ v2 改进:
 
 用法: python feishu_bot_v2.py
 """
+import atexit
 import json
 import logging
 import os
@@ -228,8 +229,44 @@ def _build_client() -> Client:
     )
 
 
+def _heartbeat_loop(interval: int = 60):
+    """后台心跳线程 — 每60秒更新一次 state.json，防守护进程误判。"""
+    global _reconnect_count
+    while True:
+        try:
+            STATE_FILE.write_text(json.dumps({
+                "start_time": _start_time,
+                "reconnect_count": _reconnect_count,
+                "last_heartbeat": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            }, ensure_ascii=False), "utf-8")
+        except Exception:
+            pass
+        time.sleep(interval)
+
+
+def _atexit_cleanup():
+    """atexit 回调 — 进程退出时记录日志，捕获静默崩溃。"""
+    import traceback
+    logger.error("!!! Bot v2 process EXIT at %s (reconnect_count=%s)",
+                 datetime.now().strftime("%H:%M:%S"), _reconnect_count)
+    # 写 fallback 日志，防止日志文件未刷新
+    _fallback_log(f"EXIT at {datetime.now().isoformat()}, reconnect={_reconnect_count}")
+
+
+def _fallback_log(msg: str):
+    """写入 fallback 日志文件（无依赖，保证总能落盘）。"""
+    try:
+        with open(PROJECT_DIR / "bot_v2_exit.log", "a", encoding="utf-8") as f:
+            f.write(f"{msg}\n")
+    except Exception:
+        pass
+
+
 def main():
     global _start_time, _reconnect_count
+
+    atexit.register(_atexit_cleanup)
+    _fallback_log(f"START at {datetime.now().isoformat()}")
 
     log_file = os.environ.get("BOT_V2_LOG_FILE") or str(PROJECT_DIR / "bot_v2.log")
     logging.basicConfig(
@@ -245,9 +282,12 @@ def main():
     _start_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     logger.info("=== Feishu Bot v2 starting at %s ===", _start_time)
 
+    # 启动心跳线程 — 每60秒更新 state.json
+    threading.Thread(target=_heartbeat_loop, daemon=True, name="heartbeat").start()
+
     # 启动通知
     try:
-        send_text(FEISHU_BOT_CHAT_ID, f"[Bot v2] 上线 {_start_time}\n6部门路由已激活: 前厅/情报/工程/财务/研发/读书郎")
+        send_text(FEISHU_BOT_CHAT_ID, f"[Bot v2] 上线 {_start_time}\n5部门路由已激活: 前厅/情报/工程/研发/读书郎")
     except Exception:
         logger.warning("启动通知发送失败")
 
@@ -266,7 +306,7 @@ def main():
             logger.info("Bot v2 stopped by user")
             _save_state()
             sys.exit(0)
-        except Exception:
+        except BaseException:
             _reconnect_count += 1
             logger.exception("WebSocket disconnected (count=%d), reconnecting in %ds...",
                              _reconnect_count, delay)

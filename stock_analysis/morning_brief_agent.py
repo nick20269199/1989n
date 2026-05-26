@@ -35,6 +35,7 @@ from morning_brief import (
 )
 from cognitive_engine import load_context, deepseek_reason, send_output, save_output
 from vv_insights import load_vv_insights, format_vv_for_prompt
+from ai_news_pipeline import NewsThemeDriller, format_brief_section
 from config import STOCK_DATA_DIR, PORTFOLIO_FILE
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s %(message)s")
@@ -439,7 +440,9 @@ def build_market_prompt(
         if show:
             lines.append(f"   {show}")
         if matched_sectors and len(matched_sectors) <= 5:
-            lines.append(f"   关联持仓: {' '.join(matched_sectors)}")
+            safe_sectors = [s for s in matched_sectors if s]
+            if safe_sectors:
+                lines.append(f"   关联持仓: {' '.join(safe_sectors)}")
         else:
             lines.append(f"   标的: {sstr}")
         if i >= 25:
@@ -452,7 +455,9 @@ def build_market_prompt(
     if news_data.get("topics"):
         lines.append("## 七、热点主题")
         for t in news_data["topics"][:5]:
-            lines.append(f"- {t['topic']}: {len(t['news'])}条新闻, {len(t['stocks'])}只标的")
+            topic_news = t.get("news") or []
+            topic_stocks = t.get("stocks") or []
+            lines.append(f"- {t['topic']}: {len(topic_news)}条新闻, {len(topic_stocks)}只标的")
         lines.append("")
 
     # ── 八、公告精选 ──
@@ -542,6 +547,18 @@ def main():
 
     # 情报部侦察信号（intel_recon 08:32产出，包含新闻→概念→VCP共振信号）
     recon_report = ""
+
+    # AI 新闻→题材→个股穿透（对标 XyStock AI资讯 个股模式）
+    ai_news_section = ""
+    try:
+        driller = NewsThemeDriller()
+        ai_result = driller.run()
+        if ai_result.get("themes"):
+            ai_news_section = format_brief_section(ai_result)
+            logger.info(f"AI新闻穿透: {ai_result['total_themes']}题材, {ai_result['total_news']}条新闻")
+    except Exception as e:
+        logger.warning(f"AI新闻穿透异常 (非关键): {e}")
+
     try:
         intel_dir = STOCK_DATA / "intel"
         date_str = datetime.now(CST).strftime("%Y-%m-%d")
@@ -597,6 +614,11 @@ def main():
         hot_trend=hot_trend, news_themes=news_themes,
         vv_prompt=vv_prompt, recon_report=recon_report,
     )
+
+    # 追加 AI 新闻穿透板块（对标 XyStock 个股模式）
+    if ai_news_section:
+        data_block += "\n\n" + ai_news_section
+        logger.info("已追加 AI 新闻穿透数据到 prompt")
 
     system_prompt = f"""你是专业 A 股盘前分析师。你的核心能力是：
 1. **刷选重要消息** — 大量新闻里只有3-5条真正影响今日盘面，甄别出来

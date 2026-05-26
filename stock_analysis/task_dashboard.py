@@ -115,7 +115,7 @@ def get_all_tasks() -> list[dict]:
 def get_dept_health() -> dict:
     """读取各部门健康状态。"""
     health = {}
-    for dept in ["front-office", "engineering", "intelligence", "logistics"]:
+    for dept in ["front-office", "engineering", "intelligence", "rd", "reader"]:
         status = read_other_dept(dept)
         if status:
             h = status.get("health", "unknown")
@@ -134,9 +134,10 @@ DEPT_DATA_FILES = {
                "hot_stocks.json", "morning_brief_agent_latest.json", "call_auction_*.json",
                "analysis_30min_*.json", "analysis_overnight_*.json", "scan_*.json", "recon_report_*.md",
                "trade_plans/plan_*.json", "vv_radar.db", "position_check.json"],
-    "工程部": ["_lint_history.json"],
+    "工程部": ["_lint_history.json", "task_dashboard.md"],
     "情报部": ["intel/intel_latest.json"],
-    "后勤部": ["task_dashboard.md"],
+    "研发部": ["status/rd_ideas.json"],
+    "读书郎": ["status/reading_index.json"],
     "其他": None,  # None = 不在前四部门的全部文件
 }
 

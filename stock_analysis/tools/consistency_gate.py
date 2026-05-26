@@ -50,16 +50,25 @@ def check_portfolio_in_stock_list() -> list[dict]:
         return issues
 
     all_port_codes = set()
-    for group, label in [("holdings", "持仓"), ("cleared", "已清仓")]:
-        for item in port.get(group, []):
-            code = item.get("code", "")
-            all_port_codes.add(code)
-            if code not in stock_codes:
-                issues.append({
-                    "check": "portfolio_in_stock_list",
-                    "status": "violation",
-                    "detail": f"{label} {code} {item.get('name','')} 未在 A 股全列表中找到",
-                })
+    for item in port.get("holdings", []):
+        code = item.get("code", "")
+        all_port_codes.add(code)
+        if code not in stock_codes:
+            issues.append({
+                "check": "portfolio_in_stock_list",
+                "status": "violation",
+                "detail": f"持仓 {code} {item.get('name','')} 未在 A 股全列表中找到",
+            })
+    # 已清仓股票可能已退市/更名，不强制检查，仅 advisory 提示
+    for item in port.get("cleared", []):
+        code = item.get("code", "")
+        all_port_codes.add(code)
+        if code not in stock_codes:
+            issues.append({
+                "check": "portfolio_in_stock_list",
+                "status": "advisory",
+                "detail": f"已清仓 {code} {item.get('name','')} 未在 A 股列表中（可能已退市/更名）",
+            })
 
     if not issues:
         issues.append({"check": "portfolio_in_stock_list", "status": "pass",

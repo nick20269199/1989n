@@ -1,0 +1,334 @@
+<group1 name="技术指标公式">
+    <group2 name="超买超卖型">
+        <index id="KDJ" desc="经典KDJ" name="KDJ" kind="KDJ" password="" hotkey="KDJ" flag="2686975" content="RSV:=(CLOSE-LLV(LOW,N))/(HHV(HIGH,N)-LLV(LOW,N))*100;&#x0D;K:SMA(RSV,M1,1);&#x0D;D:SMA(K,M2,1);&#x0D;J:3*K-2*D;" help="1.指标&gt;80 时，回档机率大；指标&lt;20时，反弹机率大；&#x0A;&#x0D;&#x0A;2.K在20左右向上交叉D时，视为买进信号；&#x0A;&#x0D;&#x0A;3.K在80左右向下交叉D时，视为卖出信号；&#x0A;&#x0D;&#x0A;4.J&gt;100 时，股价易反转下跌；J&lt;0 时，股价易反转上涨；&#x0A;&#x0D;&#x0A;5.KDJ 波动于50左右的任何信号，其作用不大。&#x0A;&#x0D;&#x0A;" paramhelp="paramhelp???" time="1292496449" often="1" protected="0" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="90.000000" default="9.000000" step="0.000000" />
+            <param name="m1" desc="" min="2.000000" max="30.000000" default="3.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="30.000000" default="3.000000" step="0.000000" />
+            <line y="20.000000" />
+            <line y="50.000000" />
+            <line y="80.000000" />
+        </index>
+        <index id="RSI" desc="相对强弱" kind="0" password="" hotkey="" flag="2621443" time="1292496449" often="0" protected="0" indexStockType="0" xday="-1" permitUser="" content="LC:=REF(CLOSE,1);&#x0D;&#x0A;RSI1:SMA(MAX(CLOSE-LC,0),N1,1)/SMA(ABS(CLOSE-LC),N1,1)*100;&#x0D;&#x0A;RSI2:SMA(MAX(CLOSE-LC,0),N2,1)/SMA(ABS(CLOSE-LC),N2,1)*100;&#x0D;&#x0A;RSI3:SMA(MAX(CLOSE-LC,0),N3,1)/SMA(ABS(CLOSE-LC),N3,1)*100;" help="1.RSI&gt;80 为超买，RSI&lt;20 为超卖；&#x0A;&#x0D;&#x0A;2.RSI 以50为中界线，大于50视为多头行情，小于50视为空头行情；&#x0A;&#x0D;&#x0A;3.RSI 在80以上形成Ｍ头或头肩顶形态时，视为向下反转信号；&#x0A;&#x0D;&#x0A;4.RSI 在20以下形成Ｗ底或头肩底形态时，视为向上反转信号；&#x0A;&#x0D;&#x0A;5.RSI 向上突破其高点连线时，买进；RSI 向下跌破其低点连线时，卖出。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n1" desc="" unit="" min="2.000000" max="120.000000" default="6.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="n2" desc="" unit="" min="2.000000" max="250.000000" default="12.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="n3" desc="" unit="" min="2.000000" max="500.000000" default="24.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="MTM" desc="动量线" password="" hotkey="" flag="2652159" time="1218851989" content="MTM:CLOSE-REF(CLOSE,N);&#x0D;&#x0A;MAMTM:MA(MTM,M);" help="MTM线　:当日收盘价与N日前的收盘价的差；&#x0A;&#x0D;&#x0A;MTMMA线:对上面的差值求N日移动平均；&#x0A;&#x0D;&#x0A;参数：N 间隔天数，也是求移动平均的天数，一般取6&#x0A;&#x0D;&#x0A;用法：&#x0A;&#x0D;&#x0A;1.MTM从下向上突破MTMMA，买入信号；&#x0A;&#x0D;&#x0A;2.MTM从上向下跌破MTMMA，卖出信号；&#x0A;&#x0D;&#x0A;3.股价续创新高，而MTM未配合上升，意味上涨动力减弱；&#x0A;&#x0D;&#x0A;4.股价续创新低，而MTM未配合下降，意味下跌动力减弱；&#x0A;&#x0D;&#x0A;5.股价与MTM在低位同步上升，将有反弹行情；反之，从高位同步下降，将有回落走势。&#x0A;&#x0D;&#x0A;" often="0" protected="0" EffectiveTime="" kind="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="2.000000" max="120.000000" default="12.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m" desc="" unit="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="WR" desc="威廉指标" password="" hotkey="" flag="2097154" time="1220426080" content="WR1:100*(HHV(HIGH,N)-CLOSE)/(HHV(HIGH,N)-LLV(LOW,N));&#x0D;WR2:100*(HHV(HIGH,N1)-CLOSE)/(HHV(HIGH,N1)-LLV(LOW,N1));" help="1.WR 波动于0～100，0 置于顶部，100 置于底部；&#x0A;&#x0D;&#x0A;2.本指标以50为中轴线，高于50视为股价转强；低于50视为股价转弱；&#x0A;&#x0D;&#x0A;3.本指标高于20后再度向下跌破20卖出；低于80后再度向上突破80买进；&#x0A;&#x0D;&#x0A;4.WR 连续触顶3～4次，股价向下反转机率大；连续触底3～4次，股价向上反转机率大。&#x0A;" often="0" protected="0" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="100.000000" default="10.000000" step="0.000000" />
+            <param name="n1" desc="" min="2.000000" max="100.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="CCI" desc="商品路径指标" kind="0" password="" hotkey="" flag="2127871" time="1220426141" often="0" protected="0" indexStockType="0" xday="-1" permitUser="" content="TYP:=(HIGH+LOW+CLOSE)/3;&#x0D;&#x0A;CCI:(TYP-MA(TYP,N))/(0.015*AVEDEV(TYP,N));" help="1.CCI 为正值时，视为多头市场；为负值时，视为空头市场；&#x0A;&#x0D;&#x0A;2.常态行情时，CCI 波动于±100 的间；强势行情，CCI 会超出±100 ；&#x0A;&#x0D;&#x0A;3.CCI&gt;100 时，买进，直到CCI&lt;100 时，卖出；&#x0A;&#x0D;&#x0A;4.CCI&lt;-100 时，放空，直到CCI&gt;-100 时，回补。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n" desc="" unit="" min="2.000000" max="100.000000" default="14.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <line y="-100.000000" />
+            <line y="0.000000" />
+            <line y="100.000000" />
+        </index>
+        <index id="ROC" desc="变动率指标" password="" hotkey="" flag="2097154" time="1220426219" often="0" protected="0" indexStockType="0" content="ROC:100*(CLOSE-REF(CLOSE,N))/REF(CLOSE,N);&#x0D;MAROC:MA(ROC,M);" help="1.本指标的超买超卖界限值随个股不同而不同，使用者应自行调整；&#x0A;&#x0D;&#x0A;2.本指标的超买超卖范围，一般介于±6.5之间；&#x0A;&#x0D;&#x0A;3.本指标用法请参考MTM 指标用法；&#x0A;&#x0D;&#x0A;4.本指标可设参考线。&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="120.000000" default="12.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" />
+            <extraY y="-6.500000" />
+            <extraY y="0.000000" />
+            <extraY y="6.500000" />
+        </index>
+        <index id="MFI" desc="资金流量指标" password="" hotkey="" flag="2097154" time="1220427198" content="TYP := (HIGH + LOW + CLOSE)/3;V1:=SUM(IF(TYP&gt;REF(TYP,1),TYP*VOL,0),N)/SUM(IF(TYP&lt;REF(TYP,1),TYP*VOL,0),N);MFI:100-(100/(1+V1));" help="1.MFI&gt;80 为超买，当其回头向下跌破80 时，为短线卖出时机；&#x0A;&#x0D;&#x0A;2.MFI&lt;20 为超卖，当其回头向上突破20 时，为短线买进时机；&#x0A;&#x0D;&#x0A;3.MFI&gt;80，而产生背离现象时，视为卖出信号；&#x0A;&#x0D;&#x0A;4.MFI&lt;20，而产生背离现象时，视为买进信号。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="120.000000" default="14.000000" step="0.000000" />
+            <param name="n2" desc="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="KD" desc="随机指标" password="" hotkey="" flag="2097154" time="1220427323" content="RSV:=(CLOSE-LLV(LOW,N))/(HHV(HIGH,N)-LLV(LOW,N))*100;K:SMA(RSV,M1,1);D:SMA(K,M2,1);" help="" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="100.000000" default="9.000000" step="0.000000" />
+            <param name="m1" desc="" min="2.000000" max="100.000000" default="3.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="100.000000" default="3.000000" step="0.000000" />
+            <line y="20.000000" />
+            <line y="50.000000" />
+            <line y="80.000000" />
+        </index>
+        <index id="SKDJ" desc="慢速随机指标" password="" hotkey="" flag="2097154" time="1220427689" content="LOWV:=LLV(LOW,N);HIGHV:=HHV(HIGH,N);RSV:=EMA((CLOSE-LOWV)/(HIGHV-LOWV)*100,M);K:EMA(RSV,M);D:MA(K,M);" help="1.指标&gt;80 时，回档机率大；指标&lt;20 时，反弹机率大；&#x0A;&#x0D;&#x0A;2.K在20左右向上交叉D时，视为买进信号； &#x0A;&#x0D;&#x0A;3.K在80左右向下交叉D时，视为卖出信号；&#x0A;&#x0D;&#x0A;4.SKDJ波动于50左右的任何讯号，其作用不大。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="90.000000" default="9.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="30.000000" default="3.000000" step="0.000000" />
+            <line y="20.000000" />
+            <line y="50.000000" />
+            <line y="80.000000" />
+        </index>
+        <index id="UDL" desc="引力线" password="" hotkey="" flag="2097154" time="1220427776" content="UDL:(MA(CLOSE,N1)+MA(CLOSE,N2)+MA(CLOSE,N3)+MA(CLOSE,N4))/4;MAUDL:MA(UDL,M);" help="1.本指标的超买超卖界限值随个股不同而不同，使用者应自行调整；&#x0A;&#x0D;&#x0A;2.使用时，可列出一年以上走势图，观察其常态性分布范围，然&#x0A;&#x0D;&#x0A;  后用参考线设定其超买超卖范围。通常UDL 高于某个极限时，&#x0A;&#x0D;&#x0A;  短期股价会下跌；UDL 低于某个极限时，短期股价会上涨；&#x0A;&#x0D;&#x0A;3.本指标可设参考线。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n1" desc="" min="2.000000" max="20.000000" default="3.000000" step="0.000000" />
+            <param name="n2" desc="" min="2.000000" max="30.000000" default="5.000000" step="0.000000" />
+            <param name="n3" desc="" min="2.000000" max="60.000000" default="10.000000" step="0.000000" />
+            <param name="n4" desc="" min="2.000000" max="120.000000" default="20.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="10.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="LWR" desc="LWR威廉指标" password="" hotkey="" flag="2127871" time="1220427967" content="RSV:= (HHV(HIGH,N)-CLOSE)/(HHV(HIGH,N)-LLV(LOW,N))*100;&#x0D;&#x0A;LWR1:SMA(RSV,M1,1);&#x0D;&#x0A;LWR2:SMA(LWR1,M2,1);" help="" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="1.000000" max="100.000000" default="9.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m1" desc="" unit="" min="2.000000" max="40.000000" default="3.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m2" desc="" unit="" min="2.000000" max="40.000000" default="3.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="BIAS_QL" desc="乖离率-钱龙版" password="" hotkey="" flag="2097154" time="1220428056" content="BIAS :(CLOSE-MA(CLOSE,N))/MA(CLOSE,N)*100;BIASMA :MA(BIAS,M);" help="" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="250.000000" default="6.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="250.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="BIAS" desc="乖离率" password="" hotkey="" flag="2127871" time="1220428171" content="BIAS1 :(CLOSE-MA(CLOSE,N1))/MA(CLOSE,N1)*100;&#x0D;&#x0A;BIAS2 :(CLOSE-MA(CLOSE,N2))/MA(CLOSE,N2)*100;&#x0D;&#x0A;BIAS3 :(CLOSE-MA(CLOSE,N3))/MA(CLOSE,N3)*100;" help="1.本指标的乖离极限值随个股不同而不同，使用者可利用参考线设定，固定其乖离范围；&#x0A;&#x0D;&#x0A;2.当股价的正乖离扩大到一定极限时，股价会产生向下拉回的作用力；&#x0A;&#x0D;&#x0A;3.当股价的负乖离扩大到一定极限时，股价会产生向上拉升的作用力；&#x0A;&#x0D;&#x0A;4.本指标可设参考线。&#x0A;&#x0D;&#x0A;" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n1" desc="" unit="" min="2.000000" max="250.000000" default="6.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="n2" desc="" unit="" min="2.000000" max="250.000000" default="12.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="n3" desc="" unit="" min="2.000000" max="250.000000" default="24.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="BIAS36" desc="三六乖离" password="" hotkey="" flag="2097154" time="1220428276" content="BIAS36:MA(CLOSE,3)-MA(CLOSE,6);BIAS612:MA(CLOSE,6)-MA(CLOSE,12);MABIAS:MA(BIAS36,M);" help="1.本指标的乖离极限值随个股不同而不同，使用者可利用参考线设定，固定其乖离范围。※一般6-12BIAS信号的可靠度比3-6BIAS佳；&#x0A;&#x0D;&#x0A;2.当股价的正乖离扩大到一定极限时，股价会产生向下拉回的作用力；&#x0A;&#x0D;&#x0A;3.当股价的负乖离扩大到一定极限时，股价会产生向上拉升的作用力；&#x0A;&#x0D;&#x0A;4.本指标可设参考线。&#x0A;" EffectiveTime="">
+            <param name="m" desc="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="ADTM" desc="动态买卖气指标" password="" hotkey="" flag="2097154" time="1220428547" content="DTM:=IF(OPEN&lt;=REF(OPEN,1),0,MAX((HIGH-OPEN),(OPEN-REF(OPEN,1))));DBM:=IF(OPEN&gt;=REF(OPEN,1),0,MAX((OPEN-LOW),(OPEN-REF(OPEN,1))));STM:=SUM(DTM,N);SBM:=SUM(DBM,N);ADTM:IF(STM&gt;SBM,(STM-SBM)/STM,IF(STM=SBM,0,(STM-SBM)/SBM));MAADTM:MA(ADTM,M);" help="1.该指标在+1到-1之间波动;&#x0A;&#x0D;&#x0A;2.低于-0.5时为很好的买入点,高于+0.5时需注意风险.&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="100.000000" default="23.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="100.000000" default="8.000000" step="0.000000" />
+        </index>
+        <index id="ATR" desc="真实波幅" password="" hotkey="" flag="2097154" time="1220428784" content="TR:MAX(MAX((HIGH-LOW),ABS(REF(CLOSE,1)-HIGH)),ABS(REF(CLOSE,1)-LOW));ATR:MA(TR,N);" help="算法：今日振幅、今日最高与昨收差价、今日最低与昨收差价中的最大值，为真实波幅，求真实波幅的N日移动平均&#x0A;&#x0D;&#x0A;参数：N　天数，一般取14&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="300.000000" default="14.000000" step="0.000000" />
+        </index>
+        <index id="DKX" desc="多空线" password="" hotkey="" flag="2097154" time="1220428840" content="MID:=(3*CLOSE+LOW+OPEN+HIGH)/6;DKX:(20*MID+19*REF(MID,1)+18*REF(MID,2)+17*REF(MID,3)+16*REF(MID,4)+15*REF(MID,5)+14*REF(MID,6)+13*REF(MID,7)+12*REF(MID,8)+11*REF(MID,9)+10*REF(MID,10)+9*REF(MID,11)+8*REF(MID,12)+7*REF(MID,13)+6*REF(MID,14)+5*REF(MID,15)+4*REF(MID,16)+3*REF(MID,17)+2*REF(MID,18)+REF(MID,20))/210;MADKX:MA(DKX,M);" help="1、当多空线上穿其均线时为买入信号;&#x0A;&#x0D;&#x0A;2、当多空线下穿其均线时为卖出信号。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="m" desc="" min="2.000000" max="250.000000" default="10.000000" step="0.000000" />
+        </index>
+        <index id="TAPI" desc="加权指数成交值" password="" hotkey="" flag="2097154" time="1220428900" content="TAPI:AMOUNT/INDEXC;MATAIP:MA(TAPI,M);" help="1.先界定TAPI长期以来经常性的高低极限值，当TAPI触及顶端极&#x0A;&#x0D;&#x0A;  限时，股价可能形成头部；当TAPI触及底端极限时，股价可能&#x0A;&#x0D;&#x0A;  形成底部；&#x0A;&#x0D;&#x0A;2.行情上涨，TAPI应伴随上涨；若不升反跌，则近期内将面临回档；&#x0A;&#x0D;&#x0A;3.先前大盘量缩下跌，当其回升时，TAPI值却持续下跌，可视为买入信号。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="m" desc="" min="2.000000" max="200.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="VOLFS" desc="分时走势的成交量" kind="0" password="" hotkey="" flag="2193407" time="1218801952" often="0" protected="0" indexStockType="0" xday="-1" permitUser="" content="VOL,VOLSTICK,COLORYELLOW;" help="分时走势的成交量" EffectiveTime="" />
+    </group2>
+    <group2 name="趋势型">
+        <index id="MACD" desc="平滑异同平均" password="" hotkey="" flag="2193407" time="1255694677" content="DIF:EMA(CLOSE,SHORT)-EMA(CLOSE,LONG);&#x0D;DEA:EMA(DIF,MID);&#x0D;MACD:(DIF-DEA)*2,COLORSTICK;" help="DIFF线　收盘价短期、长期指数平滑移动平均线间的差&#x0A;&#x0D;&#x0A;DEA线　 DIFF线的M日指数平滑移动平均线&#x0A;&#x0D;&#x0A;MACD线　DIFF线与DEA线的差，彩色柱状线&#x0A;&#x0D;&#x0A;参数：SHORT(短期)、LONG(长期)、M 天数，一般为12、26、9&#x0A;&#x0D;&#x0A;用法：&#x0A;&#x0D;&#x0A;1.DIFF、DEA均为正，DIFF向上突破DEA，买入信号。&#x0A;&#x0D;&#x0A;2.DIFF、DEA均为负，DIFF向下跌破DEA，卖出信号。&#x0A;&#x0D;&#x0A;3.DEA线与K线发生背离，行情反转信号。&#x0A;&#x0D;&#x0A;4.分析MACD柱状线，由红变绿(正变负)，卖出信号；由绿变红，买入信号&#x0A;&#x0D;&#x0A;" often="1" protected="0" EffectiveTime="">
+            <param name="short" desc="" min="2.000000" max="200.000000" default="12.000000" step="0.000000" />
+            <param name="long" desc="" min="2.000000" max="200.000000" default="26.000000" step="0.000000" />
+            <param name="mid" desc="" min="2.000000" max="200.000000" default="9.000000" step="0.000000" />
+        </index>
+        <index id="ASI" desc="振动升降指标" password="" hotkey="" flag="2097154" time="1292986778" often="0" protected="0" indexStockType="0" content="LC:=REF(CLOSE,1);&#x0D;&#x0A;AA:=ABS(HIGH-LC);&#x0D;&#x0A;BB:=ABS(LOW-LC);&#x0D;&#x0A;CC:=ABS(HIGH-REF(LOW,1));&#x0D;&#x0A;DD:=ABS(LC-REF(OPEN,1));&#x0D;&#x0A;R:=IF(AA&gt;BB AND AA&gt;CC,AA+BB/2+DD/4,IF(BB&gt;CC AND BB&gt;AA,BB+AA/2+DD/4,CC+DD/4));&#x0D;&#x0A;X:=(CLOSE-LC+(CLOSE-OPEN)/2+LC-REF(OPEN,1));&#x0D;&#x0A;SI1:=16*X/R*MAX(AA,BB);&#x0D;&#x0A;ASI:SUM(SI1,0);&#x0D;&#x0A;MA6:MA(ASI,6);" help="1.ASI 又名「实质线」，是一条比收盘价线更能代表真实行情的曲线；&#x0D;&#x0A;&#x0A;2.ASI 突破前一波高点后，第二天股价必突破前一波高点；&#x0A;&#x0D;&#x0A;3.ASI 跌破前一波低点后，第二天股价必跌破前一波低点；&#x0D;&#x0A;&#x0A;4.ASI 一般与股价走势维持同步波动，并非每一次行情都有领先&#x0A;  作用，&#x0D;&#x0A;因此，使用者必须花费一些时间搜寻产生领先信号的个股。" EffectiveTime="" />
+        <index id="DMI" desc="趋向指标" password="" hotkey="" flag="2127871" time="1292497520" often="0" protected="0" content="TR:=EMA(MAX(MAX(HIGH-LOW,ABS(HIGH-REF(CLOSE,1))),ABS(REF(CLOSE,1)-LOW)),N);&#x0D;&#x0A;HD :=HIGH-REF(HIGH,1);&#x0D;&#x0A;LD :=REF(LOW,1)-LOW;&#x0D;&#x0A;DMP:=EMA(IF(HD&gt;0 AND HD&gt;LD,HD,0),N);&#x0D;&#x0A;DMM:=EMA(IF(LD&gt;0 AND LD&gt;HD,LD,0),N);&#x0D;&#x0A;PDI: DMP*100/TR;&#x0D;&#x0A;MDI: DMM*100/TR;&#x0D;&#x0A;ADX: EMA(ABS(MDI-PDI)/(MDI+PDI)*100,M);&#x0D;&#x0A;ADXR:EMA(ADX,M);" help="用法：市场行情趋向明显时，指标效果理想。&#x0A;&#x0D;&#x0A;PDI(上升方向线)    MDI(下降方向线)  ADX(趋向平均值)&#x0A;&#x0D;&#x0A;1.PDI线从下向上突破MDI线，显示有新多头进场，为买进信号；&#x0A;&#x0D;&#x0A;2.PDI线从上向下跌破MDI线，显示有新空头进场，为卖出信号；&#x0A;&#x0D;&#x0A;3.ADX值持续高于前一日时，市场行情将维持原趋势；&#x0A;&#x0D;&#x0A;4.ADX值递减，降到20以下，且横向行进时，市场气氛为盘整；&#x0A;&#x0D;&#x0A;5.ADX值从上升倾向转为下降时，表明行情即将反转。&#x0A;&#x0D;&#x0A;参数：N　统计天数； M  间隔天数，一般为14、6&#x0A;" EffectiveTime="" kind="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="2.000000" max="90.000000" default="14.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m" desc="" unit="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="DMA" desc="平均差" password="" hotkey="" flag="2097154" time="1220423161" content="DIF:MA(CLOSE,N1)-MA(CLOSE,N2);&#x0D;AMA:MA(DIF,M);" help="1.DMA 向上交叉其平均线时，买进；&#x0A;&#x0D;&#x0A;2.DMA 向下交叉其平均线时，卖出；&#x0A;&#x0D;&#x0A;3.DMA 的交叉信号比MACD、TRIX 略快；&#x0A;&#x0D;&#x0A;4.DMA 与股价产生背离时的交叉信号，可信度较高；&#x0A;&#x0D;&#x0A;5.DMA、MACD、TRIX 三者构成一组指标群，互相验证。&#x0A;&#x0D;&#x0A;" often="0" protected="0" EffectiveTime="">
+            <param name="n1" desc="" min="2.000000" max="60.000000" default="10.000000" step="0.000000" />
+            <param name="n2" desc="" min="2.000000" max="250.000000" default="50.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="100.000000" default="10.000000" step="0.000000" />
+        </index>
+        <index id="TRIX" desc="三重指数平均线" password="" hotkey="" flag="2127871" time="1220424297" content="TR:=EMA(EMA(EMA(CLOSE,N),N),N);&#x0D;&#x0A;TRIX:(TR-REF(TR,1))/REF(TR,1)*100;&#x0D;&#x0A;MATRIX:MA(TRIX,9) ;" help="1.TRIX由下往上交叉其平均线时，为长期买进信号；&#x0A;&#x0D;&#x0A;2.TRIX由上往下交叉其平均线时，为长期卖出信号；&#x0A;&#x0D;&#x0A;3.DMA、MACD、TRIX 三者构成一组指标群，互相验证。&#x0A;" often="0" protected="0" EffectiveTime="" kind="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="2.000000" max="100.000000" default="12.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m" desc="" unit="" min="2.000000" max="100.000000" default="9.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="EMV" desc="简易波动指标" password="" hotkey="" flag="2127871" time="1220425299" content="VOLUME1:=MA(VOL,N)/VOL;&#x0D;&#x0A;MID:=100*(HIGH+LOW-REF(HIGH+LOW,1))/(HIGH+LOW);&#x0D;&#x0A;EMV:MA(MID*VOLUME1*(HIGH-LOW)/MA(HIGH-LOW,N),N);&#x0D;&#x0A;MAEMV:MA(EMV,M);" help="1.EMV 由下往上穿越0 轴时，视为中期买进信号；&#x0A;&#x0D;&#x0A;2.EMV 由上往下穿越0 轴时，视为中期卖出信号；&#x0A;&#x0D;&#x0A;3.EMV 的平均线穿越0 轴，产生假信号的机会较少；&#x0A;&#x0D;&#x0A;4.当ADX 低于±DI时，本指标失去效用；&#x0A;&#x0D;&#x0A;5.须长期使用EMV 指标才能获得最佳利润。&#x0A;&#x0D;&#x0A;" often="0" protected="0" EffectiveTime="" kind="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="2.000000" max="90.000000" default="14.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m" desc="" unit="" min="2.000000" max="60.000000" default="9.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <line y="0.000000" />
+        </index>
+        <index id="CHO" desc="佳庆指标" password="" hotkey="" flag="2097154" time="1220429013" content="MID:=SUM(VOL*(2*CLOSE-HIGH-LOW)/(HIGH+LOW),0);CHO:MA(MID,N1)-MA(MID,N2);MACHO:MA(CHO,M);" help="1.CHO 曲线产生急促的「凸起」时，代表行情即将向上或向下反转；&#x0A;&#x0D;&#x0A;2.股价&gt;90 天平均线，CHO由负转正时，买进；&#x0A;&#x0D;&#x0A;3.股价&lt;90 天平均线，CHO由正转负时，卖出；&#x0A;&#x0D;&#x0A;4.本指标也可设参考线，自定超买超卖的界限值；&#x0A;&#x0D;&#x0A;5.本指标须配合OBOS、ENVELOPE同时使用。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n1" desc="" min="2.000000" max="60.000000" default="10.000000" step="0.000000" />
+            <param name="n2" desc="" min="2.000000" max="100.000000" default="20.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="DPO" desc="区间震荡线" password="" hotkey="" flag="2097154" time="1220429180" content="DPO:CLOSE-REF(MA(CLOSE,N),N/2+1);MADPO:MA(DPO,M),COLORRED;" help="1.DOP&gt;0 ，表示目前处于多头市场；DOP&lt;0 ，表示目前处于空头市场；&#x0A;&#x0D;&#x0A;2.在0 轴上方设定一条超买线，当股价波动至超买线时，会形成短期高点；&#x0A;&#x0D;&#x0A;3.在0 轴下方设定一条超卖线，当股价波动至超卖线时，会形成短期低点；&#x0A;&#x0D;&#x0A;4.超买超卖的范围随个股不同而不同，使用者应自行调整；&#x0A;&#x0D;&#x0A;5.本指标可设参考线。&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="90.000000" default="20.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="VMACD" desc="量平滑异同平均" password="" hotkey="" flag="2097154" time="1220429560" content="DIF:EMA(VOL,SHORT)-EMA(VOL,LONG);DEA:EMA(DIF,MID);MACD:DIF-DEA,COLORSTICK;" help="" EffectiveTime="">
+            <param name="short" desc="" min="2.000000" max="200.000000" default="12.000000" step="0.000000" />
+            <param name="long" desc="" min="2.000000" max="200.000000" default="26.000000" step="0.000000" />
+            <param name="mid" desc="" min="2.000000" max="200.000000" default="9.000000" step="0.000000" />
+        </index>
+        <index id="QACD" desc="快速异同平均" password="" hotkey="" flag="2097154" time="1220429676" content="DIF:EMA(CLOSE,N1)-EMA(CLOSE,N2);MACD:EMA(DIF,M);DDIF:DIF-MACD;" help="1.DIF 向上交叉MACD，买进；DIF 向下交叉MACD，卖出；&#x0A;&#x0D;&#x0A;2.DIF 连续两次向下交叉MACD，将造成较大的跌幅；&#x0A;&#x0D;&#x0A;3.DIF 连续两次向上交叉MACD，将造成较大的涨幅；&#x0A;&#x0D;&#x0A;4.DIF 与股价形成背离时所产生的信号，可信度较高；&#x0A;&#x0D;&#x0A;5.DMA、MACD、TRIX 三者构成一组指标群，互相验证。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n1" desc="" min="2.000000" max="200.000000" default="12.000000" step="0.000000" />
+            <param name="n2" desc="" min="2.000000" max="200.000000" default="26.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="200.000000" default="9.000000" step="0.000000" />
+        </index>
+        <index id="VPT" desc="量价曲线" password="" hotkey="" flag="2097154" time="1220429994" content="VPT:SUM(VOL*(CLOSE-REF(CLOSE,1))/REF(CLOSE,1),0);MAVPT:MA(VPT,M);" help="1.VPT 由下往上穿越0 轴时，为买进信号；&#x0A;&#x0D;&#x0A;2.VPT 由上往下穿越0 轴时，为卖出信号；&#x0A;&#x0D;&#x0A;3.股价一顶比一顶高，VPT 一顶比一顶低时，暗示股价将反转下跌；&#x0A;&#x0D;&#x0A;4.股价一底比一底低，VPT 一底比一底高时，暗示股价将反转上涨；&#x0A;&#x0D;&#x0A;5.VPT 可搭配EMV 和WVAD指标使用效果更佳。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="120.000000" default="51.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="WVAD" desc="威廉变异离散量" password="" hotkey="" flag="2097154" time="1220430071" content="WVAD:SUM((CLOSE-OPEN)/(HIGH-LOW)*VOL,N)/10000;MAWVAD:MA(WVAD,M);" help="1.WVAD由下往上穿越0 轴时，视为长期买进信号；&#x0A;&#x0D;&#x0A;2.WVAD由上往下穿越0 轴时，视为长期卖出信号； &#x0A;&#x0D;&#x0A;3.当ADX 低于±DI时，本指标失去效用；&#x0A;&#x0D;&#x0A;4.长期使用WVAD指标才能获得最佳利润；&#x0A;&#x0D;&#x0A;5.本指标可与EMV 指标搭配使用。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="120.000000" default="24.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="60.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="DBQR" desc="对比强弱" password="" hotkey="" flag="2097154" time="1220430155" content="ZS:(INDEXC-REF(INDEXC,N))/REF(INDEXC,N);GG:(CLOSE-REF(CLOSE,N))/REF(CLOSE,N);MADBQR1:MA(GG,M1);MADBQR2:MA(GG,M2);MADBQR3:MA(GG,M3);" help="对比强弱指标包含有两条指标线,一条是对应指数的强弱&#x0A;&#x0D;&#x0A;线。另外一条是个股的强弱线。当个股强弱线与指数强弱&#x0A;&#x0D;&#x0A;线发生金叉时，表明个股开始强过大盘，是买入时机。&#x0A;&#x0D;&#x0A;当个股强弱线与指数强弱线发生死叉时，表明个股开始弱&#x0A;&#x0D;&#x0A;于大盘，是卖出时机。对比强弱指标是一个短线指标。&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="120.000000" default="5.000000" step="0.000000" />
+            <param name="m1" desc="" min="2.000000" max="120.000000" default="10.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="120.000000" default="20.000000" step="0.000000" />
+            <param name="m3" desc="" min="2.000000" max="250.000000" default="60.000000" step="0.000000" />
+        </index>
+        <index id="JS" desc="加速线" password="" hotkey="" flag="2097154" time="1220430276" content="JS:100*(CLOSE-REF(CLOSE,N))/(N*REF(CLOSE,N));MAJS1:MA(JS,M1);MAJS2:MA(JS,M2);MAJS3:MA(JS,M3);" help="加速线指标是衡量股价涨速的工具,加速线指标上升表明&#x0A;&#x0D;&#x0A;股价上升动力增加,加速线指标下降表明股价下降压力增加。&#x0A;&#x0D;&#x0A;加速线适用于DMI表明趋势明显时(DMI.ADX大于20)使用:&#x0A;&#x0D;&#x0A;1.如果加速线在0值附近形成平台，则表明既不是最好的&#x0A;&#x0D;&#x0A;  买入时机也不是最好的卖入时机；&#x0A;&#x0D;&#x0A;2.在加速线发生金叉后,均线形成底部是买入时机。&#x0A;&#x0D;&#x0A;3.在加速线发生死叉后,均线形成顶部是卖出时机。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="100.000000" default="5.000000" step="0.000000" />
+            <param name="m1" desc="" min="2.000000" max="100.000000" default="5.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="100.000000" default="10.000000" step="0.000000" />
+            <param name="m3" desc="" min="2.000000" max="100.000000" default="20.000000" step="0.000000" />
+        </index>
+        <index id="CYE" desc="市场趋势" password="" hotkey="" flag="2097154" time="1220430426" content="MAL:=MA(CLOSE,5);MAS:=MA(MA(CLOSE,20),5);CYEL:(MAL-REF(MAL,1))/REF(MAL,1)*100;CYES:(MAS-REF(MAS,1))/REF(MAS,1)*100;" help="1. CYE指标又叫趋势指标,是计算机模拟人的感觉用数值分析的方法对即日的K线进行一次拟合和趋势的判断;&#x0A;&#x0D;&#x0A;2.CYE以 0轴为界，其上为上升趋势,否则为下降趋势.&#x0A;" EffectiveTime="" />
+        <index id="MASS" desc="梅斯线" password="" hotkey="" flag="2127871" time="1220433184" content="MASS:SUM(MA(HIGH-LOW,N1)/MA(MA(HIGH-LOW,N1),N1),N2);&#x0D;&#x0A;MAMASS:MA(MASS,M);" help="1.MASS&gt;27 后，随后又跌破26.5，此时股价若呈上涨状态，则卖出；&#x0A;&#x0D;&#x0A;2.MASS&lt;27 后，随后又跌破26.5，此时股价若呈下跌状态，则买进；&#x0A;&#x0D;&#x0A;3.MASS&lt;20 的行情，不宜进行投资。&#x0A;&#x0D;&#x0A;" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n1" desc="" unit="" min="2.000000" max="120.000000" default="9.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="n2" desc="" unit="" min="2.000000" max="120.000000" default="25.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m" desc="" unit="" min="2.000000" max="120.000000" default="6.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="主升啟動" desc="" kind="0" password="cfjdjm" hotkey="" flag="2127871" time="1605148548" often="1" protected="1" indexStockType="0" xday="1920679200" permitUser="" content="AA:=MA((OPEN+HIGH+LOW+CLOSE)/4,60);&#x0D;&#x0A;放量:=MA(VOL,5)&gt;MA(VOL,60);&#x0D;&#x0A;涨停:=(CLOSE/REF(CLOSE,1))&gt;1.095 AND CLOSE=HIGH;&#x0D;&#x0A;下降波浪:AA,LINETHICK1,COLORBLUE;&#x0D;&#x0A;上升波浪:IF(AA&gt;REF(AA,1),AA,DRAWNULL),LINETHICK1,COLORMAGENTA;&#x0D;&#x0A;下降波浪1:=IF(AA&lt;=REF(AA,1),AA,DRAWNULL);&#x0D;&#x0A;快线:=EMA(MA((3*CLOSE+2*OPEN+HIGH+LOW)/7,4),2);&#x0D;&#x0A;STICKLINE(快线&gt;=REF(快线,1),快线,REF(快线,1),8,0),COLORRED,NOTITLE;&#x0D;&#x0A;STICKLINE(快线&lt;REF(快线,1),快线,REF(快线,1),8,0),COLORCYAN,NOTITLE;&#x0D;&#x0A;&#x0D;&#x0A;STICKLINE(放量=1 AND 快线&gt;AA AND 快线&gt;REF(快线,1),REF(快线,1),AA,1,0),COLORYELLOW,NOTITLE;&#x0D;&#x0A;STICKLINE(放量=1 AND 快线&gt;AA AND 快线&lt;=REF(快线,1),快线,AA,1,0),COLORYELLOW,NOTITLE;&#x0D;&#x0A;STICKLINE(CLOSE/REF(CLOSE,1)&gt;1.095 AND CLOSE=HIGH,快线,REF(快线,1),8,0),COLORMAGENTA,NOTITLE;&#x0D;&#x0A;金叉周期:=BARSLAST(CROSS(快线,AA)=1)+1;&#x0D;&#x0A;&#x0D;&#x0A;DRAWICON(快线&gt;AA AND  上升波浪&lt;&gt;DRAWNULL  AND  放量=1 AND REF(放量,1)=0 AND 快线&gt;=REF(快线,1),AA,92),NOTITLE;&#x0D;&#x0A;&#x0D;&#x0A;DRAWICON(快线&gt;AA AND 上升波浪&lt;&gt;DRAWNULL AND REF(下降波浪1,1)&lt;&gt;DRAWNULL AND 放量=1 AND 快线&gt;=REF(快线,1),AA,92),NOTITLE;&#x0D;&#x0A;&#x0D;&#x0A;DRAWICON(CROSS(快线,AA) AND  上升波浪&lt;&gt;DRAWNULL AND 放量=1 AND 快线&gt;=REF(快线,1),AA,92),NOTITLE;&#x0D;&#x0A;&#x0D;&#x0A;" help="" EffectiveTime="" />
+        <index id="短線追龍" desc="" kind="0" password="cfjdjm" hotkey="" flag="1079295" time="1605149155" often="1" protected="1" indexStockType="0" xday="-1" permitUser="" content="&#x0D;&#x0A;&#x0D;&#x0A;ZCZDATE:=1200824;&#x0D;&#x0A;主力攻击线:(MA(CLOSE,3)+MA(CLOSE,6)+MA(CLOSE,9))/3,COLORWHITE;&#x0D;&#x0A;主力控盘线:(MA(CLOSE,5)+MA(CLOSE,10)+MA(CLOSE,15)+MA(CLOSE,20)+MA(CLOSE,25)+MA(CLOSE,30))/6,COLORYELLOW,LINETHICK2;&#x0D;&#x0A;IF(主力攻击线&gt;REF(主力攻击线,1) AND 主力攻击线&gt;主力控盘线,主力攻击线,DRAWNULL),COLORRED,NOTITLE;&#x0D;&#x0A;涨幅:=CLOSE/REF(CLOSE,1)-1;&#x0D;&#x0A;涨停:=涨幅&gt;=0.09 AND CLOSE=HIGH;&#x0D;&#x0A;实体:=CLOSE&gt;LOW;&#x0D;&#x0A;成交额:=AMOUNT&gt;=REF(HHV(AMOUNT,10),1);&#x0D;&#x0A;RSV:=(CLOSE-LLV(LOW,34))/(HHV(HIGH,34)-LLV(LOW,34))*100;&#x0D;&#x0A;K:=SMA(RSV,3,1);&#x0D;&#x0A;乖离率:=(CLOSE/主力攻击线-1)*100;&#x0D;&#x0A;&#x0D;&#x0A;{注册板}&#x0D;&#x0A;M1:=4;&#x0D;&#x0A;M2:=6;&#x0D;&#x0A;M3:=9;&#x0D;&#x0A;M4:=13;&#x0D;&#x0A;M5:=18;&#x0D;&#x0A;M6:=24;&#x0D;&#x0A;PBX1:=(EMA(CLOSE,M1)+EMA(CLOSE,M1*2)+EMA(CLOSE,M1*4))/3;&#x0D;&#x0A;PBX2:=(EMA(CLOSE,M2)+EMA(CLOSE,M2*2)+EMA(CLOSE,M2*4))/3;&#x0D;&#x0A;PBX3:=(EMA(CLOSE,M3)+EMA(CLOSE,M3*2)+EMA(CLOSE,M3*4))/3;&#x0D;&#x0A;PBX4:=(EMA(CLOSE,M4)+EMA(CLOSE,M4*2)+EMA(CLOSE,M4*4))/3;&#x0D;&#x0A;PBX5:=(EMA(CLOSE,M5)+EMA(CLOSE,M5*2)+EMA(CLOSE,M5*4))/3;&#x0D;&#x0A;PBX6:=(EMA(CLOSE,M6)+EMA(CLOSE,M6*2)+EMA(CLOSE,M6*4))/3;&#x0D;&#x0A;多头形态:=C&gt;PBX1 AND PBX1&gt;REF(PBX1,1) AND PBX1&gt;PBX2 AND PBX2&gt;PBX3 AND PBX3&gt;PBX4 AND PBX5&gt;REF(PBX5,1);&#x0D;&#x0A;综合价格:=(2*C+H+L+O)/5;&#x0D;&#x0A;现价新高:=综合价格&gt;=REF(HHV(综合价格,20),1);&#x0D;&#x0A;当日涨幅:=(CLOSE-REF(CLOSE,1))/REF(CLOSE,1)*100&gt;=5.00 AND NOT(H=L) AND O/REF(C,1)&lt;1.10;&#x0D;&#x0A;低点幅度:=C/LLV(L,120)&gt;=1.20;&#x0D;&#x0A;高点幅度:=C/HHV(H,60)&gt;=0.80;&#x0D;&#x0A;上影线:=C/H&gt;=0.95;&#x0D;&#x0A;爆量:=EMA(VOL,3)/EMA(VOL,60)&gt;=1.5 OR VOL&gt;REF(HHV(VOL,5),1);&#x0D;&#x0A;XG:=FILTER(多头形态 AND 现价新高 AND 当日涨幅 AND 低点幅度 AND 高点幅度  AND 爆量 AND 上影线,20);&#x0D;&#x0A;DRAWICON(XG=1 ,LOW,60),NOTITLE;&#x0D;&#x0A;" help="" EffectiveTime="" />
+    </group2>
+    <group2 name="能量型">
+        <index id="BRAR" desc="情绪指标" password="" hotkey="" flag="2097154" time="1220424553" content="BR:SUM(MAX(0,HIGH-REF(CLOSE,1)),N)/SUM(MAX(0,REF(CLOSE,1)-LOW),N)*100;&#x0D;AR:SUM(HIGH-OPEN,N)/SUM(OPEN-LOW,N)*100;" help="1.BR&gt;400，暗示行情过热，应反向卖出；BR&lt;40 ，行情将起死回生，应买进；&#x0A;&#x0D;&#x0A;2.AR&gt;180，能量耗尽，应卖出；AR&lt;40 ，能量已累积爆发力，应买进；&#x0A;&#x0D;&#x0A;3.BR 由300 以上的高点下跌至50以下的水平,低于AR 时,为绝佳买点；&#x0A;&#x0D;&#x0A;4.BR、AR、CR、VR 四者合为一组指标群，须综合搭配使用。&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;" often="0" protected="0" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="120.000000" default="26.000000" step="0.000000" />
+        </index>
+        <index id="CR" desc="带状能量线" password="" hotkey="" flag="2127871" time="1220424612" content="MID:=REF(HIGH+LOW,1)/2;&#x0D;&#x0A;CR:SUM(MAX(0,HIGH-MID),N)/SUM(MAX(0,MID-LOW),N)*100;&#x0D;&#x0A;MA1:REF(MA(CR,M1),1+M1/2.5);&#x0D;&#x0A;MA2:REF(MA(CR,M2),1+M2/2.5);&#x0D;&#x0A;MA3:REF(MA(CR,M3),1+M3/2.5);&#x0D;&#x0A;MA4:REF(MA(CR,M4),1+M4/2.5);" help="1.CR&gt;400时，其10日平均线向下滑落，视为卖出信号；CR&lt;40买进；&#x0A;&#x0D;&#x0A;2.CR 由高点下滑至其四条平均线下方时，股价容易形成短期底部；&#x0A;&#x0D;&#x0A;3.CR 由下往上连续突破其四条平均线时，为强势买进点；&#x0A;&#x0D;&#x0A;4.CR 除了预测价格的外，最大的作用在于预测时间；&#x0A;&#x0D;&#x0A;5.BR、AR、CR、VR 四者合为一组指标群，须综合搭配使用。&#x0A;" often="0" protected="0" EffectiveTime="" kind="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="2.000000" max="100.000000" default="26.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m1" desc="" unit="" min="0.000000" max="100.000000" default="10.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m2" desc="" unit="" min="0.000000" max="100.000000" default="20.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m3" desc="" unit="" min="0.000000" max="100.000000" default="40.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m4" desc="" unit="" min="0.000000" max="100.000000" default="62.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="VR" desc="成交量变异率" password="" hotkey="" flag="2127871" time="1220425136" content="TH:=SUM(IF(CLOSE&gt;REF(CLOSE,1),VOL,0),N);&#x0D;&#x0A;TL:=SUM(IF(CLOSE&lt;REF(CLOSE,1),VOL,0),N);&#x0D;&#x0A;TQ:=SUM(IF(CLOSE=REF(CLOSE,1),VOL,0),N);&#x0D;&#x0A;VR:100*(TH*2+TQ)/(TL*2+TQ);&#x0D;&#x0A;MAVR:MA(VR,M);" help="1.VR&gt;450，市场成交过热，应反向卖出；&#x0A;&#x0D;&#x0A;2.VR&lt;40 ，市场成交低迷，人心看淡的际，应反向买进；&#x0A;&#x0D;&#x0A;3.VR 由低档直接上升至250，股价仍为遭受阻力，此为大行情的前兆；&#x0A;&#x0D;&#x0A;4.VR 除了与PSY为同指标群外，尚须与BR、AR、CR同时搭配研判&#x0A;&#x0D;&#x0A;" often="0" protected="0" EffectiveTime="" kind="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="2.000000" max="100.000000" default="26.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m" desc="" unit="" min="2.000000" max="100.000000" default="6.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="PSY" desc="心理线" password="" hotkey="" flag="2097154" time="1220426287" content="PSY:COUNT(CLOSE&gt;REF(CLOSE,1),N)/N*100;&#x0D;PSYMA:MA(PSY,M);" help="1.PSY&gt;75，形成Ｍ头时，股价容易遭遇压力；&#x0A;&#x0D;&#x0A;2.PSY&lt;25，形成Ｗ底时，股价容易获得支撑；&#x0A;&#x0D;&#x0A;3.PSY 与VR 指标属一组指标群，须互相搭配使用。&#x0A;" often="0" protected="0" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="100.000000" default="12.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="100.000000" default="6.000000" step="0.000000" />
+            <line y="25.000000" />
+            <line y="75.000000" />
+        </index>
+        <index id="WAD" desc="威廉多空力度线" password="" hotkey="" flag="2127871" time="1220433272" content="MIDA:=CLOSE-MIN(REF(CLOSE,1),LOW);&#x0D;&#x0A;MIDB:=IF(CLOSE&lt;REF(CLOSE,1),CLOSE-MAX(REF(CLOSE,1),HIGH),0);&#x0D;&#x0A;WAD:SUM(IF(CLOSE&gt;REF(CLOSE,1),MIDA,MIDB),0);&#x0D;&#x0A;MAWAD:MA(WAD,M);" help="1.股价一顶比一顶高，而WAD 一顶比一顶低，暗示头部即将形成；&#x0A;&#x0D;&#x0A;2.股价一底比一底低，而WAD 一底比一底高，暗示底部即将形成；&#x0A;&#x0D;&#x0A;3.WAD 与OBV、PVT、ADVOL、ADL同属一组指标群，使用时应综合研判。&#x0A;" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="m" desc="" unit="" min="2.000000" max="120.000000" default="30.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+    </group2>
+    <group2 name="成交量型">
+        <index id="VOL" desc="成交量" password="" hotkey="" flag="2785279" time="1218801952" content="VOL,VOLSTICK;&#x0D;MAVOL1:MA(VOL,M1);&#x0D;MAVOL2:MA(VOL,M2);" help="1.成交量大，代表交投热络，可界定为热门股；&#x0A;&#x0D;&#x0A;2.底部起涨点出现大成交量(成交手数)，代表攻击量；&#x0A;&#x0D;&#x0A;3.头部地区出现大成交量(成交手数)，代表出货量；&#x0A;&#x0D;&#x0A;4.观察成交金额的变化，比观察成交手数更具意义，因为成交手数并未反应股价的涨跌的后所应支出的实际金额。 &#x0A;&#x0D;&#x0A;" often="1" protected="0" EffectiveTime="">
+            <param name="m1" desc="" min="2.000000" max="500.000000" default="5.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="500.000000" default="10.000000" step="0.000000" />
+        </index>
+        <index id="POSITION" desc="期货的持仓量" password="" hotkey="" flag="2127871" time="1218801952" content="Value:POSITION,VOLSTICK;" help="期货的持仓量" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="" />
+        <index id="POSITIONFS" desc="分时走势的持仓量" password="" hotkey="" flag="2162688" time="1218801952" content="VALUES:POSITION,COLORSTICK,COLORYELLOW;" help="分时走势的持仓量" EffectiveTime="" />
+        <index id="OBV" desc="累积能量线" password="" hotkey="" flag="2097154" time="1220425204" content="VA:=IF(CLOSE&gt;REF(CLOSE,1),VOL,-VOL);&#x0D;OBV:SUM(IF(CLOSE=REF(CLOSE,1),0,VA),0);&#x0D;MAOBV:MA(OBV,M);" help="1.股价一顶比一顶高，而OBV 一顶比一顶低，暗示头部即将形成；&#x0A;&#x0D;&#x0A;2.股价一底比一底低，而OBV 一底比一底高，暗示底部即将形成；&#x0A;&#x0D;&#x0A;3.OBV 突破其Ｎ字形波动的高点次数达5 次时，为短线卖点；&#x0A;&#x0D;&#x0A;4.OBV 跌破其Ｎ字形波动的低点次数达5 次时，为短线买点；&#x0A;&#x0D;&#x0A;5.OBV 与ADVOL、PVT、WAD、ADL同属一组指标群，使用时应综合研判。&#x0A;" often="0" protected="0" EffectiveTime="">
+            <param name="m" desc="" min="2.000000" max="100.000000" default="30.000000" step="0.000000" />
+        </index>
+        <index id="AMO" desc="成交金额" password="" hotkey="" flag="2097154" time="1220433751" content="AMO:AMOUNT,VOLSTICK;MAAMO1:MA(AMO,M1);MAAMO2:MA(AMO,M2);MAAMO3:MA(AMO,M3);" help="1.成交金额大，代表交投热络，可界定为热门股；&#x0A;&#x0D;&#x0A;2.底部起涨点出现大成交金额，代表攻击量；&#x0A;&#x0D;&#x0A;3.头部地区出现大成交金额，代表出货量；&#x0A;&#x0D;&#x0A;4.观察成交金额的变化，比观察成交手数更具意义，因为成交手数并未反应股价的涨跌的后所应支出的实际金额。 &#x0A;" EffectiveTime="">
+            <param name="m1" desc="" min="2.000000" max="500.000000" default="6.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="500.000000" default="12.000000" step="0.000000" />
+            <param name="m3" desc="" min="2.000000" max="500.000000" default="24.000000" step="0.000000" />
+        </index>
+        <index id="VRSI" desc="相对强弱量" password="" hotkey="" flag="2097154" time="1220434053" content="LC:=REF(VOL,1);RSI1:SMA(MAX(VOL-LC,0),N1,1)/SMA(ABS(VOL-LC),N1,1)*100;RSI2:SMA(MAX(VOL-LC,0),N2,1)/SMA(ABS(VOL-LC),N2,1)*100;RSI3:SMA(MAX(VOL-LC,0),N3,1)/SMA(ABS(VOL-LC),N3,1)*100;" help="1.VRSI&gt;20 为超买；VRSI&lt;20 为超卖；&#x0A;&#x0D;&#x0A;2.VRSI 以50为中界线，大于50视为多头行情，小于50视为空头行情；&#x0A;&#x0D;&#x0A;3.VRSI 在80以上形成Ｍ头或头肩顶形态时，视为向下反转信号；&#x0A;&#x0D;&#x0A;4.VRSI 在20以下形成Ｗ底或头肩底形态时，视为向上反转信号；&#x0A;&#x0D;&#x0A;5.VRSI 向上突破其高点连线时，买进；VRSI 向下跌破其低点连线时，卖出。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n1" desc="" min="2.000000" max="100.000000" default="6.000000" step="0.000000" />
+            <param name="n2" desc="" min="2.000000" max="100.000000" default="12.000000" step="0.000000" />
+            <param name="n3" desc="" min="2.000000" max="100.000000" default="24.000000" step="0.000000" />
+        </index>
+        <index id="DBQRV" desc="对比强弱量" password="" hotkey="" flag="2097154" time="1220434431" content="ZS:(INDEXV-REF(INDEXV,N))/REF(INDEXV,N);GG:(VOL-REF(VOL,N))/REF(VOL,N);" help="对比强弱量指标包含有两条指标线,一条是对应指数量的&#x0A;&#x0D;&#x0A;强弱线。另外一条是个股成交量的强弱线。当个股强弱线&#x0A;&#x0D;&#x0A;与指数强弱线发生金叉时，表明个股成交活跃过大盘。当&#x0A;&#x0D;&#x0A;个股强弱线与指数强弱线发生死叉时，表明个股活跃度开&#x0A;&#x0D;&#x0A;始弱于大盘。对比强弱量指标也是一个短线指标。&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="120.000000" default="5.000000" step="0.000000" />
+        </index>
+        <index id="DBLB" desc="对比量比" password="" hotkey="" flag="2097154" time="1220434521" content="GG:=VOL/SUM(REF(VOL,1),N);ZS:=INDEXV/SUM(REF(INDEXV,1),N);DBLB:GG/ZS;MADBLB:MA(DBLB,M);" help="对比量比指标用于用于测度成交量放大程度或萎缩程度&#x0A;&#x0D;&#x0A;的指标。对比量比值越大，说明成交量较前期成交量放&#x0A;&#x0D;&#x0A;大程度越大，对比量比值越小，说明成交量较前期成交&#x0A;&#x0D;&#x0A;量萎缩程度越大，一般认为:&#x0A;&#x0D;&#x0A;1.对比量比大于20可以认为成交量极度放大；&#x0A;&#x0D;&#x0A;2.对比量比大于3,可以认为成交量显著放大；&#x0A;&#x0D;&#x0A;3.对比量比小于0.2,可以认为成交量极度萎缩；&#x0A;&#x0D;&#x0A;4.对比量比小于0.4,可以认为成交量显著萎缩。&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="100.000000" default="5.000000" step="0.000000" />
+            <param name="m" desc="" min="2.000000" max="100.000000" default="5.000000" step="0.000000" />
+        </index>
+    </group2>
+    <group2 name="均线型">
+        <index id="MA" desc="移动平均线" password="" hotkey="" flag="1472511" time="1218801952" content="MA1:MA(CLOSE,M1);&#x0D;MA2:MA(CLOSE,M2);&#x0D;MA3:MA(CLOSE,M3);&#x0D;MA4:MA(CLOSE,M4);" help="1.股价高于平均线，视为强势；股价低于平均线，视为弱势&#x0A;&#x0D;&#x0A;2.平均线向上涨升，具有助涨力道；平均线向下跌降，具有助跌力道；&#x0A;&#x0D;&#x0A;3.二条以上平均线向上交叉时，买进；&#x0A;&#x0D;&#x0A;4.二条以上平均线向下交叉时，卖出；&#x0A;&#x0D;&#x0A;5.移动平均线的信号经常落后股价，若以EXPMA 、VMA 辅助，可以改善。&#x0A;" often="1" protected="0" EffectiveTime="">
+            <param name="m1" desc="" min="2.000000" max="1000.000000" default="5.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="1000.000000" default="10.000000" step="0.000000" />
+            <param name="m3" desc="" min="2.000000" max="1000.000000" default="20.000000" step="0.000000" />
+            <param name="m4" desc="" min="2.000000" max="1000.000000" default="60.000000" step="0.000000" />
+        </index>
+        <index id="EMA" desc="指数平滑移动均线" password="" hotkey="" flag="1472511" time="1255693866" content="EMA1:EMA(CLOSE,N1);EMA2:EMA(CLOSE,N2);" help="1.EXPMA 一般以观察12日和50日二条均线为主；2.12日指数平均线向上交叉50日指数平均线时，买进；3.12日指数平均线向下交叉50日指数平均线时，卖出；4.EXPMA 是多种平均线计算方法的一；5.EXPMA 配合MTM 指标使用，效果更佳。" EffectiveTime="">
+            <param name="n1" desc="" min="1.000000" max="1000.000000" default="12.000000" step="0.000000" />
+            <param name="n2" desc="" min="1.000000" max="1000.000000" default="50.000000" step="0.000000" />
+        </index>
+        <index id="SMA" desc="简单移动平均" password="" hotkey="" flag="1472511" time="1255694038" content="SMA1:SMA(CLOSE,N1,1);&#x0D;SMA2:SMA(CLOSE,N2,1);&#x0D;SMA3:SMA(CLOSE,N3,1);" help="1.股价高于平均线，视为强势；股价低于平均线，视为弱势&#x0A;&#x0D;&#x0A;2.平均线向上涨升，具有助涨力道；平均线向下跌降，具有助跌力道；&#x0A;&#x0D;&#x0A;3.二条以上平均线向上交叉时，买进；&#x0A;&#x0D;&#x0A;4.二条以上平均线向下交叉时，卖出；&#x0A;&#x0D;&#x0A;5.移动平均线的信号经常落后股价，若以EXPMA 、VMA 辅助，可以改善。&#x0A;" often="0" protected="0" EffectiveTime="">
+            <param name="n1" desc="" min="1.000000" max="1000.000000" default="5.000000" step="0.000000" />
+            <param name="n2" desc="" min="1.000000" max="1000.000000" default="10.000000" step="0.000000" />
+            <param name="n3" desc="" min="1.000000" max="1000.000000" default="20.000000" step="0.000000" />
+        </index>
+        <index id="AMV" desc="成本价均线" password="" hotkey="" flag="2127871" time="1220434601" content="AMOV:=VOL*(OPEN+CLOSE)/2;&#x0D;&#x0A;AMV1:SUM(AMOV,M1)/SUM(VOL,M1);&#x0D;&#x0A;AMV2:SUM(AMOV,M2)/SUM(VOL,M2);&#x0D;&#x0A;AMV3:SUM(AMOV,M3)/SUM(VOL,M3);&#x0D;&#x0A;AMV4:SUM(AMOV,M4)/SUM(VOL,M4);" help="成本价均线不同于一般移动平均线系统，成本价均线系&#x0A;&#x0D;&#x0A;统首次将成交量引入均线系统，充分提高均线系统的可&#x0A;&#x0D;&#x0A;靠性。同样对于成本价均线可以使用月均线系统(5,10,&#x0A;&#x0D;&#x0A;20,250)和季均线系统(20,40,60,250),另外成本价均线&#x0A;&#x0D;&#x0A;还可以使用自身特有的均线系统(5,13,34,250),称为市&#x0A;&#x0D;&#x0A;场平均建仓成本均线，简称成本价均线。在四个均线中&#x0A;&#x0D;&#x0A;参数为250的均线为年度均线,为行情支撑均线。成本均&#x0A;&#x0D;&#x0A;线不容易造成虚假信号或骗线，比如某日股价无量暴涨，&#x0A;&#x0D;&#x0A;移动均线会大幅拉升，但成本均线却不会大幅上升，因&#x0A;&#x0D;&#x0A;为在无量的情况下市场持仓成本不会有太大的变化。依&#x0A;&#x0D;&#x0A;据均线理论，当短期均线站在长期均线之上时叫多头排&#x0A;&#x0D;&#x0A;列，反之就叫空头排列。短期均线上穿长期均线叫金叉，&#x0A;&#x0D;&#x0A;短期均线下穿长期均线叫死叉。均线的多头排列是牛市&#x0A;&#x0D;&#x0A;的标志，空头排列是熊市的标志。均线系统一直是" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="m1" desc="" unit="" min="2.000000" max="120.000000" default="5.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m2" desc="" unit="" min="2.000000" max="120.000000" default="13.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m3" desc="" unit="" min="2.000000" max="120.000000" default="34.000000" step="0.000000" bshow="1" userclr="-16777216" />
+            <param name="m4" desc="" unit="" min="2.000000" max="250.000000" default="60.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="PBX" desc="瀑布线" password="" hotkey="" flag="1472511" time="1292986907" often="0" protected="0" content="PBX1:(EMA(CLOSE,M1)+MA(CLOSE,M1*2)+MA(CLOSE,M1*4))/3;&#x0D;&#x0A;PBX2:(EMA(CLOSE,M2)+MA(CLOSE,M2*2)+MA(CLOSE,M2*4))/3;&#x0D;&#x0A;PBX3:(EMA(CLOSE,M3)+MA(CLOSE,M3*2)+MA(CLOSE,M3*4))/3;&#x0D;&#x0A;PBX4:(EMA(CLOSE,M4)+MA(CLOSE,M4*2)+MA(CLOSE,M4*4))/3;&#x0D;&#x0A;PBX5:(EMA(CLOSE,M5)+MA(CLOSE,M5*2)+MA(CLOSE,M5*4))/3;&#x0D;&#x0A;PBX6:(EMA(CLOSE,M6)+MA(CLOSE,M6*2)+MA(CLOSE,M6*4))/3;" help="1.股价上升穿越轨道线上限时，回档机率大；&#x0A;&#x0D;&#x0A;2.股价下跌穿越轨道线下限时，反弹机率大；&#x0A;&#x0D;&#x0A;3.股价波动于轨道线内时，代表常态行情，此时，超买超卖指标可发挥效用；&#x0A;&#x0D;&#x0A;4.股价波动于轨道线外时，代表脱轨行情，此时，应使用趋势型指标。&#x0A;" EffectiveTime="">
+            <param name="m1" desc="" min="2.000000" max="100.000000" default="3.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="100.000000" default="5.000000" step="0.000000" />
+            <param name="m3" desc="" min="2.000000" max="100.000000" default="8.000000" step="0.000000" />
+            <param name="m4" desc="" min="2.000000" max="100.000000" default="13.000000" step="0.000000" />
+            <param name="m5" desc="" min="2.000000" max="1000.000000" default="21.000000" step="0.000000" />
+            <param name="m6" desc="" min="2.000000" max="1000.000000" default="26.000000" step="0.000000" />
+        </index>
+    </group2>
+    <group2 name="图表型">
+        <index id="ZX" desc="重心线" password="" hotkey="" flag="2127871" time="1220434863" content="AV:0.01*AMOUNT/VOL;" help="重心线指标，重心线是由重心价连接而成的曲线，反映历史平均价位，&#x0A;&#x0D;&#x0A;对于指数计算公式为:&#x0A;&#x0D;&#x0A;  ZX = 成交金额/成交量。&#x0A;&#x0D;&#x0A;对个股而言:&#x0A;&#x0D;&#x0A;         最高指数＋最低指数＋收盘指数&#x0A;&#x0D;&#x0A;  ZX ＝ ━━━━━━━━━━━━━━━&#x0A;&#x0D;&#x0A;                      3&#x0A;&#x0D;&#x0A;类似于不加权平均指数。&#x0A;" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="" />
+        <index id="PUCU" desc="逆时钟曲线" password="" hotkey="" flag="2097154" time="1220434921" content="PU:MA(CLOSE,N);CU:MA(VOL,N);" help="1.图表的曲线上有一个箭头，该处代表目前价量的位置；&#x0A;&#x0D;&#x0A;2.曲线由绿变成红色时，视为买进信号；&#x0A;&#x0D;&#x0A;3.曲线由红变成绿色时，视为卖出信号。&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="200.000000" default="24.000000" step="0.000000" />
+        </index>
+    </group2>
+    <group2 name="路径型">
+        <index id="BOLL" desc="布林线" password="" hotkey="" flag="1472511" time="1292496449" often="1" protected="0" indexStockType="0" content="布林线:MA(CLOSE,N);&#x0D;布林线上限:布林线+2*STD(CLOSE,N);&#x0D;布林线下限:布林线-2*STD(CLOSE,N);&#x0D;&#x0A;drawkline(H,O,L,C),NOTITLE;" help="1.股价上升穿越布林线上限时，回档机率大；&#x0A;&#x0D;&#x0A;2.股价下跌穿越布林线下限时，反弹机率大；&#x0A;&#x0D;&#x0A;3.布林线震动波带变窄时，表示变盘在即；&#x0A;&#x0D;&#x0A;4.BOLL须配合BB 、WIDTH 使用；&#x0A;&#x0D;&#x0A;5.开关参数若设为1，图形以四条线表示。&#x0A;&#x0D;&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="120.000000" default="20.000000" step="0.000000" />
+        </index>
+        <index id="MIKE" desc="麦克线" name="MIKE" kind="0" password="" hotkey="" flag="1341439" content="HLC:=REF(MA((HIGH+LOW+CLOSE)/3,N),1);&#x0D;&#x0A;HV:=EMA(HHV(HIGH,N),3);&#x0D;&#x0A;LV:=EMA(LLV(LOW,N),3);&#x0D;&#x0A;STOR:EMA(2*HV-LV,3);&#x0D;&#x0A;MIDR:EMA(HLC+HV-LV,3);&#x0D;&#x0A;WEKR:EMA(HLC*2-LV,3);&#x0D;&#x0A;WEKS:EMA(HLC*2-HV,3);&#x0D;&#x0A;MIDS:EMA(HLC-HV+LV,3);&#x0D;&#x0A;STOS:EMA(2*LV-HV,3);" help="1.MIKE指标共有六条曲线，上方三条压力线，下方三条支撑线；&#x0A;&#x0D;&#x0A;2.当股价往压力线方向涨升时，其下方支撑线不具参考价值；&#x0A;&#x0D;&#x0A;3.当股价往支撑线方向下跌时，其上方压力线不具参考价值；&#x0A;&#x0D;&#x0A;" paramhelp="" time="1292496449" often="0" protected="0" EffectiveTime="" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="2.000000" max="120.000000" default="10.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+    </group2>
+    <group2 name="停损型">
+        <index id="SAR" desc="抛物线转向" password="" hotkey="" flag="2097154" time="1302921264" often="0" protected="0" indexStockType="0" content="VAR1:=SAR(N1,X,N2);&#x0D;&#x0A;IF(VAR1&lt;C,VAR1,DRAWNULL),COLORRED,CIRCLEDOT,NOTITLE;&#x0D;&#x0A;IF(VAR1&gt;C,VAR1,DRAWNULL),COLORGREEN,CIRCLEDOT,NOTITLE;&#x0D;&#x0A;&#x0D;&#x0A;DRAWKLINE2(H,O,L,C,2),NOTITLE;" help="1.任何时候都可以使用SAR 为停损点；&#x0A;&#x0D;&#x0A;2.价格涨跌的速度必须比SAR 升降的速度快，否则必会产生停损信号；&#x0D;&#x0A;&#x0A;3.SAR 由红色变成绿色时，卖出；&#x0D;&#x0A;&#x0A;4.SAR 由绿色变成红色时，买进；&#x0D;&#x0A;&#x0A;5.本指标周期参数一般设定为4天；&#x0D;&#x0A;&#x0A;6.本设定主要为寻找出现多头停损或空头停损的个股。" EffectiveTime="">
+            <param name="n1" desc="" min="2.000000" max="100.000000" default="10.000000" step="0.000000" />
+            <param name="x" desc="" min="2.000000" max="100.000000" default="4.000000" step="0.000000" />
+            <param name="n2" desc="" min="2.000000" max="100.000000" default="20.000000" step="0.000000" />
+        </index>
+    </group2>
+    <group2 name="交易型" />
+    <group2 name="神系">
+        <index id="SG_XDT" desc="心电图" password="" hotkey="" flag="2097154" time="1220435367" content="QR:CLOSE/INDEXC*1000;MQR1:MA(QR,5);MQR2:MA(QR,10);" help="" EffectiveTime="">
+            <param name="p1" desc="" min="1.000000" max="100.000000" default="5.000000" step="0.000000" />
+            <param name="p2" desc="" min="1.000000" max="100.000000" default="10.000000" step="0.000000" />
+        </index>
+        <index id="SG_SMX" desc="生命线" password="" hotkey="" flag="2097154" time="1220435455" content="H1:=HHV(HIGH,N);L1:=LLV(LOW,N);H2:=HHV(INDEXH,N);L2:=LLV(INDEXL,N);ZY:=CLOSE/INDEXC*2000;ZY1:EMA(ZY,3);ZY2:EMA(ZY,17);ZY3:EMA(ZY,34);" help="" EffectiveTime="">
+            <param name="n" desc="" min="1.000000" max="100.000000" default="50.000000" step="0.000000" />
+        </index>
+        <index id="SG_LB" desc="量比" password="" hotkey="" flag="2127871" time="1220435503" content="ZY2:=VOL/INDEXV*1000;&#x0D;&#x0A;量比:ZY2;&#x0D;&#x0A;MA5:MA(ZY2,5);&#x0D;&#x0A;MA10:MA(ZY2,10);" help="" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="" />
+        <index id="RAD" desc="威力雷达" password="" hotkey="" flag="2097154" time="1220435621" content="SM:=(OPEN+HIGH+CLOSE+LOW)/4;SMID:=MA(SM,D);IM:=(INDEXO+INDEXH+INDEXL+INDEXC)/4;IMID:=MA(IM,D);SI1:=(SMID-REF(SMID,1))/SMID;II:=(IMID-REF(IMID,1))/IMID;RADER1:SUM((SI1-II)*2,S)*1000;RADERMA:SMA(RADER1,M,1);" help="1.RAD 曲线往上跷升越陡者，代表该股为强势股。&#x0A;&#x0D;&#x0A;2.RAD 指标选择强势股的效果相当良好，请多多利用。&#x0A;" EffectiveTime="">
+            <param name="d" desc="" min="1.000000" max="100.000000" default="3.000000" step="0.000000" />
+            <param name="s" desc="" min="1.000000" max="250.000000" default="30.000000" step="0.000000" />
+            <param name="m" desc="" min="1.000000" max="100.000000" default="30.000000" step="0.000000" />
+        </index>
+    </group2>
+    <group2 name="龙系">
+        <index id="LON" desc="钱龙长线" password="" hotkey="" flag="2097154" time="1220435699" content="LC := REF(CLOSE,1);VID := SUM(VOL,2)/(((HHV(HIGH,2)-LLV(LOW,2)))*100);RC := (CLOSE-LC)*VID;LONG := SUM(RC,0);DIFF := SMA(LONG,10,1);DEA := SMA(LONG,20,1);LON : DIFF-DEA;LONMA : MA(LON,10);LONT : LON, COLORSTICK;" help="1.当指标曲线向上交叉其平均线时，视为长线买进信号。&#x0A;&#x0D;&#x0A;2.当指标曲线向下交叉其平均线时，视为长线卖出信号。&#x0A;&#x0D;&#x0A;3.本指标可搭配MACD、TRIX指标使用。&#x0A;" EffectiveTime="">
+            <param name="n" desc="" min="2.000000" max="300.000000" default="10.000000" step="0.000000" />
+        </index>
+        <index id="SHT" desc="钱龙短线" password="" hotkey="" flag="2127871" time="1220435747" content="VAR1:=MA((VOL-REF(VOL,1))/REF(VOL,1),5);&#x0D;&#x0A;VAR2:=(CLOSE-MA(CLOSE,24))/MA(CLOSE,24)*100;&#x0D;&#x0A;MY: VAR2*(1+VAR1);&#x0D;&#x0A;SHT: MY, COLORSTICK;&#x0D;&#x0A;SHTMA: MA(SHT,N);" help="1.当指标曲线向上交叉其平均线时，视为短线买进信号。&#x0A;&#x0D;&#x0A;2.当指标曲线向下交叉其平均线时，视为短线卖出信号。&#x0A;&#x0D;&#x0A;3.本指标可搭配KDJ、DMA指标使用。&#x0A;&#x0D;&#x0A;" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="">
+            <param name="n" desc="" unit="" min="2.000000" max="250.000000" default="5.000000" step="0.000000" bshow="1" userclr="-16777216" />
+        </index>
+        <index id="ZLMM" desc="主力买卖" password="" hotkey="" flag="2097154" time="1220435841" content="LC :=REF(CLOSE,1);RSI2:=SMA(MAX(CLOSE-LC,0),12,1)/SMA(ABS(CLOSE-LC),12,1)*100;RSI3:=SMA(MAX(CLOSE-LC,0),18,1)/SMA(ABS(CLOSE-LC),18,1)*100;MMS:MA(3*RSI2-2*SMA(MAX(CLOSE-LC,0),16,1)/SMA(ABS(CLOSE-LC),16,1)*100,3);MMM:EMA(MMS,8);MML:MA(3*RSI3-2*SMA(MAX(CLOSE-LC,0),12,1)/SMA(ABS(CLOSE-LC),12,1)*100,5);" help="白线为短期趋势线，黄线为中期趋势线，紫线为长期趋势线。&#x0A;&#x0D;&#x0A;1、主力买卖与主力进出配合使用时准确率极高。 &#x0A;&#x0D;&#x0A;2、当底部构成发出信号，且主力进出线向上时判断买点，准确率极高。 &#x0A;&#x0D;&#x0A;3、当短线上穿中线及长线时，形成最佳短线买点交叉形态（如底部构成已发出信号或主力进出线也向上且短线乖离率不大时）。&#x0A;&#x0D;&#x0A;4、当短线、中线均上穿长线，形成中线最佳买点形态（如底部构成已发出信号或主力进出线也向上且三线均向上时）。 &#x0A;&#x0D;&#x0A;5、当短线下穿中线，且短线与长线正乖离率太大时，形成短线最佳卖点交叉形态。 &#x0A;&#x0D;&#x0A;6、当短线、中线下穿长线，且是主力进出已走平或下降时，形成中线最佳卖点交叉形态。&#x0A;&#x0D;&#x0A;7、在上升途中，短、中线回落受长线支撑再度上行之时，为较佳的买入时机。&#x0A;&#x0D;&#x0A;8、指标在0以上表明个股处于强势，指标跌穿0线表明该股步入弱势。&#x0A;" EffectiveTime="" />
+        <index id="ADVOL" desc="钱龙离散量" password="" hotkey="" flag="2127871" time="1220435999" content="A:=SUM(((CLOSE-LOW)-(HIGH-CLOSE))*VOL/10000/(HIGH-LOW),0);&#x0D;&#x0A;ADVOL:A;&#x0D;&#x0A;MA1:MA(A,30);&#x0D;&#x0A;MA2:MA(MA1,100);" help="" EffectiveTime="" kind="0" often="0" protected="0" indexStockType="0" xday="-1" permitUser="" />
+    </group2>
+    <group2 name="鬼系">
+        <index id="CYW" desc="主力控盘" password="" hotkey="" flag="2097154" time="1220438621" content="VAR1:=CLOSE-LOW;VAR2:=HIGH-LOW;VAR3:=CLOSE-HIGH;VAR4:=IF(HIGH&gt;LOW,(VAR1/VAR2+VAR3/VAR2)*VOL,0);CYW: SUM(VAR4,10)/10000, COLORSTICK;" help="" EffectiveTime="" />
+    </group2>
+    <group2 name="其他系">
+        <index id="倉位統計" desc="" password="cfjdjm" hotkey="" flag="2097154" time="1374130945" often="0" protected="1" indexStockType="0" content="VAR1:=(100 - ((90 * (HHV(HIGH,14) - CLOSE)) / (HHV(HIGH,14) - LLV(LOW,14))));&#x0D;&#x0A;VAR2:=(100 - ((90 * (HHV(HIGH,14) - CLOSE)) / (HHV(HIGH,14) - LLV(LOW,14))));&#x0D;&#x0A;VAR3:=(100 - MA(((100 * (HHV(HIGH,6) - CLOSE)) / (HHV(HIGH,6) - LLV(LOW,6))),34));&#x0D;&#x0A;DIR1:=ABS(CLOSE-REF(CLOSE,5));&#x0D;&#x0A;VIR1:=SUM(ABS(CLOSE-REF(CLOSE,1)),5);&#x0D;&#x0A;ER1:=DIR1/VIR1;&#x0D;&#x0A;CS1:=ER1*(0.8-2/8)+2/8;&#x0D;&#x0A;CQ1:=CS1*CS1;&#x0D;&#x0A;AMA1:=EMA(DMA(CLOSE,CQ1),2);&#x0D;&#x0A;DIR2:=ABS(CLOSE-REF(CLOSE,10));&#x0D;&#x0A;VIR2:=SUM(ABS(CLOSE-REF(CLOSE,1)),10);&#x0D;&#x0A;ER2:=DIR2/VIR2;&#x0D;&#x0A;CS2:=ER2*(0.8-2/24)+2/24;&#x0D;&#x0A;CQ2:=CS2*CS2;&#x0D;&#x0A;&#x0D;&#x0A;{缺省为1,  1 --下跌(绿色);&#x0D;2--上涨(红色),3-上涨盘整(黄色),4--下跌盘整(兰色)}&#x0D;&#x0A;&#x0D;&#x0A;工作线:EMA(DMA(CLOSE,CQ2),2),COLOR871F78;&#x0D;&#x0A;R:=工作线/REF(工作线,1)*1000;&#x0D;&#x0A;R1:=INTPART(R);&#x0D; &#x0D;&#x0A;XJ:= IF(R1&lt;0.997*1000 OR R1=0.997*1000,1,0);&#x0D;&#x0A;SS:=IF(R1&gt;1.001*1000,2,0);&#x0D;&#x0A;PZ:= IF(R1&gt;0.997*1000 AND R1&lt;1.001*1000,3,0);&#x0D;&#x0A;{判断上一阶段的状态}&#x0D;&#x0A;D1:=BARSLAST(XJ=1);&#x0D;&#x0A;D2:=BARSLAST(SS=2);&#x0D;&#x0A;&#x0D;&#x0A;SSPZ0:=IF((D1&gt;D2) AND PZ=3,3,0);&#x0D;&#x0A;XJPZ0:=IF((D1&lt;D2) AND PZ=3,4,0);&#x0D;&#x0A;D3:=BARSLAST(SSPZ0=3);&#x0D;&#x0A;D4:=BARSLAST(XJPZ0=4);&#x0D;&#x0A;&#x0D;&#x0A;{如果前面仅上涨两天,则视为趋势未变，当前状态仍为 下降调整}&#x0D;&#x0A;SSPZ:=IF((SSPZ0=3) AND (D4&lt;4),4,SSPZ0);&#x0D;&#x0A;XJPZ:=IF((XJPZ0=4) AND (D3&lt;4),3,XJPZ0);&#x0D;&#x0A;&#x0D;&#x0A;SR0:=IF((SSPZ0=3) AND (D4&lt;4),1,0);&#x0D;&#x0A;XR0:=IF((XJPZ0=4) AND (D3&lt;4),1,0);&#x0D;&#x0A;D5:=BARSLAST(SR0=1);&#x0D;&#x0A;D6:=BARSLAST(XR0=1);&#x0D;&#x0A;&#x0D;&#x0A;SSPZR:=IF((SSPZ0=3) AND (D5&lt;D1 AND D5&lt;D2),4,SSPZ0);&#x0D;&#x0A;XJPZR:=IF((XJPZ0=4) AND (D6&lt;D1 AND D6&lt;D2),3,XJPZ0);&#x0D;&#x0A;&#x0D;&#x0A;RED:(SS=2);&#x0D;&#x0A;BLUE:((XJPZ=4 OR SSPZ=4 OR (SSPZ=3 AND SSPZR=4)));&#x0D;&#x0A;GREEN:(XJ=1);&#x0D;&#x0A;YELLOW:(((SSPZ=3 AND SSPZR=3) OR XJPZ=3  OR (XJPZ=4 AND XJPZR=3)));&#x0D;&#x0A;&#x0D;&#x0A;{大盘抄底}&#x0D;&#x0A;Z:=MA(C,120);&#x0D;&#x0A;VAR7:=(MA(C,5)-Z)/Z;&#x0D;&#x0A;VAR8:=MA((CLOSE-LLV(LOW,20))/(HHV(HIGH,20)-LLV(LOW,20))*100,3);&#x0D;&#x0A;CD:(CLOSE&gt;Z AND REF(VAR8,1)&lt;30 AND VAR8&gt;REF(VAR8,1) AND REF(VAR8,1)&lt;REF(VAR8,2)) OR (REF(VAR8,1)&lt;7 AND VAR8&gt;REF(VAR8,1) AND REF(VAR8,1)&lt;REF(VAR8,2) AND VAR7&lt;-0.1) OR   &#x0D;&#x0A;(CROSS(VAR8,5) AND VAR7&lt;-0.3);&#x0D;&#x0A;&#x0D;&#x0A;{大盘逃顶}&#x0D;&#x0A;VAR9:=(MA(H,5)-Z)/Z;&#x0D;&#x0A;VAR10:=MA((CLOSE-LLV(LOW,10))/(HHV(HIGH,10)-LLV(LOW,10))*100,3);&#x0D;&#x0A;TD:(CROSS(95,VAR10) AND VAR9&gt;0.3,1.01*HIGH) OR ( CROSS(93,VAR10) AND HHV(H,30)/LLV(L,30)&gt;1.1 AND REF(Z,1)/Z&gt;0.997) OR (CLOSE&lt;Z AND Z&lt;REF(Z,1) AND REF(VAR10,1)&gt;90 AND VAR10&lt;REF(VAR10,1) AND REF(VAR10,1)&gt;REF(VAR10,2));&#x0D;&#x0A;&#x0D;&#x0A;" help="" EffectiveTime="" />
+        <index id="AI指数择时" desc="" kind="0" password="cfjdjm" hotkey="" right="" flag="235960319" time="1764660498" often="0" protected="1" indexStockType="0" content="MAVOL1:=MA(AMOUNT,5),COLORWHITE;&#x0D;&#x0A;MAVOL2:=MA(AMOUNT,20),COLORYELLOW,LINETHICK2;&#x0D;&#x0A;B:=MAVOL1&gt;MAVOL2;&#x0D;&#x0A;G:=MA(AMOUNT,20)&gt;REF(MA(AMOUNT,20),1),NODRAW;&#x0D;&#x0A;量1:=IF(B,30,0);&#x0D;&#x0A;量2:=IF(G,25,0);&#x0D;&#x0A;量3:=IF(AMOUNT&gt;MA(AMOUNT,20),10,0);&#x0D;&#x0A;价1:=IF(C&gt;MA(C,10),10,0);&#x0D;&#x0A;价2:=IF(MA(C,10)&gt;REF(MA(C,10),1),15,0);&#x0D;&#x0A;价3:=IF(C&gt;REF(C,1),10,0);&#x0D;&#x0A;MA10:MA(C,10),COLORYELLOW;&#x0D;&#x0A;今日总分:量1+量2+量3+价1+价2+价3,COLORRED,NODRAW;&#x0D;&#x0A;不开:=今日总分&gt;70 AND C&lt;REF(C,1);&#x0D;&#x0A;DRAWTEXT(今日总分&gt;70 AND NOT(不开),MA10,&apos;多&apos;),COLORRED,NOTITLE;&#x0D;&#x0A;DRAWTEXT(今日总分&lt;=50,MA10,&apos;空&apos;),COLORGREEN,NOTITLE;&#x0D;&#x0A;DRAWTEXT((今日总分&gt;50 AND 今日总分&lt;=70) OR(今日总分&gt;70 AND 不开),MA10,&apos;转&apos;),NOTITLE;" help="" url="" EffectiveTime="" />
+        <index id="情绪二号" desc="" kind="0" password="cfjdjm" hotkey="" right="" flag="235960319" time="1767593783" often="0" protected="0" indexStockType="0" xday="2083125600" permitUser="" content="BIAS :=(CLOSE-MA(CLOSE,5))/MA(CLOSE,5)*100;&#x0D;&#x0A;七天乖离:=MA(BIAS,7);&#x0D;&#x0A;DM:=REF(COUNT(BIAS&lt;3.3,7),1)&gt;=3;&#x0D;&#x0A;BD1:=((REF(BIAS,1)&lt;REF(LLV(BIAS,7),2) AND REF(BIAS,1)&lt;3.5 ) OR REF(BIAS,1)&lt;1.3);&#x0D;&#x0A;QD1:=DM AND O&gt;=REF(C,1)*1.04 AND  ( O&gt;=REF(HHV(H,6),1) OR  O&gt;=REF(HHV(C,6),1))  AND REF(BIAS,1)&lt;6;&#x0D;&#x0A;QD2:=BD1 AND O&gt;=REF(C,1)*1.04 AND  ( O&gt;=REF(HHV(H,6),1) OR  O&gt;=REF(HHV(C,6),1)) AND REF(BIAS,1)&lt;6;&#x0D;&#x0A;BINGDIAN:=(H-C)/REF(C,1)&gt;0.04 AND C&lt;REF(C,1);&#x0D;&#x0A;QD3:=REF(L,1)&lt;REF(MA(C,5),1)*1.015  AND O&gt;=REF(C,1)*1.04;&#x0D;&#x0A;变:=QD1 OR QD2 OR QD3;&#x0D;&#x0A;MKV:=MKT_FT_VALUE(3003,&apos;_6昨连板今红率&apos;,0)&lt;0.4;&#x0D;&#x0A;启:=(QD1 OR QD2 OR QD3) AND MKV;&#x0D;&#x0A;DRAWTEXT(变,1.02*(H),&apos;变&apos;),COLORYELLOW,NOTITLE;&#x0D;&#x0A;DRAWTEXT(启 AND NOT(变),1.02*(H),&apos;启&apos;),COLORRED,NOTITLE;&#x0D;&#x0A;DRAWTEXT(启 AND 变,1.04*(H),&apos;启&apos;),COLORRED,NOTITLE;&#x0D;&#x0A;MA5:MA(C,5),NOTITLE;" help="" url="" EffectiveTime="" />
+    </group2>
+</group1>
+<group1 name="条件选股公式" type="2">
+    <group2 name="指标选股">
+        <index id="BIASBUY" desc="乖离率买入条件选股" password="" hotkey="" flag="2097154" time="1296037738" often="1" protected="0" indexStockType="0" content="(CLOSE-MA(CLOSE,N))/MA(CLOSE,N)*100+LL&lt;0;" help="" EffectiveTime="">
+            <param name="n" desc="" min="1.000000" max="250.000000" default="12.000000" step="0.000000" />
+            <param name="ll" desc="" min="0.000000" max="40.000000" default="6.000000" step="0.000000" />
+        </index>
+        <index id="KABUY" desc="KD买入条件选股" password="" hotkey="" flag="2097154" time="1296037895" often="1" protected="0" indexStockType="0" content="RSV:=(CLOSE-LLV(LOW,N))/(HHV(HIGH,N)-LLV(LOW,N))*100;&#x0D;&#x0A;K:=SMA(RSV,M1,1);&#x0D;&#x0A;D:=SMA(K,M2,1);&#x0D;&#x0A;KD:CROSS(K,D)  AND K&lt;20;" help="" EffectiveTime="">
+            <param name="n" desc="" min="1.000000" max="40.000000" default="9.000000" step="0.000000" />
+            <param name="m1" desc="" min="2.000000" max="10.000000" default="3.000000" step="0.000000" />
+            <param name="m2" desc="" min="2.000000" max="10.000000" default="3.000000" step="0.000000" />
+        </index>
+        <index id="BULLBUY" desc="布林带买入条件选股" password="" hotkey="" flag="2097154" time="1296038003" often="1" protected="0" indexStockType="0" content="MID :=  MA(CLOSE,N);&#x0D;&#x0A;UPPER:= MID+S*STD(CLOSE,N);&#x0D;&#x0A;LOWER:= MID-S*STD(CLOSE,N);&#x0D;&#x0A;CROSS(CLOSE,LOWER);" help="" EffectiveTime="">
+            <param name="n" desc="" min="5.000000" max="100.000000" default="20.000000" step="0.000000" />
+            <param name="s" desc="" min="0.000000" max="10.000000" default="2.000000" step="0.000000" />
+        </index>
+        <index id="BIASSELL" desc="乖离率卖出条件选股" password="" hotkey="" flag="2097154" time="1296038076" often="1" protected="0" indexStockType="0" content="100*(CLOSE-MA(CLOSE,N))/MA(CLOSE,N)&gt;M;" help="" EffectiveTime="">
+            <param name="n" desc="" min="1.000000" max="250.000000" default="12.000000" step="0.000000" />
+            <param name="m" desc="" min="1.000000" max="250.000000" default="12.000000" step="0.000000" />
+        </index>
+        <index id="KDSELL" desc="KD卖出条件选股" password="" hotkey="" flag="2097154" time="1296038137" often="1" protected="0" indexStockType="0" content="RSV:= (CLOSE-LLV(LOW,N))/(HHV(HIGH,N)-LLV(LOW,N))*100;&#x0D;&#x0A;K:=SMA(RSV,N1,1);&#x0D;&#x0A;D:=SMA(K,N2,1);&#x0D;&#x0A;CROSS(D,K) AND D&gt;N3;" help="" EffectiveTime="">
+            <param name="n" desc="" min="1.000000" max="100.000000" default="9.000000" step="0.000000" />
+            <param name="n1" desc="" min="1.000000" max="100.000000" default="3.000000" step="0.000000" />
+            <param name="n2" desc="" min="1.000000" max="100.000000" default="3.000000" step="0.000000" />
+            <param name="n3" desc="" min="1.000000" max="100.000000" default="80.000000" step="0.000000" />
+        </index>
+    </group2>
+</group1>

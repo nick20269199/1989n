@@ -15,8 +15,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("deep_mine")
 
-MEMORY_DIR = Path("C:/Users/1989n/.claude/projects/C--Users-1989n/memory")
-JSONL_DIR = Path("C:/Users/1989n/.claude/projects/C--Users-1989n")
+MEMORY_DIR = Path("D:/1989n/.claude/projects/d--1989n/memory")
+JSONL_DIR = Path("D:/1989n/.claude/projects/d--1989n")
 INTERACTION_DIR = MEMORY_DIR / "interaction"
 DEEP_DIR = INTERACTION_DIR / "deep_mine"
 DEEP_DIR.mkdir(parents=True, exist_ok=True)

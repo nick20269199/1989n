@@ -191,7 +191,413 @@
         "triggered_pct": -15.0,
         "hard_stop_pct": -10
       }
+    },
+    {
+      "timestamp": "2026-05-26T10:01:12.725286",
+      "code": "002261",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 32.5 < 最低接受价 35.15",
+      "trigger_info": {
+        "cost": 38.963,
+        "current": 32.5,
+        "triggered_pct": -16.6,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:12.705525"
+      },
+      "price_as_of": "2026-05-26T10:01:12.705525"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:12.755271",
+      "code": "002639",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 14.84 < 最低接受价 18.06",
+      "trigger_info": {
+        "cost": 20.026,
+        "current": 14.84,
+        "triggered_pct": -25.9,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:12.736827"
+      },
+      "price_as_of": "2026-05-26T10:01:12.736827"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:12.789663",
+      "code": "300611",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 28.18 < 最低接受价 29.40",
+      "trigger_info": {
+        "cost": 32.594,
+        "current": 28.18,
+        "triggered_pct": -13.5,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:12.767533"
+      },
+      "price_as_of": "2026-05-26T10:01:12.767533"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:12.820775",
+      "code": "300631",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 26.41 < 最低接受价 27.13",
+      "trigger_info": {
+        "cost": 30.07,
+        "current": 26.41,
+        "triggered_pct": -12.2,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:12.801459"
+      },
+      "price_as_of": "2026-05-26T10:01:12.801459"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:12.854788",
+      "code": "301038",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 19.45 < 最低接受价 32.80",
+      "trigger_info": {
+        "cost": 36.35,
+        "current": 19.45,
+        "triggered_pct": -46.5,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:12.833044"
+      },
+      "price_as_of": "2026-05-26T10:01:12.833044"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:12.889405",
+      "code": "601595",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 22.29 < 最低接受价 24.00",
+      "trigger_info": {
+        "cost": 26.597,
+        "current": 22.29,
+        "triggered_pct": -16.2,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:12.867213"
+      },
+      "price_as_of": "2026-05-26T10:01:12.867213"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:12.924894",
+      "code": "603956",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 6.27 < 最低接受价 9.47",
+      "trigger_info": {
+        "cost": 10.49,
+        "current": 6.27,
+        "triggered_pct": -40.2,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:12.903144"
+      },
+      "price_as_of": "2026-05-26T10:01:12.903144"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:12.961325",
+      "code": "300058",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 15.98 < 最低接受价 16.45",
+      "trigger_info": {
+        "cost": 18.24,
+        "current": 15.98,
+        "triggered_pct": -12.4,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:12.937733"
+      },
+      "price_as_of": "2026-05-26T10:01:12.937733"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:31.550435",
+      "code": "002261",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 32.49 < 最低接受价 35.15",
+      "trigger_info": {
+        "cost": 38.963,
+        "current": 32.49,
+        "triggered_pct": -16.6,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:31.531021"
+      },
+      "price_as_of": "2026-05-26T10:01:31.531021"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:31.577769",
+      "code": "002639",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 14.83 < 最低接受价 18.06",
+      "trigger_info": {
+        "cost": 20.026,
+        "current": 14.83,
+        "triggered_pct": -25.9,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:31.560041"
+      },
+      "price_as_of": "2026-05-26T10:01:31.560041"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:31.604637",
+      "code": "300611",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 28.05 < 最低接受价 29.40",
+      "trigger_info": {
+        "cost": 32.594,
+        "current": 28.05,
+        "triggered_pct": -13.9,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:31.587536"
+      },
+      "price_as_of": "2026-05-26T10:01:31.587536"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:31.630773",
+      "code": "300631",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 26.35 < 最低接受价 27.13",
+      "trigger_info": {
+        "cost": 30.07,
+        "current": 26.35,
+        "triggered_pct": -12.4,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:31.613563"
+      },
+      "price_as_of": "2026-05-26T10:01:31.613563"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:31.658449",
+      "code": "301038",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 19.43 < 最低接受价 32.80",
+      "trigger_info": {
+        "cost": 36.35,
+        "current": 19.43,
+        "triggered_pct": -46.5,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:31.641200"
+      },
+      "price_as_of": "2026-05-26T10:01:31.641200"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:31.684170",
+      "code": "601595",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 22.23 < 最低接受价 24.00",
+      "trigger_info": {
+        "cost": 26.597,
+        "current": 22.23,
+        "triggered_pct": -16.4,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:31.667893"
+      },
+      "price_as_of": "2026-05-26T10:01:31.667893"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:31.709475",
+      "code": "603956",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 6.27 < 最低接受价 9.47",
+      "trigger_info": {
+        "cost": 10.49,
+        "current": 6.27,
+        "triggered_pct": -40.2,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:31.692702"
+      },
+      "price_as_of": "2026-05-26T10:01:31.692702"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:31.736582",
+      "code": "300058",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 15.97 < 最低接受价 16.45",
+      "trigger_info": {
+        "cost": 18.24,
+        "current": 15.97,
+        "triggered_pct": -12.4,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:31.718045"
+      },
+      "price_as_of": "2026-05-26T10:01:31.718045"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:47.913937",
+      "code": "002261",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 32.47 < 最低接受价 35.15",
+      "trigger_info": {
+        "cost": 38.963,
+        "current": 32.47,
+        "triggered_pct": -16.7,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:47.907255"
+      },
+      "price_as_of": "2026-05-26T10:01:47.907255"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:47.933886",
+      "code": "002639",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 14.82 < 最低接受价 18.06",
+      "trigger_info": {
+        "cost": 20.026,
+        "current": 14.82,
+        "triggered_pct": -26.0,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:47.920370"
+      },
+      "price_as_of": "2026-05-26T10:01:47.920370"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:47.955009",
+      "code": "300611",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 28.09 < 最低接受价 29.40",
+      "trigger_info": {
+        "cost": 32.594,
+        "current": 28.09,
+        "triggered_pct": -13.8,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:47.942562"
+      },
+      "price_as_of": "2026-05-26T10:01:47.942562"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:47.972683",
+      "code": "300631",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 26.38 < 最低接受价 27.13",
+      "trigger_info": {
+        "cost": 30.07,
+        "current": 26.38,
+        "triggered_pct": -12.3,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:47.961227"
+      },
+      "price_as_of": "2026-05-26T10:01:47.961227"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:47.990397",
+      "code": "301038",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 19.44 < 最低接受价 32.80",
+      "trigger_info": {
+        "cost": 36.35,
+        "current": 19.44,
+        "triggered_pct": -46.5,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:47.978470"
+      },
+      "price_as_of": "2026-05-26T10:01:47.978470"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:48.007535",
+      "code": "601595",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 22.23 < 最低接受价 24.00",
+      "trigger_info": {
+        "cost": 26.597,
+        "current": 22.23,
+        "triggered_pct": -16.4,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:47.995989"
+      },
+      "price_as_of": "2026-05-26T10:01:47.995989"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:48.023877",
+      "code": "603956",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 6.27 < 最低接受价 9.47",
+      "trigger_info": {
+        "cost": 10.49,
+        "current": 6.27,
+        "triggered_pct": -40.2,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:48.012697"
+      },
+      "price_as_of": "2026-05-26T10:01:48.012697"
+    },
+    {
+      "timestamp": "2026-05-26T10:01:48.042057",
+      "code": "300058",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 15.96 < 最低接受价 16.45",
+      "trigger_info": {
+        "cost": 18.24,
+        "current": 15.96,
+        "triggered_pct": -12.5,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:01:48.030091"
+      },
+      "price_as_of": "2026-05-26T10:01:48.030091"
+    },
+    {
+      "timestamp": "2026-05-26T10:21:51.839937",
+      "code": "300058",
+      "status": "blocked",
+      "reason": "slippage_exceeded: 当前 15.96 < 最低接受价 16.45",
+      "trigger_info": {
+        "cost": 18.24,
+        "current": 15.96,
+        "triggered_pct": -12.5,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T10:21:51.829023"
+      },
+      "price_as_of": "2026-05-26T10:21:51.829023"
+    },
+    {
+      "timestamp": "2026-05-26T12:21:06.974072",
+      "code": "300058",
+      "status": "blocked",
+      "reason": "安全护栏拦截: market_closed: 午休",
+      "trigger_info": {
+        "cost": 18.24,
+        "current": 15.85,
+        "triggered_pct": -13.1,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T12:21:06.972064"
+      },
+      "price_as_of": "2026-05-26T12:21:06.972064"
+    },
+    {
+      "timestamp": "2026-05-26T12:21:18.957500",
+      "code": "300058",
+      "status": "blocked",
+      "reason": "安全护栏拦截: market_closed: 午休",
+      "trigger_info": {
+        "cost": 18.24,
+        "current": 15.85,
+        "triggered_pct": -13.1,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T12:21:18.938930"
+      },
+      "price_as_of": "2026-05-26T12:21:18.938930"
+    },
+    {
+      "timestamp": "2026-05-26T12:21:30.203746",
+      "code": "300058",
+      "status": "blocked",
+      "reason": "安全护栏拦截: market_closed: 午休",
+      "trigger_info": {
+        "cost": 18.24,
+        "current": 15.85,
+        "triggered_pct": -13.1,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T12:21:30.193849"
+      },
+      "price_as_of": "2026-05-26T12:21:30.193849"
+    },
+    {
+      "timestamp": "2026-05-26T12:21:42.736950",
+      "code": "300058",
+      "status": "blocked",
+      "reason": "安全护栏拦截: market_closed: 午休",
+      "trigger_info": {
+        "cost": 18.24,
+        "current": 15.85,
+        "triggered_pct": -13.1,
+        "hard_stop_pct": -10,
+        "price_as_of": "2026-05-26T12:21:42.712846"
+      },
+      "price_as_of": "2026-05-26T12:21:42.712846"
     }
   ],
-  "_updated": "2026-05-25T22:05:45.439950"
+  "_updated": "2026-05-26T12:21:42.736972"
 }

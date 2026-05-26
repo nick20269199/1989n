@@ -19,7 +19,7 @@
       "Bash(cd D:/1989n/stock_analysis && /d/Python314/python news_scheduler.py *)",
       "Bash(cd D:/1989n/stock_analysis && /d/Python314/python health_check.py *)",
       "Bash(cd D:/1989n/stock_analysis && /d/Python314/python call_auction.py *)",
-      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python _sel_lint.py *)",
+      "Bash(cd D:/1989n/stock_analysis && /d/Python314/python sel_lint.py *)",
       "Bash(cd D:/1989n/stock_analysis && /d/Python314/python conversation_miner.py *)",
       "Bash(cd D:/1989n/stock_analysis && /d/Python314/python task_sentinel.py *)",
       "Bash(cd D:/1989n/stock_analysis && /d/Python314/python intraday_report.py *)",

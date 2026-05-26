@@ -21,7 +21,7 @@ def main():
     log.write(f"\n{'='*40}\n{now:%Y-%m-%d %H:%M} auto_push start\n")
 
     # 0. 先跑蒸馏队列 — 扫描今日产出, 生成 distillation_brief.md
-    code, out, err = run(["python", "stock_analysis/distill_queue.py"], timeout=30)
+    code, out, err = run([r"D:\Python314\python", "stock_analysis/distill_queue.py"], timeout=30)
     log.write(f"DISTILL: {out} {err}\n")
 
     # 1. 拉取远程更新

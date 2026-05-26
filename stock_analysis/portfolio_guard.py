@@ -15,6 +15,8 @@
 
 import json
 import sys
+import os
+import glob
 from datetime import datetime
 from pathlib import Path
 
@@ -294,7 +296,7 @@ def generate_brief(cycle: dict, alerts: list, results: list) -> str:
         lines.append(f"**高风险**: {', '.join(names)} — 建议立即审查")
 
     if not incompatible and not high_risk:
-        lines.append("**组合状态**: 无严重冲突，当前持仓与{stage}阶段基本适配")
+        lines.append(f"**组合状态**: 无严重冲突，当前持仓与{stage}阶段基本适配")
 
     lines.append("")
     lines.append(f"**阶段操作建议**: {STAGE_PORTFOLIO_RULES.get(stage, {}).get('action', '等待信号')}")
@@ -314,21 +316,56 @@ def check_and_execute(cycle: dict) -> list[dict]:
             "stop": h["stop"],
         })
 
-    # 读取当前价格（优先从最新盘中分析）
+    # 3层价格获取：API实时 → 30min分析文件 → 成本价(安全默认)
     prices = {}
-    reports = sorted(Path(__file__).parent.parent.glob("stock_data/analysis_30min_*.json"), reverse=True)
-    if reports:
+    source = ""
+
+    # 层1: API实时行情
+    try:
+        from daily_task import fetch_quotes_batch
+        codes = [h["code"] for h in holdings]
+        quotes = fetch_quotes_batch(codes)
+        for code, q in quotes.items():
+            if q.get("price", 0) > 0:
+                prices[code] = q["price"]
+        if prices:
+            source = f"API(direct) {len(prices)}/{len(codes)}"
+    except Exception as e:
+        print(f"  ⚠ API行情获取失败: {e}")
+
+    # 层2: 30min分析文件补充
+    from config import STOCK_DATA_DIR
+    reports = sorted(STOCK_DATA_DIR.glob("analysis_30min_*.json"), reverse=True)
+    today = datetime.now().strftime("%Y%m%d")
+    today_reports = [f for f in reports if today in str(f)]
+    reports_to_check = today_reports if today_reports else reports[:1]
+
+    for f in reports_to_check:
         try:
-            data = json.loads(reports[0].read_text(encoding="utf-8"))
+            data = json.loads(f.read_text(encoding="utf-8"))
             for h in data.get("holdings", []):
-                prices[h["code"]] = h.get("price", 0)
+                code = h["code"]
+                if code not in prices:
+                    prices[code] = float(h.get("price", 0))
+            if source:
+                source += f" + {f.name}"
+            else:
+                source = f.name
+            break
         except Exception:
             pass
 
-    if not prices:
+    # 层3: 无任何价格 → 用成本价(不触发止损的安全默认)
+    missing = [h["code"] for h in holdings if h["code"] not in prices or prices[h["code"]] <= 0]
+    for code in missing:
         for h in holdings:
-            prices[h["code"]] = h["cost"]
+            if h["code"] == code:
+                prices[code] = h["cost"]
+                break
+    if missing:
+        source += f" + {len(missing)}只默认成本价"
 
+    print(f"  价格来源: {source}")
     stage = cycle.get("stage", "主升")
     results = check_all_positions(holdings, prices, stage)
 

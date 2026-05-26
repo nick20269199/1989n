@@ -466,6 +466,37 @@ def check_channels() -> dict:
 
 
 # ═══════════════════════════════════════════
+# XyStock 辅助通道 — 股票元数据 + 财务数据
+# ═══════════════════════════════════════════
+
+_XY_BRIDGE = None
+
+def _get_xy_bridge():
+    global _XY_BRIDGE
+    if _XY_BRIDGE is None:
+        try:
+            from xy_stock_bridge import XyStockBridge
+            _XY_BRIDGE = XyStockBridge()
+        except ImportError:
+            _XY_BRIDGE = False
+    return _XY_BRIDGE if _XY_BRIDGE else None
+
+def xy_stock_pe(code: str) -> Optional[float]:
+    """从 XyStock .fnc 获取市盈率 (PE). 无数据返回 None. 辅助通道"""
+    bridge = _get_xy_bridge()
+    if bridge:
+        return bridge.get_pe_ratio(code)
+    return None
+
+def xy_stock_name(code: str) -> Optional[str]:
+    """从 XyStock 本地数据库获取股票中文名称。辅助通道"""
+    bridge = _get_xy_bridge()
+    if bridge:
+        return bridge.get_stock_name(code)
+    return None
+
+
+# ═══════════════════════════════════════════
 # 命令行入口: python data_source_router.py check
 # ═══════════════════════════════════════════
 
@@ -477,6 +508,10 @@ if __name__ == '__main__':
         all_ok = all(v for k, v in status.items() if k not in ('eastmoney',))
         print(f"\n核心通道: {'✅ 全部正常' if all_ok else '❌ 有异常'}")
         print("优先级: TDX → Sina → Tencent → Sohu")
+        # 附加 XyStock 通道状态
+        pe = xy_stock_pe('600000')
+        name = xy_stock_name('600000')
+        print(f"XyStock辅助: {'可用' if pe else '不可用'} (浦发银行 PE={pe}, name={name})")
     else:
         q = get_quotes(['002156'])
         print(json.dumps(q, ensure_ascii=False, indent=2))

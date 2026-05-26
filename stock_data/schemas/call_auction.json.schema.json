@@ -22,5 +22,6 @@
       "open_volume": "number"
     }
   },
-  "freshness_hours": 48
+  "freshness_hours": 48,
+  "freshness_latest_only": true
 }
