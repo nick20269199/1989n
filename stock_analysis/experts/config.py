@@ -63,6 +63,17 @@ GRADER_MIN_SCORE = 0.6  # minimum average score to pass
 DREAMER_SCHEDULE = "0 17 * * 1-5"  # daily at 17:00 weekdays
 DREAMER_WINDOW_DAYS = 30  # how many days of history to review
 
+# --- Per-expert data context isolation ---
+# Each expert only sees the data fields relevant to their analysis.
+# Reduces prompt size, eliminates noise, prevents cross-domain confusion.
+EXPERT_DATA_FIELDS = {
+    "expert1_tech": {"kline", "market_state", "knowledge_text", "holding_thesis", "market_summary"},
+    "expert2_money": {"kline", "market_state", "knowledge_text", "holding_thesis", "market_summary"},
+    "expert3_sentiment": {"recent_news", "market_state", "knowledge_text", "holding_thesis", "market_summary"},
+    "expert4_macro": {"market_summary", "market_state"},
+    "expert5_risk": {"kline", "holdings", "holding_thesis", "market_state", "financial"},
+}
+
 # --- Market state thresholds ---
 MARKET_STATE_RULES = {
     "trend": {"min_rsi": 55, "max_rsi": 80, "min_volume_ratio": 1.2},

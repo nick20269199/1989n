@@ -48,6 +48,9 @@ PROMPT_TEMPLATE = """对 {name}({symbol}) 进行题材情绪面分析。
 # END OF FILL ZONE 2
 # ============================================================
 
+**已有认知参考（非本次分析数据，仅供推理上下文参考）：**
+{knowledge_text}
+
 最后，输出一个JSON代码块，包含以下字段。
 
 **知识库注入 — 板块周期与情绪判断：**
@@ -104,6 +107,7 @@ def analyze(symbol: str, name: str, data_context: dict,
         data=json.dumps(data_context, ensure_ascii=False, indent=2),
         market_state=market_state,
         mode=mode,
+        knowledge_text=data_context.get("knowledge_text", "无历史认知数据"),
     )
     output = run_expert(EXPERT_ID, symbol, name, data_context,
                          prompt_template="", system_prompt=SYSTEM_PROMPT,

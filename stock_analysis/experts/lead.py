@@ -26,7 +26,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from experts.base import ExpertOutput, repair_expert
 from experts.config import (
-    OUTPUT_DIR, EXPERT_WEIGHTS, EXPERT_TIMEOUT, LEAD_TIMEOUT,
+    OUTPUT_DIR, EXPERT_WEIGHTS, EXPERT_DATA_FIELDS,
+    EXPERT_TIMEOUT, LEAD_TIMEOUT,
     PORTFOLIO_FILE, STOCK_DB,
 )
 from experts.grader import grade, save_grade_result, GRADER_ID
@@ -179,7 +180,72 @@ def prepare_data_for_expert(symbol: str, name: str, mode: str = "full") -> dict:
     summary = _get_market_summary()
     data["market_summary"] = summary
 
+    # 6. Knowledge text from Knowledge DB (P0: 知识注入 expert 管线)
+    knowledge_text = _build_knowledge_text(symbol, name)
+    if knowledge_text:
+        data["knowledge_text"] = knowledge_text
+
     return data
+
+
+def _build_knowledge_text(symbol: str, name: str) -> str:
+    """Query knowledge_db for stock-specific knowledge, return formatted text.
+
+    Gathers: recent decisions (tier >= 3), related knowledge entries.
+    Uses multi-strategy search: by name, by stock code, with general fallback.
+    Returns empty string if no data, so callers degrade gracefully.
+    """
+    try:
+        from knowledge_db import query_stock_history, search_knowledge
+
+        parts = []
+
+        # 1. Knowledge entries related to this stock
+        # Strategy A: search by stock name (e.g. "通富微电")
+        # Strategy B: search by stock code (e.g. "002156")
+        # Strategy C: fallback to general stock patterns
+        all_entries = []
+        if name:
+            all_entries.extend(search_knowledge(name, limit=8))
+        if symbol:
+            all_entries.extend(search_knowledge(symbol, limit=4))
+        if not all_entries:
+            # 没有命中特定股票的知识，至少注入通用模式
+            all_entries.extend(search_knowledge("", topic="stock", limit=2))
+        # Dedup by id
+        seen = set()
+        unique = []
+        for e in all_entries:
+            if e.get("id") not in seen:
+                seen.add(e.get("id"))
+                unique.append(e)
+        tier_entries = [e for e in unique if e.get("tier", 3) >= 3]
+        if tier_entries:
+            lines = ["【相关认知参考】"]
+            for e in tier_entries[:3]:
+                snippet = e.get("content_snippet", "")[:200]
+                lines.append(f"- [{e.get('topic', '?')}] {snippet}")
+            parts.append("\n".join(lines))
+
+        # 2. Recent decisions for this stock (last 60 days)
+        decisions = query_stock_history(symbol, days=60, limit=5)
+        if decisions:
+            lines = ["【近期决策记录】"]
+            for d in decisions:
+                lines.append(
+                    f"- {d['timestamp'][:10]} {d.get('decision_type', '?')}: "
+                    f"{d.get('summary', '')[:150]}"
+                )
+            parts.append("\n".join(lines))
+
+        return "\n\n".join(parts)
+
+    except ImportError:
+        logger.debug("knowledge_db not available, skipping knowledge text")
+        return ""
+    except Exception as e:
+        logger.warning(f"Failed to build knowledge text for {symbol}: {e}")
+        return ""
 
 
 def build_decision_packet(symbol: str, name: str,
@@ -276,8 +342,12 @@ def run_single(symbol: str, name: str = "", mode: str = "full") -> Optional[dict
             if weight <= 0:
                 logger.info(f"Skipping {expert_id} (weight={weight})")
                 continue
+            # Context isolation: only pass fields this expert needs
+            allowed = EXPERT_DATA_FIELDS.get(expert_id, set(data_context.keys()))
+            filtered_ctx = {k: v for k, v in data_context.items() if k in allowed}
+            logger.debug(f"{expert_id}: isolated context fields={list(filtered_ctx.keys())}")
             future = executor.submit(
-                analyze_func, symbol, name, data_context, market_state, mode
+                analyze_func, symbol, name, filtered_ctx, market_state, mode
             )
             future_map[future] = expert_id
 

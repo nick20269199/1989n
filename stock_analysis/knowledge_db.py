@@ -68,7 +68,10 @@ def init_knowledge_db():
             content_snippet TEXT,     -- 关键内容片段 (前500字)
             created_at TEXT,
             updated_at TEXT,
-            status TEXT DEFAULT 'active'  -- active/outdated/deprecated
+            status TEXT DEFAULT 'active',  -- active/outdated/deprecated
+            tier INTEGER DEFAULT 3,        -- L1=会话 L2=日频 L3=知识库 L4=规则
+            access_count INTEGER DEFAULT 0, -- 访问次数，用于自动升降级
+            last_accessed TEXT              -- 最后访问时间
         );
         CREATE INDEX IF NOT EXISTS idx_knowledge_topic ON knowledge_entry(topic);
         CREATE INDEX IF NOT EXISTS idx_knowledge_tags ON knowledge_entry(tags);
@@ -89,7 +92,37 @@ def init_knowledge_db():
         CREATE INDEX IF NOT EXISTS idx_decision_time ON decision_log(timestamp);
         CREATE INDEX IF NOT EXISTS idx_decision_type ON decision_log(decision_type);
         """)
+
+        # 迁移：为已有表添加 tier/access_count 列
+        _migrate_knowledge_entry(db)
+
+        # 迁移后才建 tier 索引（旧表无 tier 列时 CREATE INDEX 会失败）
+        try:
+            db.execute("CREATE INDEX IF NOT EXISTS idx_knowledge_tier ON knowledge_entry(tier)")
+        except Exception:
+            pass
+        try:
+            db.execute("CREATE INDEX IF NOT EXISTS idx_knowledge_access ON knowledge_entry(access_count)")
+        except Exception:
+            pass
+
     return True
+
+
+def _migrate_knowledge_entry(db):
+    """为已有 knowledge_entry 表添加 tier/access_count 列（幂等）。"""
+    existing = [r["name"] for r in db.execute("PRAGMA table_info(knowledge_entry)").fetchall()]
+    migrations = [
+        ("tier", "ALTER TABLE knowledge_entry ADD COLUMN tier INTEGER DEFAULT 3"),
+        ("access_count", "ALTER TABLE knowledge_entry ADD COLUMN access_count INTEGER DEFAULT 0"),
+        ("last_accessed", "ALTER TABLE knowledge_entry ADD COLUMN last_accessed TEXT"),
+    ]
+    for col_name, sql in migrations:
+        if col_name not in existing:
+            try:
+                db.execute(sql)
+            except Exception:
+                pass  # column may already exist despite PRAGMA
 
 
 # ── file_index CRUD ───────────────────────────────────────────
@@ -289,7 +322,83 @@ def file_index_stats() -> dict:
     }
 
 
-# ── knowledge_entry CRUD ─────────────────────────────────────
+# ── 记忆分层 CRUD ─────────────────────────────────────────────
+
+
+def search_knowledge(query: str, topic: str = None, limit: int = 20) -> list[dict]:
+    """搜索 knowledge_entry，同时更新访问计数用于自动升降级。"""
+    conditions = ["status = 'active'"]
+    params = []
+
+    if topic:
+        conditions.append("topic = ?")
+        params.append(topic)
+
+    # 搜索 content_snippet 和 tags
+    conditions.append("(content_snippet LIKE ? OR tags LIKE ?)")
+    params.append(f"%{query}%")
+    params.append(f"%{query}%")
+
+    where = " AND ".join(conditions)
+    sql = f"SELECT * FROM knowledge_entry WHERE {where} ORDER BY updated_at DESC LIMIT ?"
+    params.append(limit)
+
+    with get_db() as db:
+        rows = db.execute(sql, params).fetchall()
+        results = [dict(r) for r in rows]
+
+    # 更新访问计数（异步风格：不阻塞主路径）
+    _bump_access([r["id"] for r in results])
+
+    return results
+
+
+def _bump_access(entry_ids: list[int]):
+    """递增 knowledge_entry 的 access_count + 更新 last_accessed。"""
+    if not entry_ids:
+        return
+    try:
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with get_db() as db:
+            for eid in entry_ids:
+                db.execute(
+                    "UPDATE knowledge_entry SET access_count = access_count + 1, last_accessed = ? WHERE id = ?",
+                    (now, eid),
+                )
+    except Exception:
+        pass  # non-critical, don't block reads
+
+
+def auto_tier_promote(threshold: int = 5) -> dict:
+    """自动升降级：访问次数达到 threshold 的 L3 条目升到 L2。
+
+    L1=会话(瞬时) L2=日频(短期) L3=知识库(长期) L4=规则(持久)
+    当前策略只做 L3→L2 升级（高频访问的知识值得更短刷新）。
+    """
+    counts = {"promoted": 0, "demoted": 0}
+    try:
+        with get_db() as db:
+            # L3→L2: access_count >= threshold
+            promoted = db.execute(
+                "UPDATE knowledge_entry SET tier = 2, updated_at = ? "
+                "WHERE status = 'active' AND tier = 3 AND access_count >= ?",
+                (datetime.now().strftime("%Y-%m-%d %H:%M:%S"), threshold),
+            )
+            counts["promoted"] = promoted.rowcount
+
+            # L2→L3: access_count < threshold / 2 and last_accessed older than 7 days
+            demoted = db.execute(
+                "UPDATE knowledge_entry SET tier = 3, updated_at = ? "
+                "WHERE status = 'active' AND tier = 2 AND access_count < ? "
+                "AND last_accessed < ?",
+                (datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                 threshold // 2,
+                 (datetime.now().strftime("%Y-%m-%d 00:00:00"))),
+            )
+            counts["demoted"] = demoted.rowcount
+    except Exception as e:
+        return {"error": str(e)}
+    return counts
 
 
 def index_memory_file(md_path: str) -> int:
@@ -359,7 +468,7 @@ def index_memory_file(md_path: str) -> int:
 
 
 def _extract_tags(content: str, topic: str) -> list[str]:
-    """从内容中提取关键标签"""
+    """从内容中提取关键标签和股票代码"""
     tag_keywords = {
         "stock": ["量价", "突破", "支撑", "阻力", "放量", "缩量", "涨停", "跌停",
                    "趋势", "震荡", "反转", "背离", "均线", "MACD", "KDJ", "RSI",
@@ -374,7 +483,13 @@ def _extract_tags(content: str, topic: str) -> list[str]:
     for kw in keywords:
         if kw.lower() in content.lower():
             found.append(kw)
-    return found[:15]
+
+    # 提取A股股票代码 (6位数字，0/3/6开头) 作为标签
+    import re
+    stock_codes = re.findall(r"\b(0[0-9]{5}|3[0-9]{5}|6[0-9]{5})\b", content)
+    found.extend(sorted(set(stock_codes)))
+
+    return found[:20]
 
 
 def search_knowledge(query: str, topic: str = None, limit: int = 20) -> list[dict]:

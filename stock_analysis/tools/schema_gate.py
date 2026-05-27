@@ -12,7 +12,7 @@ schema_gate.py — 数据 Schema 门禁
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, time
 from pathlib import Path
 
 STOCK_DATA = Path("D:/1989n/stock_data")
@@ -161,8 +161,15 @@ def validate_file(data_path: Path, schema: dict, skip_freshness: bool = False) -
 
     # 保鲜检查
     if not skip_freshness and freshness_hours > 0 and data_path.exists():
-        elapsed = (datetime.now() - datetime.fromtimestamp(data_path.stat().st_mtime)).total_seconds()
-        if elapsed > freshness_hours * 3600:
+        effective_hours = freshness_hours
+        # 非交易时段(周末/盘前/盘后)自动翻倍阈值，减少误报
+        now = datetime.now()
+        is_weekend = now.weekday() >= 5
+        is_outside_trade = now.time() < time(8, 30) or now.time() > time(15, 30)
+        if is_weekend or is_outside_trade:
+            effective_hours *= 2
+        elapsed = (now - datetime.fromtimestamp(data_path.stat().st_mtime)).total_seconds()
+        if elapsed > effective_hours * 3600:
             issues.append({
                 "field": "_freshness",
                 "type": "stale",
