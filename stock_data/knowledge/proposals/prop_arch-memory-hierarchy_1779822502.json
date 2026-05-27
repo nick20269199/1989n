@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_arch-memory-hierarchy_1779822502",
+  "gap_id": "arch-memory-hierarchy",
+  "gap_title": "记忆系统未分层 — 单层 flat 结构",
+  "priority": "P2",
+  "source": "外部来源",
+  "source_title": "新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5",
+  "source_url": "",
+  "relevance": 4,
+  "summary": "章节: 新手使用Claude Code时容易遇到的5个翻车点，包括开新对话时Claude Code的猜测不准确、模式选择不当、盲目使用Auto或YOLO模式、长对话不/compact等。为避免这些问题，建议新手先跑/init生成专属记忆档案，明确Plan、Edit、Ask模式的使用，手动确认每一步，以及定期/compact长对话。",
+  "pattern": "memory_tiering",
+  "implied_changes": [
+    "stock_analysis/knowledge_db.py",
+    "stock_analysis/sel_lint.py"
+  ],
+  "implementation_hint": "knowledge_db.py 中增加 tier 字段：L1=会话记忆(瞬时)，L2=日频记忆(短期)，L3=知识库(长期)，L4=规则(持久)。按访问频率自动升降级。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T03:08:22.185147",
+  "executed_at": null,
+  "execution_result": null
+}

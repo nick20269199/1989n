@@ -1,0 +1,97 @@
+{
+  "_meta": {
+    "description": "抖音博主监控分类清单",
+    "last_updated": "2026-05-27",
+    "classifier": "Claude (douyin_monitor)",
+    "categories": {
+      "claude_code": "Claude Code / Agent架构 — 直接服务于交易系统建设",
+      "trading_vv": "交易/财经 — 归入大V雷达(vv_radar)",
+      "ai_general": "AI/编程 — 观察期，不稳定",
+      "excluded": "非相关 — 已排除"
+    }
+  },
+  "claude_code": {
+    "九天Hector": {
+      "sec_uid": "MS4wLjABAAAAWEUIAEwAyU82OSjxhmWzZvvgJfiHNupEvbwwC7Dix6TxJjWwjp3FZ-ZDtGKDZYJ4",
+      "label": "九天Hector",
+      "focus": "Claude Code架构 / Harness工程 / Agent自进化",
+      "value_level": "high",
+      "source": "用户指定 + 自行发现",
+      "high_value_keywords": ["claude code", "agent", "harness", "architecture", "workflow", "skill", "工程", "约束", "记忆", "上下文", "gbrain", "安全"]
+    },
+    "阿森编程日记（AI自动化）": {
+      "sec_uid": "MS4wLjABAAAA5fbcBF9dVIPs-zhXQjG3UHRRA-TWeeSDBwsY8j3wQTDnO665ROFlAptIBoqEW9Dz",
+      "label": "阿森编程日记",
+      "focus": "Claude Code桌面端 / 新手Skill / 工具对比",
+      "value_level": "high",
+      "source": "用户指定",
+      "high_value_keywords": ["claude", "codex", "deepseek", "agent", "工作流", "编程", "自动化", "工具", "skill", "桌面端", "新手"]
+    },
+    "闲田": {
+      "sec_uid": "MS4wLjABAAAAwcU400W9FEPz4cUcErEyo6Fb7DYs2FHrHq_PF5ZDFHU",
+      "label": "闲田",
+      "focus": "Claude Code技巧",
+      "value_level": "medium",
+      "source": "用户推荐链接 — Claude Code创始人的7个秘密技巧",
+      "high_value_keywords": ["claude code", "技巧", "效率", "开发", "ai"]
+    },
+    "清华姜学长": {
+      "sec_uid": "MS4wLjABAAAAfte3rFiVQ8VUE3Nfxph1NhCnq1ZAttn43OIr5UsXD5c",
+      "label": "清华姜学长",
+      "focus": "AI编程 / Claude Code团队实践",
+      "value_level": "medium",
+      "source": "用户推荐链接 — Claudecode团队10个内部技巧",
+      "high_value_keywords": ["claude", "claude code", "ai编程", "技巧", "效率", "开发"]
+    },
+    "AiAppWorks": {
+      "sec_uid": "MS4wLjABAAAAlYFtp6GKRkYvLXC1IsqxJUnsK3uI8WRp4wSREAFB2wU",
+      "label": "AiAppWorks",
+      "focus": "Claude Code扩展 / 效率工具",
+      "value_level": "medium",
+      "source": "用户推荐链接 — Claude Code扩展实战",
+      "high_value_keywords": ["claude code", "扩展", "实战", "效率", "工具", "workflow"]
+    }
+  },
+  "trading_vv": {
+    "万手哥": {
+      "sec_uid": "MS4wLjABAAAAVAigZC33mnz_Q2U7-o3fCIf74kHazdMRceWL0G6eAfA",
+      "douyin_id": "wanshouge.net",
+      "label": "万手哥",
+      "focus": "财经爆料 / 卫星互联网 / 太空算力",
+      "integration": "已加入vv_radar数据库",
+      "note": "归类到vv_radar，内容进入交易分析管线"
+    },
+    "你家老黄": {
+      "sec_uid": "MS4wLjABAAAAxl58pSklBPgUJ_Bry3OIRAAC4389XobLHo22H4Nxx2s",
+      "label": "你家老黄",
+      "focus": "A股大盘分析 / 仓位管理 / 风险提示",
+      "value_level": "medium",
+      "source": "用户指定",
+      "integration": "已加入vv_radar数据库",
+      "high_value_keywords": ["大盘", "仓位", "风险", "板块", "资金", "A股", "指数", "操作"]
+    }
+  },
+  "ai_general": {
+    "他们都叫我蜗牛学长": {
+      "sec_uid": "MS4wLjABAAAAJ6QEvp2qIMoHUYjghp3KROM1E0e7t9Wqx_bhTb8voqE",
+      "label": "蜗牛学长",
+      "focus": "AI开发思考 / 效率 / 个人IP",
+      "value_level": "low_unstable",
+      "source": "用户指定",
+      "note": "内容不稳定，较多个人IP/账号运营内容，AI内容占比低。可观察但不优先",
+      "high_value_keywords": ["claude", "codex", "ai", "编程", "架构", "工作流"]
+    }
+  },
+  "excluded": {
+    "认证徽章": {
+      "label": "认证徽章",
+      "focus": "曾为万手哥旧数据的错误提取",
+      "reason": "实为万手哥，已纠正"
+    },
+    "可乐": {
+      "label": "可乐",
+      "focus": "生活/风景",
+      "reason": "非技术内容，来自推荐流误抓"
+    }
+  }
+}

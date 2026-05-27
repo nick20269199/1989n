@@ -1,0 +1,2513 @@
+{
+  "nickname": "阿森编程日记",
+  "sec_uid": "MS4wLjABAAAA5fbcBF9dVIPs-zhXQjG3UHRRA-TWeeSDBwsY8j3wQTDnO665ROFlAptIBoqEW9Dz",
+  "scanned_at": "2026-05-27T01:42:45.370854",
+  "total_videos": 65,
+  "videos_with_chapters": 49,
+  "videos": [
+    {
+      "aweme_id": "7644197587477679410",
+      "desc": "受够Claude封号了！这工具让我重新爱上AI编程 新手的福音终于来了\n不用账号、不用魔法、国内直接用\n打开自动检测环境，一键补依赖\n配置个模型就能用，DeepSeek V4 / GPT / Claude 任你选\n左侧多项目并行、右侧 Agent 全可视化\n把命令行 AI 编码变成桌面级工作流 💪\n#ClaudeCode #AI工具 #程序员日常 #AI编程 #编程入门",
+      "caption": "新手的福音终于来了\n不用账号、不用魔法、国内直接用\n打开自动检测环境，一键补依赖\n配置个模型就能用，DeepSeek V4 / GPT / Claude 任你选\n左侧多项目并行、右侧 Agent 全可视化\n把命令行 AI 编码变成桌面级工作流 💪\n#ClaudeCode #AI工具 #程序员日常 #AI编程 #编程入门",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1779811500,
+      "duration": 93500,
+      "stats": {
+        "digg_count": 157,
+        "comment_count": 6,
+        "share_count": 6,
+        "collect_count": 60
+      }
+    },
+    {
+      "aweme_id": "7644138714666421519",
+      "desc": "ClaudeCode新手5个隐藏Skill，90%的人都没装 ClaudeCode新手5个隐藏Skill，90%的人都没装 你可能只用了 Claude Code 的 30% 能力！5 个新手必装的实用 Skill：prompt-optimizer 帮你写清需求、explore 看懂新项目、code-review 自动审代码、debugger 精准定位 Bug、deep-interview 让复杂需求收敛。看完直接抄作业，少走 90% 弯路。#ClaudeCode #AI编程#AI工具 #编程入门 #Skills",
+      "caption": "ClaudeCode新手5个隐藏Skill，90%的人都没装 你可能只用了 Claude Code 的 30% 能力！5 个新手必装的实用 Skill：prompt-optimizer 帮你写清需求、explore 看懂新项目、code-review 自动审代码、debugger 精准定位 Bug、deep-interview 让复杂需求收敛。看完直接抄作业，少走 90% 弯路。#ClaudeCode #AI编程#AI工具 #编程入门 #Skills",
+      "chapter_content": "五个新手Skill可帮助减少Claude Code使用中的弯路：prompt-optimizer优化提示词，explore梳理项目结构，code-review审查代码，debugger调试问题。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "prompt-optim...",
+          "detail": "提示词优化器，帮助新手生成精准指令，避免代码混乱。",
+          "timestamp": 6000
+        },
+        {
+          "desc": "explore",
+          "detail": "代码库探索器，自动梳理项目结构，提供清晰的项目地图。",
+          "timestamp": 20000
+        },
+        {
+          "desc": "code-review",
+          "detail": "代码审查器，检查代码可读性、边界条件和安全性，避免合并烂代码。",
+          "timestamp": 32000
+        },
+        {
+          "desc": "debugger",
+          "detail": "调试专家，复现问题并提供最小修改方案，避免AI瞎改导致问题恶化。",
+          "timestamp": 43000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779789743,
+      "duration": 82200,
+      "stats": {
+        "digg_count": 38,
+        "comment_count": 4,
+        "share_count": 5,
+        "collect_count": 37
+      }
+    },
+    {
+      "aweme_id": "7643947462679481638",
+      "desc": "ClaudeCode桌面端来了，小白轻松上手，专为新手而生！ 很多人不是不会用ClaudeCode，而是卡在账号、网络、环境和配置上。这个桌面端工具箱把环境检测、依赖安装、模型配置、多窗口并行、Skill和npm包安装都做成了可视化操作。新手打开就能跟着走，国内模型也能接入，Claude、GPT、DeepSeek等都可以按需配置。想把命令行里的AI编码，变成一个看得见进度、管得住项目、能多Agent并行的桌面工作台！#ClaudeCode #AI工具 #编程入门 #AI编程 #DeepSeek",
+      "caption": "很多人不是不会用ClaudeCode，而是卡在账号、网络、环境和配置上。这个桌面端工具箱把环境检测、依赖安装、模型配置、多窗口并行、Skill和npm包安装都做成了可视化操作。新手打开就能跟着走，国内模型也能接入，Claude、GPT、DeepSeek等都可以按需配置。想把命令行里的AI编码，变成一个看得见进度、管得住项目、能多Agent并行的桌面工作台！#ClaudeCode #AI工具 #编程入门 #AI编程 #DeepSeek",
+      "chapter_content": "一款工具具有多窗口开行、程序窗口切换、稳定性高、skill和NPM包安装方便、UI设计交互友好等特点。",
+      "chapter_list": [
+        {
+          "desc": "多窗口开行",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "skill和NPM包",
+          "detail": "",
+          "timestamp": 12000
+        },
+        {
+          "desc": "UI设计交互",
+          "detail": "",
+          "timestamp": 19000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 34000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779752640,
+      "duration": 93500,
+      "stats": {
+        "digg_count": 128,
+        "comment_count": 9,
+        "share_count": 18,
+        "collect_count": 77
+      }
+    },
+    {
+      "aweme_id": "7643843139823799592",
+      "desc": "GitHub 杀疯了！6 个 AI 工具接管你的工作流 一夜爆 6 个 AI 项目，方向出奇一致：Claude Code、CodeGraph、Understand Anything、Presenton、NVIDIA LongLive 全在抢一件事——接管你的工作流。看完收藏开干。#AI工具 #ClaudeCode #GitHub #工作流 #AI编程",
+      "caption": "一夜爆 6 个 AI 项目，方向出奇一致：Claude Code、CodeGraph、Understand Anything、Presenton、NVIDIA LongLive 全在抢一件事——接管你的工作流。看完收藏开干。#AI工具 #ClaudeCode #GitHub #工作流 #AI编程",
+      "chapter_content": "GitHub上的6个AI项目同时爆火，其中包括CLAUDE.md文件可用于编写AI编程助手工作说明书，代码知识图谱帮助AI快速理解项目结构，以及代码冲导教院作为代码库导航仪。这些项目受到开发者的高度评价，一天内获得了大量星标。",
+      "chapter_list": [
+        {
+          "desc": "CLAUDE.md",
+          "detail": "CLAUDE.md文件可给AI编程助手写工作说明书，无需插件和复杂配置，一天涨了三千三百多星。",
+          "timestamp": 5000
+        },
+        {
+          "desc": "代码知识图谱",
+          "detail": "代码知识图谱整理成地图，AI可快速理解项目结构，省Token，一天涨了两千四百星。",
+          "timestamp": 22000
+        },
+        {
+          "desc": "代码冲导教院",
+          "detail": "代码冲导教院类似代码库导航仪，支持二十多个平台，累计两万一千星。",
+          "timestamp": 35000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779720938,
+      "duration": 84225,
+      "stats": {
+        "digg_count": 9011,
+        "comment_count": 66,
+        "share_count": 1522,
+        "collect_count": 8220
+      }
+    },
+    {
+      "aweme_id": "7643543191760768291",
+      "desc": "新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门",
+      "caption": "不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门",
+      "chapter_content": "新手使用Claude Code时容易遇到的5个翻车点，包括开新对话时Claude Code的猜测不准确、模式选择不当、盲目使用Auto或YOLO模式、长对话不/compact等。为避免这些问题，建议新手先跑/init生成专属记忆档案，明确Plan、Edit、Ask模式的使用，手动确认每一步，以及定期/compact长对话。",
+      "chapter_list": [
+        {
+          "desc": "开新对话",
+          "detail": "Claude Code每次开新对话都从零猜项目，导致风格不一致、调用错文件，建议新手跑/init生成专属记忆档案。",
+          "timestamp": 5000
+        },
+        {
+          "desc": "模式选择",
+          "detail": "分不清Plan、Edit、Ask三大模式，建议复杂任务先Plan再Edit。",
+          "timestamp": 21000
+        },
+        {
+          "desc": "Auto或YOLO模式",
+          "detail": "盲目开Auto或YOLO模式，建议新手手动确认每一步。",
+          "timestamp": 33000
+        },
+        {
+          "desc": "长对话",
+          "detail": "长对话不/compact，导致Token消耗快。",
+          "timestamp": 45000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779663600,
+      "duration": 79745,
+      "stats": {
+        "digg_count": 627,
+        "comment_count": 9,
+        "share_count": 61,
+        "collect_count": 609
+      }
+    },
+    {
+      "aweme_id": "7643521604521618853",
+      "desc": "Claude Code 两个插件，青铜直接变王者 Claude Code 不只是会写代码——Superpowers 帮你跑顺标准流程，Oh My ClaudeCode 把活拆给一整……版本过低，升级后可展示全部信息",
+      "caption": "Claude Code 不只是会写代码——Superpowers 帮你跑顺标准流程，Oh My ClaudeCode 把活拆给一整支 AI 小队。再配上一键检测环境的 AI 集合工具箱，新手也能直接起飞。#claudecode #AI工具 #AI编程 #编程入门 #真实分享计划",
+      "chapter_content": "Claude Code的两个插件Superpowers和Oh My Claude Code，分别帮助新手和有经验的开发者更高效地使用Claude Code。Superpowers提供标准流程，适合新手；Oh My Claude Code则像团队协作，适合复杂项目。此外，AI集合工具箱可一键检测环境，简化配置过程。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "Superpowers",
+          "detail": "Superpowers是一套标准流程，适合新手，容易上手且能看见效果。",
+          "timestamp": 12000
+        },
+        {
+          "desc": "Oh My Claude...",
+          "detail": "Oh My Claude Code像一支小队，适合任务多、项目复杂的情况。",
+          "timestamp": 28000
+        },
+        {
+          "desc": "AI集合工具箱",
+          "detail": "AI集合工具箱能一键检测环境，自动补依赖，支持多种模型。",
+          "timestamp": 44000
+        },
+        {
+          "desc": "选择方法",
+          "detail": "新手先学Superpowers，项目变大后再学Oh My Claude Code。",
+          "timestamp": 67000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 85000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779646056,
+      "duration": 89600,
+      "stats": {
+        "digg_count": 270,
+        "comment_count": 1,
+        "share_count": 19,
+        "collect_count": 252
+      }
+    },
+    {
+      "aweme_id": "7643090529806208292",
+      "desc": "从提示词到上线ClaudeCode新手必学的8个skill 真正高效的用法，不是把 Claude Code 当成一个写代码工具，而是把它当成一整套 AI 开发团队来调度，这期我给你一条新手最稳的 Skill 工作流，从想法开始，一直走到测试和上线。#claudecode #工作流 #skill #AI工具 #AI编程",
+      "caption": "真正高效的用法，不是把 Claude Code 当成一个写代码工具，而是把它当成一整套 AI 开发团队来调度，这期我给你一条新手最稳的 Skill 工作流，从想法开始，一直走到测试和上线。#claudecode #工作流 #skill #AI工具 #AI编程",
+      "chapter_content": "高效使用Claude Code的方法包括：使用prompt-optimizer整理需求，使用deep-interview追问场景，使用plan或ralplan拆分路线，分工协作，使用debuqger定位根因。遵循这些步骤可提高AI开发团队的效率，避免需求模糊和改动失控。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "把需求说清",
+          "detail": "使用prompt-optimizer将模糊想法整理成清晰任务。",
+          "timestamp": 15000
+        },
+        {
+          "desc": "追问场景",
+          "detail": "使用deep-interview追问场景，明确不要做什么。",
+          "timestamp": 23000
+        },
+        {
+          "desc": "拆分路线",
+          "detail": "使用plan或ralplan拆分路线，评估风险，验证结果。",
+          "timestamp": 30000
+        },
+        {
+          "desc": "分工协作",
+          "detail": "分工协作，避免一个AI从头干复杂任务。",
+          "timestamp": 36000
+        },
+        {
+          "desc": "定位根因",
+          "detail": "使用debuqger定位根因，确定修复点。",
+          "timestamp": 43000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779545698,
+      "duration": 93100,
+      "stats": {
+        "digg_count": 392,
+        "comment_count": 8,
+        "share_count": 60,
+        "collect_count": 458
+      }
+    },
+    {
+      "aweme_id": "7643018631953009962",
+      "desc": "ClaudeCode别只会写提示词，这个技能才是提效入口 同样用ClaudeCode，别人能改完整个项目，你却只能改一小段代码？差距不一定在模型，而在有没有给ClaudeCode装上正确的工作流。这一期讲清楚Superpowers对新手真正有用的地方：避免乱开始、乱修改、乱收尾，让ClaudeCode更像一个稳定的工程搭档。适合刚开始用ClaudeCode、想提升AI编程效率的新手收藏。#claudecode #vibecoding #AI编程 #AI工具 #skills",
+      "caption": "同样用ClaudeCode，别人能改完整个项目，你却只能改一小段代码？差距不一定在模型，而在有没有给ClaudeCode装上正确的工作流。这一期讲清楚Superpowers对新手真正有用的地方：避免乱开始、乱修改、乱收尾，让ClaudeCode更像一个稳定的工程搭档。适合刚开始用ClaudeCode、想提升AI编程效率的新手收藏。#claudecode #vibecoding #AI编程 #AI工具 #skills",
+      "chapter_content": "Claude Code的Superpowers是一个工作流增强包，旨在帮助新手解决三个痛点：乱开始、乱修改和乱收尾。它通过引导用户先理解需求，确认边界，再进入实现，避免AI越改越偏。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "Superpowers的...",
+          "detail": "Superpowers是Claude Code的工作流增强包，解决新手痛点。",
+          "timestamp": 12000
+        },
+        {
+          "desc": "需求没理解就开写",
+          "detail": "需求没理解就开写，Superpowers帮助回到工程流程，先理解需求。",
+          "timestamp": 26000
+        },
+        {
+          "desc": "AI容易越改越偏",
+          "detail": "AI容易越改越偏，只改一个按钮可能导致无关改动。",
+          "timestamp": 40000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779528955,
+      "duration": 99136,
+      "stats": {
+        "digg_count": 369,
+        "comment_count": 12,
+        "share_count": 36,
+        "collect_count": 367
+      }
+    },
+    {
+      "aweme_id": "7642336132462415013",
+      "desc": "Claude Code新手6个实用Skill，少走90%弯路 不会写提示词也能轻松用Claude Code！先把这6个实用Skill装上，不管是写代码、做页面还是改需求，都能少走好……版本过低，升级后可展示全部信息",
+      "caption": "不会写提示词也能轻松用Claude Code！先把这6个实用Skill装上，不管是写代码、做页面还是改需求，都能少走好多弯路～\n#claudecode #skills #vibecoding #AI编程 #编程入门",
+      "chapter_content": "6个Claude Code新手实用Skill，包括prompt-optimizer、deep-interview、real plan、Ultra QA、AI slock cleaner和visual-verdict。这些Skill帮助新手在不同任务中更高效地使用Claude Code，少走弯路。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "prompt-optim...",
+          "detail": "将模糊需求转化为清晰可执行的任务描述。",
+          "timestamp": 15000
+        },
+        {
+          "desc": "deep-intervi...",
+          "detail": "通过采访用户，明确目标、边界和验收标准。",
+          "timestamp": 27000
+        },
+        {
+          "desc": "real plan",
+          "detail": "制定计划，拆分风险，确认测试方式。",
+          "timestamp": 41000
+        },
+        {
+          "desc": "Ultra QA",
+          "detail": "进入测试、验证、修复循环，确保结果可靠。",
+          "timestamp": 53500
+        },
+        {
+          "desc": "AI slock cle...",
+          "detail": "清理AI感，使代码更像人，易于维护。",
+          "timestamp": 66000
+        },
+        {
+          "desc": "visual-verdi...",
+          "detail": "对比截图和目标参考，判断布局、层级等方面的差异。",
+          "timestamp": 82000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 95000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779370041,
+      "duration": 107900,
+      "stats": {
+        "digg_count": 7354,
+        "comment_count": 75,
+        "share_count": 849,
+        "collect_count": 6932
+      }
+    },
+    {
+      "aweme_id": "7641909990931909931",
+      "desc": "新手使用Claude Code，先学会用这6个Skill 别再只把 Claude Code 当聊天框了。\n这期整理了最适合新手先打开的 6 个实用 Skill：explore、code-review、debugger、test-engineer、code-simplifier、dependency-expert。\n从摸清仓库、审代码、定位报错，到补测试、重构和处理依赖，每一个都是真能帮你少走弯路的硬通货。\n#ClaudeCode #AI编程 #AI工具 #VibeCoding #编程入门",
+      "caption": "别再只把 Claude Code 当聊天框了。\n这期整理了最适合新手先打开的 6 个实用 Skill：explore、code-review、debugger、test-engineer、code-simplifier、dependency-expert。\n从摸清仓库、审代码、定位报错，到补测试、重构和处理依赖，每一个都是真能帮你少走弯路的硬通货。\n#ClaudeCode #AI编程 #AI工具 #VibeCoding #编程入门",
+      "chapter_content": "新手使用Claude Code可先掌握6个实用Skill：explore、code-review、debugger、test-engineer、code-simplifier和dependency-expert。这些Skill能帮助新手提高工作效率，避免常见错误。同时，AI工具箱可简化Claude Code的使用流程，兼容Codex，提供一键检测环境、自动补依赖等功能。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "explore",
+          "detail": "让Claude Code摸清仓库、文件结构、关键入口、业务链路。",
+          "timestamp": 14500
+        },
+        {
+          "desc": "code-review",
+          "detail": "让Claude Code审查代码，提前发现重复逻辑、边界问题和明显风险。",
+          "timestamp": 22000
+        },
+        {
+          "desc": "debugger",
+          "detail": "让Claude Code根据日志现象和上下文定位报错，缩小排查范围。",
+          "timestamp": 31000
+        },
+        {
+          "desc": "test-enginee...",
+          "detail": "让Claude Code补单测和回归测试，确保改动没有影响其他部分。",
+          "timestamp": 38000
+        },
+        {
+          "desc": "code-simplif...",
+          "detail": "让Claude Code重构复杂代码，简化结构，便于维护。",
+          "timestamp": 46000
+        },
+        {
+          "desc": "dependency-e...",
+          "detail": "让Claude Code判断装包升级、冲突兼容等问题，避免版本坑。",
+          "timestamp": 54000
+        },
+        {
+          "desc": "AI工具箱",
+          "detail": "AI工具箱帮助新手更顺手地使用Claude Code，兼容Codex，支持一键检测环境、自动补依赖，简化配置过程。",
+          "timestamp": 66000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779280200,
+      "duration": 98434,
+      "stats": {
+        "digg_count": 366,
+        "comment_count": 13,
+        "share_count": 43,
+        "collect_count": 323
+      }
+    },
+    {
+      "aweme_id": "7641490718330129337",
+      "desc": "新手用Claude Code先学Deep Interview 这期讲给 Claude Code 新手：先用 Deep Interview 把目标、边界、用户和验收标准问清楚，再接 ……版本过低，升级后可展示全部信息",
+      "caption": "这期讲给 Claude Code 新手：先用 Deep Interview 把目标、边界、用户和验收标准问清楚，再接 analyze、debugger、executor、test-engineer，少走很多弯路。#claudecode #vibecoding #AI工具 #AI时代 #编程入门",
+      "chapter_content": "新手使用Claude Code时，应先用Deep Interview将目标、边界、用户和验收标准问清楚，再根据需求选择合适的工具，如ralplan、analyze、Claude Interview、executor和test engineer，以提高效率并避免走弯路。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "Deep Intervi...",
+          "detail": "Deep Interview帮助新手将模糊想法转化为清晰需求，避免方向错误和浪费Token。",
+          "timestamp": 6000
+        },
+        {
+          "desc": "后续步骤",
+          "detail": "问清楚后，根据需求选择ralplan、analyze、Claude Interview、executor和test engineer等工具。",
+          "timestamp": 55000
+        },
+        {
+          "desc": "总结",
+          "detail": "",
+          "timestamp": 89000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779180240,
+      "duration": 94300,
+      "stats": {
+        "digg_count": 580,
+        "comment_count": 12,
+        "share_count": 54,
+        "collect_count": 410
+      }
+    },
+    {
+      "aweme_id": "7641308342941895793",
+      "desc": "ClaudeCode最值得用的5点 从想法落地、读项目、拆任务到修Bug，讲清为什么我推荐你用ClaudeCode。#claudecode #vibecoding #AI时代 #A……版本过低，升级后可展示全部信息",
+      "caption": "从想法落地、读项目、拆任务到修Bug，讲清为什么我推荐你用ClaudeCode。#claudecode #vibecoding #AI时代 #AI编程 #AI工具",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1779130746,
+      "duration": 56734,
+      "stats": {
+        "digg_count": 104,
+        "comment_count": 3,
+        "share_count": 7,
+        "collect_count": 58
+      }
+    },
+    {
+      "aweme_id": "7640828357198284645",
+      "desc": "Claude Code6个隐Shill，新手必装!稳定性翻倍 ClaudeCode写代码翻车?不是模型不行，是你让它一个人干了所有事 6个Skill拆分任务: explore-先把……版本过低，升级后可展示全部信息",
+      "caption": "ClaudeCode写代码翻车?不是模型不行，是你让它一个人干了所有事\n6个Skill拆分任务:\nexplore-先把项目读明白\ndebugger-定位根因再修\ncode-review- 挑逻辑漏洞\ntest-engineer-补关键路径测试哭\ncode-simplifier-删冗余收干净\nsecurity-review-边界最后一扫\n记住:拆任务>莽到底\n记得点赞收藏！\n#claudecode #vibecoding #AI工具 #AI编程 #编程入门",
+      "chapter_content": "Claude Code的6个Skill包括explore、debugger、code-review、test-engineer、code-simplifier和security-review。这些Skill可以帮助新手更有效地使用Claude Code，提高代码质量和稳定性。通过将不同任务交给不同Skill，可以避免让AI同时承担过多任务导致的崩溃。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "explore",
+          "detail": "负责读项目，画项目地图，减少改代码弯路。",
+          "timestamp": 14500
+        },
+        {
+          "desc": "debugger",
+          "detail": "定位根因，给出最小修复方案。",
+          "timestamp": 25000
+        },
+        {
+          "desc": "code-review",
+          "detail": "挑逻辑、漏洞、边界条件和回归风险。",
+          "timestamp": 34500
+        },
+        {
+          "desc": "test-enginee...",
+          "detail": "判断测试点，补关键路径测试。",
+          "timestamp": 44000
+        },
+        {
+          "desc": "code-simplif...",
+          "detail": "删除重复逻辑，优化命名和结构。",
+          "timestamp": 53000
+        },
+        {
+          "desc": "security-rev...",
+          "detail": "检查登录、权限等边界条件。",
+          "timestamp": 62000
+        },
+        {
+          "desc": "总结",
+          "detail": "高手使用Claude Code时会拆分任务，提高稳定性。",
+          "timestamp": 71500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779026160,
+      "duration": 90367,
+      "stats": {
+        "digg_count": 9527,
+        "comment_count": 84,
+        "share_count": 1257,
+        "collect_count": 9720
+      }
+    },
+    {
+      "aweme_id": "7640249033513308773",
+      "desc": "别只会跟ClaudeCode聊天了，先装这5个Skill 很多人用 ClaudeCode 还停留在贴代码、问怎么改。真正高效的用法，是让 Skill 接管固定流程：读项目、审代码、……版本过低，升级后可展示全部信息",
+      "caption": "很多人用 ClaudeCode 还停留在贴代码、问怎么改。真正高效的用法，是让 Skill 接管固定流程：读项目、审代码、查问题、补测试、做重构。想要这 5 个 Skill 的安装方式和 ClaudeCode、Codex 常用配置，关注我，后面整理给你。#ClaudeCode #Codex #AI编程 #AI工具 #效率工具",
+      "chapter_content": "ClaudeCode的高效用法是让Skill接管固定流程，如读项目、审代码、查问题、补测试和做重构。五个Skill包括explore、code-review、debugger、test-engineer和code-simplifier。AI集合工具箱可简化ClaudeCode和Codex的配置过程。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "Skill介绍",
+          "detail": "五个Skill包括explore、code-review、debugger、test-engineer和code-simplifier，分别负责读项目、审代码、查问题、补测试和做重构。",
+          "timestamp": 9000
+        },
+        {
+          "desc": "AI集合工具箱",
+          "detail": "AI集合工具箱兼容ClaudeCode和Codex，可一键检测环境、补齐依赖、安装组件，简化配置过程。",
+          "timestamp": 53000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 78000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778884101,
+      "duration": 82967,
+      "stats": {
+        "digg_count": 2863,
+        "comment_count": 32,
+        "share_count": 383,
+        "collect_count": 2963
+      }
+    },
+    {
+      "aweme_id": "7639766355301911842",
+      "desc": "Claude Code 6个隐藏能力，新手必看 别只把 Claude Code 当成聊天写代码工具。这期一次讲清 /init、Plan Mode、/compact、Custom slash commands、Subagents 和 Hooks，帮你把它从临时助手升级成稳定开发工作流。#claudecode #AI工具 #AI视频 #AI编程 #编程入门",
+      "caption": "别只把 Claude Code 当成聊天写代码工具。这期一次讲清 /init、Plan Mode、/compact、Custom slash commands、Subagents 和 Hooks，帮你把它从临时助手升级成稳定开发工作流。#claudecode #AI工具 #AI视频 #AI编程 #编程入门",
+      "chapter_content": "Claude Code的6个核心能力，包括项目记忆/init、Plan Mode、compact、自定义命令、SUB agent和HOOKS。掌握这些能力可以将Claude Code打造成长期配合的开发搭档，提高工作效率和交付质量。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "项目记忆/init",
+          "detail": "让Claude Code生成CLAUDE.nd项目说明，认识项目后再开始干活。",
+          "timestamp": 18000
+        },
+        {
+          "desc": "Plan Mode",
+          "detail": "先读项目、拆方案、判断风险，再进入执行。",
+          "timestamp": 31000
+        },
+        {
+          "desc": "compact",
+          "detail": "压缩上下文，保留重要信息。",
+          "timestamp": 41000
+        },
+        {
+          "desc": "自定义命令",
+          "detail": "将常用提示词沉淀成自定义命令，随时复用。",
+          "timestamp": 52000
+        },
+        {
+          "desc": "SUB agent",
+          "detail": "分工合作，主绘画统筹方向，agent分别负责审查、排错测试和文档。",
+          "timestamp": 67000
+        },
+        {
+          "desc": "HOOKS",
+          "detail": "理解成自动质检员，提醒检查和验证结果。",
+          "timestamp": 77000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 89000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778771733,
+      "duration": 109803,
+      "stats": {
+        "digg_count": 28906,
+        "comment_count": 214,
+        "share_count": 3341,
+        "collect_count": 27127
+      }
+    },
+    {
+      "aweme_id": "7639276066560965797",
+      "desc": "用ClaudeCode做项目，Ralph才是交付总控台！ 别再让AI口头说完成，Ralph会逼它拿出测试、构建和复查证据。#claudecode #ai工具 #ai编程 #Ralp……版本过低，升级后可展示全部信息",
+      "caption": "别再让AI口头说完成，Ralph会逼它拿出测试、构建和复查证据。#claudecode #ai工具 #ai编程 #Ralph #编程入门",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1778657564,
+      "duration": 59067,
+      "stats": {
+        "digg_count": 435,
+        "comment_count": 6,
+        "share_count": 55,
+        "collect_count": 371
+      }
+    },
+    {
+      "aweme_id": "7639048975081904123",
+      "desc": "别再盲目写代码了！Deep Interview帮你从根源避坑 OhMyClaudeCode最被低估的核心 Skill——Deep Interview！专门解决需求模糊、漏场景、写一……版本过低，升级后可展示全部信息",
+      "caption": "OhMyClaudeCode最被低估的核心 Skill——Deep Interview！专门解决需求模糊、漏场景、写一半返工的致命问题，像资深架构师一样层层追问，把所有细节和边界梳理清楚再开工，开发效率直接翻倍。#claudecode #AI工具 #AI编程 #编程入门 #skills",
+      "chapter_content": "Deep Interview是Claude Code的核心Skill，能帮助用户明确模糊需求，避免开发过程中的返工。它像资深架构师一样层层追问，梳理细节、异常场景、业务边界和功能规则，提高开发效率。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "作用",
+          "detail": "Deep Interview是Claude Code的核心Skill，能帮助用户明确模糊需求。",
+          "timestamp": 12000
+        },
+        {
+          "desc": "解决的问题",
+          "detail": "解决需求模糊、漏场景、写一半返工等问题，像资深架构师一样追问细节。",
+          "timestamp": 20000
+        },
+        {
+          "desc": "使用场景",
+          "detail": "适用于新项目、新功能和复杂需求，提高开发节奏和效率。",
+          "timestamp": 52000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778604690,
+      "duration": 63767,
+      "stats": {
+        "digg_count": 285,
+        "comment_count": 3,
+        "share_count": 53,
+        "collect_count": 248
+      }
+    },
+    {
+      "aweme_id": "7638936638081503867",
+      "desc": "新手必看！5个Claude Code实用神级skill！ 专门解决程序员日常痛点的 5 个 Claude Code Skill，新建项目、读老代码、写接口、调性能、统一规范全覆盖，……版本过低，升级后可展示全部信息",
+      "caption": "专门解决程序员日常痛点的 5 个 Claude Code Skill，新建项目、读老代码、写接口、调性能、统一规范全覆盖，每一个都能帮你省大量时间！#claudecode #AI编程 #skills #AI工具 #编程入门",
+      "chapter_content": "五个Claude Code实用神级skill，包括新项目搭建、旧代码解释、代码规范统一、接口设计和性能优化。这些skill旨在帮助程序员解决日常痛点，提高开发效率。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "新项目",
+          "detail": "生成项目骨架，包括目录、配置、基础组件、README和启动脚本。",
+          "timestamp": 43000
+        },
+        {
+          "desc": "旧代码",
+          "detail": "解释模块、职责、调用链和风险点，提供项目地图。",
+          "timestamp": 59000
+        },
+        {
+          "desc": "代码规范",
+          "detail": "统一命名、格式、注释、错误处理，使代码风格一致。",
+          "timestamp": 71000
+        },
+        {
+          "desc": "接口设计",
+          "detail": "整理接口契约，减少返工。",
+          "timestamp": 84000
+        },
+        {
+          "desc": "性能优化",
+          "detail": "定位热点，提供优化方案，按指标复杂度和风险排序。",
+          "timestamp": 97000
+        },
+        {
+          "desc": "总结",
+          "detail": "",
+          "timestamp": 111000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778578535,
+      "duration": 127300,
+      "stats": {
+        "digg_count": 262,
+        "comment_count": 3,
+        "share_count": 42,
+        "collect_count": 252
+      }
+    },
+    {
+      "aweme_id": "7638504373409369337",
+      "desc": "只用了Claude Code 30%能力？7个必装Skill 如果你用Claude Code只发挥了30%能力，一定要看这7个必装Skill！附官方英文名：Superpowers、……版本过低，升级后可展示全部信息",
+      "caption": "如果你用Claude Code只发挥了30%能力，一定要看这7个必装Skill！附官方英文名：Superpowers、pdf、humanizer-zh等，覆盖开发、文档、前端、代码质量，最后一个能让AI变成懂行队友，直接搜名就能装。#claudecode #skills #AI编程 #AI工具 #编程入门",
+      "chapter_content": "7个值得安装的Claude Code Skill，包括全能Skill Superpowers、文档处理神器PDF、去AI味神器humanizer-zh、大项目救星planning with files、前端颜值救星frontend-design、代码质量守护神Skill review和压轴神器skill-creator。这些Skill覆盖开发全流程、文档处理、前端优化、代码质量等方面，能让Clau...",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "Superpowers",
+          "detail": "涵盖开发全流程，帮助程序员梳理需求、拆分任务、系统化调试。",
+          "timestamp": 12000
+        },
+        {
+          "desc": "PDF",
+          "detail": "支持读取、合并、拆分PDF，还支持OCR扫描件识别。",
+          "timestamp": 28000
+        },
+        {
+          "desc": "humanizer-zh",
+          "detail": "将生硬表达换成接地气的人话，减少模板味。",
+          "timestamp": 40000
+        },
+        {
+          "desc": "planning wit...",
+          "detail": "持久化项目规划，跨会话不丢进度，适合碎片化时间开发。",
+          "timestamp": 52500
+        },
+        {
+          "desc": "frontend-des...",
+          "detail": "让Claude Code写的前端更专业，后端程序员也能做出好看规范。",
+          "timestamp": 63000
+        },
+        {
+          "desc": "Skill review",
+          "detail": "并行审查代码，找bug、查安全漏洞、优化代码规范，减少代码出错率。",
+          "timestamp": 73000
+        },
+        {
+          "desc": "skill-creato...",
+          "detail": "让你自己定制Skill，让AI适配你的需求。",
+          "timestamp": 86000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 102000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778477890,
+      "duration": 114734,
+      "stats": {
+        "digg_count": 46318,
+        "comment_count": 313,
+        "share_count": 6184,
+        "collect_count": 46695
+      }
+    },
+    {
+      "aweme_id": "7637802298903838821",
+      "desc": "玩转ClaudeCode必备，OMC的硬核优势！ 不用生硬对比，直白讲清OhMyClaudeCode的核心优势：多Agent 并行干活、专业角色分工、全自动开发流水线、智能模型路由……版本过低，升级后可展示全部信息",
+      "caption": "不用生硬对比，直白讲清OhMyClaudeCode的核心优势：多Agent 并行干活、专业角色分工、全自动开发流水线、智能模型路由省Token、代码防乱改防护、内置全套技能生态，看完就知道为什么人人都装OMC。#claudecode #AI编程 #AI工具 #编程入门 #AI技能",
+      "chapter_content": "OhMyClaudeCode具有多Agent并行、专业角色分工、全自动开发流水线、智能模型路由省Token、代码防乱改防护和内置全套技能生态等核心优势，能全方位提升AI编程效率、专业度、自动化、省钱和项目稳定性。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "多Agent并行",
+          "detail": "支持多Agent并行，提高开发效率。",
+          "timestamp": 14000
+        },
+        {
+          "desc": "专业角色分工",
+          "detail": "自带专业角色分工，提高代码和方案专业度。",
+          "timestamp": 30000
+        },
+        {
+          "desc": "全自动开发流水线",
+          "detail": "全自动全流程流水线，无需手动指挥。",
+          "timestamp": 48000
+        },
+        {
+          "desc": "智能模型路由省Token",
+          "detail": "智能模型自动路由，节省Token。",
+          "timestamp": 65000
+        },
+        {
+          "desc": "代码防乱改防护",
+          "detail": "代码防护机制，降低项目翻车概率。",
+          "timestamp": 83000
+        },
+        {
+          "desc": "内置全套技能生态",
+          "detail": "内置全套技能生态，无需手动安装插件。",
+          "timestamp": 99000
+        },
+        {
+          "desc": "总结",
+          "detail": "OMC提升AI编程水平，是必装增强包。",
+          "timestamp": 116000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778314427,
+      "duration": 132767,
+      "stats": {
+        "digg_count": 587,
+        "comment_count": 2,
+        "share_count": 94,
+        "collect_count": 635
+      }
+    },
+    {
+      "aweme_id": "7637466967834449829",
+      "desc": "5个Claude Code热门神级技能，带官方原名直接装！ 盘点Claude Code5个超高人气热门技能，附官方英文原名:doc-reader、code-refactor、git……版本过低，升级后可展示全部信息",
+      "caption": "盘点Claude Code5个超高人气热门技能，附官方英文原名:doc-reader、code-refactor、git-smart-commit.api-docs-generator、dependency-audit，覆盖文档解析、代码重构、Git 规范提交、自动接口文档、依赖安全检测，新手直接搜名就能装。#ClaudeCode  #AI技能 #AI编程 #AI工具 #skills",
+      "chapter_content": "Claude Code生态圈中的5个热门技能，包括doc-reader、code-refactor、git-smart-commit、api-docs-generator和dependency-audit，分别实现文档阅读解析、代码重构、Git规范提交、自动接口文档生成和依赖安全检测。这些技能提高了AI开发效率，适合新手使用。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "doc-reader",
+          "detail": "全能文档阅读解析技能，可读取PDF、Word等文档。",
+          "timestamp": 16000
+        },
+        {
+          "desc": "code-refacto...",
+          "detail": "全局代码重构技能，优化代码结构，保持业务功能不变。",
+          "timestamp": 29000
+        },
+        {
+          "desc": "git-smart-co...",
+          "detail": "Git智能规范提交技能，自动生成标准化提交文案。",
+          "timestamp": 43000
+        },
+        {
+          "desc": "api-docs-gen...",
+          "detail": "接口文档一键生成技能，自动扫描项目路由和参数生成文档。",
+          "timestamp": 57000
+        },
+        {
+          "desc": "dependency-a...",
+          "detail": "依赖安全检测技能，扫描第三方依赖，给出升级建议和修复方案。",
+          "timestamp": 71000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 88000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778236350,
+      "duration": 106800,
+      "stats": {
+        "digg_count": 4102,
+        "comment_count": 54,
+        "share_count": 641,
+        "collect_count": 4849
+      }
+    },
+    {
+      "aweme_id": "7637114347475684581",
+      "desc": "用Claude Code必背！12个终端命令，避坑+效率翻倍 别只会打字发需求！一期讲透 Claude Code 全量实用终端命令，分新手入门、开发刚需、进阶高手三个梯队，覆盖项目……版本过低，升级后可展示全部信息",
+      "caption": "别只会打字发需求！一期讲透 Claude Code 全量实用终端命令，分新手入门、开发刚需、进阶高手三个梯队，覆盖项目初始化、代码撤回、防乱改、上下文清理全场景，新手照着用，避坑又高效。#claudecode #AI编程 #AI入门 #AI工具 #编程入门",
+      "chapter_content": "Claude Code的12个实用终端命令，分为新手入门、开发刚需和进阶高手三个梯队，涵盖项目初始化、代码撤回、防乱改和上下文清理等全场景，帮助用户提高效率，避免踩坑。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 4000
+        },
+        {
+          "desc": "新手零门槛必用",
+          "detail": "包括init、help、clear、ls，适用于新手入门。",
+          "timestamp": 19500
+        },
+        {
+          "desc": "开发高频刚需",
+          "detail": "包括diff、undo、compact、mod，适用于开发高频刚需。",
+          "timestamp": 50500
+        },
+        {
+          "desc": "进阶高手私藏",
+          "detail": "包括group、reset、cat、reload，适用于进阶高手。",
+          "timestamp": 86000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 121000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778161380,
+      "duration": 133834,
+      "stats": {
+        "digg_count": 2919,
+        "comment_count": 27,
+        "share_count": 468,
+        "collect_count": 3578
+      }
+    },
+    {
+      "aweme_id": "7636772731736631397",
+      "desc": "别浪费Claude Code！OMC五大核心知识点 还不懂oh-my-claudecode（OMC）？2分钟讲透OMC核心知识点：32个智能Agent、三大核心模式、魔法关键词、智……版本过低，升级后可展示全部信息",
+      "caption": "还不懂oh-my-claudecode（OMC）？2分钟讲透OMC核心知识点：32个智能Agent、三大核心模式、魔法关键词、智能模型路由，零基础也能快速上手，让Claude Code变身AI开发军团，开发效率翻倍。#ClaudeCode #ohmyclaudecode #AI编程 #编程入门 #AI工具",
+      "chapter_content": "Oh-My-ClaudeCode（OMC）是Claude Code的增强插件，提供32个智能Agent，实现自动分工协作。三大核心模式（Team、Ultrapilot、Ralph）和魔法关键词简化操作，智能模型路由节省费用。OMC让Claude Code更强大，提高开发效率。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "OMC是什么",
+          "detail": "OMC是Claude Code的超级增强插件，提供AI开发军团，实现自动分工协作。",
+          "timestamp": 20000
+        },
+        {
+          "desc": "32个智能Agent",
+          "detail": "OMC内置32个智能Agent，每个Agent有专属职责，提高开发效率。",
+          "timestamp": 44500
+        },
+        {
+          "desc": "三大核心模式",
+          "detail": "OMC的三大核心模式：Team模式、Ultrapilot模式、Ralph模式，适应不同需求。",
+          "timestamp": 79000
+        },
+        {
+          "desc": "魔法关键词",
+          "detail": "魔法关键词简化操作，无需复杂命令，新手易上手。",
+          "timestamp": 108000
+        },
+        {
+          "desc": "智能模型路由",
+          "detail": "智能模型路由根据任务难度选择合适模型，节省Token费用。",
+          "timestamp": 130000
+        },
+        {
+          "desc": "结语",
+          "detail": "OMC提升Claude Code性能，让用户拥有专业AI开发团队。",
+          "timestamp": 153000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778083260,
+      "duration": 165800,
+      "stats": {
+        "digg_count": 2474,
+        "comment_count": 30,
+        "share_count": 444,
+        "collect_count": 3249
+      }
+    },
+    {
+      "aweme_id": "7636627955183784377",
+      "desc": "Claude Code五大神级Skill，高手都在偷偷用！ 盘点Claude Code五大顶级神级 Skill：智能排错、自动化钩子、一键生成文档、全局代码重构、本地隐私联动，个个……版本过低，升级后可展示全部信息",
+      "caption": "盘点Claude Code五大顶级神级 Skill：智能排错、自动化钩子、一键生成文档、全局代码重构、本地隐私联动，个个实用硬核，学会直接拉满开发效率。别只会简单聊天写代码！#ClaudeCode #编程入门  #ai编程  #AI  #AI工具",
+      "chapter_content": "Claude Code的五大神级Skill包括智能排错、自动化钩子、一键生成文档、全局代码重构和本地隐私联动。这些技能能提高AI开发效率，帮助新手解决疑难问题，优化代码质量，保护项目隐私。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "Auto Debug智能...",
+          "detail": "能自动分析报错根源，定位问题行数，提供修复思路和优化方案。",
+          "timestamp": 14000
+        },
+        {
+          "desc": "Hooks自动化钩子",
+          "detail": "监听项目变动，自动格式化、规范缩进和命名，自动代码自检。",
+          "timestamp": 32500
+        },
+        {
+          "desc": "Doc Generato...",
+          "detail": "一键生成项目README、API接口文档等，排版规整，条理清晰。",
+          "timestamp": 51000
+        },
+        {
+          "desc": "Code Refacto...",
+          "detail": "安全全局重构，优化结构，不改原有业务功能，提高可读性。",
+          "timestamp": 70000
+        },
+        {
+          "desc": "MCP本地资源联动",
+          "detail": "安全读取本地资源，辅助写代码，保证项目隐私安全。",
+          "timestamp": 88000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 107000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778041003,
+      "duration": 120067,
+      "stats": {
+        "digg_count": 709,
+        "comment_count": 8,
+        "share_count": 118,
+        "collect_count": 937
+      }
+    },
+    {
+      "aweme_id": "7636024685755315641",
+      "desc": "90%新手没解锁Claude Code的高阶神技，分工玩法！ 做大型项目总容易漏功能、逻辑混乱？Claude Code热门Sub Agent子分身技能，自动拆解复杂任务、多Agen……版本过低，升级后可展示全部信息",
+      "caption": "做大型项目总容易漏功能、逻辑混乱？Claude Code热门Sub Agent子分身技能，自动拆解复杂任务、多Agent分工同步干活，条理清晰不遗漏，开发效率直接拉满。#claudecode #AI教程 #AI工具 #AI技能 #编程入门",
+      "chapter_content": "Claude Code的Sub Agent子分身技能可自动拆解复杂任务，实现多Agent分工同步干活，提高开发效率。通过复制指定语句启用该技能，可将项目需求拆分为多个独立子任务，由不同子Agent分头并行开发，最后由主Agent统一整合。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "Sub Agent子分身...",
+          "detail": "Sub Agent子Agent分身能力可自动拆分复杂任务，多Agent分工同步干活，提高开发效率。",
+          "timestamp": 16000
+        },
+        {
+          "desc": "启用方法",
+          "detail": "复制指定语句发给Claude Code即可启用Sub Agent子分身。",
+          "timestamp": 47000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 63500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777900543,
+      "duration": 77300,
+      "stats": {
+        "digg_count": 1386,
+        "comment_count": 16,
+        "share_count": 216,
+        "collect_count": 1546
+      }
+    },
+    {
+      "aweme_id": "7635879561925863665",
+      "desc": "不用手动配置！让Claude Code自动记住你的项目！ 还在每次用 Claude Code 重复介绍项目？不用手动建配置，直接口述就能让 AI 把项目架构、技术栈和编码习惯自动写……版本过低，升级后可展示全部信息",
+      "caption": "还在每次用 Claude Code 重复介绍项目？不用手动建配置，直接口述就能让 AI 把项目架构、技术栈和编码习惯自动写入项目记忆，永久生效，省去重复沟通，开发效率翻倍。#claudecode #AI工具 #AI教程 #编程入门 #编程学习",
+      "chapter_content": "Claude Code的项目记忆CLAUDE.MD功能可自动记录项目架构、技术栈、编码习惯等信息，永久生效，提高开发效率。新手可通过斜杠命令CLAUDE.MD生成标准模板。",
+      "chapter_list": [
+        {
+          "desc": "痛点",
+          "detail": "",
+          "timestamp": 3000
+        },
+        {
+          "desc": "项目记忆CLAUDE.M...",
+          "detail": "Claude Code的项目记忆CLAUDE.MD功能，可自动生成并更新项目记忆档案，记录项目架构、技术栈等信息。",
+          "timestamp": 18000
+        },
+        {
+          "desc": "新手使用方法",
+          "detail": "新手可输入斜杠命令CLAUDE.MD生成标准模板，稍作调整即可使用。",
+          "timestamp": 66000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 74000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777866753,
+      "duration": 80400,
+      "stats": {
+        "digg_count": 396,
+        "comment_count": 1,
+        "share_count": 46,
+        "collect_count": 377
+      }
+    },
+    {
+      "aweme_id": "7635238787529926843",
+      "desc": "Claude Code新手避雷的5个大坑，千万别乱操作！ 刚上手Claude Code总越用越乱、代码越改越崩？其实都是踩了新手常见误区。一期讲透5个致命坑，提前避开少走弯路，把C……版本过低，升级后可展示全部信息",
+      "caption": "刚上手Claude Code总越用越乱、代码越改越崩？其实都是踩了新手常见误区。一期讲透5个致命坑，提前避开少走弯路，把Claude Code用得又稳又高效。#ClaudeCode  #AI编程 #AI教程 #大模型使用技巧 #AI干货",
+      "chapter_content": "Claude Code新手容易踩的5个大坑，包括不备份代码、不清理会话、一次丢一堆文件让AI修改、需求不写清楚和忽略报错。避免这些错误可提高使用体验和开发效率。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "不备份代码就让AI直接瞎...",
+          "detail": "不备份代码，让AI直接修改，导致无法回退。",
+          "timestamp": 16500
+        },
+        {
+          "desc": "会话不清理，越聊越跑偏",
+          "detail": "不清理会话，导致AI理解需求不准。",
+          "timestamp": 30000
+        },
+        {
+          "desc": "一次丢一堆文件让AI随便...",
+          "detail": "一次丢一堆文件让AI修改，导致逻辑混乱。",
+          "timestamp": 45000
+        },
+        {
+          "desc": "只发大白话，需求不写清楚",
+          "detail": "需求不写清楚，导致AI无法准确理解需求。",
+          "timestamp": 59000
+        },
+        {
+          "desc": "忽略报错，硬逼着AI继续...",
+          "detail": "忽略报错，导致bug堆积，无法维护。",
+          "timestamp": 75000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 92000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777717562,
+      "duration": 99367,
+      "stats": {
+        "digg_count": 217,
+        "comment_count": 7,
+        "share_count": 31,
+        "collect_count": 184
+      }
+    },
+    {
+      "aweme_id": "7634929416040388785",
+      "desc": "新手必学！Claude Code 10个高频 Slash！ 不会用 Claude Code 自带 Slash 命令，等于白装！整理新手必学 10 个高频斜杠指令，项目初始化、模式切……版本过低，升级后可展示全部信息",
+      "caption": "不会用 Claude Code 自带 Slash 命令，等于白装！整理新手必学 10 个高频斜杠指令，项目初始化、模式切换、会话清理、代码对比全都有，零基础也能快速上手，直接拉满 AI 开发效率。#claudecode #slash #AI编程 #AI教程 #真实分享生活计划",
+      "chapter_content": "Claude Code 提供了10个高频 Slash 命令，涵盖项目初始化、模式切换、会话清理、代码对比等功能，帮助新手提高AI开发效率。这些命令简单易用，覆盖了新手日常90%的使用场景。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "init",
+          "detail": "一键识别项目技术栈，生成配置、规范和项目介绍。",
+          "timestamp": 13500
+        },
+        {
+          "desc": "plan",
+          "detail": "进入规划模式，拆解需求、梳理架构、列开发步骤。",
+          "timestamp": 22500
+        },
+        {
+          "desc": "edit",
+          "detail": "切换编辑模式，写新功能、改bug、重构代码。",
+          "timestamp": 30000
+        },
+        {
+          "desc": "ask",
+          "detail": "切换询问模式，只问答不修改代码，查知识点、解释逻辑、分析报错。",
+          "timestamp": 38000
+        },
+        {
+          "desc": "compact",
+          "detail": "精简对话历史，清理冗余内容。",
+          "timestamp": 45000
+        },
+        {
+          "desc": "clear",
+          "detail": "清空当前会话所有记录，重新开始对话。",
+          "timestamp": 52500
+        },
+        {
+          "desc": "file",
+          "detail": "快速读取项目里任意文件。",
+          "timestamp": 59500
+        },
+        {
+          "desc": "diff",
+          "detail": "查看代码前后修改对比。",
+          "timestamp": 66500
+        },
+        {
+          "desc": "reset",
+          "detail": "重置当前会话的所有上下文和设定。",
+          "timestamp": 74000
+        },
+        {
+          "desc": "powerup",
+          "detail": "学习高级用法、隐藏技巧。",
+          "timestamp": 80500
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 88000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777645530,
+      "duration": 98167,
+      "stats": {
+        "digg_count": 2589,
+        "comment_count": 23,
+        "share_count": 399,
+        "collect_count": 3021
+      }
+    },
+    {
+      "aweme_id": "7634440607469654373",
+      "desc": "专治Claude Code半途摆烂！这个技能太顶了！ 很多人用Claude Code经常做到一半就草草收尾、中途摆烂。装上Ralph Loop技能，强制任务闭环，不达标准绝不结束，……版本过低，升级后可展示全部信息",
+      "caption": "很多人用Claude Code经常做到一半就草草收尾、中途摆烂。装上Ralph Loop技能，强制任务闭环，不达标准绝不结束，彻底解决AI敷衍跑路的问题。#ClaudeCode #AI技能 #AI编程 #Claude教程 #AI干货",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1777531721,
+      "duration": 47467,
+      "stats": {
+        "digg_count": 4202,
+        "comment_count": 48,
+        "share_count": 468,
+        "collect_count": 3872
+      }
+    },
+    {
+      "aweme_id": "7634111936608024485",
+      "desc": "这个skill一键帮你彻底释放ClaudeCode全部实力！ 同样用Claude Code，别人效率拉满，你却效果一般。问题不在模型，而是提示词太随意。给你讲解Prompt-Opt……版本过低，升级后可展示全部信息",
+      "caption": "同样用Claude Code，别人效率拉满，你却效果一般。问题不在模型，而是提示词太随意。给你讲解Prompt-Optimizer专属技能有多强，一键优化口语需求，彻底释放Claude Code全部实力。#ClaudeCode #AI技能 #AI工具 #AI编程 #AI智能体",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1777455196,
+      "duration": 56834,
+      "stats": {
+        "digg_count": 1102,
+        "comment_count": 10,
+        "share_count": 142,
+        "collect_count": 997
+      }
+    },
+    {
+      "aweme_id": "7633755247919303972",
+      "desc": "不用费心盯流程！使用这个插件，让AI自己搞定开发全环节 Claude Code想提效？一定要装Oh My Claude Code！内置7个专业AI代理，覆盖规划、执行、审核全流程，相当于一整个虚拟开发团队，省心、高效、规范！#ClaudeCode #AI编程 #编程入门 #日常生活分享计划 #干货分享",
+      "caption": "Claude Code想提效？一定要装Oh My Claude Code！内置7个专业AI代理，覆盖规划、执行、审核全流程，相当于一整个虚拟开发团队，省心、高效、规范！#ClaudeCode #AI编程 #编程入门 #日常生活分享计划 #干货分享",
+      "chapter_content": "Oh My Claude Code插件为Claude Code提供7个专业AI代理，覆盖需求规划、代码编写和审核等全流程，实现省心、高效、规范的开发。插件安装简单，上手零门槛，适合新手和团队开发，能提高开发效率，少走弯路。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "插件介绍",
+          "detail": "Oh My Claude Code插件为Claude Code配备7个专业AI代理，覆盖开发全流程。",
+          "timestamp": 14000
+        },
+        {
+          "desc": "核心优势",
+          "detail": "省心、高效、规范，遵循规划、执行、审核三步走，无需手动干预。",
+          "timestamp": 45000
+        },
+        {
+          "desc": "上手门槛",
+          "detail": "上手零门槛，安装简单，完美适配Claude Code，与其他插件不冲突。",
+          "timestamp": 64000
+        },
+        {
+          "desc": "总结",
+          "detail": "Oh My Claude Code是虚拟团队，提高Claude Code开发效率，少走弯路。",
+          "timestamp": 72000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777372155,
+      "duration": 86294,
+      "stats": {
+        "digg_count": 247,
+        "comment_count": 4,
+        "share_count": 64,
+        "collect_count": 274
+      }
+    },
+    {
+      "aweme_id": "7633349817188066277",
+      "desc": "ClaudeCode提效密码！只需要装这两个插件，不用多装！ 用Claude Code做项目，不用盲目堆插件，选对组合才是关键。Gstack管方向、管交付，Superpowers管……版本过低，升级后可展示全部信息",
+      "caption": "用Claude Code做项目，不用盲目堆插件，选对组合才是关键。Gstack管方向、管交付，Superpowers管流程、管质量，互补不冲突，3分钟讲透实操用法，新手也能直接抄作业，高效搞定开发全流程。#ClaudeCode #AI编程 #程序员 #AI工具 #AI干货",
+      "chapter_content": "Claude Code提效的关键是选对插件组合，Gstack和Superpowers分别负责产品方向和代码质量。它们分工明确，触发方式互补，流程无缝衔接。通过配置CLAUDE.md文件，AI可以高效执行任务。在AI编程时代，规划和方案比编码更重要，用好这两个插件可提高开发效率。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "Gstack",
+          "detail": "Gstack是虚拟工程团队，负责产品方向、验证和交付。",
+          "timestamp": 19000
+        },
+        {
+          "desc": "Superpowers",
+          "detail": "Superpowers是代码质量守门人，有严格的工程纪律。",
+          "timestamp": 37000
+        },
+        {
+          "desc": "互补点",
+          "detail": "Gstack和Superpowers分工互补，触发方式互补，流程无缝衔接。",
+          "timestamp": 56000
+        },
+        {
+          "desc": "实操用法",
+          "detail": "需求梳理、架构评审、开发、问题定位、收尾等环节的实操用法。",
+          "timestamp": 94000
+        },
+        {
+          "desc": "配置文件",
+          "detail": "配置CLAUDE.md文件，明确分工，避免混乱。",
+          "timestamp": 147000
+        },
+        {
+          "desc": "核心心得",
+          "detail": "AI编程时代，规划和方案比编码更重要，用好插件提高效率。",
+          "timestamp": 159000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777277751,
+      "duration": 180867,
+      "stats": {
+        "digg_count": 554,
+        "comment_count": 11,
+        "share_count": 121,
+        "collect_count": 695
+      }
+    },
+    {
+      "aweme_id": "7632630090257435967",
+      "desc": "最强AI之争！GPT5.5和Claude4.7到底谁更能打？ Claude Opus4.7和GPT-5.5，到底谁才是2026年真正的AI顶流？今天从编程、长文本、多模态三大核心维度，全方面硬核实测，没有套路，只有真实数据和使用体验。你平时用哪款 AI 模型？评论区聊聊！ #OpenAI #Claude #ai模型 #大模型 #AI编程",
+      "caption": "Claude Opus4.7和GPT-5.5，到底谁才是2026年真正的AI顶流？今天从编程、长文本、多模态三大核心维度，全方面硬核实测，没有套路，只有真实数据和使用体验。你平时用哪款 AI 模型？评论区聊聊！ #OpenAI #Claude #ai模型 #大模型 #AI编程",
+      "chapter_content": "GPT-5.5和Claude Opus 4.7在编程、长文本和多模态三大核心维度展开对决。GPT5.5在全链路工程能力和多模态联动上表现更优，适合学生党和新手入门；Claude Opus 4.7在长文本处理和代码稳定性上更胜一筹，适合专业开发者和需要处理大量文本的用户。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "核心编程能力",
+          "detail": "GPT5.5在Terminal bench 2.0测试中领先13个百分点，Claude Opus 4.7在SWE bench verified测试中表现突出。",
+          "timestamp": 20000
+        },
+        {
+          "desc": "长文本和上下文能力",
+          "detail": "GPT 5.5在Graphwalks BFS图便利测试中得分暴涨，Claude Opus 4.7在超长文本理解能力上优势明显。",
+          "timestamp": 76000
+        },
+        {
+          "desc": "多模态和agent能力",
+          "detail": "GPT 5.5和Claude Opus 4.7在agent电脑操控能力上基本平手，Claude Opus 4.7在多模态能力上升级，GPT5.5在多模态联动上表现更均衡。",
+          "timestamp": 120000
+        },
+        {
+          "desc": "总结",
+          "detail": "GPT5.5生态适配更广，Claude Opus 4.7长文本处理更稳，学生党新手入门可选GPT 5.5。",
+          "timestamp": 180000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777132860,
+      "duration": 191700,
+      "stats": {
+        "digg_count": 114,
+        "comment_count": 4,
+        "share_count": 14,
+        "collect_count": 45
+      }
+    },
+    {
+      "aweme_id": "7632552440667196713",
+      "desc": "强烈推荐6个自用skill 2026新手必备skill 强烈推荐新手必用6个skill，功能超齐全！自用认证。 #skills #AI #AI工具 #claudecode #大模型",
+      "caption": "强烈推荐新手必用6个skill，功能超齐全！自用认证。 #skills #AI #AI工具 #claudecode #大模型",
+      "chapter_content": "6个推荐的AI技能，包括Creator、Document Skills、Find Skill、Frontend Design、Code Simplifier和Ralph Loop，这些技能涵盖了工作流转化、文档处理、技能搜索、前端设计、代码简化和任务自动化等方面。同时，推荐了一个AI集合工具，方便用户一键搜索和安装适合的技能。",
+      "chapter_list": [
+        {
+          "desc": "Creator",
+          "detail": "将工作流转化为skill，自动分析流程，提取可复用模式，生成标准skill文档，一键安装。",
+          "timestamp": 4000
+        },
+        {
+          "desc": "Document Ski...",
+          "detail": "AI操作文档天花板，自动填表写Docs，批量处理Excel数据，一键生成PPT演示，智能阅读PDF文档。",
+          "timestamp": 20000
+        },
+        {
+          "desc": "Find Skill",
+          "detail": "从几万个Skill中精准找到适合的，匹配需求场景，筛选高评分skill，对比相似方案，推荐最佳选择。",
+          "timestamp": 33000
+        },
+        {
+          "desc": "Frontend Des...",
+          "detail": "前端美化神器，专业级UI设计，一键美化界面，响应式布局。",
+          "timestamp": 46000
+        },
+        {
+          "desc": "Code Simplif...",
+          "detail": "自动简化复杂逻辑，消除冗余代码，优化代码结构，提升可读性。",
+          "timestamp": 53000
+        },
+        {
+          "desc": "Ralph Loop",
+          "detail": "AI无限打工模式，自动循环执行任务，无限搜索资料，持续迭代优化，直到任务完成。",
+          "timestamp": 65000
+        },
+        {
+          "desc": "AI集合工具",
+          "detail": "AI集合工具，一键搜索，精准匹配需求，找到最适合的skill，一键安装立即可用。",
+          "timestamp": 76000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777092104,
+      "duration": 101000,
+      "stats": {
+        "digg_count": 560,
+        "comment_count": 6,
+        "share_count": 76,
+        "collect_count": 449
+      }
+    },
+    {
+      "aweme_id": "7632230767308967178",
+      "desc": "Claude Code直接封神！这3个插件让你从青铜变王者！ 这条视频给你深度拆解3款Claude Code顶流插件，从团队协作、代码质量到极致个性化体验全覆盖，每一款都是经过实战验证的提效神器。#ClaudeCode #AI工具 #AI编程 #真实生活分享计划 #AI科技",
+      "caption": "这条视频给你深度拆解3款Claude Code顶流插件，从团队协作、代码质量到极致个性化体验全覆盖，每一款都是经过实战验证的提效神器。#ClaudeCode #AI工具 #AI编程 #真实生活分享计划 #AI科技",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1777017207,
+      "duration": 63400,
+      "stats": {
+        "digg_count": 232,
+        "comment_count": 7,
+        "share_count": 38,
+        "collect_count": 214
+      }
+    },
+    {
+      "aweme_id": "7631899794457251123",
+      "desc": "AI 写代码总乱写？本质是没打地基就盖楼！ 没设计就写代码，跟不打地基就盖楼没区别，改 bug 改到心态崩？这条视频给你讲透底层原因，还有 3 步可直接抄作业的正确流程，新手也能让 AI 乖乖听话，再也不瞎写代码。#AI编程 #AI技巧 #代码 #人工智能 #干货分享",
+      "caption": "没设计就写代码，跟不打地基就盖楼没区别，改 bug 改到心态崩？这条视频给你讲透底层原因，还有 3 步可直接抄作业的正确流程，新手也能让 AI 乖乖听话，再也不瞎写代码。#AI编程 #AI技巧 #代码 #人工智能 #干货分享",
+      "chapter_content": "AI写代码时乱写的问题源于缺乏流程和设计。通过使用Superpowers插件，AI可以先制定方案，再按图纸施工，最后进行全量验收，从而提高代码质量和稳定性。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "AI乱写代码的原因",
+          "detail": "AI乱写代码是因为没有流程和设计，就像不打地基就盖楼。",
+          "timestamp": 12000
+        },
+        {
+          "desc": "解决方法",
+          "detail": "使用Superpowers插件，先打地基定方案，再按图纸闭环施工，最后竣工全量验收。",
+          "timestamp": 21000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 61000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776960060,
+      "duration": 76234,
+      "stats": {
+        "digg_count": 1503,
+        "comment_count": 17,
+        "share_count": 226,
+        "collect_count": 1337
+      }
+    },
+    {
+      "aweme_id": "7631862836125355290",
+      "desc": "新手玩Claude Code必学！全命令详解+避坑指南！ Claude Code官方足足近百个斜杠命令，但真正能让你效率翻倍、告别无效对话的核心高频命令，其实只有19个。#ClaudeCode #真实生活分享计划 #AI工具 #AI科技 #AI",
+      "caption": "Claude Code官方足足近百个斜杠命令，但真正能让你效率翻倍、告别无效对话的核心高频命令，其实只有19个。#ClaudeCode #真实生活分享计划 #AI工具 #AI科技 #AI",
+      "chapter_content": "Claude Code的19个核心高频命令，包括对话管理、实用工具、记忆文件、插件市场和分析报告等方面。掌握这些命令可提高Claude Code的使用效率。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "对话管理",
+          "detail": "clear清空对话历史，Compact压缩对话历史，resume恢复对话，BTW快速提问，rewind回退对话，effort设置思考深度，config打开设置面板。",
+          "timestamp": 14000
+        },
+        {
+          "desc": "实用工具",
+          "detail": "add-dir添加工作目录，copy复制回复，export导出对话，permissions管理工具权限，review审查pull request，MCP管理MCP服务器连接，Chrome连接Chrom...",
+          "timestamp": 62000
+        },
+        {
+          "desc": "记忆文件",
+          "detail": "memory编辑记忆文件。",
+          "timestamp": 105000
+        },
+        {
+          "desc": "插件市场与分析报告",
+          "detail": "Plugin进入插件市场，Insights生成使用分析报告。",
+          "timestamp": 112000
+        },
+        {
+          "desc": "速查图",
+          "detail": "",
+          "timestamp": 123500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776931542,
+      "duration": 140234,
+      "stats": {
+        "digg_count": 6188,
+        "comment_count": 82,
+        "share_count": 1137,
+        "collect_count": 6724
+      }
+    },
+    {
+      "aweme_id": "7631449242535529737",
+      "desc": "一键解锁ClaudeOpus4.7！这个AI工具箱太香了！ 全网都在吹的 Claude4.7，长文档处理、硬核编程、专业分析能力直接拉满，堪称当前 AI 界的天花板！#Claude #AI工具  #AI神器 #ClaudeCode  #AI编程",
+      "caption": "全网都在吹的 Claude4.7，长文档处理、硬核编程、专业分析能力直接拉满，堪称当前 AI 界的天花板！#Claude #AI工具  #AI神器 #ClaudeCode  #AI编程",
+      "chapter_content": "Claude Opus 4.7是一款被低估的AI效率神器，具有强大的常文本处理、编程与工程化、多模态视觉、严谨靠谱、长任务与自动化执行能力。适用于处理超长文档、进行硬核编程开发、完成高准确性专业内容创作和搭建自动化AI工作流。AI集合工具箱可一键部署和安装Claude Code，新用户有体验额度。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "Claude简介",
+          "detail": "Claude是Anthropic公司开发的旗舰级AI大模型，Opus 4.7是其最强版本。",
+          "timestamp": 13000
+        },
+        {
+          "desc": "常文本处理能力",
+          "detail": "Claude具有碾压级的常文本处理能力，上下文窗口最高200万Token，可处理超150万字纯文本。",
+          "timestamp": 27000
+        },
+        {
+          "desc": "编程与工程化能力",
+          "detail": "Claude编程与工程化能力强，在SWE bench Verified 2.0测试中表现优秀，能独立完成复杂软件工程开发。",
+          "timestamp": 51000
+        },
+        {
+          "desc": "多模态视觉能力",
+          "detail": "Claude多模态视觉能力跨越式升级，图像输入分辨率提高3倍，支持批量输入和差异提取。",
+          "timestamp": 75000
+        },
+        {
+          "desc": "严谨靠谱",
+          "detail": "Claude更严谨、靠谱，幻觉发生率低，指令遵循精度高，适用于法律、金融、科研等领域。",
+          "timestamp": 100000
+        },
+        {
+          "desc": "长任务与自动化执行能力",
+          "detail": "Claude长任务与自动化执行能力强，支持断点续执行和状态记忆，兼容主流工具调用框架。",
+          "timestamp": 120000
+        },
+        {
+          "desc": "总结",
+          "detail": "Claude Opus 4.7适用于超长文档处理、硬核编程、专业内容创作和自动化AI工作流。",
+          "timestamp": 143000
+        },
+        {
+          "desc": "AI集合工具箱",
+          "detail": "AI集合工具箱可一键部署、安装Claude Code，新用户有体验额度，日常使用可持续获取额度。",
+          "timestamp": 154000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776835244,
+      "duration": 174000,
+      "stats": {
+        "digg_count": 165,
+        "comment_count": 3,
+        "share_count": 24,
+        "collect_count": 88
+      }
+    },
+    {
+      "aweme_id": "7631110877047049523",
+      "desc": "小龙虾 VS Hermes！一个投喂一个自己长大！ GitHub两个月狂揽42K星标的开源项目Hermes来了！很多人只知道OpenClaw小龙虾，却不知道Hermes才是真正会自我进化的 AI 智能体。#Hermes #OpenClaw #AI智能体 #GitHub #AI工具",
+      "caption": "GitHub两个月狂揽42K星标的开源项目Hermes来了！很多人只知道OpenClaw小龙虾，却不知道Hermes才是真正会自我进化的 AI 智能体。#Hermes #OpenClaw #AI智能体 #GitHub #AI工具",
+      "chapter_content": "GitHub上的开源项目Hermes Agent与Openclaw小龙虾有很大区别。Openclaw需安装插件喂技能，而Hermes是自我进化的AI智能体，能自动复盘和提炼新技能，具有持久记忆，适用于各种复杂任务。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "Openclaw",
+          "detail": "Openclaw是轻量AI智能体框架，需安装插件喂技能，能力有限。",
+          "timestamp": 18000
+        },
+        {
+          "desc": "Hermes",
+          "detail": "Hermes是自我进化的AI智能体，内置学习闭环，能自动复盘和提炼新技能，综合能力强。",
+          "timestamp": 34000
+        },
+        {
+          "desc": "总结",
+          "detail": "成长方式、记忆能力、适用场景不同，Openclaw需投喂技能，Hermes可自我进化。",
+          "timestamp": 57000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776756462,
+      "duration": 79667,
+      "stats": {
+        "digg_count": 90,
+        "comment_count": 4,
+        "share_count": 21,
+        "collect_count": 70
+      }
+    },
+    {
+      "aweme_id": "7630875855216037166",
+      "desc": "强烈推荐6个自用skill，直接把AI工具效率拉满 2026强烈推荐新手必用6个skill，功能超齐全！自用认证。玩AI必懂的6个skill，效率翻倍！#skills #AI #ai工具 #claudecode #大模型",
+      "caption": "2026强烈推荐新手必用6个skill，功能超齐全！自用认证。玩AI必懂的6个skill，效率翻倍！#skills #AI #ai工具 #claudecode #大模型",
+      "chapter_content": "6个实用的AI技能，包括Creator、Document Skills、Find Skill、Frontend Design、Code Simplifier和Ralph Loop，这些技能可以帮助用户提高AI工具的效率。同时，推荐了一个AI集合工具，方便用户搜索和安装各种技能。",
+      "chapter_list": [
+        {
+          "desc": "Creator",
+          "detail": "将工作流转化为skill，自动分析流程，提取可复用模式，生成标准skill文档。",
+          "timestamp": 4000
+        },
+        {
+          "desc": "Document Ski...",
+          "detail": "自动填表写Docs，批量处理Excel数据，一键生成PPT演示，智能阅读PDF文档。",
+          "timestamp": 20000
+        },
+        {
+          "desc": "Find Skill",
+          "detail": "从几万个skill中找到答案，匹配需求场景，筛选高评分skill，对比相似方案。",
+          "timestamp": 33000
+        },
+        {
+          "desc": "Frontend Des...",
+          "detail": "专业级UI设计，一键美化界面，响应式布局。",
+          "timestamp": 46000
+        },
+        {
+          "desc": "Code Simplif...",
+          "detail": "简化复杂逻辑，消除冗余代码，优化代码结构，提升可读性。",
+          "timestamp": 53000
+        },
+        {
+          "desc": "Ralph Loop",
+          "detail": "自动循环执行任务，无限搜索资料，持续迭代优化，直到任务完成。",
+          "timestamp": 65000
+        },
+        {
+          "desc": "AI集合工具",
+          "detail": "AI集合工具，一键搜索，精准匹配需求，一键安装立即可用。",
+          "timestamp": 76000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776701752,
+      "duration": 101000,
+      "stats": {
+        "digg_count": 507,
+        "comment_count": 4,
+        "share_count": 77,
+        "collect_count": 503
+      }
+    },
+    {
+      "aweme_id": "7630774634106850575",
+      "desc": "AI圈炸场🔥Claude Opus 4.7断层登顶全球第一 Claude Opus 4.7直接登顶三大盲测榜单，综合+编程双料天花板✨ 80.8%代码通过率、94.0%推理得分，复杂开发、旧代码重构全拿捏，还兼顾企业级安全。想零门槛体验？我做的AI工具箱，一键部署、无需配置，新手也能轻松玩转，关注领安装教程+体验额度！#Claude #ClaudeCode #AI工具 #AI神器 #编程入门",
+      "caption": "Claude Opus 4.7直接登顶三大盲测榜单，综合+编程双料天花板✨ 80.8%代码通过率、94.0%推理得分，复杂开发、旧代码重构全拿捏，还兼顾企业级安全。想零门槛体验？我做的AI工具箱，一键部署、无需配置，新手也能轻松玩转，关注领安装教程+体验额度！#Claude #ClaudeCode #AI工具 #AI神器 #编程入门",
+      "chapter_content": "Claude Opus 4.7在编程盲测中表现出色，具有强大的代码修复、抽象推理和复杂逻辑能力。然而，新手在使用时可能遇到安装、配置和运行方面的困难。为解决这些问题，一款AI集合工具箱应运而生，它能自动检测运行环境，一键部署和安装Claude Code，支持Codex，还提供免费体验额度，帮助新手轻松使用全球顶尖AI模型。",
+      "chapter_list": [
+        {
+          "desc": "Claude Opus ...",
+          "detail": "Claude Opus 4.7在编程盲测榜单中表现优秀，具有强大的代码修复、抽象推理和复杂逻辑能力，适用于高端开发和复杂任务。",
+          "timestamp": 1000
+        },
+        {
+          "desc": "新手使用的难点",
+          "detail": "新手使用Claude Opus 4.7的难点在于安装、配置和运行，需遵守法律法规。",
+          "timestamp": 39000
+        },
+        {
+          "desc": "AI集合工具箱",
+          "detail": "AI集合工具箱可一键部署、安装Claude Code，支持Codex，后续将接入更多顶尖AI，适合编程小白和AI工具新手。",
+          "timestamp": 51000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776678176,
+      "duration": 85534,
+      "stats": {
+        "digg_count": 45,
+        "comment_count": 2,
+        "share_count": 7,
+        "collect_count": 25
+      }
+    },
+    {
+      "aweme_id": "7630544347351584041",
+      "desc": "2026全球AI模型最新排行，编程实力一目了然 从综合实力到编程能力实测对比，包含SWE-bench、ARC-AGI等真实数据。分享各模型适用场景与本地部署思路，附带AI工具箱体验指南，新手也能轻松上手！#AI模型 #ClaudeCode #AI工具 #AI提效 #AI教程",
+      "caption": "从综合实力到编程能力实测对比，包含SWE-bench、ARC-AGI等真实数据。分享各模型适用场景与本地部署思路，附带AI工具箱体验指南，新手也能轻松上手！#AI模型 #ClaudeCode #AI工具 #AI提效 #AI教程",
+      "chapter_content": "2026全球AI模型最新排行前五介绍，包括DeepSeek V3.2、Kimi K2.5 Pro、Gemini 3.1 Pro、GPT 5.4和Claude Opus 4.7。这些模型在编程实力、综合实力等方面表现出色，适用于不同场景。同时，提供了AI集合工具箱，方便新手体验顶级AI。",
+      "chapter_list": [
+        {
+          "desc": "DeepSeek V3....",
+          "detail": "国产开源，性价比高，代码生成准确率83.3%，轻量化，本地部署低成本。",
+          "timestamp": 2000
+        },
+        {
+          "desc": "Kimi K2.5 Pr...",
+          "detail": "超长上下文领域王者，百万字代码库，逻辑连贯理解深度强，降低二次开发成本。",
+          "timestamp": 17000
+        },
+        {
+          "desc": "Gemini 3.1 P...",
+          "detail": "谷歌多模态旗舰模型，综合推理能力均衡，运行成本低，多场景适配。",
+          "timestamp": 30000
+        },
+        {
+          "desc": "GPT 5.4",
+          "detail": "继承Codex编程基因，全链路自动化落地交付，代码严谨，生态完善。",
+          "timestamp": 43000
+        },
+        {
+          "desc": "Claude Opus ...",
+          "detail": "综合加编程双料天花板，SWE bench验证通过率80.8%，ARC AGI抽象推理得分94.0%，兼顾企业级安全合规。",
+          "timestamp": 55000
+        },
+        {
+          "desc": "AI集合工具箱",
+          "detail": "AI集合工具箱，自动检测运行环境，一键部署安装，新手零门槛使用。",
+          "timestamp": 86000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776624581,
+      "duration": 104634,
+      "stats": {
+        "digg_count": 114,
+        "comment_count": 2,
+        "share_count": 22,
+        "collect_count": 86
+      }
+    },
+    {
+      "aweme_id": "7630021438963060010",
+      "desc": "ClaudeCode 4.7，6大核心优势，开发效率直接翻倍 拆解4.7版本6大核心优势：自主闭环开发、超长任务自治、100万token深度理解、ultrareview超级审查、xhigh超强推理、企业级安全合规，每一个都能直接提升开发效率、提高接私单成功率！#ClaudeCode #Claude #AI编程 #AI工具 #编程入门",
+      "caption": "拆解4.7版本6大核心优势：自主闭环开发、超长任务自治、100万token深度理解、ultrareview超级审查、xhigh超强推理、企业级安全合规，每一个都能直接提升开发效率、提高接私单成功率！#ClaudeCode #Claude #AI编程 #AI工具 #编程入门",
+      "chapter_content": "Claude Opus 4.7具有6大核心优势，包括自主闭环开发、超长任务自治、深度代码理解、UltrareView超级审查、Xhigh超强推理和企业级安全合规。这些优势能提高开发效率、降低成本，尤其适合有经验的AI开发者。然而，原生Claude Code使用门槛较高，因此作者提供了AI集合工具箱，帮助新手快速上手。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "自主闭环开发",
+          "detail": "自带自我验证、自我修复功能，减少人工操作，提高开发效率。",
+          "timestamp": 21500
+        },
+        {
+          "desc": "超长任务自治",
+          "detail": "支持小时级复杂任务，断点续跑，无人值守，提高工作效率。",
+          "timestamp": 36000
+        },
+        {
+          "desc": "深度代码理解",
+          "detail": "支持100万TOKEN上下文，快速理解项目逻辑，减少需求解释。",
+          "timestamp": 51000
+        },
+        {
+          "desc": "UltrareView超...",
+          "detail": "启动多Agent深度审查，自动找bug、查漏洞、优化代码逻辑，减少返工率。",
+          "timestamp": 66500
+        },
+        {
+          "desc": "Xhigh超强推理",
+          "detail": "Xhigh算力模式提高复杂任务解决率，能力翻倍。",
+          "timestamp": 81000
+        },
+        {
+          "desc": "企业级安全合规",
+          "detail": "恶意代码拒绝率高，有效防注入、防坏代码，确保商用合规。",
+          "timestamp": 96000
+        },
+        {
+          "desc": "新手使用门槛",
+          "detail": "原生Claude Code使用门槛高，配置繁琐，容易放弃。",
+          "timestamp": 109000
+        },
+        {
+          "desc": "AI集合工具箱",
+          "detail": "AI集合工具箱解决痛点，一键检测环境，自动配置，兼容ClaudeCode和Codex，0基础快速上手。",
+          "timestamp": 126000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776502810,
+      "duration": 144100,
+      "stats": {
+        "digg_count": 82,
+        "comment_count": 2,
+        "share_count": 12,
+        "collect_count": 44
+      }
+    },
+    {
+      "aweme_id": "7629691554646576426",
+      "desc": "别再用普通AI写代码了！ClaudeCode才是真正生产力！ 同样是 AI，差距却天差地别。普通 AI 只会拼凑片段代码，而 ClaudeCode 拥有全局阅读、自主执行、代码重构、全项目落地等超多核心能力。真正帮普通人实现 AI 开发自由。#ClaudeCode #AI编程 #程序员 #AI工具 #AI时代",
+      "caption": "同样是 AI，差距却天差地别。普通 AI 只会拼凑片段代码，而 ClaudeCode 拥有全局阅读、自主执行、代码重构、全项目落地等超多核心能力。真正帮普通人实现 AI 开发自由。#ClaudeCode #AI编程 #程序员 #AI工具 #AI时代",
+      "chapter_content": "ClaudeCode与普通AI相比具有更强的全局阅读理解、自主执行落地、兼容与代码重构、自然语言理解、工程级代码质量、效率提升和适用场景全覆盖等优势。然而，原生版本对新手不友好，作者提供了AI集合工具，可一键检测环境，自动补齐依赖，让0基础也能无痛上手。",
+      "chapter_list": [
+        {
+          "desc": "普通AI的局限性",
+          "detail": "普通AI视野短、能力单一，无法应对复杂项目开发。",
+          "timestamp": 3000
+        },
+        {
+          "desc": "ClaudeCode的优...",
+          "detail": "ClaudeCode具有全局阅读理解、自主执行落地、兼容与代码重构、自然语言理解、工程级代码质量、效率提升和适用场景全覆盖等优势。",
+          "timestamp": 22000
+        },
+        {
+          "desc": "新手使用问题与解决方案",
+          "detail": "原生版本对新手不友好，作者提供了AI集合工具，可一键检测环境，自动补齐依赖，让0基础也能无痛上手。",
+          "timestamp": 104000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776426005,
+      "duration": 127300,
+      "stats": {
+        "digg_count": 268,
+        "comment_count": 14,
+        "share_count": 27,
+        "collect_count": 178
+      }
+    },
+    {
+      "aweme_id": "7629387558463573289",
+      "desc": "为什么要用ClaudeCode？到底强在哪？各种用法介绍！ 强烈推荐大家都用ClaudeCode，它是你AI时代的超级便车。它能帮你做任何事！包括部署OpenClaw大龙虾，写代码，搜索下载资料，整理软件，日常填表做表写PPT，帮你做标书监控投标信息等等，无所不能！#AI #ClaudeCode #AI教程 #AI编程 #AI工具",
+      "caption": "强烈推荐大家都用ClaudeCode，它是你AI时代的超级便车。它能帮你做任何事！包括部署OpenClaw大龙虾，写代码，搜索下载资料，整理软件，日常填表做表写PPT，帮你做标书监控投标信息等等，无所不能！#AI #ClaudeCode #AI教程 #AI编程 #AI工具",
+      "chapter_content": "ClaudeCode是一款功能强大的AI工具，可实现部署软件、编程、收集下载资料、翻译、自动填表、生成文章和视频等功能。然而，新手在使用时可能遇到环境配置困难等问题。为解决这些问题，一款AI集合工具应运而生，它兼容ClaudeCode，支持一键检测环境、补齐依赖，免费且无隐藏消费，让用户轻松体验ClaudeCode的强大功能。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "ClaudeCode的功...",
+          "detail": "ClaudeCode可部署OpenClaw大龙虾，编程，部署软件，收集下载资料，翻译，自动填表，生成文章和视频，做标书，监控招标信息。",
+          "timestamp": 5000
+        },
+        {
+          "desc": "新手使用的痛点",
+          "detail": "新手使用ClaudeCode存在环境配置麻烦、依赖报错、英文命令等问题。",
+          "timestamp": 82000
+        },
+        {
+          "desc": "AI集合工具的优势",
+          "detail": "AI集合工具兼容ClaudeCode，支持一键检测环境、补齐依赖，免费且无隐藏消费。",
+          "timestamp": 89000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 110000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776355227,
+      "duration": 116434,
+      "stats": {
+        "digg_count": 29747,
+        "comment_count": 561,
+        "share_count": 5402,
+        "collect_count": 21344
+      }
+    },
+    {
+      "aweme_id": "7629218561579437318",
+      "desc": "强烈推荐 ClaudeCode！通往 AI 时代最快的路🔥 写代码、做开发、配环境、自动化、写逻辑全能搞定，理解能力超强，需求一说就出完整方案。新手最大痛点就是环境配置、依赖报错、英文命令，直接劝退！#AI编程 #AI工具 #编程入门 #程序员 #自动化办公",
+      "caption": "写代码、做开发、配环境、自动化、写逻辑全能搞定，理解能力超强，需求一说就出完整方案。新手最大痛点就是环境配置、依赖报错、英文命令，直接劝退！#AI编程 #AI工具 #编程入门 #程序员 #自动化办公",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1776315873,
+      "duration": 58734,
+      "stats": {
+        "digg_count": 79,
+        "comment_count": 5,
+        "share_count": 16,
+        "collect_count": 63
+      }
+    },
+    {
+      "aweme_id": "7628898059325279529",
+      "desc": "ClaudeCode 很强，但新手配环境真的太劝退 想用好 ClaudeCode 却被环境配置劝退？这款AI集合工具箱专为新手打造，深度兼容ClaudeCode，一键检测安装、一键装NPM包与技能，不用记命令、不用查文档，打开即用。#AI编程 #ClaudeCode #AI工具 #AI教程 #编程入门",
+      "caption": "想用好 ClaudeCode 却被环境配置劝退？这款AI集合工具箱专为新手打造，深度兼容ClaudeCode，一键检测安装、一键装NPM包与技能，不用记命令、不用查文档，打开即用。#AI编程 #ClaudeCode #AI工具 #AI教程 #编程入门",
+      "chapter_content": "ClaudeCode在AI开发中表现出色，但新手使用难度大。AI集合部署工具箱可兼容ClaudeCode和Codex，简化环境配置和技能安装过程，适合编程新手和想省时间的开发者。",
+      "chapter_list": [
+        {
+          "desc": "ClaudeCode的优...",
+          "detail": "ClaudeCode功能强大，但新手使用门槛高。",
+          "timestamp": 0
+        },
+        {
+          "desc": "AI集合部署工具箱的特点",
+          "detail": "AI集合部署工具箱兼容ClaudeCode和Codex，无需复杂配置，可一键安装依赖和技能，免费且无套路。",
+          "timestamp": 18000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 56000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776241250,
+      "duration": 60534,
+      "stats": {
+        "digg_count": 534,
+        "comment_count": 31,
+        "share_count": 69,
+        "collect_count": 421
+      }
+    },
+    {
+      "aweme_id": "7628629781021527338",
+      "desc": "真实项目实战，Codex 才是真・开发助手 一定要试试 Codex！把想法快速变成结果，效率直接拉满。写脚本、做网站、改功能、修 bug，部署调试、排查环境报错，速读文档、梳理代码重点，批量处理、自动化办公，真实项目持续开发迭代！\n#AI编程 \n#程序员日常 \n#AI工具 \n#编程入门 \n#自动化办公",
+      "caption": "一定要试试 Codex！把想法快速变成结果，效率直接拉满。写脚本、做网站、改功能、修 bug，部署调试、排查环境报错，速读文档、梳理代码重点，批量处理、自动化办公，真实项目持续开发迭代！\n#AI编程 \n#程序员日常 \n#AI工具 \n#编程入门 \n#自动化办公",
+      "chapter_content": "Codex是一款强大的AI编程工具，可用于编程开发、部署调试、看文档读代码、自动化工作和真实项目持续开发。它能快速将想法转化为代码，提高开发效率。为方便新手使用，作者还提供了AI集合工具，可轻松安装Codex。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "编程开发",
+          "detail": "Codex可用于编程开发，如写脚本、做网站、改功能、修bug。",
+          "timestamp": 8000
+        },
+        {
+          "desc": "部署和调试",
+          "detail": "Codex适合部署和调试项目，可排查问题并给出修改方案。",
+          "timestamp": 17000
+        },
+        {
+          "desc": "看文档和读代码",
+          "detail": "Codex可快速梳理文档和代码重点，节省时间。",
+          "timestamp": 26000
+        },
+        {
+          "desc": "自动化工作",
+          "detail": "Codex可实现自动化工作，如批量处理文件、生成脚本等。",
+          "timestamp": 35000
+        },
+        {
+          "desc": "真实项目持续开发",
+          "detail": "Codex可在真实项目中持续开发，跟随项目进展。",
+          "timestamp": 47000
+        },
+        {
+          "desc": "安装问题",
+          "detail": "AI集合工具可帮助新手快速安装Codex，无需技术和复杂指令。",
+          "timestamp": 56000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776178798,
+      "duration": 69500,
+      "stats": {
+        "digg_count": 123,
+        "comment_count": 2,
+        "share_count": 23,
+        "collect_count": 75
+      }
+    },
+    {
+      "aweme_id": "7628532724654968070",
+      "desc": "直接打爆AI部署门槛！新手一键全搞定，零基础也能轻松上手 被 AI 环境配置坑怕了？这款免费 AI 工具帮你一键搞定所有问题。自动检测环境、一键安装依赖，ClaudeCode、Codex 统一管理，NPM 包和 Skills 一键部署，纯新手也能零门槛上手。#AI工具 #AI编程 #AI教程 #ai工具测评 #ClaudeCode",
+      "caption": "被 AI 环境配置坑怕了？这款免费 AI 工具帮你一键搞定所有问题。自动检测环境、一键安装依赖，ClaudeCode、Codex 统一管理，NPM 包和 Skills 一键部署，纯新手也能零门槛上手。#AI工具 #AI编程 #AI教程 #ai工具测评 #ClaudeCode",
+      "chapter_content": "一款免费的AI集合工具，专为新手设计，可一键检测和安装环境依赖，支持ClaudeCode /Codex，统一管理NPM包和Skills，无需复杂操作和技术知识，帮助新手轻松上手AI编程。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 500
+        },
+        {
+          "desc": "工具介绍",
+          "detail": "AI集合工具专为新手设计，免费且支持ClaudeCode /Codex。",
+          "timestamp": 15000
+        },
+        {
+          "desc": "使用方法",
+          "detail": "一键操作，自动检测环境，下载安装依赖，统一管理Claude/Codex。",
+          "timestamp": 31500
+        },
+        {
+          "desc": "适用人群",
+          "detail": "适用于编程小白和新手，节省时间和精力。",
+          "timestamp": 58000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 72000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776156189,
+      "duration": 78434,
+      "stats": {
+        "digg_count": 37,
+        "comment_count": 2,
+        "share_count": 3,
+        "collect_count": 26
+      }
+    },
+    {
+      "aweme_id": "7628161208029416710",
+      "desc": "直接把 AI 门槛打爆！普通人也能一键搞定 AI 环境 配置 AI 环境各种报错？中文名路径、缺失依赖、旧版 PowerShell 全是坑。\n我把所有问题汇总成一款 AI 检测工具，自动体检、一键修复、国内源极速部署，Cloud Code、Open Cloud 一键装好 + 汉化 + 教学，以前几天的活现在一分钟搞定。#AI工具 #ClaudeCode #Codex #AI教程 #AI实用工具",
+      "caption": "配置 AI 环境各种报错？中文名路径、缺失依赖、旧版 PowerShell 全是坑。\n我把所有问题汇总成一款 AI 检测工具，自动体检、一键修复、国内源极速部署，Cloud Code、Open Cloud 一键装好 + 汉化 + 教学，以前几天的活现在一分钟搞定。#AI工具 #ClaudeCode #Codex #AI教程 #AI实用工具",
+      "chapter_content": "AI部署过程中存在许多电脑环境相关的问题，本视频介绍了一个AI快速部署工具，可自动检测并一键解决Windows环境问题。此外，还提供了Claude Code/Codex的国内源、配置和汉化，以及Coding Plan，帮助用户更轻松地使用AI。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "AI快速部署工具",
+          "detail": "自动检测Windows环境，一键搞定缺失和需要补充的部分。",
+          "timestamp": 19000
+        },
+        {
+          "desc": "Claude Code/...",
+          "detail": "提供国内源，一键搞定CCSW配置和汉化，还有教学内容。",
+          "timestamp": 24000
+        },
+        {
+          "desc": "Coding Plan",
+          "detail": "整理好Coding Plan，配好AI后可直接训练，让AI进化并帮助干活。",
+          "timestamp": 37000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776069692,
+      "duration": 68534,
+      "stats": {
+        "digg_count": 60,
+        "comment_count": 5,
+        "share_count": 6,
+        "collect_count": 34
+      }
+    },
+    {
+      "aweme_id": "7627876964820323619",
+      "desc": "3个claudecode神级插件-效率极大提升 安装了claudecode朋友，一定要学习一些这3个神级开源插件，可以让你的cc变强！包括oh-my-claudecode/superpower/everything-claudecode #claudecode #ai #ai工具 #AI编程 #大模型",
+      "caption": "安装了claudecode朋友，一定要学习一些这3个神级开源插件，可以让你的cc变强！包括oh-my-claudecode/superpower/everything-claudecode #claudecode #ai #ai工具 #AI编程 #大模型",
+      "chapter_content": "Claude Code的三个插件：1. 提供7个专业AI代理，涵盖规划、代码编写和审核；2. 代码质量审计插件，强制走TDD测试，减少bug；3. Anthropic黑客松冠军配置，拥有9个代理和11个技能，本能学习系统会自动记住用户习惯。根据不同需求选择合适的插件，建议仔细研读代码和规划。",
+      "chapter_list": [
+        {
+          "desc": "Claude Code",
+          "detail": "Claude Code提供7个专业AI代理，涵盖规划、代码编写和审核。",
+          "timestamp": 4000
+        },
+        {
+          "desc": "代码质量审计",
+          "detail": "代码质量审计插件，强制走TDD测试，减少bug，具有自动触发机制。",
+          "timestamp": 18000
+        },
+        {
+          "desc": "Anthropic黑客松...",
+          "detail": "Anthropic黑客松冠军配置，拥有9个代理和11个技能，本能学习系统会自动记住用户习惯。",
+          "timestamp": 30000
+        },
+        {
+          "desc": "选择建议",
+          "detail": "根据场景选择工具，建议仔细研读代码和规划。",
+          "timestamp": 43000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776003515,
+      "duration": 61700,
+      "stats": {
+        "digg_count": 1290,
+        "comment_count": 11,
+        "share_count": 246,
+        "collect_count": 1491
+      }
+    },
+    {
+      "aweme_id": "7627425440247958799",
+      "desc": "强烈推荐三个让你的openclaw小龙虾超级进化的工具 推荐三个让openclaw小龙虾超级进化的工具给大家，大家把视频直接喂给小龙虾就能进化拉！我的小龙虾已经会看视频学习了。#openclaw #ai #openclaw小龙虾 #大模型 #人工智能",
+      "caption": "推荐三个让openclaw小龙虾超级进化的工具给大家，大家把视频直接喂给小龙虾就能进化拉！我的小龙虾已经会看视频学习了。#openclaw #ai #openclaw小龙虾 #大模型 #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1775898381,
+      "duration": 36600,
+      "stats": {
+        "digg_count": 123,
+        "comment_count": 1,
+        "share_count": 32,
+        "collect_count": 116
+      }
+    },
+    {
+      "aweme_id": "7627063419945979188",
+      "desc": "强烈推荐6个自用skill 2026强烈推荐新手必用6个skill，功能超齐全！自用认证。\n#skills #AI #AI工作流 #claudecode #大模型",
+      "caption": "2026强烈推荐新手必用6个skill，功能超齐全！自用认证。\n#skills #AI #AI工作流 #claudecode #大模型",
+      "chapter_content": "推荐6个实用技能，包括reator、document skills、find skill和frontend design。reator可将通用工作流转化为独特skill，document skills可自动处理文档，find skill可精准找到适合的skill，frontend design是前端优化神器。",
+      "chapter_list": [
+        {
+          "desc": "reator",
+          "detail": "将通用工作流转化为独特skill，自动分析工作流程，提取可复量模式，生成标准skill文档。",
+          "timestamp": 4000
+        },
+        {
+          "desc": "document ski...",
+          "detail": "自动填写Doc.s，批量处理Excel数据，一键生成PPT演示，智能阅读PDF文档。",
+          "timestamp": 21000
+        },
+        {
+          "desc": "find skill",
+          "detail": "从几万个skill中精准找到适合的智能匹配需求场景，推荐最佳选择。",
+          "timestamp": 34000
+        },
+        {
+          "desc": "frontend des...",
+          "detail": "",
+          "timestamp": 47000
+        },
+        {
+          "desc": "Code-Simplifier",
+          "detail": "Code-Simplifier",
+          "timestamp": 57000
+        },
+        {
+          "desc": "Ralph-Loop",
+          "detail": "Ralph-Loop",
+          "timestamp": 67000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1775836800,
+      "duration": 80467,
+      "stats": {
+        "digg_count": 15014,
+        "comment_count": 149,
+        "share_count": 2165,
+        "collect_count": 15893
+      }
+    },
+    {
+      "aweme_id": "7627053907415403811",
+      "desc": "强烈推荐：为什么要用claude code？各种用法介绍 强烈推荐大家都用claudecode，它是你AI时代的超级便车。它能帮你做任何事！包括部署openclaw大龙虾，写代码，搜索下载资料，整理软件，日常填表做表写PPT，帮你做标书监控投标信息等等，无所不能！#AI #claudecode #AI教程 #AI编程 #AI工具",
+      "caption": "强烈推荐大家都用claudecode，它是你AI时代的超级便车。它能帮你做任何事！包括部署openclaw大龙虾，写代码，搜索下载资料，整理软件，日常填表做表写PPT，帮你做标书监控投标信息等等，无所不能！#AI #claudecode #AI教程 #AI编程 #AI工具",
+      "chapter_content": "Claude Code是一款强大的AI工具，能帮助用户部署软件、修复bug、编程、收集和下载信息、自动写文章和排版、分发内容、完成实际工作等。它能将用户的想法变成现实，提高工作效率。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "部署OpenClaw大龙...",
+          "detail": "帮助部署OpenClaw大龙虾，修复bug，安装插件，协作完成更多事情。",
+          "timestamp": 7000
+        },
+        {
+          "desc": "部署其他软件",
+          "detail": "部署任何软件，修复bug，调参数。",
+          "timestamp": 16000
+        },
+        {
+          "desc": "编程",
+          "detail": "编程，制作工具、软件、网站，连接各大平台。",
+          "timestamp": 25000
+        },
+        {
+          "desc": "信息收集与下载",
+          "detail": "收集并下载信息，翻译，自动填表，提高工作效率。",
+          "timestamp": 35000
+        },
+        {
+          "desc": "内容分发",
+          "detail": "自动写文章、排版、分发，将文章转成视频。",
+          "timestamp": 64000
+        },
+        {
+          "desc": "实际工作帮助",
+          "detail": "实际工作中，自动做标书、监控招标信息、审核招标资料、分析算量。",
+          "timestamp": 75000
+        },
+        {
+          "desc": "结语",
+          "detail": "Claude Code是能将想法变成现实的AI，推荐使用，后续将开启教程系列。",
+          "timestamp": 87000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1775811873,
+      "duration": 101234,
+      "stats": {
+        "digg_count": 9088,
+        "comment_count": 264,
+        "share_count": 1390,
+        "collect_count": 7121
+      }
+    },
+    {
+      "aweme_id": "7626826253810650368",
+      "desc": "6个私藏 AI 工具，全是我每天离不开的！ 工具打工人学生党必马! #AI工具 #效率神器 #AI黑科技 #打工人必备 #AI视频制作",
+      "caption": "工具打工人学生党必马! #AI工具 #效率神器 #AI黑科技 #打工人必备 #AI视频制作",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1775758904,
+      "duration": 57767,
+      "stats": {
+        "digg_count": 778,
+        "comment_count": 10,
+        "share_count": 224,
+        "collect_count": 821
+      }
+    },
+    {
+      "aweme_id": "7626280474607914246",
+      "desc": "程序员把厨房变成实验室，这菜谱太硬核了 #GitHub #干货分享 #厨房小技巧 #程序员 #程序员浪漫",
+      "caption": "#GitHub #干货分享 #厨房小技巧 #程序员 #程序员浪漫",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1775631797,
+      "duration": 44267,
+      "stats": {
+        "digg_count": 22,
+        "comment_count": 2,
+        "share_count": 1,
+        "collect_count": 25
+      }
+    },
+    {
+      "aweme_id": "7625866026755902763",
+      "desc": "AI爬虫黑科技FireCrawl 一秒抓取网页数据一键爬取网页数据，开源网页数据抓取零门槛爬取网页数据，免费开源网页数据抓取神器！#AI工具 #干货分享 #ai #爬虫 #ai工具",
+      "caption": "一秒抓取网页数据一键爬取网页数据，开源网页数据抓取零门槛爬取网页数据，免费开源网页数据抓取神器！#AI工具 #干货分享 #ai #爬虫 #ai工具",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1775535303,
+      "duration": 41500,
+      "stats": {
+        "digg_count": 46,
+        "comment_count": 0,
+        "share_count": 11,
+        "collect_count": 46
+      }
+    },
+    {
+      "aweme_id": "7624111465527659812",
+      "desc": "0基础入门！AI股神它来了！ #ai #人工智能 #干货分享 #大模型 #AI工具",
+      "caption": "#ai #人工智能 #干货分享 #大模型 #AI工具",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1775126789,
+      "duration": 47000,
+      "stats": {
+        "digg_count": 34,
+        "comment_count": 2,
+        "share_count": 12,
+        "collect_count": 38
+      }
+    },
+    {
+      "aweme_id": "7623850274771416485",
+      "desc": "把世界调成静音，聆听deepseek操作的声音#美加墨世界杯 #人工智能",
+      "caption": "把世界调成静音，聆听deepseek操作的声音#美加墨世界杯 #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1775065967,
+      "duration": 80100,
+      "stats": {
+        "digg_count": 103,
+        "comment_count": 8,
+        "share_count": 30,
+        "collect_count": 43
+      }
+    },
+    {
+      "aweme_id": "7623302339381710116",
+      "desc": "不会写代码，用OpenCode做一个小游戏，AI小白轻松上手 #AI编程 #AI工具 #Claude #小游戏 #游戏开发",
+      "caption": "#AI编程 #AI工具 #Claude #小游戏 #游戏开发",
+      "chapter_content": "如何使用open code制作2048小游戏，包括安装环境、模型接入和创建游戏。通过简单的指令，无需编程知识，新手也能轻松完成游戏制作。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "为什么选择Opencode",
+          "timestamp": 1000
+        },
+        {
+          "desc": "安装环境",
+          "detail": "安装环境，打开命令行，输入代码切换安装员，等待open code安装成功。",
+          "timestamp": 23000
+        },
+        {
+          "desc": "模型接入",
+          "detail": "模型接入，在输入框内输入斜杠models回车，搜索并选择模型，复制并粘贴到填写窗口，选择模型版本。",
+          "timestamp": 37000
+        },
+        {
+          "desc": "创建游戏",
+          "detail": "创建游戏，直接跟open code说创建一个2048HTML游戏，等待几分钟游戏制作完成。",
+          "timestamp": 63000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 78000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1774938398,
+      "duration": 90667,
+      "stats": {
+        "digg_count": 47,
+        "comment_count": 1,
+        "share_count": 11,
+        "collect_count": 23
+      }
+    },
+    {
+      "aweme_id": "7622984019134795058",
+      "desc": "字节跳动开源 DeerFlow2.0，AI 员工框架来了 #字节跳动 #AI员工 #AI工具 #AI编程 #技术分享",
+      "caption": "#字节跳动 #AI员工 #AI工具 #AI编程 #技术分享",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1774864282,
+      "duration": 52600,
+      "stats": {
+        "digg_count": 91,
+        "comment_count": 3,
+        "share_count": 17,
+        "collect_count": 74
+      }
+    },
+    {
+      "aweme_id": "7613294605697568041",
+      "desc": "AI帮你24小时自动赚钱？！一天带你开发完这套量化系统 #AI #AI编程 #赚钱 #量化交易",
+      "caption": "#AI #AI编程 #赚钱 #量化交易",
+      "chapter_content": "如何用AI开发量化交易系统，包括系统的功能展示和AI辅助开发的过程。AI可以帮助生成完整代码和页面样式，提高开发效率。这个技能不仅适用于量化交易，还可应用于其他领域。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "成品展示",
+          "detail": "展示了AI量化交易系统的首页、行情分析页和风控中心，8个AI交易员各有分工，实时监控交易数据。",
+          "timestamp": 22000
+        },
+        {
+          "desc": "AI辅助开发",
+          "detail": "AI辅助开发，生成完整代码和页面样式，提高开发效率。",
+          "timestamp": 52000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 72000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1772608309,
+      "duration": 86734,
+      "stats": {
+        "digg_count": 1740,
+        "comment_count": 43,
+        "share_count": 290,
+        "collect_count": 1126
+      }
+    },
+    {
+      "aweme_id": "7613220480972154502",
+      "desc": "一天教你用ai开发一个项目，小白也能轻松上车#ai #ai智能 #ai编程",
+      "caption": "一天教你用ai开发一个项目，小白也能轻松上车#ai #ai智能 #ai编程",
+      "chapter_content": "如何用AI开发一个赛博朋克风的AI量化交易系统，包括成品展示和AI辅助开发过程。AI可以帮助生成完整代码和页面样式，提高开发效率，适用于多个领域。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "成品展示",
+          "detail": "展示了AI量化交易系统的首页、行情分析页和风控中心，包括AI交易员总览、实时交易信号、交易记录、风控监控等功能。",
+          "timestamp": 22000
+        },
+        {
+          "desc": "AI辅助开发",
+          "detail": "AI辅助开发，生成完整代码和页面样式，提高开发效率，适用于多个领域。",
+          "timestamp": 52000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 72000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1772591025,
+      "duration": 86734,
+      "stats": {
+        "digg_count": 1300,
+        "comment_count": 53,
+        "share_count": 308,
+        "collect_count": 968
+      }
+    },
+    {
+      "aweme_id": "7604039651657791862",
+      "desc": "当你不小心忘记了你的电脑密码，学会这几行命令 #编程 #网络安全 #计算机 #网络攻防 #电脑密码",
+      "caption": "当你不小心忘记了你的电脑密码，学会这几行命令 #编程 #网络安全 #计算机 #网络攻防 #电脑密码",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1770453447,
+      "duration": 53434,
+      "stats": {
+        "digg_count": 300,
+        "comment_count": 8,
+        "share_count": 24,
+        "collect_count": 166
+      }
+    },
+    {
+      "aweme_id": "7603350011754357946",
+      "desc": "黑客技术Python实现会员电影白嫖,轻松实现免费追剧#黑客 #免费追剧 #编程 #计算机 #python爬虫",
+      "caption": "黑客技术Python实现会员电影白嫖,轻松实现免费追剧#黑客 #免费追剧 #编程 #计算机 #python爬虫",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1770292878,
+      "duration": 42234,
+      "stats": {
+        "digg_count": 5271,
+        "comment_count": 485,
+        "share_count": 1243,
+        "collect_count": 6236
+      }
+    }
+  ]
+}

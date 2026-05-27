@@ -1,0 +1,23 @@
+{
+  "proposal_id": "prop_pipeline-data-whitelist_1779858156",
+  "gap_id": "pipeline-data-whitelist",
+  "gap_title": "数据采集层缺白名单校验",
+  "priority": "P1",
+  "source": "网页内容",
+  "source_title": "Content Filtering and Trust Tier Architecture for prompt injection defense",
+  "source_url": "https://github.com/MinglesAI/UpMoltWork/issues/105",
+  "relevance": 4,
+  "summary": "Dual-layer defense: input normalization (null byte/control char/path traversal removal) + output structural enrichment (trust tier + source agent metadata). Agent trust tier model Tier 0-3.",
+  "pattern": "data_whitelist",
+  "implied_changes": [
+    "stock_analysis/data_source_router.py"
+  ],
+  "implementation_hint": "在 data_source_router.py 的采集入口加白名单校验层：允许的字段列表 + 类型校验 + 范围校验。非法数据拒绝写入。",
+  "test_files": [
+    "stock_analysis/tests/test_data_quality_gate.py"
+  ],
+  "status": "proposed",
+  "created_at": "2026-05-27T13:02:36.115961",
+  "executed_at": null,
+  "execution_result": null
+}

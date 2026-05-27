@@ -1,0 +1,956 @@
+{
+  "timestamp": "2026-05-27T06:24:07.038974",
+  "total_courses": 10,
+  "results": {
+    "l_6a15546fe4b0694c5bca44b0": {
+      "title": "AI交易大师内部私享会0526",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/4576b6835145403728122795355/playlist_eof.m3u8?sign=dd314f8e8b138fa3349cb612df1e3371&t=6a16c5b8&us=mmCWPBPhOy"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/4576b6835145403728122795355/playlist_eof.m3u8?sign=17b85803f78af924bfb2857a1d175b61&t=6a16c5b8&us=UJQAApZYiv"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/4576b6835145403728122795355/playlist_eof.m3u8?sign=a07b51a7041646777083437f97d289eb&t=6a16c5b8&us=JblvUVTTpt"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/4576b6835145403728122795355/playlist_eof.m3u8?sign=dd314f8e8b138fa3349cb612df1e3371&t=6a16c5b8&us=mmCWPBPhOy",
+              "material_id": "m_IM4ImZ49vlZyP_mpmoa15r",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=dd314f8e8b138fa3349cb612df1e3371&t=6a16c5b8&us=mmCWPBPhOy",
+                "path": "522ff1e0vodcq1252524126/4576b6835145403728122795355",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/4576b6835145403728122795355/playlist_eof.m3u8?sign=17b85803f78af924bfb2857a1d175b61&t=6a16c5b8&us=UJQAApZYiv",
+              "material_id": "m_IM4ImZ49vlZyP_mpmoa15r",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=17b85803f78af924bfb2857a1d175b61&t=6a16c5b8&us=UJQAApZYiv",
+                "path": "522ff1e0vodcq1252524126/4576b6835145403728122795355",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/4576b6835145403728122795355/playlist_eof.m3u8?sign=a07b51a7041646777083437f97d289eb&t=6a16c5b8&us=JblvUVTTpt",
+              "material_id": "m_IM4ImZ49vlZyP_mpmoa15r",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=a07b51a7041646777083437f97d289eb&t=6a16c5b8&us=JblvUVTTpt",
+                "path": "522ff1e0vodcq1252524126/4576b6835145403728122795355",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a13f3dee4b0694c5bc9836f": {
+      "title": "AI交易大师内部私享会0525",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/37f704815145403727913185236/playlist_eof.m3u8?sign=191b60739fcb78c8e758c737a51d5a14&t=6a16c5c7&us=mYhCJLyHAZ"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/37f704815145403727913185236/playlist_eof.m3u8?sign=cb5c02ff88f1cbf08069d03b0b04bc13&t=6a16c5c7&us=vDGAKTiqnj"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/37f704815145403727913185236/playlist_eof.m3u8?sign=644134ff497b3af05ef8d44c5441ebcd&t=6a16c5c7&us=wGxVlzgZOf"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/37f704815145403727913185236/playlist_eof.m3u8?sign=191b60739fcb78c8e758c737a51d5a14&t=6a16c5c7&us=mYhCJLyHAZ",
+              "material_id": "m_bglfwFljuzTTz_mpl841i4",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=191b60739fcb78c8e758c737a51d5a14&t=6a16c5c7&us=mYhCJLyHAZ",
+                "path": "522ff1e0vodcq1252524126/37f704815145403727913185236",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/37f704815145403727913185236/playlist_eof.m3u8?sign=cb5c02ff88f1cbf08069d03b0b04bc13&t=6a16c5c7&us=vDGAKTiqnj",
+              "material_id": "m_bglfwFljuzTTz_mpl841i4",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=cb5c02ff88f1cbf08069d03b0b04bc13&t=6a16c5c7&us=vDGAKTiqnj",
+                "path": "522ff1e0vodcq1252524126/37f704815145403727913185236",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/37f704815145403727913185236/playlist_eof.m3u8?sign=644134ff497b3af05ef8d44c5441ebcd&t=6a16c5c7&us=wGxVlzgZOf",
+              "material_id": "m_bglfwFljuzTTz_mpl841i4",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=644134ff497b3af05ef8d44c5441ebcd&t=6a16c5c7&us=wGxVlzgZOf",
+                "path": "522ff1e0vodcq1252524126/37f704815145403727913185236",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a1335fbe4b0694c350e2ad7": {
+      "title": "AI交易大师内部私享会0525",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/a4f1e8b85145403727986870779/playlist_eof.m3u8?sign=9d41fba7692be92d1cd7cf4da5054dad&t=6a16c5d5&us=EYUdSYmnNx"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/a4f1e8b85145403727986870779/playlist_eof.m3u8?sign=00aba7a97dc7721e73b17c09da5c4d24&t=6a16c5d5&us=ClLpFUDmgR"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/a4f1e8b85145403727986870779/playlist_eof.m3u8?sign=e513ee45bcc0d03e0c48e9b513766151&t=6a16c5d5&us=HmjvZNyKZf"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/a4f1e8b85145403727986870779/playlist_eof.m3u8?sign=9d41fba7692be92d1cd7cf4da5054dad&t=6a16c5d5&us=EYUdSYmnNx",
+              "material_id": "m_lckQ6vBPCGKQf_mpk4gzqh",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=9d41fba7692be92d1cd7cf4da5054dad&t=6a16c5d5&us=EYUdSYmnNx",
+                "path": "522ff1e0vodcq1252524126/a4f1e8b85145403727986870779",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/a4f1e8b85145403727986870779/playlist_eof.m3u8?sign=00aba7a97dc7721e73b17c09da5c4d24&t=6a16c5d5&us=ClLpFUDmgR",
+              "material_id": "m_lckQ6vBPCGKQf_mpk4gzqh",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=00aba7a97dc7721e73b17c09da5c4d24&t=6a16c5d5&us=ClLpFUDmgR",
+                "path": "522ff1e0vodcq1252524126/a4f1e8b85145403727986870779",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/a4f1e8b85145403727986870779/playlist_eof.m3u8?sign=e513ee45bcc0d03e0c48e9b513766151&t=6a16c5d5&us=HmjvZNyKZf",
+              "material_id": "m_lckQ6vBPCGKQf_mpk4gzqh",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=e513ee45bcc0d03e0c48e9b513766151&t=6a16c5d5&us=HmjvZNyKZf",
+                "path": "522ff1e0vodcq1252524126/a4f1e8b85145403727986870779",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a0eb015e4b0694c350c7d09": {
+      "title": "AI交易大师内部私享会0521",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/e54c77705145403727606855689/playlist_eof.m3u8?sign=91bb280cdc54bdb5d51f7d6e5aabaebc&t=6a16c5e4&us=UCxCqUsahX"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/e54c77705145403727606855689/playlist_eof.m3u8?sign=8cb1dde59ffc3f83b75c07b14dd52176&t=6a16c5e4&us=RdbJTROzYW"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/e54c77705145403727606855689/playlist_eof.m3u8?sign=c9fb612e63ff744fc3d1bfdc27d97a43&t=6a16c5e4&us=SutwxBKfNp"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/e54c77705145403727606855689/playlist_eof.m3u8?sign=91bb280cdc54bdb5d51f7d6e5aabaebc&t=6a16c5e4&us=UCxCqUsahX",
+              "material_id": "m_URHitICgLQnBZ_mpfidpy6",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=91bb280cdc54bdb5d51f7d6e5aabaebc&t=6a16c5e4&us=UCxCqUsahX",
+                "path": "522ff1e0vodcq1252524126/e54c77705145403727606855689",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/e54c77705145403727606855689/playlist_eof.m3u8?sign=8cb1dde59ffc3f83b75c07b14dd52176&t=6a16c5e4&us=RdbJTROzYW",
+              "material_id": "m_URHitICgLQnBZ_mpfidpy6",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=8cb1dde59ffc3f83b75c07b14dd52176&t=6a16c5e4&us=RdbJTROzYW",
+                "path": "522ff1e0vodcq1252524126/e54c77705145403727606855689",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/e54c77705145403727606855689/playlist_eof.m3u8?sign=c9fb612e63ff744fc3d1bfdc27d97a43&t=6a16c5e4&us=SutwxBKfNp",
+              "material_id": "m_URHitICgLQnBZ_mpfidpy6",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=c9fb612e63ff744fc3d1bfdc27d97a43&t=6a16c5e4&us=SutwxBKfNp",
+                "path": "522ff1e0vodcq1252524126/e54c77705145403727606855689",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a0d611ee4b0694c350be867": {
+      "title": "AI交易大师内部私享会0520",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/c4455f815145403727504067079/playlist_eof.m3u8?sign=d7cf86e65ec760701cf4d45b6dec0d93&t=6a16c5f2&us=IHvFpAqDzE"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/c4455f815145403727504067079/playlist_eof.m3u8?sign=819a5f91bdbb5661b0d6028a5db072a2&t=6a16c5f2&us=qaQKCCsoKX"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/c4455f815145403727504067079/playlist_eof.m3u8?sign=379637cfa93264cb66332132bcbd46a5&t=6a16c5f2&us=jLvKlYFxoM"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/c4455f815145403727504067079/playlist_eof.m3u8?sign=d7cf86e65ec760701cf4d45b6dec0d93&t=6a16c5f2&us=IHvFpAqDzE",
+              "material_id": "m_bTSEUTGPmMsn0_mpe3c91i",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=d7cf86e65ec760701cf4d45b6dec0d93&t=6a16c5f2&us=IHvFpAqDzE",
+                "path": "522ff1e0vodcq1252524126/c4455f815145403727504067079",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/c4455f815145403727504067079/playlist_eof.m3u8?sign=819a5f91bdbb5661b0d6028a5db072a2&t=6a16c5f2&us=qaQKCCsoKX",
+              "material_id": "m_bTSEUTGPmMsn0_mpe3c91i",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=819a5f91bdbb5661b0d6028a5db072a2&t=6a16c5f2&us=qaQKCCsoKX",
+                "path": "522ff1e0vodcq1252524126/c4455f815145403727504067079",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/c4455f815145403727504067079/playlist_eof.m3u8?sign=379637cfa93264cb66332132bcbd46a5&t=6a16c5f2&us=jLvKlYFxoM",
+              "material_id": "m_bTSEUTGPmMsn0_mpe3c91i",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=379637cfa93264cb66332132bcbd46a5&t=6a16c5f2&us=jLvKlYFxoM",
+                "path": "522ff1e0vodcq1252524126/c4455f815145403727504067079",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a0c094ee4b0694c5bc5cb39": {
+      "title": "AI交易大师内部私享会0519",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/372d4e895145403727394603948/playlist_eof.m3u8?sign=5078509d64f93203488a31beed34e585&t=6a16c601&us=ITCqVVUfSN"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/372d4e895145403727394603948/playlist_eof.m3u8?sign=ae8e7d0cb66c797b792792ac958d7a80&t=6a16c601&us=tNvdmnGYev"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/372d4e895145403727394603948/playlist_eof.m3u8?sign=b58a15c133aa7d566681064c94a9b006&t=6a16c601&us=ycydjxFOgw"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/372d4e895145403727394603948/playlist_eof.m3u8?sign=5078509d64f93203488a31beed34e585&t=6a16c601&us=ITCqVVUfSN",
+              "material_id": "m_kwTR1QkMHbYi7_mpcmwzn1",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=5078509d64f93203488a31beed34e585&t=6a16c601&us=ITCqVVUfSN",
+                "path": "522ff1e0vodcq1252524126/372d4e895145403727394603948",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/372d4e895145403727394603948/playlist_eof.m3u8?sign=ae8e7d0cb66c797b792792ac958d7a80&t=6a16c601&us=tNvdmnGYev",
+              "material_id": "m_kwTR1QkMHbYi7_mpcmwzn1",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=ae8e7d0cb66c797b792792ac958d7a80&t=6a16c601&us=tNvdmnGYev",
+                "path": "522ff1e0vodcq1252524126/372d4e895145403727394603948",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/372d4e895145403727394603948/playlist_eof.m3u8?sign=b58a15c133aa7d566681064c94a9b006&t=6a16c601&us=ycydjxFOgw",
+              "material_id": "m_kwTR1QkMHbYi7_mpcmwzn1",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=b58a15c133aa7d566681064c94a9b006&t=6a16c601&us=ycydjxFOgw",
+                "path": "522ff1e0vodcq1252524126/372d4e895145403727394603948",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a0aa90de4b0694c5bc4fe80": {
+      "title": "AI交易大师内部私享会0518",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/eb0cd3495145403727281434888/playlist_eof.m3u8?sign=2f362850bc2f19414bffcbcce2cd5182&t=6a16c60f&us=OTAYcgmVpB"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/eb0cd3495145403727281434888/playlist_eof.m3u8?sign=d920d0896521a96392055b6629241042&t=6a16c60f&us=XNHvSkjicG"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/eb0cd3495145403727281434888/playlist_eof.m3u8?sign=3e87f8c3ba98bd5e1d156c4632c5bb2e&t=6a16c60f&us=TbzLadfJTu"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/eb0cd3495145403727281434888/playlist_eof.m3u8?sign=2f362850bc2f19414bffcbcce2cd5182&t=6a16c60f&us=OTAYcgmVpB",
+              "material_id": "m_GKn0AMtj4xwn1_mpb7ma9s",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=2f362850bc2f19414bffcbcce2cd5182&t=6a16c60f&us=OTAYcgmVpB",
+                "path": "522ff1e0vodcq1252524126/eb0cd3495145403727281434888",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/eb0cd3495145403727281434888/playlist_eof.m3u8?sign=d920d0896521a96392055b6629241042&t=6a16c60f&us=XNHvSkjicG",
+              "material_id": "m_GKn0AMtj4xwn1_mpb7ma9s",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=d920d0896521a96392055b6629241042&t=6a16c60f&us=XNHvSkjicG",
+                "path": "522ff1e0vodcq1252524126/eb0cd3495145403727281434888",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/eb0cd3495145403727281434888/playlist_eof.m3u8?sign=3e87f8c3ba98bd5e1d156c4632c5bb2e&t=6a16c60f&us=TbzLadfJTu",
+              "material_id": "m_GKn0AMtj4xwn1_mpb7ma9s",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=3e87f8c3ba98bd5e1d156c4632c5bb2e&t=6a16c60f&us=TbzLadfJTu",
+                "path": "522ff1e0vodcq1252524126/eb0cd3495145403727281434888",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a096279e4b0694c5bc481ef": {
+      "title": "AI交易大师内部私享会0517",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/2e4b98805145403727061642882/playlist_eof.m3u8?sign=734fde0ab2202cf0d6a9b47f1e98e6ed&t=6a16c61e&us=xUXjhFhsgR"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/2e4b98805145403727061642882/playlist_eof.m3u8?sign=99d4f0a527b988f47fcb3e2079abe8a6&t=6a16c61e&us=oKTWIKZynG"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/2e4b98805145403727061642882/playlist_eof.m3u8?sign=f254c15ab2f32469aa7d4feb12f046be&t=6a16c61e&us=VqQPjIAsJO"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/2e4b98805145403727061642882/playlist_eof.m3u8?sign=734fde0ab2202cf0d6a9b47f1e98e6ed&t=6a16c61e&us=xUXjhFhsgR",
+              "material_id": "m_dL5HbGsBXet16_mp9rxd6e",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=734fde0ab2202cf0d6a9b47f1e98e6ed&t=6a16c61e&us=xUXjhFhsgR",
+                "path": "522ff1e0vodcq1252524126/2e4b98805145403727061642882",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/2e4b98805145403727061642882/playlist_eof.m3u8?sign=99d4f0a527b988f47fcb3e2079abe8a6&t=6a16c61e&us=oKTWIKZynG",
+              "material_id": "m_dL5HbGsBXet16_mp9rxd6e",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=99d4f0a527b988f47fcb3e2079abe8a6&t=6a16c61e&us=oKTWIKZynG",
+                "path": "522ff1e0vodcq1252524126/2e4b98805145403727061642882",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/2e4b98805145403727061642882/playlist_eof.m3u8?sign=f254c15ab2f32469aa7d4feb12f046be&t=6a16c61e&us=VqQPjIAsJO",
+              "material_id": "m_dL5HbGsBXet16_mp9rxd6e",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=f254c15ab2f32469aa7d4feb12f046be&t=6a16c61e&us=VqQPjIAsJO",
+                "path": "522ff1e0vodcq1252524126/2e4b98805145403727061642882",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a05598ae4b0694c5bc2c203": {
+      "title": "AI交易大师内部私享会0514",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/c454bfe65145403726776524067/playlist_eof.m3u8?sign=61db64b2df929b951aca2e065933e19d&t=6a16c62c&us=AmUrydIRlO"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/c454bfe65145403726776524067/playlist_eof.m3u8?sign=58e0e2e3931db331ffef09e62eb3a607&t=6a16c62c&us=QIEnXJSuAh"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/c454bfe65145403726776524067/playlist_eof.m3u8?sign=465ec553672a4d74e2b37de3fc030df9&t=6a16c62c&us=MmYWkdDJjZ"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://encrypt-k-vod.xet.tech/522ff1e0vodcq1252524126/c454bfe65145403726776524067/playlist_eof.m3u8?sign=61db64b2df929b951aca2e065933e19d&t=6a16c62c&us=AmUrydIRlO",
+              "material_id": "m_Tm0XqbR1VkVyD_mp5hsl03",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://encrypt-k-vod.xet.tech",
+                "param": "sign=61db64b2df929b951aca2e065933e19d&t=6a16c62c&us=AmUrydIRlO",
+                "path": "522ff1e0vodcq1252524126/c454bfe65145403726776524067",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://c-vod.hw-cdn.xiaoeknow.com/522ff1e0vodcq1252524126/c454bfe65145403726776524067/playlist_eof.m3u8?sign=58e0e2e3931db331ffef09e62eb3a607&t=6a16c62c&us=QIEnXJSuAh",
+              "material_id": "m_Tm0XqbR1VkVyD_mp5hsl03",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://c-vod.hw-cdn.xiaoeknow.com",
+                "param": "sign=58e0e2e3931db331ffef09e62eb3a607&t=6a16c62c&us=QIEnXJSuAh",
+                "path": "522ff1e0vodcq1252524126/c454bfe65145403726776524067",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://btt-vod.xiaoeknow.com/522ff1e0vodcq1252524126/c454bfe65145403726776524067/playlist_eof.m3u8?sign=465ec553672a4d74e2b37de3fc030df9&t=6a16c62c&us=MmYWkdDJjZ",
+              "material_id": "m_Tm0XqbR1VkVyD_mp5hsl03",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://btt-vod.xiaoeknow.com",
+                "param": "sign=465ec553672a4d74e2b37de3fc030df9&t=6a16c62c&us=MmYWkdDJjZ",
+                "path": "522ff1e0vodcq1252524126/c454bfe65145403726776524067",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "l_6a04382fe4b0694c35081ccb": {
+      "title": "AI交易大师内部私享会0513",
+      "auth_userId": "u_697ce3a089a26_xFvjgffRYU",
+      "video_entries": [
+        {
+          "line": "线路1",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://ttv-tos.xet.tech/522ff1e0vodcq1252524126/fe6018525145403726641001633/playlist_eof.m3u8?sign=9a1b35248f3a6d9cfc91fde1cd350711&t=6a16c63a&us=OMFOXENVWJ"
+        },
+        {
+          "line": "线路2",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://htv-tos.xet.tech/522ff1e0vodcq1252524126/fe6018525145403726641001633/playlist_eof.m3u8?sign=757de7ea521f979b78d5f7f8db2d8fe1&t=6a16c63a&us=TrQBTMYeyN"
+        },
+        {
+          "line": "线路3",
+          "name": "原画",
+          "resolution": "origin",
+          "url": "https://v-tos-k.xiaoeknow.com/522ff1e0vodcq1252524126/fe6018525145403726641001633/playlist_eof.m3u8?sign=c4d2a46dda08f6f24107b82746d152da&t=6a16c63a&us=gFwCFVLntL"
+        }
+      ],
+      "raw_video_data": [
+        {
+          "line_name": "线路1",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://ttv-tos.xet.tech/522ff1e0vodcq1252524126/fe6018525145403726641001633/playlist_eof.m3u8?sign=9a1b35248f3a6d9cfc91fde1cd350711&t=6a16c63a&us=OMFOXENVWJ",
+              "material_id": "m_fBlAlpjBflGg9_mp42r2v5",
+              "default": true,
+              "cloud": "tx",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://ttv-tos.xet.tech",
+                "param": "sign=9a1b35248f3a6d9cfc91fde1cd350711&t=6a16c63a&us=OMFOXENVWJ",
+                "path": "522ff1e0vodcq1252524126/fe6018525145403726641001633",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路2",
+          "default": false,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://htv-tos.xet.tech/522ff1e0vodcq1252524126/fe6018525145403726641001633/playlist_eof.m3u8?sign=757de7ea521f979b78d5f7f8db2d8fe1&t=6a16c63a&us=TrQBTMYeyN",
+              "material_id": "m_fBlAlpjBflGg9_mp42r2v5",
+              "default": true,
+              "cloud": "hw",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://htv-tos.xet.tech",
+                "param": "sign=757de7ea521f979b78d5f7f8db2d8fe1&t=6a16c63a&us=TrQBTMYeyN",
+                "path": "522ff1e0vodcq1252524126/fe6018525145403726641001633",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        },
+        {
+          "line_name": "线路3",
+          "default": true,
+          "line_sharpness": [
+            {
+              "name": "原画",
+              "resolution": "origin",
+              "url": "https://v-tos-k.xiaoeknow.com/522ff1e0vodcq1252524126/fe6018525145403726641001633/playlist_eof.m3u8?sign=c4d2a46dda08f6f24107b82746d152da&t=6a16c63a&us=gFwCFVLntL",
+              "material_id": "m_fBlAlpjBflGg9_mp42r2v5",
+              "default": true,
+              "cloud": "byte",
+              "type": "lookBack",
+              "is_support": false,
+              "is_pri_support": false,
+              "ext": {
+                "host": "https://v-tos-k.xiaoeknow.com",
+                "param": "sign=c4d2a46dda08f6f24107b82746d152da&t=6a16c63a&us=gFwCFVLntL",
+                "path": "522ff1e0vodcq1252524126/fe6018525145403726641001633",
+                "app_id": "appzsnu8fxf7905"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

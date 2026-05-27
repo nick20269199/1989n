@@ -1,0 +1,19 @@
+{
+  "proposal_id": "prop_tool-claude-code-skills-distillation_1779820692",
+  "gap_id": "tool-claude-code-skills-distillation",
+  "gap_title": "Claude Code Skills 蒸馏机制",
+  "priority": "P2",
+  "source": "外部来源",
+  "source_title": "合成报告: 三、阿森编程日记 — Claude Code 实操",
+  "source_url": "",
+  "relevance": 4,
+  "summary": "三、阿森编程日记 — Claude Code 实操  ### 1. 核心 Skill 清单 (49条章节) | Skill | 用途 | |-------|------| | prompt-optimizer | 优化提示词 | | explore | 梳理项目结构 | | code-review | 审查代码 | | debugger | 调试问题 | | Superpowers | 先方案→再施工→后验收流程 | | OhMyClaudeCode | 多Agent并行+专业分工+智能路由 |  ### 2. Claude Code 5 个翻车点 1. 不写 CLAUDE.md → ✅ 已有",
+  "pattern": "skills_distill",
+  "implied_changes": [],
+  "implementation_hint": "分析成功交互模式 → 提取可复用 pattern → 自动生成 Claude Code skill 文档。验证：给定测试任务，检查 skill 加载后准确率是否提升。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T02:38:12.795670",
+  "executed_at": null,
+  "execution_result": null
+}

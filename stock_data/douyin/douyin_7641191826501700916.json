@@ -1,0 +1,28 @@
+{
+  "url": "https://www.douyin.com/video/7641191826501700916",
+  "video_id": "7641191826501700916",
+  "success": true,
+  "title": "rm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜底，看完你也能搭建企业级安全防护，告别代码裸奔，做放心交付的 AI 全栈开发者！#AI #agent #全栈开发者 #程序员 #大模型安全 - 抖音",
+  "description": "rm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜底，看完你也能搭建企业级安全防护，告别代码裸奔，做放心交付的 AI 全栈开发者！#AI #agent #全栈开发者 #程序员 #大模型安全",
+  "author": "九天Hector",
+  "author_id": "63043185654",
+  "sec_uid": "MS4wLjABAAAAWEUIAEwAyU82OSjxhmWzZvvgJfiHNupEvbwwC7Dix6TxJjWwjp3FZ-ZDtGKDZYJ4",
+  "stats": {
+    "digg_count": 48,
+    "comment_count": 1,
+    "share_count": 1,
+    "collect_count": 29
+  },
+  "stats_display": {},
+  "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:05 / 12:48\n第1章：引言\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n章节要点\nCloudCode的五层安全防御包括字符串拦截、正则过滤、白名单放行、独立AI审查和人工兜底。这些措施旨在保护大模型免受恶意指令、后门漏洞等攻击。此外，CloudCode还提供企业定制版本、沙河环境和断路器机制，以及广泛应用双AI对抗策略来提升安全性和效果。\n00:00\n引言\n00:23\n安全架构\n\nCloudCode安全架构包括字符串拦截、正则过滤、白名单放行、独立AI审查、人工兜底五层。\n\n03:02\n审查流程\n\n审查流程包括规则、风险、白名单、大模型分类，逐层筛选。\n\n05:14\n核心防御\n\n核心防御是防御CMD和bash命令行攻击，通过五层对抗搭建安全防护网络。\n\n06:09\n定制化开发\n\n提供企业定制版本，允许企业设置防御措施，有五层权限设计。\n\n07:06\n沙河环境\n\n提供沙河环境，提供隔离的独立虚拟环境，有默认安全检查。\n\n07:38\n断路器机制\n\n断路器机制用于识别真实用户和蒸馏过程，防止生成有毒训练数据。\n\n10:36\n双AI对抗\n\n双AI对抗策略贯穿CloudCode各方面，提升作品质量。\n\n内容由AI生成\nrm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜底，看完你也能搭建企业级安全防护，告别代码裸奔，做放心交付的 AI 全栈开发者！#AI #agent #全栈开发者 #程序员 #大模型安全\n48\n1\n29\n1\n举报\n发布时间：2026-05-18 19:26\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nclaudecode手册\n九天Hector\n作者\n...\n资料进主页领取啊\n1天前·北京\n\n0\n\n分享\n回复\n暂时没有更多评论\n九天Hector\n\n粉丝2.3万获赞7.6万\n\n关注\n推荐视频\n00:38\nGitHub热榜第一的开源项目！最全的AI应用合集！ #github #AI #开源项目\n692\n数字生命雷恩加尔\n01:41\n超详细codex接入deepseek #codex #deepseek #codex教程 #codex模型 #大模型\n7650\n萌萌本萌\n00:29\n一个网站检测你的电脑跑得动哪些AI大模型 #AI #AI大模型 #实用网站\n4138\n阿坤AIGC\n10:50\nClaude Code安装教程（完整版） 保姆级Claude Code安装+配置国内模型教程。全程讲，另外下期预告Vibe Coding教程。#ClaudeCode #Openclaw #AI #人工智能 #VibeCoding\n1562\nTony老师\n00:41\n龙虾AI编程军团！50K Star开源神器，敲三个字母，5个Agent同时编程 #开源工具 #程序员 #vibe coding #OpenClaw #一人公司\n463\nIT小圈\n00:41\nCLI-Anything：一个命令让任意软件变成 AI Agent 可操控的工具#命令#OpenClaw#OpenClaw教程#真实生活分享计划#Agent\n1345\nAI指挥官Felix\n00:15\n被DDOS攻击网站APP，大家都会做什么策略去拦截？ 被DDOS攻击网站APP，大家都会做什么策略去拦截？#ddos攻击 #黑客 #网站 #服务器 #程序员\n8445\n捷克\n04:29\n武装claude code和codex的开源项目 #ai编程 #大",
+  "error": "",
+  "assessment": {
+    "tier": "MEDIUM",
+    "score": 1,
+    "matched_keywords": [
+      "agent"
+    ]
+  },
+  "creator_label": "九天Hector",
+  "scanned_at": "2026-05-27"
+}

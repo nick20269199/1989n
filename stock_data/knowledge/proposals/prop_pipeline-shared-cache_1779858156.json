@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_pipeline-shared-cache_1779858156",
+  "gap_id": "pipeline-shared-cache",
+  "gap_title": "Expert 间无共享缓存 — 同一数据被重复拉取",
+  "priority": "P1",
+  "source": "网页内容",
+  "source_title": "Cheetah.ai: Shared context bridge - workflow DAG pre-warms KV cache",
+  "source_url": "https://devpost.com/software/cheetah-ai",
+  "relevance": 4,
+  "summary": "Control plane reads workflow DAG, pre-warms next agent KV cache before current agent finishes. Restructures prompts to [SYS]+[DOC]+[TASK] for prefix cache hits. Subsequent agents TTFT < 0.5s.",
+  "pattern": "shared_cache",
+  "implied_changes": [
+    "stock_analysis/experts/lead.py",
+    "stock_analysis/data_source_router.py"
+  ],
+  "implementation_hint": "在 lead.py 中引入 SharedDataCache 类，expert 拉取数据前先查 cache。cache key = f\"{data_type}_{stock_code}\"，TTL 按数据类型配置。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T13:02:36.102688",
+  "executed_at": null,
+  "execution_result": null
+}

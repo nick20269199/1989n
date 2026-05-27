@@ -497,7 +497,80 @@ def build_market_prompt(
 
 
 # ═══════════════════════════════════════════════════════════════
-# 3. MAIN
+# 3. HELPERS
+# ═══════════════════════════════════════════════════════════════
+
+def _extract_judgment(md_text: str) -> dict:
+    """从生成的 Markdown 晨报中提取结构化判断字段。
+
+    Returns:
+        {"opinion": 今日判断, "core_judgment": 核心判断,
+         "key_focus": 关注方向, "risk_watch": 风险提示,
+         "full_md": 原始全文}
+    """
+    lines = md_text.split("\n")
+    opinion = ""
+    core = ""
+    focus = ""
+    risk = ""
+
+    current_section = ""
+    for line in lines:
+        stripped = line.strip()
+
+        # 识别段落标题
+        if stripped.startswith("## 二、大盘状态"):
+            current_section = "opinion"
+            continue
+        elif stripped.startswith("## 七、今日策略") or stripped.startswith("### 关注方向"):
+            current_section = "focus"
+            continue
+        elif stripped.startswith("### 风险提示"):
+            current_section = "risk"
+            continue
+        elif stripped.startswith("## ") and not stripped.startswith("###"):
+            # 其他 ## 段落，退出当前收集
+            if current_section in ("focus", "risk"):
+                current_section = ""
+            continue
+        elif stripped.startswith("---"):
+            break
+
+        if current_section == "opinion":
+            # 跳过表头表尾行
+            if stripped.startswith("|") or stripped.startswith("**今日判断"):
+                if "**今日判断**" in stripped:
+                    opinion = stripped.split("**今日判断**")[-1].strip().lstrip("：").strip().rstrip("。")
+                continue
+            if "今日判断" in stripped and "：" in stripped:
+                opinion = stripped.split("：")[-1].strip().rstrip("。")
+            elif "判断" in stripped and "：" in stripped:
+                core = stripped.split("：")[-1].strip().rstrip("。")
+        elif current_section == "focus":
+            if stripped.startswith("1.") or stripped.startswith("2.") or stripped.startswith("3."):
+                focus += ("; " if focus else "") + stripped.lstrip("123. ").strip()
+        elif current_section == "risk":
+            if stripped.startswith("1.") or stripped.startswith("2.") or stripped.startswith("3."):
+                risk += ("; " if risk else "") + stripped.lstrip("123. ").strip()
+
+    # 如果从大盘状态没提取到，从第一段导读中找
+    if not opinion and not core:
+        for line in lines:
+            if "判断" in line and "：" in line:
+                core = line.split("：")[-1].strip().rstrip("。")
+                break
+
+    return {
+        "opinion": opinion or "中性",
+        "core_judgment": core or "（未提取到核心判断）",
+        "key_focus": focus or "（未提取到关注方向）",
+        "risk_watch": risk or "（未提取到风险提示）",
+        "full_md": md_text,
+    }
+
+
+# ═══════════════════════════════════════════════════════════════
+# 4. MAIN
 # ═══════════════════════════════════════════════════════════════
 
 def main():
@@ -668,6 +741,8 @@ def main():
         return
 
     # ── 产出 ──
+    # 从 result 中提取结构化判断
+    judgment = _extract_judgment(result)
     json.dump({
         "date": datetime.now(CST).strftime("%Y-%m-%d"),
         "time": datetime.now(CST).strftime("%H:%M:%S"),
@@ -677,6 +752,7 @@ def main():
             "auction": bool(auction), "market_state": bool(market_state),
         },
         "agent_version": "v2",
+        "judgment": judgment,
     }, OUTPUT_JSON.open("w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
     OUTPUT_MD.write_text(result, encoding="utf-8")

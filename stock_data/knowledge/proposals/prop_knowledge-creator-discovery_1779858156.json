@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_knowledge-creator-discovery_1779858156",
+  "gap_id": "knowledge-creator-discovery",
+  "gap_title": "无主动知识发现机制 — 等人给链接而非自己搜",
+  "priority": "P1",
+  "source": "网页内容",
+  "source_title": "Caesar Framework: Graph-based discovery - beyond retrieval to open exploration",
+  "source_url": "https://www.cognizant.com/us/en/ai-lab/blog/caesar-framework-ai-discovery-idea-generation",
+  "relevance": 4,
+  "summary": "Two-phase design: deep graph web exploration + adversarial refinement. Builds dynamic knowledge graph linking concepts/sources/insights. Outperforms SOTA on novelty/usefulness/surprising connections.",
+  "pattern": "creator_discovery",
+  "implied_changes": [
+    "stock_analysis/douyin_monitor.py",
+    "stock_analysis/knowledge_prospector.py"
+  ],
+  "implementation_hint": "将 douyin_monitor.py 的扫描来源从固定 JSON 改为：读取 gap_registry 的 search_queries → 抖音搜索 → 发现新博主 → 自动加入监控列表。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T13:02:36.131247",
+  "executed_at": null,
+  "execution_result": null
+}

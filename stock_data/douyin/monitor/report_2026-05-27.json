@@ -1,0 +1,256 @@
+[
+  {
+    "url": "https://www.douyin.com/video/7643543191760768291",
+    "video_id": "7643543191760768291",
+    "success": true,
+    "title": "新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门 - 抖音",
+    "description": "新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门",
+    "author": "阿森编程日记（AI自动化）",
+    "author_id": "82146917383",
+    "sec_uid": "MS4wLjABAAAA5fbcBF9dVIPs-zhXQjG3UHRRA-TWeeSDBwsY8j3wQTDnO665ROFlAptIBoqEW9Dz",
+    "stats": {
+      "digg_count": 615,
+      "comment_count": 9,
+      "share_count": 61,
+      "collect_count": 597
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\ncodex\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:05 / 01:20\n章节要点：共4个\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n作者声明：内容由 AI 生成\n章节要点\n新手使用Claude Code时容易遇到的5个翻车点，包括开新对话时Claude Code的猜测不准确、模式选择不当、盲目使用Auto或YOLO模式、长对话不/compact等。为避免这些问题，建议新手先跑/init生成专属记忆档案，明确Plan、Edit、Ask模式的使用，手动确认每一步，以及定期/compact长对话。\n00:05\n开新对话\n\nClaude Code每次开新对话都从零猜项目，导致风格不一致、调用错文件，建议新手跑/init生成专属记忆档案。\n\n00:21\n模式选择\n\n分不清Plan、Edit、Ask三大模式，建议复杂任务先Plan再Edit。\n\n00:33\nAuto或YOLO模式\n\n盲目开Auto或YOLO模式，建议新手手动确认每一步。\n\n00:45\n长对话\n\n长对话不/compact，导致Token消耗快。\n\n新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门\n615\n9\n597\n61\n举报\n发布时间：2026-05-25 07:00\n全部评论\n留下你的精彩评论吧\n大家都在搜：\ncodex接入deepseek\n亮\n...\n新手就不应该用claude code\n1天前·湖南\n\n0\n\n分享\n回复\n是多梦呀\n...\n笑死了，回滚都难，你是程序员吗？\n1天前·河南\n\n1\n\n分享\n回复\n抓辅助系的打野\n...\n低价token可以了解一下\n8小时前·山东\n\n0\n\n分享\n回复\n阿森编程日记（AI自动化）\n作者\n...\n来\n3小时前·福建\n\n0\n\n分享\n回复\nғᴏʀᴇᴠᴇʀ\n...\nclaude code和codex同时接入dpskv4 实测codex比claude code好用\n1天前·安徽\n\n1\n\n分享\n回复\n展开3条回复\n暂时没有更多评论\n阿森编程日记（AI自动化）\n\n粉丝2.2万获赞20.6万\n\n已关注\n推荐视频\n03:50\n三分钟搞定Claude Code & DeepSeek V4 小白从零到一配置 Claude Code，并在配置好 DeepSeek V4 Pro 模型\n\n这期把完整流程跑了一遍：先准备运行环境，再完成 Claude Code 配置，然后检查本地测试，最后验证当前模型是否已经生效。\n新手最容易卡住的地方，通常不是工具本身，而是环境没装好、配置层级写错、账号权限没确认，或者凭证没有安全保存。\n如果你也刚开始学 Vibe Coding，想把 AI 编程工具真正用到项目里，可以先从这种完整流程开始练。\n#claudecode #deepseek #vibecoding #ai#怀钦汽水星愿卡\n3063\nFredTalk\n00:55\n今天 GitHub 涨星最猛的 6 个项目，AI 相关的占了一半！\n一个 Rust 写的个人 AI 大脑，一天涨近四千星\n还有用 WiFi 信号做空间感知的，完全不用摄像头\n离线语音合成、反检测浏览器、开源情报平台\n每个都值得关注，感兴趣的可以看看\n#GitHub #开源 #AI #程序员 #科技\n2716\nGitHub星探\n00:54\nClaude Code",
+    "error": "",
+    "assessment": {
+      "tier": "HIGH",
+      "score": 3,
+      "matched_keywords": [
+        "claude",
+        "编程",
+        "工具"
+      ]
+    },
+    "creator_label": "阿森编程日记（AI自动化）",
+    "scanned_at": "2026-05-27"
+  },
+  {
+    "url": "https://www.douyin.com/video/7643521604521618853",
+    "video_id": "7643521604521618853",
+    "success": true,
+    "title": "Claude Code 两个插件，青铜直接变王者 Claude Code 不只是会写代码——Superpowers 帮你跑顺标准流程，Oh My ClaudeCode 把活拆给一整支 AI 小队。再配上一键检测环境的 AI 集合工具箱，新手也能直接起飞。#claudecode #AI工具 #AI编程 #编程入门 #真实分享计划 - 抖音",
+    "description": "Claude Code 两个插件，青铜直接变王者 Claude Code 不只是会写代码——Superpowers 帮你跑顺标准流程，Oh My ClaudeCode 把活拆给一整支 AI 小队。再配上一键检测环境的 AI 集合工具箱，新手也能直接起飞。#claudecode #AI工具 #AI编程 #编程入门 #真实分享计划",
+    "author": "阿森编程日记（AI自动化）",
+    "author_id": "82146917383",
+    "sec_uid": "MS4wLjABAAAA5fbcBF9dVIPs-zhXQjG3UHRRA-TWeeSDBwsY8j3wQTDnO665ROFlAptIBoqEW9Dz",
+    "stats": {
+      "digg_count": 267,
+      "comment_count": 1,
+      "share_count": 19,
+      "collect_count": 251
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\noh my claudecode\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:04 / 01:30\n第1章：引言\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n作者声明：内容由 AI 生成\n章节要点\nClaude Code的两个插件Superpowers和Oh My Claude Code，分别帮助新手和有经验的开发者更高效地使用Claude Code。Superpowers提供标准流程，适合新手；Oh My Claude Code则像团队协作，适合复杂项目。此外，AI集合工具箱可一键检测环境，简化配置过程。\n00:00\n引言\n00:12\nSuperpowers\n\nSuperpowers是一套标准流程，适合新手，容易上手且能看见效果。\n\n00:28\nOh My Claude...\n\nOh My Claude Code像一支小队，适合任务多、项目复杂的情况。\n\n00:44\nAI集合工具箱\n\nAI集合工具箱能一键检测环境，自动补依赖，支持多种模型。\n\n01:07\n选择方法\n\n新手先学Superpowers，项目变大后再学Oh My Claude Code。\n\n01:25\n结语\nClaude Code 两个插件，青铜直接变王者 Claude Code 不只是会写代码——Superpowers 帮你跑顺标准流程，Oh My ClaudeCode 把活拆给一整支 AI 小队。再配上一键检测环境的 AI 集合工具箱，新手也能直接起飞。#claudecode #AI工具 #AI编程 #编程入门 #真实分享计划\n267\n1\n251\n19\n举报\n发布时间：2026-05-25 02:07\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nclaude code 的 superpower\n暂无评论\n阿森编程日记（AI自动化）\n\n粉丝2.2万获赞20.6万\n\n已关注\n推荐视频\n03:50\n三分钟搞定Claude Code & DeepSeek V4 小白从零到一配置 Claude Code，并在配置好 DeepSeek V4 Pro 模型\n\n这期把完整流程跑了一遍：先准备运行环境，再完成 Claude Code 配置，然后检查本地测试，最后验证当前模型是否已经生效。\n新手最容易卡住的地方，通常不是工具本身，而是环境没装好、配置层级写错、账号权限没确认，或者凭证没有安全保存。\n如果你也刚开始学 Vibe Coding，想把 AI 编程工具真正用到项目里，可以先从这种完整流程开始练。\n#claudecode #deepseek #vibecoding #ai#怀钦汽水星愿卡\n3063\nFredTalk\n23:33\n带你一周学会python，存下吧，最新版，错过就找不到了#python #计算机 #爬虫 #编程 #程序员\n270\n懂Python的董学长\n31:06\nClaude Code六重境界 掌握Claude Code或许困难重重，尤其当你没有路线图时。在本期视频中，我将为你绘制这份进阶蓝图，逐一剖析Claude Code的六大成长阶段。我会指明每个阶段必须精通的技能，以及需要避开的陷阱，助你在Claude Code的学习之路上畅通无阻。\n#claude #claudecode #ai编程 #ai #编程\n7802\n大曼哒\n00:41\n龙虾AI编程军团！50K Star开源神器，敲三个字母，5个Agent同时编程 #开源工具 #程序员 #vibe coding #OpenClaw #一人公司\n463\nIT小圈\n05:00\n以后不用再剪视频了？Claude自动剪辑工作流 #",
+    "error": "",
+    "assessment": {
+      "tier": "HIGH",
+      "score": 3,
+      "matched_keywords": [
+        "claude",
+        "编程",
+        "工具"
+      ]
+    },
+    "creator_label": "阿森编程日记（AI自动化）",
+    "scanned_at": "2026-05-27"
+  },
+  {
+    "url": "https://www.douyin.com/video/7643090529806208292",
+    "video_id": "7643090529806208292",
+    "success": true,
+    "title": "从提示词到上线ClaudeCode新手必学的8个skill 真正高效的用法，不是把 Claude Code 当成一个写代码工具，而是把它当成一整套 AI 开发团队来调度，这期我给你一条新手最稳的 Skill 工作流，从想法开始，一直走到测试和上线。#claudecode #工作流 #skill #AI工具 #AI编程 - 抖音",
+    "description": "从提示词到上线ClaudeCode新手必学的8个skill 真正高效的用法，不是把 Claude Code 当成一个写代码工具，而是把它当成一整套 AI 开发团队来调度，这期我给你一条新手最稳的 Skill 工作流，从想法开始，一直走到测试和上线。#claudecode #工作流 #skill #AI工具 #AI编程",
+    "author": "阿森编程日记（AI自动化）",
+    "author_id": "82146917383",
+    "sec_uid": "MS4wLjABAAAA5fbcBF9dVIPs-zhXQjG3UHRRA-TWeeSDBwsY8j3wQTDnO665ROFlAptIBoqEW9Dz",
+    "stats": {
+      "digg_count": 387,
+      "comment_count": 8,
+      "share_count": 59,
+      "collect_count": 448
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\n如何使用skill\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:05 / 01:33\n第1章：引言\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n作者声明：内容由 AI 生成\n章节要点\n高效使用Claude Code的方法包括：使用prompt-optimizer整理需求，使用deep-interview追问场景，使用plan或ralplan拆分路线，分工协作，使用debuqger定位根因。遵循这些步骤可提高AI开发团队的效率，避免需求模糊和改动失控。\n00:00\n引言\n00:15\n把需求说清\n\n使用prompt-optimizer将模糊想法整理成清晰任务。\n\n00:23\n追问场景\n\n使用deep-interview追问场景，明确不要做什么。\n\n00:30\n拆分路线\n\n使用plan或ralplan拆分路线，评估风险，验证结果。\n\n00:36\n分工协作\n\n分工协作，避免一个AI从头干复杂任务。\n\n00:43\n定位根因\n\n使用debuqger定位根因，确定修复点。\n\n从提示词到上线ClaudeCode新手必学的8个skill 真正高效的用法，不是把 Claude Code 当成一个写代码工具，而是把它当成一整套 AI 开发团队来调度，这期我给你一条新手最稳的 Skill 工作流，从想法开始，一直走到测试和上线。#claudecode #工作流 #skill #AI工具 #AI编程\n387\n8\n448\n59\n举报\n发布时间：2026-05-23 22:14\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nclaude code实战\n中转Aivitok点康木\n...\n我是yes工程师\n9小时前·福建\n\n0\n\n分享\n回复\n夏瑾年\n...\n自己描述不出来需求就去找对标，然后分析完了，再加上自己想要的。\n2天前·河南\n\n1\n\n分享\n回复\n展开1条回复\n沙雕小猴哥\n...\nsuperpowers不是都有吗\n2天前·四川\n\n0\n\n分享\n回复\n子与石头\n...\n你们都是给钱了吗？\n2天前·四川\n\n0\n\n分享\n回复\n安普斯\n...\n怎么你V\n2天前·IP未知\n\n0\n\n分享\n回复\n加载中\n阿森编程日记（AI自动化）\n\n粉丝2.2万获赞20.6万\n\n已关注\n推荐视频\n01:41\n超详细codex接入deepseek #codex #deepseek #codex教程 #codex模型 #大模型\n7655\n萌萌本萌\n00:41\n龙虾AI编程军团！50K Star开源神器，敲三个字母，5个Agent同时编程 #开源工具 #程序员 #vibe coding #OpenClaw #一人公司\n463\nIT小圈\n05:00\n以后不用再剪视频了？Claude自动剪辑工作流 #AI剪辑 #Claude #自动剪辑 #AI工具 #Jacky的AI成长日记\n2029\nJacky的AI成长日记\n31:06\nClaude Code六重境界 掌握Claude Code或许困难重重，尤其当你没有路线图时。在本期视频中，我将为你绘制这份进阶蓝图，逐一剖析Claude Code的六大成长阶段。我会指明每个阶段必须精通的技能，以及需要避开的陷阱，助你在Claude Code的学习之路上畅通无阻。\n#claude #claudecode #ai编程 #ai #编程\n7802\n大曼哒\n06:11\nKali Linux的优化一部分#kali #linux命令 #kalilinux系统 #电脑小技巧 #黑客\n1301\nTech同学\n00:41\nCLI-Anything：一个命令让任意软件变成 AI Agent 可",
+    "error": "",
+    "assessment": {
+      "tier": "HIGH",
+      "score": 4,
+      "matched_keywords": [
+        "claude",
+        "工作流",
+        "编程",
+        "工具"
+      ]
+    },
+    "creator_label": "阿森编程日记（AI自动化）",
+    "scanned_at": "2026-05-27"
+  },
+  {
+    "url": "https://www.douyin.com/video/7641191826501700916",
+    "video_id": "7641191826501700916",
+    "success": true,
+    "title": "rm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜底，看完你也能搭建企业级安全防护，告别代码裸奔，做放心交付的 AI 全栈开发者！#AI #agent #全栈开发者 #程序员 #大模型安全 - 抖音",
+    "description": "rm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜底，看完你也能搭建企业级安全防护，告别代码裸奔，做放心交付的 AI 全栈开发者！#AI #agent #全栈开发者 #程序员 #大模型安全",
+    "author": "九天Hector",
+    "author_id": "63043185654",
+    "sec_uid": "MS4wLjABAAAAWEUIAEwAyU82OSjxhmWzZvvgJfiHNupEvbwwC7Dix6TxJjWwjp3FZ-ZDtGKDZYJ4",
+    "stats": {
+      "digg_count": 48,
+      "comment_count": 1,
+      "share_count": 1,
+      "collect_count": 29
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:05 / 12:48\n第1章：引言\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n章节要点\nCloudCode的五层安全防御包括字符串拦截、正则过滤、白名单放行、独立AI审查和人工兜底。这些措施旨在保护大模型免受恶意指令、后门漏洞等攻击。此外，CloudCode还提供企业定制版本、沙河环境和断路器机制，以及广泛应用双AI对抗策略来提升安全性和效果。\n00:00\n引言\n00:23\n安全架构\n\nCloudCode安全架构包括字符串拦截、正则过滤、白名单放行、独立AI审查、人工兜底五层。\n\n03:02\n审查流程\n\n审查流程包括规则、风险、白名单、大模型分类，逐层筛选。\n\n05:14\n核心防御\n\n核心防御是防御CMD和bash命令行攻击，通过五层对抗搭建安全防护网络。\n\n06:09\n定制化开发\n\n提供企业定制版本，允许企业设置防御措施，有五层权限设计。\n\n07:06\n沙河环境\n\n提供沙河环境，提供隔离的独立虚拟环境，有默认安全检查。\n\n07:38\n断路器机制\n\n断路器机制用于识别真实用户和蒸馏过程，防止生成有毒训练数据。\n\n10:36\n双AI对抗\n\n双AI对抗策略贯穿CloudCode各方面，提升作品质量。\n\n内容由AI生成\nrm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜底，看完你也能搭建企业级安全防护，告别代码裸奔，做放心交付的 AI 全栈开发者！#AI #agent #全栈开发者 #程序员 #大模型安全\n48\n1\n29\n1\n举报\n发布时间：2026-05-18 19:26\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nclaudecode手册\n九天Hector\n作者\n...\n资料进主页领取啊\n1天前·北京\n\n0\n\n分享\n回复\n暂时没有更多评论\n九天Hector\n\n粉丝2.3万获赞7.6万\n\n关注\n推荐视频\n00:38\nGitHub热榜第一的开源项目！最全的AI应用合集！ #github #AI #开源项目\n692\n数字生命雷恩加尔\n01:41\n超详细codex接入deepseek #codex #deepseek #codex教程 #codex模型 #大模型\n7650\n萌萌本萌\n00:29\n一个网站检测你的电脑跑得动哪些AI大模型 #AI #AI大模型 #实用网站\n4138\n阿坤AIGC\n10:50\nClaude Code安装教程（完整版） 保姆级Claude Code安装+配置国内模型教程。全程讲，另外下期预告Vibe Coding教程。#ClaudeCode #Openclaw #AI #人工智能 #VibeCoding\n1562\nTony老师\n00:41\n龙虾AI编程军团！50K Star开源神器，敲三个字母，5个Agent同时编程 #开源工具 #程序员 #vibe coding #OpenClaw #一人公司\n463\nIT小圈\n00:41\nCLI-Anything：一个命令让任意软件变成 AI Agent 可操控的工具#命令#OpenClaw#OpenClaw教程#真实生活分享计划#Agent\n1345\nAI指挥官Felix\n00:15\n被DDOS攻击网站APP，大家都会做什么策略去拦截？ 被DDOS攻击网站APP，大家都会做什么策略去拦截？#ddos攻击 #黑客 #网站 #服务器 #程序员\n8445\n捷克\n04:29\n武装claude code和codex的开源项目 #ai编程 #大",
+    "error": "",
+    "assessment": {
+      "tier": "MEDIUM",
+      "score": 1,
+      "matched_keywords": [
+        "agent"
+      ]
+    },
+    "creator_label": "九天Hector",
+    "scanned_at": "2026-05-27"
+  },
+  {
+    "url": "https://www.douyin.com/video/7639689500695776552",
+    "video_id": "7639689500695776552",
+    "success": true,
+    "title": "AI写代码超万行就失忆？教你破局知识熵增！ AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识熵增问题。Cloud Code 用两种多 Agent 架构 + 共享缓存省 Token 技术，从根源解决问题，详解 Cloud Code 如何用 SUB agent 工具调用模式 和 agent teams 队长 - 队员模式，配合全局共享 - 抖音",
+    "description": "AI写代码超万行就失忆？教你破局知识熵增！ AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识熵增问题。Cloud Code 用两种多 Agent 架构 + 共享缓存省 Token 技术，从根源解决问题，详解 Cloud Code 如何用 SUB agent 工具调用模式 和 agent teams 队长 - 队员模式，配合全局共享缓存，把多 Agent 成本降低 80%，让大型代码项目不混乱、不崩盘、效率更高。同时还透露了它未来主动式 Agent、技能渐进显示等重磅功能，帮小白快速掌握 AI 编程核心，告别屎山、进阶大厂。 #cloud #ai编程 #程序员 #抖音前沿科技首发计划 #AI新星计划",
+    "author": "九天Hector",
+    "author_id": "63043185654",
+    "sec_uid": "MS4wLjABAAAAWEUIAEwAyU82OSjxhmWzZvvgJfiHNupEvbwwC7Dix6TxJjWwjp3FZ-ZDtGKDZYJ4",
+    "stats": {
+      "digg_count": 13,
+      "comment_count": 5,
+      "share_count": 0,
+      "collect_count": 9
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\nai新星计划\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:05 / 32:45\n第1章：知识熵增问题\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n章节要点\nCloud Code通过多Agent架构和共享缓存技术，解决AI写代码时的知识熵增问题。其采用SUB agents模式和agent teams模式，实现高效的代码生成。未来，Cloud Code将推出主动式Agent、循环引擎等功能。课程介绍了大模型Agent开发实战课、open club技术实战课和web coding AI编程实战课，帮助学员掌握AI编程核心。\n00:04\n知识熵增问题\n\nAI写代码时，随着代码量增加，会出现知识熵增问题，导致代码混乱、逻辑错误等。\n\n01:43\nCloud Code的应...\n\nCloud Code采用多Agent架构，包括SUB agents模式和agent teams模式，以应对知识熵增。\n\n01:58\n两种运行模式\n\nSUB agents模式下，主Agent可调用SUB Agent，两者不共享上下文；agent teams模式下，所有Agent平等，主Agent通过对话调用子Agent。\n\n07:42\n共享缓存技术\n\nCloud Code通过共享缓存技术，减少Agent消耗，提高效率。\n\n12:50\n未来功能规划\n\n未来功能规划包括主动式Agent、循环引擎、成本感知让步、skills渐近显示等。\n\n18:25\n源码解读与架构模式\n\nCloud Code源码可在本地部署，但需访问远程模型服务。课程介绍了八个架构模式，可供学习和借鉴。\n\n20:56\n课程介绍\n\n课程包括大模型Agent开发实战课、open club技术实战课和web coding AI编程实战课。\n\n内容由AI生成\n展开\nAI写代码超万行就失忆？教你破局知识熵增！ AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识熵增问题。Cloud Code 用两种多 Agent 架构 + 共享缓存省 Token 技术，从根源解决问题，详解 Cloud Code 如何用 SUB agent 工具调用模式 和 agent teams 队长 - 队员模式，配合全局共享缓存，把多 Agent 成本降低 80%，让大型代码项目不混乱、不崩盘、效率更高。同时还透露了它未来主动式 Agent、技能渐进显示等重磅功能，帮小白快速掌握 AI 编程核心，告别屎山、进阶大厂。 #cloud #ai编程 #程序员 #抖音前沿科技首发计划 #AI新星计划\n13\n5\n9\n分享\n举报\n发布时间：2026-05-14 18:17\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nai新星计划\n豹豹猪\n...\n买的课竟然不包含这个openclaw，要学openclaw要二轮付款才能看\n1周前·河北\n\n0\n\n分享\n回复\n九天Hector\n作者\n...\n买课之前和小助理沟通好再买\n1天前·北京\n\n0\n\n分享\n回复\n股票交易心理学-正念\n...\n你那个助教妍妍都不说话，问啥都不说。怎么报名？\n1周前·山东\n\n0\n\n分享\n回复\n九天Hector\n作者\n...\n重新加一下就分配到其他人了\n1天前·北京\n\n0\n\n分享\n回复\n清风自来\n...\n九天老师，想问一下：claude已经这么厉害了，为什么还需写agent呢？\n1天前·北京\n\n0\n\n分享\n回复\n暂时没有更多评论\n九天Hector\n\n粉丝2.3万获赞7.6万\n\n关注\n推荐视频\n00:38\nGitHub热榜第一的开源项目！最全",
+    "error": "",
+    "assessment": {
+      "tier": "MEDIUM",
+      "score": 2,
+      "matched_keywords": [
+        "agent",
+        "上下文"
+      ]
+    },
+    "creator_label": "九天Hector",
+    "scanned_at": "2026-05-27"
+  },
+  {
+    "url": "https://www.douyin.com/video/7638932946937744655",
+    "video_id": "7638932946937744655",
+    "success": true,
+    "title": "ClaudeCode 最小可用 Agent：30 行有效代码，再加 4 条规则，为什么就能让 Agent 自己拆任务、自己往下执行？如果你正想做 AI 编程助手、自动化流程或私有 Agent，这条会把底层思路一次讲明白，让你的的工作效率提升不止一倍！#Cloud #agent #ai编程 #Openclaw #程序员 - 抖音",
+    "description": "ClaudeCode 最小可用 Agent：30 行有效代码，再加 4 条规则，为什么就能让 Agent 自己拆任务、自己往下执行？如果你正想做 AI 编程助手、自动化流程或私有 Agent，这条会把底层思路一次讲明白，让你的的工作效率提升不止一倍！#Cloud #agent #ai编程 #Openclaw #程序员",
+    "author": "九天Hector",
+    "author_id": "63043185654",
+    "sec_uid": "MS4wLjABAAAAWEUIAEwAyU82OSjxhmWzZvvgJfiHNupEvbwwC7Dix6TxJjWwjp3FZ-ZDtGKDZYJ4",
+    "stats": {
+      "digg_count": 86,
+      "comment_count": 2,
+      "share_count": 5,
+      "collect_count": 72
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\nclaude code 飞书文档\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:04 / 51:27\n第1章：引言\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n章节要点\nCloudCode Agent的核心架构包括大模型、cmd命令行工具和agent loop。为了解决上下文增加、失忆和安全等问题，CloudCode采用了约束工作台、记忆管理、工具接口和安全行为边界约束等技术。同时，课程还推荐了大模型Agent开发实战课、OpenClaw技术实战课和Web Coding AI编程实战课，帮助学员深入学习和实践相关技术。\n00:00\n引言\n00:54\n当代Agent的核心架构\n\n当代Agent的核心架构包括大模型、cmd命令行工具和agent loop。\n\n04:55\n问题与挑战\n\n基于loop和命令行为核心工具的Agent体系面临上下文增加、失忆和安全等问题。\n\n09:44\nCloudCode的解决...\n\nCloudCode通过约束工作台、记忆管理、工具接口和安全行为边界约束来解决问题。\n\n39:24\n课程推荐\n\n推荐了大模型Agent开发实战课、OpenClaw技术实战课和Web Coding AI编程实战课。\n\n内容由AI生成\nClaudeCode 最小可用 Agent：30 行有效代码，再加 4 条规则，为什么就能让 Agent 自己拆任务、自己往下执行？如果你正想做 AI 编程助手、自动化流程或私有 Agent，这条会把底层思路一次讲明白，让你的的工作效率提升不止一倍！#Cloud #agent #ai编程 #Openclaw #程序员\n86\n2\n72\n5\n举报\n发布时间：2026-05-12 17:21\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nclaude code 飞书文档\n抖爸爸就是我\n...\n视频都这么长吗？\n2周前·北京\n\n0\n\n分享\n回复\n九天Hector\n作者\n...\n是的呢我们的课程更加精良，视频只是一小部分拆解\n1周前·北京\n\n0\n\n分享\n回复\n暂时没有更多评论\n九天Hector\n\n粉丝2.3万获赞7.6万\n\n关注\n推荐视频\n00:55\n零基础学会大模型最快的学习路线 #拒绝废话 #大模型 #AI #程序员 #Openclaw\n6183\n大模型老陈（主页简介）\n01:41\n超详细codex接入deepseek #codex #deepseek #codex教程 #codex模型 #大模型\n7650\n萌萌本萌\n02:04\n三分钟教你Claude接入DeepSeek-V4 #程序员 #Claude #DeepSeek #干货分享\n1333\n程序员Mars(创业中)\n00:40\nDeepSeek：从跑分王到“基础部署” #deepseek #ai大模型 #ai算力 #deepseekv4 #苹果电脑\n1.3万\n美超半导体\n00:41\n龙虾AI编程军团！50K Star开源神器，敲三个字母，5个Agent同时编程 #开源工具 #程序员 #vibe coding #OpenClaw #一人公司\n463\nIT小圈\n31:06\nClaude Code六重境界 掌握Claude Code或许困难重重，尤其当你没有路线图时。在本期视频中，我将为你绘制这份进阶蓝图，逐一剖析Claude Code的六大成长阶段。我会指明每个阶段必须精通的技能，以及需要避开的陷阱，助你在Claude Code的学习之路上畅通无阻。\n#claude #claudecode #ai编程 #ai #编程\n7802\n大曼哒\n05:04\n5分钟 Codex 新",
+    "error": "",
+    "assessment": {
+      "tier": "MEDIUM",
+      "score": 1,
+      "matched_keywords": [
+        "agent"
+      ]
+    },
+    "creator_label": "九天Hector",
+    "scanned_at": "2026-05-27"
+  },
+  {
+    "url": "https://www.douyin.com/video/7641190447708130586",
+    "video_id": "7641190447708130586",
+    "success": true,
+    "title": "human in the loop 贯彻到底！ #humanintheloop #做账号 #复盘 #个人ip #cheatoncontent - 抖音",
+    "description": "human in the loop 贯彻到底！ #humanintheloop #做账号 #复盘 #个人ip #cheatoncontent",
+    "author": "他们都叫我蜗牛学长",
+    "author_id": "",
+    "sec_uid": "MS4wLjABAAAAJ6QEvp2qIMoHUYjghp3KROM1E0e7t9Wqx_bhTb8voqE",
+    "stats": {
+      "digg_count": 308,
+      "comment_count": 15,
+      "share_count": 33,
+      "collect_count": 98
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\nrubric\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:05 / 00:53\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n作者声明：虚构演绎，仅供娱乐\nhuman in the loop 贯彻到底！ #humanintheloop #做账号 #复盘 #个人ip #cheatoncontent\n308\n15\n98\n33\n举报\n发布时间：2026-05-18 19:21\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nhumanintheloop什么意思\n澳門深藍仔\n...\n这个是claud code吗\n1天前·广东\n\n0\n\n分享\n回复\n哈登\n...\n^_^\n2天前·辽宁\n\n0\n\n分享\n回复\n炼丹师的工具箱\n...\n为什么我的视频也是分享github项目，一直说我 引导他人去风险平台 导致作品不推荐呀，大佬能看看吗\n1周前·上海\n\n2\n\n分享\n回复\n蜻蜓恶霸\n...\n你的 rubric 才 v2 吗，v1 到 v2 要多久？\n1周前·河北\n\n4\n\n分享\n回复\n一个人的宇宙\n...\n今年专辑就叫人在回路！\n1周前·山东\n\n0\n\n分享\n回复\n加载中\n他们都叫我蜗牛学长\n\n粉丝2.4万获赞13.6万\n\n已关注\n推荐视频\n00:26\n原来是掏兜的tao #股票 #财经 #股民 #金融 #大盘\n4.1万\n王小雨\n02:48\n用ai写出一篇播放量10w+的文案（喂饭版） 仅仅需要一个好的提示词而已～#AI #豆包 #自媒体 #干货 #实操\n9723\n行者夏夏\n00:22\n不要吃饭了\n1.3万\n小张小张吃饭用缸（洗头哥）\n00:51\n一觉醒来，干自媒体的天都塌了，给你们看一个非常恶心且 又炸裂的东西#狮想者科技 #海学长的ai智能体\n1.8万\n海学长玩AI\n00:28\n一个让AI资料贩子破防的网站#AI #aigc #干货分享 #ai新星计划 #ai创作浪潮计划\n3.6万\n404懒懒大王\n00:12\n实盘在专属会员里！ 砸的我想停更了#抖音二创激励计划\n1989\n羊蛋（本人）\n00:28\n#小唐酱香饼 #美国流浪汉 #斩杀线 #现场直击\n1.3万\n小唐游美国中\n00:15\n天天不让宝妈进半导体和CPO 讨厌你@小张小张吃饭用缸（吸钱哥）\n1.3万\n小坦克妈妈\n00:07\n哎 第一次来高档场所讲话都不自信了！！！\n5.6万\nCc_不喝酒（乙醇教母）\n01:27\n不是？现在的AI已经进步到这种程度了吗，我只是随便试了一下……#揭秘#干货分享#求职#人类对豆包的开发不足百分之一 #遇事不决问豆包\n6818\n赵震惊\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\n网络谣言曝光台 ｜\n网上有害信息举报\n｜ 违法和不良信息举报：400-140-2108 ｜ 算法推荐专项举报：sfjubao@bytedance.com ｜ 网络内容从业人员违法违规行为举报：feedback@douyin.com | 体育饭圈专项举报：tyfq@bytedance.com\n京ICP备16016397号-3\n｜ 广播电视节目制作经营许可证 （京）字第11313号\n｜ 增值电信业务经营许可证 京B2-20170846\n｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜\n京公网安备 11000002002046号\n｜ 互联网宗教信息服务许可证 京（2025）0000017\n热门：抖音游戏抖音美食自上料搅拌车Day21每天1分钟，从哑巴英语变成口语达人 #成人英语口语 #每日英语口语学习 #零基础英语 #口语练习 #日常英语口语",
+    "error": "",
+    "assessment": {
+      "tier": "LOW",
+      "score": 0,
+      "matched_keywords": []
+    },
+    "creator_label": "他们都叫我蜗牛学长",
+    "scanned_at": "2026-05-27"
+  },
+  {
+    "url": "https://www.douyin.com/video/7640801214048865587",
+    "video_id": "7640801214048865587",
+    "success": true,
+    "title": "一定要找到属于自己的aha moment #ahamoment #做账号 #cheatoncontent #个人ip #buildinpublic - 抖音",
+    "description": "一定要找到属于自己的aha moment #ahamoment #做账号 #cheatoncontent #个人ip #buildinpublic",
+    "author": "他们都叫我蜗牛学长",
+    "author_id": "",
+    "sec_uid": "MS4wLjABAAAAJ6QEvp2qIMoHUYjghp3KROM1E0e7t9Wqx_bhTb8voqE",
+    "stats": {
+      "digg_count": 922,
+      "comment_count": 25,
+      "share_count": 116,
+      "collect_count": 393
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\naha moment skill\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n投稿\n\n00:04 / 02:24\n第1章：引言\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n章节要点\nSkill的核心设计在于找到独属于自己与观众的aha moment，即强连接。通过持续拍摄、复盘和与观众互动，逐渐形成记忆模式，找到最大的aha moment并拍穿选题。这是成功的关键，所有大博主都是这样做的。\n00:00\n引言\n00:21\n找到独属于自己的aha ...\n\n找到独属于自己与观众的aha moment，避免抄袭爆款公式，与自己对比。\n\n01:13\n强连接\n\naha moment是找到与观众之间的强连接，可遇不可求，需不断尝试。\n\n01:45\n持续拍摄与复盘\n\n持续拍摄、复盘，找到最大的aha moment，拍穿选题，再找第二个aha moment。\n\n内容由AI生成\n一定要找到属于自己的aha moment #ahamoment #做账号 #cheatoncontent #个人ip #buildinpublic\n922\n25\n393\n116\n举报\n发布时间：2026-05-17 18:11\n全部评论\n留下你的精彩评论吧\n大家都在搜：\naha moment技能\n可恶的一号富翁\n...\n兄弟们怎么让他分析视频，claude让我去其他模型分析再给他数据\n5天前·四川\n\n2\n\n分享\n回复\niNini\n...\nai量化，两个月现在已经赚几个\n1周前·四川\n\n1\n\n分享\n回复\n展开3条回复\n李余不是鱼\n...\n已经在使用了。真的很棒，很好用。\n1天前·海南\n\n0\n\n分享\n回复\n勒诶\n...\n除了魔法，就没办法上 github 吗？\n1周前·浙江\n\n1\n\n分享\n回复\n展开3条回复\nBo$\n...\n请问这个需要安装claude code哪些吗\n1周前·北京\n\n0\n\n分享\n回复\n展开1条回复\n加载中\n他们都叫我蜗牛学长\n\n粉丝2.4万获赞13.6万\n\n已关注\n推荐视频\n00:46\n播放卡在三五百的号两步教你自救 #短视频运营 #自媒体干货 #个人IP #从0到1做自媒体 #真实生活分享计划\n4.4万\n人生亦然\n00:59\n2026年新手最不建议做的7类账号，你都“踩中”了吗？#自媒体干货 #短视频运营 #新手做自媒体 #账号定位 #做账号\n5897\nkk是大神\n00:29\n承认别人优秀不难！\n2.3万\n小张小张吃饭用缸（洗头哥）\n00:34\n你这个阶级的人正在极力阻止你刷到这条视频！#AI #aigc #创业\n4.9万\nAi破壁人小彭\n03:20\n做跨境电商真不用瞎研究，其实就几个步骤#跨境电商 #新手做跨境电商 #tiktok跨境电商 #tiktokshop\n7015\n南少电商\n01:42\n从想法到产品，我只花了三天 这仅仅是我花三天用AI写的东西，我迫不及待分享我的观点，普通人一点要多用AI实现去自己的想法，去做那些我们之前做不到的事，哪怕先做个玩具出来，当你做完这些，你会发现经历了思考痛点、投入做产品、积极营销这个完整的过程，这就是一人公司的最小缩影！so why not？#AI #AI创业 #被动收入 #一人公司 #opc\n1.1万\n飞翔liu\n00:15\n新手做短视频全流程，只需要这6步 #短视频运营 #新媒体运营 #个人ip #干货分享\n3.5万\n肖大志\n01:23\n富人没必要回国 #硅谷生活\n6200\n硅谷老实人\n00:26\n是不是对A10有什么误解\n5781\n鑫哥的世界\n00:20\n新手投流的正确方式#短视频运营 #新媒体运营 #个人ip #干货分享\n5.5万\n肖大志\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\n网络谣言曝光台 ｜\n网上有害信息举报\n｜ 违法和不良信息举报：400-140-2108 ｜ 算法推荐专项举报：sfjubao@bytedance.com ｜ 网络内容从业人员违法违规行为举报：feedback@douyin.com | 体育饭圈专项举报：tyfq@bytedance.com\n京ICP备16016397号-3\n｜ 广播电视节目制作经营许可证 （京）字第11313号\n｜ 增值电信业务经营许可证 京B2-20170846\n｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜\n京公网安备 11000002002046号\n｜ 互联网宗教信息服务许可证 京（2025）0000017\n热门：抖音官网游戏视频推荐YoungG小四门想一劳永逸，这本书千万别错过了，学而思速记初中小四门，一套用三年#初中生#小四门",
+    "error": "",
+    "assessment": {
+      "tier": "LOW",
+      "score": 0,
+      "matched_keywords": []
+    },
+    "creator_label": "他们都叫我蜗牛学长",
+    "scanned_at": "2026-05-27"
+  },
+  {
+    "url": "https://www.douyin.com/video/7640070279313607982",
+    "video_id": "7640070279313607982",
+    "success": true,
+    "title": "日更100条！！！ #ai #cheatoncontent #个人ip #做账号 #ai时代 - 抖音",
+    "description": "日更100条！！！ #ai #cheatoncontent #个人ip #做账号 #ai时代",
+    "author": "他们都叫我蜗牛学长",
+    "author_id": "",
+    "sec_uid": "MS4wLjABAAAAJ6QEvp2qIMoHUYjghp3KROM1E0e7t9Wqx_bhTb8voqE",
+    "stats": {
+      "digg_count": 6332,
+      "comment_count": 85,
+      "share_count": 872,
+      "collect_count": 3399
+    },
+    "stats_display": {},
+    "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\ncheatoncontent功能详解\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:04 / 01:22\n第1章：引言\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n作者声明：虚构演绎，仅供娱乐\n章节要点\n作者收到了很多关于账号成功的反馈，但仍有两个问题需要解决：降低使用门槛，让更多人能使用agent；不要相信爆款公式，坚持复盘，讲好自己的故事，保持真诚。\n00:00\n引言\n00:17\n使用门槛\n\n降低使用门槛，开发应用，让更多人能使用agent。\n\n00:31\n不要相信爆款公式\n\n不要相信爆款公式，坚持复盘，讲好自己的故事，保持真诚。\n\n内容由AI生成\n日更100条！！！ #ai #cheatoncontent #个人ip #做账号 #ai时代\n6332\n85\n3399\n872\n举报\n发布时间：2026-05-15 18:54\n全部评论\n留下你的精彩评论吧\n大家都在搜：\ncheatoncontent功能详解\n令麦郎\n...\n他干啥这么激动\n3天前·安徽\n\n14\n\n分享\n回复\n展开2条回复\n热心指路的网友\n...\n说实话，这个技能我不太清楚怎么用，我以为是玄学一类的，然后呢我也安装上了，但是我要怎么向他提问呢？我做的是AI漫剧一类\n1周前·江苏\n\n88\n\n分享\n回复\n展开7条回复\n哦豁哈哈哈哈\n...\n能用trae加载吗\n1天前·广西\n\n1\n\n分享\n回复\n何小黑（普通人学 AI）\n...\n用了一周了，涨粉 1000+了，博主活菩萨\n作者赞过\n1周前·广东\n\n4\n\n分享\n回复\n他们都叫我蜗牛学长\n作者\n...\n牛逼\n1周前·英国\n\n1\n\n分享\n回复\n好牛的百货&日常\n...\nworkbuddy已直接下载感谢\n4天前·河南\n\n0\n\n分享\n回复\n加载中\n他们都叫我蜗牛学长\n\n粉丝2.4万获赞13.6万\n\n已关注\n推荐视频\n02:48\n用ai写出一篇播放量10w+的文案（喂饭版） 仅仅需要一个好的提示词而已～#AI #豆包 #自媒体 #干货 #实操\n9723\n行者夏夏\n00:51\n一觉醒来，干自媒体的天都塌了，给你们看一个非常恶心且 又炸裂的东西#狮想者科技 #海学长的ai智能体\n1.8万\n海学长玩AI\n31:06\nClaude Code六重境界 掌握Claude Code或许困难重重，尤其当你没有路线图时。在本期视频中，我将为你绘制这份进阶蓝图，逐一剖析Claude Code的六大成长阶段。我会指明每个阶段必须精通的技能，以及需要避开的陷阱，助你在Claude Code的学习之路上畅通无阻。\n#claude #claudecode #ai编程 #ai #编程\n7802\n大曼哒\n00:34\n你这个阶级的人正在极力阻止你刷到这条视频！#AI #aigc #创业\n4.9万\nAi破壁人小彭\n00:53\n这条视频很快下架！快按这个做吧！#ai #ai教程 #ai带货 #ai视频 #短视频带货\n1268\n阿哲Ai\n07:25\n如何让AI指导Multi-agent做研究 我今天用AI做研究的能力又进阶了，真正开始让AI当项目经理指导Multi-agent干活了。方法其实不难，你跟AI说你是PM，我有这样这样的研究要求和标准，你来设计一下怎么指导Multi-agent来协作，完成这个工作任务。你要考虑上下文窗口的限制，要考虑Agent之间的协作，要考虑过程可监控文档有留存，然后输出规划文档，你交给CodeBuddy CLI或Claude Code，它就开始指挥7个agent干活了。然后1个多小时后，我真的是又被冲击到了。#Multi-agent #多智能体 #AI ",
+    "error": "",
+    "assessment": {
+      "tier": "LOW",
+      "score": 0,
+      "matched_keywords": []
+    },
+    "creator_label": "他们都叫我蜗牛学长",
+    "scanned_at": "2026-05-27"
+  }
+]

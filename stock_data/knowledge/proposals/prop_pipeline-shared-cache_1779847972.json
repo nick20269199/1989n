@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_pipeline-shared-cache_1779847972",
+  "gap_id": "pipeline-shared-cache",
+  "gap_title": "Expert 间无共享缓存 — 同一数据被重复拉取",
+  "priority": "P1",
+  "source": "网页内容",
+  "source_title": "TokenDance: Collective KV cache sharing for multi-agent serving",
+  "source_url": "https://arxiv.org/abs/2604.03143",
+  "relevance": 5,
+  "summary": "Exploits All-Gather pattern KV cache redundancy: round-aware prompt + collective KV reuse + diff-based storage. 17.5x per-agent KV cache reduction, 2.7x more concurrent agents.",
+  "pattern": "shared_cache",
+  "implied_changes": [
+    "stock_analysis/experts/lead.py",
+    "stock_analysis/data_source_router.py"
+  ],
+  "implementation_hint": "在 lead.py 中引入 SharedDataCache 类，expert 拉取数据前先查 cache。cache key = f\"{data_type}_{stock_code}\"，TTL 按数据类型配置。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T10:12:52.402059",
+  "executed_at": null,
+  "execution_result": null
+}

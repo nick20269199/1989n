@@ -332,6 +332,18 @@
       "file": "git_push.log",
       "status": "pending",
       "size_kb": 585.7
+    },
+    {
+      "date": "2026-05-27",
+      "file": "closing_review.json",
+      "status": "pending",
+      "size_kb": 7.5
+    },
+    {
+      "date": "2026-05-27",
+      "file": "last_error.txt",
+      "status": "pending",
+      "size_kb": 0.7
     }
   ],
   "last_distilled": null

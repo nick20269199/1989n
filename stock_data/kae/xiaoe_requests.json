@@ -1,0 +1,134 @@
+[
+  {
+    "url": "https://aegis.qq.com/collect/pv?id=YrKJzfb39mVLd6OkdL&uin=&version=1.38.6&aid=e922ca99-c1a6-4ea6-b191-ab98141c76fd&env=production&platform=3&netType=4&vp=1280%20*%20800&sr=1280%20*%20800&sessionId=session-1779829872524&from=https%3A%2F%2Fstudy.xiaoe-tech.com%2Ft_l%2FlearnIndex%3Ftype%3Dwx%23%2Fmuti_index&referer=",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:12.637243"
+  },
+  {
+    "url": "https://aegis.qq.com/collect/whitelist?id=YrKJzfb39mVLd6OkdL&uin=&version=1.38.6&aid=e922ca99-c1a6-4ea6-b191-ab98141c76fd&env=production&platform=3&netType=4&vp=1280%20*%20800&sr=1280%20*%20800&sessionId=session-1779829872524&from=https%3A%2F%2Fstudy.xiaoe-tech.com%2Ft_l%2FlearnIndex%3Ftype%3Dwx%23%2Fmuti_index&referer=",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:13.037850"
+  },
+  {
+    "url": "https://sensors.xiaoeknow.com/sa.gif",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:13.762614"
+  },
+  {
+    "url": "https://sensors.xeknow.com/sa.gif",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:13.763594"
+  },
+  {
+    "url": "https://sensors.h5.xed.plus/sa.gif",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:13.765099"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc.user/check_token",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:13.771570"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/check_unfinished_live/1.0.0",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:13.772905"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/my_attend_normal_list.get/1.0.1",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:13.774067"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc.user/check_password",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:15.781978"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc.user/nation_code",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:15.783240"
+  },
+  {
+    "url": "https://aegis.qq.com/collect/pv?id=YrKJzfb39mVLd6OkdL&uin=&version=1.38.6&aid=f50408d7-166a-4654-a086-e54a78f3f0cf&env=production&platform=3&netType=4&vp=1280%20*%20800&sr=1280%20*%20800&sessionId=session-1779829876277&from=https%3A%2F%2Fstudy.xiaoe-tech.com%2Ft_l%2FlearnIndex%3Ftype%3Dwx%23%2Fmuti_index&referer=",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:16.384241"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc.user/check_token",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:16.745361"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/check_unfinished_live/1.0.0",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:16.746447"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/my_attend_normal_list.get/1.0.1",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:16.748849"
+  },
+  {
+    "url": "https://aegis.qq.com/collect/whitelist?id=YrKJzfb39mVLd6OkdL&uin=&version=1.38.6&aid=f50408d7-166a-4654-a086-e54a78f3f0cf&env=production&platform=3&netType=4&vp=1280%20*%20800&sr=1280%20*%20800&sessionId=session-1779829876277&from=https%3A%2F%2Fstudy.xiaoe-tech.com%2Ft_l%2FlearnIndex%3Ftype%3Dwx%23%2Fmuti_index&referer=",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:21.756223"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc.user/check_password",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:21.761285"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc.user/nation_code",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:21.762492"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/shop_is_company.get/1.0.0?app_id=appzsnu8fxf7905",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:21.892805"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/get_new_gateway/1.0.0",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:24.897597"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/shop_is_company.get/1.0.0?app_id=appzsnu8fxf7905",
+    "method": "GET",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:24.926183"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/recent_learn.set/1.0.1",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:27.930036"
+  },
+  {
+    "url": "https://study.xiaoe-tech.com/xe.learn-pc/get_new_gateway/1.0.0",
+    "method": "POST",
+    "type": "xhr",
+    "time": "2026-05-27T05:11:27.930616"
+  }
+]

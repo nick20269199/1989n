@@ -1,0 +1,19 @@
+{
+  "proposal_id": "prop_tool-claude-code-skills-distillation_1779821268",
+  "gap_id": "tool-claude-code-skills-distillation",
+  "gap_title": "Claude Code Skills 蒸馏机制",
+  "priority": "P2",
+  "source": "外部来源",
+  "source_title": "ClaudeCode桌面端来了，小白轻松上手，专为新手而生！ 很多人不是不会用ClaudeCode，而是卡在账号、网络、环境和配置上。这个桌面端工具箱把环境检测、依赖安装、模型配置、多窗口并行、Ski",
+  "source_url": "",
+  "relevance": 4,
+  "summary": "章节: 一款工具具有多窗口开行、程序窗口切换、稳定性高、skill和NPM包安装方便、UI设计交互友好等特点。",
+  "pattern": "skills_distill",
+  "implied_changes": [],
+  "implementation_hint": "分析成功交互模式 → 提取可复用 pattern → 自动生成 Claude Code skill 文档。验证：给定测试任务，检查 skill 加载后准确率是否提升。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T02:47:48.696484",
+  "executed_at": null,
+  "execution_result": null
+}

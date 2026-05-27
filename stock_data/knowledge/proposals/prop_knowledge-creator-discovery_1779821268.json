@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_knowledge-creator-discovery_1779821268",
+  "gap_id": "knowledge-creator-discovery",
+  "gap_title": "无主动知识发现机制 — 等人给链接而非自己搜",
+  "priority": "P1",
+  "source": "外部来源",
+  "source_title": "红杉资本 Ai不再卖工具 而是收益#智能体 #红杉资本 #ai应用 #人工智能",
+  "source_url": "",
+  "relevance": 4,
+  "summary": "章节: 红杉资本第三届AI峰会上提出，AI未来将不再卖工具，而是卖收益。这意味着AI的价值不再取决于其功能，而是在于为客户带来的实际成果。AI将重构组织协作方式，实现多智能体协同的新型生产网络。未来三年，AI创业的关键在于将成果商品化，中国创业者具有独特优势。",
+  "pattern": "creator_discovery",
+  "implied_changes": [
+    "stock_analysis/douyin_monitor.py",
+    "stock_analysis/knowledge_prospector.py"
+  ],
+  "implementation_hint": "将 douyin_monitor.py 的扫描来源从固定 JSON 改为：读取 gap_registry 的 search_queries → 抖音搜索 → 发现新博主 → 自动加入监控列表。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T02:47:48.694035",
+  "executed_at": null,
+  "execution_result": null
+}

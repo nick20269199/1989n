@@ -1,0 +1,29 @@
+{
+  "url": "https://www.douyin.com/video/7639689500695776552",
+  "video_id": "7639689500695776552",
+  "success": true,
+  "title": "AI写代码超万行就失忆？教你破局知识熵增！ AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识熵增问题。Cloud Code 用两种多 Agent 架构 + 共享缓存省 Token 技术，从根源解决问题，详解 Cloud Code 如何用 SUB agent 工具调用模式 和 agent teams 队长 - 队员模式，配合全局共享 - 抖音",
+  "description": "AI写代码超万行就失忆？教你破局知识熵增！ AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识熵增问题。Cloud Code 用两种多 Agent 架构 + 共享缓存省 Token 技术，从根源解决问题，详解 Cloud Code 如何用 SUB agent 工具调用模式 和 agent teams 队长 - 队员模式，配合全局共享缓存，把多 Agent 成本降低 80%，让大型代码项目不混乱、不崩盘、效率更高。同时还透露了它未来主动式 Agent、技能渐进显示等重磅功能，帮小白快速掌握 AI 编程核心，告别屎山、进阶大厂。 #cloud #ai编程 #程序员 #抖音前沿科技首发计划 #AI新星计划",
+  "author": "九天Hector",
+  "author_id": "63043185654",
+  "sec_uid": "MS4wLjABAAAAWEUIAEwAyU82OSjxhmWzZvvgJfiHNupEvbwwC7Dix6TxJjWwjp3FZ-ZDtGKDZYJ4",
+  "stats": {
+    "digg_count": 13,
+    "comment_count": 5,
+    "share_count": 0,
+    "collect_count": 9
+  },
+  "stats_display": {},
+  "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\nai新星计划\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:05 / 32:45\n第1章：知识熵增问题\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n章节要点\nCloud Code通过多Agent架构和共享缓存技术，解决AI写代码时的知识熵增问题。其采用SUB agents模式和agent teams模式，实现高效的代码生成。未来，Cloud Code将推出主动式Agent、循环引擎等功能。课程介绍了大模型Agent开发实战课、open club技术实战课和web coding AI编程实战课，帮助学员掌握AI编程核心。\n00:04\n知识熵增问题\n\nAI写代码时，随着代码量增加，会出现知识熵增问题，导致代码混乱、逻辑错误等。\n\n01:43\nCloud Code的应...\n\nCloud Code采用多Agent架构，包括SUB agents模式和agent teams模式，以应对知识熵增。\n\n01:58\n两种运行模式\n\nSUB agents模式下，主Agent可调用SUB Agent，两者不共享上下文；agent teams模式下，所有Agent平等，主Agent通过对话调用子Agent。\n\n07:42\n共享缓存技术\n\nCloud Code通过共享缓存技术，减少Agent消耗，提高效率。\n\n12:50\n未来功能规划\n\n未来功能规划包括主动式Agent、循环引擎、成本感知让步、skills渐近显示等。\n\n18:25\n源码解读与架构模式\n\nCloud Code源码可在本地部署，但需访问远程模型服务。课程介绍了八个架构模式，可供学习和借鉴。\n\n20:56\n课程介绍\n\n课程包括大模型Agent开发实战课、open club技术实战课和web coding AI编程实战课。\n\n内容由AI生成\n展开\nAI写代码超万行就失忆？教你破局知识熵增！ AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识熵增问题。Cloud Code 用两种多 Agent 架构 + 共享缓存省 Token 技术，从根源解决问题，详解 Cloud Code 如何用 SUB agent 工具调用模式 和 agent teams 队长 - 队员模式，配合全局共享缓存，把多 Agent 成本降低 80%，让大型代码项目不混乱、不崩盘、效率更高。同时还透露了它未来主动式 Agent、技能渐进显示等重磅功能，帮小白快速掌握 AI 编程核心，告别屎山、进阶大厂。 #cloud #ai编程 #程序员 #抖音前沿科技首发计划 #AI新星计划\n13\n5\n9\n分享\n举报\n发布时间：2026-05-14 18:17\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nai新星计划\n豹豹猪\n...\n买的课竟然不包含这个openclaw，要学openclaw要二轮付款才能看\n1周前·河北\n\n0\n\n分享\n回复\n九天Hector\n作者\n...\n买课之前和小助理沟通好再买\n1天前·北京\n\n0\n\n分享\n回复\n股票交易心理学-正念\n...\n你那个助教妍妍都不说话，问啥都不说。怎么报名？\n1周前·山东\n\n0\n\n分享\n回复\n九天Hector\n作者\n...\n重新加一下就分配到其他人了\n1天前·北京\n\n0\n\n分享\n回复\n清风自来\n...\n九天老师，想问一下：claude已经这么厉害了，为什么还需写agent呢？\n1天前·北京\n\n0\n\n分享\n回复\n暂时没有更多评论\n九天Hector\n\n粉丝2.3万获赞7.6万\n\n关注\n推荐视频\n00:38\nGitHub热榜第一的开源项目！最全",
+  "error": "",
+  "assessment": {
+    "tier": "MEDIUM",
+    "score": 2,
+    "matched_keywords": [
+      "agent",
+      "上下文"
+    ]
+  },
+  "creator_label": "九天Hector",
+  "scanned_at": "2026-05-27"
+}

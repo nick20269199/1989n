@@ -1,0 +1,52 @@
+[
+  {
+    "name": "qrCodeSessionId",
+    "value": "4bfxwEHOz8",
+    "domain": "study.xiaoe-tech.com",
+    "path": "/t_l",
+    "expires": 1779915886,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "sensorsdata2015jssdkcross",
+    "value": "%7B%22%24device_id%22%3A%2219e661a94947fe-050a50b6f0bea78-4c657b58-1024000-19e661a94952f9%22%7D",
+    "domain": ".xiaoe-tech.com",
+    "path": "/",
+    "expires": 1814389490.877873,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "sajssdk_2015_new_user_study_xiaoe-tech_com",
+    "value": "1",
+    "domain": "study.xiaoe-tech.com",
+    "path": "/",
+    "expires": 1779897599,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "sa_jssdk_2015_study_xiaoe-tech_com",
+    "value": "%7B%22distinct_id%22%3A%2219e661a94947fe-050a50b6f0bea78-4c657b58-1024000-19e661a94952f9%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%7D",
+    "domain": "study.xiaoe-tech.com",
+    "path": "/",
+    "expires": 1814389490.881742,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "p_token",
+    "value": "pceadminuniwebd8b0lsmhubtod2nf4m10",
+    "domain": ".xiaoe-tech.com",
+    "path": "/",
+    "expires": 1780434290.655325,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "proposal_id": "prop_arch-context-isolation_1779858156",
+  "gap_id": "arch-context-isolation",
+  "gap_title": "Expert 上下文隔离 — 拼接大 prompt 导致知识熵增",
+  "priority": "P1",
+  "source": "GitHub仓库",
+  "source_title": "late-cli: Ephemeral agent architecture - zero token bloat",
+  "source_url": "https://github.com/mlhher/late-cli",
+  "relevance": 4,
+  "summary": "Ephemeral agent architecture: lean orchestrator delegates to isolated sub-agents, history destroyed on completion. Core prompt ~1000 tokens vs industry 10k+. Never pollutes orchestrator context.",
+  "pattern": "isolated_context",
+  "implied_changes": [
+    "stock_analysis/experts/lead.py",
+    "stock_analysis/experts/config.py"
+  ],
+  "implementation_hint": "将 lead.py 中的统一 prompt 拆分为每个 expert 独立的 context builder。config.py 中为每位 expert 配置独立的 max_tokens/temperature。lead.py 汇总时只传各 expert 的摘要而非全量输出。",
+  "test_files": [
+    "stock_analysis/tests/test_grader.py"
+  ],
+  "status": "proposed",
+  "created_at": "2026-05-27T13:02:36.087949",
+  "executed_at": null,
+  "execution_result": null
+}

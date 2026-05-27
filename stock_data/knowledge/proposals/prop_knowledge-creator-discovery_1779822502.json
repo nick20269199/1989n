@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_knowledge-creator-discovery_1779822502",
+  "gap_id": "knowledge-creator-discovery",
+  "gap_title": "无主动知识发现机制 — 等人给链接而非自己搜",
+  "priority": "P1",
+  "source": "外部来源",
+  "source_title": "新手用Claude Code先学Deep Interview 这期讲给 Claude Code 新手：先用 Deep Interview 把目标、边界、用户和验收标准问清楚，再接 ……版本过低，升级后",
+  "source_url": "",
+  "relevance": 4,
+  "summary": "章节: 新手使用Claude Code时，应先用Deep Interview将目标、边界、用户和验收标准问清楚，再根据需求选择合适的工具，如ralplan、analyze、Claude Interview、executor和test engineer，以提高效率并避免走弯路。",
+  "pattern": "creator_discovery",
+  "implied_changes": [
+    "stock_analysis/douyin_monitor.py",
+    "stock_analysis/knowledge_prospector.py"
+  ],
+  "implementation_hint": "将 douyin_monitor.py 的扫描来源从固定 JSON 改为：读取 gap_registry 的 search_queries → 抖音搜索 → 发现新博主 → 自动加入监控列表。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T03:08:22.190905",
+  "executed_at": null,
+  "execution_result": null
+}

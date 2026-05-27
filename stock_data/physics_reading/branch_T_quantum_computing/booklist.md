@@ -5,84 +5,80 @@
 |------|------|
 | 子域 | 量子计算与量子技术 (Quantum Computing & Technology) |
 | 本数 | 50本 |
-| Agent相关性 | ★★★★★ 叠加/纠缠/并行推理/量子加速=Agent推理的量子替代范式 |
-| 跨域 | 哲学(计算主义/量子基础)/经济(量子金融)/物理(量子力学) |
+| Agent相关性 | ★★★★★ 量子并行=指数加速,量子测量=坍缩=决策,纠缠=非局域关联 |
+| 跨域 | 哲学(计算主义/测量问题), 经济(量子博弈/加密), 中华(心物一元) |
 
-## 标准教材 (6本)
+## Part 1: 量子计算基础 (15本)
 
 | # | 作者 | 著作 | 核心贡献 | Agent映射 |
 |---|------|------|---------|----------|
-| 1 | Nielsen & Chuang | 《量子计算与量子信息》(2000) | 量子计算的"圣经"/全面标准教材 | Agent的量子计算=量子门+测量 |
-| 2 | Kitaev, Shen & Vyalyi | 《经典与量子计算》(2002) | 量子复杂性的严格数学基础 | Agent的量子优势=奇偶性/隐藏子群 |
-| 3 | Mermin | 《量子计算机科学》(2007) | 清晰简洁的量子计算导论 | Agent的量子门=Clifford+Toffoli |
-| 4 | Kaye, Laflamme & Mosca | 《量子计算导论》(2007) | 物理学家友好的量子计算教材 | Agent的量子算法=叠加+干涉+测量 |
-| 5 | W. Rahn | 《量子计算》(2021) | 实践导向的量子编程 | Agent的量子程序=Qiskit/Cirq |
-| 6 | Marinescu | 《量子计算》(2011) | 量子信息科学的综合 | Agent的量子=信息+计算+物理 |
+| 1 | Nielsen & Chuang | 《Quantum Computation and Quantum Information》 (2000, 10th Anniversary) | 量子计算圣经 | Agent的量子版=叠加+纠缠+测量三要素 |
+| 2 | Kitaev, Shen & Vyalyi | 《Classical and Quantum Computation》 (2002) | 计算的量子复杂性理论 | Agent的计算复杂度分类=量子提供了新类别 |
+| 3 | Mermin | 《Quantum Computer Science》 (2007) | 量子计算的简洁入门 | 量子电路的数学结构=Agent的量子算法思维 |
+| 4 | Rieffel & Polak | 《Quantum Computing: A Gentle Introduction》 (2011) | 量子计算的温和入门 | Agent用线性代数理解量子并行 |
+| 5 | Aaronson | 《Quantum Computing Since Democritus》 (2013) | 从计算理论到量子计算的思维盛宴 | Agent的计算宇宙:从图灵机到量子 |
+| 6 | Preskill | 《Quantum Computing》 (1998-讲义) | Caltech量子计算讲义 | 量子纠错=Agent的容错推理 |
+| 7 | Kaye, Laflamme & Mosca | 《Quantum Computation》 (2007) | 实用量子计算 | Grover搜索=Agent的无结构搜索加速 |
+| 8 | Williams | 《Explorations in Quantum Computing》 (2011, 2nd ed) | 量子算法的实践探索 | Shor算法=因子分解=Agent的结构发现 |
+| 9 | Hirvensalo | 《Quantum Computing》 (2001) | 量子计算的数学基础 | Agent的线性代数基础=复数+张量积 |
+| 10 | Gruska | 《Quantum Computing》 (1999) | 量子计算全面教材 | 量子信息论=Agent的信息处理上限 |
+| 11 | Marinescu & Marinescu | 《Classical and Quantum Information》 (2011) | 经典-量子信息统一 | Agent的量子信息通道=超密编码 |
+| 12 | Li & Li | 《Quantum Computing: A Practical Approach》 (2024) | 实用量子计算 | Agent在NISQ时代的实践约束 |
+| 13 | Benenti, Casati & Strini | 《Principles of Quantum Computation and Information》 (2004-2007, 2卷) | 量子信息综合 | 量子门=Agent的量子操作基 |
+| 14 | Stolze & Suter | 《Quantum Computing》 (2004) | 量子物理实现 | Agent的物理实现=退相干=环境噪声 |
+| 15 | Nielsen | 《Quantum Computation and Information》 (2002, PhD教程) | QC的直观理解 | 量子不可克隆定理=Agent的"不能被完美复制" |
 
-## 量子算法 (6本)
+## Part 2: 量子算法与复杂性 (10本)
 
-| 7 | Shor | 《量子计算算法》(1994/97) | 多项式时间因式分解/Shor算法 | Agent的非结构化搜索加速 |
-| 8 | Grover | 《量子力学加速搜索》(1996) | 无序数据库的平方根加速 | Agent的"大海捞针"=平方根加速 |
-| 9 | Childs | 《量子行走》(2000s) | 量子行走/图搜索/指数加速 | Agent在图中的量子行走=更快路径发现 |
-| 10 | Jordan | 《量子算法概述》(2010s) | 量子算法的分类/速度上限 | Agent的量子vs经典=速度对比 |
-| 11 | Montanaro | 《量子算法》(2016) | 量子Algorithms全面梳理 | Agent的BQP=高效量子可解类 |
-| 12 | Harrow, Hassidim & Lloyd | 《HHL算法》(2009) | 线性方程组的指数加速 | Agent的矩阵运算=HHL加速 |
+| # | 作者 | 著作 | 核心贡献 | Agent映射 |
+|---|------|------|---------|----------|
+| 16 | Shor | 《Polynomial-Time Algorithms for Prime Factorization》 (1994, FOCS) | Shor算法=量子指数量子 | 结构性问题中的指数加速 |
+| 17 | Grover | 《Quantum Mechanics Helps Searching for a Needle in a Haystack》 (1996, PRL) | Grover搜索=O(√N)加速 | Agent的无结构搜索平方加速 |
+| 18 | Deutsch & Jozsa | 《Rapid Solution of Problems by Quantum Computation》 (1992, PRL) | Deutsch-Jozsa=第一个量子算法 | 整体性质判定=量子并行经典不能 |
+| 19 | Bernstein & Vazirani | 《Quantum Complexity Theory》 (1997, SICOMP) | 量子复杂性理论奠基 | BQP类=量子可解=Agent的新计算边界 |
+| 20 | Simon | 《On the Power of Quantum Computation》 (1997, SICOMP) | Simon问题=Shor前奏 | 隐藏子群问题=结构探测 |
+| 21 | Harrow, Hassidim & Lloyd | 《Quantum Algorithm for Linear Systems》 (2009, PRL) | HHL算法=指数加速解线性系统 | Agent的大规模线性系统求解加速 |
+| 22 | Ambainis | 《Quantum Walk Algorithms》 (2003) | 量子行走=搜索加速 | Agent的量子随机游走=更快搜索 |
+| 23 | Jordan | 《Quantum Algorithms Zoo》 (持续更新) | 量子算法编目 | Agent的"工具箱"视角=哪些问题量子加速 |
+| 24 | Aharonov, Jones & Landau | 《Approximating Jones Polynomial》 (2006) | 拓扑不变量量子算法 | 量子=拓扑信息=Agent的拓扑推理 |
+| 25 | van Dam et al. | 《Average-Case Quantum Algorithms》 (2000s) | 平均情形的量子加速 | Agent的现实问题加速=平均情形分析 |
 
-## 量子信息论 (6本)
+## Part 3: 量子信息与量子纠错 (10本)
 
-| 13 | Holevo | 《量子信息论》(2001) | 量子熵/Holevo界/信道容量 | Agent的量子信道容量=经典的两倍 |
-| 14 | Wilde | 《量子信息论》(2013) | 量子Shannon理论的全面 | Agent的信息编码在量子信道中 |
-| 15 | Watrous | 《量子信息理论》(2018) | 量子信息论的严格数学 | Agent的量子状态=密度算子 |
-| 16 | Preskill | 《量子信息讲义》(1998-2023) | 量子信息标准的在线讲义 | Agent的纠缠=量子信息的核心资源 |
-| 17 | Hayashi | 《量子信息》(2006) | 量子信息的全面数学处理 | Agent的量子通信=量子的信道 |
-| 18 | Schumacher | 《量子信息论》(1995) | 量子无噪声编码定理/量子比特 | Agent的信息存储=量子比特 |
+| # | 作者 | 著作 | 核心贡献 | Agent映射 |
+|---|------|------|---------|----------|
+| 26 | Gottesman | 《Stabilizer Codes and Quantum Error Correction》 (1997) | 稳定子码=量子纠错框架 | Agent的容错=冗余编码=纠错 |
+| 27 | Steane | 《Error Correcting Codes in Quantum Theory》 (1996, PRL) | 第一个实用量子纠错码 | Agent的多体冗余=纠错 |
+| 28 | Shor | 《Scheme for Reducing Decoherence in Quantum Computer Memory》 (1995, PRA) | Shor码=第一个量子纠错码 | Agent的"记忆保护"=冗余 |
+| 29 | Calderbank & Shor | 《Good Quantum Error-Correcting Codes Exist》 (1996, PRA) | CSS码=量子纠错的存在性 | Agent的容错=理论基础 |
+| 30 | Preskill | 《Fault-Tolerant Quantum Computation》 (1998) | 量子容错计算 | Agent的容错阈值定理=足够低噪声即可任意精度 |
+| 31 | Aharonov & Ben-Or | 《Fault-Tolerant QC with Constant Error》 (1997, STOC) | 恒定错误容错量子计算 | Agent的错误容忍=恒错率可容忍 |
+| 32 | Bennett & Wiesner | 《Quantum Superdense Coding》 (1992, PRL) | 量子超密编码 | Agent的2bit/1qubit=信息传输加倍 |
+| 33 | Bennett et al. | 《Teleporting an Unknown Quantum State》 (1993, PRL) | 量子隐形传态 | Agent的"状态传输"=信息转移 |
+| 34 | Ekert | 《Quantum Cryptography Based on Bell's Theorem》 (1991, PRL) | E91量子密钥分发 | Agent的安全通信=物理定律保证 |
+| 35 | Bennett & Brassard | 《Quantum Cryptography: BB84》 (1984, IEEE) | BB84=第一个QKD | Agent的"不可窃听通信" |
 
-## 量子纠错与容错 (6本)
+## Part 4: 量子物理实现与硬件 (8本)
 
-| 19 | Shor | 《量子纠错方案》(1995) | 第一个量子纠错码/9比特码 | Agent的量子内存=纠错保护 |
-| 20 | Steane | 《量子纠错》(1996) | Steane码/容错量子计算 | Agent的容错=纠错阈值 |
-| 21 | Kitaev | 《拓扑量子计算》(1997-2003) | 任意子/拓扑量子计算/表面码 | Agent的拓扑保护=不受局域噪声 |
-| 22 | Fowler et al. | 《表面码》(2012) | 表面码的实现/阈值 | Agent的表面码=最实用纠错方案 |
-| 23 | Lidar & Brun | 《无退相干子空间》(2013) | 纠错的另一种思路 | Agent的"特定任务"无噪声 |
-| 24 | Raussendorf & Briegel | 《单向量子计算》(2001) | 簇态量子计算/测量基 | Agent的测量=计算 |
+| # | 作者 | 著作 | 核心贡献 | Agent映射 |
+|---|------|------|---------|----------|
+| 36 | Devoret & Schoelkopf | 《Superconducting Circuits for Quantum Information》 (2013, Science) | 超导量子比特 | 物理实现=超导=宏观量子相干 |
+| 37 | Clarke & Wilhelm | 《Superconducting Quantum Bits》 (2008, Nature) | 超导量子比特综述 | Agent的物理载体=不同实现优劣 |
+| 38 | Monroe & Kim | 《Scaling the Ion Trap Quantum Processor》 (2013, Science) | 离子阱量子计算 | 离子阱=最成熟的量子比特之一 |
+| 39 | Ladd et al. | 《Quantum Computers》 (2010, Nature) | 量子计算物理实现综述 | 所有实现方案比较=Agent的载体选择 |
+| 40 | Awschalom et al. | 《Quantum Technologies with Diamond》 (2013) | NV色心量子技术 | 固态量子比特=室温可操作 |
+| 41 | O'Brien | 《Optical Quantum Computing》 (2007, Science) | 光子量子计算 | 光子=低退相干但难集成 |
+| 42 | DiVincenzo | 《The Physical Implementation of QC》 (2000) | DiVincenzo五标准 | Agent的硬件可行性=五大判据 |
+| 43 | Loss & DiVincenzo | 《Quantum Computation with Quantum Dots》 (1998, PRA) | 量子点量子比特 | 固态可扩展方案 |
 
-## 量子复杂性 (4本)
+## Part 5: 量子前沿 (7本)
 
-| 25 | Deutsch | 《量子论/丘奇-图灵原理》(1985) | 量子计算机图灵机/Deutsch-Jozsa | Agent的"可计算"=物理可实现 |
-| 26 | Bernstein & Vazirani | 《量子复杂性理论》(1993/97) | BQP的定义/傅里叶采样 | Agent的BQP=指数加速的边界 |
-| 27 | Aaronson | 《量子计算与去相干》(2004-13) | 量子优势的局限/去相干/黑洞 | Agent的量子不可能性=去相干 |
-| 28 | Watrous | 《量子复杂性讲义》(2010s) | QMA/QIP的复杂性 | Agent的量子证明=量子交互证明 |
-
-## 量子机器学习 (6本)
-
-| 29 | Biamonte et al. | 《量子机器学习》(2017) | 量子ML的全面梳理 | Agent的量子学习=指数加速可能 |
-| 30 | Schuld & Petruccione | 《量子机器学习导论》(2018) | QML的实践入门 | Agent的量子核方法=高维特征空间 |
-| 31 | Wittek | 《量子机器学习》(2014) | QML的计算实现 | Agent的量子强化学习=加速 |
-| 32 | Lloyd, Mohseni & Rebentrost | 《量子主成分分析》(2014) | 量子PCA/量子SVM的加速 | Agent的量子降维=对数加速 |
-| 33 | Harrow | 《量子计算的近期的应用》(2020) | NISQ时代的量子优势 | Agent的近期量子=噪声中尺度 |
-| 34 | Preskill | 《量子优势》(2018-2023) | 容错之前的量子优势 | Agent的NISQ=噪声+50-1000量子比特 |
-
-## 量子硬件 (6本)
-
-| 35 | Devoret & Schoelkopf | 《超导量子比特》(2000s) | 超导量子比特的物理实现 | Agent的量子比特最小=transmon |
-| 36 | Wineland & Monroe | 《离子阱量子计算》(2000s) | 离子阱的高保真度门 | Agent的量子门=99.9% fidelity |
-| 37 | Ladd et al. | 《量子计算机》(2010) | 各种量子计算方案的综述 | Agent的不同硬件方案对比 |
-| 38 | DiVincenzo | 《量子计算的物理实现》(2000) | DiVincenzo标准/硬件标准 | Agent的量子可用性=5条标准 |
-| 39 | Nakamura et al. | 《量子比特的相干控制》(1999) | 第一个超导量子比特 | Agent的第一代量子芯片 |
-| 40 | Arute et al. | 《谷歌量子霸权》(2019) | 53比特Sycamore/量子霸权实验 | Agent的量子=超越经典(特定任务) |
-
-## 量子通信与密码 (6本)
-
-| 41 | Bennett & Brassard | 《BB84协议》(1984) | 第一个量子密钥分发协议 | Agent的量子通信=不可窃听 |
-| 42 | Ekert | 《E91协议》(1991) | 基于纠缠的量子密码 | Agent的纠缠=量子通信的资源 |
-| 43 | Gisin et al. | 《量子密码》(2002) | QKD的应用综述 | Agent的量子安全=信息论安全 |
-| 44 | Pirandola et al. | 《量子网络》(2018-2020) | 量子中继/量子网络 | Agent的量子互联网=纠缠交换 |
-| 45 | Kimble | 《量子互联网》(2008) | 量子网络的蓝图 | Agent的量子网络=分布纠缠 |
-| 46 | Wehner, Elkouss & Hanson | 《量子互联网》(2018) | 量子互联网的应用 | Agent的量子通信=安全+时钟+传感 |
-
-## 哲学与展望 (4本)
-
-| 47 | Deutsch | 《现实的结构》(1997) | 量子计算/多世界/知识论 | Agent的量子哲学=计算=物理 |
-| 48 | Deutsch | 《无限的开端》(2011) | 知识创造/问题/解释 | Agent的知识=量子计算创造 |
-| 49 | Aaronson | 《量子计算与民主》(2013) | 量子计算的社会/哲学/逻辑 | Agent的量子伦理学=量子滥用 |
-| 50 | Vazirani | 《量子与经典计算》(2010s) | 量子vs经典的速度界限的彻底分析 | Agent的"不可能"=量子界限 |
+| # | 作者 | 著作 | 核心贡献 | Agent映射 |
+|---|------|------|---------|----------|
+| 44 | Wittek | 《Quantum Machine Learning》 (2014) | 量子ML综合 | Agent的量子增强学习=量子核方法 |
+| 45 | Schuld & Petruccione | 《Supervised Learning with Quantum Computers》 (2018) | 量子监督学习 | Agent的量子分类器=量子核+变分电路 |
+| 46 | Biamonte et al. | 《Quantum Machine Learning》 (2017, Nature) | 量子ML前景与限制 | 量子ML≠所有经典都加速 |
+| 47 | Dunjko & Briegel | 《Machine Learning & Quantum Computing》 (2018, RMP) | 量子ML全面综述 | Agent的量子-经典混合范式 |
+| 48 | Degen, Reinhard & Cappellaro | 《Quantum Sensing》 (2017, RMP) | 量子感知/测量 | Agent的量子传感器=超精测量 |
+| 49 | Arndt, Juffmann & Vedral | 《Quantum Physics Meets Biology》 (2009) | 量子生物学 | 自然Agent的量子利用 |
+| 50 | Lloyd | 《Programming the Universe》 (2006) | 宇宙=量子计算机 | 终极Agent世界观:计算=存在 |

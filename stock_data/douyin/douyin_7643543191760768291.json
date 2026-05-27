@@ -1,0 +1,47 @@
+{
+  "url": "https://www.douyin.com/video/7643543191760768291",
+  "video_id": "7643543191760768291",
+  "success": true,
+  "title": "新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门 - 抖音",
+  "description": "新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门",
+  "author": "阿森编程日记（AI自动化）",
+  "author_id": "82146917383",
+  "sec_uid": "MS4wLjABAAAA5fbcBF9dVIPs-zhXQjG3UHRRA-TWeeSDBwsY8j3wQTDnO665ROFlAptIBoqEW9Dz",
+  "stats": {
+    "digg_count": 621,
+    "comment_count": 9,
+    "share_count": 61,
+    "collect_count": 602
+  },
+  "stats_display": {},
+  "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n4\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\ncodex\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n投稿\n\n00:04 / 01:20\n章节要点：共4个\n下一章\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n作者声明：内容由 AI 生成\n章节要点\n新手使用Claude Code时容易遇到的5个翻车点，包括开新对话时Claude Code的猜测不准确、模式选择不当、盲目使用Auto或YOLO模式、长对话不/compact等。为避免这些问题，建议新手先跑/init生成专属记忆档案，明确Plan、Edit、Ask模式的使用，手动确认每一步，以及定期/compact长对话。\n00:05\n开新对话\n\nClaude Code每次开新对话都从零猜项目，导致风格不一致、调用错文件，建议新手跑/init生成专属记忆档案。\n\n00:21\n模式选择\n\n分不清Plan、Edit、Ask三大模式，建议复杂任务先Plan再Edit。\n\n00:33\nAuto或YOLO模式\n\n盲目开Auto或YOLO模式，建议新手手动确认每一步。\n\n00:45\n长对话\n\n长对话不/compact，导致Token消耗快。\n\n新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门\n621\n9\n602\n61\n举报\n发布时间：2026-05-25 07:00\n全部评论\n留下你的精彩评论吧\n大家都在搜：\ncodex接入deepseek\n亮\n...\n新手就不应该用claude code\n1天前·湖南\n\n0\n\n分享\n回复\n是多梦呀\n...\n笑死了，回滚都难，你是程序员吗？\n1天前·河南\n\n1\n\n分享\n回复\n抓辅助系的打野\n...\n低价token可以了解一下\n8小时前·山东\n\n0\n\n分享\n回复\n阿森编程日记（AI自动化）\n作者\n...\n来\n4小时前·福建\n\n0\n\n分享\n回复\nғᴏʀᴇᴠᴇʀ\n...\nclaude code和codex同时接入dpskv4 实测codex比claude code好用\n1天前·安徽\n\n1\n\n分享\n回复\n展开3条回复\n暂时没有更多评论\n阿森编程日记（AI自动化）\n\n粉丝2.2万获赞20.6万\n\n已关注\n推荐视频\n00:15\n跑算力不局限于显卡，Macmini算力集群整机超低功耗设计，远低于传统GPU服务器，无需专业机房散热设备，长期运营成本锐减，静音低噪运行，部署环境不受限制。搭载全新M系列旗舰芯片，NPU高能加持，集群聚合超大AI算力，统一内存互通调度，告别数据传输损耗，流畅运行各类大参数模型，推理速度高效稳定。#算力#Ai#英伟达#黄仁勋#token\n1.5万\n听风八百遍\n03:50\n三分钟搞定Claude Code & DeepSeek V4 小白从零到一配置 Claude Code，并在配置好 DeepSeek V4 Pro 模型\n\n这期把完整流程跑了一遍：先准备运行环境，再完成 Claude Code 配置，然后检查本地测试，最后验证当前模型是否已经生效。\n新手最容易卡住的地方，通常不是工具本身，而是环境没装好、配置层级写错、账号权限没确认，或者凭证没有安全保存。\n如果你也刚开始学 Vibe Coding，想把 AI 编程工具真正用到项目里，可以先从这种完整流程开始练。\n#claudecode #deepseek #vibecoding #ai#怀钦汽水星愿卡\n3063\nFredTalk\n00:5",
+  "chapter_content": "新手使用Claude Code时容易遇到的5个翻车点，包括开新对话时Claude Code的猜测不准确、模式选择不当、盲目使用Auto或YOLO模式、长对话不/compact等。为避免这些问题，建议新手先跑/init生成专属记忆档案，明确Plan、Edit、Ask模式的使用，手动确认每一步，以及定期/compact长对话。",
+  "chapter_list": [
+    {
+      "desc": "开新对话",
+      "detail": "Claude Code每次开新对话都从零猜项目，导致风格不一致、调用错文件，建议新手跑/init生成专属记忆档案。",
+      "timestamp": 5000,
+      "url": "https://p3-pc-sign.douyinpic.com/obj/tos-cn-p-0015/5ad84b8730c94336829ec4439ea0542d?lk3s=138a59ce&x-expires=1779832800&x-signature=sfy%2FRwGJWPz%2B0nRuIczAIJvGBO4%3D&from=327834062"
+    },
+    {
+      "desc": "模式选择",
+      "detail": "分不清Plan、Edit、Ask三大模式，建议复杂任务先Plan再Edit。",
+      "timestamp": 21000,
+      "url": "https://p9-pc-sign.douyinpic.com/obj/tos-cn-p-0015/740e5bd9b27b4407bfaecc13392c93d0?lk3s=138a59ce&x-expires=1779832800&x-signature=7a8JuPzDAp%2B0qif6a6XFuBv0TpM%3D&from=327834062"
+    },
+    {
+      "desc": "Auto或YOLO模式",
+      "detail": "盲目开Auto或YOLO模式，建议新手手动确认每一步。",
+      "timestamp": 33000,
+      "url": "https://p3-pc-sign.douyinpic.com/obj/tos-cn-p-0015/76e9a583938e4704ba3129f616ee25c0?lk3s=138a59ce&x-expires=1779832800&x-signature=vBKpDiO61FySzVxzaw21BE9lBm8%3D&from=327834062"
+    },
+    {
+      "desc": "长对话",
+      "detail": "长对话不/compact，导致Token消耗快。",
+      "timestamp": 45000,
+      "url": "https://p9-pc-sign.douyinpic.com/obj/tos-cn-p-0015/589ca9a2f7b74f4a884fb84d9ea36d3f?lk3s=138a59ce&x-expires=1779832800&x-signature=Gh6SDm88U1AhoI%2B5vplfaFq9W3g%3D&from=327834062"
+    }
+  ],
+  "caption": "不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git。Claude Code新手最容易踩的5个坑，一次性帮你避开，少走半年弯路。#claudecode #AI #AI工具 #AI编程 #编程入门",
+  "error": ""
+}

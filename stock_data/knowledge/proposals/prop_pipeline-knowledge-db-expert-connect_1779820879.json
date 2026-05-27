@@ -1,0 +1,24 @@
+{
+  "proposal_id": "prop_pipeline-knowledge-db-expert-connect_1779820879",
+  "gap_id": "pipeline-knowledge-db-expert-connect",
+  "gap_title": "Knowledge DB 未接入 Expert 管线",
+  "priority": "P0",
+  "source": "网页内容",
+  "source_title": "Chroma Context-1: 20B自编辑搜索Agent — 自动分解查询+多跳检索",
+  "source_url": "https://www.trychroma.com/research/context-1",
+  "relevance": 5,
+  "summary": "20B参数自编辑搜索Agent: 分解查询为子查询→迭代搜索→选择性编辑自身上下文释放容量。 搜索与生成分离, 10倍推理速度。 可作retrieval subagent用。",
+  "pattern": "inject_knowledge",
+  "implied_changes": [
+    "stock_analysis/experts/base.py",
+    "stock_analysis/experts/lead.py"
+  ],
+  "implementation_hint": "在 expert base.py 的 analyze() 中增加 knowledge_query(gap_context) 调用，将 knowledge_db.search_knowledge() 结果注入 prompt 上下文。lead.py 中在调度各 expert 前先收集 knowledge_context 并传参。",
+  "test_files": [
+    "stock_analysis/tests/test_knowledge_db.py"
+  ],
+  "status": "proposed",
+  "created_at": "2026-05-27T02:41:19.109666",
+  "executed_at": null,
+  "execution_result": null
+}

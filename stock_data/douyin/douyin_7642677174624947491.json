@@ -1,0 +1,33 @@
+{
+  "url": "https://www.douyin.com/video/7642677174624947491",
+  "video_id": "7642677174624947491",
+  "success": true,
+  "title": "让你的Agent 自进化的保姆级教程 本期围绕 Claude Code Skills 的工程化落地，完整跑通两个可复用项目： ①Skills 蒸馏——把用户与 Agent 的真实对话自动识别、按 Anthropic 官方 Skills 范式生成结构化 skill 文档； ②Skills 自进化——给定初始 skill + 一组测试任务，让 Agent 自行迭代修正 skill 内容直到准确率达标。 - 抖音",
+  "description": "让你的Agent 自进化的保姆级教程 本期围绕 Claude Code Skills 的工程化落地，完整跑通两个可复用项目：\n①Skills 蒸馏——把用户与 Agent 的真实对话自动识别、按 Anthropic 官方 Skills 范式生成结构化 skill 文档；\n②Skills 自进化——给定初始 skill + 一组测试任务，让 Agent 自行迭代修正 skill 内容直到准确率达标。\n视频同步拆解 Skills 装载后 Agent 性能衰减的三个常见原因（上下文稀释 / 技能冲突 / 中间产物堆积），并给出 Harness 驾驭工程的落地路径。完整课件、双项目源码、可复刻 prompt 模板在评论区。",
+  "author": "九天Hector",
+  "author_id": "63043185654",
+  "sec_uid": "MS4wLjABAAAAWEUIAEwAyU82OSjxhmWzZvvgJfiHNupEvbwwC7Dix6TxJjWwjp3FZ-ZDtGKDZYJ4",
+  "stats": {
+    "digg_count": 269,
+    "comment_count": 6,
+    "share_count": 31,
+    "collect_count": 169
+  },
+  "stats_display": {},
+  "page_text_snippet": "开启读屏标签\n读屏标签已关闭\n精选\n推荐\n搜索\n关注\n朋友\n2\n我的\n直播\n放映厅\n短剧\n小游戏\n下载抖音精选\n2026 © 抖音\n京ICP备16016397号-3\n京公网安备 11000002002046号\n广播电视节目制作经营许可证 （京）字第11313号\n增值电信业务经营许可证 京B2-20170846\n网络文化经营许可证 京网文〔2025〕0181-061号\n互联网宗教信息服务许可证 京（2025）0000017\n药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号\n互联网新闻信息服务许可证 11220230001\n网络谣言曝光台\n网上有害信息举报\n违法和不良信息举报 400-140-2108\n算法推荐专项举报 sfjubao@bytedance.com\n网络内容从业人员违法违规行为举报 feedback@douyin.com\n体育饭圈专项举报 tyfq@bytedance.com\n广告投放\n用户服务协议\n隐私政策\n账号找回\n联系我们\n加入我们\n营业执照\n友情链接\n站点地图\n下载抖音\n抖音电商\nclaude code hermes\n搜索\n\n充钻石\n\n客户端\n\n壁纸\n\n通知\n\n私信\n\n99+\n\n投稿\n\n00:05 / 01:48:15\n发送\n当前为静音，是否要打开声音？\n打开声音\n倍速\n智能\n清屏\n连播\n展开\n让你的Agent 自进化的保姆级教程 本期围绕 Claude Code Skills 的工程化落地，完整跑通两个可复用项目：①Skills 蒸馏——把用户与 Agent 的真实对话自动识别、按 Anthropic 官方 Skills 范式生成结构化 skill 文档；②Skills 自进化——给定初始 skill + 一组测试任务，让 Agent 自行迭代修正 skill 内容直到准确率达标。视频同步拆解 Skills 装载后 Agent 性能衰减的三个常见原因（上下文稀释 / 技能冲突 / 中间产物堆积），并给出 Harness 驾驭工程的落地路径。完整课件、双项目源码、可复刻 prompt 模板在评论区。\n269\n6\n169\n31\n举报\n发布时间：2026-05-22 19:30\n全部评论\n留下你的精彩评论吧\n大家都在搜：\nClaude Skills手册内容\n焱焱\n...\nskills就是workflow吧\n4天前·北京\n\n0\n\n分享\n回复\n刘小七\n...\n九天老师，你这个视频太有用了\n作者赞过\n4天前·浙江\n\n1\n\n分享\n回复\n九天Hector\n作者\n...\n完整课件、双项目源码、可复刻 prompt 模板在主页粉丝群\n2天前·北京\n\n0\n\n分享\n回复\n贪吃的邦尼\n...\n跨团队服用？我给你留正确的？\n4天前·四川\n\n0\n\n分享\n回复\n婉月儿在哪儿\n...\n完整教程双项目源码、可复刻 prompt 模板在哪里\n12小时前·北京\n\n0\n\n分享\n回复\n九天Hector\n作者\n...\n主页粉丝群\n12小时前·北京\n\n0\n\n分享\n回复\n暂时没有更多评论\n九天Hector\n\n粉丝2.3万获赞7.6万\n\n关注\n推荐视频\n00:38\nGitHub热榜第一的开源项目！最全的AI应用合集！ #github #AI #开源项目\n692\n数字生命雷恩加尔\n25:53\nClaude Code 最佳实践 本次Anthropic的演讲聚焦于AI编程助手Claude Code，深入解析其内部运作机制与最佳使用方式，并通过实际案例演示，帮助观众掌握最大化效率、充分利用其功能的最佳实践。\n#anthropic #claude #ai\n201\n木漏れ日\n00:32\n网络测试工具箱V8.3更新啦！ 网段扫描结果颜色调整、调整DNS优先速度测试、新增数据包抓包导入工具Ai分析、新增DHCP服务、重构Ai使用Skills调用工具，为网工、弱电等运维人员提高工作效率的网络神器！#网络工程师 #网工 #弱电施工 #弱电工程 #安防监控\n4004\n运维杂谈\n00:55\n零基础学会大模型最快的学习路线 #拒绝废话 #大模型 #AI #程序员 #Openclaw\n6183\n大模型老陈（主页简介）\n02:13\n利用claudecode和obsidian解析它的源码框架 结合ai对源码解析，做成清晰的架构以及harness工程解析可供agent读取来，也可以自己用于学习#代码 #claudecode\n2826\n不开心\n00:20\n这是一个免费的AI资源网站\n#ai提示词 #智能体 #ai编程 #网站推荐\n8696\nAD同学\n07:19\n开源工具！！！怎么爬网站 请勿违规！！！#网页设计#网页交互#软件测试工程师 #视频教程 #GitHub\n419\nQaq\n01:21\nOpenClaw多agent协作 通过职能划分，优化agent能力。\n打造",
+  "error": "",
+  "assessment": {
+    "tier": "HIGH",
+    "score": 6,
+    "matched_keywords": [
+      "claude code",
+      "agent",
+      "harness",
+      "skill",
+      "工程",
+      "上下文"
+    ]
+  },
+  "creator_label": "九天Hector",
+  "scanned_at": "2026-05-27"
+}

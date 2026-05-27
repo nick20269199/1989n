@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_tool-agent-self-evolution-pattern_1779821268",
+  "gap_id": "tool-agent-self-evolution-pattern",
+  "gap_title": "Agent 自进化模式 — 从九天Hector Skills自进化工程",
+  "priority": "P2",
+  "source": "网页内容",
+  "source_title": "Continuous Learning System v2.1 — PreToolUse/PostToolUse钩子→原子本能→进化管线",
+  "source_url": "https://deepwiki.com/affaan-m/everything-claude-code/8-continuous-learning-system",
+  "relevance": 5,
+  "summary": "Hook捕获会话→背景Haiku分析→原子本能(confidence 0.3-0.85)→/evolve命令聚类为skills。v2核心转变: PreToolUse/PostToolUse钩子+原子本能替代完整技能。可直接用于SEL进化引擎。",
+  "pattern": "self_evolve",
+  "implied_changes": [
+    "stock_analysis/sel_evolve_op.py",
+    "stock_analysis/sel_evolve_read.py"
+  ],
+  "implementation_hint": "sel_evolve_op.py 中增加自测循环：知识注入后 → 用测试任务验证 → 不达标继续迭代。与 prospector 联动：高价值发现自动触发一次改进循环。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T02:47:48.688602",
+  "executed_at": null,
+  "execution_result": null
+}

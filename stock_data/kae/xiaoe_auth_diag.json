@@ -1,0 +1,10 @@
+{
+  "cookies_count": 5,
+  "h5_requests": [
+    "https://appzsnu8fxf7905.h5.xiaoeknow.com/v3/course/alive/l_6a15546fe4b0694c5bca44b0?type=2",
+    "https://appzsnu8fxf7905.h5.xiaoeknow.com/_alive/file_tag_info?system_name=live_h5&page_name=live_h5&from_client=live_h5&gray_app_id=appzsnu8fxf7905&deploy_env=pro&version=v3",
+    "https://alivereport.xiaoeknow.com/report/alive_information?kpi_topic=alive:enter&kpi_key=start_load&kpi_data_type=1&kpi_client=1&trace_id=xa7nFOJYdYHIueJTY3dFrnKYb1TPGQxK",
+    "https://alivereport.xiaoeknow.com/report/alive_information?trace_id=xa7nFOJYdYHIueJTY3dFrnKYb1TPGQxK&kpi_topic=alive:staticResourceLoadV3&kpi_key=load_start&kpi_client=1&alive_id=l_6a15546fe4b0694c5bca44b0&app_id=appzsnu8fxf7905&params[env]=pro&params[is_downgrade]=false&params[retry_count]=0&params[resource_url]=&params[err_msg]=&params[ko_token]=",
+    "https://appzsnu8fxf7905.h5.xiaoeknow.com/p/t/free/v1/basic-platform/h5_basic/login/auth?redirect_url=https%3A%2F%2Fappzsnu8fxf7905.h5.xiaoeknow.com%2Fv3%2Fcourse%2Falive%2Fl_6a15546fe4b0694c5bca44b0%3Ftype%3D2"
+  ]
+}

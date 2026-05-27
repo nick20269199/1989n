@@ -1,0 +1,5081 @@
+{
+  "nickname": "九天Hector",
+  "sec_uid": "MS4wLjABAAAAWEUIAEwAyU82OSjxhmWzZvvgJfiHNupEvbwwC7Dix6TxJjWwjp3FZ-ZDtGKDZYJ4",
+  "scanned_at": "2026-05-27T01:43:30.603987",
+  "total_videos": 295,
+  "videos_with_chapters": 11,
+  "videos": [
+    {
+      "aweme_id": "7643757516882496808",
+      "desc": "手把手教你把 Gbrain 装进Claude Code。 > 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LLM 长期记忆项目，完整跑通从安装初始化到 MCP 集成的工业级落地全链路。视频拆四件事：①为什么 RAG / Graph RAG 改了 4 版召回精度还是掉、Gbrain\"按主题归档结构化笔记\"的路径凭什么解决；②dream 周期夜间整理实际配置——实体提取/主题关联/冲突仲裁/过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0/Letta 横向对比表，评论区留言资料，我会挨个回复哈～#Gbrain   #Agent #程序员 #抖音前沿科技首发计划 #AI应用教程",
+      "caption": "> 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LLM 长期记忆项目，完整跑通从安装初始化到 MCP 集成的工业级落地全链路。视频拆四件事：①为什么 RAG / Graph RAG 改了 4 版召回精度还是掉、Gbrain\"按主题归档结构化笔记\"的路径凭什么解决；②dream 周期夜间整理实际配置——实体提取/主题关联/冲突仲裁/过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0/Letta 横向对比表，评论区留言资料，我会挨个回复哈～#Gbrain   #Agent #程序员 #抖音前沿科技首发计划 #AI应用教程",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1779700990,
+      "duration": 9540667,
+      "stats": {
+        "digg_count": 45,
+        "comment_count": 4,
+        "share_count": 7,
+        "collect_count": 39
+      }
+    },
+    {
+      "aweme_id": "7642677174624947491",
+      "desc": "让你的Agent 自进化的保姆级教程 本期围绕 Claude Code Skills 的工程化落地，完整跑通两个可复用项目： ①Skills 蒸馏——把用户与 Agent 的真实对……版本过低，升级后可展示全部信息",
+      "caption": "本期围绕 Claude Code Skills 的工程化落地，完整跑通两个可复用项目：\n①Skills 蒸馏——把用户与 Agent 的真实对话自动识别、按 Anthropic 官方 Skills 范式生成结构化 skill 文档；\n②Skills 自进化——给定初始 skill + 一组测试任务，让 Agent 自行迭代修正 skill 内容直到准确率达标。\n视频同步拆解 Skills 装载后 Agent 性能衰减的三个常见原因（上下文稀释 / 技能冲突 / 中间产物堆积），并给出 Harness 驾驭工程的落地路径。完整课件、双项目源码、可复刻 prompt 模板在评论区。",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1779449456,
+      "duration": 6495038,
+      "stats": {
+        "digg_count": 270,
+        "comment_count": 6,
+        "share_count": 31,
+        "collect_count": 169
+      }
+    },
+    {
+      "aweme_id": "7641191826501700916",
+      "desc": "rm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜底，看完你也能搭建企业级安全防护，告别代码裸奔，做放心交付的 AI 全栈开发者！#AI #agent #全栈开发者 #程序员 #大模型安全",
+      "caption": "rm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜底，看完你也能搭建企业级安全防护，告别代码裸奔，做放心交付的 AI 全栈开发者！#AI #agent #全栈开发者 #程序员 #大模型安全",
+      "chapter_content": "CloudCode的五层安全防御包括字符串拦截、正则过滤、白名单放行、独立AI审查和人工兜底。这些措施旨在保护大模型免受恶意指令、后门漏洞等攻击。此外，CloudCode还提供企业定制版本、沙河环境和断路器机制，以及广泛应用双AI对抗策略来提升安全性和效果。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "安全架构",
+          "detail": "CloudCode安全架构包括字符串拦截、正则过滤、白名单放行、独立AI审查、人工兜底五层。",
+          "timestamp": 23000
+        },
+        {
+          "desc": "审查流程",
+          "detail": "审查流程包括规则、风险、白名单、大模型分类，逐层筛选。",
+          "timestamp": 182000
+        },
+        {
+          "desc": "核心防御",
+          "detail": "核心防御是防御CMD和bash命令行攻击，通过五层对抗搭建安全防护网络。",
+          "timestamp": 314000
+        },
+        {
+          "desc": "定制化开发",
+          "detail": "提供企业定制版本，允许企业设置防御措施，有五层权限设计。",
+          "timestamp": 369000
+        },
+        {
+          "desc": "沙河环境",
+          "detail": "提供沙河环境，提供隔离的独立虚拟环境，有默认安全检查。",
+          "timestamp": 426000
+        },
+        {
+          "desc": "断路器机制",
+          "detail": "断路器机制用于识别真实用户和蒸馏过程，防止生成有毒训练数据。",
+          "timestamp": 458000
+        },
+        {
+          "desc": "双AI对抗",
+          "detail": "双AI对抗策略贯穿CloudCode各方面，提升作品质量。",
+          "timestamp": 636500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1779103617,
+      "duration": 768162,
+      "stats": {
+        "digg_count": 49,
+        "comment_count": 1,
+        "share_count": 1,
+        "collect_count": 29
+      }
+    },
+    {
+      "aweme_id": "7639689500695776552",
+      "desc": "AI写代码超万行就失忆？教你破局知识熵增！ AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识熵增问题。Cloud Code 用两种多 Agent 架构 + 共享缓存省 Token 技术，从根源解决问题，详解 Cloud Code 如何用 SUB agent 工具调用模式 和 agent teams 队长 - 队员模式，配合全局共享缓存，把多 Agent 成本降低 80%，让大型代码项目不混乱、不崩盘、效率更高。同时还透露了它未来主动式 Agent、技能渐进显示等重磅功能，帮小白快速掌握 AI 编程核心，告别屎山、进阶大厂。 #cloud #ai编程 #程序员 #抖音前沿科技首发计划 #AI新星计划",
+      "caption": "AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识熵增问题。Cloud Code 用两种多 Agent 架构 + 共享缓存省 Token 技术，从根源解决问题，详解 Cloud Code 如何用 SUB agent 工具调用模式 和 agent teams 队长 - 队员模式，配合全局共享缓存，把多 Agent 成本降低 80%，让大型代码项目不混乱、不崩盘、效率更高。同时还透露了它未来主动式 Agent、技能渐进显示等重磅功能，帮小白快速掌握 AI 编程核心，告别屎山、进阶大厂。 #cloud #ai编程 #程序员 #抖音前沿科技首发计划 #AI新星计划",
+      "chapter_content": "Cloud Code通过多Agent架构和共享缓存技术，解决AI写代码时的知识熵增问题。其采用SUB agents模式和agent teams模式，实现高效的代码生成。未来，Cloud Code将推出主动式Agent、循环引擎等功能。课程介绍了大模型Agent开发实战课、open club技术实战课和web coding AI编程实战课，帮助学员掌握AI编程核心。",
+      "chapter_list": [
+        {
+          "desc": "知识熵增问题",
+          "detail": "AI写代码时，随着代码量增加，会出现知识熵增问题，导致代码混乱、逻辑错误等。",
+          "timestamp": 4000
+        },
+        {
+          "desc": "Cloud Code的应...",
+          "detail": "Cloud Code采用多Agent架构，包括SUB agents模式和agent teams模式，以应对知识熵增。",
+          "timestamp": 103000
+        },
+        {
+          "desc": "两种运行模式",
+          "detail": "SUB agents模式下，主Agent可调用SUB Agent，两者不共享上下文；agent teams模式下，所有Agent平等，主Agent通过对话调用子Agent。",
+          "timestamp": 118000
+        },
+        {
+          "desc": "共享缓存技术",
+          "detail": "Cloud Code通过共享缓存技术，减少Agent消耗，提高效率。",
+          "timestamp": 462500
+        },
+        {
+          "desc": "未来功能规划",
+          "detail": "未来功能规划包括主动式Agent、循环引擎、成本感知让步、skills渐近显示等。",
+          "timestamp": 770500
+        },
+        {
+          "desc": "源码解读与架构模式",
+          "detail": "Cloud Code源码可在本地部署，但需访问远程模型服务。课程介绍了八个架构模式，可供学习和借鉴。",
+          "timestamp": 1105000
+        },
+        {
+          "desc": "课程介绍",
+          "detail": "课程包括大模型Agent开发实战课、open club技术实战课和web coding AI编程实战课。",
+          "timestamp": 1256500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778753829,
+      "duration": 1965499,
+      "stats": {
+        "digg_count": 13,
+        "comment_count": 5,
+        "share_count": 0,
+        "collect_count": 9
+      }
+    },
+    {
+      "aweme_id": "7638932946937744655",
+      "desc": "ClaudeCode 最小可用 Agent：30 行有效代码，再加 4 条规则，为什么就能让 Agent 自己拆任务、自己往下执行？如果你正想做 AI 编程助手、自动化流程或私有 ……版本过低，升级后可展示全部信息",
+      "caption": "ClaudeCode 最小可用 Agent：30 行有效代码，再加 4 条规则，为什么就能让 Agent 自己拆任务、自己往下执行？如果你正想做 AI 编程助手、自动化流程或私有 Agent，这条会把底层思路一次讲明白，让你的的工作效率提升不止一倍！#Cloud #agent #ai编程 #Openclaw #程序员",
+      "chapter_content": "CloudCode Agent的核心架构包括大模型、cmd命令行工具和agent loop。为了解决上下文增加、失忆和安全等问题，CloudCode采用了约束工作台、记忆管理、工具接口和安全行为边界约束等技术。同时，课程还推荐了大模型Agent开发实战课、OpenClaw技术实战课和Web Coding AI编程实战课，帮助学员深入学习和实践相关技术。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "当代Agent的核心架构",
+          "detail": "当代Agent的核心架构包括大模型、cmd命令行工具和agent loop。",
+          "timestamp": 54000
+        },
+        {
+          "desc": "问题与挑战",
+          "detail": "基于loop和命令行为核心工具的Agent体系面临上下文增加、失忆和安全等问题。",
+          "timestamp": 295000
+        },
+        {
+          "desc": "CloudCode的解决...",
+          "detail": "CloudCode通过约束工作台、记忆管理、工具接口和安全行为边界约束来解决问题。",
+          "timestamp": 584000
+        },
+        {
+          "desc": "课程推荐",
+          "detail": "推荐了大模型Agent开发实战课、OpenClaw技术实战课和Web Coding AI编程实战课。",
+          "timestamp": 2364500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1778577681,
+      "duration": 3087047,
+      "stats": {
+        "digg_count": 86,
+        "comment_count": 2,
+        "share_count": 5,
+        "collect_count": 72
+      }
+    },
+    {
+      "aweme_id": "7637467914974678287",
+      "desc": "cloud code 架构解读完整版 第一部分架构长什么样？\n第二部分怎样去引导agent长期稳定高效的输出内容，Harness engineering的四个约束：\n（1）code上下文越来越大，agent越来越迟，怎样做上下文工程管理\n（2）如何修改agent记忆\n（3）如何做安全约束\n（4）如何做成本约束\n#code #cloud #openclow #agent #ai编程",
+      "caption": "第一部分架构长什么样？\n第二部分怎样去引导agent长期稳定高效的输出内容，Harness engineering的四个约束：\n（1）code上下文越来越大，agent越来越迟，怎样做上下文工程管理\n（2）如何修改agent记忆\n（3）如何做安全约束\n（4）如何做成本约束\n#code #cloud #openclow #agent #ai编程",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1778236581,
+      "duration": 5678348,
+      "stats": {
+        "digg_count": 879,
+        "comment_count": 12,
+        "share_count": 144,
+        "collect_count": 994
+      }
+    },
+    {
+      "aweme_id": "7634088729740676367",
+      "desc": "Hermes怎样越用越快？超详细实操教程来了！ #热点 #Hermes #Agent #编程入门 #程序员",
+      "caption": "#热点 #Hermes #Agent #编程入门 #程序员",
+      "chapter_content": "Hermes通过Skill自主进化和EGPA进化引擎不断提高性能。Skill是Hermes的数字资产包，可帮助其更好地完成任务。EGPA进化引擎用于优化Skill和其他提示词。课程介绍了大模型技术、AI开发框架、智能体开发等内容，还包括多个工业级和商业级智能体开发项目实战。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "Hermes会自动学习并保存技能，提高工作效率，用户可通过安全审计任务演示其技能进化过程。",
+          "timestamp": 0
+        },
+        {
+          "desc": "Skill自主进化",
+          "detail": "Skill是Hermes的数字资产包，包括markdown文档、scripts和references等，可帮助Hermes更好地完成任务。Hermes会根据任务需求自动创建和优化Skill，提高性能。",
+          "timestamp": 51000
+        },
+        {
+          "desc": "EGPA进化引擎",
+          "detail": "EGPA进化引擎是Hermes的核心，用于优化Skill和其他提示词，提高智能体性能。",
+          "timestamp": 718000
+        },
+        {
+          "desc": "课程介绍",
+          "detail": "课程介绍了大模型技术入门、热门AI开发框架、工业级Agent开发进阶技术、智能体记忆管理、Harness engineering部署上线等内容，还包括多个工业级和商业级智能体开发项目实战。",
+          "timestamp": 893500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777975200,
+      "duration": 1861167,
+      "stats": {
+        "digg_count": 149,
+        "comment_count": 6,
+        "share_count": 13,
+        "collect_count": 85
+      }
+    },
+    {
+      "aweme_id": "7634085977018879278",
+      "desc": "如何给你的Hermes赋予一个性格？ #热点 #Hermes #编程 #Agent #程序员",
+      "caption": "#热点 #Hermes #编程 #Agent #程序员",
+      "chapter_content": "如何为Hermes赋予性格，包括修改soul.MD文件设置说话风格和行事方式，以及使用定时巡检、记忆系统等功能。同时，还介绍了大模型agent智能体开发实战课，涵盖了从入门到高级的技术内容和项目实战。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "修改soul.MD",
+          "detail": "修改soul.MD文件，设置Hermes的说话风格、行事方式、工作目标和职责边界。",
+          "timestamp": 25500
+        },
+        {
+          "desc": "项目主目录文件夹",
+          "detail": "介绍项目主目录文件夹中的重要文件，包括config.yaml、soul.MD、env、memory.MD、user.MD、skills、plugins、state.db、logs等。",
+          "timestamp": 172000
+        },
+        {
+          "desc": "定时巡检",
+          "detail": "使用cron功能创建定时任务，实现定时巡检。",
+          "timestamp": 276500
+        },
+        {
+          "desc": "记忆系统",
+          "detail": "Hermes的记忆系统包括自动记忆、跨线程记忆、sqlite全文检索、安全扫描等功能。",
+          "timestamp": 401500
+        },
+        {
+          "desc": "实操",
+          "detail": "通过实操演示如何使用Hermes的记忆系统，包括自动记忆、provider记忆加载、历史对话检索等。",
+          "timestamp": 813000
+        },
+        {
+          "desc": "课程介绍",
+          "detail": "介绍大模型agent智能体开发实战课，包括课程内容、技术模块、项目实战等。",
+          "timestamp": 1121000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777802400,
+      "duration": 1626474,
+      "stats": {
+        "digg_count": 233,
+        "comment_count": 4,
+        "share_count": 31,
+        "collect_count": 194
+      }
+    },
+    {
+      "aweme_id": "7634080435231804681",
+      "desc": "Hermes和Claude Code到底谁更好用？ #Hermes #Ai #编程 #Claude #Agent",
+      "caption": "#Hermes #Ai #编程 #Claude #Agent",
+      "chapter_content": "Hermes和Claude Code在运行同一道题时表现出较大差距。Hermes具有记忆功能，能够在多次执行任务后提高效率。与Openclaw相比，Hermes的工具集提示词经过精调，执行效率更高。此外，还介绍了大模型agent智能体开发实战课、open club智能题应用实战课和web coding编程实战课。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 0
+        },
+        {
+          "desc": "Hermes的运行时架构",
+          "detail": "Hermes是agent的运行时，采用react架构，能够长期专注于某一个任务，通过多部调用工具去解决当前的问题。",
+          "timestamp": 89000
+        },
+        {
+          "desc": "Hermes与Openc...",
+          "detail": "Hermes与Openclaw在运行相同任务时效率不同，Hermes的工具集提示词经过精调，执行效率更高。",
+          "timestamp": 114000
+        },
+        {
+          "desc": "大模型agent智能体开...",
+          "detail": "大模型agent智能体开发实战课由三位老师共同主讲，课程内容包括大模型技术入门、热门的a智能开发框架、工业级的agent的开发的进阶技术、智能体的长短期的记忆管理、工业级的a证的部署上线等。",
+          "timestamp": 440000
+        },
+        {
+          "desc": "其他课程介绍",
+          "detail": "其他课程包括open club智能题应用实战课和web coding编程实战课。",
+          "timestamp": 812500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777627800,
+      "duration": 942893,
+      "stats": {
+        "digg_count": 599,
+        "comment_count": 39,
+        "share_count": 68,
+        "collect_count": 380
+      }
+    },
+    {
+      "aweme_id": "7634075380445498650",
+      "desc": "Hermes接入飞书的超详细教程！ #Hermes #编程 #飞书 #AI #程序员",
+      "caption": "#Hermes #编程 #飞书 #AI #程序员",
+      "chapter_content": "如何将Hermes接入飞书，包括注册飞书机器人、配置环境变量、开启Hermesgetway等步骤。同时，介绍了Hermesagent的内部管理模式和大模型Agent智能体开发实战课、OpenClaw智能体应用实战课、Web Coding AI编程实战课三门课程。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "Hermes内置对接飞书功能，通过getaway维护不同渠道消息，调用本地Hermesagent进行对话。",
+          "timestamp": 0
+        },
+        {
+          "desc": "连接飞书的流程",
+          "detail": "注册飞书机器人，配置环境变量，开启Hermesgetway，设置权限，开始对话。",
+          "timestamp": 139000
+        },
+        {
+          "desc": "Hermes的特性",
+          "detail": "Hermesagent内部有session、channel、agent三层管理模式，可设置home channel。",
+          "timestamp": 363500
+        },
+        {
+          "desc": "大模型Agent智能体开...",
+          "detail": "大模型Agent智能体开发实战课，由三位老师主讲，共六个技术模块，涵盖多个热门领域。",
+          "timestamp": 456500
+        },
+        {
+          "desc": "OpenClaw智能体应...",
+          "detail": "OpenClaw智能体应用实战课，讲解如何使用OpenClaw完成自动化工作流搭建。",
+          "timestamp": 839500
+        },
+        {
+          "desc": "Web Coding A...",
+          "detail": "Web Coding AI编程实战课，由沐雨老师主讲，讲解Web coding技能体系。",
+          "timestamp": 879000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777456800,
+      "duration": 958149,
+      "stats": {
+        "digg_count": 129,
+        "comment_count": 1,
+        "share_count": 11,
+        "collect_count": 82
+      }
+    },
+    {
+      "aweme_id": "7633375727265516809",
+      "desc": "Hermes Agent 新手保姆级实操教程。 #Hermes #程序员 #编程 #Agent #cloud9",
+      "caption": "#Hermes #程序员 #编程 #Agent #cloud9",
+      "chapter_content": "Hermes Agent在四个真实场景中的应用，包括Terminal Agent、连接飞书、持久记忆和Skill自主进化。通过与Open Claw的对比，展示了Hermes Agent在执行效率、工具调用和提示词优化方面的优势。同时，还介绍了Hermes Agent的其他功能，如记忆管理、安全防护和多智能体系统开发。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 2000
+        },
+        {
+          "desc": "Hermes Agent...",
+          "detail": "Hermes Agent在四个真实场景中进行测试，包括Tom Email Agent、接入飞书Gateway架构、持久记忆Memory MD User MD Circle Light和Skill自主进...",
+          "timestamp": 29500
+        },
+        {
+          "desc": "Terminal Age...",
+          "detail": "Terminal Agent是最基础的使用和讲解方法，Hermes Agent与Open Claw相比，具有更精简的工具和提示词，执行效率更高。",
+          "timestamp": 81000
+        },
+        {
+          "desc": "连接飞书",
+          "detail": "连接飞书的过程与Open Claw相似，Hermes Agent具有更简洁的连接和对话方式。",
+          "timestamp": 594500
+        },
+        {
+          "desc": "持久记忆",
+          "detail": "持久记忆功能包括自动记忆、跨线程记忆、sqlite全文检索、安全防护等。",
+          "timestamp": 1408500
+        },
+        {
+          "desc": "Skill自主进化",
+          "detail": "Skill自主进化功能包括自动创建和优化Skill，提高执行效率。",
+          "timestamp": 2118500
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 2973500
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777283787,
+      "duration": 3516221,
+      "stats": {
+        "digg_count": 208,
+        "comment_count": 9,
+        "share_count": 36,
+        "collect_count": 224
+      }
+    },
+    {
+      "aweme_id": "7632261757171453230",
+      "desc": "DeepSeek-V4 来了！我们将迈入百万上下文普惠时代 #Deepseek #DeepSeekv4 #热点 #AI编程 #Ai",
+      "caption": "#Deepseek #DeepSeekv4 #热点 #AI编程 #Ai",
+      "chapter_content": "DeepSeek-V4正式发布，是继DeepSeek-R1之后的首个大版本更新。两款模型DeepSeek-V4-Flash和DeepSeek-V4-Pro全面升级支持1M上下文，性能追平顶尖闭源模型，碾压开源模型。DeepSeek-V4在编程、智能体性能等方面表现出色，性价比高，模型权重开源。技术报告公开了混合注意力架构、流形约束超连接和Muon优化器等核心技术突破。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "模型发布与性能",
+          "detail": "DeepSeek-V4发布两款模型，支持1M上下文，性能追平顶尖闭源模型，碾压开源模型，是开源SOTA。",
+          "timestamp": 9000
+        },
+        {
+          "desc": "编程能力",
+          "detail": "DeepSeek-V4编程能力全面升级，兼容Claude Code，5分钟可手搓卡帕西LM VIki智库解锁系统。",
+          "timestamp": 234500
+        },
+        {
+          "desc": "智能体性能",
+          "detail": "DeepSeek-V4智能体性能达到全球顶尖水平，与Opus4.6几乎无差距。",
+          "timestamp": 303000
+        },
+        {
+          "desc": "性价比",
+          "detail": "DeepSeek-V4性价比高，模型权重开源，支持多种推理模式，适配国产芯片。",
+          "timestamp": 331500
+        },
+        {
+          "desc": "技术报告解读",
+          "detail": "DeepSeek-V4技术报告公开，包括混合注意力架构、流形约束超连接和Muon优化器。",
+          "timestamp": 383000
+        },
+        {
+          "desc": "结语",
+          "detail": "",
+          "timestamp": 533000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1777024422,
+      "duration": 575228,
+      "stats": {
+        "digg_count": 267,
+        "comment_count": 13,
+        "share_count": 24,
+        "collect_count": 83
+      }
+    },
+    {
+      "aweme_id": "7631856834021756206",
+      "desc": "Hermes到底是什么？ Cloud code是否已经彻底被取代？\n#Hermes  #Agent #Cloud #AI #程序员",
+      "caption": "Cloud code是否已经彻底被取代？\n#Hermes  #Agent #Cloud #AI #程序员",
+      "chapter_content": "Hermes是一款开源的智能体，具有四层记忆系统和技能自生成、自我进化等特性。与Open Cloud相比，Hermes在性能和稳定性方面更具优势，尤其在工程化场景中表现出色。然而，Hermes的操作要求较高，且多agent系统尚不完善。尽管如此，Hermes的用户反馈良好，运行效率高且稳定。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "Hermes是Nous Research开源的智能体，具有四层记忆系统和技能自生成、自我进化等特性。",
+          "timestamp": 0
+        },
+        {
+          "desc": "Hermes与Open ...",
+          "detail": "Hermes与Open Cloud类似，具有自主进化能力，在性能和稳定性方面优于Open Cloud。",
+          "timestamp": 67000
+        },
+        {
+          "desc": "Hermes的核心特性",
+          "detail": "Hermes的核心特性包括记忆和技能的无感进化、四层记忆系统、技能自生成和自我进化。",
+          "timestamp": 173500
+        },
+        {
+          "desc": "Harness Engi...",
+          "detail": "Harness Engineering理论基础包括工具、消防工程、状态管理、错误恢复、验证循环、安全防护和生命周期管理。",
+          "timestamp": 390000
+        },
+        {
+          "desc": "Hermes Agent...",
+          "detail": "Hermes Agent通过记忆管理系统、机械式约束和反馈闭环实现高效运行。",
+          "timestamp": 519500
+        },
+        {
+          "desc": "功能特性与使用方法",
+          "detail": "Hermes Agent具有四层记忆系统、全自动技能生成和迭代进化、ge pa系统等功能，使用门槛不高。",
+          "timestamp": 810000
+        },
+        {
+          "desc": "用户反馈与评价",
+          "detail": "用户对Hermes Agent反馈良好，运行效率高且稳定，但操作要求较高，多agent系统尚不完善。",
+          "timestamp": 1251000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1776938400,
+      "duration": 1319056,
+      "stats": {
+        "digg_count": 994,
+        "comment_count": 22,
+        "share_count": 177,
+        "collect_count": 797
+      }
+    },
+    {
+      "aweme_id": "7629573555868437775",
+      "desc": "Hermes Agent 新手保姆级安装使用教程。\n#Hermes #Agent #AI #hermes爱马仕 #程序员",
+      "caption": "Hermes Agent 新手保姆级安装使用教程。\n#Hermes #Agent #AI #hermes爱马仕 #程序员",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1776398529,
+      "duration": 250914,
+      "stats": {
+        "digg_count": 1775,
+        "comment_count": 60,
+        "share_count": 422,
+        "collect_count": 1681
+      }
+    },
+    {
+      "aweme_id": "7607548541837249843",
+      "desc": "Qwen3.5除夕夜炸场💥除夕夜特辑！ Qwen3.5-397B-A17B模型解读与深度评测！视觉+推理+对话+编程四项全能，全面追平Gemini 3.0 Pro！视频解读&视频生成一键直达，开启多模态智能体新时代！#AI新星计划 #新知贺岁眼界大开  #AI #llm #大模型开发",
+      "caption": "Qwen3.5-397B-A17B模型解读与深度评测！视觉+推理+对话+编程四项全能，全面追平Gemini 3.0 Pro！视频解读&视频生成一键直达，开启多模态智能体新时代！#AI新星计划 #新知贺岁眼界大开  #AI #llm #大模型开发",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1771270554,
+      "duration": 359516,
+      "stats": {
+        "digg_count": 126,
+        "comment_count": 6,
+        "share_count": 13,
+        "collect_count": 33
+      }
+    },
+    {
+      "aweme_id": "7603679478849506610",
+      "desc": "OpenAI贴脸开大，GPT-5.3 Codex发布！ OpenAI贴脸开大，GPT-5.3 Codex模型介绍与Claude 4.6 Opus性能对比评测！#AI新星计划 #新知贺岁眼界大开",
+      "caption": "OpenAI贴脸开大，GPT-5.3 Codex模型介绍与Claude 4.6 Opus性能对比评测！#AI新星计划 #新知贺岁眼界大开",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1770369598,
+      "duration": 365922,
+      "stats": {
+        "digg_count": 124,
+        "comment_count": 7,
+        "share_count": 7,
+        "collect_count": 42
+      }
+    },
+    {
+      "aweme_id": "7603559113867431168",
+      "desc": "最强编程模型性能飞升！Claude 4.6 Opus性能暴涨 在经历了一段“有预谋”的泄露事件之后，Claude最新一代旗舰模型，Claude 4.6 Opus模型率先登场！本期视频，5分钟带你快速了解Claude 4.6 Opus完整功能特性。#AI新星计划 #新知贺岁眼界大开",
+      "caption": "在经历了一段“有预谋”的泄露事件之后，Claude最新一代旗舰模型，Claude 4.6 Opus模型率先登场！本期视频，5分钟带你快速了解Claude 4.6 Opus完整功能特性。#AI新星计划 #新知贺岁眼界大开",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1770341607,
+      "duration": 282300,
+      "stats": {
+        "digg_count": 149,
+        "comment_count": 7,
+        "share_count": 13,
+        "collect_count": 43
+      }
+    },
+    {
+      "aweme_id": "7600261750507818280",
+      "desc": "霸榜硅谷热搜！ClawdBot功能解读与本地部署指南！ 零门槛搭建个人专属AI贾维斯！Agent Skills+网关系统+长短期记忆管理，工业级可用通用智能体实战~如果对你有帮助，记得一键三连哦~#AI新星计划 #新知贺岁眼界大开 #AI #大模型 #AIAgent",
+      "caption": "零门槛搭建个人专属AI贾维斯！Agent Skills+网关系统+长短期记忆管理，工业级可用通用智能体实战~如果对你有帮助，记得一键三连哦~#AI新星计划 #新知贺岁眼界大开 #AI #大模型 #AIAgent",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1769573886,
+      "duration": 791617,
+      "stats": {
+        "digg_count": 522,
+        "comment_count": 11,
+        "share_count": 89,
+        "collect_count": 494
+      }
+    },
+    {
+      "aweme_id": "7579021883283213568",
+      "desc": "DeepSeek-V3.2模型解读与实战评测 DeepSeek-V3.2正式版重磅发布，第一手深度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏 #AI #deepseek #gemini",
+      "caption": "DeepSeek-V3.2正式版重磅发布，第一手深度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏 #AI #deepseek #gemini",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1764637200,
+      "duration": 573278,
+      "stats": {
+        "digg_count": 353,
+        "comment_count": 24,
+        "share_count": 30,
+        "collect_count": 122
+      }
+    },
+    {
+      "aweme_id": "7577631287771516214",
+      "desc": "DeepSeekMath-V2开启模型训练新范式！ DeepSeekMath-V2正式开源，左右互搏无限进化，数学能力超越Gemini Deep Think！自验证数学推理训练流程深度详解，DeepSeek-V4序章开启！#科普一下 #ai新星计划 #抖音知识年终大赏 #deepseek #ai",
+      "caption": "DeepSeekMath-V2正式开源，左右互搏无限进化，数学能力超越Gemini Deep Think！自验证数学推理训练流程深度详解，DeepSeek-V4序章开启！#科普一下 #ai新星计划 #抖音知识年终大赏 #deepseek #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1764304778,
+      "duration": 1013250,
+      "stats": {
+        "digg_count": 533,
+        "comment_count": 56,
+        "share_count": 56,
+        "collect_count": 186
+      }
+    },
+    {
+      "aweme_id": "7576507916295900458",
+      "desc": "零基础上手最强Vibe Coding 从零上手最强Vibe Coding大模型GPT-5.1-Codex-Max，实操工业级开发项目，独家工作流+上下文工程经验分享，从零快速上手Vibe Coding！#ai #ai新星计划 #抖音知识年终大赏 #cursor",
+      "caption": "从零上手最强Vibe Coding大模型GPT-5.1-Codex-Max，实操工业级开发项目，独家工作流+上下文工程经验分享，从零快速上手Vibe Coding！#ai #ai新星计划 #抖音知识年终大赏 #cursor",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1764043220,
+      "duration": 578037,
+      "stats": {
+        "digg_count": 181,
+        "comment_count": 10,
+        "share_count": 24,
+        "collect_count": 84
+      }
+    },
+    {
+      "aweme_id": "7575054416118697252",
+      "desc": "Nano Banana Pro正式发布！ Nano Banana Pro正式发布！零门槛上手与7类核心玩法+提示词介绍详解，快速上手AI生图旗舰模型！#抖音知识年终大赏 #ai新星计划 #gemini #谷歌 #nanobanana",
+      "caption": "Nano Banana Pro正式发布！零门槛上手与7类核心玩法+提示词介绍详解，快速上手AI生图旗舰模型！#抖音知识年终大赏 #ai新星计划 #gemini #谷歌 #nanobanana",
+      "chapter_content": "Nano Banana Pro正式发布，提高了AI图像生成技术。它具有高质量的图片生成、多语种文字生成、强大的图像推理和真实物理世界理解能力。支持4K分辨率图片生成，可调整图片比例，保持主题一致性。与Gemini3搭配使用，可生成相关视频和科普小应用。提供7类主流玩法，包括3D人偶图像制作、图像风格转化、精准控制图像元素状态等。",
+      "chapter_list": [
+        {
+          "desc": "引言",
+          "detail": "",
+          "timestamp": 1000
+        },
+        {
+          "desc": "Nano Banana ...",
+          "detail": "Nano Banana Pro提高了图片生成质量，支持多语种文字生成，具有强大的图像推理和真实物理世界理解能力，支持4K分辨率图片生成，可调整图片比例，保持主题一致性，与Gemini3搭配使用，可生成...",
+          "timestamp": 11000
+        },
+        {
+          "desc": "接入流程",
+          "detail": "Nano Banana Pro基于Gemini3Pro，可在Gemini主页或谷歌AIStudio调用，免费用户每天可创建3张图片，Pro用户100张，Ultra用户1000张，API已上线，国内开发...",
+          "timestamp": 117000
+        },
+        {
+          "desc": "主流玩法",
+          "detail": "包括3D人偶图像制作、图像风格转化、精准控制图像元素状态、从零创建精美图片、虚拟歌手形象创建、广告设计。",
+          "timestamp": 191000
+        }
+      ],
+      "has_chapters": true,
+      "create_time": 1763704803,
+      "duration": 422393,
+      "stats": {
+        "digg_count": 1676,
+        "comment_count": 42,
+        "share_count": 88,
+        "collect_count": 307
+      }
+    },
+    {
+      "aweme_id": "7574784499427347753",
+      "desc": "LangChain 1.0体系入门实战 一站式高效掌握LangChain 1.0，详解基础API+Agent开发部署上线全流程，精讲核心中间件功能，实现无限上下文+人在闭环+模型动……版本过低，升级后可展示全部信息",
+      "caption": "一站式高效掌握LangChain 1.0，详解基础API+Agent开发部署上线全流程，精讲核心中间件功能，实现无限上下文+人在闭环+模型动态选择，从零搭建工业级高性能Agent！#ai新星计划 #ai #大模型 #agent#抖音知识年终大赏",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1763641960,
+      "duration": 3391668,
+      "stats": {
+        "digg_count": 1093,
+        "comment_count": 34,
+        "share_count": 146,
+        "collect_count": 1070
+      }
+    },
+    {
+      "aweme_id": "7574283707180141865",
+      "desc": "Gemini3正式发布！ 编程、推理、对话、视觉等各方面性能全面碾压GPT-5.1&Claude-4.5，全新Antigravity IDE硬刚Cursor，首创Agentic Coding主动代理模式，一句话“复刻”操作系统，开启智能新时代！#gemini #ai新星计划 #gpt #aicoding #谷歌",
+      "caption": "编程、推理、对话、视觉等各方面性能全面碾压GPT-5.1&Claude-4.5，全新Antigravity IDE硬刚Cursor，首创Agentic Coding主动代理模式，一句话“复刻”操作系统，开启智能新时代！#gemini #ai新星计划 #gpt #aicoding #谷歌",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1763525356,
+      "duration": 551032,
+      "stats": {
+        "digg_count": 877,
+        "comment_count": 50,
+        "share_count": 81,
+        "collect_count": 202
+      }
+    },
+    {
+      "aweme_id": "7572192973220269312",
+      "desc": "GPT-5.1重磅更新！ GPT-5.1重磅更新！对话、推理、代码性能全面升级！情商拉满+物理遵循能力大提升，首创自适应推理，大模型性能新标杆！#ai新星计划 #gpt5 #gpt #llm#大模型开发",
+      "caption": "GPT-5.1重磅更新！对话、推理、代码性能全面升级！情商拉满+物理遵循能力大提升，首创自适应推理，大模型性能新标杆！#ai新星计划 #gpt5 #gpt #llm#大模型开发",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1763038583,
+      "duration": 522494,
+      "stats": {
+        "digg_count": 140,
+        "comment_count": 3,
+        "share_count": 6,
+        "collect_count": 43
+      }
+    },
+    {
+      "aweme_id": "7568751503876427044",
+      "desc": "核心代码重构+API大改！LangChain1.0深度解读 LangChain 1.0正式版全面上线！LangChain&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，中间件+Deep Agents重磅发布！#大模型 #ai #ai新星计划 #langchain #大模型开发",
+      "caption": "LangChain 1.0正式版全面上线！LangChain&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，中间件+Deep Agents重磅发布！#大模型 #ai #ai新星计划 #langchain #大模型开发",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1762237293,
+      "duration": 556233,
+      "stats": {
+        "digg_count": 2736,
+        "comment_count": 85,
+        "share_count": 378,
+        "collect_count": 1811
+      }
+    },
+    {
+      "aweme_id": "7564661091775614244",
+      "desc": "DeepSeek-OCR-Web项目开源！零门槛一键部署！ 团队自研DeepSeek-OCR-Web开源啦，零门槛一键部署+网页端一键OCR应用！保姆级懒人一键安装，在线调用Dee……版本过低，升级后可展示全部信息",
+      "caption": "团队自研DeepSeek-OCR-Web开源啦，零门槛一键部署+网页端一键OCR应用！保姆级懒人一键安装，在线调用DeepSeek-OCR！#ai新星计划  #大模型 #deepseek #deepseekocr #rag",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1761284921,
+      "duration": 289227,
+      "stats": {
+        "digg_count": 1320,
+        "comment_count": 62,
+        "share_count": 198,
+        "collect_count": 1209
+      }
+    },
+    {
+      "aweme_id": "7563440647168920858",
+      "desc": "DeepSeek-OCR深度解读+上手指南！ DeepSeek-OCR新模来袭！仅需7G显存，本地部署运行最强开源OCR+多模态混合模型DeepSeek-OCR，表格+图片+CAD图纸高精度识别，多模态PDF到MarkDown一键转换！#ai新星",
+      "caption": "DeepSeek-OCR新模来袭！仅需7G显存，本地部署运行最强开源OCR+多模态混合模型DeepSeek-OCR，表格+图片+CAD图纸高精度识别，多模态PDF到MarkDown一键转换！#ai新星",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1761000813,
+      "duration": 748565,
+      "stats": {
+        "digg_count": 1153,
+        "comment_count": 80,
+        "share_count": 193,
+        "collect_count": 955
+      }
+    },
+    {
+      "aweme_id": "7555517211297762600",
+      "desc": "从零上手AI编程，Codex、Claude Code企业级项目开发指南！\n#Codex #gpt #ai编程 #ai新星计划",
+      "caption": "从零上手AI编程，Codex、Claude Code企业级项目开发指南！\n#Codex #gpt #ai编程 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1759224600,
+      "duration": 1871574,
+      "stats": {
+        "digg_count": 471,
+        "comment_count": 21,
+        "share_count": 59,
+        "collect_count": 482
+      }
+    },
+    {
+      "aweme_id": "7555550108088110355",
+      "desc": "架构大突破，DeepSeek-V3.2重磅发布！ 架构大突破，DeepSeek-V3.2重磅发布！成本暴降50%！原论文解读+模型特性介绍+DeepSeek稀疏注意力原理介绍！#ai新星计划  #抖音教育",
+      "caption": "架构大突破，DeepSeek-V3.2重磅发布！成本暴降50%！原论文解读+模型特性介绍+DeepSeek稀疏注意力原理介绍！#ai新星计划  #抖音教育",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1759163606,
+      "duration": 387913,
+      "stats": {
+        "digg_count": 631,
+        "comment_count": 39,
+        "share_count": 59,
+        "collect_count": 213
+      }
+    },
+    {
+      "aweme_id": "7554379315853446452",
+      "desc": "【实战】多模态 Agentic RAG 检索增强系统 将通过两个实战案例，带大家搭建两套多模态 Agentic RAG 检索增强系统。其中第一套将采用 LangChain & LangGraph 架构，能够实现前后端分离架构，适配性强，并能实现图文并茂的交互式问答等各项功能，\n而第二套多模态Agentic RAG系统，则是进一步引入了olmOCR模型进行OCR+VLM混合识别，从而实现更高精度的多模态检索，\n同时完整重新设计了后端功能，并从零到一完成后端开发，并且严格按照企业级Agent项目开发要求，完整执行了产品功能规划 → 模块设计 → 接口定义 → 前后端联调等一整套工业级流程。\n这也是公开课最终级的能够达到企业产品级的Agent项目，不仅能在前端实时查看多模态PDF文档解析结果，\n而且在问答的时候，也会自由灵活地根据用户提出的具体问题，决定是否进行文档检索，\n并且同样可以实现图文并茂的回答效果，\n同时拥有完整的、独家研发的、独立的前后端应用，可以拆包即用。\n#ai新星计划 #rag #多模态",
+      "caption": "将通过两个实战案例，带大家搭建两套多模态 Agentic RAG 检索增强系统。其中第一套将采用 LangChain & LangGraph 架构，能够实现前后端分离架构，适配性强，并能实现图文并茂的交互式问答等各项功能，\n而第二套多模态Agentic RAG系统，则是进一步引入了olmOCR模型进行OCR+VLM混合识别，从而实现更高精度的多模态检索，\n同时完整重新设计了后端功能，并从零到一完成后端开发，并且严格按照企业级Agent项目开发要求，完整执行了产品功能规划 → 模块设计 → 接口定义 → 前后端联调等一整套工业级流程。\n这也是公开课最终级的能够达到企业产品级的Agent项目，不仅能在前端实时查看多模态PDF文档解析结果，\n而且在问答的时候，也会自由灵活地根据用户提出的具体问题，决定是否进行文档检索，\n并且同样可以实现图文并茂的回答效果，\n同时拥有完整的、独家研发的、独立的前后端应用，可以拆包即用。\n#ai新星计划 #rag #多模态",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1759059000,
+      "duration": 2970690,
+      "stats": {
+        "digg_count": 240,
+        "comment_count": 9,
+        "share_count": 39,
+        "collect_count": 202
+      }
+    },
+    {
+      "aweme_id": "7554377556833684751",
+      "desc": "多模态RAG识别 OCR方案介绍 对于不同类型的多模态内容，识别策略往往也是不同的，例如对于一些公式、发票数据、表格、手写体单方等等，只需要借助OCR模型，将其中文本内容进行光学字符识别，往往就能提取完整有效信息。\n#多模态 #ocr #rag #ai新星计划",
+      "caption": "对于不同类型的多模态内容，识别策略往往也是不同的，例如对于一些公式、发票数据、表格、手写体单方等等，只需要借助OCR模型，将其中文本内容进行光学字符识别，往往就能提取完整有效信息。\n#多模态 #ocr #rag #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1758890601,
+      "duration": 3482319,
+      "stats": {
+        "digg_count": 299,
+        "comment_count": 11,
+        "share_count": 47,
+        "collect_count": 294
+      }
+    },
+    {
+      "aweme_id": "7553544112734047542",
+      "desc": "将 PDF 转化为 Markdown 文档，在这个过程中，一方面需要将表格、公式等多模态信息转化为特定的 Markdown 语法，同时也需要将其他图片内容单独进行保存，并以路径的形式在文档中进行引用，从而保证文档既能保留原始的结构化信息，又能方便后续进行知识检索与展示。\n我将为大家介绍两种主流的多模态 Markdown 文档切分策略，分别是按照标题进行递归切分、以及将多模态元素单独切分的方式。前者能够保持文档的层级结构清晰，便于后续进行上下文关联和语义检索；后者则可以针对表格、公式、图片等内容进行独立存储与管理，保证在下游检索或问答中能够被精准调用，甚至可以进一步进行词向量融合，从而实现更高质量的内容理解与信息检索。\n而搭建多模态 RAG 检索引擎的最后一步，就是需要构建一个完整的问答系统。目前最主流的大模型知识库问答系统设计思路是 Agentic RAG，也就是通过引入 Agent 的方法，为用户提供完整的交互式检索与推理体验。\n相比传统 RAG 仅仅依赖向量召回和答案生成，Agentic RAG 能够动态地调用不同的工具，并基于用户问题进行多轮的规划与推理，从而提升问答的准确性与鲁棒性。而一个标准的 Agentic RAG 系统至少需要包含 内容护栏功能（Content Guardrail）和 检索问题增强功能（Query Enhancement）这两项功能，前者用于用于过滤敏感信息、保证回答合规性，而后者则用于自动改写或扩展用户问题，从而提升检索召回率与语义匹配度。\n#agentic #rag #markdown #多模态 #ai新星计划",
+      "caption": "将 PDF 转化为 Markdown 文档，在这个过程中，一方面需要将表格、公式等多模态信息转化为特定的 Markdown 语法，同时也需要将其他图片内容单独进行保存，并以路径的形式在文档中进行引用，从而保证文档既能保留原始的结构化信息，又能方便后续进行知识检索与展示。\n我将为大家介绍两种主流的多模态 Markdown 文档切分策略，分别是按照标题进行递归切分、以及将多模态元素单独切分的方式。前者能够保持文档的层级结构清晰，便于后续进行上下文关联和语义检索；后者则可以针对表格、公式、图片等内容进行独立存储与管理，保证在下游检索或问答中能够被精准调用，甚至可以进一步进行词向量融合，从而实现更高质量的内容理解与信息检索。\n而搭建多模态 RAG 检索引擎的最后一步，就是需要构建一个完整的问答系统。目前最主流的大模型知识库问答系统设计思路是 Agentic RAG，也就是通过引入 Agent 的方法，为用户提供完整的交互式检索与推理体验。\n相比传统 RAG 仅仅依赖向量召回和答案生成，Agentic RAG 能够动态地调用不同的工具，并基于用户问题进行多轮的规划与推理，从而提升问答的准确性与鲁",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1758706200,
+      "duration": 3131767,
+      "stats": {
+        "digg_count": 411,
+        "comment_count": 3,
+        "share_count": 38,
+        "collect_count": 514
+      }
+    },
+    {
+      "aweme_id": "7552890808635002152",
+      "desc": "对于不同类型的多模态内容，识别策略往往也是不同的，例如对于一些公式、发票数据、表格、手写体单方等等，只需要借助OCR模型，将其中文本内容进行光学字符识别，往往就能提取完整有效信息。\n对于另一些图片，如产品原型图、流程图、数据可视化图表等，只机械地提取其中文字，肯定是不能获得完整的图片信息的，此时就需要使用多模态大模型（VLM）来完成“图像语意理解”。\n详细为大家详细介绍如表格、公式、流程图等各类多模态内容的信息提取流程，并重点介绍OCR+VLM混合模型olmOCR大模型的本地部署调用方法，以及可以适用于不同类型多模态内容识别能力增强的微调策略，并提供通用的多模态信息光学字符识别+图片语意识别的执行脚本。\n#VLM #OCR #RAG #多模态 #ai新星计划",
+      "caption": "对于不同类型的多模态内容，识别策略往往也是不同的，例如对于一些公式、发票数据、表格、手写体单方等等，只需要借助OCR模型，将其中文本内容进行光学字符识别，往往就能提取完整有效信息。\n对于另一些图片，如产品原型图、流程图、数据可视化图表等，只机械地提取其中文字，肯定是不能获得完整的图片信息的，此时就需要使用多模态大模型（VLM）来完成“图像语意理解”。\n详细为大家详细介绍如表格、公式、流程图等各类多模态内容的信息提取流程，并重点介绍OCR+VLM混合模型olmOCR大模型的本地部署调用方法，以及可以适用于不同类型多模态内容识别能力增强的微调策略，并提供通用的多模态信息光学字符识别+图片语意识别的执行脚本。\n#VLM #OCR #RAG #多模态 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1758544437,
+      "duration": 1301965,
+      "stats": {
+        "digg_count": 509,
+        "comment_count": 13,
+        "share_count": 63,
+        "collect_count": 502
+      }
+    },
+    {
+      "aweme_id": "7551766088913014050",
+      "desc": "多模态的PDF文档检索｜PDF结构解析 无论是围绕何种文档类型搭建的多模态RAG系统，首先第一步都是需要对PDF文档进行结构解析，\n也就是需要识别出PDF文档中的各元素的类型，包括各级标题、正文文本、图片、表格等等元素。\n这个环节往往并不复杂，业内的通用方案是采用unstructured库搭配OCR模型即可完成，也就是实现所谓的元素感知OCR。\n这里就会涉及到一个非常关键的技术概念，OCR模型。所谓OCR模型，指的是光学字符识别模型，可以对图片上的文字进行精准识别。\n目前业内的OCR模型有很多，公开课中第一部分我们将重点介绍如百度飞桨PaddleOCR、小红书dots.ocr等热门OCR模型的上手使用方法，\n而借助unstructured库，则可以将PDF中的每一页视作一张图片并借助OCR完成各元素类型的识别。#ai新星计划 \n#智能体 #RAG #多模态 #PDF",
+      "caption": "无论是围绕何种文档类型搭建的多模态RAG系统，首先第一步都是需要对PDF文档进行结构解析，\n也就是需要识别出PDF文档中的各元素的类型，包括各级标题、正文文本、图片、表格等等元素。\n这个环节往往并不复杂，业内的通用方案是采用unstructured库搭配OCR模型即可完成，也就是实现所谓的元素感知OCR。\n这里就会涉及到一个非常关键的技术概念，OCR模型。所谓OCR模型，指的是光学字符识别模型，可以对图片上的文字进行精准识别。\n目前业内的OCR模型有很多，公开课中第一部分我们将重点介绍如百度飞桨PaddleOCR、小红书dots.ocr等热门OCR模型的上手使用方法，\n而借助unstructured库，则可以将PDF中的每一页视作一张图片并借助OCR完成各元素类型的识别。#ai新星计划 \n#智能体 #RAG #多模态 #PDF",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1758282570,
+      "duration": 1160138,
+      "stats": {
+        "digg_count": 229,
+        "comment_count": 8,
+        "share_count": 30,
+        "collect_count": 171
+      }
+    },
+    {
+      "aweme_id": "7549123965478866215",
+      "desc": "GPT-OSS模型微调实战案例！ 【案例一】GPT-OSS模型中文推理链微调实战\n1. 中文推理数据集制作\n  1. 开源数据集读取\n  2. 开源数据集中文翻译与校对流程\n  3. 数据格式转化与微调文本渲染\n2. 基于Unsloth的GPT-OSS模型微调流程\n  1. LoRA低秩适配器矩阵参数灌注\n  2. LoRA参数灌注过程参数解释\n  3. 微调参数设置与解释\n  4. GPT-OSS模型实际微调流程\n  5. GPT-OSS微调后模型结构解释\n  6. GPT-OSS模型微调后模型调用\n3. 微调效果验证\n  1. tensorboard安装与部署\n  2. 微调日志保存与读取\n  3. tensorboard可视化展示\n  4. 中英双语推理链生成验证\n【案例二】GPT-OSS模型Agent性能微调实战\nAgent微调数据集准备\nHermes tool use数据集介绍\n单一工具调用完整数据介绍\n多工具并行调用数据介绍\n多工具多步调用数据介绍\n拒绝调用工具数据介绍\nAgent微调数据集清洗\n基础字段映射规则创建\n基础json schema对象格式设置\n将各类parameters归一化为JSON Schema\n系统消息文本格式清洗规则\ntools消息文本格式清洗规则\n噪声清除与None转化\nGPT-OSS分词器读取\nAgent微调数据集渲染\nGPT-OSS Agent性能微调实战\nLoRA低秩适配器矩阵参数灌注\n高效微调参数设置\nGPT-OSS模型实际微调流程\ntensorboard结果记录与展示\nGPT-OSS Agent性能微调评测与权重导出\nEvalScope构建评测数据集\nEvalScope评测流程\nGPT-OSS模型微调前后评测与效果展示\nGPT-OSS模型权重导出与读取\n#gpt#agent #微调 #智能体 #ai新星计划",
+      "caption": "【案例一】GPT-OSS模型中文推理链微调实战\n1. 中文推理数据集制作\n  1. 开源数据集读取\n  2. 开源数据集中文翻译与校对流程\n  3. 数据格式转化与微调文本渲染\n2. 基于Unsloth的GPT-OSS模型微调流程\n  1. LoRA低秩适配器矩阵参数灌注\n  2. LoRA参数灌注过程参数解释\n  3. 微调参数设置与解释\n  4. GPT-OSS模型实际微调流程\n  5. GPT-OSS微调后模型结构解释\n  6. GPT-OSS模型微调后模型调用\n3. 微调效果验证\n  1. tensorboard安装与部署\n  2. 微调日志保存与读取\n  3. tensorboard可视化展示\n  4. 中英双语推理链生成验证\n【案例二】GPT-OSS模型Agent性能微调实战\nAgent微调数据集准备\nHermes tool use数据集介绍\n单一工具调用完整数据介绍\n多工具并行调用数据介绍\n多工具多步调用数据介绍\n拒绝调用工具数据介绍\nAgent微调数据集清洗\n基础字段映射规则创建\n基础json schema对象格式设置\n将各类parameters归一化为JSON Sch",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1758101400,
+      "duration": 5988031,
+      "stats": {
+        "digg_count": 199,
+        "comment_count": 3,
+        "share_count": 20,
+        "collect_count": 168
+      }
+    },
+    {
+      "aweme_id": "7549119706251250980",
+      "desc": "Agent性能微调数据集构造方法 1. 大模型Function calling（Tool Call）功能回顾\n  1. 准备阶段：定义工具 & 绑定 JSON Schema & 生成 tools 列表\n  2. 第一次对话：把 tools 提供给模型，等待模型判断“要不要用工具”\n  3. 执行阶段：解析 tool_calls 并真正运行外部函数\n  4. 第二次对话：把 tool 结果回灌给模型，生成最终回答\n2. 当代大模型工具调用模式介绍\n3. GPT-OSS模型提示词模板\n  1. 模型内置特殊字符及提示词模板\n  2. 系统提示、tools参数渲染格式介绍\n  3. 主流外部工具响应流程介绍\n4. 常用开源Agent微调数据集介绍\n5. Unsloth提示词模板解析流程\n  1. 系统提示词解析格式\n  2. tools信息解析格式\n  3. tool call&tool response消息解析\n  4. multi-tool消息解析格式\n6. Share-GPT格式解析与渲染 \n#ai新星计划 #微调 #智能体 #agent #functioncalling",
+      "caption": "1. 大模型Function calling（Tool Call）功能回顾\n  1. 准备阶段：定义工具 & 绑定 JSON Schema & 生成 tools 列表\n  2. 第一次对话：把 tools 提供给模型，等待模型判断“要不要用工具”\n  3. 执行阶段：解析 tool_calls 并真正运行外部函数\n  4. 第二次对话：把 tool 结果回灌给模型，生成最终回答\n2. 当代大模型工具调用模式介绍\n3. GPT-OSS模型提示词模板\n  1. 模型内置特殊字符及提示词模板\n  2. 系统提示、tools参数渲染格式介绍\n  3. 主流外部工具响应流程介绍\n4. 常用开源Agent微调数据集介绍\n5. Unsloth提示词模板解析流程\n  1. 系统提示词解析格式\n  2. tools信息解析格式\n  3. tool call&tool response消息解析\n  4. multi-tool消息解析格式\n6. Share-GPT格式解析与渲染\n\n#ai新星计划 #微调 #智能体 #agent #functioncalling",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1757928600,
+      "duration": 5329815,
+      "stats": {
+        "digg_count": 673,
+        "comment_count": 13,
+        "share_count": 75,
+        "collect_count": 654
+      }
+    },
+    {
+      "aweme_id": "7549116904972061993",
+      "desc": "OpenAI最强混合推理大模型GPT-OSS本地部署 GPT-OSS的模型特性与本地部署调用流程\n1. OpenAI最新开源GPT-OSS模型\n  1. 模型参数与性能介绍\n  2. GPT-OSS模型核心特性\n    - MXFP-4精度\n    - gpt-oss模型响应速度\n    - gpt-oss可控混合推理特性\n  3. GPT-OSS官方提示词模板\n  4. GPT-OSS模型通用适配性\n2. gpt-oss模型权重下载与调用流程\n  1. gpt-oss介绍与下载地址\n  2. gpt-oss模型权重下载与文件格式\n  3. vLLM调用gpt-oss完整流程\n  4. 代码环境gpt-oss调用流程\n3. gpt-oss功能与性能测试\n  1. gpt-oss响应流程介绍\n  2. gpt-oss可控推理参数介绍与使用\n  3. gpt-oss响应程度参数介绍\n4. 基于EvalScope与vLLM的gpt-oss并发压测\n#编程 #ai新星计划 #gptoss #gpt #OpenAI",
+      "caption": "GPT-OSS的模型特性与本地部署调用流程\n1. OpenAI最新开源GPT-OSS模型\n  1. 模型参数与性能介绍\n  2. GPT-OSS模型核心特性\n    - MXFP-4精度\n    - gpt-oss模型响应速度\n    - gpt-oss可控混合推理特性\n  3. GPT-OSS官方提示词模板\n  4. GPT-OSS模型通用适配性\n2. gpt-oss模型权重下载与调用流程\n  1. gpt-oss介绍与下载地址\n  2. gpt-oss模型权重下载与文件格式\n  3. vLLM调用gpt-oss完整流程\n  4. 代码环境gpt-oss调用流程\n3. gpt-oss功能与性能测试\n  1. gpt-oss响应流程介绍\n  2. gpt-oss可控推理参数介绍与使用\n  3. gpt-oss响应程度参数介绍\n4. 基于EvalScope与vLLM的gpt-oss并发压测\n#编程 #ai新星计划 #gptoss #gpt #OpenAI",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1757842200,
+      "duration": 1450991,
+      "stats": {
+        "digg_count": 227,
+        "comment_count": 8,
+        "share_count": 24,
+        "collect_count": 171
+      }
+    },
+    {
+      "aweme_id": "7549090566298979647",
+      "desc": "普通大学生的AI逆袭教程！抖音最通俗易懂的大模型入门课来了～ #新学期在抖音选修人工智能  #ai新星计划   #ai  #开学  #大学生",
+      "caption": "普通大学生的AI逆袭教程！抖音最通俗易懂的大模型入门课来了～ #新学期在抖音选修人工智能  #ai新星计划   #ai  #开学  #大学生",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1757659623,
+      "duration": 809750,
+      "stats": {
+        "digg_count": 35,
+        "comment_count": 0,
+        "share_count": 6,
+        "collect_count": 22
+      }
+    },
+    {
+      "aweme_id": "7548819184138997027",
+      "desc": "零基础快速理解【大模型微调】技术体系 1. 微调基础概念介绍\n  1. 微调基本概念\n  2. 全量微调与高效微调\n  3. 模型微调的优劣势分析\n  4. 高效微调与 LoRA、QLoRA\n2. 高效微调的应用场景介绍\n3.  主流微调工具介绍\n  1. 单机单卡：unsloth\n  2. 单机多卡：Llama-Factory\n  3. Qwen3微调框架：ms-SWIFT\n  4. 多机多卡：ColossalAI\n4. 模型高效微调环境准备\n  1. Unsloth 安装部署\n  2. vLLM 安装部署与模型权重下载\n  3. EvalScope 安装部署流程\n  4. 【可选】wandb 安装与注册 \n#微调 #大模型 #llm #ai新星计划",
+      "caption": "1. 微调基础概念介绍\n  1. 微调基本概念\n  2. 全量微调与高效微调\n  3. 模型微调的优劣势分析\n  4. 高效微调与 LoRA、QLoRA\n2. 高效微调的应用场景介绍\n3.  主流微调工具介绍\n  1. 单机单卡：unsloth\n  2. 单机多卡：Llama-Factory\n  3. Qwen3微调框架：ms-SWIFT\n  4. 多机多卡：ColossalAI\n4. 模型高效微调环境准备\n  1. Unsloth 安装部署\n  2. vLLM 安装部署与模型权重下载\n  3. EvalScope 安装部署流程\n  4. 【可选】wandb 安装与注册\n\n#微调 #大模型 #llm #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1757596462,
+      "duration": 3039677,
+      "stats": {
+        "digg_count": 123,
+        "comment_count": 4,
+        "share_count": 14,
+        "collect_count": 86
+      }
+    },
+    {
+      "aweme_id": "7546209159331597603",
+      "desc": "大模型微调面试这么难？😭背下这些原题！ #ai新星计划 #大模型 #算法 #ai",
+      "caption": "#ai新星计划 #大模型 #算法 #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1756988750,
+      "duration": 328168,
+      "stats": {
+        "digg_count": 169,
+        "comment_count": 3,
+        "share_count": 12,
+        "collect_count": 93
+      }
+    },
+    {
+      "aweme_id": "7541044442841533711",
+      "desc": "大模型面试必考｜Qwen3提出的GSPO算法原理是什么？ \n#qwen3 #大模型 #秋招 #微调 #ai新星计划",
+      "caption": "大模型面试必考｜Qwen3提出的GSPO算法原理是什么？ \n#qwen3 #大模型 #秋招 #微调 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1756114200,
+      "duration": 437858,
+      "stats": {
+        "digg_count": 105,
+        "comment_count": 1,
+        "share_count": 10,
+        "collect_count": 62
+      }
+    },
+    {
+      "aweme_id": "7541042627915828520",
+      "desc": "大模型面试必考｜如何进行多机多卡微调？\n#秋招 #大厂面试 #大模型 #大模型微调 #ai新星计划",
+      "caption": "大模型面试必考｜如何进行多机多卡微调？\n#秋招 #大厂面试 #大模型 #大模型微调 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1756027800,
+      "duration": 365597,
+      "stats": {
+        "digg_count": 294,
+        "comment_count": 6,
+        "share_count": 23,
+        "collect_count": 210
+      }
+    },
+    {
+      "aweme_id": "7541041545504410915",
+      "desc": "大模型面试必考｜【实战经验】如何评估大模型微调效果？\n#大模型 #大厂面试 #大模型八股文 #ai #ai新星计划",
+      "caption": "大模型面试必考｜【实战经验】如何评估大模型微调效果？\n#大模型 #大厂面试 #大模型八股文 #ai #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755941400,
+      "duration": 307733,
+      "stats": {
+        "digg_count": 141,
+        "comment_count": 3,
+        "share_count": 15,
+        "collect_count": 84
+      }
+    },
+    {
+      "aweme_id": "7541039993532337460",
+      "desc": "大模型面试真题｜【实战经验】如何准备专业领域微调数据集？\n#大模型 #秋招 #大厂面试 #ai #ai新星计划",
+      "caption": "大模型面试真题｜【实战经验】如何准备专业领域微调数据集？\n#大模型 #秋招 #大厂面试 #ai #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755855000,
+      "duration": 386611,
+      "stats": {
+        "digg_count": 164,
+        "comment_count": 0,
+        "share_count": 14,
+        "collect_count": 119
+      }
+    },
+    {
+      "aweme_id": "7540252271888583986",
+      "desc": "大模型面试｜如何评估模型微调&训练所需硬件成本？ #秋招 #大厂面经 #大模型 #ai新星计划 #大模型八股文",
+      "caption": "#秋招 #大厂面经 #大模型 #ai新星计划 #大模型八股文",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755768600,
+      "duration": 393856,
+      "stats": {
+        "digg_count": 282,
+        "comment_count": 8,
+        "share_count": 31,
+        "collect_count": 199
+      }
+    },
+    {
+      "aweme_id": "7540250879417404710",
+      "desc": "大模型面试｜PPO VS GRPO强化学习原理对比 大模型秋招面试必考题解析｜【算法原理】PPO VS GRPO强化学习原理对比  \n#大模型 #秋招 #大模型八股文 #微调 #ai新星计划",
+      "caption": "大模型秋招面试必考题解析｜【算法原理】PPO VS GRPO强化学习原理对比  \n#大模型 #秋招 #大模型八股文 #微调 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755682200,
+      "duration": 453740,
+      "stats": {
+        "digg_count": 230,
+        "comment_count": 7,
+        "share_count": 36,
+        "collect_count": 142
+      }
+    },
+    {
+      "aweme_id": "7540299519989124404",
+      "desc": "DeepSeek重磅更新V3.1🔥性能压过Claude DeepSeek更新！7分钟速览V3.1性能，DeepSeek VS Claude一手实测来啦！| 编程能力实测 | DeepSeek反击GPT5？\n#deepseek #deepseekv3 #大模型 #ai #ai新星计划",
+      "caption": "DeepSeek更新！7分钟速览V3.1性能，DeepSeek VS Claude一手实测来啦！| 编程能力实测 | DeepSeek反击GPT5？\n#deepseek #deepseekv3 #大模型 #ai #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755612831,
+      "duration": 368223,
+      "stats": {
+        "digg_count": 1487,
+        "comment_count": 172,
+        "share_count": 134,
+        "collect_count": 414
+      }
+    },
+    {
+      "aweme_id": "7539901978898435343",
+      "desc": "【🔥大模型面试真题】LoRA微调的原理是什么 #大模型  #大模型微调  #秋招  #ai岗位  #ai新星计划",
+      "caption": "#大模型  #大模型微调  #秋招  #ai岗位  #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755594000,
+      "duration": 401915,
+      "stats": {
+        "digg_count": 362,
+        "comment_count": 2,
+        "share_count": 43,
+        "collect_count": 268
+      }
+    },
+    {
+      "aweme_id": "7539898951231753499",
+      "desc": "【大模型面试真题🔥】微调和RAG的区别 #大模型八股文 #秋招 #ai #大模型微调 #ai新星计划",
+      "caption": "#大模型八股文 #秋招 #ai #大模型微调 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755519541,
+      "duration": 363253,
+      "stats": {
+        "digg_count": 604,
+        "comment_count": 12,
+        "share_count": 50,
+        "collect_count": 341
+      }
+    },
+    {
+      "aweme_id": "7537964443930594575",
+      "desc": "GraphRAG开发企业级智能体｜快速基础入门 #rag  #graphrag  #智能体  #agent  #ai新星计划",
+      "caption": "#rag  #graphrag  #智能体  #agent  #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755069126,
+      "duration": 3447167,
+      "stats": {
+        "digg_count": 314,
+        "comment_count": 3,
+        "share_count": 37,
+        "collect_count": 283
+      }
+    },
+    {
+      "aweme_id": "7537688278158331136",
+      "desc": "GraphRAG开发企业级智能体｜本地部署与调用 #rag #graphrag #智能体 #agent #ai新星计划",
+      "caption": "#rag #graphrag #智能体 #agent #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1755004852,
+      "duration": 2504039,
+      "stats": {
+        "digg_count": 371,
+        "comment_count": 0,
+        "share_count": 27,
+        "collect_count": 397
+      }
+    },
+    {
+      "aweme_id": "7536208464243150116",
+      "desc": "真神还是造假？GPT-5 VS Claude 4.1编程性能对比评测！全网首发GPT-5工业级实战性能评测，代码能力&Agent性能全方位深度测评！\n#gpt  #chatgpt #claude #openai #ai新星计划",
+      "caption": "真神还是造假？GPT-5 VS Claude 4.1编程性能对比评测！全网首发GPT-5工业级实战性能评测，代码能力&Agent性能全方位深度测评！\n#gpt  #chatgpt #claude #openai #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1754660278,
+      "duration": 527767,
+      "stats": {
+        "digg_count": 188,
+        "comment_count": 12,
+        "share_count": 14,
+        "collect_count": 80
+      }
+    },
+    {
+      "aweme_id": "7536056955245251859",
+      "desc": "GPT-5深度解读与性能评测！ 编程&Agent性能全面超越Claude 4.1？实测&揭秘地表最强大模型核心功能特性！\nGPT-5深度解读来啦！编程能力到底如何？新模型核心特性怎样？该如何快速上手GPT-5？\n#gpt5 #chatgpt #openai #大模型 #ai新星计划",
+      "caption": "编程&Agent性能全面超越Claude 4.1？实测&揭秘地表最强大模型核心功能特性！\nGPT-5深度解读来啦！编程能力到底如何？新模型核心特性怎样？该如何快速上手GPT-5？\n#gpt5 #chatgpt #openai #大模型 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1754625009,
+      "duration": 552402,
+      "stats": {
+        "digg_count": 603,
+        "comment_count": 54,
+        "share_count": 66,
+        "collect_count": 196
+      }
+    },
+    {
+      "aweme_id": "7535978294127217954",
+      "desc": "GPT-5发布会4分钟速览！定价、性能…一次看完！ #ai新星计划",
+      "caption": "#ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1754606768,
+      "duration": 297286,
+      "stats": {
+        "digg_count": 899,
+        "comment_count": 77,
+        "share_count": 130,
+        "collect_count": 289
+      }
+    },
+    {
+      "aweme_id": "7535305345573473578",
+      "desc": "OpenAI最新开源GPT-OSS！性能炸裂 OpenAI重磅开源！GPT-OSS模型介绍、评测与本地部署指南|开源新SOTA，最低16G显存运行o4级大模型！#chatgpt  #ai #OpenAI #ai新星计划 #gptoss",
+      "caption": "OpenAI重磅开源！GPT-OSS模型介绍、评测与本地部署指南|开源新SOTA，最低16G显存运行o4级大模型！#chatgpt  #ai #OpenAI #ai新星计划 #gptoss",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1754450001,
+      "duration": 416358,
+      "stats": {
+        "digg_count": 816,
+        "comment_count": 65,
+        "share_count": 144,
+        "collect_count": 480
+      }
+    },
+    {
+      "aweme_id": "7533177281452297487",
+      "desc": "【企业级Agent开发】RAG系统开发实战 1. 借助LangChain RAG搭建RAG系统核心环节\n2. 【实战】借助LangChain搭建企业级RAG系统\n  a. 文档准备与解析\n  b. 文档切分与存储\n  c. RAG系统护栏功能设计\n  d. RAG系统历史对话管理与提示词模版设计\n  e. 基础对话链功能设计\n  f. 内容护栏链功能设计\n  g. 文档检索链与内容问答分支流程设计\n  h. 完整功能链与RAG系统多轮聊天对话机器人\n3. 【实战】借助LangGraph搭建企业级RAG系统\n  a. LangGraph基础功能和开发工具回顾\n  b. 拥有内容护栏功能的LangGraph架构设计\n  c. 借助原始问题优化提升检索文档召回率\n  d. 完整RAG功能节点开发与图状工作流设计\n  e. 借助LangGraph Cli进行RAG系统部署\n  f. 借助LangSmith进行运维监控和项目架构可视化\n  g. LangGraph RAG系统接入前端与对话测试\n4. 【二次开发】LangChain-ChatChat项目本地部署 \n#langchain #rag #langgraph #智能体 #ai新星计划",
+      "caption": "1. 借助LangChain RAG搭建RAG系统核心环节\n2. 【实战】借助LangChain搭建企业级RAG系统\n  a. 文档准备与解析\n  b. 文档切分与存储\n  c. RAG系统护栏功能设计\n  d. RAG系统历史对话管理与提示词模版设计\n  e. 基础对话链功能设计\n  f. 内容护栏链功能设计\n  g. 文档检索链与内容问答分支流程设计\n  h. 完整功能链与RAG系统多轮聊天对话机器人\n3. 【实战】借助LangGraph搭建企业级RAG系统\n  a. LangGraph基础功能和开发工具回顾\n  b. 拥有内容护栏功能的LangGraph架构设计\n  c. 借助原始问题优化提升检索文档召回率\n  d. 完整RAG功能节点开发与图状工作流设计\n  e. 借助LangGraph Cli进行RAG系统部署\n  f. 借助LangSmith进行运维监控和项目架构可视化\n  g. LangGraph RAG系统接入前端与对话测试\n4. 【二次开发】LangChain-ChatChat项目本地部署\n\n#langchain #rag #langgraph #智能体 #ai新星计",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1754299800,
+      "duration": 4319514,
+      "stats": {
+        "digg_count": 4823,
+        "comment_count": 64,
+        "share_count": 659,
+        "collect_count": 4743
+      }
+    },
+    {
+      "aweme_id": "7533171329529335074",
+      "desc": "【企业级智能体开发】RAG+LangChain系统开发基础 1. Naive RAG 基础架构回顾与LangChain基础\n  a. Step 1.文档解析与切分\n  b. Step 2.文档词向量化与存储\n  c. Step 3.文档匹配与问答\n  d. LangChain接入各类模型基础\n  e. LangChain调用方法与内置工具API查询\n2. LangChain Document loaders（文档解析） API\n  a. txt、pdf、md、html、word等本地文档加载流程\n  b. 网页文档加载与数据库文档加载\n  c. 云存储加载与多媒体格式文档加载\n  d. PDF文本与多模态内容加载\n3. LangChain Text splitters（文档切分） API\n  a. 按照文档固定格式切分\n  b. 按照token/字数进行切分\n  c. 滑动窗口切分方法\n  d. 递归切分方法实现流程\n  e. 特定文档切分与语义切分\n4. Embedding模型与词向量数据库\n  a. 在线Embedding模型组接入方法\n  b. 开源Embedding模型组接入方法\n  c. Embedding模型选择依据\n  d. 词向量数据库选取依据\n  e. 专业词向量数据库Chroma、Fiass使用方法\n  f. 通用向量数据库保存词向量流程 \n#rag #langchain #embedding #智能体 #ai新星计划",
+      "caption": "1. Naive RAG 基础架构回顾与LangChain基础\n  a. Step 1.文档解析与切分\n  b. Step 2.文档词向量化与存储\n  c. Step 3.文档匹配与问答\n  d. LangChain接入各类模型基础\n  e. LangChain调用方法与内置工具API查询\n2. LangChain Document loaders（文档解析） API\n  a. txt、pdf、md、html、word等本地文档加载流程\n  b. 网页文档加载与数据库文档加载\n  c. 云存储加载与多媒体格式文档加载\n  d. PDF文本与多模态内容加载\n3. LangChain Text splitters（文档切分） API\n  a. 按照文档固定格式切分\n  b. 按照token/字数进行切分\n  c. 滑动窗口切分方法\n  d. 递归切分方法实现流程\n  e. 特定文档切分与语义切分\n4. Embedding模型与词向量数据库\n  a. 在线Embedding模型组接入方法\n  b. 开源Embedding模型组接入方法\n  c. Embedding模型选择依据\n  d. 词向",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1754213400,
+      "duration": 5738950,
+      "stats": {
+        "digg_count": 329,
+        "comment_count": 9,
+        "share_count": 30,
+        "collect_count": 270
+      }
+    },
+    {
+      "aweme_id": "7533157742194838836",
+      "desc": "【企业级智能体开发实战】RAG基础入门 1. RAG（Retrieval-Augmented Generation，检索增强生成）技术综述\n  a. RAG基本概念入门\n  b. RAG问答系统极简实现流程介绍\n  c. RAG技术核心应用场景：拓展模型知识边界与减少问答幻觉\n  d. RAG全栈技术体系介绍\n    i. 通用RAG流程详解\n    ii. GraphRAG VS RAG\n    iii. 多模态文档检索流程\n    iv. RAG系统评估与优化方法\n  e. RAG热门开源项目&产品介绍\n2. 从零到一手动搭建RAG系统\n  a. Embedding词向量技术介绍\n  b. Embedding模型调用与结果解读\n  c. 余弦相似度计算方法\n  d. 文档解析与切分方法\n  e. 词向量数据库与向量检索模块\n  f. 大模型问答模块编写\n3. 基于LangChain的RAG系统Demo示例\n  a. RAG Demo基础环境搭建\n  b. 文本解析与文档切分函数\n  c. 文档片段Embedding与本地保存\n  d. streamlit前端功能开发\n  e. RAG Demo项目演示 \n#rag #智能体 #大模型 #ai #ai新星计划",
+      "caption": "1. RAG（Retrieval-Augmented Generation，检索增强生成）技术综述\n  a. RAG基本概念入门\n  b. RAG问答系统极简实现流程介绍\n  c. RAG技术核心应用场景：拓展模型知识边界与减少问答幻觉\n  d. RAG全栈技术体系介绍\n    i. 通用RAG流程详解\n    ii. GraphRAG VS RAG\n    iii. 多模态文档检索流程\n    iv. RAG系统评估与优化方法\n  e. RAG热门开源项目&产品介绍\n2. 从零到一手动搭建RAG系统\n  a. Embedding词向量技术介绍\n  b. Embedding模型调用与结果解读\n  c. 余弦相似度计算方法\n  d. 文档解析与切分方法\n  e. 词向量数据库与向量检索模块\n  f. 大模型问答模块编写\n3. 基于LangChain的RAG系统Demo示例\n  a. RAG Demo基础环境搭建\n  b. 文本解析与文档切分函数\n  c. 文档片段Embedding与本地保存\n  d. streamlit前端功能开发\n  e. RAG Demo项目演示\n\n#rag #智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1753949981,
+      "duration": 4190179,
+      "stats": {
+        "digg_count": 295,
+        "comment_count": 9,
+        "share_count": 31,
+        "collect_count": 228
+      }
+    },
+    {
+      "aweme_id": "7532037070596951305",
+      "desc": "【企业级Agent开发入门】GraphRAG快速基础部署 #程序员 #人工智能 #rag #智能体 #ai新星计划",
+      "caption": "#程序员 #人工智能 #rag #智能体 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1753689049,
+      "duration": 5658261,
+      "stats": {
+        "digg_count": 89,
+        "comment_count": 2,
+        "share_count": 7,
+        "collect_count": 54
+      }
+    },
+    {
+      "aweme_id": "7531453849148722451",
+      "desc": "满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划",
+      "caption": "满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1753553264,
+      "duration": 475731,
+      "stats": {
+        "digg_count": 386,
+        "comment_count": 20,
+        "share_count": 57,
+        "collect_count": 344
+      }
+    },
+    {
+      "aweme_id": "7530987876016868623",
+      "desc": "【企业级智能体开发】GraphRAG快速部署 #rag #智能体 #ai #大模型 #ai新星计划",
+      "caption": "#rag #智能体 #ai #大模型 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1753523400,
+      "duration": 7483047,
+      "stats": {
+        "digg_count": 44,
+        "comment_count": 3,
+        "share_count": 5,
+        "collect_count": 51
+      }
+    },
+    {
+      "aweme_id": "7530983941164092724",
+      "desc": "【企业级智能体开发】GraphRAG基本入门 #graphrag #agent #智能体 #ai #ai新星计划",
+      "caption": "#graphrag #agent #智能体 #ai #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1753443849,
+      "duration": 2017167,
+      "stats": {
+        "digg_count": 174,
+        "comment_count": 5,
+        "share_count": 16,
+        "collect_count": 135
+      }
+    },
+    {
+      "aweme_id": "7530256722749820160",
+      "desc": "Claude Code最佳平替，Qwen3 Code使用指南与性能评测！\nQwen3 Coder模型性能解读，Qwen3 Code编程智能体上手实测！\n#qwen #ai #开发 #代码 #ai新星计划",
+      "caption": "Claude Code最佳平替，Qwen3 Code使用指南与性能评测！\nQwen3 Coder模型性能解读，Qwen3 Code编程智能体上手实测！\n#qwen #ai #开发 #代码 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1753274551,
+      "duration": 464121,
+      "stats": {
+        "digg_count": 475,
+        "comment_count": 27,
+        "share_count": 62,
+        "collect_count": 330
+      }
+    },
+    {
+      "aweme_id": "7529824274316545330",
+      "desc": "从零手搓DeepResearch，实操三类主流开发范式，谷歌开源DeepResearch国内适配开发与本地部署\n【从零手搓DeepResearch应用】：DeepResearch应用架构设计、DeepResearch应用Chain与Graph开发流程、DeepResearch应用部署与上线流程\n【主流DeepResearch架构精讲】：LangChain Open DeepResearch项目部署、深度检索工作流实现方法与功能测试、Multi DeepResearch Agent实现方法与功能测试、交互式澄清意图工作流流实现方法与功能测试\n【谷歌DeepResearch项目实战】：gemini-fullstack-langgraph-quickstart、DeepSeek DeepResearch应用二次开发、DeepSeek DeepResearch本地部署流程、DeepSeek DeepResearch问答对话性能测试\n#deepresearch #deepseek #gemini #ai开发 #ai新星计划",
+      "caption": "从零手搓DeepResearch，实操三类主流开发范式，谷歌开源DeepResearch国内适配开发与本地部署\n【从零手搓DeepResearch应用】：DeepResearch应用架构设计、DeepResearch应用Chain与Graph开发流程、DeepResearch应用部署与上线流程\n【主流DeepResearch架构精讲】：LangChain Open DeepResearch项目部署、深度检索工作流实现方法与功能测试、Multi DeepResearch Agent实现方法与功能测试、交互式澄清意图工作流流实现方法与功能测试\n【谷歌DeepResearch项目实战】：gemini-fullstack-langgraph-quickstart、DeepSeek DeepResearch应用二次开发、DeepSeek DeepResearch本地部署流程、DeepSeek DeepResearch问答对话性能测试\n#deepresearch #deepseek #gemini #ai开发 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1753173841,
+      "duration": 6436367,
+      "stats": {
+        "digg_count": 270,
+        "comment_count": 2,
+        "share_count": 42,
+        "collect_count": 206
+      }
+    },
+    {
+      "aweme_id": "7528389675396975915",
+      "desc": "0基础上手｜10分钟快速搭建智能体Agent 如何从 0 到 1 开发一个 AI Agent\n#智能体 #agent #ai #开发 #ai新星计划",
+      "caption": "如何从 0 到 1 开发一个 AI Agent\n#智能体 #agent #ai #开发 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1753005600,
+      "duration": 559112,
+      "stats": {
+        "digg_count": 395,
+        "comment_count": 14,
+        "share_count": 67,
+        "collect_count": 448
+      }
+    },
+    {
+      "aweme_id": "7528252048429632803",
+      "desc": "最强统一智能体，ChatGPT Agent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最高分！\n#chatgpt #openai #deepresearch #ai #ai新星计划",
+      "caption": "最强统一智能体，ChatGPT Agent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最高分！\n#chatgpt #openai #deepresearch #ai #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1752807779,
+      "duration": 327749,
+      "stats": {
+        "digg_count": 314,
+        "comment_count": 9,
+        "share_count": 55,
+        "collect_count": 169
+      }
+    },
+    {
+      "aweme_id": "7527282590076636456",
+      "desc": "企业级智能体开发：MCP+LangGraph实战 1. 创建自定义MCP工具\n  a. Step 1. 借助uv创建Python项目\n  b. Step 2. 添加项目依赖\n  c. Step 3.编写MCP服务器\n  d. Step 4.测试MCP服务器功能\n2. 创建LangGraph MCP客户端\n  a. Step 1. 创建MCP配置文件\n  b. Step 2. 修改.env配置文件和提示词模板\n  c. Step 3. 创建client.py主函数文件\n  d. 主函数文件代码解释\n  e. MCP Adapters使用方法介绍\n3. LangGraph智能体接入更多MCP工具\n  a. 提示词模板与配置文件说明\n  b. Filesystem MCP工具接入\n  c. Filesystem功能测试\n  d. FireCrawl MCP工具接入\n  e. FireCrawl功能测试\n  f. Filesystem+FireCrawl搭建网络爬虫工具\n4. LangGraph接入HTTP MCP智能体\n#LangGraph #mcp #agent #ai新星计划",
+      "caption": "1. 创建自定义MCP工具\n  a. Step 1. 借助uv创建Python项目\n  b. Step 2. 添加项目依赖\n  c. Step 3.编写MCP服务器\n  d. Step 4.测试MCP服务器功能\n2. 创建LangGraph MCP客户端\n  a. Step 1. 创建MCP配置文件\n  b. Step 2. 修改.env配置文件和提示词模板\n  c. Step 3. 创建client.py主函数文件\n  d. 主函数文件代码解释\n  e. MCP Adapters使用方法介绍\n3. LangGraph智能体接入更多MCP工具\n  a. 提示词模板与配置文件说明\n  b. Filesystem MCP工具接入\n  c. Filesystem功能测试\n  d. FireCrawl MCP工具接入\n  e. FireCrawl功能测试\n  f. Filesystem+FireCrawl搭建网络爬虫工具\n4. LangGraph接入HTTP MCP智能体\n#LangGraph #mcp #agent #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1752746400,
+      "duration": 2543211,
+      "stats": {
+        "digg_count": 1653,
+        "comment_count": 23,
+        "share_count": 218,
+        "collect_count": 1956
+      }
+    },
+    {
+      "aweme_id": "7527292087063039247",
+      "desc": "企业级智能体开发：MCP+LangGraph的封装 1. LangGraph项目一般结构与开发工具回顾\n  a. LangGraph项目结构与开发流程\n  b. LangGraph服务部署工具：LangGraph Cli\n  c. LangGraph运行监控框架：LangSmith\n  d. LangGraph图结构可视化与调试框架：LangGraph Studio\n2. Data Agent服务启动流程\n  a. Step 1.下载项目完整源码\n  b. Step 2. Data Agent环境配置\n  c. Step 3. 开启Data Agent项目后端服务\n  d. 【可选】Step 4. 开启前端对话\n3. 将Data Agent封装为MCP工具\n  a. 添加Data Agent MCP流式传输路由\n  b. 修改LangGraph MCP配置文件\n  c. 修改LangGraph MCP提示词模板\n  d. Data Agent MCP功能测试\n4. Data Agent MCP运行状态实时监督 \n#mcp #agent #智能体 #langgraph #ai新星计划",
+      "caption": "1. LangGraph项目一般结构与开发工具回顾\n  a. LangGraph项目结构与开发流程\n  b. LangGraph服务部署工具：LangGraph Cli\n  c. LangGraph运行监控框架：LangSmith\n  d. LangGraph图结构可视化与调试框架：LangGraph Studio\n2. Data Agent服务启动流程\n  a. Step 1.下载项目完整源码\n  b. Step 2. Data Agent环境配置\n  c. Step 3. 开启Data Agent项目后端服务\n  d. 【可选】Step 4. 开启前端对话\n3. 将Data Agent封装为MCP工具\n  a. 添加Data Agent MCP流式传输路由\n  b. 修改LangGraph MCP配置文件\n  c. 修改LangGraph MCP提示词模板\n  d. Data Agent MCP功能测试\n4. Data Agent MCP运行状态实时监督\n\n#mcp #agent #智能体 #langgraph #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1752660000,
+      "duration": 2562000,
+      "stats": {
+        "digg_count": 870,
+        "comment_count": 20,
+        "share_count": 127,
+        "collect_count": 664
+      }
+    },
+    {
+      "aweme_id": "7527273567306648866",
+      "desc": "企业级智能体开发：MCP+LangGraph基础认知 1. LangGraph接入外部工具技术实现方法\n2. MCP技术概述\n  a. MCP技术定位与技术价值介绍\n  b. MCP技术架构\n  c. MCP SDK与MCP技术生态\n3. MCP核心技术概念\n  a. MCP客户端与服务器\n  b. 标准MCP工具接入客户端流程\n  c. MCP离线运行与在线运行模式\n  d. MCP离线与在线工具托管平台\n4. 从LangChain到LangGraph\n5. LangGraph三层API架构\n  a. LangGraph开发生态\n  b. LangSmith与LangGraph Cli\n#MCP #智能体 #Agent #LangGraph #ai新星计划",
+      "caption": "1. LangGraph接入外部工具技术实现方法\n2. MCP技术概述\n  a. MCP技术定位与技术价值介绍\n  b. MCP技术架构\n  c. MCP SDK与MCP技术生态\n3. MCP核心技术概念\n  a. MCP客户端与服务器\n  b. 标准MCP工具接入客户端流程\n  c. MCP离线运行与在线运行模式\n  d. MCP离线与在线工具托管平台\n4. 从LangChain到LangGraph\n5. LangGraph三层API架构\n  a. LangGraph开发生态\n  b. LangSmith与LangGraph Cli\n#MCP #智能体 #Agent #LangGraph #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1752579973,
+      "duration": 2052434,
+      "stats": {
+        "digg_count": 189,
+        "comment_count": 11,
+        "share_count": 19,
+        "collect_count": 175
+      }
+    },
+    {
+      "aweme_id": "7524695843987901748",
+      "desc": "LangGraph智能体开发与部署上线流程 在对LangGraph有了一定的基础了解之后，对于开发者来说，还需要进一步了解和掌握LangGraph必备的开发者套件。分别是LangGraph运行监控框架LangSmith、LangGraph图结构可视化与调试框架LangGraph Studio和LangGraph服务部署工具LangGraph Cli。可以说这些开发工具套件，是真正推动LangGraph的企业级应用开发效率大幅提升的关键。同时监控、调试和部署工具，也是全新一代企业级Agent开发框架的必备工具，也是开发者必须要掌握的基础工具。\n#langgraph #智能体 #mcp #大模型 #ai新星计划",
+      "caption": "在对LangGraph有了一定的基础了解之后，对于开发者来说，还需要进一步了解和掌握LangGraph必备的开发者套件。分别是LangGraph运行监控框架LangSmith、LangGraph图结构可视化与调试框架LangGraph Studio和LangGraph服务部署工具LangGraph Cli。可以说这些开发工具套件，是真正推动LangGraph的企业级应用开发效率大幅提升的关键。同时监控、调试和部署工具，也是全新一代企业级Agent开发框架的必备工具，也是开发者必须要掌握的基础工具。\n#langgraph #智能体 #mcp #大模型 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1752399000,
+      "duration": 7750241,
+      "stats": {
+        "digg_count": 258,
+        "comment_count": 9,
+        "share_count": 34,
+        "collect_count": 261
+      }
+    },
+    {
+      "aweme_id": "7525447892761382190",
+      "desc": "拉垮？马斯克新模型：Grok4深度评测与解读 #ai新星计划 #grok #人工智能 #马斯克 #ai",
+      "caption": "#ai新星计划 #grok #人工智能 #马斯克 #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1752154892,
+      "duration": 428780,
+      "stats": {
+        "digg_count": 621,
+        "comment_count": 125,
+        "share_count": 89,
+        "collect_count": 250
+      }
+    },
+    {
+      "aweme_id": "7524700501590560000",
+      "desc": "智能体开发框架LangChain和LangGraph啥区别 说到现阶段目前最流行、最通用的Agent开发框架，毫无疑问，肯定是LangChain。\nLangGraph和LangChain同宗同源，底层架构完全相同、接口完全相通。从开发者角度来说，LangGraph也是使用LangChain底层API来接入各类大模型、LangGraph也完全兼容LangChain内置的一系列工具。\n换而言之，LangGraph的核心功能都是依托LangChain来完成。LangGraph是基于LangChain进行的构建，无论图结构多复杂，单独每个任务执行链路仍然是现行的，其背后仍然是靠着LangChain的Chain来实现的。\n因此我们可以这么来描述LangChain和LangGraph之间的关系，LangGraph是LangChain工作流的高级编排工具，其中“高级”之处就是LangGraph能按照图结构来编排工作流。\n#langchain #langgraph #智能体 #agent #ai新星计划",
+      "caption": "说到现阶段目前最流行、最通用的Agent开发框架，毫无疑问，肯定是LangChain。\nLangGraph和LangChain同宗同源，底层架构完全相同、接口完全相通。从开发者角度来说，LangGraph也是使用LangChain底层API来接入各类大模型、LangGraph也完全兼容LangChain内置的一系列工具。\n换而言之，LangGraph的核心功能都是依托LangChain来完成。LangGraph是基于LangChain进行的构建，无论图结构多复杂，单独每个任务执行链路仍然是现行的，其背后仍然是靠着LangChain的Chain来实现的。\n因此我们可以这么来描述LangChain和LangGraph之间的关系，LangGraph是LangChain工作流的高级编排工具，其中“高级”之处就是LangGraph能按照图结构来编排工作流。\n#langchain #langgraph #智能体 #agent #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1752053400,
+      "duration": 71331,
+      "stats": {
+        "digg_count": 405,
+        "comment_count": 7,
+        "share_count": 37,
+        "collect_count": 221
+      }
+    },
+    {
+      "aweme_id": "7524656493354847498",
+      "desc": "LangGraph快速入门与Agent开发实战 LangGraph和LangChain同宗同源，底层架构完全相同、接口完全相通。从开发者角度来说，LangGraph也是使用LangChain底层API来接入各类大模型、LangGraph也完全兼容LangChain内置的一系列工具。换而言之，LangGraph的核心功能都是依托LangChain来完成。但是和LangChain的链式工作流哲学完全不同的是，LangGraph的基础哲学是构建图结构的工作流，并引入“状态”这一核心概念来描绘任务执行情况，从而拓展了LangChain LCEL链式语法的功能灵活程度。\n一、LangGraph入门介绍\nLangGraph开发必备工具套件、LangGraph VS 其他开发框架、LangGraph最佳学习路线\n二、从零构建LangGraph智能体\n1. LangGraph接入大模型流程\n2. 借助预构建的智能体API快速创建LangGraph智能体\n3. LangGraph React Agent外部工具响应形式\n a、LangGraph React Agent接入内置工具流程\n b、LangGraph React Agent限制最大迭代次数\n c、LangGraph React Agent限制工具调用次数\n三、LangGraph React智能体记忆管理与多轮对话方法 \n#langchain #langgraph #智能体 #ai新星计划",
+      "caption": "LangGraph和LangChain同宗同源，底层架构完全相同、接口完全相通。从开发者角度来说，LangGraph也是使用LangChain底层API来接入各类大模型、LangGraph也完全兼容LangChain内置的一系列工具。换而言之，LangGraph的核心功能都是依托LangChain来完成。但是和LangChain的链式工作流哲学完全不同的是，LangGraph的基础哲学是构建图结构的工作流，并引入“状态”这一核心概念来描绘任务执行情况，从而拓展了LangChain LCEL链式语法的功能灵活程度。\n一、LangGraph入门介绍\nLangGraph开发必备工具套件、LangGraph VS 其他开发框架、LangGraph最佳学习路线\n二、从零构建LangGraph智能体\n1. LangGraph接入大模型流程\n2. 借助预构建的智能体API快速创建LangGraph智能体\n3. LangGraph React Agent外部工具响应形式\n a、LangGraph React Agent接入内置工具流程\n b、LangGraph React Agent限制最大迭代次数\n",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1751970627,
+      "duration": 5803759,
+      "stats": {
+        "digg_count": 753,
+        "comment_count": 22,
+        "share_count": 107,
+        "collect_count": 783
+      }
+    },
+    {
+      "aweme_id": "7523278486723644708",
+      "desc": "智能体基础开发：LangChain接入工具流程 #ai新星计划 #langchain #智能体 #Agent #大模型",
+      "caption": "#ai新星计划 #langchain #智能体 #Agent #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1751794200,
+      "duration": 3267232,
+      "stats": {
+        "digg_count": 175,
+        "comment_count": 8,
+        "share_count": 12,
+        "collect_count": 140
+      }
+    },
+    {
+      "aweme_id": "7523275914499673363",
+      "desc": "智能体搭建工具：LangChain零基础快速入门 LangChain可以称之为自2022年底大模型技术爆火以来的第一个真正意义上的大模型开发框架。\n 大模型本质上无法直接解决实际的问题，仅仅是一个能够分析、推理和生成文本的黑盒。直到现在，所有的开发者们仍然在不断探索如何把大模型的强大能力与实际应用场景结合起来，而当时LangChain的出现，直接让大模型开发变得简单起来，它将大模型开发过程中常用的功能、工具、流程等等全部封装成一个个的组件，使开发者可以像搭乐高积木一样，快速的组合出适用于不同场景需求的大模型应用。\n#langchain #python #ai #智能体 #ai新星计划",
+      "caption": "LangChain可以称之为自2022年底大模型技术爆火以来的第一个真正意义上的大模型开发框架。\n 大模型本质上无法直接解决实际的问题，仅仅是一个能够分析、推理和生成文本的黑盒。直到现在，所有的开发者们仍然在不断探索如何把大模型的强大能力与实际应用场景结合起来，而当时LangChain的出现，直接让大模型开发变得简单起来，它将大模型开发过程中常用的功能、工具、流程等等全部封装成一个个的组件，使开发者可以像搭乐高积木一样，快速的组合出适用于不同场景需求的大模型应用。\n#langchain #python #ai #智能体 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1751707800,
+      "duration": 4113019,
+      "stats": {
+        "digg_count": 227,
+        "comment_count": 6,
+        "share_count": 25,
+        "collect_count": 246
+      }
+    },
+    {
+      "aweme_id": "7522749303052340534",
+      "desc": "LangGraph&LangChain智能体开发极速入门！ 10分钟搭建高性能Data Agent，前端对话+NL2SQL+Python代码解释器全功能实现，前后端分离架构+实时状态追踪全流程实战，一站式入门LangGraph&LangChain全套开发工具！\n#LangChain #LangGraph #Python #智能体 #ai新星计划",
+      "caption": "10分钟搭建高性能Data Agent，前端对话+NL2SQL+Python代码解释器全功能实现，前后端分离架构+实时状态追踪全流程实战，一站式入门LangGraph&LangChain全套开发工具！\n#LangChain #LangGraph #Python #智能体 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1751526568,
+      "duration": 559112,
+      "stats": {
+        "digg_count": 2791,
+        "comment_count": 69,
+        "share_count": 472,
+        "collect_count": 3088
+      }
+    },
+    {
+      "aweme_id": "7520592527779499304",
+      "desc": "【企业级智能体开发】MCP + 阿里云百炼 #百炼 #MCP #智能体 #ai #ai新星计划",
+      "caption": "#百炼 #MCP #智能体 #ai #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1751024423,
+      "duration": 1343529,
+      "stats": {
+        "digg_count": 75,
+        "comment_count": 3,
+        "share_count": 9,
+        "collect_count": 73
+      }
+    },
+    {
+      "aweme_id": "7520102730162081078",
+      "desc": "企业级大模型开发：Qwen3模型微调 深度讲解微调数据集构造方法包括：主流微调平台魔搭社区和huggingface数据集下载和清洗方法；自定义数据集创建流程；介绍思考链数据集、Fu……版本过低，升级后可展示全部信息",
+      "caption": "深度讲解微调数据集构造方法包括：主流微调平台魔搭社区和huggingface数据集下载和清洗方法；自定义数据集创建流程；介绍思考链数据集、Function call数据集创建方法；完整实操Qwen3模型推理能力微调流程；借助EvalScope进行微调前后模型性能对比\n#大模型 #qwen #微调#ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1750932000,
+      "duration": 10662348,
+      "stats": {
+        "digg_count": 290,
+        "comment_count": 8,
+        "share_count": 51,
+        "collect_count": 353
+      }
+    },
+    {
+      "aweme_id": "7519861994317434151",
+      "desc": "真企业级智能体开发：Open-WebUI+MCP Open-WebUI接入MCP流程\n✅多用户管理 ✅并发调度 ✅企业级 ✅支持MCP\n👉1.企业级大模型对话前端Open-WebUI部署流程\n👉2. Open-WebUI MCPo技术介绍\n👉3. 借助MCPo启动MCP服务\na.MCP运行环境搭建\nb. MCP工具下载\nC. MCP工具服务启动流程\n👉4. MCP接入Open-WebUI流程详解\na. 在指定端口开启MCP服务\nb. 服务验证与本地服务映射\nc.在Open-WebUI中接入\n👉5.在Open-WebUI中实现多MCP工具联动\n#ai #大模型开发 #智能体 #MCP #ai新星计划",
+      "caption": "Open-WebUI接入MCP流程\n✅多用户管理 ✅并发调度 ✅企业级 ✅支持MCP\n👉1.企业级大模型对话前端Open-WebUI部署流程\n👉2. Open-WebUI MCPo技术介绍\n👉3. 借助MCPo启动MCP服务\na.MCP运行环境搭建\nb. MCP工具下载\nC. MCP工具服务启动流程\n👉4. MCP接入Open-WebUI流程详解\na. 在指定端口开启MCP服务\nb. 服务验证与本地服务映射\nc.在Open-WebUI中接入\n👉5.在Open-WebUI中实现多MCP工具联动\n#ai #大模型开发 #智能体 #MCP #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1750854320,
+      "duration": 1083303,
+      "stats": {
+        "digg_count": 748,
+        "comment_count": 7,
+        "share_count": 141,
+        "collect_count": 868
+      }
+    },
+    {
+      "aweme_id": "7519130676570901823",
+      "desc": "【智能体企业级开发】借助MCP搭建智能数据Agent\n✅灵活调用SQL和Python工具，能编写高精度代码，来进行查数、取数、数据清洗和分析工作\n✅不同工具之间要能灵活搭配使用，来完成复杂的综合性任务\n✅如果遇到运行bug，还能自动尝试进行的debug \n#Python #大模型 #智能体 #MCP #ai新星计划",
+      "caption": "【智能体企业级开发】借助MCP搭建智能数据Agent\n✅灵活调用SQL和Python工具，能编写高精度代码，来进行查数、取数、数据清洗和分析工作\n✅不同工具之间要能灵活搭配使用，来完成复杂的综合性任务\n✅如果遇到运行bug，还能自动尝试进行的debug\n\n#Python #大模型 #智能体 #MCP #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1750684090,
+      "duration": 2771558,
+      "stats": {
+        "digg_count": 387,
+        "comment_count": 11,
+        "share_count": 72,
+        "collect_count": 459
+      }
+    },
+    {
+      "aweme_id": "7517933123993161014",
+      "desc": "企业级智能体开发：MCP+GraphRAG知识库问答 MCP+GraphRAG搭建知识库问答系统\n1. GraphRAG技术入门介绍\n  a.GraphRAG入门介绍\n  b. GraphRAG基本原理回顾\n  C. 索引（Indexing）过程与查询（Query）过程\n2. GraphRAG技术实现与API调用方法\n  a.GraphRAG安装与项目初始化\n  b. 基于命令行的Indexing &Query流程实现\n  c. GraphRAG API基本调用方法介绍\n3. MCP+GraphRAG搭建检索增强智能体\n  a.MCP+GraphRAG项目环境搭建\n  b.创建GraphRAG服务器Server\n  c. 创建GraphRAG服务器client\n  d. Client接人Server流程\n4. MCP+GraphRAG问答效果测试 \n#graphrag #mcp #智能体 #大模型 #ai新星计划",
+      "caption": "MCP+GraphRAG搭建知识库问答系统\n1. GraphRAG技术入门介绍\n  a.GraphRAG入门介绍\n  b. GraphRAG基本原理回顾\n  C. 索引（Indexing）过程与查询（Query）过程\n2. GraphRAG技术实现与API调用方法\n  a.GraphRAG安装与项目初始化\n  b. 基于命令行的Indexing &Query流程实现\n  c. GraphRAG API基本调用方法介绍\n3. MCP+GraphRAG搭建检索增强智能体\n  a.MCP+GraphRAG项目环境搭建\n  b.创建GraphRAG服务器Server\n  c. 创建GraphRAG服务器client\n  d. Client接人Server流程\n4. MCP+GraphRAG问答效果测试\n\n#graphrag #mcp #智能体 #大模型 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1750405235,
+      "duration": 2707447,
+      "stats": {
+        "digg_count": 170,
+        "comment_count": 6,
+        "share_count": 15,
+        "collect_count": 162
+      }
+    },
+    {
+      "aweme_id": "7517279834226167059",
+      "desc": "0基础开发智能体：Cherry Studio接入MCP 通过集成 Model Context Protocol（MCP），Cherry Studio 的功能得到了进一步扩展。MCP 是一个开放标准协议，旨在为 AI 系统与外部数据源之间建立标准化的接口。通过 MCP，Cherry Studio 能够与各种外部工具和服务进行交互，例如文件系统、浏览器自动化工具等，从而使 AI 助手具备更强的环境感知和操作能力。\n例如，用户可以在 Cherry Studio 中通过自然语言指令，直接让 AI 助手访问本地文件系统、调用浏览器进行网页搜索，甚至控制其他专业软件进行特定操作。这种深度集成使得用户无需离开 Cherry Studio，就能完成以往需要在多个工具之间切换才能完成的任务，大大提升了工作效率和工作流的连贯性。\n#mcp #cherrystudio #智能体 #大模型 #ai新星计划",
+      "caption": "通过集成 Model Context Protocol（MCP），Cherry Studio 的功能得到了进一步扩展。MCP 是一个开放标准协议，旨在为 AI 系统与外部数据源之间建立标准化的接口。通过 MCP，Cherry Studio 能够与各种外部工具和服务进行交互，例如文件系统、浏览器自动化工具等，从而使 AI 助手具备更强的环境感知和操作能力。\n例如，用户可以在 Cherry Studio 中通过自然语言指令，直接让 AI 助手访问本地文件系统、调用浏览器进行网页搜索，甚至控制其他专业软件进行特定操作。这种深度集成使得用户无需离开 Cherry Studio，就能完成以往需要在多个工具之间切换才能完成的任务，大大提升了工作效率和工作流的连贯性。\n#mcp #cherrystudio #智能体 #大模型 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1750253226,
+      "duration": 583122,
+      "stats": {
+        "digg_count": 196,
+        "comment_count": 3,
+        "share_count": 22,
+        "collect_count": 221
+      }
+    },
+    {
+      "aweme_id": "7516924489507163455",
+      "desc": "Cursor接入MCP开发实战！ 如和将Cursor接入MCP进行Agent智能体开发？\n如何在代码环境调用最热门的MCP工具，并搭建一个Deep Research应用？\nPlaywright Automation、FileSystem调用方法详解！#ai新星计划 \n#mcp #cursor #智能体",
+      "caption": "如和将Cursor接入MCP进行Agent智能体开发？\n如何在代码环境调用最热门的MCP工具，并搭建一个Deep Research应用？\nPlaywright Automation、FileSystem调用方法详解！#ai新星计划 \n#mcp #cursor #智能体",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1750170435,
+      "duration": 2273860,
+      "stats": {
+        "digg_count": 292,
+        "comment_count": 13,
+        "share_count": 47,
+        "collect_count": 284
+      }
+    },
+    {
+      "aweme_id": "7516394482825301284",
+      "desc": "LangChain企业级智能体RAG开发 1. 三行代码快速上手LangChain\n2. LangChain 核心组件速览\n3. LangChain 接入本地开源模型\n4. LangChain 实现 Agent 工具调用\n5. LangChain 构建串行&并行工作流\n6. 实战：从零到一手搓 Agentic Mini-RAG\n7. LangChain 快速接入 MCP\n8. LangChain 构建Sanbox沙箱代码环境\n9. 实战：Multi-Agent 实现自动化数据分析\n10. 实战：端到端私有知识库问答机器人应用实战\n11. 实战：企业数据分析助手：多源数据聚合＋自动报告生成\n12. 实战：LangGraph Serve 部署 & LangSmith 监控流程\n#langchain #MCP #智能体 #RAG #ai新星计划",
+      "caption": "1. 三行代码快速上手LangChain\n2. LangChain 核心组件速览\n3. LangChain 接入本地开源模型\n4. LangChain 实现 Agent 工具调用\n5. LangChain 构建串行&并行工作流\n6. 实战：从零到一手搓 Agentic Mini-RAG\n7. LangChain 快速接入 MCP\n8. LangChain 构建Sanbox沙箱代码环境\n9. 实战：Multi-Agent 实现自动化数据分析\n10. 实战：端到端私有知识库问答机器人应用实战\n11. 实战：企业数据分析助手：多源数据聚合＋自动报告生成\n12. 实战：LangGraph Serve 部署 & LangSmith 监控流程\n#langchain #MCP #智能体 #RAG #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1750047017,
+      "duration": 6618013,
+      "stats": {
+        "digg_count": 72,
+        "comment_count": 10,
+        "share_count": 7,
+        "collect_count": 74
+      }
+    },
+    {
+      "aweme_id": "7516051426359905572",
+      "desc": "MCP企业级智能体开发实战！知识库问答系统+AI数据分析智能体项目实战！独家提供MCP常用工作流+通用开发模版+外部工具调用优化函数\n        \n1.MCP（Model Context Protocol）技术入门介绍；\n2.MCP客户端与服务器开发流程；\n3.GraphRAG Index与Query实现流程回顾；\n4.基于GraphRAG搭建MCP Server；\n5.MCP+GraphRAG搭建本地知识库问答机器人；\n6.Multi Function calling与Parallel Function calling；\n7.借助MCP搭建Multi-Agent基本思路\n8.基于MCP搭建NL2SQL数据分析Agent；\n9.自动数据分析+报告编写实现流程；\n10.MCP与主流Agent开发框架融合思路介绍；\n#graphrag #MCP #智能体 #ai新星计划",
+      "caption": "MCP企业级智能体开发实战！知识库问答系统+AI数据分析智能体项目实战！独家提供MCP常用工作流+通用开发模版+外部工具调用优化函数\n        \n1.MCP（Model Context Protocol）技术入门介绍；\n2.MCP客户端与服务器开发流程；\n3.GraphRAG Index与Query实现流程回顾；\n4.基于GraphRAG搭建MCP Server；\n5.MCP+GraphRAG搭建本地知识库问答机器人；\n6.Multi Function calling与Parallel Function calling；\n7.借助MCP搭建Multi-Agent基本思路\n8.基于MCP搭建NL2SQL数据分析Agent；\n9.自动数据分析+报告编写实现流程；\n10.MCP与主流Agent开发框架融合思路介绍；\n#graphrag #MCP #智能体 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1749967166,
+      "duration": 6021840,
+      "stats": {
+        "digg_count": 324,
+        "comment_count": 9,
+        "share_count": 32,
+        "collect_count": 380
+      }
+    },
+    {
+      "aweme_id": "7515053219194735913",
+      "desc": "Qwen3接入MCP，企业级智能体开发实战！Qwen3原生MCP能力解析｜MCP Client源码级开发｜Qwen-Agen接入海量MCP高效搭建智能体！#ai #Qwen3 #mcp #ai新星计划",
+      "caption": "Qwen3接入MCP，企业级智能体开发实战！Qwen3原生MCP能力解析｜MCP Client源码级开发｜Qwen-Agen接入海量MCP高效搭建智能体！#ai #Qwen3 #mcp #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1749734821,
+      "duration": 6165850,
+      "stats": {
+        "digg_count": 286,
+        "comment_count": 10,
+        "share_count": 42,
+        "collect_count": 290
+      }
+    },
+    {
+      "aweme_id": "7512416135099206962",
+      "desc": "零门槛接入MCP！Cursor、阿里云百炼、Open-WebUI、Cherry Studio接入10大最热门MCP工具实战流程！零门槛搭建专属智能体应用！\n#ai #大模型 #mcp #ai新星计划",
+      "caption": "零门槛接入MCP！Cursor、阿里云百炼、Open-WebUI、Cherry Studio接入10大最热门MCP工具实战流程！零门槛搭建专属智能体应用！\n#ai #大模型 #mcp #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1749120752,
+      "duration": 6464668,
+      "stats": {
+        "digg_count": 1387,
+        "comment_count": 37,
+        "share_count": 213,
+        "collect_count": 1578
+      }
+    },
+    {
+      "aweme_id": "7512367745917324582",
+      "desc": "全新DeepSeek R1模型Function Call与MCP技术实战！R1接入Agents SDK、ADK，借助MCP进行智能体开发实战！\n#ai人工智能介绍 #mcp #deepseek #ai新星计划",
+      "caption": "全新DeepSeek R1模型Function Call与MCP技术实战！R1接入Agents SDK、ADK，借助MCP进行智能体开发实战！\n#ai人工智能介绍 #mcp #deepseek #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1749109463,
+      "duration": 6350542,
+      "stats": {
+        "digg_count": 108,
+        "comment_count": 7,
+        "share_count": 11,
+        "collect_count": 99
+      }
+    },
+    {
+      "aweme_id": "7511985784292003109",
+      "desc": "大模型和Agent开发学习路径已经帮你省好了⬇️\n首先，学会“用”模型： 从最简单的开始，用几行代码调用现成的在线大模型（如ChatGPT、Gemini）或开源模型，让它们帮你生成文本、回答问题，感受AI的能力。\n接着，学会“教”模型： 通过微调（Fine-tuning），特别是像LoRA这样的轻量级方法，用你的专属数据（比如问答对）训练模型，让它掌握特定知识或技能，就像给它“开小灶补课”。\n然后，让模型“动”起来： 学习Agent开发，利用框架（如LangChain）教模型规划任务、调用工具（搜索、计算器等）。这样你就能命令它“查天气并推荐穿搭”，它会自动分步骤完成。\n同时，给模型“配助手”： 掌握RAG技术，结合向量数据库，教会模型快速查找并理解你的私有资料（如公司文档），让它能准确回答内部知识问题，相当于给它配了个“参考书速查员”。\n再动手“做”项目： 拆解和实践热门项目，比如搭建个人知识库问答（用RAG）、创建自动任务助手（用Agent）、或者把大模型接入微信，在复现中理解真实应用的设计。\n最终，解决企业“真”问题： 综合运用以上技能，开发企业级应用，如客服机器人（结合微调+RAG）、合同分析助手（Agent调用法律库）、报表智能分析工具。重点学习如何分析需求、选技术、安全部署、控制成本，让AI真正落地产生价值。\n核心口诀：先会用 → 再会教 → 接着让它自主干活 → 最终解决业务难题！ \n我把大模型和Agent的学习全流程已经整理好了，跟着练完你的大模型能力就已经走在前列！都放在知识库了，希望对你有帮助！\n#大模型 #agent #智能体 #ai",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1749020600,
+      "duration": 0,
+      "stats": {
+        "digg_count": 75,
+        "comment_count": 43,
+        "share_count": 17,
+        "collect_count": 58
+      }
+    },
+    {
+      "aweme_id": "7509727496045071667",
+      "desc": "最强开源大模型DeepSeek R1 0528性能评测与深度解读！DeepSeek R2模型前奏，权重已正式开源！比肩Claude 4，拥有强悍MCP性能！#deepseek #ai #大模型 #ai新星计划",
+      "caption": "最强开源大模型DeepSeek R1 0528性能评测与深度解读！DeepSeek R2模型前奏，权重已正式开源！比肩Claude 4，拥有强悍MCP性能！#deepseek #ai #大模型 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1748494786,
+      "duration": 398200,
+      "stats": {
+        "digg_count": 240,
+        "comment_count": 21,
+        "share_count": 20,
+        "collect_count": 74
+      }
+    },
+    {
+      "aweme_id": "7509500995907423539",
+      "desc": "DeepSeek-R1重大升级！新功能介绍与性能评测｜代码能力追平Claude 4，长文本编写能力大幅增强！\n#deepseek #deepseekr1  #ai #ai新星计划 #大模型",
+      "caption": "DeepSeek-R1重大升级！新功能介绍与性能评测｜代码能力追平Claude 4，长文本编写能力大幅增强！\n#deepseek #deepseekr1  #ai #ai新星计划 #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1748442282,
+      "duration": 234917,
+      "stats": {
+        "digg_count": 468,
+        "comment_count": 54,
+        "share_count": 60,
+        "collect_count": 132
+      }
+    },
+    {
+      "aweme_id": "7509045843035475251",
+      "desc": "100%复刻Manus，Suna本地部署与效果演示！最强开源通用智能体部署与调用实战，Skywork、Flowith开源平替！#ai新星计划 #manus #智能体 #ai",
+      "caption": "100%复刻Manus，Suna本地部署与效果演示！最强开源通用智能体部署与调用实战，Skywork、Flowith开源平替！#ai新星计划 #manus #智能体 #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1748336093,
+      "duration": 566126,
+      "stats": {
+        "digg_count": 2331,
+        "comment_count": 53,
+        "share_count": 440,
+        "collect_count": 2533
+      }
+    },
+    {
+      "aweme_id": "7508752719893499174",
+      "desc": "零门槛Gemini 2.5与Claude 4接入指南，保姆级详解直连&中转接入方案，高效稳定接入全球顶级大模型！ #gemini #claude #ai #大模型#ai新星计划",
+      "caption": "零门槛Gemini 2.5与Claude 4接入指南，保姆级详解直连&中转接入方案，高效稳定接入全球顶级大模型！\n#gemini #claude #ai #大模型#ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1748267918,
+      "duration": 2880552,
+      "stats": {
+        "digg_count": 298,
+        "comment_count": 8,
+        "share_count": 43,
+        "collect_count": 317
+      }
+    },
+    {
+      "aweme_id": "7507621460806995210",
+      "desc": "想要入门大模型却不知道从哪里开始？被信息差割韭菜，花了成千上万，学了个寂寞？要么缺乏真实项目经验，难以进阶？\n在纯公益的【赋范大模型技术社区】，你将获得：1️⃣体系 的 大模型学习路线；2️⃣20+主流模型全套部署、调用项目方案；3️⃣压箱底 的 企业级实战项目；4️⃣5️⃣等等等等\n#ai #大模型 #llm #agent #智能体",
+      "caption": "想要入门大模型却不知道从哪里开始？被信息差割韭菜，花了成千上万，学了个寂寞？要么缺乏真实项目经验，难以进阶？\n在纯公益的【赋范大模型技术社区】，你将获得：1️⃣体系 的 大模型学习路线；2️⃣20+主流模型全套部署、调用项目方案；3️⃣压箱底 的 企业级实战项目；4️⃣5️⃣等等等等\n#ai #大模型 #llm #agent #智能体",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1748004355,
+      "duration": 99521,
+      "stats": {
+        "digg_count": 87,
+        "comment_count": 10,
+        "share_count": 13,
+        "collect_count": 41
+      }
+    },
+    {
+      "aweme_id": "7507478953494383899",
+      "desc": "Claude 4正式发布！实测最强编程大模型，Agent&MCP能力断崖式领先！深入解读+实时演示Claude 4各项核心功能特性！\n#claude #ai #大模型 #claude4 #ai新星计划",
+      "caption": "Claude 4正式发布！实测最强编程大模型，Agent&MCP能力断崖式领先！深入解读+实时演示Claude 4各项核心功能特性！\n#claude #ai #大模型 #claude4 #ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747971269,
+      "duration": 463331,
+      "stats": {
+        "digg_count": 852,
+        "comment_count": 67,
+        "share_count": 137,
+        "collect_count": 412
+      }
+    },
+    {
+      "aweme_id": "7506941853665692979",
+      "desc": "谷歌2025AI发布会深度解读！ #google #ai新星计划 #gemini #ai",
+      "caption": "#google #ai新星计划 #gemini #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747868400,
+      "duration": 620600,
+      "stats": {
+        "digg_count": 667,
+        "comment_count": 11,
+        "share_count": 94,
+        "collect_count": 363
+      }
+    },
+    {
+      "aweme_id": "7506826366227205414",
+      "desc": "GitHub更新AI代码工具Copilot，性能炸裂！Debug一步到位！ #github #ai #代码#ai新星计划",
+      "caption": "GitHub更新AI代码工具Copilot，性能炸裂！Debug一步到位！\n#github #ai #代码#ai新星计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747819296,
+      "duration": 330002,
+      "stats": {
+        "digg_count": 131,
+        "comment_count": 2,
+        "share_count": 15,
+        "collect_count": 103
+      }
+    },
+    {
+      "aweme_id": "7506172473554079013",
+      "desc": "【干货】大模型微调的工具选择 #ai新星计划 #大模型 #微调 #unsloth #llm",
+      "caption": "#ai新星计划 #大模型 #微调 #unsloth #llm",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747667036,
+      "duration": 392625,
+      "stats": {
+        "digg_count": 167,
+        "comment_count": 5,
+        "share_count": 21,
+        "collect_count": 161
+      }
+    },
+    {
+      "aweme_id": "7505410760944733466",
+      "desc": "实测最佳编程Agent！OpenAI最新Codex功能解读与深度评测｜超越Claude3.7+跨文本理解项目源码+云端沙盒环境运行+自主测试与上线功能实操！\n#ai新星计划 #openai #大模型 #人工智能 #代码",
+      "caption": "实测最佳编程Agent！OpenAI最新Codex功能解读与深度评测｜超越Claude3.7+跨文本理解项目源码+云端沙盒环境运行+自主测试与上线功能实操！\n#ai新星计划 #openai #大模型 #人工智能 #代码",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747490020,
+      "duration": 348275,
+      "stats": {
+        "digg_count": 1632,
+        "comment_count": 88,
+        "share_count": 231,
+        "collect_count": 1001
+      }
+    },
+    {
+      "aweme_id": "7504963840229051686",
+      "desc": "MCP是什么？Agent开发效率翻倍秘诀！ 如何让Agent像秦始皇“书同文、车同轨”一样高效协作？ 这期带你零基础扒开MCP真面目，解决Agent工具调用痛点！\n#agent #智能体 #ai新星计划 #大模型",
+      "caption": "如何让Agent像秦始皇“书同文、车同轨”一样高效协作？ 这期带你零基础扒开MCP真面目，解决Agent工具调用痛点！\n#agent #智能体 #ai新星计划 #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747479300,
+      "duration": 402217,
+      "stats": {
+        "digg_count": 525,
+        "comment_count": 5,
+        "share_count": 42,
+        "collect_count": 235
+      }
+    },
+    {
+      "aweme_id": "7504960643838102810",
+      "desc": "Agent开发必学！🔑 Function Calling到底是个啥？这次真彻底搞懂了！\n# #ai新星计划 #agent #智能体 #大模型",
+      "caption": "Agent开发必学！🔑 Function Calling到底是个啥？这次真彻底搞懂了！\n# #ai新星计划 #agent #智能体 #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747384945,
+      "duration": 814765,
+      "stats": {
+        "digg_count": 756,
+        "comment_count": 15,
+        "share_count": 94,
+        "collect_count": 672
+      }
+    },
+    {
+      "aweme_id": "7504671580123925797",
+      "desc": "大模型高效微调，能干什么？ #ai新星计划 #大模型 #ai #智能体 #人工智能",
+      "caption": "#ai新星计划 #大模型 #ai #智能体 #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747317736,
+      "duration": 134025,
+      "stats": {
+        "digg_count": 58,
+        "comment_count": 1,
+        "share_count": 4,
+        "collect_count": 41
+      }
+    },
+    {
+      "aweme_id": "7504273886402448678",
+      "desc": "LoRA是什么？大模型高效微调基础概念 #ai新星计划 #大模型 #lora #ai",
+      "caption": "#ai新星计划 #大模型 #lora #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747225245,
+      "duration": 98428,
+      "stats": {
+        "digg_count": 124,
+        "comment_count": 5,
+        "share_count": 6,
+        "collect_count": 88
+      }
+    },
+    {
+      "aweme_id": "7504186094263602441",
+      "desc": "MCP怎么学？独家MCP从入门到进阶保姆级学习路径规划！MCP全栈技术体系介绍\n#ai新星计划  #MCP #FunctionCalling #大模型",
+      "caption": "MCP怎么学？独家MCP从入门到进阶保姆级学习路径规划！MCP全栈技术体系介绍\n#ai新星计划  #MCP #FunctionCalling #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747204595,
+      "duration": 399314,
+      "stats": {
+        "digg_count": 685,
+        "comment_count": 19,
+        "share_count": 45,
+        "collect_count": 359
+      }
+    },
+    {
+      "aweme_id": "7503930303380000009",
+      "desc": "大模型微调是什么？为什么这个概念在ai领域这么火 #ai新星计划  #微调 \n#大模型 #llm #ai",
+      "caption": "#ai新星计划  #微调 \n#大模型 #llm #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1747145237,
+      "duration": 94249,
+      "stats": {
+        "digg_count": 328,
+        "comment_count": 2,
+        "share_count": 23,
+        "collect_count": 201
+      }
+    },
+    {
+      "aweme_id": "7501325816660282678",
+      "desc": "AGI超级加速器！DeepSeek-Prover-V2深度解读｜全球首款形式化数学大模型｜管道递归法训练最强理性大模型\n#deepseek #深度求索 #大模型 #ai",
+      "caption": "AGI超级加速器！DeepSeek-Prover-V2深度解读｜全球首款形式化数学大模型｜管道递归法训练最强理性大模型\n#deepseek #深度求索 #大模型 #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1746539010,
+      "duration": 446427,
+      "stats": {
+        "digg_count": 168,
+        "comment_count": 8,
+        "share_count": 16,
+        "collect_count": 89
+      }
+    },
+    {
+      "aweme_id": "7498600420479126838",
+      "desc": "【深度解析】大模型新王Qwen3发布！ Qwen-3深度解析！硬件配置、原生MCP功能介绍、模型选择详解！仅需1/3硬件成本，性能超越DeepSeek-R1！\n#千问3 #通义千问 #大模型 #国产大模型",
+      "caption": "Qwen-3深度解析！硬件配置、原生MCP功能介绍、模型选择详解！仅需1/3硬件成本，性能超越DeepSeek-R1！\n#千问3 #通义千问 #大模型 #国产大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1745904105,
+      "duration": 448516,
+      "stats": {
+        "digg_count": 246,
+        "comment_count": 19,
+        "share_count": 46,
+        "collect_count": 116
+      }
+    },
+    {
+      "aweme_id": "7498316705794395431",
+      "desc": "7分钟开发&发布专属MCP！ 【全网最全】MCP开发部署全套教程来啦，一站式详解MCP【开发】-【测试】-【上线】全流程，实操stdio、SSE类型MCP开发与发布流程，全网独家HTTP流式传输MCP开发实战！\n#mcp #ai #智能体 #大模型",
+      "caption": "【全网最全】MCP开发部署全套教程来啦，一站式详解MCP【开发】-【测试】-【上线】全流程，实操stdio、SSE类型MCP开发与发布流程，全网独家HTTP流式传输MCP开发实战！\n#mcp #ai #智能体 #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1745838072,
+      "duration": 448051,
+      "stats": {
+        "digg_count": 260,
+        "comment_count": 6,
+        "share_count": 31,
+        "collect_count": 261
+      }
+    },
+    {
+      "aweme_id": "7496848112972008723",
+      "desc": "MCP接入高德地图，0门槛搭建旅游智能体！ #智能体 #阿里云百炼 #mcp #高德地图",
+      "caption": "#智能体 #阿里云百炼 #mcp #高德地图",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1745495990,
+      "duration": 314420,
+      "stats": {
+        "digg_count": 44,
+        "comment_count": 0,
+        "share_count": 8,
+        "collect_count": 33
+      }
+    },
+    {
+      "aweme_id": "7496505471839374603",
+      "desc": "使用Cherry Studio + MCP开发AI网络爬虫 #mcp #cherrystudio #智能体 #智能体开发 #agent",
+      "caption": "#mcp #cherrystudio #智能体 #智能体开发 #agent",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1745416606,
+      "duration": 142629,
+      "stats": {
+        "digg_count": 102,
+        "comment_count": 2,
+        "share_count": 18,
+        "collect_count": 92
+      }
+    },
+    {
+      "aweme_id": "7496127664466562315",
+      "desc": "Cherry Studio如何使用MCP开发智能体？ #智能体 #cherrystudio #mcp #functioncalling #agent",
+      "caption": "#智能体 #cherrystudio #mcp #functioncalling #agent",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1745328585,
+      "duration": 204332,
+      "stats": {
+        "digg_count": 16,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 17
+      }
+    },
+    {
+      "aweme_id": "7494584126142467382",
+      "desc": "MCP是啥？最近怎么突然火了？ #智能体 #mcp #functioncalling #大模型 #agent",
+      "caption": "#智能体 #mcp #functioncalling #大模型 #agent",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1745227800,
+      "duration": 97962,
+      "stats": {
+        "digg_count": 47,
+        "comment_count": 0,
+        "share_count": 5,
+        "collect_count": 31
+      }
+    },
+    {
+      "aweme_id": "7494585388699323660",
+      "desc": "智能体开发，必备5个MCP网站 #智能体 #mcp #agent #大模型 #functioncalling",
+      "caption": "#智能体 #mcp #agent #大模型 #functioncalling",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1745191800,
+      "duration": 154383,
+      "stats": {
+        "digg_count": 92,
+        "comment_count": 1,
+        "share_count": 17,
+        "collect_count": 64
+      }
+    },
+    {
+      "aweme_id": "7494583353635638591",
+      "desc": "大厂纷纷入局MCP，到底在抢什么？ #智能体 #mcp #functioncalling #大模型",
+      "caption": "#智能体 #mcp #functioncalling #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1745141400,
+      "duration": 64574,
+      "stats": {
+        "digg_count": 105,
+        "comment_count": 8,
+        "share_count": 24,
+        "collect_count": 51
+      }
+    },
+    {
+      "aweme_id": "7494581463124430143",
+      "desc": "少走弯路！搞定MCP就靠这4个平台 #mcp #functioncalling #智能体  #agent #大模型",
+      "caption": "#mcp #functioncalling #智能体  #agent #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1744968348,
+      "duration": 130774,
+      "stats": {
+        "digg_count": 140,
+        "comment_count": 2,
+        "share_count": 12,
+        "collect_count": 108
+      }
+    },
+    {
+      "aweme_id": "7493425862549835020",
+      "desc": "重回巅峰！OpenAI新旗舰模型 GPT-4.1深度解读 全系列SOTA！GPT-4.1深度解读与性能评测｜1M长文档检索、前端编程、指令跟随、视觉推理能力介绍与详细测评！Gemini&Claude对比测试\n#openai #gpt #chatgpt #大模型",
+      "caption": "全系列SOTA！GPT-4.1深度解读与性能评测｜1M长文档检索、前端编程、指令跟随、视觉推理能力介绍与详细测评！Gemini&Claude对比测试\n#openai #gpt #chatgpt #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1744699406,
+      "duration": 534174,
+      "stats": {
+        "digg_count": 127,
+        "comment_count": 22,
+        "share_count": 15,
+        "collect_count": 47
+      }
+    },
+    {
+      "aweme_id": "7493081406294314303",
+      "desc": "从训练到应用，揭秘Function Calling底层逻辑 智能体从何而来？搭建智能体核心技术—Function calling硬核教程来啦！深度详解大模型调用工具底层原理，揭秘Function calling从何而来，四大优化方案提升大模型Agent性能！#大模型 #function calling #mcp #agent",
+      "caption": "智能体从何而来？搭建智能体核心技术—Function calling硬核教程来啦！深度详解大模型调用工具底层原理，揭秘Function calling从何而来，四大优化方案提升大模型Agent性能！#大模型 #function calling #mcp #agent",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1744618986,
+      "duration": 894107,
+      "stats": {
+        "digg_count": 1295,
+        "comment_count": 26,
+        "share_count": 212,
+        "collect_count": 1153
+      }
+    },
+    {
+      "aweme_id": "7491629837862374675",
+      "desc": "Agent 搭建需要几步？ #mcp #function calling #ai #大模型",
+      "caption": "#mcp #function calling #ai #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1744281190,
+      "duration": 185564,
+      "stats": {
+        "digg_count": 95,
+        "comment_count": 1,
+        "share_count": 9,
+        "collect_count": 57
+      }
+    },
+    {
+      "aweme_id": "7491290637707398441",
+      "desc": "打造高效AI Agent第一步：核心模块的功能认知！ #大模型 #mcp #functioncalling #llm #ai",
+      "caption": "#大模型 #mcp #functioncalling #llm #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1744202420,
+      "duration": 103556,
+      "stats": {
+        "digg_count": 97,
+        "comment_count": 7,
+        "share_count": 10,
+        "collect_count": 55
+      }
+    },
+    {
+      "aweme_id": "7490911148426972435",
+      "desc": "这么多Agent开发框架怎么选？ #agent #mcp #大模型 #开发",
+      "caption": "#agent #mcp #大模型 #开发",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1744114112,
+      "duration": 241510,
+      "stats": {
+        "digg_count": 254,
+        "comment_count": 10,
+        "share_count": 25,
+        "collect_count": 215
+      }
+    },
+    {
+      "aweme_id": "7488688987016596790",
+      "desc": "【agent开发】为什么必学Function Calling？\n#functioncalling #mcp #agent #大模型 #ai",
+      "caption": "【agent开发】为什么必学Function Calling？\n#functioncalling #mcp #agent #大模型 #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1744017000,
+      "duration": 108877,
+      "stats": {
+        "digg_count": 217,
+        "comment_count": 3,
+        "share_count": 33,
+        "collect_count": 182
+      }
+    },
+    {
+      "aweme_id": "7488687897239981348",
+      "desc": "Agent如何改变传统行业？ #agent #大模型 #functioncalling #mcp",
+      "caption": "Agent如何改变传统行业？ #agent #大模型 #functioncalling #mcp",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1743930600,
+      "duration": 90929,
+      "stats": {
+        "digg_count": 33,
+        "comment_count": 2,
+        "share_count": 8,
+        "collect_count": 29
+      }
+    },
+    {
+      "aweme_id": "7488687237836573971",
+      "desc": "Agent开发新标杆｜ DS V3强化Agent能力 #deepseek #大模型 #agent #llm #编程",
+      "caption": "#deepseek #大模型 #agent #llm #编程",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1743757800,
+      "duration": 61635,
+      "stats": {
+        "digg_count": 65,
+        "comment_count": 1,
+        "share_count": 3,
+        "collect_count": 27
+      }
+    },
+    {
+      "aweme_id": "7488681431460269375",
+      "desc": "为什么下一步一定是Ai Agent？ #大模型 #agent #ai #openai",
+      "caption": "#大模型 #agent #ai #openai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1743594865,
+      "duration": 100054,
+      "stats": {
+        "digg_count": 89,
+        "comment_count": 0,
+        "share_count": 6,
+        "collect_count": 44
+      }
+    },
+    {
+      "aweme_id": "7487963041477217590",
+      "desc": "Deepseek V3新版本🔥最适合Agent开发 #deepseek #大模型开发 #大模型 #agent",
+      "caption": "#deepseek #大模型开发 #大模型 #agent",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1743427552,
+      "duration": 77368,
+      "stats": {
+        "digg_count": 61,
+        "comment_count": 2,
+        "share_count": 2,
+        "collect_count": 31
+      }
+    },
+    {
+      "aweme_id": "7486825310877437247",
+      "desc": "MCP能加速Agent开发流程？是真的吗 #ai #一分钟干货教学  #大模型 #deepseek #mcp",
+      "caption": "#ai #一分钟干货教学  #大模型 #deepseek #mcp",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1743242400,
+      "duration": 113057,
+      "stats": {
+        "digg_count": 331,
+        "comment_count": 2,
+        "share_count": 36,
+        "collect_count": 281
+      }
+    },
+    {
+      "aweme_id": "7486787699697814838",
+      "desc": "MCP基础｜Function Calling原理精讲 #MCP #大模型 #agent #deepseek #大语言模型",
+      "caption": "#MCP #大模型 #agent #deepseek #大语言模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1743153612,
+      "duration": 215759,
+      "stats": {
+        "digg_count": 745,
+        "comment_count": 15,
+        "share_count": 89,
+        "collect_count": 520
+      }
+    },
+    {
+      "aweme_id": "7486466473490255145",
+      "desc": "为什么Agent开发都用MCP？ #agent #大模型 #ai #mcp",
+      "caption": "#agent #大模型 #ai #mcp",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1743078829,
+      "duration": 219800,
+      "stats": {
+        "digg_count": 405,
+        "comment_count": 19,
+        "share_count": 37,
+        "collect_count": 224
+      }
+    },
+    {
+      "aweme_id": "7486152487716752651",
+      "desc": "Deepseek-V3更新！最强agent模型来了 最强Agent大模型！DeepSeek-V3-0324模型详细介绍与深度评测！推理&代码&文本编写能力显著提高，Agent能力不输GPT4o&Claude3.5\n#ai #deepseek #大模型 #agent",
+      "caption": "最强Agent大模型！DeepSeek-V3-0324模型详细介绍与深度评测！推理&代码&文本编写能力显著提高，Agent能力不输GPT4o&Claude3.5\n#ai #deepseek #大模型 #agent",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1743006237,
+      "duration": 606202,
+      "stats": {
+        "digg_count": 1125,
+        "comment_count": 47,
+        "share_count": 218,
+        "collect_count": 695
+      }
+    },
+    {
+      "aweme_id": "7483475075958639881",
+      "desc": "🔥2025年Agent王炸！Cursor+MCP Model Context Protocol（MCP，模型上下文协议），这是一种用于将 AI 助手 连接到实际存储数据的 系统，包括 内容存储库、企业工具、开发环境 等。MCP 的目标是帮助 前沿大模型 生成 更优质、更相关的响应。\nMCP 让你能够在 LLM 之上构建智能代理（Agents）和复杂工作流。 \nLLM 需要与 数据和工具 集成，而 MCP 提供了： ✅ 丰富的预构建集成，LLM 可直接对接 ✅ 跨 LLM 供应商的灵活性，支持随时切换 ✅ 数据安全的最佳实践，确保数据存储在本地基础设施中\n而Cursor近期宣布加入MCP支持，2025年，，在强悍的MCP生态加持下，人人手搓Manus的时代即将到来。\n#manus #cursor #mcp #大模型 #ai",
+      "caption": "Model Context Protocol（MCP，模型上下文协议），这是一种用于将 AI 助手 连接到实际存储数据的 系统，包括 内容存储库、企业工具、开发环境 等。MCP 的目标是帮助 前沿大模型 生成 更优质、更相关的响应。\nMCP 让你能够在 LLM 之上构建智能代理（Agents）和复杂工作流。 \nLLM 需要与 数据和工具 集成，而 MCP 提供了： ✅ 丰富的预构建集成，LLM 可直接对接 ✅ 跨 LLM 供应商的灵活性，支持随时切换 ✅ 数据安全的最佳实践，确保数据存储在本地基础设施中\n而Cursor近期宣布加入MCP支持，2025年，，在强悍的MCP生态加持下，人人手搓Manus的时代即将到来。\n#manus #cursor #mcp #大模型 #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1742382556,
+      "duration": 192726,
+      "stats": {
+        "digg_count": 242,
+        "comment_count": 12,
+        "share_count": 33,
+        "collect_count": 158
+      }
+    },
+    {
+      "aweme_id": "7481672133328915762",
+      "desc": "7分钟讲清楚MCP是什么？\n统一Function calling规范，工作量锐减至1/6，人人手搓Manus！？ | 一键链接千台服务器，几行代码接入海量外部工具\n#Agent #大模型 #AI",
+      "caption": "7分钟讲清楚MCP是什么？\n统一Function calling规范，工作量锐减至1/6，人人手搓Manus！？ | 一键链接千台服务器，几行代码接入海量外部工具\n#Agent #大模型 #AI",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1741962774,
+      "duration": 418701,
+      "stats": {
+        "digg_count": 4532,
+        "comment_count": 121,
+        "share_count": 920,
+        "collect_count": 3633
+      }
+    },
+    {
+      "aweme_id": "7480936620942708018",
+      "desc": "风口？泡沫？深度解析Manus的底层逻辑！ 深度解析Manus的Agent技术逻辑！解析通用Agent未来发展路径与Manus AI底层技术逻辑，详解computer use、browser use、代码解释器技术体系及Manus开源项目，一站式快速建立Agent技术认知！#manus #ai #aiagent #大模型",
+      "caption": "深度解析Manus的Agent技术逻辑！解析通用Agent未来发展路径与Manus AI底层技术逻辑，详解computer use、browser use、代码解释器技术体系及Manus开源项目，一站式快速建立Agent技术认知！#manus #ai #aiagent #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1741791307,
+      "duration": 588092,
+      "stats": {
+        "digg_count": 317,
+        "comment_count": 11,
+        "share_count": 39,
+        "collect_count": 177
+      }
+    },
+    {
+      "aweme_id": "7480750529593822501",
+      "desc": "OpenAI发布会独家解读，10行代码打造专属Manus OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent",
+      "caption": "OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1741747981,
+      "duration": 438881,
+      "stats": {
+        "digg_count": 1202,
+        "comment_count": 28,
+        "share_count": 377,
+        "collect_count": 879
+      }
+    },
+    {
+      "aweme_id": "7479069032574962953",
+      "desc": "QwQ模型深度评测！谁才是国产Ai之王？ DeepSeek R1 vs QwQ-32B模型性能大PK！从编程、数学到角色扮演，全面评测谁更强？32B小身材能否逆袭？技术党必看！🔥 #deepseek #通义千问 #阿里巴巴 #ai",
+      "caption": "DeepSeek R1 vs QwQ-32B模型性能大PK！从编程、数学到角色扮演，全面评测谁更强？32B小身材能否逆袭？技术党必看！🔥 #deepseek #通义千问 #阿里巴巴 #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1741356732,
+      "duration": 354475,
+      "stats": {
+        "digg_count": 1552,
+        "comment_count": 156,
+        "share_count": 244,
+        "collect_count": 747
+      }
+    },
+    {
+      "aweme_id": "7478671957190331675",
+      "desc": "Deepseek平替！阿里最新开源 1/10硬件成本，性能比肩DeepSeek R1！阿里开源QWQ-32B推理模型，卷起来了！\n#deepseek #阿里巴巴 #ai #大模型",
+      "caption": "1/10硬件成本，性能比肩DeepSeek R1！阿里开源QWQ-32B推理模型，卷起来了！\n#deepseek #阿里巴巴 #ai #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1741264023,
+      "duration": 235055,
+      "stats": {
+        "digg_count": 343,
+        "comment_count": 16,
+        "share_count": 57,
+        "collect_count": 203
+      }
+    },
+    {
+      "aweme_id": "7476447084158225690",
+      "desc": "大模型训练革命！Deepseek开源3FS文件系统！\n硬核！DeepSeek开源3FS文件系统：大模型训练速度暴涨，这才是真·技术基建！\n#ai #大模型 #llm #deepseek #开源",
+      "caption": "大模型训练革命！Deepseek开源3FS文件系统！\n硬核！DeepSeek开源3FS文件系统：大模型训练速度暴涨，这才是真·技术基建！\n#ai #大模型 #llm #deepseek #开源",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1740746009,
+      "duration": 353221,
+      "stats": {
+        "digg_count": 163,
+        "comment_count": 31,
+        "share_count": 12,
+        "collect_count": 71
+      }
+    },
+    {
+      "aweme_id": "7476321985560218889",
+      "desc": "🔥ChatGPT4.5发布！堪称奢侈品 3分钟解读OpenAI GPT4.5模型！GPT4.5正式发布，标志着曾经灿若星辰的GPT-4模型时代落下帷幕。但令人失望的是，GPT4.5模型远未达到人们对于GPT模型的期待，性能提升不大，价格甚至是DeepSeek的1000倍。我们并不清楚OpenAI未来经营策略，但无比期待DeepSeek能扛起未来大模型技术发展的大旗。\n#chatgpt #openai #deepseek #ai",
+      "caption": "3分钟解读OpenAI GPT4.5模型！GPT4.5正式发布，标志着曾经灿若星辰的GPT-4模型时代落下帷幕。但令人失望的是，GPT4.5模型远未达到人们对于GPT模型的期待，性能提升不大，价格甚至是DeepSeek的1000倍。我们并不清楚OpenAI未来经营策略，但无比期待DeepSeek能扛起未来大模型技术发展的大旗。\n#chatgpt #openai #deepseek #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1740717085,
+      "duration": 262920,
+      "stats": {
+        "digg_count": 62,
+        "comment_count": 13,
+        "share_count": 7,
+        "collect_count": 15
+      }
+    },
+    {
+      "aweme_id": "7476096677577821491",
+      "desc": "deepseek新开源3个算法，绕过美国算力霸权 DeepSeek正式发布DualPipe，梁文峰亲自带队研发神级双向管道并行算加速，毫秒级榨干GPU性能！#ai #deepseek #人工智能 #大模型",
+      "caption": "DeepSeek正式发布DualPipe，梁文峰亲自带队研发神级双向管道并行算加速，毫秒级榨干GPU性能！#ai #deepseek #人工智能 #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1740664422,
+      "duration": 387238,
+      "stats": {
+        "digg_count": 55,
+        "comment_count": 10,
+        "share_count": 4,
+        "collect_count": 22
+      }
+    },
+    {
+      "aweme_id": "7475719484070841609",
+      "desc": "2.7倍提速！Deepseek又一重磅开源🔥 DeepSeek重磅开源DeepGEMM矩阵加速库，全球唯一FP8超级矩阵加速器！2.7倍提升矩阵乘法计算效率！ #ai #deeps……版本过低，升级后可展示全部信息",
+      "caption": "DeepSeek重磅开源DeepGEMM矩阵加速库，全球唯一FP8超级矩阵加速器！2.7倍提升矩阵乘法计算效率！\n#ai #deepseek #英伟达 #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1740576946,
+      "duration": 283282,
+      "stats": {
+        "digg_count": 34,
+        "comment_count": 15,
+        "share_count": 4,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7475621532719435058",
+      "desc": "万元服务器运行满血DeepSeek！全网最全低成本部署方案+硬件采购避坑指南！KTransformers方案+Unsloth动态量化方案详解！\n#ai #deepseek #本地部署 #英伟达 #清华大学",
+      "caption": "万元服务器运行满血DeepSeek！全网最全低成本部署方案+硬件采购避坑指南！KTransformers方案+Unsloth动态量化方案详解！\n#ai #deepseek #本地部署 #英伟达 #清华大学",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1740553894,
+      "duration": 760476,
+      "stats": {
+        "digg_count": 1541,
+        "comment_count": 404,
+        "share_count": 328,
+        "collect_count": 1541
+      }
+    },
+    {
+      "aweme_id": "7475337129783102729",
+      "desc": "DeepSeek重磅开源DeepEP，大模型训练&推理效率暴涨！粉碎算力垄断，重塑MoE模型训练新范式！#deepseek #ai #干货分享",
+      "caption": "DeepSeek重磅开源DeepEP，大模型训练&推理效率暴涨！粉碎算力垄断，重塑MoE模型训练新范式！#deepseek #ai #干货分享",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1740487773,
+      "duration": 239992,
+      "stats": {
+        "digg_count": 69,
+        "comment_count": 6,
+        "share_count": 4,
+        "collect_count": 23
+      }
+    },
+    {
+      "aweme_id": "7474927815335349554",
+      "desc": "Deepseek又开源封神！FlashMLA速度怒飙3倍 deepseek开源周第一个核弹🚨！原创FlashMLA吊打FlashAttention和Pytorch，⚡怒飙3000GB/s带宽和580 TFLOPS！重新定义企业级部署游戏规则，扩大国产大模型的技术影响力！\n#deepseek #ai #大模型",
+      "caption": "deepseek开源周第一个核弹🚨！原创FlashMLA吊打FlashAttention和Pytorch，⚡怒飙3000GB/s带宽和580 TFLOPS！重新定义企业级部署游戏规则，扩大国产大模型的技术影响力！\n#deepseek #ai #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1740392361,
+      "duration": 192214,
+      "stats": {
+        "digg_count": 174,
+        "comment_count": 7,
+        "share_count": 28,
+        "collect_count": 65
+      }
+    },
+    {
+      "aweme_id": "7473416824743382310",
+      "desc": "微信接入！Deepseek算法让英伟达蒸发万亿 🚨AI圈炸锅！微信×百度地图深夜突袭接入DeepSeek\n200+企业集体押注Deepseek\n核心原因竟是原创「GRPO核弹算法」！💥\n#ai #deepseek #英伟达 #微信 #美股",
+      "caption": "🚨AI圈炸锅！微信×百度地图深夜突袭接入DeepSeek\n200+企业集体押注Deepseek\n核心原因竟是原创「GRPO核弹算法」！💥\n#ai #deepseek #英伟达 #微信 #美股",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1740040562,
+      "duration": 66635,
+      "stats": {
+        "digg_count": 23,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 8
+      }
+    },
+    {
+      "aweme_id": "7472770924635376947",
+      "desc": "【Grok3发布会速览】马斯克10亿美金砸出最强AI？ 三分钟速看发布会，Grok3闭源称霸VS国产开源逆袭！Grok3狂烧10亿美金、10万张H100 GPU，推理能力碾压全场！#马斯克 #xai #deepseek #ai",
+      "caption": "三分钟速看发布会，Grok3闭源称霸VS国产开源逆袭！Grok3狂烧10亿美金、10万张H100 GPU，推理能力碾压全场！#马斯克 #xai #deepseek #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1739890484,
+      "duration": 191310,
+      "stats": {
+        "digg_count": 48,
+        "comment_count": 3,
+        "share_count": 16,
+        "collect_count": 14
+      }
+    },
+    {
+      "aweme_id": "7462609854604021019",
+      "desc": "比肩o1！DeepSeek R1全面解析！ DeepSeek R1模型架构与模型权重全开源，全面解析来啦（含教程）！价格只有OpenAI o1的 1/50！性能如何？除了R1又有什么值得关注？在R1发布后搜集、探讨并通宵录制视频只为给大家一份详尽的解读，制作不易欢迎请一键三连支持哦~\n#知识科普  #ai #大模型 #Deepseek #openai",
+      "caption": "DeepSeek R1模型架构与模型权重全开源，全面解析来啦（含教程）！价格只有OpenAI o1的 1/50！性能如何？除了R1又有什么值得关注？在R1发布后搜集、探讨并通宵录制视频只为给大家一份详尽的解读，制作不易欢迎请一键三连支持哦~\n#知识科普  #ai #大模型 #Deepseek #openai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1737524463,
+      "duration": 348414,
+      "stats": {
+        "digg_count": 450,
+        "comment_count": 59,
+        "share_count": 45,
+        "collect_count": 153
+      }
+    },
+    {
+      "aweme_id": "7460081498180357403",
+      "desc": "速通Deepseek！技术人如何复制它的成功？｜实测｜教程 🚀我们团队在过去几周应用deepseek v3来构建RAG知识库问答系统、Agent智能体以及仿造其架构训练了一个MiniDeepSeek v3模型。\n📢这期视频就总结一下我们的经验，🎯好好聊聊Deepseek！ \n#deepseek #openai #ai #大模型 #国产",
+      "caption": "🚀我们团队在过去几周应用deepseek v3来构建RAG知识库问答系统、Agent智能体以及仿造其架构训练了一个MiniDeepSeek v3模型。\n📢这期视频就总结一下我们的经验，🎯好好聊聊Deepseek！\n\n#deepseek #openai #ai #大模型 #国产",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1736935592,
+      "duration": 615676,
+      "stats": {
+        "digg_count": 26,
+        "comment_count": 3,
+        "share_count": 4,
+        "collect_count": 10
+      }
+    },
+    {
+      "aweme_id": "7457831600676539658",
+      "desc": "【干货】25年AI大模型求职指南 💼 我们团队耗时2个月，整理了全网28312份大模型岗位JD，🚀为你打造了一份超详细的《2025年大模型岗位求职指南》\n#求职 #大模型 #ai #招聘",
+      "caption": "💼 我们团队耗时2个月，整理了全网28312份大模型岗位JD，🚀为你打造了一份超详细的《2025年大模型岗位求职指南》\n#求职 #大模型 #ai #招聘",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1736411872,
+      "duration": 700313,
+      "stats": {
+        "digg_count": 151,
+        "comment_count": 8,
+        "share_count": 42,
+        "collect_count": 104
+      }
+    },
+    {
+      "aweme_id": "7455234431503256858",
+      "desc": "25年AI圈的流量密码  藏在这些24年AI大事中 2024年，大模型技术取得了惊人的发展，AI智能体应用爆发，多模态大模型崛起，基座模型训练取得重大突破。在这期视频中，我们将回顾2024年大模型技术发展的重大事件，如OpenAI发布Sora应用、ChatGPT升级为多模态版本、o3大模型的发布等。同时，我们也将展望2025年的技术趋势，探索AI技术的无限可能。让我们一起走进智能新时代，记得点赞收藏哦~ \n#科技创新 #干货都在这 #大模型 #干货 #ai",
+      "caption": "2024年，大模型技术取得了惊人的发展，AI智能体应用爆发，多模态大模型崛起，基座模型训练取得重大突破。在这期视频中，我们将回顾2024年大模型技术发展的重大事件，如OpenAI发布Sora应用、ChatGPT升级为多模态版本、o3大模型的发布等。同时，我们也将展望2025年的技术趋势，探索AI技术的无限可能。让我们一起走进智能新时代，记得点赞收藏哦~\n\n#科技创新 #干货都在这 #大模型 #干货 #ai",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1735807142,
+      "duration": 1169034,
+      "stats": {
+        "digg_count": 9,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 6
+      }
+    },
+    {
+      "aweme_id": "7453056468649119010",
+      "desc": "不止会解数学题 OpenAI 即将开启AGI新时代 除了会解数学题\nOpenAI 王炸级o3模型到底有什么用？\n详解o3模型在智能体开发与大模型训练领域的深度应用！",
+      "caption": "除了会解数学题\nOpenAI 王炸级o3模型到底有什么用？\n详解o3模型在智能体开发与大模型训练领域的深度应用！",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1735300208,
+      "duration": 588533,
+      "stats": {
+        "digg_count": 10,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7453052720539389224",
+      "desc": "年末AI春晚解读与总结 OpenAI发布会总结与深度解读：AGI之路天堑变通途！\n【🔥OpenAI年末发布会大揭秘🔥】\n12天4小时内容速览！AGI之路天堑变通途！\n🚀OpenAI新产品、新功能、新模型，大模型技术圈顶级盛事！\n💡跟随九天老师，10分钟快速梳理核心内容，解读深远影响！\n🌟不可错过的大模型技术盛宴！\n👀点击观看，开启你的AI之旅！🌈 \n#科技创新 #ai #Openai #人工智能",
+      "caption": "OpenAI发布会总结与深度解读：AGI之路天堑变通途！\n【🔥OpenAI年末发布会大揭秘🔥】\n12天4小时内容速览！AGI之路天堑变通途！\n🚀OpenAI新产品、新功能、新模型，大模型技术圈顶级盛事！\n💡跟随九天老师，10分钟快速梳理核心内容，解读深远影响！\n🌟不可错过的大模型技术盛宴！\n👀点击观看，开启你的AI之旅！🌈\n\n#科技创新 #ai #Openai #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1735299279,
+      "duration": 621459,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 2,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7386623882637167922",
+      "desc": "#人工智能  帮你总结课程知识点、制定学习计划、出测试题~还能自己编程和改代码！想体验的同学私哦~#机器学习 #深度学习 #大模型 #chatgpt4",
+      "caption": "#人工智能  帮你总结课程知识点、制定学习计划、出测试题~还能自己编程和改代码！想体验的同学私哦~#机器学习 #深度学习 #大模型 #chatgpt4",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1719832417,
+      "duration": 125963,
+      "stats": {
+        "digg_count": 10,
+        "comment_count": 2,
+        "share_count": 2,
+        "collect_count": 4
+      }
+    },
+    {
+      "aweme_id": "7386565942282669362",
+      "desc": "一个AI智能体优化全公司？ 7月第一天，给小伙伴们一些小小的震撼！#人工智能 先进应用，看这一个视频就够了#ai #chatgpt4 想体验私信里告诉我吧#机器学习 #大模型 #深……版本过低，升级后可展示全部信息",
+      "caption": "7月第一天，给小伙伴们一些小小的震撼！#人工智能 先进应用，看这一个视频就够了#ai #chatgpt4 想体验私信里告诉我吧#机器学习 #大模型 #深度学习",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1719818924,
+      "duration": 598147,
+      "stats": {
+        "digg_count": 11,
+        "comment_count": 2,
+        "share_count": 0,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7355058894680509708",
+      "desc": "【实战】GLM-4模型介绍与本地调用方法#人工智能 #一分钟干货教学 #chatgpt应用领域 #程序员",
+      "caption": "【实战】GLM-4模型介绍与本地调用方法#人工智能 #一分钟干货教学 #chatgpt应用领域 #程序员",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1712533200,
+      "duration": 1598581,
+      "stats": {
+        "digg_count": 12,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 9
+      }
+    },
+    {
+      "aweme_id": "7355046231720152383",
+      "desc": "详解大模型发展脉络，探讨5大核心项目#人工智能 #一分钟干货教学",
+      "caption": "详解大模型发展脉络，探讨5大核心项目#人工智能 #一分钟干货教学",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1712480162,
+      "duration": 719588,
+      "stats": {
+        "digg_count": 21,
+        "comment_count": 1,
+        "share_count": 4,
+        "collect_count": 14
+      }
+    },
+    {
+      "aweme_id": "7353193489313631539",
+      "desc": "私有知识库的五种有效搭建方法#一分钟干货教学 #人工智能",
+      "caption": "私有知识库的五种有效搭建方法#一分钟干货教学 #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1712048794,
+      "duration": 544951,
+      "stats": {
+        "digg_count": 45,
+        "comment_count": 1,
+        "share_count": 6,
+        "collect_count": 35
+      }
+    },
+    {
+      "aweme_id": "7352837269843217714",
+      "desc": "了解做意图识别和私有知识库搭建的关键性技术：Embedding#一分钟干货教学 #人工智能",
+      "caption": "了解做意图识别和私有知识库搭建的关键性技术：Embedding#一分钟干货教学 #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1711965852,
+      "duration": 319043,
+      "stats": {
+        "digg_count": 39,
+        "comment_count": 1,
+        "share_count": 3,
+        "collect_count": 30
+      }
+    },
+    {
+      "aweme_id": "7351715776614632713",
+      "desc": "2024大模型落地着力点，Agent项目开发实战#一分钟干货教学 #人工智能",
+      "caption": "2024大模型落地着力点，Agent项目开发实战#一分钟干货教学 #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1711755300,
+      "duration": 202303,
+      "stats": {
+        "digg_count": 12,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 9
+      }
+    },
+    {
+      "aweme_id": "7351687539029282085",
+      "desc": "大模型核心技术（三）Function calling#一分钟干货教学 #人工智能",
+      "caption": "大模型核心技术（三）Function calling#一分钟干货教学 #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1711698168,
+      "duration": 470043,
+      "stats": {
+        "digg_count": 71,
+        "comment_count": 3,
+        "share_count": 11,
+        "collect_count": 44
+      }
+    },
+    {
+      "aweme_id": "7351610214816206106",
+      "desc": "大模型热门项目（一）：自然语言编程实战#人工智能 #一分钟干货教学",
+      "caption": "大模型热门项目（一）：自然语言编程实战#人工智能 #一分钟干货教学",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1711680154,
+      "duration": 129804,
+      "stats": {
+        "digg_count": 14,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 4
+      }
+    },
+    {
+      "aweme_id": "7351323344714616101",
+      "desc": "大模型核心技术二——被低估的提示工程技术#一分钟干货教学 #人工智能",
+      "caption": "大模型核心技术二——被低估的提示工程技术#一分钟干货教学 #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1711613357,
+      "duration": 283981,
+      "stats": {
+        "digg_count": 17,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7350975422483549490",
+      "desc": "热门问题：GLM-4大模型不再开源，转投在线阵营意图在哪？#人工智能 #一分钟干货教学",
+      "caption": "热门问题：GLM-4大模型不再开源，转投在线阵营意图在哪？#人工智能 #一分钟干货教学",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1711532354,
+      "duration": 223807,
+      "stats": {
+        "digg_count": 14,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 12
+      }
+    },
+    {
+      "aweme_id": "7350550073144610111",
+      "desc": "热门问题：大模型部署调用学“开源”还是“闭源”#人工智能 #一分钟干货教学",
+      "caption": "热门问题：大模型部署调用学“开源”还是“闭源”#人工智能 #一分钟干货教学",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1711433323,
+      "duration": 142229,
+      "stats": {
+        "digg_count": 20,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 10
+      }
+    },
+    {
+      "aweme_id": "7350215525638704396",
+      "desc": "大模型工程师必备的5个核心技术及5个热门项目#人工智能 #一分钟干货教学",
+      "caption": "大模型工程师必备的5个核心技术及5个热门项目#人工智能 #一分钟干货教学",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1711355420,
+      "duration": 93267,
+      "stats": {
+        "digg_count": 20,
+        "comment_count": 0,
+        "share_count": 6,
+        "collect_count": 13
+      }
+    },
+    {
+      "aweme_id": "7345790209755221257",
+      "desc": "#一分钟干货教学 Claude3API介绍及连接测试#人工智能",
+      "caption": "#一分钟干货教学 Claude3API介绍及连接测试#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710976500,
+      "duration": 518804,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 2,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7345787379002641715",
+      "desc": "#一分钟干货教学 Claude3API注册详解#人工智能",
+      "caption": "#一分钟干货教学 Claude3API注册详解#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710932700,
+      "duration": 405770,
+      "stats": {
+        "digg_count": 25,
+        "comment_count": 2,
+        "share_count": 1,
+        "collect_count": 15
+      }
+    },
+    {
+      "aweme_id": "7345796054031420710",
+      "desc": "#一分钟干货教学  详解Claude-Chat和Claude-API的两个账户#人工智能",
+      "caption": "#一分钟干货教学  详解Claude-Chat和Claude-API的两个账户#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710889380,
+      "duration": 84621,
+      "stats": {
+        "digg_count": 9,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 6
+      }
+    },
+    {
+      "aweme_id": "7345785389107449138",
+      "desc": "#一分钟干货教学 outlook邮箱注册流程8#人工智能",
+      "caption": "#一分钟干货教学 outlook邮箱注册流程8#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710842401,
+      "duration": 103009,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 3,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7345785086979181875",
+      "desc": "#一分钟干货教学 outlook邮箱注册流程7#人工智能",
+      "caption": "#一分钟干货教学 outlook邮箱注册流程7#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710820801,
+      "duration": 113695,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7345784905365851419",
+      "desc": "#一分钟干货教学 outlook邮箱注册流程6#人工智能",
+      "caption": "#一分钟干货教学 outlook邮箱注册流程6#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710802801,
+      "duration": 95574,
+      "stats": {
+        "digg_count": 6,
+        "comment_count": 1,
+        "share_count": 3,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7345784364430806299",
+      "desc": "#一分钟干货教学 outlook邮箱注册流程5#人工智能",
+      "caption": "#一分钟干货教学 outlook邮箱注册流程5#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710759300,
+      "duration": 121071,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7345783910736989449",
+      "desc": "#一分钟干货教学 outlook邮箱注册流程4#人工智能",
+      "caption": "#一分钟干货教学 outlook邮箱注册流程4#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710734100,
+      "duration": 79075,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7345782282889841930",
+      "desc": "#人工智能 outlook邮箱注册流程3#一分钟干货教学",
+      "caption": "#人工智能 outlook邮箱注册流程3#一分钟干货教学",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710715500,
+      "duration": 76342,
+      "stats": {
+        "digg_count": 14,
+        "comment_count": 2,
+        "share_count": 0,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7345782669222956338",
+      "desc": "#一分钟干货教学 outlook邮箱注册流程2#人工智能",
+      "caption": "#一分钟干货教学 outlook邮箱注册流程2#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710672600,
+      "duration": 67989,
+      "stats": {
+        "digg_count": 200,
+        "comment_count": 23,
+        "share_count": 16,
+        "collect_count": 79
+      }
+    },
+    {
+      "aweme_id": "7345781313468681499",
+      "desc": "#一分钟干货教学 outlook邮箱注册流程1#人工智能",
+      "caption": "#一分钟干货教学 outlook邮箱注册流程1#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710647100,
+      "duration": 80388,
+      "stats": {
+        "digg_count": 13,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7345780959641390373",
+      "desc": "#一分钟干货教学 为什么要租赁手机号注册登录#人工智能",
+      "caption": "#一分钟干货教学 为什么要租赁手机号注册登录#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710629100,
+      "duration": 85221,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7345780658519821595",
+      "desc": "#一分钟干货教学 Claude独有的账户登录方式#人工智能",
+      "caption": "#一分钟干货教学 Claude独有的账户登录方式#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710585600,
+      "duration": 70208,
+      "stats": {
+        "digg_count": 8,
+        "comment_count": 1,
+        "share_count": 2,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7345780012211080498",
+      "desc": "#一分钟干货教学 SMS租赁平台操作介绍4#人工智能",
+      "caption": "#一分钟干货教学 SMS租赁平台操作介绍4#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710560400,
+      "duration": 92579,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7345776320682511653",
+      "desc": "#一分钟干货教学 SMS租赁平台介绍2#人工智能",
+      "caption": "#一分钟干货教学 SMS租赁平台介绍2#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710501900,
+      "duration": 75775,
+      "stats": {
+        "digg_count": 10,
+        "comment_count": 0,
+        "share_count": 3,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7345775927973907749",
+      "desc": "#一分钟干货教学 SMS平台注册和使用#人工智能",
+      "caption": "#一分钟干货教学 SMS平台注册和使用#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710473100,
+      "duration": 85218,
+      "stats": {
+        "digg_count": 38,
+        "comment_count": 5,
+        "share_count": 10,
+        "collect_count": 25
+      }
+    },
+    {
+      "aweme_id": "7345775603410275610",
+      "desc": "#一分钟干货教学 SMS租赁平台介绍#人工智能",
+      "caption": "#一分钟干货教学 SMS租赁平台介绍#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710458400,
+      "duration": 87188,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7345768404072090918",
+      "desc": "#一分钟干货教学 Claude3注册所需说明#人工智能",
+      "caption": "#一分钟干货教学 Claude3注册所需说明#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710413700,
+      "duration": 73155,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 0,
+        "share_count": 3,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7345783494968184073",
+      "desc": "#一分钟干货教学  推荐手动操作，使用更持久#人工智能",
+      "caption": "#一分钟干货教学  推荐手动操作，使用更持久#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710388500,
+      "duration": 79970,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7345770870880636198",
+      "desc": "#一分钟干货教学  机器注册易被封，手动注册更持久#人工智能",
+      "caption": "#一分钟干货教学  机器注册易被封，手动注册更持久#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710371100,
+      "duration": 71842,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7345770607755169074",
+      "desc": "#一分钟干货教学  Claude3模型大陆使用有网络问题，账号安全性高，易被封#人工智能",
+      "caption": "#一分钟干货教学  Claude3模型大陆使用有网络问题，账号安全性高，易被封#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710328080,
+      "duration": 69208,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7345765368000023835",
+      "desc": "#一分钟干货教学 Claude3使用方式OpenAI使用方式几乎一模一样#人工智能",
+      "caption": "#一分钟干货教学 Claude3使用方式OpenAI使用方式几乎一模一样#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710319310,
+      "duration": 69775,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7345681127052528906",
+      "desc": "#一分钟干货教学 Claude3生态足够完善，对大模型学习使用是一个很好选择#人工智能",
+      "caption": "#一分钟干货教学 Claude3生态足够完善，对大模型学习使用是一个很好选择#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710299686,
+      "duration": 65063,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7345396274541251891",
+      "desc": "#一分钟干货教学 CLaude3三个型号使用情况介绍#人工智能",
+      "caption": "#一分钟干货教学 CLaude3三个型号使用情况介绍#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710233364,
+      "duration": 63050,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7345309022351854874",
+      "desc": "#一分钟干货教学 深度体验之后，Claude3王者归来，GPT4不行了？#人工智能 #大模型",
+      "caption": "#一分钟干货教学 深度体验之后，Claude3王者归来，GPT4不行了？#人工智能 #大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710213051,
+      "duration": 79134,
+      "stats": {
+        "digg_count": 14,
+        "comment_count": 1,
+        "share_count": 2,
+        "collect_count": 5
+      }
+    },
+    {
+      "aweme_id": "7342809414648237338",
+      "desc": "《2小时超长合集》《GLM-4介绍及实战》一口气看完全球第五次科技革命人气大模型GLM-4,GLM-4调用方法，SDK调用和HTTP调用#人工智能#chatgpt应用领域#每天学习一点点#openai#大模型",
+      "caption": "《2小时超长合集》《GLM-4介绍及实战》一口气看完全球第五次科技革命人气大模型GLM-4,GLM-4调用方法，SDK调用和HTTP调用#人工智能#chatgpt应用领域#每天学习一点点#openai#大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1710127440,
+      "duration": 1129677,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7342765877386874149",
+      "desc": "《2小时超长合集》《GLM-4介绍及实战》一口气看完全球第五次科技革命人气大模型GLM-4,API-KEY的使用及GLM官网其他重要功能#人工智能#chatgpt应用领域#每天学习一点点#openai#大模型",
+      "caption": "《2小时超长合集》《GLM-4介绍及实战》一口气看完全球第五次科技革命人气大模型GLM-4,API-KEY的使用及GLM官网其他重要功能#人工智能#chatgpt应用领域#每天学习一点点#openai#大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709955300,
+      "duration": 1008910,
+      "stats": {
+        "digg_count": 23,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 11
+      }
+    },
+    {
+      "aweme_id": "7343567741124726066",
+      "desc": "最强大模型易主！Claude 3本地调用与模型使用方法，实测全面超越GPT-4#claude3发布#人工智能#ai#中视频伙伴计划",
+      "caption": "最强大模型易主！Claude 3本地调用与模型使用方法，实测全面超越GPT-4#claude3发布#人工智能#ai#中视频伙伴计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709807615,
+      "duration": 982700,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7343566187848142131",
+      "desc": "最强大模型易主！Claude 3账户注册与API-KEY获取方法，实测全面超越GPT-4#claude3发布#人工智能#ai#中视频伙伴计划",
+      "caption": "最强大模型易主！Claude 3账户注册与API-KEY获取方法，实测全面超越GPT-4#claude3发布#人工智能#ai#中视频伙伴计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709807322,
+      "duration": 1277167,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 6
+      }
+    },
+    {
+      "aweme_id": "7343554524197555507",
+      "desc": "最强大模型易主！新王Claude 3模型功能介绍与性能评测！实测全面超越GPT-4#claude3发布 #人工智能 #ai #中视频伙伴计划",
+      "caption": "最强大模型易主！新王Claude 3模型功能介绍与性能评测！实测全面超越GPT-4#claude3发布 #人工智能 #ai #中视频伙伴计划",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709804574,
+      "duration": 1053500,
+      "stats": {
+        "digg_count": 8,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7342399824915926298",
+      "desc": "GLM-4大模型的MaaS开放平台重磅上线#每天学习一点点 #大模型#ai#人工智能",
+      "caption": "GLM-4大模型的MaaS开放平台重磅上线#每天学习一点点 #大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709781120,
+      "duration": 90628,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7342399145858190602",
+      "desc": "GLM-4大模型ALL Tools功能硬核上线#每天学习一点点#大模型 #ai#人工智能",
+      "caption": "GLM-4大模型ALL Tools功能硬核上线#每天学习一点点#大模型 #ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709725320,
+      "duration": 58190,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7342398509544459546",
+      "desc": "GLM-4全系向GPT-4对齐#每天学习一点点#大模型#ai#人工智能",
+      "caption": "GLM-4全系向GPT-4对齐#每天学习一点点#大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709694480,
+      "duration": 88771,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7342397524390513929",
+      "desc": "GLM-4在线模型优势 更规范的商业化应用#每天学习一点点 #大模型#ai#人工智能",
+      "caption": "GLM-4在线模型优势 更规范的商业化应用#每天学习一点点 #大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709632500,
+      "duration": 97223,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7342397126695079218",
+      "desc": "GLM-4在线模型优势 更规范的安全性保障#每天学习一点点#大模型#ai#人工智能",
+      "caption": "GLM-4在线模型优势 更规范的安全性保障#每天学习一点点#大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709609100,
+      "duration": 62696,
+      "stats": {
+        "digg_count": 6,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7342420895891311881",
+      "desc": "《2小时超长合集》《GLM-4介绍及实战》一口气看完全球第五次科技革命人气大模型GLM-4,在线知识库|微调|#人工智能 #chatgpt应用领域#每天学习一点点#openai#大模型",
+      "caption": "《2小时超长合集》《GLM-4介绍及实战》一口气看完全球第五次科技革命人气大模型GLM-4,在线知识库|微调|#人工智能 #chatgpt应用领域#每天学习一点点#openai#大模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709597100,
+      "duration": 969250,
+      "stats": {
+        "digg_count": 8,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 8
+      }
+    },
+    {
+      "aweme_id": "7342392229467639050",
+      "desc": "GLM-4在线模型优势 大模型生态更完整#每天学习一点点#大模型#ai #人工智能",
+      "caption": "GLM-4在线模型优势 大模型生态更完整#每天学习一点点#大模型#ai #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709553660,
+      "duration": 100067,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7342340541545286939",
+      "desc": "GLM-4在线模型优势 多模态功能使用门槛更低#每天学习一点点#大模型#ai#人工智能",
+      "caption": "GLM-4在线模型优势 多模态功能使用门槛更低#每天学习一点点#大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709521898,
+      "duration": 87054,
+      "stats": {
+        "digg_count": 6,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7342051008366841139",
+      "desc": "《2小时超长合集》《GLM-4介绍及实战》一口气看完全球第五次科技革命人气大模型GLM-4介绍和实操#人工智能 #chatgpt应用领域 #每天学习一点点 #openai#大模型",
+      "caption": "《2小时超长合集》《GLM-4介绍及实战》一口气看完全球第五次科技革命人气大模型GLM-4介绍和实操#人工智能 #chatgpt应用领域 #每天学习一点点 #openai#大模型",
+      "chapter_content": "",
+      "chapter_list": [
+        {
+          "desc": "实操",
+          "detail": "",
+          "timestamp": 218000
+        }
+      ],
+      "has_chapters": false,
+      "create_time": 1709454486,
+      "duration": 1107107,
+      "stats": {
+        "digg_count": 17,
+        "comment_count": 1,
+        "share_count": 2,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7341323626064514331",
+      "desc": "开源大模型天然缺陷 转型在线大模型未来可期#每天学习一点点#大模型#ai#人工智能",
+      "caption": "开源大模型天然缺陷 转型在线大模型未来可期#每天学习一点点#大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709349900,
+      "duration": 76342,
+      "stats": {
+        "digg_count": 11,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7341324087391849737",
+      "desc": "开源大模型天然缺陷三：无法持续获利#每天学习一点点#大模型#ai#人工智能",
+      "caption": "开源大模型天然缺陷三：无法持续获利#每天学习一点点#大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709335201,
+      "duration": 155737,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 4
+      }
+    },
+    {
+      "aweme_id": "7341322076642430246",
+      "desc": "开源大模型天然缺陷二：无法保证不作恶#每天学习一点点#大模型#ai#人工智能",
+      "caption": "开源大模型天然缺陷二：无法保证不作恶#每天学习一点点#大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709295600,
+      "duration": 151975,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7341313973796523301",
+      "desc": "开源大模型天然缺陷一：硬件技术门槛高#每天学习一点点 #大模型 #ai #人工智能",
+      "caption": "开源大模型天然缺陷一：硬件技术门槛高#每天学习一点点 #大模型 #ai #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709282874,
+      "duration": 79375,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 1,
+        "share_count": 1,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7340957645538413862",
+      "desc": "国产大模型一夜变天 云端&私有化部署收费#每天学习一点点#大模型#ai#人工智能",
+      "caption": "国产大模型一夜变天 云端&私有化部署收费#每天学习一点点#大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709262060,
+      "duration": 188268,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7340957123746073906",
+      "desc": "国产大模型一夜变天 GLM-4使用方法其二#每天学习一点点#大模型#ai#人工智能",
+      "caption": "国产大模型一夜变天 GLM-4使用方法其二#每天学习一点点#大模型#ai#人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709247600,
+      "duration": 87921,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7340956396239801627",
+      "desc": "国产大模型一夜变天 GLM-4未来策略与GPT#每天学习一点点#大模型#ai  #人工智能",
+      "caption": "国产大模型一夜变天 GLM-4未来策略与GPT#每天学习一点点#大模型#ai  #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709217000,
+      "duration": 94134,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7340956220536147251",
+      "desc": "国产大模型一夜变天 GLM-4使用方法其一#每天学习一点点  #大模型#ai  #人工智能",
+      "caption": "国产大模型一夜变天 GLM-4使用方法其一#每天学习一点点  #大模型#ai  #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709208001,
+      "duration": 113662,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7340943665726115098",
+      "desc": "国产大模型一夜变天 GLM-4模型强势发布#每天学习一点点 #大模型 #ai #人工智能",
+      "caption": "国产大模型一夜变天 GLM-4模型强势发布#每天学习一点点 #大模型 #ai #人工智能",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1709196655,
+      "duration": 175311,
+      "stats": {
+        "digg_count": 6,
+        "comment_count": 1,
+        "share_count": 1,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7312334480012872970",
+      "desc": "两分钟了解谷歌Gemini发布会 #知识前沿派对  #人工智能 #关注我每天坚持分享知识 #大语言模型",
+      "caption": "#知识前沿派对  #人工智能 #关注我每天坚持分享知识 #大语言模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702550100,
+      "duration": 92323,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 1,
+        "share_count": 3,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7312333361043754291",
+      "desc": "一分钟上手谷歌Gemini #知识前沿派对 #人工智能  #关注我每天坚持分享知识 #大语言模型",
+      "caption": "#知识前沿派对 #人工智能  #关注我每天坚持分享知识 #大语言模型",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702535303,
+      "duration": 65202,
+      "stats": {
+        "digg_count": 9,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7310174591870160138",
+      "desc": "大语言模型 ChatGLM3——全面逼近GPT-4 #关注我每天坚持分享知识 #ChatGLM  #人工智能 #关注我每天坚持分享知识  #知识前沿派对",
+      "caption": "#关注我每天坚持分享知识 #ChatGLM  #人工智能 #关注我每天坚持分享知识  #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702287301,
+      "duration": 68476,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 3,
+        "share_count": 2,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7310174673105341722",
+      "desc": "大语言模型 ChatGLM3——能力提升后有什么变化 #大语言模型#ChatGLM#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#ChatGLM#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702251001,
+      "duration": 49575,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7310176779971415306",
+      "desc": "大语言模型竞争圈——各模型评测分值情况 #大语言模型 #ChatGLM #人工智能 #关注我每天坚持分享知识 #知识前沿派对",
+      "caption": "#大语言模型 #ChatGLM #人工智能 #关注我每天坚持分享知识 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702204140,
+      "duration": 51410,
+      "stats": {
+        "digg_count": 13,
+        "comment_count": 0,
+        "share_count": 5,
+        "collect_count": 4
+      }
+    },
+    {
+      "aweme_id": "7310174875354811657",
+      "desc": "大语言模型 ChatGLM3——AI Agent能力提升显著 #大语言模型 #ChatGLM #人工智能#关注我每天坚持分享知识 #知识前沿派对",
+      "caption": "#大语言模型 #ChatGLM #人工智能#关注我每天坚持分享知识 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702163401,
+      "duration": 42586,
+      "stats": {
+        "digg_count": 10,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310176143427063049",
+      "desc": "大语言模型 ChatGLM3——拿下顶尖大模型圈入场券 #大语言模型 #ChatGLM #人工智能 #关注我每天坚持分享知识 #知识前沿派对",
+      "caption": "#大语言模型 #ChatGLM #人工智能 #关注我每天坚持分享知识 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702116301,
+      "duration": 165675,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310176162032979227",
+      "desc": "大语言模型 ChatGLM3 长文本能力大幅提高 #大语言模型 #ChatGLM #人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型 #ChatGLM #人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702076761,
+      "duration": 74351,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7309310297301404955",
+      "desc": "大语言模型ChatGLM3-6B 性能评测 #大语言模型#ChatGLM#人工智能 #关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#ChatGLM#人工智能 #关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702029300,
+      "duration": 126619,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7310049500515536155",
+      "desc": "谷歌大模型-测试Gemini 将图像转成代码 #大语言模型  #Gemini #人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型  #Gemini #人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702026000,
+      "duration": 73051,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310048971949444379",
+      "desc": "谷歌大模型-测试Gemini 猜电影 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702024320,
+      "duration": 85961,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310048183302753587",
+      "desc": "谷歌大模型-测试Gemini 理解服装时尚 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702022400,
+      "duration": 46440,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310047543256255781",
+      "desc": "谷歌大模型-测试Gemini 发现内在联系 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702021200,
+      "duration": 60350,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310047052329749810",
+      "desc": "谷歌大模型-测试Gemini理解Emoji表情 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702019220,
+      "duration": 70908,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 2,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7310046313414937893",
+      "desc": "谷歌大模型-Gemini 揭秘科学文献中的洞见 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识 #知识前沿派对",
+      "caption": "#大语言模型#Gemini#人工智能#关注我每天坚持分享知识 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702017300,
+      "duration": 157934,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7310045509526277427",
+      "desc": "谷歌大模型-Google发布Gemini安全与责任的核心 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702015320,
+      "duration": 97690,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310044885493566758",
+      "desc": "谷歌大模型-Gemini 基于用户意图的推理创造定制化体验 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702013400,
+      "duration": 209534,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310044433771138331",
+      "desc": "谷歌大模型-Gemini 处理与理解原始音频 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702011600,
+      "duration": 220787,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7310043475024694538",
+      "desc": "谷歌大模型-Gemini 阐释数学与物理的推理过程 #大语言模型  #Gemini #人工智能  #关注我每天坚持分享知识  #知识前沿派对",
+      "caption": "#大语言模型  #Gemini #人工智能  #关注我每天坚持分享知识  #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702009500,
+      "duration": 114870,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7310041970854972681",
+      "desc": "谷歌大模型-Gemini 精通竞赛编程 #大语言模型 #Gemini  #人工智能 #关注我每天坚持分享知识 #知识前沿派对",
+      "caption": "#大语言模型 #Gemini  #人工智能 #关注我每天坚持分享知识 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1702001815,
+      "duration": 295777,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7309308431649803530",
+      "desc": "大语音模型 ChatGLM3——性能评测 #大语言模型 #ChatGLM#人工智能   #关注我每天坚持分享知识 #知识前沿派对",
+      "caption": "#大语言模型 #ChatGLM#人工智能   #关注我每天坚持分享知识 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701989400,
+      "duration": 103579,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 2,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7309886472801373480",
+      "desc": "最强人工智能Gemini双子座横空出世，GPT4被全面超越 #谷歌Gemini #ai #大模型 #人工智能 #知识前沿派对",
+      "caption": "#谷歌Gemini #ai #大模型 #人工智能 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701965718,
+      "duration": 358053,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7309883502579731746",
+      "desc": "一分钟了解Gemini大模型 #谷歌Gemini #ai #人工智能 #大模型 #知识前沿派对",
+      "caption": "#谷歌Gemini #ai #人工智能 #大模型 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701965184,
+      "duration": 91351,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7309883315543166260",
+      "desc": "Google发布最强大模型Gemini #谷歌Gemini #ai #人工智能 #大模型 #知识前沿派对",
+      "caption": "#谷歌Gemini #ai #人工智能 #大模型 #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701964927,
+      "duration": 271141,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7309307610635816243",
+      "desc": "大语音模型ChatGLM3——从未如此接近GPT-4 #大语言模型#ChatGLM  #人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型#ChatGLM  #人工智能#关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701942780,
+      "duration": 110892,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7309305051342802202",
+      "desc": "中文最强大语音模型-ChatGLM3 部署流程 #大语言模型  #ChatGLM  #人工智能  #关注我每天坚持分享知识#知识前沿派对",
+      "caption": "#大语言模型  #ChatGLM  #人工智能  #关注我每天坚持分享知识#知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701903780,
+      "duration": 123471,
+      "stats": {
+        "digg_count": 25,
+        "comment_count": 1,
+        "share_count": 2,
+        "collect_count": 16
+      }
+    },
+    {
+      "aweme_id": "7309302207755652361",
+      "desc": "中文最强大语音模型—ChatGLM3 开源情况详解 #一分钟干货教学    #ChatGLM   #人工智能  #关注我每天坚持分享知识   #知识前沿派对",
+      "caption": "#一分钟干货教学    #ChatGLM   #人工智能  #关注我每天坚持分享知识   #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701856440,
+      "duration": 76175,
+      "stats": {
+        "digg_count": 17,
+        "comment_count": 0,
+        "share_count": 7,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7309300104219856154",
+      "desc": "中文最强大语言模型—ChatGLM3重磅开源 #一分钟干货教学    #ChatGLM   #人工智能  #关注我每天坚持分享知识   #知识前沿派对",
+      "caption": "#一分钟干货教学    #ChatGLM   #人工智能  #关注我每天坚持分享知识   #知识前沿派对",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701829080,
+      "duration": 80175,
+      "stats": {
+        "digg_count": 11,
+        "comment_count": 1,
+        "share_count": 2,
+        "collect_count": 6
+      }
+    },
+    {
+      "aweme_id": "7306423770741280027",
+      "desc": "未来最重要的开发语言是不是自然语言？#OpenAI #ChatGPT #人工智能 #关注我每天坚持分享知识  #知识前沿派对",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701339300,
+      "duration": 96800,
+      "stats": {
+        "digg_count": 8,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7306329288939228443",
+      "desc": "ChatGPT能定制哪些内容之输入定制长文本外部文件#OpenAI  #知识前沿派对      #ChatGPT     #人工智能    #关注我每天坚持分享知识",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701137373,
+      "duration": 76908,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7305958744867769638",
+      "desc": "ChatGPT能定制哪些内容之定制外部工具范围#OpenAI #知识前沿派对    #ChatGPT    #人工智能   #关注我每天坚持分享知识",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1701051102,
+      "duration": 71175,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7304855436698701106",
+      "desc": "ChatGPT能定制哪些内容之规定模型行为准则#OpenAI   #ChatGPT   #人工智能  #关注我每天坚持分享知识",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700794215,
+      "duration": 70175,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7304470799346388275",
+      "desc": "ChatGPT能定制哪些内容之长期设置角色身份#OpenAI  #ChatGPT  #人工智能 #知识前沿派对",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700704665,
+      "duration": 82254,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7304202450494459162",
+      "desc": "突发翻转 OpenAI事件尘埃落幕。OpenAI事件突发 | Sam Altman 回归 OpenAI，重新担任CEO \n刚刚，OpenAI 宣布， Sam Altman 将重新回归 OpenAI 担任 CEO。 \n同时，此前一同离职的 OpenAI 联合创始人兼总裁 Greg Brockman 也将回归，他在平台上表示今晚就重新开始编程了。 \n董事会成员也将做出调整，目前成员包括Adam D'Angelo、Bret Taylor（主席）、和Larry Summers  。 \n· Adam D'Angelo ，「美版知乎」Quora 的创始人，他目前正把心思花在与ChatGPT 构成竞争关系的 Poe； \n· Bret Taylor ，曾任 Salesforce 联席 CEO、Twitter董事长，也是 Quip 创始人。曾在Google 、Meta等公司担任重要职务。 \n·Larry Summers，美国著名经济学家，曾任美国财政部第 71 任部长及奥巴马政府国家经济委员会主任。他还担任过哈佛大学校长及世界银行首席经济学家。 \n至于OpenAI 高层是否还有其他变动，原有的董事会架构是否调整，目前尚不清楚。 \n在 Altman 被罢免不到一周后，就「王者回归」，这是否意味着 OpenAI 内部的动荡告一段落，或许还有未知数，我将持续关注并及时更新。 #知识前沿派对  #OpenAI  #ChatGPT  #人工智能",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700642179,
+      "duration": 0,
+      "stats": {
+        "digg_count": 18,
+        "comment_count": 5,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7304198193430973734",
+      "desc": "突发|Sam Altman回归OpenAI，重新担任CEO#知识前沿派对 #OpenAI #ChatGPT #人工智能",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700641183,
+      "duration": 28584,
+      "stats": {
+        "digg_count": 9,
+        "comment_count": 2,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7304127765421346057",
+      "desc": "OpenAI“解体”，微软赢麻了#OpenAI #微软 #ChatGPT #人工智能 #知识前沿派对",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700624788,
+      "duration": 10937,
+      "stats": {
+        "digg_count": 39,
+        "comment_count": 3,
+        "share_count": 1,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7304105558058044723",
+      "desc": "ChatGPT使用中会遇到哪些风险#每天学习一点点 #chatgpt  #人工智能 #知识前沿派对",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700619626,
+      "duration": 69942,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7303545793095519488",
+      "desc": "为什么OpenAI能够一次次掀起AI革命浪潮？#openai #ChatGPT #知识前沿派对",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700489282,
+      "duration": 99400,
+      "stats": {
+        "digg_count": 17,
+        "comment_count": 5,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7303455458365345062",
+      "desc": "Altman 将不会出任CEO！和 OpenAI 董事会谈判破裂！#乔布斯 #微软 #OpenAI #chatgpt #知识前沿派对",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700468247,
+      "duration": 17601,
+      "stats": {
+        "digg_count": 36,
+        "comment_count": 11,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7303392655994604837",
+      "desc": "OpenAI内乱不断，Open AI创始人SamAtman事件的来龙#知识前沿派对 去脉#OpenAI #openai创始人 #山姆奥特曼 #ChatGPT",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700453648,
+      "duration": 67620,
+      "stats": {
+        "digg_count": 6,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7303362543035141426",
+      "desc": "GPTs这么火到底什么事GPTs呢？#ChatGPT #山姆奥特曼 #OpenAI #九天Hector #知识前沿派对",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1700446623,
+      "duration": 93333,
+      "stats": {
+        "digg_count": 8,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7276070988540939575",
+      "desc": "第13集 | 什么是模型的推理能力（3）#人工智能 #ai #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1694092320,
+      "duration": 278222,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 1,
+        "share_count": 1,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7275718799872003386",
+      "desc": "第12集 | 什么是模型的推理能力（2） | GPT大模型与AIGC实战 #人工智能 #AI #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1694010300,
+      "duration": 141596,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 0,
+        "share_count": 3,
+        "collect_count": 8
+      }
+    },
+    {
+      "aweme_id": "7275316021550943529",
+      "desc": "第11集 | 什么是模型的推理能力（1）#人工智能 #AI #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693916520,
+      "duration": 96967,
+      "stats": {
+        "digg_count": 4,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7274971295597530387",
+      "desc": "第10集 | 提示工程的终极目标是提升模型推理能力 #ai #大模型 #提示工程 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693836240,
+      "duration": 85125,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7274412323983478074",
+      "desc": "第9集 | 提示工程技术发展现状 |GPT大模型与AIGC实战 #ai  #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693706160,
+      "duration": 80760,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7274044023440952595",
+      "desc": "第8集 | 提示工程的三方面核心技术 #人工智能 #AI #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693620360,
+      "duration": 276829,
+      "stats": {
+        "digg_count": 1,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7273803746193247507",
+      "desc": "第7集 | 一个工业级提示工程流程是怎样的？提示工程师看过来 #ai #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693564380,
+      "duration": 116332,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7273457473640533307",
+      "desc": "第6集 | 什么是提示工程技术？#ai #大模型 #提示工程 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693483798,
+      "duration": 186550,
+      "stats": {
+        "digg_count": 2,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7273085027154447671",
+      "desc": "第5集 | 提示工程和微调的技术关系 #ai #提示工程 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693397040,
+      "duration": 252866,
+      "stats": {
+        "digg_count": 3,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 0
+      }
+    },
+    {
+      "aweme_id": "7272689589393968420",
+      "desc": "第4集 | 提示工程 VS 微调 #人工智能 #ai #提示工程 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693305000,
+      "duration": 82315,
+      "stats": {
+        "digg_count": 12,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 5
+      }
+    },
+    {
+      "aweme_id": "7272340938683370789",
+      "desc": "第3集 | 如何应用和激发大模型的各方面能力 #人工智能 #ai #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693223833,
+      "duration": 143500,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 1,
+        "share_count": 1,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7271476311086861607",
+      "desc": "第2集 | 大语言模型能做什么（2）：涌现能力",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1693022520,
+      "duration": 277015,
+      "stats": {
+        "digg_count": 13,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 1
+      }
+    },
+    {
+      "aweme_id": "7271209591755607333",
+      "desc": "第1集 | 大语言模型能做什么（1）：原生能力",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692960432,
+      "duration": 142850,
+      "stats": {
+        "digg_count": 16,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7269978443100605756",
+      "desc": "第29集 | LangChain的六大功能模块 #人工智能 #ai #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692673791,
+      "duration": 454554,
+      "stats": {
+        "digg_count": 31,
+        "comment_count": 2,
+        "share_count": 0,
+        "collect_count": 24
+      }
+    },
+    {
+      "aweme_id": "7269765850230558013",
+      "desc": "第28集 | 什么是LangChain #ai #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692624240,
+      "duration": 499647,
+      "stats": {
+        "digg_count": 14,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 6
+      }
+    },
+    {
+      "aweme_id": "7269622924473060668",
+      "desc": "第27集 | LangChain诞生背景  #人工智能  #ai #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692591019,
+      "duration": 598564,
+      "stats": {
+        "digg_count": 19,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 10
+      }
+    },
+    {
+      "aweme_id": "7268653326407978259",
+      "desc": "第26集 | 学习大模型为什么需要Linux操作系统？ #ai #人工智能 #大模型 #操作系统",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692365220,
+      "duration": 209886,
+      "stats": {
+        "digg_count": 8,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7268521199351729464",
+      "desc": "第25集 | 学习大模型最低电脑配置&升级指南 #ai #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692334500,
+      "duration": 549826,
+      "stats": {
+        "digg_count": 58,
+        "comment_count": 11,
+        "share_count": 8,
+        "collect_count": 41
+      }
+    },
+    {
+      "aweme_id": "7268302749354249483",
+      "desc": "第24集 | 学习大模型技术所需GPU硬件要求&成本 #ai #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692283620,
+      "duration": 528324,
+      "stats": {
+        "digg_count": 18,
+        "comment_count": 1,
+        "share_count": 4,
+        "collect_count": 8
+      }
+    },
+    {
+      "aweme_id": "7268131391194369335",
+      "desc": "第23集 | 学习大模型所需硬件和操作系统 #人工智能 #ai #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692243727,
+      "duration": 273624,
+      "stats": {
+        "digg_count": 11,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 9
+      }
+    },
+    {
+      "aweme_id": "7267922151452282170",
+      "desc": "第22集 | 进阶微调方法：RLHF #ai #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692195003,
+      "duration": 358865,
+      "stats": {
+        "digg_count": 14,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 4
+      }
+    },
+    {
+      "aweme_id": "7267772939020373289",
+      "desc": "第21集 | 高效微调方法4：P-Tuning v2  #人工智能 #AI #ai ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692160275,
+      "duration": 226395,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 4
+      }
+    },
+    {
+      "aweme_id": "7267400357268000037",
+      "desc": "第20集 | 高效微调方法3：Prompt Tuning #ai #人工智能 #prompt ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692073546,
+      "duration": 215458,
+      "stats": {
+        "digg_count": 9,
+        "comment_count": 1,
+        "share_count": 0,
+        "collect_count": 5
+      }
+    },
+    {
+      "aweme_id": "7267186457163418935",
+      "desc": "第19集 | 高效微调方法2：Prefix Tuning #人工智能 #ai #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1692023700,
+      "duration": 250358,
+      "stats": {
+        "digg_count": 17,
+        "comment_count": 2,
+        "share_count": 0,
+        "collect_count": 9
+      }
+    },
+    {
+      "aweme_id": "7267006420095192357",
+      "desc": "第18集 | 高效微调方法1：LoRA #ai #人工智能 #微调 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691981809,
+      "duration": 397619,
+      "stats": {
+        "digg_count": 10,
+        "comment_count": 1,
+        "share_count": 3,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7266789571445230905",
+      "desc": "第17集 | 什么是大模型微调？ #ai #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691931334,
+      "duration": 586397,
+      "stats": {
+        "digg_count": 17,
+        "comment_count": 1,
+        "share_count": 2,
+        "collect_count": 10
+      }
+    },
+    {
+      "aweme_id": "7265912731713293627",
+      "desc": "第16集 | 多模态大模型VisualGLM 6B #ai #人工智能  #visualglm ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691727166,
+      "duration": 644052,
+      "stats": {
+        "digg_count": 12,
+        "comment_count": 1,
+        "share_count": 3,
+        "collect_count": 10
+      }
+    },
+    {
+      "aweme_id": "7265692952394059062",
+      "desc": "第15集 | 中文大模型学习首选ChatGLM 6B #ai #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691676009,
+      "duration": 562759,
+      "stats": {
+        "digg_count": 27,
+        "comment_count": 2,
+        "share_count": 7,
+        "collect_count": 29
+      }
+    },
+    {
+      "aweme_id": "7265536585398111499",
+      "desc": "第14集 | 中文最强大语言模型ChatGLM 130B #ai #人工智能 #ChatGLM ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691639674,
+      "duration": 289228,
+      "stats": {
+        "digg_count": 16,
+        "comment_count": 1,
+        "share_count": 2,
+        "collect_count": 7
+      }
+    },
+    {
+      "aweme_id": "7265326645815283005",
+      "desc": "第13集 | 全球开源大模型性能评估榜单 #ai #人工智能 #大模型",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691590680,
+      "duration": 295033,
+      "stats": {
+        "digg_count": 16,
+        "comment_count": 1,
+        "share_count": 3,
+        "collect_count": 8
+      }
+    },
+    {
+      "aweme_id": "7265163698132602149",
+      "desc": "第12集 | 为什么要学习开源大模型？ #ai #人工智能 #大模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691552756,
+      "duration": 248291,
+      "stats": {
+        "digg_count": 5,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7264970434565705017",
+      "desc": "第11集 | OpenAI API命名规则 #ai #人工智能 #gpt4 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691507760,
+      "duration": 164467,
+      "stats": {
+        "digg_count": 12,
+        "comment_count": 0,
+        "share_count": 0,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7264936790870592828",
+      "desc": "第10集 | OpenAI大模型组&可调用API #ai #人工智能 #gpt4 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691499900,
+      "duration": 138066,
+      "stats": {
+        "digg_count": 15,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 6
+      }
+    },
+    {
+      "aweme_id": "7264888146565795131",
+      "desc": "第9集 | 编程大模型：Codex大模型#ai #人工智能 #chatgpt ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691488560,
+      "duration": 159847,
+      "stats": {
+        "digg_count": 18,
+        "comment_count": 1,
+        "share_count": 1,
+        "collect_count": 12
+      }
+    },
+    {
+      "aweme_id": "7264778888864124215",
+      "desc": "第8集 | 审查大模型：Moderation模型 #ai #人工智能 #gpt4 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691463162,
+      "duration": 63530,
+      "stats": {
+        "digg_count": 9,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7264506369779305786",
+      "desc": "第7集 | Embedding文本嵌入大模型#ai #人工智能 #大语言模型 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691399706,
+      "duration": 205497,
+      "stats": {
+        "digg_count": 39,
+        "comment_count": 0,
+        "share_count": 9,
+        "collect_count": 31
+      }
+    },
+    {
+      "aweme_id": "7264137165473336639",
+      "desc": "第6集 | 语音识别大模型Whisper #ai #大模型 #语音识别",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691313762,
+      "duration": 103631,
+      "stats": {
+        "digg_count": 16,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 11
+      }
+    },
+    {
+      "aweme_id": "7264046082001243411",
+      "desc": "第5集 | 图像多模态大模型DALL.E#ai #人工智能 #多模态模型",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691292536,
+      "duration": 175404,
+      "stats": {
+        "digg_count": 7,
+        "comment_count": 0,
+        "share_count": 1,
+        "collect_count": 4
+      }
+    },
+    {
+      "aweme_id": "7263420848671886649",
+      "desc": "第4集 | 谷歌PalM2 Models#人工智能 #AI #大语言模型 #ChatGPT #gpt4 ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691146973,
+      "duration": 103515,
+      "stats": {
+        "digg_count": 12,
+        "comment_count": 0,
+        "share_count": 2,
+        "collect_count": 3
+      }
+    },
+    {
+      "aweme_id": "7263330376406306106",
+      "desc": "第3集 | 极具浪漫主义的ABCD四大基座模型  #AI #人工智能 #ChatGPT ",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691125920,
+      "duration": 252657,
+      "stats": {
+        "digg_count": 11,
+        "comment_count": 1,
+        "share_count": 3,
+        "collect_count": 2
+      }
+    },
+    {
+      "aweme_id": "7263034072337894668",
+      "desc": "第2集 | 技术人应该掌握哪些大模型？  #人工智能 #AI #大语言模型  #gpt4 @抖音小助手",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1691056905,
+      "duration": 152602,
+      "stats": {
+        "digg_count": 10,
+        "comment_count": 1,
+        "share_count": 2,
+        "collect_count": 4
+      }
+    },
+    {
+      "aweme_id": "7262676283362987323",
+      "desc": "第1集 | 应该从哪里开始学习大模型技术？ #AI #人工智能  #大语言模型 #gpt4 @抖音小助手",
+      "caption": "",
+      "chapter_content": "",
+      "chapter_list": [],
+      "has_chapters": false,
+      "create_time": 1690973604,
+      "duration": 52617,
+      "stats": {
+        "digg_count": 29,
+        "comment_count": 2,
+        "share_count": 4,
+        "collect_count": 13
+      }
+    }
+  ]
+}
