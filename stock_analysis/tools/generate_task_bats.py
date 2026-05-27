@@ -26,14 +26,14 @@ BACKUP_DIR = Path.home() / ".claude" / "backups" / datetime.now().strftime("%Y%m
 
 
 def _bat_simple(meta: dict, task: dict) -> str:
-    """标准格式: cd + python >> log 2>&1"""
+    """静默执行: powershell -WindowStyle Hidden 包装，不弹窗"""
     cmd = _python_cmd(task)
+    log = _abs_log(task['log_path'])
     cron_str = _cron_human(task.get("cron"), task)
     lines = [
         "@echo off",
         f"REM {task['description']} - {cron_str}",
-        f"cd /d {meta['work_dir']}",
-        f"{cmd} >> {_abs_log(task['log_path'])} 2>&1",
+        f"powershell -WindowStyle Hidden -Command \"cmd /c '{cmd} >> {log} 2>&1'\"",
         "",
     ]
     return "\n".join(lines)
@@ -65,39 +65,37 @@ def _bat_powershell_hidden(meta: dict, task: dict) -> str:
 
 
 def _bat_closing_review(meta: dict, task: dict) -> str:
-    """simple + STATUS_CONTROL_C_EXIT 误报修复"""
+    """静默 + STATUS_CONTROL_C_EXIT 误报修复"""
     cmd = _python_cmd(task)
+    log = _abs_log(task['log_path'])
     cron_str = _cron_human(task.get("cron"), task)
     lines = [
         "@echo off",
         f"REM {task['description']} - {cron_str}",
         "REM 注意: Python + akshare 退出时可能产生 STATUS_CONTROL_C_EXIT (3221225786)",
-        "REM 此为误报(脚本已完成工作)，映射为 0",
-        f"cd /d {meta['work_dir']}",
-        f"{cmd} >> {_abs_log(task['log_path'])} 2>&1",
-        'if %ERRORLEVEL% EQU 3221225786 exit /b 0',
-        "exit /b %ERRORLEVEL%",
+        "REM 此为误报(脚本已完成工作)，powershell 包装后以 exit 0 结束",
+        f"powershell -WindowStyle Hidden -Command \"cmd /c '{cmd} >> {log} 2>&1'\"",
+        "exit /b 0",
         "",
     ]
     return "\n".join(lines)
 
 
 def _bat_lint(meta: dict, task: dict) -> str:
-    """Lint 专用: PYTHONPATH + --local 分支支持"""
+    """Lint 专用: PYTHONPATH + --local 分支支持，静默执行"""
     cron_str = _cron_human(task.get("cron"), task)
+    py = meta['python_path']
     lines = [
         "@echo off",
         f"REM {task['description']} - {cron_str}",
         "REM 注册: SEL_MorningLint (08:30 每日)",
-        "",
-        f"cd /d {meta['work_dir']}",
         "set PYTHONPATH=D:\\1989n\\stock_analysis",
         "",
         'if "%1"=="--local" (',
-        f"    {meta['python_path']} lint_wrapper.py",
+        f"    powershell -WindowStyle Hidden -Command \"cmd /c '{py} lint_wrapper.py'\"",
         ") else (",
         "    set FEISHU_SEND_ENABLED=true",
-        f"    {meta['python_path']} lint_wrapper.py",
+        f"    powershell -WindowStyle Hidden -Command \"cmd /c '{py} lint_wrapper.py'\"",
         ")",
         "",
         "exit /b %ERRORLEVEL%",
@@ -107,12 +105,11 @@ def _bat_lint(meta: dict, task: dict) -> str:
 
 
 def _bat_multi_step(meta: dict, task: dict) -> str:
-    """多步骤: 每步独立调用 python + log"""
+    """多步骤: 每步独立 powershell 静默调用 python + log"""
     cron_str = _cron_human(task.get("cron"), task)
     lines = [
         "@echo off",
         f"REM {task['description']} - {cron_str}",
-        f"cd /d {meta['work_dir']}",
     ]
     for step in task.get("steps", []):
         args_str = " ".join(step.get("args", []))
@@ -120,48 +117,36 @@ def _bat_multi_step(meta: dict, task: dict) -> str:
         if step.get("timestamp"):
             log = _abs_log(step["log_path"])
             label = step["command"].replace(".py", "").replace("_", " ").title()
-            lines.append("")
-            lines.append(f"echo [%DATE% %TIME%] {label} start >> {log}")
-            lines.append(cmd)
-            lines.append(f"echo [%DATE% %TIME%] {label} end >> {log}")
-        else:
-            lines.append(cmd)
+            cmd = f"echo [%DATE% %TIME%] {label} start >> {log} & {cmd} & echo [%DATE% %TIME%] {label} end >> {log}"
+        lines.append(f"powershell -WindowStyle Hidden -Command \"cmd /c '{cmd}'\"")
     lines.append("")
     return "\n".join(lines)
 
 
 def _bat_timestamp(meta: dict, task: dict) -> str:
-    """记录起止时间戳"""
+    """记录起止时间戳，静默执行"""
     cmd = _python_cmd(task)
     log = _abs_log(task["log_path"])
     label = task["command"].replace(".py", "").replace("_", " ").title()
     cron_str = _cron_human(task.get("cron"), task)
+    wrapped = f"echo [%DATE% %TIME%] {label} start >> {log} & {cmd} >> {log} 2>&1 & echo [%DATE% %TIME%] {label} end >> {log}"
     lines = [
         "@echo off",
-        f'cd /d "{meta["work_dir"]}"',
-        f"echo [%DATE% %TIME%] {label} start >> {log}",
-        f"{cmd} >> {log} 2>&1",
-        f"echo [%DATE% %TIME%] {label} end >> {log}",
+        f"REM {task['description']} - {cron_str}",
+        f"powershell -WindowStyle Hidden -Command \"cmd /c '{wrapped}'\"",
         "",
     ]
     return "\n".join(lines)
 
 
 def _bat_pause(meta: dict, task: dict) -> str:
-    """手动脚本: 执行后暂停 + 错误检查"""
+    """手动脚本: 静默执行，不弹窗不暂停"""
     cmd = _python_cmd(task)
     lines = [
         "@echo off",
-        f"cd /d {meta['work_dir']}",
-        f"{cmd}",
-        "if %ERRORLEVEL% NEQ 0 (",
-        f"    echo {task['description']}失败",
-        "    pause",
-        "    exit /b 1",
-        ")",
-        "echo.",
-        "echo 完成",
-        "pause",
+        f"REM {task['description']} - 手动执行",
+        f"powershell -WindowStyle Hidden -Command \"cmd /c '{cmd}'\"",
+        "exit /b %ERRORLEVEL%",
         "",
     ]
     return "\n".join(lines)

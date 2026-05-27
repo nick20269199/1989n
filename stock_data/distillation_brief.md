@@ -1,13 +1,13 @@
 # 蒸馏简报 — 2026-05-26
 
-## 待蒸馏文件 (匹配规则)
+## 待蒸馏文件 (匹配规则) — 已处理 2026-05-27
 
-- `closing_review.json` (9.0KB)
-- `git_push.log` (585.7KB)
-- `last_error.txt` (0.6KB)
-- `sentinel_status.json` (2.0KB)
+- `closing_review.json` (9.0KB) → 跳过，常规复盘数据无规则可提取
+- `git_push.log` (585.7KB) → 跳过，纯日志无知识价值
+- `last_error.txt` (0.6KB) → 跳过，测试误触发的 import 错误
+- `sentinel_status.json` (2.0KB) → 跳过，历史哨兵状态已分析
 
-共 4 个文件待蒸馏
+共 4 个文件，已全部处理
 
 ## 今日其他产出
 

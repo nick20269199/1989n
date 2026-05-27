@@ -1,4 +1,4 @@
-# 定时任务一览 | 2026-05-25 15:47
+# 定时任务一览 | 2026-05-27 09:47
 
 Python: `D:\Python314\python`
 工作目录: `D:\1989n\stock_analysis`
@@ -46,34 +46,29 @@ Python: `D:\Python314\python`
 |------|------|------|------|
 | Intel_Recon | 情报部盘前侦察 | 工作日 08:32 | `intelligence_service.py` |
 | Intel_Deduce | 情报部收盘推演 | 工作日 15:35 | `intelligence_service.py` |
+| StockNews_Evening | 晚间新闻采集 | 21:55 | `news_scheduler.py` |
+| StockNews_Morning | 早间新闻采集 | 08:00 | `news_scheduler.py` |
+| StockNews_Intraday | 盘中新闻采集 (09:30-15:00 每30分钟) | 工作日 09:30 (每30分钟至05:30) | `news_scheduler.py` |
 
 ### 工程部
 
 | 任务 | 说明 | 时间 | 脚本 |
 |------|------|------|------|
+| StockNightlyHealth | 夜间健康检查 | 00:30 | `nightly_health_check.py` |
 | SEL_TaskSentinel | 任务哨兵 — 检查定时任务+数据文件健康 | 10:00 | `task_sentinel.py` |
 | SEL_EvolveRead | 工程部 Evolve — 知识阅读 | 12:00 | `sel_evolve_read.py` |
 | SEL_EvolveOp | 工程部 Evolve — 知识操作化 | 12:15 | `sel_evolve_op.py` |
 | SEL_DistillQueue | 蒸馏队列扫描 — 扫描当日产出加入队列 | 工作日 15:45 / 23:45 | `distill_queue.py` |
+| Cognitive_TaskDashboard | 任务仪表盘监控 | 20:00 | `task_dashboard.py` |
+| Cognitive_ConversationMiner | 对话挖掘 | 22:30 | `conversation_miner.py` |
+| StockAnalysis_DailyCompress | 每日复盘压缩 | 23:00 | `daily_compress_agent.py` |
+| StockAnalysis_HealthCheck | 系统健康检查 | 07:03 | `health_check.py` |
 | SEL_MorningLint | 工程部 Morning Lint — 6项检测 | 08:30 | `lint_wrapper.py` |
 | SEL_Digest | 工程部 Digest — 知识库消化 | 09:00 | `sel_digest.py` |
 | SEL_Connect | 工程部 Connect — 知识连接 | 09:10 | `sel_connect.py` |
 | SEL_Prune | 工程部 Prune — 知识裁剪 | 09:15 | `sel_prune.py` |
 | SEL_Maintain | 工程部 Maintain — 知识库维护 | 09:05 | `sel_maintain.py` |
-
-### 后勤部
-
-| 任务 | 说明 | 时间 | 脚本 |
-|------|------|------|------|
-| StockNightlyHealth | 夜间健康检查 | 00:30 | `nightly_health_check.py` |
-| Cognitive_TaskDashboard | 任务仪表盘监控 | 20:00 | `task_dashboard.py` |
-| StockNews_Evening | 晚间新闻采集 | 21:55 | `news_scheduler.py` |
-| Cognitive_ConversationMiner | 对话挖掘 | 22:30 | `conversation_miner.py` |
-| StockAnalysis_DailyCompress | 每日复盘压缩 | 23:00 | `daily_compress_agent.py` |
-| StockAnalysis_HealthCheck | 系统健康检查 | 07:03 | `health_check.py` |
-| StockNews_Morning | 早间新闻采集 | 08:00 | `news_scheduler.py` |
-| StockNews_Intraday | 盘中新闻采集 (09:30-15:00 每30分钟) | 工作日 09:30 (每30分钟至05:30) | `news_scheduler.py` |
 | weekly_audit_agent | 周审计 (未注册定时任务) | 手动执行 | `weekly_audit_agent.py` |
 
 ---
-*自动生成于 2026-05-25 15:47 | 修改 tasks.json 后重新运行 `python tools/generate_task_bats.py`*
+*自动生成于 2026-05-27 09:47 | 修改 tasks.json 后重新运行 `python tools/generate_task_bats.py`*

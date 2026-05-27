@@ -1,4 +1,3 @@
 @echo off
 REM 工程部 Connect — 知识连接 - 09:10
-cd /d D:\1989n\stock_analysis
-D:\Python314\python sel_connect.py >> nul 2>&1
+powershell -WindowStyle Hidden -Command "cmd /c 'D:\Python314\python sel_connect.py >> nul 2>&1'"

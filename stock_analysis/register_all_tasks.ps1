@@ -100,6 +100,18 @@ Register-SimpleTask -Name 'Intel_Recon' -ScriptPath 'D:\1989n\stock_analysis\run
 # 情报部收盘推演
 Register-SimpleTask -Name 'Intel_Deduce' -ScriptPath 'D:\1989n\stock_analysis\run_intel_deduce.bat' -Schedule 'WEEKLY' -StartTime '15:35' -DaysOfWeek 'MON,TUE,WED,THU,FRI'
 
+# 晚间新闻采集
+Register-SimpleTask -Name 'StockNews_Evening' -ScriptPath 'D:\1989n\stock_analysis\run_news_evening.bat' -Schedule 'DAILY' -StartTime '21:55'
+
+# 早间新闻采集
+Register-SimpleTask -Name 'StockNews_Morning' -ScriptPath 'D:\1989n\stock_analysis\run_news_morning.bat' -Schedule 'DAILY' -StartTime '08:00'
+
+# 盘中新闻采集 (09:30-15:00 每30分钟)
+Register-SimpleTask -Name 'StockNews_Intraday' -ScriptPath 'D:\1989n\stock_analysis\run_news_intraday.bat' -Schedule 'WEEKLY' -StartTime '09:30' -DaysOfWeek 'MON,TUE,WED,THU,FRI' -RepeatInterval '30' -Duration '05:30'
+
+# 夜间健康检查
+Register-SimpleTask -Name 'StockNightlyHealth' -ScriptPath 'D:\1989n\stock_analysis\run_nightly_health.bat' -Schedule 'DAILY' -StartTime '00:30'
+
 # 任务哨兵 — 检查定时任务+数据文件健康
 Register-SimpleTask -Name 'SEL_TaskSentinel' -ScriptPath 'D:\1989n\stock_analysis\run_task_sentinel.bat' -Schedule 'DAILY' -StartTime '10:00'
 
@@ -116,6 +128,18 @@ $triggers = @(
 )
 Register-MultiTriggerTask -Name 'SEL_DistillQueue' -ScriptPath 'D:\1989n\stock_analysis\run_distill_queue.bat' -Triggers $triggers
 
+# 任务仪表盘监控
+Register-SimpleTask -Name 'Cognitive_TaskDashboard' -ScriptPath 'D:\1989n\stock_analysis\run_task_dashboard.bat' -Schedule 'DAILY' -StartTime '20:00'
+
+# 对话挖掘
+Register-SimpleTask -Name 'Cognitive_ConversationMiner' -ScriptPath 'D:\1989n\stock_analysis\run_conversation_miner.bat' -Schedule 'DAILY' -StartTime '22:30'
+
+# 每日复盘压缩
+Register-SimpleTask -Name 'StockAnalysis_DailyCompress' -ScriptPath 'D:\1989n\stock_analysis\run_daily_compress_agent.bat' -Schedule 'DAILY' -StartTime '23:00'
+
+# 系统健康检查
+Register-SimpleTask -Name 'StockAnalysis_HealthCheck' -ScriptPath 'D:\1989n\stock_analysis\run_health_check.bat' -Schedule 'DAILY' -StartTime '07:03'
+
 # 工程部 Morning Lint — 6项检测
 Register-SimpleTask -Name 'SEL_MorningLint' -ScriptPath 'D:\1989n\stock_analysis\run_lint.bat' -Schedule 'DAILY' -StartTime '08:30'
 
@@ -130,30 +154,6 @@ Register-SimpleTask -Name 'SEL_Prune' -ScriptPath 'D:\1989n\stock_analysis\run_p
 
 # 工程部 Maintain — 知识库维护
 Register-SimpleTask -Name 'SEL_Maintain' -ScriptPath 'D:\1989n\stock_analysis\run_maintain.bat' -Schedule 'DAILY' -StartTime '09:05'
-
-# 夜间健康检查
-Register-SimpleTask -Name 'StockNightlyHealth' -ScriptPath 'D:\1989n\stock_analysis\run_nightly_health.bat' -Schedule 'DAILY' -StartTime '00:30'
-
-# 任务仪表盘监控
-Register-SimpleTask -Name 'Cognitive_TaskDashboard' -ScriptPath 'D:\1989n\stock_analysis\run_task_dashboard.bat' -Schedule 'DAILY' -StartTime '20:00'
-
-# 晚间新闻采集
-Register-SimpleTask -Name 'StockNews_Evening' -ScriptPath 'D:\1989n\stock_analysis\run_news_evening.bat' -Schedule 'DAILY' -StartTime '21:55'
-
-# 对话挖掘
-Register-SimpleTask -Name 'Cognitive_ConversationMiner' -ScriptPath 'D:\1989n\stock_analysis\run_conversation_miner.bat' -Schedule 'DAILY' -StartTime '22:30'
-
-# 每日复盘压缩
-Register-SimpleTask -Name 'StockAnalysis_DailyCompress' -ScriptPath 'D:\1989n\stock_analysis\run_daily_compress_agent.bat' -Schedule 'DAILY' -StartTime '23:00'
-
-# 系统健康检查
-Register-SimpleTask -Name 'StockAnalysis_HealthCheck' -ScriptPath 'D:\1989n\stock_analysis\run_health_check.bat' -Schedule 'DAILY' -StartTime '07:03'
-
-# 早间新闻采集
-Register-SimpleTask -Name 'StockNews_Morning' -ScriptPath 'D:\1989n\stock_analysis\run_news_morning.bat' -Schedule 'DAILY' -StartTime '08:00'
-
-# 盘中新闻采集 (09:30-15:00 每30分钟)
-Register-SimpleTask -Name 'StockNews_Intraday' -ScriptPath 'D:\1989n\stock_analysis\run_news_intraday.bat' -Schedule 'WEEKLY' -StartTime '09:30' -DaysOfWeek 'MON,TUE,WED,THU,FRI' -RepeatInterval '30' -Duration '05:30'
 
 
 # ── 验证 ──
@@ -180,23 +180,23 @@ $checkNames = @(
     'StockAnalysis_VVRadar',
     'Intel_Recon',
     'Intel_Deduce',
+    'StockNews_Evening',
+    'StockNews_Morning',
+    'StockNews_Intraday',
+    'StockNightlyHealth',
     'SEL_TaskSentinel',
     'SEL_EvolveRead',
     'SEL_EvolveOp',
     'SEL_DistillQueue',
+    'Cognitive_TaskDashboard',
+    'Cognitive_ConversationMiner',
+    'StockAnalysis_DailyCompress',
+    'StockAnalysis_HealthCheck',
     'SEL_MorningLint',
     'SEL_Digest',
     'SEL_Connect',
     'SEL_Prune',
-    'SEL_Maintain',
-    'StockNightlyHealth',
-    'Cognitive_TaskDashboard',
-    'StockNews_Evening',
-    'Cognitive_ConversationMiner',
-    'StockAnalysis_DailyCompress',
-    'StockAnalysis_HealthCheck',
-    'StockNews_Morning',
-    'StockNews_Intraday'
+    'SEL_Maintain'
 )
 foreach ($n in $checkNames) {
     $q = schtasks /Query /TN $n /FO LIST 2>&1
