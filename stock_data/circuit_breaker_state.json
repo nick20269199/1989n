@@ -1,0 +1,8 @@
+{
+  "consecutive_losses": 1,
+  "daily_loss_pct": 0,
+  "daily_loss_date": "2026-05-27",
+  "is_triggered": false,
+  "trigger_reason": "",
+  "triggered_at": null
+}

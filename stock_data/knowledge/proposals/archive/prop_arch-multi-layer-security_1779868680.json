@@ -1,0 +1,24 @@
+{
+  "proposal_id": "prop_arch-multi-layer-security_1779868680",
+  "gap_id": "arch-multi-layer-security",
+  "gap_title": "单点安全防御 — 需扩展为多层架构",
+  "priority": "P2",
+  "source": "外部来源",
+  "source_title": "[工具] cursor (via 九天Hector)",
+  "source_url": "https://www.douyin.com/video/7516924489507163455",
+  "relevance": 4,
+  "summary": "[上游追溯] tool_framework: cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (9 命中), 来源类型加分 (+1) | 上下文: ...P工具，并搭建一个Deep Research应用？\nPlaywright Automation、FileSystem调用方法详解！#ai新星计划 \n#mcp #cursor #智能体 如和将Cursor接入MCP进行Agent智能体开发？\n如何在代码环境调用最热门的MCP工具，并搭建一个Deep Research应用？\nPlayw...",
+  "pattern": "layered_defense",
+  "implied_changes": [
+    "stock_analysis/experts/expert5_risk.py",
+    "stock_analysis/experts/grader.py"
+  ],
+  "implementation_hint": "expert5_risk.py 中增加：层①数据校验 → 层②规则审查 → 层③AI独立审查 → 层④断路器。断路器条件：连续 N 次亏损 / 单日亏损超阈值 / 风控信号矛盾。",
+  "test_files": [
+    "stock_analysis/tests/test_grader.py"
+  ],
+  "status": "proposed",
+  "created_at": "2026-05-27T15:58:00.701945",
+  "executed_at": null,
+  "execution_result": null
+}

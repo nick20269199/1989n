@@ -12,6 +12,7 @@
 """
 
 import json, os, logging
+from datetime import datetime
 from pathlib import Path
 
 logger = logging.getLogger("experts.expert5_risk")
@@ -289,7 +290,6 @@ def analyze(symbol: str, name: str, data_context: dict,
         current_pos = {"code": symbol, "name": name, "cost": 0, "shares": 0}
 
     # Calculate approximate hold days
-    from datetime import datetime
     hold_days = 0
     first_buy = current_pos.get("first_buy", "")
     if first_buy:
@@ -380,8 +380,186 @@ def analyze(symbol: str, name: str, data_context: dict,
     }
 
 
+# ============================================================
+# 仓位管理模型 (Proposal: concept-position-sizing)
+# ============================================================
+
+def kelly_position_sizing(win_rate: float, avg_win: float, avg_loss: float,
+                           max_risk_pct: float = 0.02, portfolio_value: float = 0) -> dict:
+    """Kelly 公式仓位计算 + Half-Kelly 安全调整。
+
+    Args:
+        win_rate: 胜率 (0-1)
+        avg_win: 平均盈利比例 (如 0.08 = 8%)
+        avg_loss: 平均亏损比例 (如 0.05 = 5%)
+        max_risk_pct: 单笔最大风险敞口 (默认2%)
+        portfolio_value: 组合总市值, 0=仅返回比例
+
+    Returns:
+        {kelly_pct, half_kelly_pct, suggested_shares, risk_level, note}
+    """
+    if win_rate <= 0 or avg_win <= 0 or avg_loss <= 0:
+        return {"kelly_pct": 0, "half_kelly_pct": 0, "note": "参数不足，无法计算"}
+
+    b = avg_win / avg_loss  # 赔率
+    p = win_rate
+    q = 1 - p
+
+    kelly = (b * p - q) / b if b > 0 else 0
+    kelly = max(0, min(kelly, max_risk_pct))  # 限幅
+
+    half_kelly = kelly * 0.5
+
+    if kelly <= 0:
+        return {"kelly_pct": 0, "half_kelly_pct": 0, "risk_level": "high",
+                "note": "Kelly 为负，建议不参与"}
+    elif kelly < 0.1:
+        risk_level = "high"
+    elif kelly < 0.2:
+        risk_level = "medium"
+    else:
+        risk_level = "low"
+
+    result = {
+        "kelly_pct": round(kelly * 100, 1),
+        "half_kelly_pct": round(half_kelly * 100, 1),
+        "suggested_pct": round(half_kelly * 100, 1),
+        "risk_level": risk_level,
+        "note": f"胜率{win_rate*100:.0f}%, 盈亏比{b:.2f}, 半凯利建议{half_kelly*100:.1f}%",
+    }
+
+    if portfolio_value > 0 and result["suggested_pct"] > 0:
+        suggested_value = portfolio_value * result["suggested_pct"] / 100
+        result["suggested_value"] = round(suggested_value, 2)
+
+    return result
+
+
+# ============================================================
+# 多层安全防御 — 断路器 (Proposal: arch-multi-layer-security)
+# ============================================================
+
+class CircuitBreaker:
+    """断路器 — 多层安全防御的第④层。
+
+    层①: 数据校验 (data_source_router 白名单)
+    层②: 规则审查 (check_trading_rules)
+    层③: AI 独立审查 (grader)
+    层④: 断路器 (本模块)
+
+    触发条件:
+    - 连续 3 笔亏损
+    - 单日亏损 > 5%
+    - 3 个以上风控维度同时报警
+    """
+
+    def __init__(self, data_dir: Path = None):
+        self.data_dir = data_dir or Path("D:/1989n/stock_data")
+        self.state_path = self.data_dir / "circuit_breaker_state.json"
+        self.state = self._load_state()
+
+    def _load_state(self) -> dict:
+        if self.state_path.exists():
+            try:
+                return json.loads(self.state_path.read_text(encoding="utf-8"))
+            except Exception:
+                pass
+        return {
+            "consecutive_losses": 0,
+            "daily_loss_pct": 0,
+            "daily_loss_date": "",
+            "is_triggered": False,
+            "trigger_reason": "",
+            "triggered_at": None,
+        }
+
+    def _save_state(self):
+        self.state_path.write_text(
+            json.dumps(self.state, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+
+    def check(self, position_pnl: float = None, daily_pnl_pct: float = None,
+              risk_signals: list[dict] = None) -> dict:
+        """检查断路器状态。
+
+        Args:
+            position_pnl: 当前持仓盈亏比例
+            daily_pnl_pct: 当日总盈亏比例
+            risk_signals: 各风控维度信号 [{dimension, level}]
+
+        Returns:
+            {triggered, level, reason, actions}
+        """
+        now = datetime.now().strftime("%Y-%m-%d")
+
+        if self.state["daily_loss_date"] != now:
+            self.state["daily_loss_date"] = now
+            self.state["daily_loss_pct"] = 0
+
+        if position_pnl is not None:
+            if position_pnl < 0:
+                self.state["consecutive_losses"] += 1
+            else:
+                self.state["consecutive_losses"] = 0
+
+        if daily_pnl_pct is not None:
+            self.state["daily_loss_pct"] = min(self.state["daily_loss_pct"], daily_pnl_pct)
+
+        actions = []
+
+        if self.state["consecutive_losses"] >= 3:
+            self.state["is_triggered"] = True
+            self.state["trigger_reason"] = f"连续{self.state['consecutive_losses']}笔亏损"
+            self.state["triggered_at"] = now
+            actions.append("暂停新开仓")
+
+        if self.state["daily_loss_pct"] <= -5:
+            self.state["is_triggered"] = True
+            self.state["trigger_reason"] = f"单日亏损{self.state['daily_loss_pct']:.1f}% > 5%阈值"
+            self.state["triggered_at"] = now
+            actions.append("减仓50%")
+
+        if risk_signals:
+            high_risk_count = sum(1 for s in risk_signals if s.get("level") in ("danger", "hard_stop"))
+            if high_risk_count >= 3:
+                self.state["is_triggered"] = True
+                self.state["trigger_reason"] = f"{high_risk_count}个风控维度同时报警"
+                self.state["triggered_at"] = now
+                actions.append("全面风险审查")
+
+        self._save_state()
+
+        return {
+            "triggered": self.state["is_triggered"],
+            "level": "danger" if self.state["is_triggered"] else "normal",
+            "reason": self.state.get("trigger_reason", ""),
+            "actions": actions,
+            "consecutive_losses": self.state["consecutive_losses"],
+            "daily_loss_pct": self.state["daily_loss_pct"],
+        }
+
+
+# 全局断路器实例
+_circuit_breaker = None
+
+
+def get_circuit_breaker() -> CircuitBreaker:
+    global _circuit_breaker
+    if _circuit_breaker is None:
+        _circuit_breaker = CircuitBreaker()
+    return _circuit_breaker
+
+
 if __name__ == "__main__":
     # Quick test
     test_pos = {"kline": {"latest_price": 42.0}, "holdings": [{"code": "002156", "cost": 44.85, "shares": 1000, "first_buy": "2026-04-27"}]}
     r = analyze("002156", "通富微电", test_pos)
     print(json.dumps(r, ensure_ascii=False, indent=2))
+    print()
+    # Test Kelly
+    k = kelly_position_sizing(0.55, 0.08, 0.05, portfolio_value=100000)
+    print(f"Kelly: {json.dumps(k, ensure_ascii=False)}")
+    # Test CB
+    cb = get_circuit_breaker()
+    cb_check = cb.check(position_pnl=-0.02, risk_signals=[{"dimension": "stop_loss", "level": "warning"}])
+    print(f"Circuit Breaker: {json.dumps(cb_check, ensure_ascii=False)}")

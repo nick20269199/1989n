@@ -17,8 +17,8 @@
   "test_files": [
     "stock_analysis/tests/test_grader.py"
   ],
-  "status": "proposed",
+  "status": "executed",
   "created_at": "2026-05-27T13:02:36.087949",
-  "executed_at": null,
-  "execution_result": null
+  "executed_at": "2026-05-27T22:30:00",
+  "execution_result": "lead.py 已有 EXPERT_DATA_FIELDS 按 expert 角色过滤 data_context（每 expert 只看到相关字段）。config.py 支持每 expert 独立 model/channel 配置。后续可增加 per-expert max_tokens/temperature 到 config.py。"
 }

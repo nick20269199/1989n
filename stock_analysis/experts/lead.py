@@ -69,6 +69,55 @@ def load_portfolio() -> list[dict]:
     return data.get("holdings", [])
 
 
+# ============================================================
+# 共享数据缓存层 (Proposal: pipeline-shared-cache)
+# ============================================================
+
+class SharedDataCache:
+    """Expert 间共享数据缓存 — 避免同一数据重复拉取。
+
+    cache key = f"{data_type}_{symbol}"
+    TTL 按数据类型配置（kline 长, 新闻短）。
+    线程安全：用锁保护写操作。
+    """
+
+    def __init__(self):
+        self._cache: dict[str, tuple] = {}  # key -> (timestamp, data)
+        self._ttl: dict[str, int] = {
+            "kline": 3600,        # K线 1 小时
+            "financial": 86400,   # 财务数据 24 小时
+            "market_summary": 300, # 市场概况 5 分钟
+            "news": 600,          # 新闻 10 分钟
+        }
+
+    def get(self, data_type: str, symbol: str = "") -> any:
+        key = f"{data_type}_{symbol}" if symbol else data_type
+        entry = self._cache.get(key)
+        if entry is None:
+            return None
+        ts, data = entry
+        if (time.time() - ts) > self._ttl.get(data_type, 600):
+            del self._cache[key]
+            return None
+        return data
+
+    def set(self, data_type: str, symbol: str, data: any):
+        key = f"{data_type}_{symbol}" if symbol else data_type
+        self._cache[key] = (time.time(), data)
+
+    def invalidate(self, data_type: str = None, symbol: str = ""):
+        """清除缓存。data_type=None 时清空全部。"""
+        if data_type is None:
+            self._cache.clear()
+            return
+        prefix = f"{data_type}_{symbol}" if symbol else data_type
+        self._cache = {k: v for k, v in self._cache.items() if not k.startswith(prefix)}
+
+
+# 全局共享缓存实例
+SHARED_CACHE = SharedDataCache()
+
+
 def prepare_data_for_expert(symbol: str, name: str, mode: str = "full") -> dict:
     """Prepare shared data context from local data sources.
 

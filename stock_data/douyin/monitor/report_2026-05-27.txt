@@ -1,53 +1,109 @@
-监控报告 (2026-05-27 00:34)
-新增视频: 9 条
+监控报告 (2026-05-27 21:34)
+新增视频: 18 条
+
+★★★ [高价值] 九天Hector
+  标题: Hermes和Claude Code到底谁更好用？ #Hermes #Ai #编程 #Claude #Agent - 抖音
+  URL:  https://www.douyin.com/video/7634080435231804681
+  统计: 👍600 💬39 🔄69
+  命中: claude code, agent, 记忆
+  内容: Hermes和Claude Code在运行同一道题时表现出较大差距。Hermes具有记忆功能，能够在多次执行任务后提高效率。与Openclaw相比，Hermes的工具集提示词经过精调，执行效率更高。此外，还介绍了大模型agent智能体开发实战课、open club智能题应用实战课和web codin
 
 ★★★ [高价值] 阿森编程日记（AI自动化）
-  标题: 新手用Claude Code千万避开这5个翻车点 不写CLAUDE.md、分不清Plan/Edit/Ask、盲目开Auto、长对话不/compact、不接Git
-  URL:  https://www.douyin.com/video/7643543191760768291
-  统计: 👍615 💬9 🔄61
-  命中: claude, 编程, 工具
+  标题: ClaudeCode别只会写提示词，这个技能才是提效入口 同样用ClaudeCode，别人能改完整个项目，你却只能改一小段代码？差距不一定在模型，而在有没有给C
+  URL:  https://www.douyin.com/video/7643018631953009962
+  统计: 👍399 💬13 🔄36
+  命中: claude, 工作流, 编程, 工具, skill, 新手
+  内容: Claude Code的Superpowers是一个工作流增强包，旨在帮助新手解决三个痛点：乱开始、乱修改和乱收尾。它通过引导用户先理解需求，确认边界，再进入实现，避免AI越改越偏。
 
 ★★★ [高价值] 阿森编程日记（AI自动化）
-  标题: Claude Code 两个插件，青铜直接变王者 Claude Code 不只是会写代码——Superpowers 帮你跑顺标准流程，Oh My ClaudeC
-  URL:  https://www.douyin.com/video/7643521604521618853
-  统计: 👍267 💬1 🔄19
-  命中: claude, 编程, 工具
+  标题: Claude Code新手6个实用Skill，少走90%弯路 不会写提示词也能轻松用Claude Code！先把这6个实用Skill装上，不管是写代码、做页面还
+  URL:  https://www.douyin.com/video/7642336132462415013
+  统计: 👍8287 💬77 🔄952
+  命中: claude, 编程, skill, 新手
+  内容: 6个Claude Code新手实用Skill，包括prompt-optimizer、deep-interview、real plan、Ultra QA、AI slock cleaner和visual-verdict。这些Skill帮助新手在不同任务中更高效地使用Claude Code，少走弯路。
 
 ★★★ [高价值] 阿森编程日记（AI自动化）
-  标题: 从提示词到上线ClaudeCode新手必学的8个skill 真正高效的用法，不是把 Claude Code 当成一个写代码工具，而是把它当成一整套 AI 开发团
-  URL:  https://www.douyin.com/video/7643090529806208292
-  统计: 👍387 💬8 🔄59
-  命中: claude, 工作流, 编程, 工具
+  标题: 新手使用Claude Code，先学会用这6个Skill 别再只把 Claude Code 当聊天框了。 这期整理了最适合新手先打开的 6 个实用 Skill：
+  URL:  https://www.douyin.com/video/7641909990931909931
+  统计: 👍367 💬13 🔄44
+  命中: claude, codex, 编程, 工具, skill, 新手
+  内容: 新手使用Claude Code可先掌握6个实用Skill：explore、code-review、debugger、test-engineer、code-simplifier和dependency-expert。这些Skill能帮助新手提高工作效率，避免常见错误。同时，AI工具箱可简化Claude 
 
 ★★ [中价值] 九天Hector
-  标题: rm/rf 删库、恶意指令、后门漏洞，小白一不留神就翻车。本期拆解 CloudCode 五层安全防御：字符串拦截、正则过滤、白名单放行、独立 AI 审查、人工兜
-  URL:  https://www.douyin.com/video/7641191826501700916
-  统计: 👍48 💬1 🔄1
-  命中: agent
+  标题: Hermes怎样越用越快？超详细实操教程来了！ #热点 #Hermes #Agent #编程入门 #程序员 - 抖音
+  URL:  https://www.douyin.com/video/7634088729740676367
+  统计: 👍150 💬6 🔄13
+  命中: agent, skill
+  内容: Hermes通过Skill自主进化和EGPA进化引擎不断提高性能。Skill是Hermes的数字资产包，可帮助其更好地完成任务。EGPA进化引擎用于优化Skill和其他提示词。课程介绍了大模型技术、AI开发框架、智能体开发等内容，还包括多个工业级和商业级智能体开发项目实战。
 
 ★★ [中价值] 九天Hector
-  标题: AI写代码超万行就失忆？教你破局知识熵增！ AI 写代码到上万行就会混乱、失忆、出 bug记不住上下文、逻辑混乱、生成屎山代码、Token 爆炸的问题也就是知识
-  URL:  https://www.douyin.com/video/7639689500695776552
-  统计: 👍13 💬5 🔄0
-  命中: agent, 上下文
+  标题: 如何给你的Hermes赋予一个性格？ #热点 #Hermes #编程 #Agent #程序员 - 抖音
+  URL:  https://www.douyin.com/video/7634085977018879278
+  统计: 👍233 💬4 🔄31
+  命中: agent, 记忆
+  内容: 如何为Hermes赋予性格，包括修改soul.MD文件设置说话风格和行事方式，以及使用定时巡检、记忆系统等功能。同时，还介绍了大模型agent智能体开发实战课，涵盖了从入门到高级的技术内容和项目实战。
 
-★★ [中价值] 九天Hector
-  标题: ClaudeCode 最小可用 Agent：30 行有效代码，再加 4 条规则，为什么就能让 Agent 自己拆任务、自己往下执行？如果你正想做 AI 编程助手
-  URL:  https://www.douyin.com/video/7638932946937744655
-  统计: 👍86 💬2 🔄5
-  命中: agent
+★★ [中价值] 他们都叫我蜗牛学长
+  标题: ai真的能赚钱吗？ #ai #ai赚钱 #vibecoding大赏 #ai新星计划 @抖音科技 - 抖音
+  URL:  https://www.douyin.com/video/7644373982258531624
+  统计: 👍605 💬65 🔄61
+  命中: ai
 
-★ [低价值] 他们都叫我蜗牛学长
-  标题: human in the loop 贯彻到底！ #humanintheloop #做账号 #复盘 #个人ip #cheatoncontent - 抖音
-  URL:  https://www.douyin.com/video/7641190447708130586
-  统计: 👍308 💬15 🔄33
+★★ [中价值] 他们都叫我蜗牛学长
+  标题: AI博主还不够多！！！ #ai #ai博主 #做账号 #个人IP - 抖音
+  URL:  https://www.douyin.com/video/7639862704743714102
+  统计: 👍1209 💬60 🔄104
+  命中: ai
 
-★ [低价值] 他们都叫我蜗牛学长
-  标题: 一定要找到属于自己的aha moment #ahamoment #做账号 #cheatoncontent #个人ip #buildinpublic - 抖音
-  URL:  https://www.douyin.com/video/7640801214048865587
-  统计: 👍922 💬25 🔄116
+★★ [中价值] 他们都叫我蜗牛学长
+  标题: 你们有什么想问“我的宿命版”的吗？ #宿命论 #cheatoncontent #fatesnail #做账号 #opc - 抖音
+  URL:  https://www.douyin.com/video/7639488007174688052
+  统计: 👍605 💬68 🔄29
+  命中: ai
 
-★ [低价值] 他们都叫我蜗牛学长
-  标题: 日更100条！！！ #ai #cheatoncontent #个人ip #做账号 #ai时代 - 抖音
-  URL:  https://www.douyin.com/video/7640070279313607982
-  统计: 👍6332 💬85 🔄872
+★ [低价值] 清华姜学长
+  标题: 小镇青年到清华毕业 北京定居 平凡而不普通的 三十年人生#小镇做题家 #学习的意义 #读书 #清华大学 #北漂 - 抖音
+  URL:  https://www.douyin.com/video/7500158153330707770
+  统计: 👍1337 💬105 🔄186
+
+★ [低价值] 清华姜学长
+  标题: 普通人自学AI最大的变量就是信息差 普通人自学AI最大的变量就是信息差 #AI #知识分享 #大模型 #每天跟我涨知识 - 抖音
+  URL:  https://www.douyin.com/video/7539910466732576057
+  统计: 👍47169 💬498 🔄9393
+
+★ [低价值] 清华姜学长
+  标题: 6分钟带你搞懂 AI对话的四象限 #ai提示词#四象限思维#人工智能#教你用ai#AIGC - 抖音
+  URL:  https://www.douyin.com/video/7512101486186532155
+  统计: 👍29186 💬376 🔄7122
+  内容: AI对话的四象限框架是一种有用的思维工具，帮助我们更好地与AI交流。四个象限分别代表不同的人机交互方式：AI知道且我知道、AI知道但我不知道、AI不知道且我知道、AI不知道且我不知道。通过掌握提问艺术、知识转译能力、探索协作能力和适应轴线变化能力，我们可以在第二象限和第三象限高效
+
+★ [低价值] 万手哥
+  标题: 4月行情将会反转，大概率收复4000点#万手哥 #牛市来了 #股票 #财经 #金融 - 抖音
+  URL:  https://www.douyin.com/video/7623976282652841125
+  统计: 👍3587 💬503 🔄172
+
+★ [低价值] 万手哥
+  标题: 指数能到4000点支撑洗一下的话短线看更加健康 #万手哥 #牛市来了 #股票 #财经 #金融 - 抖音
+  URL:  https://www.douyin.com/video/7644492396311447921
+  统计: 👍2416 💬356 🔄420
+
+★ [低价值] 万手哥
+  标题: 宇树科技要上市了，上周四就给大家说了你提前研究了没有？#万手哥 #牛市来了 #股票 #财经 #金融 - 抖音
+  URL:  https://www.douyin.com/video/7643811433802164581
+  统计: 👍9123 💬755 🔄2881
+  内容: 宇树科技将于6月1号上会，本视频梳理了9家深度绑定宇树科技的A股公司，包括关节核心、视觉感知、动力源、传感等全链路覆盖。这些公司与宇树科技合作紧密，为其提供关键部件和技术支持。
+
+★ [低价值] 爱学习的小林
+  标题: 9月份上三年级，零基础英语如何学习？准备这本#预备三年级英语 就够了，暑假学起来#零基础英语 #二升三 - 抖音
+  URL:  https://www.douyin.com/video/7643978385022689115
+  统计: 👍6 💬0 🔄1
+
+★ [低价值] 大众网·威海
+  标题: 武汉大学：取消社会公众进校预约，用身份证即可入校#武汉大学 （湖北日报） - 抖音
+  URL:  https://www.douyin.com/video/7639570441123777792
+  统计: 👍1 💬0 🔄0
+
+★ [低价值] 钱说
+  标题: 比亚迪收购捷普的雄心#钱说 #比亚迪 #捷普 #富士康 #美元 - 抖音
+  URL:  https://www.douyin.com/video/7272408034062650684
+  统计: 👍36603 💬2703 🔄2539

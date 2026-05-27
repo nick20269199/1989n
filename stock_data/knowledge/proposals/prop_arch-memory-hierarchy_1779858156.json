@@ -15,8 +15,8 @@
   ],
   "implementation_hint": "knowledge_db.py 中增加 tier 字段：L1=会话记忆(瞬时)，L2=日频记忆(短期)，L3=知识库(长期)，L4=规则(持久)。按访问频率自动升降级。",
   "test_files": [],
-  "status": "proposed",
+  "status": "executed",
   "created_at": "2026-05-27T13:02:36.188428",
-  "executed_at": null,
-  "execution_result": null
+  "executed_at": "2026-05-27T22:30:00",
+  "execution_result": "knowledge_db.py 已有 knowledge_entry.tier 字段(L1-L4 分层)。已有 auto_tier_promote() 自动升降级(基于 access_count)。search_knowledge() 自动递增访问计数。四层架构已落地。"
 }

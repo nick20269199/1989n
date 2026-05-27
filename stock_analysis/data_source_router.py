@@ -367,6 +367,121 @@ def get_us_index_quotes() -> list[dict]:
 
 
 # ═══════════════════════════════════════════
+# 数据白名单校验层 (Proposal: pipeline-data-whitelist)
+# ═══════════════════════════════════════════
+
+# 各数据类型的字段白名单 + 类型 + 范围
+FIELD_WHITELIST = {
+    "quote": {
+        "name": (str, None),
+        "current": ((int, float), lambda v: v >= 0),
+        "prev_close": ((int, float), lambda v: v >= 0),
+        "open": ((int, float), lambda v: v >= 0),
+        "high": ((int, float), lambda v: v >= 0),
+        "low": ((int, float), lambda v: v >= 0),
+        "volume": ((int, float), lambda v: v >= 0),
+        "amount": ((int, float), lambda v: v >= 0),
+        "change_pct": ((int, float), None),
+        "time": (str, None),
+        "source": (str, None),
+    },
+    "kline_bar": {
+        "date": (str, None),
+        "open": ((int, float), lambda v: v >= 0),
+        "close": ((int, float), lambda v: v >= 0),
+        "high": ((int, float), lambda v: v >= 0),
+        "low": ((int, float), lambda v: v >= 0),
+        "volume": ((int, float), lambda v: v >= 0),
+        "amount": ((int, float), lambda v: v >= 0),
+        "change": ((int, float), None),
+        "change_pct": ((str, (int, float)), None),
+    },
+}
+
+
+def validate_data(data: any, schema_name: str = "quote") -> dict:
+    """白名单校验：字段存在性 + 类型 + 范围。
+
+    Args:
+        data: 待校验的数据 (dict 或 list of dicts)
+        schema_name: 白名单名称 ('quote' / 'kline_bar')
+
+    Returns:
+        {"valid": bool, "errors": [str], "cleaned": dict|None}
+    """
+    schema = FIELD_WHITELIST.get(schema_name)
+    if not schema:
+        return {"valid": False, "errors": [f"未知 schema: {schema_name}"], "cleaned": None}
+
+    if isinstance(data, dict):
+        items = [data]
+    elif isinstance(data, list):
+        items = data
+    else:
+        return {"valid": False, "errors": ["数据格式非 dict/list"], "cleaned": None}
+
+    errors = []
+    cleaned_items = []
+
+    for idx, item in enumerate(items):
+        if not isinstance(item, dict):
+            errors.append(f"[{idx}] 非 dict 格式")
+            continue
+
+        cleaned = {}
+        item_errors = []
+
+        for field, (expected_type, validator) in schema.items():
+            if field not in item:
+                continue  # 可选字段缺失不报错
+
+            value = item[field]
+
+            # 类型校验
+            if not isinstance(value, expected_type if isinstance(expected_type, tuple) else (expected_type,)):
+                type_name = expected_type.__name__ if not isinstance(expected_type, tuple) else '/'.join(t.__name__ for t in expected_type)
+                item_errors.append(f"[{idx}].{field}: 类型错误 ({type(value).__name__}, 期望 {type_name})")
+                continue
+
+            # 范围校验
+            if validator is not None:
+                try:
+                    if not validator(value):
+                        item_errors.append(f"[{idx}].{field}: 范围校验失败 (值={value})")
+                        continue
+                except Exception:
+                    item_errors.append(f"[{idx}].{field}: 校验异常 (值={value})")
+                    continue
+
+            cleaned[field] = value
+
+        if item_errors:
+            errors.extend(item_errors)
+        cleaned_items.append(cleaned)
+
+    if errors:
+        logger.warning("数据白名单校验: %d 错误", len(errors))
+
+    return {
+        "valid": len(errors) == 0,
+        "errors": errors,
+        "cleaned": cleaned_items[0] if len(cleaned_items) == 1 else cleaned_items,
+    }
+
+
+def validate_quotes(quotes: dict) -> dict:
+    """快捷：批量校验行情数据。"""
+    valid = {}
+    for code, data in quotes.items():
+        result = validate_data(data, "quote")
+        if result["valid"]:
+            valid[code] = result["cleaned"]
+        else:
+            logger.warning("行情校验失败 %s: %s", code, "; ".join(result["errors"][:3]))
+    return valid
+
+
+# ═══════════════════════════════════════════
 # 通道健康检查
 # ═══════════════════════════════════════════
 

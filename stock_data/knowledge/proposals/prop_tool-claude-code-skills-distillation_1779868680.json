@@ -1,0 +1,19 @@
+{
+  "proposal_id": "prop_tool-claude-code-skills-distillation_1779868680",
+  "gap_id": "tool-claude-code-skills-distillation",
+  "gap_title": "Claude Code Skills 蒸馏机制",
+  "priority": "P2",
+  "source": "GitHub仓库",
+  "source_title": "agent-learn: Recursive learning framework - Trace > Analyze > Validate > Inject cycle",
+  "source_url": "https://github.com/adi1999/agent-learn",
+  "relevance": 4,
+  "summary": "Trace > Analyze > Validate > Inject cycle. A/B testing (5%+ improvement, zero regression), hybrid search (FTS5+embeddings), effectiveness tracking, auto-deprecation. Output is readable text (skills/checklists/rules).",
+  "pattern": "skills_distill",
+  "implied_changes": [],
+  "implementation_hint": "分析成功交互模式 → 提取可复用 pattern → 自动生成 Claude Code skill 文档。验证：给定测试任务，检查 skill 加载后准确率是否提升。",
+  "test_files": [],
+  "status": "planned",
+  "created_at": "2026-05-27T15:58:00.117015",
+  "executed_at": null,
+  "execution_result": "Skills 蒸馏机制设计：分析成功交互模式→提取可复用 pattern→自动生成 Claude Code skill 文档。skills_distiller.py 已创建基础框架，需进一步实现验证：给定测试任务，检查 skill 加载后准确率是否提升≥5%。待实施。"
+}

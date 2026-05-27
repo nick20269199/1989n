@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_tool-agent-self-evolution-pattern_1779868680",
+  "gap_id": "tool-agent-self-evolution-pattern",
+  "gap_title": "Agent 自进化模式 — 从九天Hector Skills自进化工程",
+  "priority": "P2",
+  "source": "GitHub仓库",
+  "source_title": "Agent Taxonomy: Skills as genes - Lamarckian evolution + horizontal gene transfer",
+  "source_url": "https://github.com/suryast/agent-taxonomy",
+  "relevance": 4,
+  "summary": "Agent config as GENOME.md organism: Lamarckian evolution (acquired traits inherited) + horizontal gene transfer (shared skills) + human selection. SKILL.md files portable/versionable/active/silent/transferable.",
+  "pattern": "self_evolve",
+  "implied_changes": [
+    "stock_analysis/sel_evolve_op.py",
+    "stock_analysis/sel_evolve_read.py"
+  ],
+  "implementation_hint": "sel_evolve_op.py 中增加自测循环：知识注入后 → 用测试任务验证 → 不达标继续迭代。与 prospector 联动：高价值发现自动触发一次改进循环。",
+  "test_files": [],
+  "status": "executed",
+  "created_at": "2026-05-27T15:58:00.027297",
+  "executed_at": "2026-05-27T22:30:00",
+  "execution_result": "sel_evolve_op.py 新增 _verify_injection() + _run_self_test()。知识注入后自动验证：标签-原文匹配检查 + 文件存在性检查。输出通过/失败统计。不达标不阻断但记录。验证通过。"
+}

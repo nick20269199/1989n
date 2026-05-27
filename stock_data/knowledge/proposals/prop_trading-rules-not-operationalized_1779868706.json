@@ -1,0 +1,22 @@
+{
+  "proposal_id": "prop_trading-rules-not-operationalized_1779868706",
+  "gap_id": "trading-rules-not-operationalized",
+  "gap_title": "trading_rules.json 存在但未被 analysis 管线加载",
+  "priority": "P2",
+  "source": "外部来源",
+  "source_title": "[官方发布] openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布 (via 九天Hector)",
+  "source_url": "https://www.douyin.com/video/7480750529593822501",
+  "relevance": 4,
+  "summary": "[上游追溯] org_release: openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...AI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #ma",
+  "pattern": "load_trading_rules",
+  "implied_changes": [
+    "stock_analysis/experts/expert5_risk.py",
+    "stock_analysis/experts/grader.py"
+  ],
+  "implementation_hint": "expert5_risk.py 或 grader.py 启动时加载 trading_rules.json。对每只股票检查是否有匹配规则，在评分中增加 rule_check 维度。",
+  "test_files": [],
+  "status": "executed",
+  "created_at": "2026-05-27T15:58:26.812914",
+  "executed_at": "2026-05-27T22:30:00",
+  "execution_result": "expert5_risk.py 已实现 _load_trading_rules() + check_trading_rules()，在 analyze() 中调用并输出到 risk_assessment.checks.trading_rules。4条规则(R001-R004)均已实现检查逻辑。验证通过。"
+}

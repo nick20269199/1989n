@@ -39,7 +39,8 @@ PROSPECTOR_LOG = DATA_DIR / "prospector_log.json"
 ARXIV_PATTERN = re.compile(r'arxiv[\s:]*(?:\/\/arxiv\.org\/abs\/)?\s*(\d{4}\.\d{4,5})(?:v\d+)?', re.IGNORECASE)
 
 # GitHub 仓库: github.com/owner/repo 或 github.com/owner/repo.git
-GITHUB_PATTERN = re.compile(r'github\.com[/:]([\w.-]+/[\w.-]+?)(?:\.git|/|\)|$|\s)', re.IGNORECASE)
+# 注意: 中文逗号/句号也作为终止符（中文文本无空格）
+GITHUB_PATTERN = re.compile(r'github\.com[/:]([\w.-]+/[\w.-]+?)(?:\.git|/|[，,。\)；;]|\s|$)', re.IGNORECASE)
 
 # 中文风格 GitHub: "github🔍owner/repo" 或 "github🔍 owner/repo" 或 "github搜 owner/repo"
 GITHUB_CN_PATTERN = re.compile(r'github[：:\s]*[🔍搜索]*\s*([A-Za-z][\w.-]+/[\w.-]+)', re.IGNORECASE)
@@ -63,17 +64,26 @@ CONFERENCE_PATTERN = re.compile(
 )
 
 # OpenAI / Anthropic / Google / Meta / DeepSeek 官方发布
+# 中文文本: "DeepSeek正式发布" 组织名和动作之间无空格且有修饰词
 ORG_RELEASE_PATTERN = re.compile(
-    r'(OpenAI|Anthropic|Google|Meta|DeepSeek|Microsoft|Apple|Amazon|Mistral|Hugging Face)\s.*?(发布|开源|推出|论文|报告|blog|announce)',
+    r'(OpenAI|Anthropic|Google|Meta|DeepSeek|Microsoft|Apple|Amazon|Mistral|Hugging Face)'
+    r'[\s，,。]?'
+    r'[^，。！？\n]*?'
+    r'(发布|开源|推出|论文|报告|blog|announce)',
     re.IGNORECASE
 )
 
 # 知名工具/框架
+# 使用 ASCII-only 边界 (不依赖 \w 对中文的判断)
+_TOOL_BOUNDARY = r'(?:(?<=^)|(?<=[^A-Za-z0-9]))'
+_TOOL_END = r'(?:(?=$)|(?=[^A-Za-z0-9]))'
 TOOL_PATTERN = re.compile(
-    r'\b(Gbrain|LangChain|LlamaIndex|AutoGPT|BabyAGI|Chroma|Pinecone|Weaviate|Qdrant|Milvus|'
+    _TOOL_BOUNDARY +
+    r'(Gbrain|LangChain|LlamaIndex|AutoGPT|BabyAGI|Chroma|Pinecone|Weaviate|Qdrant|Milvus|'
     r'vLLM|TensorRT|ONNX|Triton|Kubernetes|Docker|Ray|Dify|Flowise|n8n|'
     r'Claude Code|Codex|Cursor|Windsurf|Copilot|Devon|Devin|'
-    r'Transformers|Diffusers|PEFT|LoRA|QLoRA|vLLM|SGLang)\b',
+    r'Transformers|Diffusers|PEFT|LoRA|QLoRA|vLLM|SGLang)'
+    r'(?:(?=$)|(?=[^A-Za-z0-9]))',
     re.IGNORECASE
 )
 

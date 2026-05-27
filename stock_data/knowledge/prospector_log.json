@@ -3185,7 +3185,9 @@
       "repo": "AutoSkill"
     },
     "discovered_at": "2026-05-27T10:12:40.147414",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-27T15:58:00.010852",
+    "proposal_id": "prop_tool-agent-self-evolution-pattern_1779868680"
   },
   {
     "finding_id": "tool-agent-self-evolution-pattern_1779847960",
@@ -3200,7 +3202,9 @@
       "repo": "agent-taxonomy"
     },
     "discovered_at": "2026-05-27T10:12:40.169033",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-27T15:58:00.027305",
+    "proposal_id": "prop_tool-agent-self-evolution-pattern_1779868680"
   },
   {
     "finding_id": "concept-position-sizing_1779847960",
@@ -3215,7 +3219,9 @@
       "repo": "AVES"
     },
     "discovered_at": "2026-05-27T10:12:40.188343",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-27T15:58:00.054078",
+    "proposal_id": "prop_concept-position-sizing_1779868680"
   },
   {
     "finding_id": "concept-position-sizing_1779847960",
@@ -3230,7 +3236,9 @@
       "repo": "kalshi-trading-bot-cli"
     },
     "discovered_at": "2026-05-27T10:12:40.206941",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-27T15:58:00.069480",
+    "proposal_id": "prop_concept-position-sizing_1779868680"
   },
   {
     "finding_id": "trading-rules-not-operationalized_1779847960",
@@ -3245,7 +3253,9 @@
       "repo": "market-edge"
     },
     "discovered_at": "2026-05-27T10:12:40.227638",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-27T15:58:00.085064",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "arch-gbrain-integration_1779847960",
@@ -3260,7 +3270,9 @@
       "repo": "DREAM"
     },
     "discovered_at": "2026-05-27T10:12:40.248395",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-27T15:58:00.101228",
+    "proposal_id": "prop_arch-gbrain-integration_1779868680"
   },
   {
     "finding_id": "tool-claude-code-skills-distillation_1779847960",
@@ -3275,7 +3287,9 @@
       "repo": "agent-learn"
     },
     "discovered_at": "2026-05-27T10:12:40.269603",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-27T15:58:00.117022",
+    "proposal_id": "prop_tool-claude-code-skills-distillation_1779868680"
   },
   {
     "finding_id": "trace_1779858140_0",
@@ -3285,7 +3299,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Gbrain | 来自 九天Hector | 评分: 4/5 | 匹配 3 个缺口 (8 命中), 来源类型加分 (+1) | 上下文: 手把手教你把 Gbrain 装进Claude Code。 > 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LL...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.618427",
     "_ref_name": "Gbrain",
     "_ref_type": "tool_framework",
@@ -3310,7 +3324,9 @@
         }
       ],
       "reason": "匹配 3 个缺口 (8 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.131556",
+    "proposal_id": "prop_arch-gbrain-integration_1779868680"
   },
   {
     "finding_id": "trace_1779858140_1",
@@ -3320,7 +3336,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Gbrain | 来自 九天Hector | 评分: 4/5 | 匹配 3 个缺口 (8 命中), 来源类型加分 (+1) | 上下文: 手把手教你把 Gbrain 装进Claude Code。 > 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LL...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.618446",
     "_ref_name": "Gbrain",
     "_ref_type": "tool_framework",
@@ -3345,7 +3361,9 @@
         }
       ],
       "reason": "匹配 3 个缺口 (8 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.144066",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_2",
@@ -3355,7 +3373,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Gbrain | 来自 九天Hector | 评分: 4/5 | 匹配 3 个缺口 (8 命中), 来源类型加分 (+1) | 上下文: 手把手教你把 Gbrain 装进Claude Code。 > 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LL...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.618454",
     "_ref_name": "Gbrain",
     "_ref_type": "tool_framework",
@@ -3380,7 +3398,9 @@
         }
       ],
       "reason": "匹配 3 个缺口 (8 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.157747",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_3",
@@ -3390,7 +3410,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Gbrain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (12 命中), 来源类型加分 (+1) | 上下文: .../主题关联/冲突仲裁/过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.619649",
     "_ref_name": "Gbrain",
     "_ref_type": "tool_framework",
@@ -3425,7 +3445,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (12 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.171705",
+    "proposal_id": "prop_arch-multi-layer-security_1779868680"
   },
   {
     "finding_id": "trace_1779858140_4",
@@ -3435,7 +3457,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Gbrain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (12 命中), 来源类型加分 (+1) | 上下文: .../主题关联/冲突仲裁/过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.619658",
     "_ref_name": "Gbrain",
     "_ref_type": "tool_framework",
@@ -3470,7 +3492,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (12 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.185725",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "trace_1779858140_5",
@@ -3480,7 +3504,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Claude Code | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (12 命中), 来源类型加分 (+1) | 上下文: .../过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0/Letta 横向对比表，评论...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.620155",
     "_ref_name": "Claude Code",
     "_ref_type": "tool_framework",
@@ -3515,7 +3539,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (12 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.199893",
+    "proposal_id": "prop_arch-multi-layer-security_1779868680"
   },
   {
     "finding_id": "trace_1779858140_6",
@@ -3525,7 +3551,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Claude Code | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (12 命中), 来源类型加分 (+1) | 上下文: .../过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0/Letta 横向对比表，评论...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.620163",
     "_ref_name": "Claude Code",
     "_ref_type": "tool_framework",
@@ -3560,7 +3586,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (12 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.212569",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "trace_1779858140_7",
@@ -3570,7 +3598,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Claude Code | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (12 命中), 来源类型加分 (+1) | 上下文: .../过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0/Letta 横向对比表，评论...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.620167",
     "_ref_name": "Claude Code",
     "_ref_type": "tool_framework",
@@ -3605,7 +3633,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (12 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.226587",
+    "proposal_id": "prop_arch-gbrain-integration_1779868680"
   },
   {
     "finding_id": "trace_1779858140_8",
@@ -3615,7 +3645,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Claude Code | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (12 命中), 来源类型加分 (+1) | 上下文: .../过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0/Letta 横向对比表，评论...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.620170",
     "_ref_name": "Claude Code",
     "_ref_type": "tool_framework",
@@ -3650,7 +3680,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (12 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.240562",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_9",
@@ -3660,7 +3692,7 @@
     "url": "https://www.douyin.com/video/7643757516882496808",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Claude Code | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (12 命中), 来源类型加分 (+1) | 上下文: .../过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0/Letta 横向对比表，评论...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.620173",
     "_ref_name": "Claude Code",
     "_ref_type": "tool_framework",
@@ -3695,7 +3727,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (12 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.254138",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_10",
@@ -3933,7 +3967,7 @@
     "url": "https://www.douyin.com/video/7579021883283213568",
     "relevance": 4,
     "summary": "[上游追溯] org_release: deepseek DeepSeek-V3.2正式版重磅发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏 #AI #deepseek #gemini DeepSeek-V3.2正式版重磅发布，第一手深度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏.",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.625160",
     "_ref_name": "deepseek DeepSeek-V3.2正式版重磅发布",
     "_ref_type": "org_release",
@@ -3976,7 +4010,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.273434",
+    "proposal_id": "prop_arch-multi-layer-security_1779868680"
   },
   {
     "finding_id": "trace_1779858140_17",
@@ -3986,7 +4022,7 @@
     "url": "https://www.douyin.com/video/7579021883283213568",
     "relevance": 4,
     "summary": "[上游追溯] org_release: deepseek DeepSeek-V3.2正式版重磅发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏 #AI #deepseek #gemini DeepSeek-V3.2正式版重磅发布，第一手深度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏.",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.625172",
     "_ref_name": "deepseek DeepSeek-V3.2正式版重磅发布",
     "_ref_type": "org_release",
@@ -4029,7 +4065,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.286284",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "trace_1779858140_18",
@@ -4039,7 +4077,7 @@
     "url": "https://www.douyin.com/video/7579021883283213568",
     "relevance": 4,
     "summary": "[上游追溯] org_release: deepseek DeepSeek-V3.2正式版重磅发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏 #AI #deepseek #gemini DeepSeek-V3.2正式版重磅发布，第一手深度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏.",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.625178",
     "_ref_name": "deepseek DeepSeek-V3.2正式版重磅发布",
     "_ref_type": "org_release",
@@ -4082,7 +4120,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.300768",
+    "proposal_id": "prop_arch-gbrain-integration_1779868680"
   },
   {
     "finding_id": "trace_1779858140_19",
@@ -4092,7 +4132,7 @@
     "url": "https://www.douyin.com/video/7579021883283213568",
     "relevance": 4,
     "summary": "[上游追溯] org_release: deepseek DeepSeek-V3.2正式版重磅发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏 #AI #deepseek #gemini DeepSeek-V3.2正式版重磅发布，第一手深度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏.",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.625182",
     "_ref_name": "deepseek DeepSeek-V3.2正式版重磅发布",
     "_ref_type": "org_release",
@@ -4135,7 +4175,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.316435",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_20",
@@ -4145,7 +4187,7 @@
     "url": "https://www.douyin.com/video/7579021883283213568",
     "relevance": 4,
     "summary": "[上游追溯] org_release: deepseek DeepSeek-V3.2正式版重磅发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏 #AI #deepseek #gemini DeepSeek-V3.2正式版重磅发布，第一手深度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏.",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.625186",
     "_ref_name": "deepseek DeepSeek-V3.2正式版重磅发布",
     "_ref_type": "org_release",
@@ -4188,7 +4230,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.333243",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_21",
@@ -4231,7 +4275,7 @@
     "url": "https://www.douyin.com/video/7576507916295900458",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Codex | 来自 九天Hector | 评分: 4/5 | 匹配 1 个缺口 (3 命中), 来源类型加分 (+1) | 上下文: 零基础上手最强Vibe Coding 从零上手最强Vibe Coding大模型GPT-5.1-Codex-Max，实操工业级开发项目，独家工作流+上下文工程经验分享，从零快速上手Vibe Coding！#ai #ai新星计划 #抖音知识年终大赏 #cursor 从...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.625962",
     "_ref_name": "Codex",
     "_ref_type": "tool_framework",
@@ -4246,7 +4290,9 @@
         }
       ],
       "reason": "匹配 1 个缺口 (3 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.349682",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_23",
@@ -4256,7 +4302,7 @@
     "url": "https://www.douyin.com/video/7576507916295900458",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: cursor | 来自 九天Hector | 评分: 4/5 | 匹配 1 个缺口 (3 命中), 来源类型加分 (+1) | 上下文: ....1-Codex-Max，实操工业级开发项目，独家工作流+上下文工程经验分享，从零快速上手Vibe Coding！#ai #ai新星计划 #抖音知识年终大赏 #cursor 从零上手最强Vibe Coding大模型GPT-5.1-Codex-Max，实操工业级开发项目，独家工作流+上下文工程经验分享，从零快速上手Vibe Codi...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.626341",
     "_ref_name": "cursor",
     "_ref_type": "tool_framework",
@@ -4271,7 +4317,9 @@
         }
       ],
       "reason": "匹配 1 个缺口 (3 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.364253",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_24",
@@ -4281,7 +4329,7 @@
     "url": "https://www.douyin.com/video/7574784499427347753",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: LangChain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: LangChain 1.0体系入门实战 一站式高效掌握LangChain 1.0，详解基础API+Agent开发部署上线全流程，精讲核心中间件功能，实现无限上下文+人在闭环+模型...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.627722",
     "_ref_name": "LangChain",
     "_ref_type": "tool_framework",
@@ -4316,7 +4364,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.377470",
+    "proposal_id": "prop_arch-multi-layer-security_1779868680"
   },
   {
     "finding_id": "trace_1779858140_25",
@@ -4326,7 +4376,7 @@
     "url": "https://www.douyin.com/video/7574784499427347753",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: LangChain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: LangChain 1.0体系入门实战 一站式高效掌握LangChain 1.0，详解基础API+Agent开发部署上线全流程，精讲核心中间件功能，实现无限上下文+人在闭环+模型...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.627732",
     "_ref_name": "LangChain",
     "_ref_type": "tool_framework",
@@ -4361,7 +4411,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.390702",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "trace_1779858140_26",
@@ -4371,7 +4423,7 @@
     "url": "https://www.douyin.com/video/7574784499427347753",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: LangChain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: LangChain 1.0体系入门实战 一站式高效掌握LangChain 1.0，详解基础API+Agent开发部署上线全流程，精讲核心中间件功能，实现无限上下文+人在闭环+模型...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.627738",
     "_ref_name": "LangChain",
     "_ref_type": "tool_framework",
@@ -4406,7 +4458,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.404543",
+    "proposal_id": "prop_arch-gbrain-integration_1779868680"
   },
   {
     "finding_id": "trace_1779858140_27",
@@ -4416,7 +4470,7 @@
     "url": "https://www.douyin.com/video/7574784499427347753",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: LangChain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: LangChain 1.0体系入门实战 一站式高效掌握LangChain 1.0，详解基础API+Agent开发部署上线全流程，精讲核心中间件功能，实现无限上下文+人在闭环+模型...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.627742",
     "_ref_name": "LangChain",
     "_ref_type": "tool_framework",
@@ -4451,7 +4505,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.416749",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_28",
@@ -4461,7 +4517,7 @@
     "url": "https://www.douyin.com/video/7574784499427347753",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: LangChain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: LangChain 1.0体系入门实战 一站式高效掌握LangChain 1.0，详解基础API+Agent开发部署上线全流程，精讲核心中间件功能，实现无限上下文+人在闭环+模型...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.627745",
     "_ref_name": "LangChain",
     "_ref_type": "tool_framework",
@@ -4496,7 +4552,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.430186",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_29",
@@ -4506,7 +4564,7 @@
     "url": "https://www.douyin.com/video/7568751503876427044",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: langchain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，中间件+Deep Agents重磅发布！#大模型 #ai #ai新星计划 #langchain #大模型开发 LangChain 1.0正式版全面上线！LangChain&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.629101",
     "_ref_name": "langchain",
     "_ref_type": "tool_framework",
@@ -4541,7 +4599,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.443116",
+    "proposal_id": "prop_arch-multi-layer-security_1779868680"
   },
   {
     "finding_id": "trace_1779858140_30",
@@ -4551,7 +4611,7 @@
     "url": "https://www.douyin.com/video/7568751503876427044",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: langchain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，中间件+Deep Agents重磅发布！#大模型 #ai #ai新星计划 #langchain #大模型开发 LangChain 1.0正式版全面上线！LangChain&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.629111",
     "_ref_name": "langchain",
     "_ref_type": "tool_framework",
@@ -4586,7 +4646,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.456540",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "trace_1779858140_31",
@@ -4596,7 +4658,7 @@
     "url": "https://www.douyin.com/video/7568751503876427044",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: langchain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，中间件+Deep Agents重磅发布！#大模型 #ai #ai新星计划 #langchain #大模型开发 LangChain 1.0正式版全面上线！LangChain&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.629115",
     "_ref_name": "langchain",
     "_ref_type": "tool_framework",
@@ -4631,7 +4693,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.469855",
+    "proposal_id": "prop_arch-gbrain-integration_1779868680"
   },
   {
     "finding_id": "trace_1779858140_32",
@@ -4641,7 +4705,7 @@
     "url": "https://www.douyin.com/video/7568751503876427044",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: langchain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，中间件+Deep Agents重磅发布！#大模型 #ai #ai新星计划 #langchain #大模型开发 LangChain 1.0正式版全面上线！LangChain&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.629119",
     "_ref_name": "langchain",
     "_ref_type": "tool_framework",
@@ -4676,7 +4740,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.484809",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_33",
@@ -4686,7 +4752,7 @@
     "url": "https://www.douyin.com/video/7568751503876427044",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: langchain | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，中间件+Deep Agents重磅发布！#大模型 #ai #ai新星计划 #langchain #大模型开发 LangChain 1.0正式版全面上线！LangChain&LangGraph核心功能重构、API调用发生重大变化，Agent API大一统，...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.629122",
     "_ref_name": "langchain",
     "_ref_type": "tool_framework",
@@ -4721,7 +4787,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.497466",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_34",
@@ -4769,7 +4837,7 @@
     "url": "https://www.douyin.com/video/7548819184138997027",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: vLLM | 来自 九天Hector | 评分: 4/5 | 匹配 2 个缺口 (2 命中), 来源类型加分 (+1) | 上下文: ...3. Qwen3微调框架：ms-SWIFT\n  4. 多机多卡：ColossalAI\n4. 模型高效微调环境准备\n  1. Unsloth 安装部署\n  2. vLLM 安装部署与模型权重下载\n  3. EvalScope 安装部署流程\n  4. 【可选】wandb 安装与注册 \n#微调 #大模型 #llm #ai新星计划 1...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.633085",
     "_ref_name": "vLLM",
     "_ref_type": "tool_framework",
@@ -4789,7 +4857,9 @@
         }
       ],
       "reason": "匹配 2 个缺口 (2 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.510000",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_37",
@@ -4799,7 +4869,7 @@
     "url": "https://www.douyin.com/video/7548819184138997027",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: vLLM | 来自 九天Hector | 评分: 4/5 | 匹配 2 个缺口 (2 命中), 来源类型加分 (+1) | 上下文: ...3. Qwen3微调框架：ms-SWIFT\n  4. 多机多卡：ColossalAI\n4. 模型高效微调环境准备\n  1. Unsloth 安装部署\n  2. vLLM 安装部署与模型权重下载\n  3. EvalScope 安装部署流程\n  4. 【可选】wandb 安装与注册 \n#微调 #大模型 #llm #ai新星计划 1...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.633092",
     "_ref_name": "vLLM",
     "_ref_type": "tool_framework",
@@ -4819,7 +4889,9 @@
         }
       ],
       "reason": "匹配 2 个缺口 (2 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.522091",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_38",
@@ -4829,7 +4901,7 @@
     "url": "https://www.douyin.com/video/7548819184138997027",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: LoRA | 来自 九天Hector | 评分: 4/5 | 匹配 2 个缺口 (2 命中), 来源类型加分 (+1) | 上下文: ...#llm #ai新星计划 1. 微调基础概念介绍\n  1. 微调基本概念\n  2. 全量微调与高效微调\n  3. 模型微调的优劣势分析\n  4. 高效微调与 LoRA、QLoRA\n2. 高效微调的应用场景介绍\n3.  主流微调工具介绍\n  1. 单机单卡：unsloth\n  2. 单机多卡：Llama-Factory\n  3...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.633410",
     "_ref_name": "LoRA",
     "_ref_type": "tool_framework",
@@ -4849,7 +4921,9 @@
         }
       ],
       "reason": "匹配 2 个缺口 (2 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.534946",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_39",
@@ -4886,7 +4960,7 @@
     "url": "https://www.douyin.com/video/7531453849148722451",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: dify | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.638097",
     "_ref_name": "dify",
     "_ref_type": "tool_framework",
@@ -4921,7 +4995,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.549087",
+    "proposal_id": "prop_arch-multi-layer-security_1779868680"
   },
   {
     "finding_id": "trace_1779858140_41",
@@ -4931,7 +5007,7 @@
     "url": "https://www.douyin.com/video/7531453849148722451",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: dify | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.638105",
     "_ref_name": "dify",
     "_ref_type": "tool_framework",
@@ -4966,7 +5042,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.563802",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "trace_1779858140_42",
@@ -4976,7 +5054,7 @@
     "url": "https://www.douyin.com/video/7531453849148722451",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: dify | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.638109",
     "_ref_name": "dify",
     "_ref_type": "tool_framework",
@@ -5011,7 +5089,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.577187",
+    "proposal_id": "prop_arch-gbrain-integration_1779868680"
   },
   {
     "finding_id": "trace_1779858140_43",
@@ -5021,7 +5101,7 @@
     "url": "https://www.douyin.com/video/7531453849148722451",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: dify | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.638112",
     "_ref_name": "dify",
     "_ref_type": "tool_framework",
@@ -5056,7 +5136,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.591128",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_44",
@@ -5066,7 +5148,7 @@
     "url": "https://www.douyin.com/video/7531453849148722451",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: dify | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.638114",
     "_ref_name": "dify",
     "_ref_type": "tool_framework",
@@ -5101,7 +5183,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.604713",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_45",
@@ -5144,7 +5228,7 @@
     "url": "https://www.douyin.com/video/7528252048429632803",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai 最强统一智能体，ChatGPT Agent正式发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (6 命中), 来源类型加分 (+1) | 上下文: ...ent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最高分！\n#chatgpt #openai #deepresearch #ai #ai新星计划 最强统一智能体，ChatGPT Agent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.640795",
     "_ref_name": "openai 最强统一智能体，ChatGPT Agent正式发布",
     "_ref_type": "org_release",
@@ -5187,7 +5271,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.618691",
+    "proposal_id": "prop_arch-multi-layer-security_1779868680"
   },
   {
     "finding_id": "trace_1779858140_47",
@@ -5197,7 +5283,7 @@
     "url": "https://www.douyin.com/video/7528252048429632803",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai 最强统一智能体，ChatGPT Agent正式发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (6 命中), 来源类型加分 (+1) | 上下文: ...ent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最高分！\n#chatgpt #openai #deepresearch #ai #ai新星计划 最强统一智能体，ChatGPT Agent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.640807",
     "_ref_name": "openai 最强统一智能体，ChatGPT Agent正式发布",
     "_ref_type": "org_release",
@@ -5240,7 +5326,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.632485",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "trace_1779858140_48",
@@ -5250,7 +5338,7 @@
     "url": "https://www.douyin.com/video/7528252048429632803",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai 最强统一智能体，ChatGPT Agent正式发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (6 命中), 来源类型加分 (+1) | 上下文: ...ent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最高分！\n#chatgpt #openai #deepresearch #ai #ai新星计划 最强统一智能体，ChatGPT Agent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.640812",
     "_ref_name": "openai 最强统一智能体，ChatGPT Agent正式发布",
     "_ref_type": "org_release",
@@ -5293,7 +5381,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.647812",
+    "proposal_id": "prop_arch-gbrain-integration_1779868680"
   },
   {
     "finding_id": "trace_1779858140_49",
@@ -5303,7 +5393,7 @@
     "url": "https://www.douyin.com/video/7528252048429632803",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai 最强统一智能体，ChatGPT Agent正式发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (6 命中), 来源类型加分 (+1) | 上下文: ...ent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最高分！\n#chatgpt #openai #deepresearch #ai #ai新星计划 最强统一智能体，ChatGPT Agent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.640816",
     "_ref_name": "openai 最强统一智能体，ChatGPT Agent正式发布",
     "_ref_type": "org_release",
@@ -5346,7 +5436,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.663102",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868680"
   },
   {
     "finding_id": "trace_1779858140_50",
@@ -5356,7 +5448,7 @@
     "url": "https://www.douyin.com/video/7528252048429632803",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai 最强统一智能体，ChatGPT Agent正式发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (6 命中), 来源类型加分 (+1) | 上下文: ...ent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最高分！\n#chatgpt #openai #deepresearch #ai #ai新星计划 最强统一智能体，ChatGPT Agent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.640820",
     "_ref_name": "openai 最强统一智能体，ChatGPT Agent正式发布",
     "_ref_type": "org_release",
@@ -5399,7 +5491,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.674869",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868680"
   },
   {
     "finding_id": "trace_1779858140_51",
@@ -5409,7 +5503,7 @@
     "url": "https://www.douyin.com/video/7522749303052340534",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: LangChain | 来自 九天Hector | 评分: 4/5 | 匹配 6 个缺口 (6 命中), 来源类型加分 (+1) | 上下文: ...对话+NL2SQL+Python代码解释器全功能实现，前后端分离架构+实时状态追踪全流程实战，一站式入门LangGraph&LangChain全套开发工具！\n#LangChain #LangGraph #Python #智能体 #ai新星计划 10分钟搭建高性能Data Agent，前端对话+NL2SQL+Python代码解释器全功能实...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.644005",
     "_ref_name": "LangChain",
     "_ref_type": "tool_framework",
@@ -5449,7 +5543,9 @@
         }
       ],
       "reason": "匹配 6 个缺口 (6 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.686647",
+    "proposal_id": "prop_pipeline-data-whitelist_1779868680"
   },
   {
     "finding_id": "trace_1779858140_52",
@@ -5459,7 +5555,7 @@
     "url": "https://www.douyin.com/video/7516924489507163455",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (9 命中), 来源类型加分 (+1) | 上下文: ...P工具，并搭建一个Deep Research应用？\nPlaywright Automation、FileSystem调用方法详解！#ai新星计划 \n#mcp #cursor #智能体 如和将Cursor接入MCP进行Agent智能体开发？\n如何在代码环境调用最热门的MCP工具，并搭建一个Deep Research应用？\nPlayw...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.644759",
     "_ref_name": "cursor",
     "_ref_type": "tool_framework",
@@ -5494,7 +5590,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.701957",
+    "proposal_id": "prop_arch-multi-layer-security_1779868680"
   },
   {
     "finding_id": "trace_1779858140_53",
@@ -5504,7 +5602,7 @@
     "url": "https://www.douyin.com/video/7516924489507163455",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (9 命中), 来源类型加分 (+1) | 上下文: ...P工具，并搭建一个Deep Research应用？\nPlaywright Automation、FileSystem调用方法详解！#ai新星计划 \n#mcp #cursor #智能体 如和将Cursor接入MCP进行Agent智能体开发？\n如何在代码环境调用最热门的MCP工具，并搭建一个Deep Research应用？\nPlayw...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.644766",
     "_ref_name": "cursor",
     "_ref_type": "tool_framework",
@@ -5539,7 +5637,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:00.716853",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868680"
   },
   {
     "finding_id": "trace_1779858140_54",
@@ -5549,7 +5649,7 @@
     "url": "https://www.douyin.com/video/7516924489507163455",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (9 命中), 来源类型加分 (+1) | 上下文: ...P工具，并搭建一个Deep Research应用？\nPlaywright Automation、FileSystem调用方法详解！#ai新星计划 \n#mcp #cursor #智能体 如和将Cursor接入MCP进行Agent智能体开发？\n如何在代码环境调用最热门的MCP工具，并搭建一个Deep Research应用？\nPlayw...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.644770",
     "_ref_name": "cursor",
     "_ref_type": "tool_framework",
@@ -5584,7 +5684,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.620247",
+    "proposal_id": "prop_arch-gbrain-integration_1779868706"
   },
   {
     "finding_id": "trace_1779858140_55",
@@ -5594,7 +5696,7 @@
     "url": "https://www.douyin.com/video/7516924489507163455",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (9 命中), 来源类型加分 (+1) | 上下文: ...P工具，并搭建一个Deep Research应用？\nPlaywright Automation、FileSystem调用方法详解！#ai新星计划 \n#mcp #cursor #智能体 如和将Cursor接入MCP进行Agent智能体开发？\n如何在代码环境调用最热门的MCP工具，并搭建一个Deep Research应用？\nPlayw...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.644774",
     "_ref_name": "cursor",
     "_ref_type": "tool_framework",
@@ -5629,7 +5731,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.638373",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868706"
   },
   {
     "finding_id": "trace_1779858140_56",
@@ -5743,7 +5847,7 @@
     "url": "https://www.douyin.com/video/7483475075958639881",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: 🔥2025年Agent王炸！Cursor+MCP Model Context Protocol（MCP，模型上下文协议），这是一种用于将 AI 助手 连接到实际存储数据的 系统，包括 内容存储库、企业...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.652504",
     "_ref_name": "Cursor",
     "_ref_type": "tool_framework",
@@ -5778,7 +5882,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.653256",
+    "proposal_id": "prop_arch-multi-layer-security_1779868706"
   },
   {
     "finding_id": "trace_1779858140_61",
@@ -5788,7 +5894,7 @@
     "url": "https://www.douyin.com/video/7483475075958639881",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: 🔥2025年Agent王炸！Cursor+MCP Model Context Protocol（MCP，模型上下文协议），这是一种用于将 AI 助手 连接到实际存储数据的 系统，包括 内容存储库、企业...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.652511",
     "_ref_name": "Cursor",
     "_ref_type": "tool_framework",
@@ -5823,7 +5929,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.669314",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868706"
   },
   {
     "finding_id": "trace_1779858140_62",
@@ -5833,7 +5941,7 @@
     "url": "https://www.douyin.com/video/7483475075958639881",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: 🔥2025年Agent王炸！Cursor+MCP Model Context Protocol（MCP，模型上下文协议），这是一种用于将 AI 助手 连接到实际存储数据的 系统，包括 内容存储库、企业...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.652515",
     "_ref_name": "Cursor",
     "_ref_type": "tool_framework",
@@ -5868,7 +5976,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.684997",
+    "proposal_id": "prop_arch-gbrain-integration_1779868706"
   },
   {
     "finding_id": "trace_1779858140_63",
@@ -5878,7 +5988,7 @@
     "url": "https://www.douyin.com/video/7483475075958639881",
     "relevance": 4,
     "summary": "[上游追溯] tool_framework: Cursor | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: 🔥2025年Agent王炸！Cursor+MCP Model Context Protocol（MCP，模型上下文协议），这是一种用于将 AI 助手 连接到实际存储数据的 系统，包括 内容存储库、企业...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.652518",
     "_ref_name": "Cursor",
     "_ref_type": "tool_framework",
@@ -5913,7 +6023,9 @@
         }
       ],
       "reason": "匹配 5 个缺口 (5 命中), 来源类型加分 (+1)"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.702556",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868706"
   },
   {
     "finding_id": "trace_1779858140_64",
@@ -5923,7 +6035,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: OpenAI发布会独家解读，10行代码打造专属Manus OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653369",
     "_ref_name": "OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -5966,7 +6078,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.719784",
+    "proposal_id": "prop_arch-multi-layer-security_1779868706"
   },
   {
     "finding_id": "trace_1779858140_65",
@@ -5976,7 +6090,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: OpenAI发布会独家解读，10行代码打造专属Manus OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653389",
     "_ref_name": "OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6019,7 +6133,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.736123",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868706"
   },
   {
     "finding_id": "trace_1779858140_66",
@@ -6029,7 +6145,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: OpenAI发布会独家解读，10行代码打造专属Manus OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653393",
     "_ref_name": "OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6072,7 +6188,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.751740",
+    "proposal_id": "prop_arch-gbrain-integration_1779868706"
   },
   {
     "finding_id": "trace_1779858140_67",
@@ -6082,7 +6200,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: OpenAI发布会独家解读，10行代码打造专属Manus OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653397",
     "_ref_name": "OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6125,7 +6243,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.765318",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868706"
   },
   {
     "finding_id": "trace_1779858140_68",
@@ -6135,7 +6255,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: OpenAI发布会独家解读，10行代码打造专属Manus OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653401",
     "_ref_name": "OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6178,7 +6298,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.781163",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868706"
   },
   {
     "finding_id": "trace_1779858140_69",
@@ -6188,7 +6310,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...AI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #ma",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653719",
     "_ref_name": "openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6231,7 +6353,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.796019",
+    "proposal_id": "prop_arch-multi-layer-security_1779868706"
   },
   {
     "finding_id": "trace_1779858140_70",
@@ -6241,7 +6365,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...AI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #ma",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653725",
     "_ref_name": "openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6284,7 +6408,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.812924",
+    "proposal_id": "prop_trading-rules-not-operationalized_1779868706"
   },
   {
     "finding_id": "trace_1779858140_71",
@@ -6294,7 +6420,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...AI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #ma",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653729",
     "_ref_name": "openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6337,7 +6463,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.829520",
+    "proposal_id": "prop_arch-gbrain-integration_1779868706"
   },
   {
     "finding_id": "trace_1779858140_72",
@@ -6347,7 +6475,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...AI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #ma",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653733",
     "_ref_name": "openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6390,7 +6518,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.846609",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868706"
   },
   {
     "finding_id": "trace_1779858140_73",
@@ -6400,7 +6530,7 @@
     "url": "https://www.douyin.com/video/7480750529593822501",
     "relevance": 4,
     "summary": "[上游追溯] org_release: openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (5 命中), 来源类型加分 (+1) | 上下文: ...AI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #manus #aiagent OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟肉视频，官方文档（翻译版）也已经为大家准备好喽！#openai #ma",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.653736",
     "_ref_name": "openai OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布",
     "_ref_type": "org_release",
@@ -6443,7 +6573,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.862512",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868706"
   },
   {
     "finding_id": "trace_1779858140_74",
@@ -6507,7 +6639,7 @@
     "url": "https://www.douyin.com/video/7476447084158225690",
     "relevance": 4,
     "summary": "[上游追溯] org_release: deepseek | 来自 九天Hector | 评分: 4/5 | 匹配 2 个缺口 (2 命中), 来源类型加分 (+1) | 上下文: ...练革命！Deepseek开源3FS文件系统！\n硬核！DeepSeek开源3FS文件系统：大模型训练速度暴涨，这才是真·技术基建！\n#ai #大模型 #llm #deepseek #开源 大模型训练革命！Deepseek开源3FS文件系统！\n硬核！DeepSeek开源3FS文件系统：大模型训练速度暴涨，这才是真·技术基建！\n#ai #大模型 #...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.654654",
     "_ref_name": "deepseek",
     "_ref_type": "org_release",
@@ -6535,7 +6667,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.879769",
+    "proposal_id": "prop_knowledge-upstream-tracing_1779868706"
   },
   {
     "finding_id": "trace_1779858140_77",
@@ -6545,7 +6679,7 @@
     "url": "https://www.douyin.com/video/7476447084158225690",
     "relevance": 4,
     "summary": "[上游追溯] org_release: deepseek | 来自 九天Hector | 评分: 4/5 | 匹配 2 个缺口 (2 命中), 来源类型加分 (+1) | 上下文: ...练革命！Deepseek开源3FS文件系统！\n硬核！DeepSeek开源3FS文件系统：大模型训练速度暴涨，这才是真·技术基建！\n#ai #大模型 #llm #deepseek #开源 大模型训练革命！Deepseek开源3FS文件系统！\n硬核！DeepSeek开源3FS文件系统：大模型训练速度暴涨，这才是真·技术基建！\n#ai #大模型 #...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.654662",
     "_ref_name": "deepseek",
     "_ref_type": "org_release",
@@ -6573,7 +6707,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.894840",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868706"
   },
   {
     "finding_id": "trace_1779858140_78",
@@ -6880,7 +7016,7 @@
     "url": "https://www.douyin.com/video/7597820920220603621",
     "relevance": 4,
     "summary": "[上游追溯] paper_named: Engram | 来自 清华姜学长 | 评分: 4/5 | 来源类型加分 (+2), 类型路由匹配 | 上下文: 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #engram #读论文 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #e...",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.663816",
     "_ref_name": "Engram",
     "_ref_type": "paper_named",
@@ -6897,7 +7033,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.908962",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868706"
   },
   {
     "finding_id": "trace_1779858140_90",
@@ -6907,7 +7045,7 @@
     "url": "https://www.douyin.com/video/7597820920220603621",
     "relevance": 4,
     "summary": "[上游追溯] paper_named: 一条视频搞懂Deepseek最新论文Engram | 来自 清华姜学长 | 评分: 4/5 | 来源类型加分 (+2), 类型路由匹配 | 上下文: 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #engram #读论文 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #engram #读论文",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.664125",
     "_ref_name": "一条视频搞懂Deepseek最新论文Engram",
     "_ref_type": "paper_named",
@@ -6924,7 +7062,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.924064",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868706"
   },
   {
     "finding_id": "trace_1779858140_91",
@@ -6934,7 +7074,7 @@
     "url": "https://www.douyin.com/video/7578488108824506618",
     "relevance": 4,
     "summary": "[上游追溯] paper_named: 谷歌再发论文 | 来自 清华姜学长 | 评分: 4/5 | 来源类型加分 (+2), 类型路由匹配 | 上下文: 谷歌再发论文，终结AI健忘症 谷歌再发论文，终结AI健忘症 #人工智能 #大模型 #AI #自我提升  #论文解读 谷歌再发论文，终结AI健忘症 #人工智能 #大模型 #AI #自我提升  #论文解读",
-    "absorbed": false,
+    "absorbed": true,
     "discovered_at": "2026-05-27T13:02:20.664939",
     "_ref_name": "谷歌再发论文",
     "_ref_type": "paper_named",
@@ -6951,7 +7091,9 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "absorbed_at": "2026-05-27T15:58:26.938946",
+    "proposal_id": "prop_knowledge-ai-design-philosophy_1779868706"
   },
   {
     "finding_id": "trace_1779858140_92",
@@ -6978,6 +7120,733 @@
       "ref_url": "",
       "priority": "medium",
       "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_0",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeek-V3.2模型解读与实战评测 DeepSeek-V3.2正式版重磅发布 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7579021883283213568",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeek-V3.2模型解读与实战评测 DeepSeek-V3.2正式版重磅发布 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: DeepSeek-V3.2模型解读与实战评测 DeepSeek-V3.2正式版重磅发布，第一手深度解读与实战评测！新模型编程、数学、Agent开发能力暴涨，实力追平Gemini 3.0 Pro，开源新SOTA！#ai新星计划 #抖音年终知识大赏...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.839012",
+    "_ref_name": "DeepSeek-V3.2模型解读与实战评测 DeepSeek-V3.2正式版重磅发布",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeek-V3.2模型解读与实战评测 DeepSeek-V3.2正式版重磅发布",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_1",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeekMath-V2正式开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7577631287771516214",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeekMath-V2正式开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: DeepSeekMath-V2开启模型训练新范式！ DeepSeekMath-V2正式开源，左右互搏无限进化，数学能力超越Gemini Deep Think！自验证数学推理训练流程深度详解，DeepSeek-V4序章开启！#科普一下 #ai新星计划...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.839377",
+    "_ref_name": "DeepSeekMath-V2正式开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeekMath-V2正式开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_2",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeek-OCR-Web项目开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7564661091775614244",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeek-OCR-Web项目开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: DeepSeek-OCR-Web项目开源！零门槛一键部署！ 团队自研DeepSeek-OCR-Web开源啦，零门槛一键部署+网页端一键OCR应用！保姆级懒人一键安装，在线调用Dee……版本过低，升级后...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.842169",
+    "_ref_name": "DeepSeek-OCR-Web项目开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeek-OCR-Web项目开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_3",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeek-OCR-Web开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7564661091775614244",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeek-OCR-Web开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: DeepSeek-OCR-Web项目开源！零门槛一键部署！ 团队自研DeepSeek-OCR-Web开源啦，零门槛一键部署+网页端一键OCR应用！保姆级懒人一键安装，在线调用Dee……版本过低，升级后可展示全部信息 团队自研DeepSeek-OCR-Web开源啦，...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.842330",
+    "_ref_name": "DeepSeek-OCR-Web开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeek-OCR-Web开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_4",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeek-V3.2重磅发布 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7555550108088110355",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeek-V3.2重磅发布 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 架构大突破，DeepSeek-V3.2重磅发布！ 架构大突破，DeepSeek-V3.2重磅发布！成本暴降50%！原论文解读+模型特性介绍+DeepSeek稀疏注意力原理介绍！#ai新星计划  #抖音教育...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.843562",
+    "_ref_name": "DeepSeek-V3.2重磅发布",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeek-V3.2重磅发布",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_5",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] OpenAI最新开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7549116904972061993",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: OpenAI最新开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: OpenAI最强混合推理大模型GPT-OSS本地部署 GPT-OSS的模型特性与本地部署调用流程\n1. OpenAI最新开源GPT-OSS模型\n  1. 模型参数与性能介绍\n  2. GPT-OSS模型核心特性\n    - MXFP-4精度\n    - gpt-oss模型响应速度...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.845111",
+    "_ref_name": "OpenAI最新开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "OpenAI最新开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_6",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] OpenAI重磅开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7535305345573473578",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: OpenAI重磅开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: OpenAI最新开源GPT-OSS！性能炸裂 OpenAI重磅开源！GPT-OSS模型介绍、评测与本地部署指南|开源新SOTA，最低16G显存运行o4级大模型！#chatgpt  #ai #OpenAI #ai新星计划 #gp...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.847392",
+    "_ref_name": "OpenAI重磅开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "OpenAI重磅开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_7",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[工具] Chroma (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7533171329529335074",
+    "relevance": 3,
+    "summary": "[上游追溯] tool_framework: Chroma | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: ...组接入方法\n  b. 开源Embedding模型组接入方法\n  c. Embedding模型选择依据\n  d. 词向量数据库选取依据\n  e. 专业词向量数据库Chroma、Fiass使用方法\n  f. 通用向量数据库保存词向量流程 \n#rag #langchain #embedding #智能体 #ai新星计划 1. Naive...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.850906",
+    "_ref_name": "Chroma",
+    "_ref_type": "tool_framework",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_8",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[工具] Dify (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7531453849148722451",
+    "relevance": 3,
+    "summary": "[上游追溯] tool_framework: Dify | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.852596",
+    "_ref_name": "Dify",
+    "_ref_type": "tool_framework",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_9",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[工具] Copilot (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7506826366227205414",
+    "relevance": 3,
+    "summary": "[上游追溯] tool_framework: Copilot | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: GitHub更新AI代码工具Copilot，性能炸裂！Debug一步到位！ #github #ai #代码#ai新星计划 GitHub更新AI代码工具Copilot，性能炸裂！Debug一步到位！\n#g...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.864091",
+    "_ref_name": "Copilot",
+    "_ref_type": "tool_framework",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_10",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] OpenAI发布 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7480750529593822501",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: OpenAI发布 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: OpenAI发布会独家解读，10行代码打造专属Manus OpenAI两年来最大更新！10行代码即可开发专属Manus智能体！OpenAI Agent发布会独家深度解读来啦！熟...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.866404",
+    "_ref_name": "OpenAI发布",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "OpenAI发布",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_11",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] Deepseek开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7476447084158225690",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: Deepseek开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 大模型训练革命！Deepseek开源3FS文件系统！\n硬核！DeepSeek开源3FS文件系统：大模型训练速度暴涨，这才是真·技术基建！\n#ai #大模型 #llm #deepseek #开源 大...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.866904",
+    "_ref_name": "Deepseek开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "Deepseek开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_12",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeek开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7476447084158225690",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeek开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 大模型训练革命！Deepseek开源3FS文件系统！\n硬核！DeepSeek开源3FS文件系统：大模型训练速度暴涨，这才是真·技术基建！\n#ai #大模型 #llm #deepseek #开源 大模型训练革命！Deepseek开源3FS文件...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.867064",
+    "_ref_name": "DeepSeek开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeek开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_13",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] deepseek新开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7476096677577821491",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: deepseek新开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: deepseek新开源3个算法，绕过美国算力霸权 DeepSeek正式发布DualPipe，梁文峰亲自带队研发神级双向管道并行算加速，毫秒级榨干GPU性能！#ai #deepseek...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.867833",
+    "_ref_name": "deepseek新开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "deepseek新开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_14",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeek正式发布 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7476096677577821491",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeek正式发布 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: deepseek新开源3个算法，绕过美国算力霸权 DeepSeek正式发布DualPipe，梁文峰亲自带队研发神级双向管道并行算加速，毫秒级榨干GPU性能！#ai #deepseek #人工智能 #大模型 DeepSeek正式发布Du...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.867983",
+    "_ref_name": "DeepSeek正式发布",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeek正式发布",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_15",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] Deepseek又一重磅开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7475719484070841609",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: Deepseek又一重磅开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 2.7倍提速！Deepseek又一重磅开源🔥 DeepSeek重磅开源DeepGEMM矩阵加速库，全球唯一FP8超级矩阵加速器！2.7倍提升矩阵乘法计算效率！ #ai #deeps……版本过低，升级后可...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.868300",
+    "_ref_name": "Deepseek又一重磅开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "Deepseek又一重磅开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_16",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeek重磅开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7475719484070841609",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeek重磅开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 2.7倍提速！Deepseek又一重磅开源🔥 DeepSeek重磅开源DeepGEMM矩阵加速库，全球唯一FP8超级矩阵加速器！2.7倍提升矩阵乘法计算效率！ #ai #deeps……版本过低，升级后可展示全部信息 DeepSee...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.868461",
+    "_ref_name": "DeepSeek重磅开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeek重磅开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_17",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] Deepseek又开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7474927815335349554",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: Deepseek又开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: Deepseek又开源封神！FlashMLA速度怒飙3倍 deepseek开源周第一个核弹🚨！原创FlashMLA吊打FlashAttention和Pytorch，⚡怒飙3000GB...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.869060",
+    "_ref_name": "Deepseek又开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "Deepseek又开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_18",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] deepseek开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7474927815335349554",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: deepseek开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: Deepseek又开源封神！FlashMLA速度怒飙3倍 deepseek开源周第一个核弹🚨！原创FlashMLA吊打FlashAttention和Pytorch，⚡怒飙3000GB/s带宽和580 TFLOPS！重新定义企业级部署游戏规...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.869199",
+    "_ref_name": "deepseek开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "deepseek开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_19",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] DeepSeek R1模型架构与模型权重全开源 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7462609854604021019",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: DeepSeek R1模型架构与模型权重全开源 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 比肩o1！DeepSeek R1全面解析！ DeepSeek R1模型架构与模型权重全开源，全面解析来啦（含教程）！价格只有OpenAI o1的 1/50！性能如何？除了R1又有什么值得关注？在R1发布后搜集、探讨并通宵录制视频只为给大家一份详尽的解...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.869675",
+    "_ref_name": "DeepSeek R1模型架构与模型权重全开源",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "DeepSeek R1模型架构与模型权重全开源",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_20",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] OpenAI年末发布 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7453052720539389224",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: OpenAI年末发布 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 年末AI春晚解读与总结 OpenAI发布会总结与深度解读：AGI之路天堑变通途！\n【🔥OpenAI年末发布会大揭秘🔥】\n12天4小时内容速览！AGI之路天堑变通途！\n🚀OpenAI新产品、新功能、新模型，大模型技术圈顶级盛事！\n💡跟随九天老师，10分钟快速梳理核心内...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.870323",
+    "_ref_name": "OpenAI年末发布",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "OpenAI年末发布",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_21",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] Google发布 (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7310045509526277427",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: Google发布 | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 谷歌大模型-Google发布Gemini安全与责任的核心 #大语言模型#Gemini#人工智能#关注我每天坚持分享知识#知识前沿派对 #大语言模型#Gemini#人工智能#关注我每天坚持分...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.870744",
+    "_ref_name": "Google发布",
+    "_ref_type": "org_release",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "Google发布",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_22",
+    "gap_id": "knowledge-ai-design-philosophy",
+    "source": "upstream_trace",
+    "title": "[人物] Sam Altman (via 九天Hector)",
+    "url": "https://www.douyin.com/video/7304202450494459162",
+    "relevance": 3,
+    "summary": "[上游追溯] person: Sam Altman | 来自 九天Hector | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 突发翻转 OpenAI事件尘埃落幕。OpenAI事件突发 | Sam Altman 回归 OpenAI，重新担任CEO \n刚刚，OpenAI 宣布， Sam Altman 将重新回归 OpenAI 担任 CEO。 \n同时，此前一同离职的 Op...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.871013",
+    "_ref_name": "Sam Altman",
+    "_ref_type": "person",
+    "_creator": "九天Hector",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_23",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[工具] Claude code (via 清华姜学长)",
+    "url": "https://www.douyin.com/video/7631568853160675769",
+    "relevance": 3,
+    "summary": "[上游追溯] tool_framework: Claude code | 来自 清华姜学长 | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: Claude code这个命令，建议你每个月跑一次 #人工智能 #大模型 #AI工具 #claudecode #姜学长 Claude code这个命令，建议你每个月跑一次 #人工智能...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.873278",
+    "_ref_name": "Claude code",
+    "_ref_type": "tool_framework",
+    "_creator": "清华姜学长",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_24",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] anthropic推出 (via 清华姜学长)",
+    "url": "https://www.douyin.com/video/7631182506939438961",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: anthropic推出 | 来自 清华姜学长 | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 吴恩达联合anthropic推出课程教你写Skill #人工智能 #大模型 #AI工具 #深度学习 #姜学长 吴恩达联合anthropic推出课程教你写Skill #人工智能 #大模型 #AI...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.873560",
+    "_ref_name": "anthropic推出",
+    "_ref_type": "org_release",
+    "_creator": "清华姜学长",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "anthropic推出",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_25",
+    "gap_id": "knowledge-ai-design-philosophy",
+    "source": "upstream_trace",
+    "title": "[人物] Elon Musk (via 清华姜学长)",
+    "url": "https://www.douyin.com/video/7603742285582306610",
+    "relevance": 3,
+    "summary": "[上游追溯] person: Elon Musk | 来自 清华姜学长 | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 分享值得学习的马斯克工作五步法 看《How Elon Musk Work》有感！分享值得学习的马斯克工作五步法 #人工智能  #大模型  #提高工作效率的方法  #学习与工作  #未来工作方式 看《How Elon Mus...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.874649",
+    "_ref_name": "Elon Musk",
+    "_ref_type": "person",
+    "_creator": "清华姜学长",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_26",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] Deepseek最新论文 (via 清华姜学长)",
+    "url": "https://www.douyin.com/video/7597820920220603621",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: Deepseek最新论文 | 来自 清华姜学长 | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #engram #读论文 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deep...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.875482",
+    "_ref_name": "Deepseek最新论文",
+    "_ref_type": "org_release",
+    "_creator": "清华姜学长",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "Deepseek最新论文",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_27",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[官方发布] OpenAI报告 (via 清华姜学长)",
+    "url": "https://www.douyin.com/video/7549902256532180282",
+    "relevance": 3,
+    "summary": "[上游追溯] org_release: OpenAI报告 | 来自 清华姜学长 | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 为什么大语言模型会幻觉，深度解析OpenAI报告 为什么大语言模型会幻觉，深度解析OpenAI报告 #人工智能 #AI #大模型幻觉 #幻觉 #大语言模型 为什么大语言模型会幻觉，深度解析OpenAI报告 #...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.876205",
+    "_ref_name": "OpenAI报告",
+    "_ref_type": "org_release",
+    "_creator": "清华姜学长",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
+    },
+    "_search_intent": {
+      "type": "fetch_source",
+      "ref_type": "org_release",
+      "ref_name": "OpenAI报告",
+      "ref_url": "",
+      "priority": "medium",
+      "status": "pending"
+    }
+  },
+  {
+    "finding_id": "trace_1779883212_28",
+    "gap_id": "knowledge-upstream-tracing",
+    "source": "upstream_trace",
+    "title": "[工具] claude code (via 阿森编程日记)",
+    "url": "https://www.douyin.com/video/7627053907415403811",
+    "relevance": 3,
+    "summary": "[上游追溯] tool_framework: claude code | 来自 阿森编程日记 | 评分: 3/5 | 无活跃缺口，默认中等价值 | 上下文: 强烈推荐：为什么要用claude code？各种用法介绍 强烈推荐大家都用claudecode，它是你AI时代的超级便车。它能帮你做任何事！包括部署openclaw大龙虾，写代码，搜索下载资料，整理软件...",
+    "absorbed": false,
+    "discovered_at": "2026-05-27T20:00:12.899821",
+    "_ref_name": "claude code",
+    "_ref_type": "tool_framework",
+    "_creator": "阿森编程日记",
+    "_scoring": {
+      "score": 3,
+      "matched_gaps": [],
+      "reason": "无活跃缺口，默认中等价值"
     }
   }
 ]

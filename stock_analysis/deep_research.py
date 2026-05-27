@@ -147,6 +147,19 @@ def pick_question(questions: list) -> dict | None:
     return active[0]
 
 
+def run_upstream_tracing():
+    """预执行上游追溯，填充知识缺口后再研究。"""
+    try:
+        from knowledge_tracer import run_tracing, print_trace_report
+        result = run_tracing()
+        if result.get("findings_recorded", 0) > 0:
+            print(f"  上游追溯: {result['findings_recorded']} 条新发现注入队列")
+        return result
+    except Exception as e:
+        print(f"  上游追溯跳过: {e}")
+        return {"findings_recorded": 0}
+
+
 def run_research(question_text: str, question_id: str = "", use_dual: bool = True):
     """执行深度研究（v2 周期感知）。"""
     cycle = get_cycle_context()
@@ -223,6 +236,9 @@ def main():
     # 获取上下文用于文件头
     cycle = get_cycle_context()
     alerts = get_ratio_alerts()
+
+    # 上游追溯: 研究前扫描知识缺口相关引用 (Proposal: knowledge-upstream-tracing)
+    run_upstream_tracing()
 
     # 执行研究
     result = run_research(question_text, question_id, use_dual=use_dual)

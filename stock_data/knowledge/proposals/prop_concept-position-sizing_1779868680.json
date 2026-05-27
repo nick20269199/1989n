@@ -1,0 +1,21 @@
+{
+  "proposal_id": "prop_concept-position-sizing_1779868680",
+  "gap_id": "concept-position-sizing",
+  "gap_title": "缺乏系统化的仓位管理模型",
+  "priority": "P2",
+  "source": "GitHub仓库",
+  "source_title": "kalshi-trading-bot-cli: 5-gate risk engine + Kelly sizing",
+  "source_url": "https://github.com/OctagonAI/kalshi-trading-bot-cli",
+  "relevance": 4,
+  "summary": "Edge vs live orderbook > half-Kelly > 5-gate risk filter. Kelly gated by liquidity/correlation/concentration/drawdown checks. Configurable kelly_multiplier/max_drawdown/max_positions.",
+  "pattern": "position_sizing",
+  "implied_changes": [
+    "stock_analysis/experts/expert5_risk.py"
+  ],
+  "implementation_hint": "expert5_risk.py 中增加 Kelly 公式 / 风险平价仓位计算。输入：胜率/赔率/波动率/最大回撤容忍度。输出：建议仓位比例。",
+  "test_files": [],
+  "status": "executed",
+  "created_at": "2026-05-27T15:58:00.069474",
+  "executed_at": "2026-05-27T22:30:00",
+  "execution_result": "expert5_risk.py 新增 kelly_position_sizing()。Kelly公式 + Half-Kelly 安全调整。输入：胜率/赔率/组合市值。输出：建议仓位比例(%) + 风险等级 + 建议金额。支持 portfolio_value 参数计算具体金额。验证通过。"
+}

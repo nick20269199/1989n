@@ -1,0 +1,19 @@
+{
+  "proposal_id": "prop_knowledge-upstream-tracing_1779868680",
+  "gap_id": "knowledge-upstream-tracing",
+  "gap_title": "上游追溯 — 从抖音引用反向追踪原始论文/演讲/开源项目",
+  "priority": "P1",
+  "source": "外部来源",
+  "source_title": "[官方发布] openai 最强统一智能体，ChatGPT Agent正式发布 (via 九天Hector)",
+  "source_url": "https://www.douyin.com/video/7528252048429632803",
+  "relevance": 4,
+  "summary": "[上游追溯] org_release: openai 最强统一智能体，ChatGPT Agent正式发布 | 来自 九天Hector | 评分: 4/5 | 匹配 5 个缺口 (6 命中), 来源类型加分 (+1) | 上下文: ...ent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最高分！\n#chatgpt #openai #deepresearch #ai #ai新星计划 最强统一智能体，ChatGPT Agent正式发布！DeepResearch+Operator+沙盒环境代码解释器+多模态+自定义工具ALL IN ONE，刷新HLE最",
+  "pattern": "general",
+  "implied_changes": [],
+  "implementation_hint": "待分析具体实施方案",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-27T15:58:00.663094",
+  "executed_at": null,
+  "execution_result": null
+}

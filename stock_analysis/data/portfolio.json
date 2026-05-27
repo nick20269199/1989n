@@ -39,11 +39,11 @@
     {
       "code": "002050",
       "name": "三花智控",
-      "shares": 500,
-      "cost": 48.833,
+      "shares": 700,
+      "cost": 50.032,
       "sector": "制冷控制件",
       "first_buy": "2026-05-14",
-      "latest_buy": "2026-05-26"
+      "latest_buy": "2026-05-27"
     },
     {
       "code": "300083",
@@ -3317,12 +3317,12 @@
   ],
   "updated": "2026-05-26",
   "_stats": {
-    "holding_count": 7,
+    "holding_count": 6,
     "cleared_count": 360,
     "total_realized_pnl": -223557.5,
     "source": "portfolio.json holdings + Table.xlsx FIFO matching",
-    "updated": "2026-05-26"
+    "updated": "2026-05-27"
   },
-  "_updated": "2026-05-26 15:26:44",
-  "_trade_date": "2026-05-26"
+  "_updated": "2026-05-27 15:58:21",
+  "_trade_date": "2026-05-27"
 }

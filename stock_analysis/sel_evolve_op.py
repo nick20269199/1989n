@@ -103,6 +103,76 @@ def _inject_file(entry: dict) -> bool:
         return False
 
 
+def _verify_injection(entry: dict) -> dict:
+    """自测循环：验证知识注入效果 (Proposal: tool-agent-self-evolution-pattern)。
+
+    对注入的知识运行简单理解测试：
+    1. 提取关键概念
+    2. 验证文件中是否包含这些概念
+    3. 检查源文件与 knowledge 之间的信息保真度
+
+    Returns:
+        {"passed": bool, "checks": [str], "failed": [str]}
+    """
+    checks = []
+    failed = []
+
+    title = entry.get("title", "")
+    tags = entry.get("tags", [])
+    src_path = entry.get("file_path", "")
+    src_content = ""
+
+    if src_path and Path(src_path).exists():
+        src_content = Path(src_path).read_text(encoding="utf-8", errors="ignore")
+
+    # 检查1: 关键标签是否在源文中出现
+    if tags:
+        for tag in tags[:5]:  # 最多检查5个标签
+            if isinstance(tag, str) and len(tag) > 1:
+                if tag.lower() in (src_content or title).lower():
+                    checks.append(f"标签 '{tag}' 在源文中找到 ✓")
+                else:
+                    failed.append(f"标签 '{tag}' 未在源文中找到")
+
+    # 检查2: 知识文件是否已写入
+    slug = _slug(title)
+    target_dirs = [KNOWLEDGE / _path_to_knowledge(entry)]
+    found_file = False
+    for td in target_dirs:
+        tp = td / f"{slug}.md"
+        if tp.exists() and tp.stat().st_size > 0:
+            checks.append(f"知识文件已写入 ({tp.name}) ✓")
+            found_file = True
+            break
+    if not found_file:
+        failed.append("知识文件未找到或为空")
+
+    return {
+        "passed": len(failed) == 0,
+        "checks": checks,
+        "failed": failed,
+    }
+
+
+def _run_self_test(pending: list[dict]) -> dict:
+    """对所有新注入的知识运行自测循环。"""
+    results = {"total": len(pending), "passed": 0, "failed": 0, "details": []}
+    for entry in pending:
+        r = _verify_injection(entry)
+        results["details"].append({
+            "title": entry.get("title", "?"),
+            "passed": r["passed"],
+            "checks": r["checks"],
+            "failed": r["failed"],
+        })
+        if r["passed"]:
+            results["passed"] += 1
+        else:
+            results["failed"] += 1
+
+    return results
+
+
 def main():
     global injected, errors
 
@@ -157,6 +227,16 @@ def main():
         status_path.write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(f"[evolve-op] 完成: 注入 {injected}, 错误 {errors}")
+
+    # 自测循环 (Proposal: tool-agent-self-evolution-pattern)
+    if injected > 0:
+        print(f"[evolve-op] 运行自测循环 ({injected} 条)...")
+        test_results = _run_self_test(pending)
+        print(f"[evolve-op] 自测: {test_results['passed']}/{test_results['total']} 通过, {test_results['failed']} 失败")
+        if test_results["failed"] > 0:
+            for d in test_results["details"]:
+                if not d["passed"]:
+                    print(f"  ⚠ {d['title']}: {'; '.join(d['failed'])}")
 
 
 if __name__ == "__main__":

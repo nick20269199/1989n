@@ -58,7 +58,7 @@
     "title": "Expert 间无共享缓存 — 同一数据被重复拉取",
     "description": "expert1_tech 拉到的量价数据，expert2_money 要重新拉。应引入共享缓存层：任一 expert 已获取的数据自动对其他 expert 可用。",
     "priority": "P1",
-    "status": "solution_found",
+    "status": "absorbed",
     "source": "synthesis_20260527",
     "related_components": [
       "experts/lead.py",
@@ -76,7 +76,8 @@
     ],
     "absorbed_at": "2026-05-27T10:12:52.411801",
     "absorbed_as": "提案: prop_pipeline-shared-cache_1779847972",
-    "updated_at": "2026-05-27T10:12:52.411794"
+    "updated_at": "2026-05-27T21:58:54.546921",
+    "research_phase2_at": "2026-05-27T21:58:54.546415"
   },
   {
     "gap_id": "pipeline-data-whitelist",
@@ -84,7 +85,7 @@
     "title": "数据采集层缺白名单校验",
     "description": "当前数据采集无输入校验层。应按九天Hector五层防御模型：数据采集层→白名单通道→清洗层正则校验→分析层独立审查→决策层断路器→风控层人工兜底。",
     "priority": "P1",
-    "status": "solution_found",
+    "status": "absorbed",
     "source": "synthesis_20260527",
     "related_components": [
       "data_source_router.py",
@@ -102,7 +103,8 @@
     ],
     "absorbed_at": "2026-05-27T13:02:36.131166",
     "absorbed_as": "提案: prop_pipeline-data-whitelist_1779858156",
-    "updated_at": "2026-05-27T13:02:36.131159"
+    "updated_at": "2026-05-27T21:59:36.319276",
+    "research_phase2_at": "2026-05-27T21:59:36.318593"
   },
   {
     "gap_id": "knowledge-creator-discovery",
@@ -110,7 +112,7 @@
     "title": "无主动知识发现机制 — 等人给链接而非自己搜",
     "description": "当前抖音监控只扫描已知博主。需要系统能根据知识缺口主动搜索：用需求清单(缺口)作为搜索 query，去抖音/知乎/GitHub 找有相关内容的人。",
     "priority": "P1",
-    "status": "solution_found",
+    "status": "insight_enriched",
     "source": "user_question_20260527",
     "related_components": [
       "douyin_monitor.py",
@@ -127,7 +129,8 @@
     ],
     "absorbed_at": "2026-05-27T02:38:12.798579",
     "absorbed_as": "提案: prop_knowledge-creator-discovery_1779820692",
-    "updated_at": "2026-05-27T02:38:12.798575"
+    "updated_at": "2026-05-27T22:00:25.381919",
+    "research_phase2_at": "2026-05-27T22:00:25.381104"
   },
   {
     "gap_id": "arch-multi-layer-security",
@@ -135,7 +138,7 @@
     "title": "单点安全防御 — 需扩展为多层架构",
     "description": "目前仅 -7% 硬止损 + adversarial-review 单点防御。可扩展为九天Hector五层模型：字符串拦截→正则过滤→白名单放行→独立AI审查→人工兜底。",
     "priority": "P2",
-    "status": "solution_found",
+    "status": "absorbed",
     "source": "synthesis_20260527",
     "related_components": [
       "experts/expert5_risk.py",
@@ -153,7 +156,8 @@
     ],
     "absorbed_at": "2026-05-27T13:02:36.159652",
     "absorbed_as": "提案: prop_arch-multi-layer-security_1779858156",
-    "updated_at": "2026-05-27T13:02:36.159641"
+    "updated_at": "2026-05-27T22:01:14.752610",
+    "research_phase2_at": "2026-05-27T22:01:14.751921"
   },
   {
     "gap_id": "arch-memory-hierarchy",
@@ -188,7 +192,7 @@
     "title": "trading_rules.json 存在但未被 analysis 管线加载",
     "description": "trading_rules.json 中存有可川科技等交易规则，但没有任何 expert 或 grader 读取。规则→代码的链路断裂，下一轮修改 expert5_risk 或 grader 时应补上。",
     "priority": "P2",
-    "status": "open",
+    "status": "absorbed",
     "source": "memory_20260524",
     "related_components": [
       "experts/expert5_risk.py",
@@ -203,8 +207,10 @@
       "github",
       "web"
     ],
-    "absorbed_at": null,
-    "absorbed_as": null
+    "absorbed_at": "2026-05-27T15:58:00.199869",
+    "absorbed_as": "提案: prop_trading-rules-not-operationalized_1779868680",
+    "updated_at": "2026-05-27T22:01:53.644497",
+    "research_phase2_at": "2026-05-27T22:01:53.643759"
   },
   {
     "gap_id": "arch-gbrain-integration",
@@ -212,7 +218,7 @@
     "title": "Gbrain 长期记忆可探索集成",
     "description": "九天Hector 视频中介绍了 Gbrain(YC开源)的长期记忆方案——按主题归档结构化笔记+dream周期整理+skillify自愈。我们的 session_tracker+knowledge_db 可参考其 dream 周期和 skillify 机制。",
     "priority": "P2",
-    "status": "investigating",
+    "status": "solution_found",
     "source": "archive_九天Hector",
     "related_components": [
       "knowledge_db.py",
@@ -228,9 +234,9 @@
       "github",
       "web"
     ],
-    "absorbed_at": null,
-    "absorbed_as": null,
-    "updated_at": "2026-05-27T02:38:05.277267"
+    "absorbed_at": "2026-05-27T15:58:00.144048",
+    "absorbed_as": "提案: prop_arch-gbrain-integration_1779868680",
+    "updated_at": "2026-05-27T15:58:00.144040"
   },
   {
     "gap_id": "tool-claude-code-skills-distillation",
@@ -264,7 +270,7 @@
     "title": "缺乏系统化的仓位管理模型",
     "description": "当前没有形式化的仓位管理模型——开多少仓位凭感觉或固定股数。需要基于凯利公式/风险平价/波动率调整的系统化仓位计算。",
     "priority": "P2",
-    "status": "open",
+    "status": "absorbed",
     "source": "system_audit",
     "related_components": [
       "experts/expert5_risk.py",
@@ -279,8 +285,10 @@
       "web",
       "zhihu"
     ],
-    "absorbed_at": null,
-    "absorbed_as": null
+    "absorbed_at": "2026-05-27T15:58:00.085042",
+    "absorbed_as": "提案: prop_concept-position-sizing_1779868680",
+    "updated_at": "2026-05-27T22:03:00.974541",
+    "research_phase2_at": "2026-05-27T22:03:00.974007"
   },
   {
     "gap_id": "tool-agent-self-evolution-pattern",
@@ -331,10 +339,11 @@
       "paper",
       "github"
     ],
-    "absorbed_at": null,
-    "absorbed_as": null,
+    "absorbed_at": "2026-05-27T15:58:00.254117",
+    "absorbed_as": "提案: prop_knowledge-upstream-tracing_1779868680",
     "created_at": "2026-05-27T13:00:53.948966",
-    "status": "open"
+    "status": "solution_found",
+    "updated_at": "2026-05-27T15:58:00.254110"
   },
   {
     "gap_id": "knowledge-ai-design-philosophy",
@@ -357,9 +366,10 @@
       "paper",
       "github"
     ],
-    "absorbed_at": null,
-    "absorbed_as": null,
+    "absorbed_at": "2026-05-27T15:58:00.273414",
+    "absorbed_as": "提案: prop_knowledge-ai-design-philosophy_1779868680",
     "created_at": "2026-05-27T13:01:03.619252",
-    "status": "open"
+    "status": "solution_found",
+    "updated_at": "2026-05-27T15:58:00.273406"
   }
 ]
