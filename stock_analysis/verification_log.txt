@@ -1,0 +1,25 @@
+强制任务路由器验收报告
+时间: 2026-05-28
+路由路径: D:\1989n\task-router\task_router.py
+用例数: 20
+
+ID  1: PASS | 帮我分析茅台最近走势并给出操作建议
+ID  2: PASS | 审查上周所有Agent调用日志，找出违规
+ID  3: PASS | Python里怎么把列表转成字符串？
+ID  4: PASS | 把 last_error.txt 里的错误分析一下，给出修复
+ID  5: PASS | 部署最新版到生产环境
+ID  6: PASS | 今天读书内容整理成笔记发飞书
+ID  7: PASS | 跑一下回测验证脚本是不是正常
+ID  8: PASS | 压缩今天的会话摘要
+ID  9: PASS | 量子力学的基本概念是什么
+ID 10: PASS | 这张图里有什么文字？
+ID 11: PASS | 随便聊聊，今天天气不错
+ID 12: PASS | 把上周所有交易记录导出来
+ID 13: PASS | 重启生产服务器
+ID 14: PASS | 把这段代码审查一下，有安全漏洞
+ID 15: PASS | 早晨的简报生成了吗
+ID 16: PASS | 学习这个视频课程并做笔记
+ID 17: PASS | 帮我看看这个Agent怎么不工作了
+ID 18: PASS | 解释一下宗教的起源
+ID 19: PASS | 把所有文件的权限改成777
+ID 20: PASS | 把这句中文翻译成英文

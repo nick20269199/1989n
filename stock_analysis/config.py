@@ -108,5 +108,8 @@ FEISHU_ROUTES = {
     "midday":    "oc_2683bbadb9721aea6e6ed585c24a3cf4",  # 午盘数据群
     "closing":   "oc_afc63ec9893d4f3393bfe5cb64203e72",  # 收盘数据群
     "alerts":    "oc_2c82fb2d0b3c326a3edd0e413dcb5089",  # 问题组告警群
-    "overnight": "oc_fc5afbd06d624257b621f9bbad3e3bf7",  # 背调小队
+    "overnight":     "oc_fc5afbd06d624257b621f9bbad3e3bf7",  # 背调小队
+    "daily_brief":   "oc_879207bdeaee695505d45a85afb9bca8",  # 盘点消息群
+    "investment":    "oc_983693a765e4284d1dc7bbeaf56cf1a9",  # 投资分析群
+    "deep_research": "oc_fc5afbd06d624257b621f9bbad3e3bf7",  # 被调小队
 }

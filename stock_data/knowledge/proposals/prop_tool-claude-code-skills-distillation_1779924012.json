@@ -1,0 +1,19 @@
+{
+  "proposal_id": "prop_tool-claude-code-skills-distillation_1779924012",
+  "gap_id": "tool-claude-code-skills-distillation",
+  "gap_title": "Claude Code Skills 蒸馏机制",
+  "priority": "P2",
+  "source": "外部来源",
+  "source_title": "EvolveR (ICML 2026): Agent自我蒸馏认知技能 — 自蒸馏优于教师蒸馏",
+  "source_url": "https://arxiv.org/abs/2510.16079",
+  "relevance": 4,
+  "summary": "ICML 2026论文: Agent从自身成功/失败轨迹自我蒸馏认知技能。闭环: 在线交互→离线自我蒸馏→经验库→RL策略进化(GRPO)。核心发现: 自我蒸馏原则优于教师模型蒸馏的(认知对齐效应)。验证了我们的知识路由方向: 从当前会话提取的经验比外部知识更适配系统。",
+  "pattern": "skills_distill",
+  "implied_changes": [],
+  "implementation_hint": "分析成功交互模式 → 提取可复用 pattern → 自动生成 Claude Code skill 文档。验证：给定测试任务，检查 skill 加载后准确率是否提升。",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-28T07:20:12.351368",
+  "executed_at": null,
+  "execution_result": null
+}

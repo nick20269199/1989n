@@ -1,0 +1,19 @@
+{
+  "proposal_id": "prop_explore-------deepseek----engram_1779940898",
+  "gap_id": "explore-------deepseek----engram",
+  "gap_title": "探索: 一条视频搞懂Deepseek最新论文Engram",
+  "priority": "P2",
+  "source": "外部来源",
+  "source_title": "[论文] 谷歌再发论文 (via 清华姜学长)",
+  "source_url": "https://www.douyin.com/video/7578488108824506618",
+  "relevance": 5,
+  "summary": "[上游追溯] paper_named: 谷歌再发论文 | 来自 清华姜学长 | 评分: 5/5 | 匹配 4 个缺口 (10 命中), 来源类型加分 (+2) | 上下文: 谷歌再发论文，终结AI健忘症 谷歌再发论文，终结AI健忘症 #人工智能 #大模型 #AI #自我提升  #论文解读 谷歌再发论文，终结AI健忘症 #人工智能 #大模型 #AI #自我提升  #论文解读",
+  "pattern": "general",
+  "implied_changes": [],
+  "implementation_hint": "待分析具体实施方案",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-28T12:01:38.404284",
+  "executed_at": null,
+  "execution_result": null
+}

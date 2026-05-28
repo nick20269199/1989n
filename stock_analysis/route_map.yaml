@@ -1,0 +1,361 @@
+# 强制任务路由表 v1
+# 生成: 2026-05-28
+# 基于: 52 agents + 153 skills 全量扫描 + ops-standards.md 部门映射
+#
+# 使用方式: 接到任务 → 匹配 keywords/patterns → 路由到对应 Agent + Skill
+# 匹配不到 → 走最后兜底: 调用 dept-engineering 协调
+
+routes:
+  # ──────────── 交易决策类 ────────────
+  - keywords: ["股票分析", "选股", "量化回测", "回测结果", "回测报告", "量化", "行情", "K线", "技术面", "持仓", "盈亏", "当前持仓", "走势", "操作建议"]
+    agent: "stock-analysis"
+    skill: "stock-analysis"
+    dept: "front-office"
+  - keywords: ["深度分析", "基本面", "开仓", "调仓", "加仓", "建仓"]
+    agent: "stock-deep"
+    skill: "stock-deep"
+    dept: "front-office"
+  - keywords: ["快速行情", "盘中", "闪电", "快查"]
+    agent: "stock-quick"
+    skill: "stock-quick"
+    dept: "front-office"
+  - keywords: ["止损", "风控", "风险评估", "安全审查", "-7%"]
+    agent: "adversarial-review"
+    skill: "adversarial-review"
+    dept: "front-office"
+
+  # ──────────── 代码审查/质量（语言专用在前） ────────────
+  - keywords: ["Python审查", "Python代码", "PEP 8", "Python.*代码审查"]
+    agent: "python-reviewer"
+    skill: "python-review"
+    dept: "engineering"
+  - keywords: ["TypeScript审查", "JavaScript审查", "TS代码", "JS代码", "Node.*审查"]
+    agent: "typescript-reviewer"
+    skill: "code-review"
+    dept: "engineering"
+  - keywords: ["Go审查", "Go代码", "Golang.*审查"]
+    agent: "go-reviewer"
+    skill: "go-review"
+    dept: "engineering"
+  - keywords: ["Rust审查", "Rust代码", "Rust.*审查"]
+    agent: "rust-reviewer"
+    skill: "rust-review"
+    dept: "engineering"
+  - keywords: ["Java审查", "Spring Boot.*审查", "Java代码"]
+    agent: "java-reviewer"
+    skill: "java-review"
+    dept: "engineering"
+  - keywords: ["C++审查", "C++代码", "Cpp.*审查"]
+    agent: "cpp-reviewer"
+    skill: "cpp-review"
+    dept: "engineering"
+  - keywords: ["C#审查", ".NET审查", "CSharp.*审查"]
+    agent: "csharp-reviewer"
+    skill: "csharp-review"
+    dept: "engineering"
+  - keywords: ["Kotlin审查", "Android.*审查", "Compose.*审查", "Kotlin代码"]
+    agent: "kotlin-reviewer"
+    skill: "kotlin-review"
+    dept: "engineering"
+  - keywords: ["Flutter审查", "Dart审查", "Flutter代码"]
+    agent: "flutter-reviewer"
+    skill: "flutter-review"
+    dept: "engineering"
+  # ──────────── 通用代码审查/质量 ────────────
+  - keywords: ["代码审查", "code review", "PR", "静态分析", "代码质量", "安全漏洞", "审查代码"]
+    agent: "code-review"
+    skill: "code-review"
+    dept: "engineering"
+  - keywords: ["构建错误", "编译错误", "测试失败", "类型错误", "lint"]
+    agent: "build-error-resolver"
+    skill: "build-fix"
+    dept: "engineering"
+  - keywords: ["静默失败", "吞错误", "坏后备", "异常传播"]
+    agent: "silent-failure-hunter"
+    skill: "silent-failure-hunter"
+    dept: "engineering"
+  - keywords: ["安全审计", "OWASP", "注入", "XSS", "密钥"]
+    agent: "security-reviewer"
+    skill: "security-review"
+    dept: "engineering"
+
+  # ──────────── 架构/规划类 ────────────
+  - keywords: ["架构", "系统设计", "重构", "模块化", "技术决策"]
+    agent: "architect"
+    skill: "blueprint"
+    dept: "rd"
+  - keywords: ["蓝图", "实施计划", "分步", "多agent方案"]
+    agent: "code-architect"
+    skill: "blueprint"
+    dept: "rd"
+  - keywords: ["规划", "功能实现", "复杂度", "实施步骤"]
+    agent: "planner"
+    skill: "explore"
+    dept: "rd"
+
+  # ──────────── 代码探索/分析类 ────────────
+  - keywords: ["代码探索", "追踪执行路径", "依赖分析", "调用链"]
+    agent: "code-explorer"
+    skill: "explore"
+    dept: "engineering"
+  - keywords: ["数据溯源", "数据流", "数据断链", "管线追踪"]
+    agent: "code-explorer"
+    skill: "explore"
+    dept: "engineering"
+
+  # ──────────── 测试类 ────────────
+  - keywords: ["测试", "pytest", "覆盖率", "单元测试", "集成测试", "验证脚本", "回测验证", "脚本测试", "跑测试"]
+    agent: "test-engineer"
+    skill: "test-engineer"
+    dept: "engineering"
+  - keywords: ["E2E测试", "Playwright", "冒烟测试", "浏览器测试"]
+    agent: "e2e-runner"
+    skill: "e2e-testing"
+    dept: "engineering"
+
+  # ──────────── 性能优化类 ────────────
+  - keywords: ["性能优化", "性能分析", "瓶颈", "内存泄漏", "渲染优化", "包体积", "管线慢"]
+    agent: "performance-optimizer"
+    skill: "performance-optimizer"
+    dept: "engineering"
+  - keywords: ["Harness优化", "配置优化", "hooks优化", "上下文优化"]
+    agent: "harness-optimizer"
+    skill: "ctx-health"
+    dept: "engineering"
+
+  # ──────────── 文档/知识管理类 ────────────
+  - keywords: ["读书笔记", "知识整理", "知识图谱", "graphify", "读书内容", "整理.*笔记", "读书", "书摘"]
+    agent: "dept-reading"
+    skill: "knowledge-chinese-civ"
+    dept: "reader"
+  - keywords: ["文档更新", "README", "代码地图", "CODEMAP"]
+    agent: "doc-updater"
+    skill: "code-review"
+    dept: "engineering"
+  - keywords: ["文档查询", "API参考", "库用法", "Context7"]
+    agent: "docs-lookup"
+    skill: "docs-lookup"
+    dept: "engineering"
+
+  # ──────────── 数据/采集类 ────────────
+  - keywords: ["数据采集", "新闻", "爬虫", "多源", "通道"]
+    agent: "dept-intelligence"
+    skill: "data-verify"
+    dept: "intelligence"
+  - keywords: ["数据校验", "健康检查", "保鲜", "新鲜度"]
+    agent: "dept-intelligence"
+    skill: "data-verify"
+    dept: "intelligence"
+  - keywords: ["大V雷达", "抖音", "雪球", "大V监控"]
+    agent: "dept-intelligence"
+    skill: "vv-leida"
+    dept: "intelligence"
+
+  # ──────────── 晨报/复盘/定时类 ────────────
+  - keywords: ["晨报", "早报", "morning brief", "盘前", "简报", "早晨", "晨间简报"]
+    agent: "morning-brief"
+    skill: "morning-brief"
+    dept: "front-office"
+  - keywords: ["复盘", "收盘", "daily compress", "压缩"]
+    agent: "daily-compress"
+    skill: "daily-compress"
+    dept: "reader"
+  - keywords: ["晨间", "daily load", "认知加载"]
+    agent: "daily-load"
+    skill: "daily-load"
+    dept: "reader"
+  - keywords: ["周审计", "周报", "审计", "weekly audit", "审查.*日志", "违规", "调用日志", "审计日志"]
+    agent: "weekly-audit-executor"
+    skill: "weekly-audit"
+    dept: "reader"
+
+  - keywords: ["部署", "发布", "生产环境", "上线", "生产部署", "版本发布", "发布到生产"]
+    agent: "dept-engineering"
+    skill: "dept-engineering"
+    dept: "engineering"
+  - keywords: ["重启服务器", "重启服务", "重启生产", "重启生产服务器"]
+    agent: "dept-engineering"
+    skill: "dept-engineering"
+    dept: "engineering"
+  - keywords: ["发送飞书", "发飞书", "推送到飞书", "飞书消息", "飞书通知"]
+    agent: "dept-front-office"
+    skill: "dept-front-office"
+    dept: "front-office"
+  - keywords: ["错误日志", "last_error.txt", "报错", "traceback", "异常"]
+    agent: "errorlog"
+    skill: "errorlog"
+    dept: "engineering"
+  - keywords: ["调试", "根因分析", "错误修复", "debug"]
+    agent: "debugger"
+    skill: "debugger"
+    dept: "engineering"
+
+  # ──────────── 跨部门协作类 ────────────
+  - keywords: ["跨部门", "协作", "状态跟踪", "部门间"]
+    agent: "cross-dept-flow"
+    skill: "cross-dept-flow"
+    dept: "hub"
+
+  # ──────────── 会话/记忆/学习类 ────────────
+  - keywords: ["会话分析", "对话模式", "交互模式"]
+    agent: "conversation-analyzer"
+    skill: "conversation-analyzer"
+    dept: "engineering"
+  - keywords: ["会话学习", "经验提取", "记忆写入"]
+    agent: "session-learner"
+    skill: "continuous-learning"
+    dept: "reader"
+  - keywords: ["深度研究", "知识缺口", "DeepSeek研究"]
+    agent: "deep-research"
+    skill: "deep-research"
+    dept: "rd"
+
+  # ──────────── 代码简化/重构类 ────────────
+  - keywords: ["代码精简", "代码简化", "死代码", "重复代码", "冗余代码"]
+    agent: "code-simplifier"
+    skill: "refactor-clean"
+    dept: "engineering"
+  - keywords: ["重构清理", "死代码清理", "依赖清理"]
+    agent: "refactor-cleaner"
+    skill: "prune"
+    dept: "engineering"
+
+  # ──────────── 数据库类 ────────────
+  - keywords: ["数据库", "SQL", "PostgreSQL", "查询优化", "Schema"]
+    agent: "database-reviewer"
+    skill: "data-verify"
+    dept: "engineering"
+
+  # ──────────── 图片/视频/多媒体类 ────────────
+  - keywords: ["图片", "图像", "OCR", "视觉", "图像识别", "图里", "图中", "看图"]
+    agent: "user-image-vision"
+    skill: "user-image-vision"
+    dept: "engineering"
+  - keywords: ["视频", "转录", "字幕", "学习视频", "B站"]
+    agent: "user-video-learn"
+    skill: "user-video-learn"
+    dept: "reader"
+
+  # ──────────── 工具/配置类 ────────────
+  - keywords: ["Skill创建", "新Skill", "技能管理"]
+    agent: "skill-creator"
+    skill: "skill-creator"
+    dept: "rd"
+  - keywords: ["规划文件", "任务跟踪", "进度管理", "task_plan"]
+    agent: "user-planning-with-files"
+    skill: "user-planning-with-files"
+    dept: "engineering"
+  - keywords: ["探索", "项目地图", "调用链路", "代码地图"]
+    agent: "explore"
+    skill: "explore"
+    dept: "rd"
+  - keywords: ["结构化探索", "试到调", "迭代探索"]
+    agent: "structured-exploration"
+    skill: "structured-exploration"
+    dept: "rd"
+
+  # ──────────── 知识路由类（部门无关） ────────────
+  - keywords: ["多Agent调度", "编排", "分工", "比较优势"]
+    agent: "knowledge-economics"
+    skill: "knowledge-economics"
+    dept: "hub"
+  - keywords: ["风险评估", "安全策略", "止损设计", "胖尾"]
+    agent: "knowledge-economics"
+    skill: "knowledge-economics"
+    dept: "hub"
+  - keywords: ["市场分析", "交易决策", "投资判断", "安全边际"]
+    agent: "knowledge-economics"
+    skill: "knowledge-economics"
+    dept: "hub"
+  - keywords: ["系统架构", "模块设计", "可逆装配", "榫卯"]
+    agent: "knowledge-chinese-civ"
+    skill: "knowledge-chinese-civ"
+    dept: "hub"
+  - keywords: ["认知偏差", "自我审查", "元认知", "四毋", "宗教", "信仰", "神学", "佛", "道", "儒"]
+    agent: "dept-reading"
+    skill: "knowledge-religion"
+    dept: "reader"
+  - keywords: ["知识管理", "学习路径", "认知进化", "无标度", "量子", "物理", "力学", "相对论", "熵", "混沌", "涌现", "复杂系统"]
+    agent: "dept-reading"
+    skill: "knowledge-physics"
+    dept: "reader"
+  - keywords: ["推理质量", "效率优化", "推理停止", "混沌边缘"]
+    agent: "knowledge-physics"
+    skill: "knowledge-physics"
+    dept: "hub"
+
+  # ──────────── ECC 工具技能类 ────────────
+  - keywords: ["上下文预算", "上下文", "token", "窗口优化", "上下文清洁", "太长.*清理", "清理.*上下文"]
+    agent: "ctx-health"
+    skill: "ctx-health"
+    dept: "hub"
+  - keywords: ["先搜索", "先研究", "找现有工具", "避免重复"]
+    agent: "先搜后做"
+    skill: "先搜后做"
+    dept: "engineering"
+
+  # ──────────── 构建修复（多语言专用） ────────────
+  - keywords: ["Go构建", "go build", "Go编译"]
+    agent: "go-build-resolver"
+    skill: "go-build"
+    dept: "engineering"
+  - keywords: ["Rust构建", "cargo", "Rust编译"]
+    agent: "rust-build-resolver"
+    skill: "rust-build"
+    dept: "engineering"
+  - keywords: ["Java构建", "Maven", "Gradle"]
+    agent: "java-build-resolver"
+    skill: "gradle-build"
+    dept: "engineering"
+  - keywords: ["C++构建", "CMake", "C++编译"]
+    agent: "cpp-build-resolver"
+    skill: "cpp-build"
+    dept: "engineering"
+  - keywords: ["Kotlin构建", "Gradle构建"]
+    agent: "kotlin-build-resolver"
+    skill: "kotlin-build"
+    dept: "engineering"
+  - keywords: ["Dart构建", "Flutter构建", "pub"]
+    agent: "dart-build-resolver"
+    skill: "flutter-build"
+    dept: "engineering"
+  - keywords: ["PyTorch", "CUDA", "张量错误", "训练错误"]
+    agent: "pytorch-build-resolver"
+    skill: "build-fix"
+    dept: "engineering"
+
+# ──────────── 正则路由（补充关键词匹配不到的场景） ────────────
+regex_routes:
+  - pattern: ".*(错误|异常|失败|报错).*(日志|log|traceback).*"
+    agent: "errorlog"
+    skill: "errorlog"
+  - pattern: ".*(评估|检查|诊断|审计).*(agent|Agent|技能|skill|系统).*"
+    agent: "gan-evaluator"
+    skill: "skill-stocktake"
+  - pattern: ".*(开仓|买入|卖入|加仓).*(股票|代码|symbol|代码).*"
+    agent: "adversarial-review"
+    skill: "adversarial-review"
+  - pattern: ".*(语法|门禁|gate|import|检查).*(代码|文件|脚本).*"
+    agent: "build-error-resolver"
+    skill: "code-review"
+  - pattern: ".*(对话|会话).*(太长|压缩|清理|clear|超过).*"
+    agent: "ctx-health"
+    skill: "ctx-health"
+  - pattern: ".*(部署|上线|发布|release).*(脚本|配置|服务).*"
+    agent: "planner"
+    skill: "blueprint"
+  - pattern: ".*(备份|迁移|搬家).*(数据|配置|文件).*"
+    agent: "code-explorer"
+    skill: "explore"
+  - pattern: ".*(注释|文档).*(过时|不准确|更新|修复).*"
+    agent: "comment-analyzer"
+    skill: "code-review"
+  - pattern: ".*(Agent|agent|技能|skill|系统).*(不工作|故障|挂了|坏了|异常|无法运行).*"
+    agent: "gan-evaluator"
+    skill: "gan-evaluator"
+
+# ──────────── 兜底路由 ────────────
+fallback:
+  agent: "dept-engineering"
+  skill: "dept-engineering"
+  action: "调用 dept-engineering 协调，识别任务归属部门后路由到对应 Agent"

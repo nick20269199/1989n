@@ -21,9 +21,9 @@
       "github",
       "web"
     ],
-    "absorbed_at": "2026-05-27T02:41:19.109578",
-    "absorbed_as": "提案: prop_pipeline-knowledge-db-expert-connect_1779820879",
-    "updated_at": "2026-05-27T02:41:19.109575"
+    "absorbed_at": "2026-05-28T11:29:13.122214",
+    "absorbed_as": "提案: prop_pipeline-knowledge-db-expert-connect_1779938953",
+    "updated_at": "2026-05-28T11:29:13.122207"
   },
   {
     "gap_id": "arch-context-isolation",
@@ -371,5 +371,263 @@
     "created_at": "2026-05-27T13:01:03.619252",
     "status": "solution_found",
     "updated_at": "2026-05-27T15:58:00.273406"
+  },
+  {
+    "gap_id": "explore-gbrain",
+    "title": "探索: Gbrain",
+    "description": "博主 九天Hector 引用: 手把手教你把 Gbrain 装进Claude Code。 > 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LL...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "Gbrain"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "open",
+    "created_at": "2026-05-28T12:01:09.359185"
+  },
+  {
+    "gap_id": "explore-claude-code",
+    "title": "探索: Claude Code",
+    "description": "博主 九天Hector 引用: 手把手教你把 Gbrain 装进Claude Code。 > 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LLM 长期记忆项目，完整跑通从...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "Claude Code"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.359927",
+    "updated_at": "2026-05-28T12:08:24.866650"
+  },
+  {
+    "gap_id": "explore-codex",
+    "title": "探索: Codex",
+    "description": "博主 九天Hector 引用: OpenAI贴脸开大，GPT-5.3 Codex发布！ OpenAI贴脸开大，GPT-5.3 Codex模型介绍与Claude 4.6 Opus性能对比评测！#AI新星计划 #新知贺岁眼界大开 OpenAI贴...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "Codex"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.360700",
+    "updated_at": "2026-05-28T12:08:27.816607"
+  },
+  {
+    "gap_id": "explore-cursor",
+    "title": "探索: cursor",
+    "description": "博主 九天Hector 引用: ....1-Codex-Max，实操工业级开发项目，独家工作流+上下文工程经验分享，从零快速上手Vibe Coding！#ai #ai新星计划 #抖音知识年终大赏 #cursor 从零上手最强Vibe Coding大模型GPT-5.1-Codex-Max，实操工业级开发项目，独家工作流+上下文工程经验分享，从零快速上手Vibe Codi...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "cursor"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.361294",
+    "updated_at": "2026-05-28T12:08:30.665952"
+  },
+  {
+    "gap_id": "explore-langchain",
+    "title": "探索: LangChain",
+    "description": "博主 九天Hector 引用: LangChain 1.0体系入门实战 一站式高效掌握LangChain 1.0，详解基础API+Agent开发部署上线全流程，精讲核心中间件功能，实现无限上下文+人在闭环+模型...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "LangChain"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.361922",
+    "updated_at": "2026-05-28T12:08:33.652250"
+  },
+  {
+    "gap_id": "explore-lora",
+    "title": "探索: LoRA",
+    "description": "博主 九天Hector 引用: ...开源数据集读取\n  2. 开源数据集中文翻译与校对流程\n  3. 数据格式转化与微调文本渲染\n2. 基于Unsloth的GPT-OSS模型微调流程\n  1. LoRA低秩适配器矩阵参数灌注\n  2. LoRA参数灌注过程参数解释\n  3. 微调参数设置与解释\n  4. GPT-OSS模型实际微调流程\n  5. GPT-OSS...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "LoRA"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.362449",
+    "updated_at": "2026-05-28T12:08:36.594498"
+  },
+  {
+    "gap_id": "explore-vllm",
+    "title": "探索: vLLM",
+    "description": "博主 九天Hector 引用: ...S模型通用适配性\n2. gpt-oss模型权重下载与调用流程\n  1. gpt-oss介绍与下载地址\n  2. gpt-oss模型权重下载与文件格式\n  3. vLLM调用gpt-oss完整流程\n  4. 代码环境gpt-oss调用流程\n3. gpt-oss功能与性能测试\n  1. gpt-oss响应流程介绍\n  2. gpt...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "vLLM"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.362990",
+    "updated_at": "2026-05-28T12:08:39.461277"
+  },
+  {
+    "gap_id": "explore-qlora",
+    "title": "探索: QLoRA",
+    "description": "博主 九天Hector 引用: ...型微调】技术体系 1. 微调基础概念介绍\n  1. 微调基本概念\n  2. 全量微调与高效微调\n  3. 模型微调的优劣势分析\n  4. 高效微调与 LoRA、QLoRA\n2. 高效微调的应用场景介绍\n3.  主流微调工具介绍\n  1. 单机单卡：unsloth\n  2. 单机多卡：Llama-Factory\n  3. Qwen...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "QLoRA"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.363574",
+    "updated_at": "2026-05-28T12:08:42.327269"
+  },
+  {
+    "gap_id": "explore-chroma",
+    "title": "探索: Chroma",
+    "description": "博主 九天Hector 引用: ...组接入方法\n  b. 开源Embedding模型组接入方法\n  c. Embedding模型选择依据\n  d. 词向量数据库选取依据\n  e. 专业词向量数据库Chroma、Fiass使用方法\n  f. 通用向量数据库保存词向量流程 \n#rag #langchain #embedding #智能体 #ai新星计划 1. Naive...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "Chroma"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.364183",
+    "updated_at": "2026-05-28T12:08:45.146274"
+  },
+  {
+    "gap_id": "explore-dify",
+    "title": "探索: Dify",
+    "description": "博主 九天Hector 引用: 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插件+一键部署上线，工业级开源开发框架超越Dify！\n#coze #扣子 #dify #智能体 #ai新星计划 满血Coze开源炸场，零门槛本地部署与调用指南！\n画布工作流设计+菜单式Agent开发+内置海量插...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "Dify"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.364695",
+    "updated_at": "2026-05-28T12:08:48.038196"
+  },
+  {
+    "gap_id": "explore-copilot",
+    "title": "探索: Copilot",
+    "description": "博主 九天Hector 引用: GitHub更新AI代码工具Copilot，性能炸裂！Debug一步到位！ #github #ai #代码#ai新星计划 GitHub更新AI代码工具Copilot，性能炸裂！Debug一步到位！\n#g...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "Copilot"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "open",
+    "created_at": "2026-05-28T12:01:09.365443"
+  },
+  {
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "title": "探索: XBuilderLAB/cheat-on-content",
+    "description": "博主 他们都叫我蜗牛学长 引用: 我把 数字生命卡兹克 卡神的ai热点加进去了 enjoy SKILL 在 github🔍 XBuilderLAB/cheat-on-content #个人ip #做账号  #宿命蜗……版本过低，升级后可展示全部信息 SKILL 在 github🔍 XBuilderLAB/cheat-on-content...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "XBuilderLAB/cheat-on-content"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "open",
+    "created_at": "2026-05-28T12:01:09.366068"
+  },
+  {
+    "gap_id": "explore-engram",
+    "title": "探索: Engram",
+    "description": "博主 清华姜学长 引用: 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #engram #读论文 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #e...",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "Engram"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "solution_found",
+    "created_at": "2026-05-28T12:01:09.366865",
+    "updated_at": "2026-05-28T12:01:38.396340",
+    "absorbed_at": "2026-05-28T12:01:38.396345",
+    "absorbed_as": "提案: prop_explore-engram_1779940898"
+  },
+  {
+    "gap_id": "explore-------deepseek----engram",
+    "title": "探索: 一条视频搞懂Deepseek最新论文Engram",
+    "description": "博主 清华姜学长 引用: 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #engram #读论文 一条视频搞懂Deepseek最新论文Engram#人工智能 #大模型 #deepseek #engram #读论文",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "一条视频搞懂Deepseek最新论文Engram"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "solution_found",
+    "created_at": "2026-05-28T12:01:09.367522",
+    "updated_at": "2026-05-28T12:01:38.398075",
+    "absorbed_at": "2026-05-28T12:01:38.398083",
+    "absorbed_as": "提案: prop_explore-------deepseek----engram_1779940898"
+  },
+  {
+    "gap_id": "explore-------",
+    "title": "探索: 谷歌再发论文",
+    "description": "博主 清华姜学长 引用: 谷歌再发论文，终结AI健忘症 谷歌再发论文，终结AI健忘症 #人工智能 #大模型 #AI #自我提升  #论文解读 谷歌再发论文，终结AI健忘症 #人工智能 #大模型 #AI #自我提升  #论文解读",
+    "priority": "P2",
+    "domain": "open-exploration",
+    "search_queries": [
+      "谷歌再发论文"
+    ],
+    "target_sources": [
+      "web",
+      "github"
+    ],
+    "status": "solution_found",
+    "created_at": "2026-05-28T12:01:09.368153",
+    "updated_at": "2026-05-28T12:01:38.400238",
+    "absorbed_at": "2026-05-28T12:01:38.400243",
+    "absorbed_as": "提案: prop_explore-------_1779940898"
   }
 ]

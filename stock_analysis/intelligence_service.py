@@ -353,8 +353,8 @@ def _publish_status(health: str, issues: list[str] = None):
 
 # ── 入口 ───────────────────────────────────────────────────────────────
 
-def run_recon():
-    """盘前侦察入口。"""
+def run_recon(full: bool = False):
+    """盘前侦察入口。full=True 时额外执行深度侦查日报。"""
     logger.info("[情报部] 盘前侦察启动...")
     INTEL_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -370,6 +370,23 @@ def run_recon():
     issues = [] if signals else ["无信号产出"]
     _publish_status("healthy" if signals else "degraded", issues)
     print(md)
+
+    if full:
+        logger.info("[情报部] 执行深度侦查日报...")
+        import subprocess
+        import sys as _sys
+        code = subprocess.run(
+            [_sys.executable, "-m", "recon_daily"],
+            cwd=str(Path(__file__).parent),
+            capture_output=True, text=True, timeout=300,
+        )
+        if code.returncode == 0:
+            logger.info("  深度侦查日报完成")
+        else:
+            logger.warning("  深度侦查日报异常 (exit=%d): %s",
+                           code.returncode, code.stderr[:200])
+        return 0 if code.returncode == 0 else code.returncode
+
     return 0
 
 
@@ -406,9 +423,14 @@ def main():
     parser = argparse.ArgumentParser(description="情报部侦察/推演引擎")
     parser.add_argument("command", choices=["recon", "deduce", "status"],
                         help="recon=盘前侦察  deduce=收盘推演  status=更新状态")
+    parser.add_argument("--full", action="store_true",
+                        help="对 recon 执行完整模式（含深度侦查日报）")
     args = parser.parse_args()
 
-    fn = {"recon": run_recon, "deduce": run_deduce, "status": run_status}[args.command]
+    if args.command == "recon":
+        fn = lambda: run_recon(full=args.full)
+    else:
+        fn = {"recon": run_recon, "deduce": run_deduce, "status": run_status}[args.command]
     sys.exit(fn())
 
 

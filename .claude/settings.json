@@ -8,7 +8,13 @@
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-pro",
     "ANTHROPIC_SMALL_FAST_MODEL": "deepseek-v4-flash",
     "API_TIMEOUT_MS": "3000000",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "QWEN_BASE_URL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "QWEN_API_KEY": "sk-dc061e46848342f2b04929cce619e2d1",
+    "QWEN_API_KEY_2": "sk-af537c69dc994216af5923a3297dc94a",
+    "QWEN_API_KEY_3": "sk-300ab962d1d349839791f4ea161823f9",
+    "QWEN_VISION_MODEL": "qwen3.5-omni",
+    "ANTHROPIC_VISION_MODEL": "qwen3.5-omni"
   },
   "autoMemoryDirectory": "D:\\1989n\\.claude\\memory",
   "includeCoAuthoredBy": false,

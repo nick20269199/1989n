@@ -35,6 +35,16 @@ from config import (
     FEISHU_WEBHOOK_URL,
 )
 
+# ── 后备数据通道 ──────────────────────────────────────────────
+try:
+    from data_source_router import tencent_quotes, sina_quotes
+    _FALLBACK_OK = True
+except ImportError:
+    _FALLBACK_OK = False
+
+    def tencent_quotes(codes): return {}
+    def sina_quotes(codes): return {}
+
 # ── 可选依赖 ─────────────────────────────────────────────────────
 try:
     from feishu_sender import send_feishu_message
@@ -74,6 +84,7 @@ logger.addHandler(ch)
 # ── 常量 ─────────────────────────────────────────────────────────
 TIMEOUT = 15
 MAX_RETRIES = 2
+DATA_GAP_DIR = Path(STOCK_DATA_DIR).parent / "logs" / "data_gaps"
 
 def now_cst() -> datetime:
     return datetime.now(CST)
@@ -484,13 +495,14 @@ def fetch_portfolio_auction(holdings: list[dict]) -> list[dict]:
     """
     获取持仓股竞价表现。
     优先用 A 方案 (push2 details API → 完整竞价过程)，
-    A 方案失败则回退到 B 方案 (基础行情 API → 仅价格/量)。
+    A 方案失败则回退到 B 方案 (腾讯行情API)，
+    B 方案失败则回退到 C 方案 (新浪行情API)。
     """
     results = []
     for h in holdings:
         code = h["code"]
 
-        # A 方案: 竞价明细 API
+        # A 方案: 竞价明细 API (东财 push2)
         detail = fetch_auction_detail(code)
         if detail:
             detail["sector"] = h.get("sector", "")
@@ -499,37 +511,61 @@ def fetch_portfolio_auction(holdings: list[dict]) -> list[dict]:
             results.append(detail)
             continue
 
-        # B 方案: 基础行情 API
-        secid = f"{_prefix(code)}.{code}"
-        try:
-            params = {
-                "ut": "fa5fd1943c7b386f172d6893dbf38dc7",
-                "secid": secid,
-                "fields": "f43,f44,f45,f46,f47,f48,f50,f57,f58,f60,f170",
-                "forcect": 1,
-            }
-            r = safe_get(EASTMONEY_QUOTE_URL, params=params)
-            if r and r.json().get("data"):
-                d = r.json()["data"]
-                price = d.get("f43", 0) / 100 if d.get("f43") else 0
-                prev_close = d.get("f60", price * 100) / 100 if d.get("f60") else price
-                change_pct = ((price - prev_close) / prev_close * 100) if prev_close else 0
-                results.append({
-                    "code": code,
-                    "name": d.get("f58") or h.get("name", ""),
-                    "auction_price": round(price, 2),
-                    "prev_close": round(prev_close, 2),
-                    "auction_chg_pct": round(change_pct, 2),
-                    "open_volume": d.get("f47", 0),
-                    "sector": h.get("sector", ""),
-                    "shares": h.get("shares", 0),
-                    "_source": "B",
-                })
-        except Exception as e:
-            logger.warning(f"[B方案] {code} 基础行情失败: {e}")
+        # B 方案: 腾讯行情 API
+        if _FALLBACK_OK:
+            try:
+                q = tencent_quotes([code])
+                if code in q:
+                    d = q[code]
+                    prev_close = d.get('prev_close', 0)
+                    cur = d.get('current', 0)
+                    change_pct = ((cur - prev_close) / prev_close * 100) if prev_close else 0
+                    results.append({
+                        "code": code,
+                        "name": d.get('name', h.get('name', '')),
+                        "auction_price": round(cur, 2),
+                        "prev_close": round(prev_close, 2),
+                        "auction_chg_pct": round(change_pct, 2),
+                        "open_volume": d.get('volume', 0),
+                        "sector": h.get("sector", ""),
+                        "shares": h.get("shares", 0),
+                        "_source": "B",
+                    })
+                    logger.info(f"[B方案/腾讯] {code} 获取成功")
+                    continue
+            except Exception as e:
+                logger.warning(f"[B方案/腾讯] {code} 失败: {e}")
+
+        # C 方案: 新浪行情 API
+        if _FALLBACK_OK:
+            try:
+                q = sina_quotes([code])
+                if code in q:
+                    d = q[code]
+                    prev_close = d.get('prev_close', 0)
+                    cur = d.get('current', 0)
+                    change_pct = ((cur - prev_close) / prev_close * 100) if prev_close else 0
+                    results.append({
+                        "code": code,
+                        "name": d.get('name', h.get('name', '')),
+                        "auction_price": round(cur, 2),
+                        "prev_close": round(prev_close, 2),
+                        "auction_chg_pct": round(change_pct, 2),
+                        "open_volume": d.get('volume', 0),
+                        "sector": h.get("sector", ""),
+                        "shares": h.get("shares", 0),
+                        "_source": "C",
+                    })
+                    logger.info(f"[C方案/新浪] {code} 获取成功")
+                    continue
+            except Exception as e:
+                logger.warning(f"[C方案/新浪] {code} 失败: {e}")
+
+        logger.warning(f"[竞价] {code} 全部通道均失败")
     logger.info(f"[竞价] 持仓: {len(results)}/{len(holdings)} 只 "
-                f"(A方案:{sum(1 for r in results if r.get('_source')=='A')} "
-                f"B方案:{sum(1 for r in results if r.get('_source')=='B')})")
+                f"(A:{sum(1 for r in results if r.get('_source')=='A')} "
+                f"B:{sum(1 for r in results if r.get('_source')=='B')} "
+                f"C:{sum(1 for r in results if r.get('_source')=='C')})")
     return results
 
 
@@ -627,6 +663,33 @@ def send_auction_feishu(output: dict) -> bool:
 
 
 # ═══════════════════════════════════════════════════════════════════
+#  数据缺失记录
+# ═══════════════════════════════════════════════════════════════════
+
+def _record_data_gap(source: str, channel: str, issue: str, impact: str):
+    """记录数据缺失到 data_gaps/，供情报部周审"""
+    try:
+        DATA_GAP_DIR.mkdir(parents=True, exist_ok=True)
+        gap = {
+            "date": now_cst().strftime("%Y-%m-%d"),
+            "source": source,
+            "channel": channel,
+            "issue": issue,
+            "impact": impact,
+            "fallback": "已切换腾讯/新浪通道",
+            "recorded_at": ts_now(),
+            "severity": "HIGH" if "全部" in impact else "MEDIUM",
+        }
+        fname = f"{now_cst().strftime('%Y%m%d_%H%M')}_{source}.json"
+        (DATA_GAP_DIR / fname).write_text(
+            json.dumps(gap, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        logger.warning(f"[数据缺失] 已记录: {source} — {issue}")
+    except Exception:
+        pass
+
+
+# ═══════════════════════════════════════════════════════════════════
 #  主入口
 # ═══════════════════════════════════════════════════════════════════
 
@@ -644,18 +707,30 @@ def main():
     try:
         # 1. 市场广度
         breadth = fetch_auction_breadth()
+        if breadth.get("total", 0) == 0:
+            _record_data_gap("fetch_auction_breadth", "东方财富 push2",
+                             "WAF封锁，全市场竞价涨跌分布采集空", "竞价广度/涨停跌停计数/涨跌比 全部缺失")
         time.sleep(0.3)
 
         # 2. 概念板块竞价
         concepts = fetch_auction_concepts()
+        if not concepts:
+            _record_data_gap("fetch_auction_concepts", "东方财富 push2",
+                             "WAF封锁，概念板块竞价采集空", "概念板块竞价表现缺失")
         time.sleep(0.3)
 
         # 3. 行业板块竞价
         industries = fetch_auction_industries()
+        if not industries:
+            _record_data_gap("fetch_auction_industries", "东方财富 push2",
+                             "WAF封锁，行业板块竞价采集空", "行业板块竞价表现缺失")
         time.sleep(0.3)
 
         # 4. 涨停封单
         limit_orders = fetch_auction_limit_orders()
+        if not limit_orders.get("limit_up_strength") and not limit_orders.get("limit_down_pressure"):
+            _record_data_gap("fetch_auction_limit_orders", "东方财富 push2",
+                             "WAF封锁，涨停/跌停竞价封单采集空", "涨停/跌停封单数据缺失")
 
         # 5. 持仓竞价
         holdings = load_portfolio()

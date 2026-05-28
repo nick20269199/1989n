@@ -294,14 +294,13 @@ def _normalize_holdings(raw: list[dict]) -> list[dict]:
 def _fallback_holdings() -> list[dict]:
     """硬编码后备持仓（与 portfolio.json 一致的应急备份）"""
     return [
-        {"code": "002077", "name": "大港股份", "shares": 1700, "cost": 18.554, "sector": "半导体/EDA", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
+        {"code": "002077", "name": "大港股份", "shares": 1700, "cost": 18.667, "sector": "半导体/EDA", "first_buy": "2026-05-21", "latest_buy": "2026-05-21"},
         {"code": "600498", "name": "烽火通信", "shares": 800, "cost": 57.112, "sector": "通信设备", "first_buy": "2026-05-20", "latest_buy": "2026-05-22"},
-        {"code": "600183", "name": "生益科技", "shares": 200, "cost": 121.050, "sector": "", "first_buy": "2026-05-25", "latest_buy": "2026-05-26"},
-        {"code": "300136", "name": "信维通信", "shares": 700, "cost": 103.331, "sector": "消费电子/射频", "first_buy": "2026-05-18", "latest_buy": "2026-05-26"},
-        {"code": "002050", "name": "三花智控", "shares": 500, "cost": 48.833, "sector": "制冷控制件", "first_buy": "2026-05-14", "latest_buy": "2026-05-26"},
-        {"code": "300083", "name": "创世纪", "shares": 800, "cost": 10.960, "sector": "", "first_buy": "2026-05-26", "latest_buy": "2026-05-26"},
+        {"code": "300136", "name": "信维通信", "shares": 600, "cost": 109.440, "sector": "消费电子/射频", "first_buy": "2026-05-18", "latest_buy": "2026-05-26"},
+        {"code": "002050", "name": "三花智控", "shares": 700, "cost": 53.639, "sector": "制冷控制件", "first_buy": "2026-05-14", "latest_buy": "2026-05-27"},
+        {"code": "600744", "name": "华银电力", "shares": 3600, "cost": 8.979, "sector": "电力", "first_buy": "2026-05-28", "latest_buy": "2026-05-28"},
+        {"code": "002015", "name": "协鑫能科", "shares": 800, "cost": 22.610, "sector": "清洁能源", "first_buy": "2026-05-28", "latest_buy": "2026-05-28"},
     ]
-
 def _market_prefix(code: str) -> str:
     """根据代码返回交易所前缀: sz 或 sh"""
     if code.startswith(("0", "3")):

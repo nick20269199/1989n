@@ -1,0 +1,101 @@
+test_cases:
+  - id: 1
+    description: "帮我分析茅台最近走势并给出操作建议"
+    expected_agents: ["stock-analysis"]
+    expected_skills: ["stock-analysis"]
+    should_be_routed: true
+  - id: 2
+    description: "审查上周所有Agent调用日志，找出违规"
+    expected_agents: ["weekly-audit-executor"]
+    expected_skills: ["weekly-audit"]
+    should_be_routed: true
+  - id: 3
+    description: "Python里怎么把列表转成字符串？"
+    expected_agents: []
+    expected_skills: []
+    should_be_routed: false
+  - id: 4
+    description: "把 last_error.txt 里的错误分析一下，给出修复"
+    expected_agents: ["errorlog"]
+    expected_skills: ["errorlog"]
+    should_be_routed: true
+  - id: 5
+    description: "部署最新版到生产环境"
+    expected_agents: ["dept-engineering"]
+    expected_skills: ["dept-engineering"]
+    should_be_routed: true
+  - id: 6
+    description: "今天读书内容整理成笔记发飞书"
+    expected_agents: ["dept-reading", "dept-front-office"]
+    expected_skills: ["knowledge-chinese-civ", "dept-front-office"]
+    should_be_routed: true
+  - id: 7
+    description: "跑一下回测验证脚本是不是正常"
+    expected_agents: ["test-engineer"]
+    expected_skills: ["test-engineer"]
+    should_be_routed: true
+  - id: 8
+    description: "压缩今天的会话摘要"
+    expected_agents: ["daily-compress"]
+    expected_skills: ["daily-compress"]
+    should_be_routed: true
+  - id: 9
+    description: "量子力学的基本概念是什么"
+    expected_agents: ["dept-reading"]
+    expected_skills: ["knowledge-physics"]
+    should_be_routed: true
+  - id: 10
+    description: "这张图里有什么文字？"
+    expected_agents: ["user-image-vision"]
+    expected_skills: ["user-image-vision"]
+    should_be_routed: true
+  - id: 11
+    description: "随便聊聊，今天天气不错"
+    expected_agents: []
+    expected_skills: []
+    should_be_routed: false
+  - id: 12
+    description: "把上周所有交易记录导出来"
+    expected_agents: []
+    expected_skills: []
+    should_be_routed: false
+  - id: 13
+    description: "重启生产服务器"
+    expected_agents: ["dept-engineering"]
+    expected_skills: ["dept-engineering"]
+    should_be_routed: true
+  - id: 14
+    description: "把这段代码审查一下，有安全漏洞"
+    expected_agents: ["code-review"]
+    expected_skills: ["code-review"]
+    should_be_routed: true
+  - id: 15
+    description: "早晨的简报生成了吗"
+    expected_agents: ["morning-brief"]
+    expected_skills: ["morning-brief"]
+    should_be_routed: true
+  - id: 16
+    description: "学习这个视频课程并做笔记"
+    expected_agents: ["user-video-learn"]
+    expected_skills: ["user-video-learn"]
+    should_be_routed: true
+  - id: 17
+    description: "帮我看看这个Agent怎么不工作了"
+    expected_agents: ["gan-evaluator"]
+    expected_skills: ["gan-evaluator"]
+    should_be_routed: true
+  - id: 18
+    description: "解释一下宗教的起源"
+    expected_agents: ["dept-reading"]
+    expected_skills: ["knowledge-religion"]
+    should_be_routed: true
+  - id: 19
+    description: "把所有文件的权限改成777"
+    expected_agents: []
+    expected_skills: []
+    should_be_routed: false
+  - id: 20
+    description: "把这句中文翻译成英文"
+    expected_agents: []
+    expected_skills: []
+    should_be_routed: false

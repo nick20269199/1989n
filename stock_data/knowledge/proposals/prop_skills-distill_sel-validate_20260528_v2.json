@@ -1,0 +1,33 @@
+{
+  "proposal_id": "prop_skills-distill_sel-validate_20260528_v2",
+  "gap_id": "tool-claude-code-skills-distillation",
+  "gap_title": "Claude Code Skills 蒸馏机制 — 增加交互模式验证阶段",
+  "priority": "P2",
+  "source": "web_search_20260528",
+  "external_findings": [
+    {
+      "title": "agent-learn Trace/Validate/Inject 循环",
+      "url": "https://github.com/adi1999/agent-learn",
+      "insight": "A/B测试验证(5%+提升+零回退+80%置信度)+冲突检测+混合搜索注入"
+    },
+    {
+      "title": "SkillCam 两阶段Session蒸馏",
+      "url": "https://www.npmjs.com/package/skillcam",
+      "insight": "廉价Haiku初筛+Sonnet精炼，降低蒸馏成本"
+    },
+    {
+      "title": "EvolveR 自蒸馏 > 教师蒸馏",
+      "url": "https://arxiv.org/abs/2510.16079",
+      "insight": "ICML 2026: Agent自我蒸馏认知技能优于教师模型蒸馏(认知对齐)"
+    }
+  ],
+  "proposal_type": "code_change",
+  "target_file": "stock_analysis/sel_digest.py",
+  "change_description": "在sel_digest.py中增加两阶段验证桥接: 1) 读取agent_exec_logger的日志(最近7天), 提取重复出现的Agent调用模式 2) 第一阶段(廉价): 统计exit_code=0且output_summary非空的记录, 按agent分组, 检测同一agent对相似任务的重复调用模式 3) 第二阶段(验证): 对检测到的模式, 与knowledge_db中已有知识对比, 避免重复 4) 将高频成功模式输出为digest条目, 供下游SEL Maintain注入知识库",
+  "expected_effect": "1) 打通agent_exec_logger与SEL管线的数据链路 2) 自动发现高频重复的分析模式, 判断是否需要蒸馏为Skill 3) 避免Knowledge DB中知识重复积累",
+  "verification_method": "1) 运行 agent_exec_logger.py --task 测试写入一条日志 2) 运行修改后的 sel_digest.py, 确认检测到test-agent的调用模式 3) 验证digest输出包含Agent调用频率统计和模式建议",
+  "status": "proposed",
+  "created_at": "2026-05-27T23:20:53.333383Z",
+  "executed_at": null,
+  "execution_result": null
+}

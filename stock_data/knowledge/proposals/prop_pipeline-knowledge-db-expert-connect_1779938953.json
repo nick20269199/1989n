@@ -1,0 +1,24 @@
+{
+  "proposal_id": "prop_pipeline-knowledge-db-expert-connect_1779938953",
+  "gap_id": "pipeline-knowledge-db-expert-connect",
+  "gap_title": "Knowledge DB 未接入 Expert 管线",
+  "priority": "P0",
+  "source": "GitHub仓库",
+  "source_title": "doobidoo/mcp-memory-service",
+  "source_url": "https://github.com/doobidoo/mcp-memory-service",
+  "relevance": 4,
+  "summary": "强关联: 标题/描述高度匹配缺口关键字: doobidoo/mcp-memory-service",
+  "pattern": "inject_knowledge",
+  "implied_changes": [
+    "stock_analysis/experts/base.py",
+    "stock_analysis/experts/lead.py"
+  ],
+  "implementation_hint": "在 expert base.py 的 analyze() 中增加 knowledge_query(gap_context) 调用，将 knowledge_db.search_knowledge() 结果注入 prompt 上下文。lead.py 中在调度各 expert 前先收集 knowledge_context 并传参。",
+  "test_files": [
+    "stock_analysis/tests/test_knowledge_db.py"
+  ],
+  "status": "proposed",
+  "created_at": "2026-05-28T11:29:13.124127",
+  "executed_at": null,
+  "execution_result": null
+}

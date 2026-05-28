@@ -1,0 +1,14 @@
+{
+  "date": "2026-05-28",
+  "source": "call_auction.py",
+  "channel": "东方财富 push2.eastmoney.com",
+  "issue": "WAF封锁 — push2 API 所有请求被 WAF 拦截",
+  "impact": "全量采集失败：竞价广度/概念板块/行业板块/涨停封单/持仓竞价 全部依赖东财API",
+  "fallback": "已切换腾讯/新浪通道",
+  "mitigation": "call_auction.py: 持仓竞价 B方案=腾讯行情API, C方案=新浪行情API (2026-05-28部署); 市场级数据(广度/概念/行业/封单)东财WAF时标记data_gap并跳过",
+  "recorded_at": "2026-05-28T09:48:00+08:00",
+  "mitigated_at": "2026-05-28T11:24:00+08:00",
+  "severity": "HIGH",
+  "detected": true,
+  "mitigated": true
+}

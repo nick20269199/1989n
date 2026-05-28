@@ -350,6 +350,12 @@
       "file": "git_push.log",
       "status": "pending",
       "size_kb": 624.0
+    },
+    {
+      "date": "2026-05-28",
+      "file": "last_error.txt",
+      "status": "pending",
+      "size_kb": 0.0
     }
   ],
   "last_distilled": null

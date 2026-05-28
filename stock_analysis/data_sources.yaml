@@ -1,0 +1,193 @@
+# 情报部数据采集源清单
+# 生成: 2026-05-28
+# 优先级: 一级=央行/宏观, 二级=市场行情, 三级=新闻情绪, 四级=另类
+
+sources:
+  # ============================================================================
+  # 一级: 央行/宏观 (高确定性, 低频更新, 影响全局)
+  # ============================================================================
+  - name: "FRED"
+    priority: 1
+    category: "央行/宏观"
+    region: "美国"
+    type: "API"
+    description: "美联储经济数据库 — 利率/就业/GDP/通胀等宏观指标"
+  - name: "ECB SDW"
+    priority: 1
+    category: "央行/宏观"
+    region: "欧洲"
+    type: "API"
+    description: "欧洲央行统计数据仓库 — 欧元区宏观指标"
+  - name: "BIS Statistics"
+    priority: 1
+    category: "央行/宏观"
+    region: "全球"
+    type: "API"
+    description: "国际清算银行统计 — 跨境信贷/外汇/衍生品"
+  - name: "IMF Data"
+    priority: 1
+    category: "央行/宏观"
+    region: "全球"
+    type: "API"
+    description: "国际货币基金组织数据 — IFS/世界经济展望等"
+  - name: "World Bank Open Data"
+    priority: 1
+    category: "央行/宏观"
+    region: "全球"
+    type: "API"
+    description: "世界银行公开数据 — 全球发展指标/减贫/教育/健康/经济结构"
+  - name: "中国人民银行"
+    priority: 1
+    category: "央行/宏观"
+    region: "中国"
+    type: "API"
+    description: "人行官网 — LPR/基准利率/储备金率/货币供应量"
+  - name: "国家统计局"
+    priority: 1
+    category: "央行/宏观"
+    region: "中国"
+    type: "爬虫"
+    description: "统计局官网 — CPI/PPI/PMI/工业增加值/GDP"
+
+  # ============================================================================
+  # 二级: 市场行情 (高频, 盘中实时, 核心交易数据)
+  # ============================================================================
+  - name: "TuShare"
+    priority: 2
+    category: "市场行情"
+    region: "中国"
+    type: "API"
+    description: "开源A股数据接口 — 行情/基本面/财务/参考数据 (需token注册)"
+  - name: "AKShare"
+    priority: 2
+    category: "市场行情"
+    region: "中国"
+    type: "API"
+    description: "开源A股数据接口 — 行情/资金/题材/板块 (已有集成)"
+  - name: "Yahoo Finance"
+    priority: 2
+    category: "市场行情"
+    region: "全球"
+    type: "API"
+    description: "美股/全球指数/外汇/加密货币实时+历史数据"
+  - name: "Alpha Vantage"
+    priority: 2
+    category: "市场行情"
+    region: "全球"
+    type: "API"
+    description: "美股/外汇/加密货币实时+历史+技术指标 (API Key 需注册)"
+  - name: "Polygon.io"
+    priority: 2
+    category: "市场行情"
+    region: "美国"
+    type: "API"
+    description: "美股实时+历史行情, WebSocket 流式推送 (付费)"
+  - name: "Quandl"
+    priority: 2
+    category: "市场行情"
+    region: "全球"
+    type: "API"
+    description: "另类金融数据 — 期货/期权/宏观经济 (已被 Nasdaq 收购)"
+
+  # ============================================================================
+  # 三级: 新闻/情绪 (盘中盘后, 影响短线情绪)
+  # ============================================================================
+  - name: "Reuters"
+    priority: 3
+    category: "新闻情绪"
+    region: "全球"
+    type: "API"
+    description: "路透社 — 全球财经新闻实时推送"
+  - name: "财联社"
+    priority: 3
+    category: "新闻情绪"
+    region: "中国"
+    type: "API"
+    description: "中国最快财经快讯 — 电报/盘中突发/题材挖掘 (已有集成)"
+  - name: "华尔街见闻"
+    priority: 3
+    category: "新闻情绪"
+    region: "中国"
+    type: "爬虫"
+    description: "中文财经新闻 — 宏观解读/市场分析"
+  - name: "Seeking Alpha"
+    priority: 3
+    category: "新闻情绪"
+    region: "美国"
+    type: "爬虫"
+    description: "美股深度分析/财报解读/社区观点聚合"
+  - name: "Benzinga"
+    priority: 3
+    category: "新闻情绪"
+    region: "美国"
+    type: "API"
+    description: "美股实时新闻推送, 面向交易员的快讯"
+  - name: "格隆汇"
+    priority: 3
+    category: "新闻情绪"
+    region: "中国"
+    type: "爬虫"
+    description: "港A股深度分析/投研报告/行业解读"
+
+  # ============================================================================
+  # 四级: 另类数据 (低频, 特定用途, 辅助判断)
+  # ============================================================================
+  - name: "SEC EDGAR"
+    priority: 4
+    category: "另类"
+    region: "美国"
+    type: "API"
+    description: "美国证监会电子化数据收集 — 10-K/10-Q/内幕交易/持股变动"
+  - name: "UN Comtrade"
+    priority: 4
+    category: "另类"
+    region: "全球"
+    type: "API"
+    description: "联合国贸易统计数据库 — 各国进出口商品贸易数据"
+  - name: "Google Trends"
+    priority: 4
+    category: "另类"
+    region: "全球"
+    type: "API"
+    description: "谷歌搜索趋势 — 关键词热度, 衡量关注度/情绪"
+  - name: "MarineTraffic"
+    priority: 4
+    category: "另类"
+    region: "全球"
+    type: "API"
+    description: "全球船舶追踪 — 大宗商品航运/原油/干散货/天然气"
+
+# ============================================================================
+# 已有通道（data_source_router.py 已集成）
+# ============================================================================
+existing:
+  - name: "TDX"
+    priority: 2
+    category: "市场行情"
+    region: "中国"
+    type: "API"
+    status: "主通道"
+  - name: "新浪财经"
+    priority: 2
+    category: "市场行情"
+    region: "中国"
+    type: "API"
+    status: "实时行情+指数"
+  - name: "腾讯财经"
+    priority: 2
+    category: "市场行情"
+    region: "中国"
+    type: "API"
+    status: "实时行情+指数(call_auction持仓竞价B方案)"
+  - name: "搜狐财经"
+    priority: 2
+    category: "市场行情"
+    region: "中国"
+    type: "API"
+    status: "K线数据"
+  - name: "东方财富"
+    priority: 2
+    category: "市场行情"
+    region: "中国"
+    type: "API"
+    status: "WAF封锁(自动跳过) — call_auction已配腾讯/新浪后备"
