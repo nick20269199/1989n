@@ -309,58 +309,103 @@ def _search_douyin_archives(query: str) -> list[dict]:
 # ── 评估发现 ──
 
 
+def _build_tfidf(gap_texts: list[str]) -> tuple:
+    """为缺口文本构建 TF-IDF 向量化器，返回 (vectorizer, tfidf_matrix)。"""
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    vectorizer = TfidfVectorizer(
+        analyzer="char_wb",
+        ngram_range=(2, 4),
+        max_features=5000,
+        lowercase=True,
+        strip_accents="unicode",
+    )
+    if not gap_texts:
+        gap_texts = [""]
+    tfidf_matrix = vectorizer.fit_transform(gap_texts)
+    return vectorizer, tfidf_matrix
+
+
 def evaluate_finding(result: dict, gap: dict) -> dict:
-    """评估一条发现对缺口的关联度。
+    """评估一条发现对缺口的关联度 — 基于 TF-IDF 余弦相似度。
 
     返回:
       relevance: 1(弱相关)-5(强相关)
       reason: 评估理由
     """
-    title = (result.get("title", "") or "").lower()
-    desc = (result.get("description", "") or "").lower()
-    text = title + " " + desc
+    title = (result.get("title", "") or "").strip()
+    desc = (result.get("description", "") or "").strip()
+    finding_text = title + " " + desc
 
-    gap_title = gap.get("title", "").lower()
-    gap_keywords = gap_title.split()
+    if not finding_text.strip():
+        return {"relevance": 1, "reason": "空内容", "similarity": 0.0, "keyword_hits": 0}
 
-    # 计算命中
-    hits = sum(1 for kw in gap_keywords if len(kw) > 2 and kw in text)
-    max_possible = max(len([k for k in gap_keywords if len(k) > 2]), 1)
-    hit_ratio = hits / max_possible
+    # 缺口文本语料：title + description + search_queries
+    gap_corpus = [
+        gap.get("title", ""),
+        gap.get("description", ""),
+        " ".join(gap.get("search_queries", [])),
+    ]
+    gap_corpus = [t for t in gap_corpus if t.strip()]
+
+    # TF-IDF 向量化 + 余弦相似度
+    try:
+        from sklearn.feature_extraction.text import TfidfVectorizer
+        from sklearn.metrics.pairwise import cosine_similarity
+        import numpy as np
+
+        all_texts = gap_corpus + [finding_text]
+        vectorizer = TfidfVectorizer(
+            analyzer="char_wb", ngram_range=(2, 4),
+            max_features=5000, lowercase=True, strip_accents="unicode",
+        )
+        tfidf = vectorizer.fit_transform(all_texts)
+        gap_vec = np.asarray(tfidf[:-1].mean(axis=0))
+        finding_vec = tfidf[-1]
+        sim = float(cosine_similarity(gap_vec, finding_vec)[0, 0])
+    except Exception:
+        sim = 0.0
+
+    # 关键词命中（保底）
+    gap_keywords = gap.get("title", "").lower().split()
+    text_lower = finding_text.lower()
+    hits = sum(1 for kw in gap_keywords if len(kw) > 2 and kw in text_lower)
+
+    # 综合评分：相似度 0-1 → relevance 1-5
+    sim_score = min(int(sim * 8) + 1, 5)
+    hit_bonus = 1 if hits >= 3 else (0.5 if hits >= 1 else 0)
 
     # 来源加分
     source_bonus = 0
     source = result.get("source", "")
-    # 抖音: 如果标题包含缺口关键字，很可能是深度内容
-    if "douyin" in source and hit_ratio > 0.3:
+    if "douyin" in source and sim > 0.15:
         source_bonus = 1
-    # GitHub: star 数加分
     if "github" in source:
         stars = result.get("stars", 0)
         if stars > 1000:
             source_bonus = 2
         elif stars > 100:
             source_bonus = 1
-    # 大V转录/分析: 专家观点，基础加分
     if "vv_" in source:
         source_bonus = max(source_bonus, 1)
+    if source in ("arxiv_api", "semantic_scholar_api"):
+        source_bonus = max(source_bonus, 1)
 
-    raw_relevance = 1 + int(hit_ratio * 3) + source_bonus
-    relevance = min(raw_relevance, 5)
+    raw_relevance = min(sim_score + int(hit_bonus) + source_bonus, 5)
+    relevance = max(raw_relevance, 1)
 
     if relevance >= 4:
-        reason = "强关联: 标题/描述高度匹配缺口关键字"
+        reason = "强关联: TF-IDF 高相似度"
     elif relevance >= 3:
-        reason = "中关联: 部分匹配缺口关键字"
+        reason = "中关联: TF-IDF 部分匹配"
     elif relevance >= 2:
-        reason = "弱关联: 仅少量匹配"
+        reason = "弱关联: 少量匹配"
     else:
         reason = "低关联: 基本不匹配"
 
     return {
         "relevance": relevance,
         "reason": reason,
-        "hit_ratio": round(hit_ratio, 2),
+        "similarity": round(sim, 4),
         "keyword_hits": hits,
     }
 
@@ -525,6 +570,8 @@ def run_prospecting(target_source: str = "all", dry_run: bool = False,
             sources.append("vv_db")  # 全量勘探自动含大V转录搜索
         if "arxiv" not in sources and target_source == "all":
             sources.append("arxiv")  # 全量勘探自动含论文搜索
+        if "semantic_scholar" not in sources and target_source == "all":
+            sources.append("semantic_scholar")  # 全量勘探自动含 Semantic Scholar
         if not queries or not sources:
             continue
 
@@ -600,6 +647,8 @@ def _search_source(source: str, query: str, gap: dict) -> list[dict]:
         return _search_vv_db(query, gap)
     elif source == "arxiv":
         return _search_arxiv(query, gap)
+    elif source == "semantic_scholar":
+        return _search_semantic_scholar(query, gap)
     return []
 
 
@@ -673,6 +722,83 @@ def _search_arxiv(query: str, gap: dict, max_results: int = 10) -> list[dict]:
         logger.warning("    arxiv XML 解析失败: %s", e)
     except Exception as e:
         logger.warning("    arxiv 搜索异常: %s", e)
+
+    return results
+
+
+def _search_semantic_scholar(query: str, gap: dict, max_results: int = 10) -> list[dict]:
+    """搜索 Semantic Scholar 论文数据库。
+
+    覆盖 arXiv 没有的会议论文、期刊文章，引用数排序。
+    API: https://api.semanticscholar.org/graph/v1/paper/search
+    无需认证，免费使用。
+    """
+    results = []
+    try:
+        logger.info("    semantic_scholar 搜索: API — \"%s\"", query)
+        r = requests.get(
+            "https://api.semanticscholar.org/graph/v1/paper/search",
+            params={
+                "query": query,
+                "limit": str(max_results),
+                "fields": "title,url,abstract,authors,year,venue,citationCount,publicationDate",
+            },
+            headers={"User-Agent": "knowledge-prospector/1.0"},
+            timeout=30,
+        )
+        if r.status_code == 429:
+            logger.warning("    semantic_scholar 速率限制 (429), 跳过")
+            return results
+        r.raise_for_status()
+
+        data = r.json()
+        papers = data.get("data", [])
+        for paper in papers:
+            title = (paper.get("title") or "").strip()
+            abstract = (paper.get("abstract") or "").strip()
+            paper_url = paper.get("url") or ""
+            year = paper.get("year")
+            venue = (paper.get("venue") or "") or ""
+            citations = paper.get("citationCount", 0) or 0
+            pub_date = (paper.get("publicationDate") or "") or ""
+
+            authors_list = paper.get("authors", [])
+            author_str = ", ".join(a.get("name", "") for a in authors_list[:3])
+            if len(authors_list) > 3:
+                author_str += " et al."
+
+            results.append({
+                "title": title[:200],
+                "url": paper_url or f"https://www.semanticscholar.org/search?q={query}",
+                "description": abstract[:300] if abstract else "",
+                "source": "semantic_scholar_api",
+                "authors": author_str,
+                "published": str(pub_date or year or ""),
+                "venue": venue,
+                "citations": citations,
+            })
+
+        logger.info("    semantic_scholar 搜索完成: %d 篇论文", len(results))
+        for r2 in results:
+            evaluation = evaluate_finding(r2, gap)
+            r2["_evaluation"] = evaluation
+            if evaluation["relevance"] >= 3:
+                _record_finding(
+                    gap_id=gap["gap_id"],
+                    source="semantic_scholar_api",
+                    title=r2["title"],
+                    url=r2["url"],
+                    relevance=evaluation["relevance"],
+                    summary=f"{evaluation['reason']}: {r2['title'][:80]} ({r2.get('published','')})",
+                    detail={"query": query, "authors": r2.get("authors", ""),
+                            "venue": r2.get("venue", ""), "citations": r2.get("citations", 0),
+                            "evaluation": evaluation},
+                )
+
+    except requests.Timeout:
+        logger.warning("    semantic_scholar 搜索超时 (30s)")
+    except Exception as e:
+        logger.warning("    semantic_scholar 搜索异常: %s", e)
 
     return results
 

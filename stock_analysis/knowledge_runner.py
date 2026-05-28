@@ -140,7 +140,7 @@ def cmd_pipeline(incremental: bool = False):
             print("\n  增量模式: 无历史记录，处理全部开放缺口")
 
     # Step 1: 审计缺口
-    print("\n[1/5] 缺口审计")
+    print("\n[1/6] 缺口审计")
     cmd_audit()
 
     # 开放探索模式：缺口归零时从博主引用中探索新方向
@@ -153,22 +153,22 @@ def cmd_pipeline(incremental: bool = False):
         print(f"\n  → {len(open_gaps)} 个开放缺口{' (增量模式跳过开放探索)' if incremental else ''}")
 
     # Step 2: 上游追溯 (从归档追源头)
-    print("\n[2/5] 上游追溯")
+    print("\n[2/6] 上游追溯")
     trace_result = run_upstream_tracing()
     print(f"  → {trace_result['refs_extracted']} 引用痕迹, {trace_result['findings_recorded']} 发现")
 
     # Step 3: 搜索 — 注入 incremental_since
-    print("\n[3/5] 抖音搜索")
+    print("\n[3/6] 抖音搜索")
     result_dy = run_prospecting(target_source="douyin", incremental_since=incremental_since)
     print(f"  → {result_dy['searches_done']} 搜索, {result_dy['findings']} 发现")
 
-    print("\n[4/5] Web/GitHub 搜索")
+    print("\n[4/6] Web/GitHub 搜索")
     result_web = run_prospecting(target_source="web", incremental_since=incremental_since)
     result_gh = run_prospecting(target_source="github", incremental_since=incremental_since)
     print(f"  → Web {result_web['findings']} / GitHub {result_gh['findings']} 发现")
 
     # Step 5: 吸收
-    print("\n[5/5] 知识吸收")
+    print("\n[5/6] 知识吸收")
     proposals = absorb_pending()
     print(f"  → 生成 {len(proposals)} 个提案")
 
@@ -186,6 +186,26 @@ def cmd_pipeline(incremental: bool = False):
 
     from feishu_sender import send_kae_discovery
     send_kae_discovery()
+
+    # Step 6: SEL 健康检查
+    print("\n[6/6] SEL 健康检查")
+    try:
+        import subprocess
+        import sys as _sys
+        sel_result = subprocess.run(
+            [_sys.executable, "sel_lint.py"],
+            capture_output=True, text=True, timeout=60,
+            cwd=str(STOCK_ANALYSIS),
+        )
+        lint_lines = sel_result.stdout.strip().split("\n")
+        # 提取扫描结果行
+        result_lines = [l for l in lint_lines if "发现" in l or "PASS" in l or "FAIL" in l or "总计" in l]
+        for l in result_lines[:8]:
+            print(f"    {l.strip()}")
+        if sel_result.returncode != 0:
+            print(f"    SEL lint 返回非零: {sel_result.returncode}")
+    except Exception as e:
+        print(f"    SEL lint 执行异常: {e}")
 
     print("\n管线完成")
 
