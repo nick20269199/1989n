@@ -18,12 +18,17 @@ knowledge_prospector.py — 知识勘探仪
 """
 import json
 import logging
+import os
 import sys
 import time
 import re
+import requests
+from dotenv import load_dotenv
 from pathlib import Path
 from datetime import datetime
 from typing import Optional
+
+load_dotenv(Path(__file__).parent / ".env")
 
 logger = logging.getLogger("knowledge_prospector")
 
@@ -48,8 +53,12 @@ PRIORITY_ORDER = {"P0": 0, "P1": 1, "P2": 2, "P3": 3}
 # ── 缺口加载 ──
 
 
-def _load_gaps() -> list[dict]:
-    """加载所有 open/investigating 缺口。"""
+def _load_gaps(incremental_since: str = None) -> list[dict]:
+    """加载所有 open/investigating 缺口。
+
+    Args:
+        incremental_since: ISO 时间戳，只返回在此之后创建的缺口。None=全部。
+    """
     if not GAP_REGISTRY_FILE.exists():
         logger.error("缺口清单不存在: %s", GAP_REGISTRY_FILE)
         return []
@@ -58,7 +67,10 @@ def _load_gaps() -> list[dict]:
     except (json.JSONDecodeError, Exception) as e:
         logger.error("缺口文件损坏: %s", e)
         return []
-    return [g for g in all_gaps if g.get("status") in ("open", "investigating")]
+    gaps = [g for g in all_gaps if g.get("status") in ("open", "investigating")]
+    if incremental_since:
+        gaps = [g for g in gaps if g.get("created_at", "2000-01-01") > incremental_since]
+    return gaps
 
 
 def _update_gap_status(gap_id: str, status: str):
@@ -76,6 +88,44 @@ def _update_gap_status(gap_id: str, status: str):
         )
     except Exception as e:
         logger.error("更新缺口状态失败: %s", e)
+
+
+def _maybe_create_vv_gap(original_gap: dict, vv_findings: list[dict]):
+    """vv_db 批量发现 >10 条时，自动创建聚焦子缺口。"""
+    if not vv_findings:
+        return
+
+    # 统计博主覆盖
+    vv_ids = set(f.get("vv_id", "") for f in vv_findings if f.get("vv_id"))
+    title = original_gap.get("title", "")
+
+    new_gap_id = f"vv-batch-{original_gap.get('gap_id', 'unknown')}-{int(time.time())}"
+    new_gap = {
+        "gap_id": new_gap_id,
+        "title": f"大V线索: {title[:50]}",
+        "description": (
+            f"从 vv_db 转录中发现 {len(vv_findings)} 条相关讨论 "
+            f"(覆盖 {len(vv_ids)} 位博主)，源自缺口 [{original_gap.get('gap_id','')}]"
+        ),
+        "priority": "P1" if len(vv_ids) >= 3 else "P2",
+        "domain": original_gap.get("domain", "open-exploration"),
+        "search_queries": original_gap.get("search_queries", [])[:3],
+        "target_sources": ["vv_db", "web"],
+        "status": "open",
+        "parent_gap": original_gap.get("gap_id", ""),
+    }
+
+    try:
+        gaps_file = GAP_REGISTRY_FILE.read_text(encoding="utf-8")
+        all_gaps = json.loads(gaps_file)
+        if any(g["gap_id"] == new_gap_id for g in all_gaps):
+            logger.info("    vv 子缺口已存在: %s", new_gap_id)
+            return
+        all_gaps.append(new_gap)
+        GAP_REGISTRY_FILE.write_text(json.dumps(all_gaps, ensure_ascii=False, indent=2), encoding="utf-8")
+        logger.info("    创建 vv 子缺口 [%s]: %d 条发现, %d 位博主", new_gap_id, len(vv_findings), len(vv_ids))
+    except Exception as e:
+        logger.warning("创建 vv 子缺口失败: %s", e)
 
 
 # ── 发现记录 ──
@@ -291,6 +341,9 @@ def evaluate_finding(result: dict, gap: dict) -> dict:
             source_bonus = 2
         elif stars > 100:
             source_bonus = 1
+    # 大V转录/分析: 专家观点，基础加分
+    if "vv_" in source:
+        source_bonus = max(source_bonus, 1)
 
     raw_relevance = 1 + int(hit_ratio * 3) + source_bonus
     relevance = min(raw_relevance, 5)
@@ -436,17 +489,19 @@ def print_creator_discoveries(discoveries: list[dict]):
 # ── 主勘探流程 ──
 
 
-def run_prospecting(target_source: str = "all", dry_run: bool = False) -> dict:
+def run_prospecting(target_source: str = "all", dry_run: bool = False,
+                    incremental_since: str = None) -> dict:
     """执行一次全量勘探。
 
     Args:
         target_source: "all" / "douyin" / "web" / "github"
         dry_run: 只打印计划，不执行搜索
+        incremental_since: ISO 时间戳，只搜索此时间后创建的缺口
 
     Returns:
         统计字典
     """
-    gaps = _load_gaps()
+    gaps = _load_gaps(incremental_since=incremental_since)
     if not gaps:
         logger.info("无开放缺口，跳过勘探")
         return {"gaps_checked": 0, "searches_done": 0, "findings": 0}
@@ -462,7 +517,14 @@ def run_prospecting(target_source: str = "all", dry_run: bool = False) -> dict:
         sources = gap.get("target_sources", [])
 
         if target_source != "all":
-            sources = [s for s in sources if s == target_source]
+            if target_source == "vv_db":
+                sources = ["vv_db"]  # vv_db 单独搜索时只搜转录
+            else:
+                sources = [s for s in sources if s == target_source]
+        elif "vv_db" not in sources:
+            sources.append("vv_db")  # 全量勘探自动含大V转录搜索
+        if "arxiv" not in sources and target_source == "all":
+            sources.append("arxiv")  # 全量勘探自动含论文搜索
         if not queries or not sources:
             continue
 
@@ -507,6 +569,13 @@ def run_prospecting(target_source: str = "all", dry_run: bool = False) -> dict:
             _update_gap_status(gap_id, "investigating")
             logger.info("    缺口 %s → 状态更新为 investigating (高价值发现 %d 条)", gap_id, high_value)
 
+        # vv_db 批量发现：转录命中>10条时自动创建子缺口
+        vv_findings = [f for f in gap_findings[gap_id]
+                       if f.get("source", "").startswith("vv_")
+                       and f.get("_evaluation", {}).get("relevance", 0) >= 3]
+        if len(vv_findings) > 10:
+            _maybe_create_vv_gap(gap, vv_findings)
+
     summary = {
         "target_source": target_source,
         "dry_run": dry_run,
@@ -524,32 +593,323 @@ def _search_source(source: str, query: str, gap: dict) -> list[dict]:
     if source == "douyin":
         return search_douyin_topic(query, max_results=10)
     elif source == "web":
-        # Web 搜索：返回占位 — 实际由 harness 执行 WebSearch
-        logger.info("    web 搜索需要 harness WebSearch 工具，此处记录搜索意图")
-        _record_finding(
-            gap_id=gap["gap_id"],
-            source="web_intent",
-            title=f"Web搜索意图: {query}",
-            url="",
-            relevance=2,
-            summary=f"由harness执行的web搜索: {query}",
-            detail={"query": query, "gap_id": gap["gap_id"], "status": "pending_harness"},
-        )
-        return []
+        return _search_web(query, gap)
     elif source == "github":
-        # GitHub 搜索：返回占位
-        logger.info("    github 搜索需要外部工具，此处记录搜索意图")
-        _record_finding(
-            gap_id=gap["gap_id"],
-            source="github_intent",
-            title=f"GitHub搜索意图: {query}",
-            url="",
-            relevance=2,
-            summary=f"由外部工具执行的github搜索: {query}",
-            detail={"query": query, "gap_id": gap["gap_id"], "status": "pending_external"},
-        )
-        return []
+        return _search_github(query, gap)
+    elif source == "vv_db":
+        return _search_vv_db(query, gap)
+    elif source == "arxiv":
+        return _search_arxiv(query, gap)
     return []
+
+
+def _search_arxiv(query: str, gap: dict, max_results: int = 10) -> list[dict]:
+    """搜索 arXiv 论文数据库。"""
+    import xml.etree.ElementTree as ET
+    results = []
+    try:
+        logger.info("    arxiv 搜索: arXiv API — \"%s\"", query)
+        r = requests.get(
+            "http://export.arxiv.org/api/query",
+            params={
+                "search_query": f"all:{query}",
+                "start": "0",
+                "max_results": str(max_results),
+                "sortBy": "relevance",
+                "sortOrder": "descending",
+            },
+            headers={"User-Agent": "knowledge-prospector/1.0"},
+            timeout=30,
+        )
+        r.raise_for_status()
+
+        ns = {"atom": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
+        root = ET.fromstring(r.text)
+
+        for entry in root.findall("atom:entry", ns):
+            title = entry.findtext("atom:title", "", ns).replace("\n", " ").strip()
+            summary = entry.findtext("atom:summary", "", ns).replace("\n", " ").strip()
+            paper_id = entry.findtext("atom:id", "", ns).strip()
+            published = entry.findtext("atom:published", "", ns)[:10]
+            authors = [a.findtext("atom:name", "", ns) for a in entry.findall("atom:author", ns)]
+            author_str = ", ".join(authors[:3])
+            if len(authors) > 3:
+                author_str += " et al."
+            category_tag = entry.find("arxiv:primary_category", ns)
+            category = category_tag.attrib.get("term", "") if category_tag is not None else ""
+
+            results.append({
+                "title": title[:200],
+                "url": paper_id,
+                "description": summary[:300],
+                "source": "arxiv_api",
+                "authors": author_str,
+                "published": published,
+                "category": category,
+            })
+
+        logger.info("    arxiv 搜索完成: %d 篇论文", len(results))
+        for r2 in results:
+            evaluation = evaluate_finding(r2, gap)
+            r2["_evaluation"] = evaluation
+            if evaluation["relevance"] >= 3:
+                _record_finding(
+                    gap_id=gap["gap_id"],
+                    source="arxiv_api",
+                    title=r2["title"],
+                    url=r2["url"],
+                    relevance=evaluation["relevance"],
+                    summary=f"{evaluation['reason']}: {r2['title'][:80]} ({r2.get('published','')})",
+                    detail={"query": query, "authors": r2.get("authors", ""),
+                            "category": r2.get("category", ""), "evaluation": evaluation},
+                )
+
+    except requests.Timeout:
+        logger.warning("    arxiv 搜索超时 (30s), 标记为空")
+        _record_finding(gap["gap_id"], "arxiv_api",
+                        f"arXiv搜索超时: {query}", "",
+                        1, "arXiv API timeout", {"status": "timeout"})
+    except ET.ParseError as e:
+        logger.warning("    arxiv XML 解析失败: %s", e)
+    except Exception as e:
+        logger.warning("    arxiv 搜索异常: %s", e)
+
+    return results
+
+
+def _search_vv_db(query: str, gap: dict, max_results: int = 20) -> list[dict]:
+    """搜索大V视频转录文本，挖掘博主观点与知识缺口关联。"""
+    import sqlite3
+    results = []
+    vv_db = Path("D:/1989n/stock_data/vv_radar.db")
+    if not vv_db.exists():
+        logger.warning("vv_radar.db 不存在: %s", vv_db)
+        return results
+
+    try:
+        conn = sqlite3.connect(str(vv_db))
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+
+        c.execute("""
+            SELECT v.aweme_id, v.vv_id, v.desc, v.transcript_text, v.duration
+            FROM vv_videos v
+            WHERE v.transcript_text IS NOT NULL AND v.transcript_text != ''
+        """)
+
+        query_lower = query.lower()
+        for row in c.fetchall():
+            text = (row["transcript_text"] or "") + " " + (row["desc"] or "")
+            if query_lower in text.lower():
+                transcript = row["transcript_text"] or ""
+                snippet = transcript[:300] if transcript else (row["desc"] or "无描述")[:100]
+                results.append({
+                    "title": (row["desc"] or "无描述")[:100],
+                    "url": f"https://www.douyin.com/video/{row['aweme_id']}",
+                    "description": snippet[:300],
+                    "source": "vv_transcript",
+                    "aweme_id": row["aweme_id"],
+                    "vv_id": row["vv_id"],
+                    "duration": row["duration"],
+                })
+
+        c.execute("""
+            SELECT a.aweme_id, a.vv_id, a.vv_name, a.topics, a.logic_why,
+                   a.tickers, a.upside_analysis, a.confidence
+            FROM vv_analysis a
+            WHERE a.topics IS NOT NULL OR a.logic_why IS NOT NULL
+        """)
+        for row in c.fetchall():
+            search_text = " ".join(filter(None, [
+                row["topics"], row["logic_why"], row["tickers"],
+                row["upside_analysis"], row["vv_name"],
+            ]))
+            if query_lower in search_text.lower():
+                results.append({
+                    "title": f"[分析] {row['vv_name'] or '?'}: {(row['topics'] or '')[:60]}",
+                    "url": f"https://www.douyin.com/video/{row['aweme_id']}",
+                    "description": (row["logic_why"] or row["topics"] or "")[:300],
+                    "source": "vv_analysis",
+                    "aweme_id": row["aweme_id"],
+                    "vv_id": row["vv_id"],
+                    "tickers": row["tickers"],
+                    "confidence": row["confidence"],
+                })
+
+        conn.close()
+    except Exception as e:
+        logger.warning("vv_db 搜索异常: %s", e)
+
+    seen = set()
+    deduped = []
+    for r in results:
+        if r["aweme_id"] not in seen:
+            seen.add(r["aweme_id"])
+            deduped.append(r)
+
+    logger.info("    vv_db 搜索完成: %d 条结果 (去重后)", len(deduped))
+    return deduped[:max_results]
+
+
+def _search_web(query: str, gap: dict, timeout: int = 30) -> list[dict]:
+    """通过Bing搜索执行Web搜索，30秒超时。"""
+    import re as _re
+    from html import unescape as _unescape
+
+    results = []
+    try:
+        logger.info("    web 搜索真实执行: Bing — \"%s\"", query)
+        headers = {"User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        )}
+        r = requests.get(
+            "https://www.bing.com/search",
+            params={"q": query, "count": "10"},
+            headers=headers,
+            timeout=timeout,
+        )
+        r.raise_for_status()
+
+        for block in _re.findall(r'<li class="b_algo"[^>]*>.*?</li>', r.text, _re.DOTALL):
+            m = _re.search(r'<a[^>]+href="(https?://[^"]+)"[^>]*>(.*?)</a>', block, _re.DOTALL)
+            if not m:
+                continue
+            url = _unescape(m.group(1))
+            title = _re.sub(r'<[^>]+>', "", m.group(2)).strip()
+            if not title or not url:
+                continue
+
+            sm = _re.search(r'<p[^>]*>(.*?)</p>', block, _re.DOTALL)
+            snippet = _re.sub(r'<[^>]+>', "", sm.group(1)).strip() if sm else ""
+
+            results.append({
+                "title": title[:200],
+                "url": url,
+                "description": snippet[:300],
+                "source": "web_bing",
+            })
+
+        logger.info("    web 搜索完成: %d 条结果", len(results))
+
+        # 记录 findings
+        for r2 in results:
+            evaluation = evaluate_finding(r2, gap)
+            r2["_evaluation"] = evaluation
+            if evaluation["relevance"] >= 3:
+                _record_finding(
+                    gap_id=gap["gap_id"],
+                    source="web_bing",
+                    title=r2["title"],
+                    url=r2["url"],
+                    relevance=evaluation["relevance"],
+                    summary=f"{evaluation['reason']}: {r2['title']}",
+                    detail={"query": query, "evaluation": evaluation},
+                )
+
+    except requests.Timeout:
+        logger.warning("    web 搜索超时 (%ds), 标记为空", timeout)
+        _record_finding(
+            gap_id=gap["gap_id"], source="web_bing",
+            title=f"Web搜索超时: {query}", url="",
+            relevance=1,
+            summary=f"Bing搜索超时 ({timeout}s)",
+            detail={"query": query, "status": "timeout"},
+        )
+    except Exception as e:
+        logger.warning("    web 搜索异常: %s, 标记为空", e)
+        _record_finding(
+            gap_id=gap["gap_id"], source="web_bing",
+            title=f"Web搜索失败: {query}", url="",
+            relevance=1,
+            summary=f"Bing搜索异常: {e}",
+            detail={"query": query, "status": "error", "error": str(e)},
+        )
+
+    return results
+
+
+def _search_github(query: str, gap: dict, timeout: int = 30) -> list[dict]:
+    """通过GitHub Search API执行搜索，30秒超时。"""
+    results = []
+    try:
+        logger.info("    github 搜索真实执行: GitHub Search API — \"%s\"", query)
+        gh_headers = {"Accept": "application/vnd.github.v3+json",
+                       "User-Agent": "knowledge-prospector/1.0"}
+        github_token = os.getenv("GITHUB_TOKEN", "")
+        if github_token:
+            gh_headers["Authorization"] = f"Bearer {github_token}"
+        r = requests.get(
+            "https://api.github.com/search/repositories",
+            params={"q": query, "sort": "stars", "order": "desc", "per_page": 10},
+            headers=gh_headers,
+            timeout=timeout,
+        )
+
+        if r.status_code == 403 and "rate limit" in r.text.lower():
+            logger.warning("    GitHub API 速率限制, 标记为空")
+            _record_finding(
+                gap_id=gap["gap_id"], source="github_api",
+                title=f"GitHub速率限制: {query}", url="",
+                relevance=1,
+                summary="GitHub API rate limit exceeded",
+                detail={"query": query, "status": "rate_limited"},
+            )
+            return []
+
+        r.raise_for_status()
+        data = r.json()
+
+        for item in data.get("items", [])[:10]:
+            results.append({
+                "title": item.get("full_name", item.get("name", "?")),
+                "url": item.get("html_url", ""),
+                "description": (item.get("description") or "")[:300],
+                "source": "github_api",
+                "stars": item.get("stargazers_count", 0),
+                "language": item.get("language", ""),
+                "topics": item.get("topics", []),
+            })
+
+        logger.info("    github 搜索完成: %d 条结果", len(results))
+
+        # 记录 findings
+        for r2 in results:
+            evaluation = evaluate_finding(r2, gap)
+            r2["_evaluation"] = evaluation
+            if evaluation["relevance"] >= 3:
+                _record_finding(
+                    gap_id=gap["gap_id"],
+                    source="github_api",
+                    title=r2["title"],
+                    url=r2["url"],
+                    relevance=evaluation["relevance"],
+                    summary=f"{evaluation['reason']}: {r2['title']} (★{r2.get('stars', 0)})",
+                    detail={"query": query, "stars": r2.get("stars", 0),
+                            "evaluation": evaluation},
+                )
+
+    except requests.Timeout:
+        logger.warning("    github 搜索超时 (%ds), 标记为空", timeout)
+        _record_finding(
+            gap_id=gap["gap_id"], source="github_api",
+            title=f"GitHub搜索超时: {query}", url="",
+            relevance=1,
+            summary=f"GitHub API超时 ({timeout}s)",
+            detail={"query": query, "status": "timeout"},
+        )
+    except Exception as e:
+        logger.warning("    github 搜索异常: %s, 标记为空", e)
+        _record_finding(
+            gap_id=gap["gap_id"], source="github_api",
+            title=f"GitHub搜索失败: {query}", url="",
+            relevance=1,
+            summary=f"GitHub API异常: {e}",
+            detail={"query": query, "status": "error", "error": str(e)},
+        )
+
+    return results
 
 
 # ── 状态报告 ──

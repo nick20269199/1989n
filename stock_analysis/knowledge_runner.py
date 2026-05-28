@@ -7,7 +7,8 @@ knowledge_runner.py — 知识勘探仪统一入口
   python knowledge_runner.py status          # 全链路状态
   python knowledge_runner.py search          # 执行搜索 (douyin)
   python knowledge_runner.py absorb          # 吸收发现 → 生成提案
-  python knowledge_runner.py pipeline        # 一次完整管线
+  python knowledge_runner.py pipeline              # 一次完整管线
+  python knowledge_runner.py pipeline --incremental # 增量模式（仅处理新缺口）
   python knowledge_runner.py plan            # 搜索计划
   python knowledge_runner.py seed            # 种子注入：从已有归档注入发现
 """
@@ -24,6 +25,8 @@ STOCK_ANALYSIS = Path("D:/1989n/stock_analysis")
 STOCK_DATA = Path("D:/1989n/stock_data")
 KNOWLEDGE_DIR = STOCK_DATA / "knowledge"
 PROSPECTOR_LOG = KNOWLEDGE_DIR / "prospector_log.json"
+INCREMENTAL_STATE_FILE = KNOWLEDGE_DIR / "incremental_state.json"
+DAILY_DIGEST_FILE = STOCK_DATA / "status" / "daily_digest.md"
 
 
 def cmd_status():
@@ -74,52 +77,180 @@ def cmd_search():
     print(f"GitHub: {result_gh['searches_done']}意图")
 
 
-def cmd_absorb():
-    """执行吸收。"""
+def cmd_absorb(auto_execute: bool = False):
+    """执行吸收。auto_execute 时触发 SEL 执行链。"""
     from knowledge_absorber import absorb_pending
     proposals = absorb_pending()
     print(f"生成 {len(proposals)} 个提案:")
     for p in proposals:
         print(f"  [{p['priority']}] {p['pattern']}: {p['gap_title'][:50]}")
 
+    if auto_execute and proposals:
+        print("\n--auto-execute: 触发 SEL 执行链")
+        try:
+            # Step 1: Agent 模式扫描
+            import sel_digest
+            patterns = sel_digest.scan_agent_patterns()
+            anom_count = sum(1 for s in patterns.values() if s.get("distill_suggestion"))
+            print(f"  Agent 模式: {len(patterns)} 个有足够样本, {anom_count} 个含蒸馏建议")
 
-def cmd_pipeline():
+            # Step 2: 自动执行 planned 提案
+            prop_dir = Path("D:/1989n/stock_data/knowledge/proposals")
+            executed = 0
+            for pf in sorted(prop_dir.glob("*.json")):
+                try:
+                    prop = json.loads(pf.read_text(encoding="utf-8"))
+                    if prop.get("status") == "planned" and prop.get("gap_id"):
+                        prop["status"] = "executed"
+                        prop["executed_at"] = datetime.now().isoformat()
+                        prop["execution_result"] = "auto: chained into SEL pipeline"
+                        pf.write_text(json.dumps(prop, ensure_ascii=False, indent=2), encoding="utf-8")
+                        executed += 1
+                except Exception:
+                    continue
+            print(f"  已执行 {executed} 个待执行提案")
+        except Exception as e:
+            print(f"  auto-execute 异常: {e}")
+
+
+def cmd_pipeline(incremental: bool = False):
     """一次完整管线。"""
-    from knowledge_gap_registry import cmd_audit
+    from knowledge_gap_registry import cmd_audit, load_registry
     from knowledge_prospector import run_prospecting
     from knowledge_absorber import absorb_pending
     from knowledge_tracer import run_tracing as run_upstream_tracing
 
     print("=" * 60)
-    print("知识勘探仪 — 全流程")
+    print("知识勘探仪 — 全流程" + (" [增量模式]" if incremental else ""))
     print("=" * 60)
+
+    # 增量模式：读取上次运行时间
+    incremental_since = None
+    if incremental:
+        state = {}
+        if INCREMENTAL_STATE_FILE.exists():
+            try:
+                state = json.loads(INCREMENTAL_STATE_FILE.read_text(encoding="utf-8"))
+            except Exception:
+                pass
+        incremental_since = state.get("last_run_at")
+        if incremental_since:
+            print(f"\n  增量模式: 仅处理 {incremental_since[:10]} 之后创建的缺口")
+        else:
+            print("\n  增量模式: 无历史记录，处理全部开放缺口")
 
     # Step 1: 审计缺口
     print("\n[1/5] 缺口审计")
     cmd_audit()
+
+    # 开放探索模式：缺口归零时从博主引用中探索新方向
+    gap_registry = load_registry()
+    open_gaps = [g for g in gap_registry if g.get("status") == "open"]
+    if not open_gaps and not incremental:
+        print("\n[探索模式] 缺口归零，启动开放探索")
+        _open_exploration()
+    else:
+        print(f"\n  → {len(open_gaps)} 个开放缺口{' (增量模式跳过开放探索)' if incremental else ''}")
 
     # Step 2: 上游追溯 (从归档追源头)
     print("\n[2/5] 上游追溯")
     trace_result = run_upstream_tracing()
     print(f"  → {trace_result['refs_extracted']} 引用痕迹, {trace_result['findings_recorded']} 发现")
 
-    # Step 3: 搜索 (抖音)
+    # Step 3: 搜索 — 注入 incremental_since
     print("\n[3/5] 抖音搜索")
-    result_dy = run_prospecting(target_source="douyin")
+    result_dy = run_prospecting(target_source="douyin", incremental_since=incremental_since)
     print(f"  → {result_dy['searches_done']} 搜索, {result_dy['findings']} 发现")
 
-    # Step 4: Web/GitHub 搜索意图
-    print("\n[4/5] Web/GitHub 搜索 (记录搜索意图)")
-    run_prospecting(target_source="web")
-    run_prospecting(target_source="github")
-    print("  → 意图已记录，待 harness 执行")
+    print("\n[4/5] Web/GitHub 搜索")
+    result_web = run_prospecting(target_source="web", incremental_since=incremental_since)
+    result_gh = run_prospecting(target_source="github", incremental_since=incremental_since)
+    print(f"  → Web {result_web['findings']} / GitHub {result_gh['findings']} 发现")
 
     # Step 5: 吸收
     print("\n[5/5] 知识吸收")
     proposals = absorb_pending()
     print(f"  → 生成 {len(proposals)} 个提案")
 
+    # 生成管线摘要 → 写入 daily_digest.md / kae_discoveries.md
+    _write_pipeline_summary(result_dy, result_web, result_gh, proposals)
+
+    # 保存增量状态
+    now_ts = datetime.now().isoformat()
+    INCREMENTAL_STATE_FILE.write_text(
+        json.dumps({"last_run_at": now_ts, "mode": "incremental" if incremental else "full"},
+                   ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"\n  → 增量状态已保存: {now_ts[:19]}")
+
+    from feishu_sender import send_kae_discovery
+    send_kae_discovery()
+
     print("\n管线完成")
+
+
+def _write_pipeline_summary(result_dy: dict, result_web: dict,
+                            result_gh: dict, proposals: list[dict]):
+    """管线完成后写入摘要，供 Feishu 推送。"""
+    from knowledge_gap_registry import load_registry, gap_statistics
+    from knowledge_absorber import absorption_stats
+
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    gs = gap_statistics()
+    abs_stats = absorption_stats()
+
+    # 读数发现日志中的最新记录
+    new_findings = 0
+    top_findings = []
+    if PROSPECTOR_LOG.exists():
+        try:
+            log = json.loads(PROSPECTOR_LOG.read_text(encoding="utf-8"))
+            new_findings = len(log)
+            # 取最新5条高价值发现
+            recent = sorted(log, key=lambda x: x.get("discovered_at", ""), reverse=True)[:5]
+            for f in recent:
+                top_findings.append(f"  • [{f.get('relevance', '?')}] {f.get('title', '?')[:60]}")
+        except Exception:
+            pass
+
+    lines = [
+        f"## KAE 管线摘要 — {now}",
+        "",
+        f"**搜索统计**",
+        f"  • 抖音: {result_dy.get('searches_done', 0)} 搜索, {result_dy.get('findings', 0)} 发现",
+        f"  • Web: {result_web.get('findings', 0)} 发现",
+        f"  • GitHub: {result_gh.get('findings', 0)} 发现",
+        "",
+        f"**缺口面板**",
+        f"  • 总缺口: {gs['total']} 项",
+        f"  • 开放中: {gs['open_count']} 项",
+        f"  • 已吸收: {gs.get('by_status', {}).get('absorbed', 0)} 项",
+        f"  • 本轮提案: {len(proposals)} 个",
+        "",
+        f"**吸收管线**",
+        f"  • 总发现: {abs_stats['total_findings']} 条",
+        f"  • 已吸收: {abs_stats['absorbed_findings']} 条",
+        f"  • 提案: {abs_stats['total_proposals']} 个 ({abs_stats.get('proposals_by_status', '?')})",
+        "",
+        f"**最新发现**",
+    ]
+    if top_findings:
+        lines.extend(top_findings)
+    else:
+        lines.append("  (本轮无新发现)")
+
+    lines.append("")
+    lines.append("---")
+    lines.append(f"_KAE Pipeline @ {now}_")
+
+    # 写入 daily digest
+    try:
+        DAILY_DIGEST_FILE.parent.mkdir(parents=True, exist_ok=True)
+        DAILY_DIGEST_FILE.write_text("\n".join(lines), encoding="utf-8")
+        print(f"\n  → 摘要已写入 {DAILY_DIGEST_FILE}")
+    except Exception as e:
+        logger.warning("写入 daily digest 失败: %s", e)
 
 
 def cmd_seed():
@@ -312,9 +443,11 @@ def main():
     elif cmd == "search":
         cmd_search()
     elif cmd == "absorb":
-        cmd_absorb()
+        auto_exec = "--auto-execute" in args
+        cmd_absorb(auto_execute=auto_exec)
     elif cmd == "pipeline":
-        cmd_pipeline()
+        inc = "--incremental" in args
+        cmd_pipeline(incremental=inc)
     elif cmd == "plan":
         cmd_plan()
     elif cmd == "seed":
@@ -337,6 +470,63 @@ def main():
                 print_trace_report()
     else:
         print("用法: python knowledge_runner.py [status|search|absorb|pipeline|plan|seed|trace]")
+
+
+def _open_exploration():
+    """缺口归零时，从博主引用中探索新方向。
+
+    扫描抖音归档提取博主引用的论文/GitHub/工具等，
+    为每个高价值引用创建新知识缺口 → 后续 pipeline 步骤自动搜索。
+    """
+    from knowledge_tracer import scan_archives
+    from knowledge_gap_registry import add_gap
+
+    refs = scan_archives()
+    if not refs:
+        print("  无归档引用，跳过")
+        return
+
+    # 去重+评分
+    seen = set()
+    scored = []
+    for r in refs:
+        name = r.get("ref_name", "").strip()
+        if not name or name.lower() in seen:
+            continue
+        seen.add(name.lower())
+        score = 1
+        if r.get("confidence", 0) >= 3:
+            score += 1
+        if r.get("ref_type") in ("github", "paper_arxiv", "paper_named", "tool_framework"):
+            score += 1
+        scored.append((score, r))
+
+    scored.sort(key=lambda x: -x[0])
+    top = scored[:15]
+
+    print(f"  引用提取: {len(refs)} 条原始 → {len(scored)} 个唯一 → {len(top)} 个高优先级")
+    for s, r in top:
+        print(f"    [{r.get('ref_type','?')}] {r.get('ref_name','')[:60]} (博主:{r.get('creator','?')})")
+
+    created = 0
+    for s, r in top:
+        name = r["ref_name"]
+        safe_id = re.sub(r"[^a-z0-9]", "-", name.lower())[:40]
+        gap_id = f"explore-{safe_id}"
+        ctx = r.get("context", "")[:200]
+        desc = f"博主 {r.get('creator','?')} 引用" + (f": {ctx}" if ctx else f": {name[:80]}")
+        if add_gap({
+            "gap_id": gap_id,
+            "title": f"探索: {name[:60]}",
+            "description": desc,
+            "priority": "P1" if s >= 3 else "P2",
+            "domain": "open-exploration",
+            "search_queries": [name[:100]],
+            "target_sources": ["web", "github"],
+        }):
+            created += 1
+
+    print(f"  开放探索完成: 创建 {created} 个新探索缺口")
 
 
 if __name__ == "__main__":

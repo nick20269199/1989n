@@ -15,6 +15,7 @@ from collections import deque
 from datetime import datetime
 
 import os
+from pathlib import Path
 
 from feishu_im_sender import send_text as _im_send_text
 from feishu_im_sender import send_card as _im_send_card
@@ -115,6 +116,97 @@ def send_text_message(text: str, chat_id: str = "") -> bool:
         return True
     _check_rate_limit()
     return _im_send_text(target, text)
+
+
+def send_midday_snapshot() -> bool:
+    """推送午间行情快照到 midday 群。"""
+    logger.info("推送午间行情快照")
+    return send_feishu_message("午盘数据", "午间行情快照已生成。\n详细数据请查看桌面文件。", "midday")
+
+
+def send_closing_brief() -> bool:
+    """推送收盘数据简报到 closing 群。"""
+    logger.info("推送收盘数据简报")
+    return send_feishu_message("收盘数据", "收盘简报已生成。\n详细数据请查看桌面文件。", "closing")
+
+
+def send_daily_brief() -> bool:
+    """推送系统日报（任务数/命中率）到 daily_brief 群。"""
+    logger.info("推送系统日报")
+    digest_path = Path("D:/1989n/stock_data/status/daily_digest.md")
+    if digest_path.exists():
+        content = digest_path.read_text(encoding="utf-8")
+    else:
+        content = "每日摘要文件未生成。"
+    return send_feishu_message("系统日报", content[:2000], "daily_brief")
+
+
+def send_alert(msg: str) -> bool:
+    """推送异常告警到 alerts 群（红色高优先级）。"""
+    logger.info("推送系统告警")
+    return send_feishu_alert("系统告警", msg, "alerts")
+
+
+def send_kae_discovery() -> bool:
+    """推送 KAE 管线摘要 + 缺口健康面板到 book 群。"""
+    logger.info("推送 KAE 发现")
+    kae_path = Path("D:/1989n/stock_data/status/kae_discoveries.md")
+    digest_path = Path("D:/1989n/stock_data/status/daily_digest.md")
+    sections = []
+
+    # 管线摘要（优先用 daily_digest.md）
+    if digest_path.exists():
+        content = digest_path.read_text(encoding="utf-8")
+        sections.append({"content": content[:2000]})
+    elif kae_path.exists():
+        content = kae_path.read_text(encoding="utf-8")
+        sections.append({"content": content[:2000]})
+
+    # 缺口健康面板
+    try:
+        gap_path = Path("D:/1989n/stock_data/knowledge/gap_registry.json")
+        if gap_path.exists():
+            import json
+            gaps = json.loads(gap_path.read_text(encoding="utf-8"))
+            total = len(gaps)
+            by_status = {}
+            by_priority = {}
+            for g in gaps:
+                s = g.get("status", "unknown")
+                by_status[s] = by_status.get(s, 0) + 1
+                p = g.get("priority", "P3")
+                by_priority[p] = by_priority.get(p, 0) + 1
+
+            panel = [
+                "**缺口健康面板**",
+                f"  总缺口: {total}",
+            ]
+            for s in ("open", "investigating", "absorbing", "absorbed", "closed"):
+                if s in by_status:
+                    panel.append(f"  {s}: {by_status[s]}")
+            panel.append("")
+            for p in ("P0", "P1", "P2", "P3"):
+                if p in by_priority:
+                    panel.append(f"  {p}: {by_priority[p]}")
+            sections.append({"content": "\n".join(panel)})
+    except Exception as e:
+        logger.warning("缺口面板生成失败: %s", e)
+
+    if not sections:
+        sections.append({"content": "暂无 KAE 发现。"})
+    return send_feishu_card("KAE 发现", sections, "book")
+
+
+def send_deep_research() -> bool:
+    """推送 KAE 深度发现/提案到 deep_research 群。"""
+    logger.info("推送深度研究")
+    return send_feishu_message("深度研究", "周度深度发现报告已生成。", "deep_research")
+
+
+def send_investment_signal() -> bool:
+    """推送情报信号/渠道报告到 investment 群。"""
+    logger.info("推送投资分析")
+    return send_feishu_message("投资分析", "情报信号已更新。", "investment")
 
 
 if __name__ == "__main__":
