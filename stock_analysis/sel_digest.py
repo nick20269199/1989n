@@ -116,7 +116,195 @@ def scan_agent_patterns():
     return result
 
 
+# ── Dream Cycle ────────────────────────────────────────────────────────
+
+
+def dream_cycle():
+    """Gbrain 梦周期：夜间整理当日交互，提取实体→主题关联→冲突仲裁→过期标记。
+
+    流程:
+    1. 加载当日 agent_exec 日志，提取实体（关键词/Agent名/任务类型）
+    2. TF-IDF 主题关联：对高频任务做相似度聚类
+    3. 冲突仲裁：检测同一任务不同结论的矛盾
+    4. 过期标记：7天以上无更新的模式标记为 stale
+
+    Returns:
+        dict: {entities, topic_clusters, conflicts, stale_patterns}
+    """
+    today = date.today().isoformat()
+    today_log_dir = AGENT_EXEC_LOG / today
+    result = {
+        "date": today,
+        "entities": {},
+        "topic_clusters": [],
+        "conflicts": [],
+        "stale_patterns": [],
+    }
+
+    if not today_log_dir.exists():
+        print("[dream] 今日无 agent 日志，跳过")
+        return result
+
+    # 1) 实体提取
+    entities = {}  # entity -> {count, agent, tasks}
+    all_tasks = []
+    for log_file in sorted(today_log_dir.glob("*.json")):
+        agent_name = log_file.stem
+        try:
+            data = json.loads(log_file.read_text(encoding="utf-8"))
+            records = data if isinstance(data, list) else [data]
+            for rec in records:
+                task = rec.get("task", "")
+                summary = rec.get("output_summary", "")
+                if task:
+                    all_tasks.append({"agent": agent_name, "task": task,
+                                      "exit_code": rec.get("exit_code", -1),
+                                      "summary": summary})
+                    # 从 task 和 summary 中提取关键词
+                    text = (task + " " + summary).lower()
+                    # 简单的实体提取：2字以上中文/英文词
+                    words = re.findall(r'[一-鿿]{2,}|[a-zA-Z][a-zA-Z0-9_-]{2,}', text)
+                    for w in words[:10]:
+                        if w not in entities:
+                            entities[w] = {"count": 0, "agents": set(), "tasks": []}
+                        entities[w]["count"] += 1
+                        entities[w]["agents"].add(agent_name)
+                        if task[:60] not in entities[w]["tasks"]:
+                            entities[w]["tasks"].append(task[:60])
+        except (json.JSONDecodeError, Exception):
+            continue
+
+    # 排序实体按出现频率
+    sorted_entities = sorted(entities.items(), key=lambda x: -x[1]["count"])
+    top_entities = [
+        {"word": w, "count": s["count"], "agents": list(s["agents"]),
+         "sample_tasks": s["tasks"][:3]}
+        for w, s in sorted_entities[:20]
+    ]
+    result["entities"] = {"total_unique": len(entities), "top": top_entities}
+
+    # 2) 主题关联聚类
+    task_texts = [t["task"] for t in all_tasks if t["task"]]
+    if len(task_texts) >= 3:
+        try:
+            from sklearn.feature_extraction.text import TfidfVectorizer
+            from sklearn.metrics.pairwise import cosine_similarity
+            import numpy as np
+
+            vectorizer = TfidfVectorizer(analyzer="char_wb", ngram_range=(2, 4),
+                                         max_features=100)
+            tfidf = vectorizer.fit_transform(task_texts)
+            sim_matrix = cosine_similarity(tfidf)
+
+            # 找到相似度 > 0.4 的任务对
+            clusters = []
+            used = set()
+            for i in range(len(task_texts)):
+                if i in used:
+                    continue
+                cluster = [i]
+                for j in range(i + 1, len(task_texts)):
+                    if sim_matrix[i][j] > 0.4:
+                        cluster.append(j)
+                        used.add(j)
+                if len(cluster) > 1:
+                    used.add(i)
+                    clusters.append([{"task": task_texts[k], "agent": all_tasks[k]["agent"],
+                                      "exit_code": all_tasks[k]["exit_code"]}
+                                     for k in cluster])
+            result["topic_clusters"] = [
+                {"size": len(c), "tasks": [t["task"][:60] for t in c],
+                 "agents": list(set(t["agent"] for t in c))}
+                for c in clusters
+            ]
+        except ImportError:
+            pass
+
+    # 3) 冲突仲裁：同一 agent 同任务不同 exit_code
+    agent_task_outcomes = {}
+    for t in all_tasks:
+        key = (t["agent"], t["task"][:60])
+        if key not in agent_task_outcomes:
+            agent_task_outcomes[key] = set()
+        agent_task_outcomes[key].add(t["exit_code"])
+
+    for (agent, task), codes in agent_task_outcomes.items():
+        if len(codes) > 1 and 0 in codes and any(c != 0 for c in codes):
+            result["conflicts"].append({
+                "agent": agent, "task": task,
+                "exit_codes": sorted(codes),
+                "severity": "high" if -1 in codes else "medium",
+            })
+
+    # 4) 过期标记：扫描所有 agent 目录，检查 7 天以上无更新的模式
+    cutoff = date.today() - timedelta(days=7)
+    for day_dir in sorted(AGENT_EXEC_LOG.iterdir()):
+        if not day_dir.is_dir():
+            continue
+        try:
+            day = datetime.strptime(day_dir.name, "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if day >= cutoff:
+            continue
+        for log_file in day_dir.glob("*.json"):
+            agent_name = log_file.stem
+            # 检查这个 agent 最近7天还有没有日志
+            has_recent = False
+            for recent_dir in AGENT_EXEC_LOG.iterdir():
+                if not recent_dir.is_dir():
+                    continue
+                try:
+                    rd = datetime.strptime(recent_dir.name, "%Y-%m-%d").date()
+                except ValueError:
+                    continue
+                if rd >= cutoff and (recent_dir / f"{agent_name}.json").exists():
+                    has_recent = True
+                    break
+            if not has_recent:
+                result["stale_patterns"].append({
+                    "agent": agent_name, "last_seen": day_dir.name,
+                    "severity": "warning",
+                })
+
+    # 输出报告
+    print(f"\n[dream] 梦周期 — {today}")
+    print(f"  实体: {result['entities']['total_unique']} 个唯一 (Top: "
+          f"{', '.join(e['word'] for e in top_entities[:5])})")
+    if result["topic_clusters"]:
+        print(f"  主题簇: {len(result['topic_clusters'])} 个")
+        for c in result["topic_clusters"][:5]:
+            print(f"    [{c['size']}任务] {' | '.join(c['tasks'][:3])}")
+    else:
+        print(f"  主题簇: 无")
+    if result["conflicts"]:
+        print(f"  冲突: {len(result['conflicts'])} 个")
+        for c in result["conflicts"][:3]:
+            print(f"    [{c['severity']}] {c['agent']}: {c['task'][:40]}")
+    else:
+        print(f"  冲突: 无")
+    if result["stale_patterns"]:
+        print(f"  过期模式: {len(result['stale_patterns'])} 个")
+    else:
+        print(f"  过期模式: 无")
+
+    # 持久化梦周期结果
+    dream_file = DEPT_STATUS_DIR / f"dream_{today}.json"
+    dream_file.write_text(
+        json.dumps(result, ensure_ascii=False, indent=2, default=str),
+        encoding="utf-8"
+    )
+    print(f"  成果已持久化 -> {dream_file}")
+
+    return result
+
+
 def main():
+    # 检查 --dream 模式
+    if "--dream" in sys.argv:
+        dream_cycle()
+        return
+
     today = date.today().isoformat()
 
     # 0) 两阶段 Agent 模式验证 (独立于 lint 运行)

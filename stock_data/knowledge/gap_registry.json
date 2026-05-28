@@ -401,9 +401,11 @@
       "web",
       "github"
     ],
-    "status": "investigating",
+    "status": "solution_found",
     "created_at": "2026-05-28T12:01:09.359927",
-    "updated_at": "2026-05-28T12:08:24.866650"
+    "updated_at": "2026-05-28T22:13:55.535463",
+    "absorbed_at": "2026-05-28T22:13:55.535466",
+    "absorbed_as": "提案: prop_explore-claude-code_1779977635"
   },
   {
     "gap_id": "explore-codex",

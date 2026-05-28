@@ -3333,14 +3333,14 @@
       "round_trips": 1
     }
   ],
-  "updated": "2026-05-26",
+  "updated": "2026-05-28",
   "_stats": {
     "holding_count": 6,
     "cleared_count": 364,
     "total_realized_pnl": -217196.40,
-    "source": "portfolio.json holdings + Table.xlsx FIFO matching",
+    "source": "Excel 4/27-5/28 FIFO verified + pre-4/27 history",
     "updated": "2026-05-28"
   },
-  "_updated": "2026-05-27 15:58:21",
-  "_trade_date": "2026-05-27"
+  "_updated": "2026-05-28 16:00:00",
+  "_trade_date": "2026-05-28"
 }

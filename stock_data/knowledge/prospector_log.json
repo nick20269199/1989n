@@ -23840,7 +23840,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.314838",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.532790",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -23861,7 +23863,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.350237",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.534094",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -23882,7 +23886,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.377151",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.536464",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -23903,7 +23909,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.402931",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.537502",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -23924,7 +23932,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.430098",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.538460",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -23945,7 +23955,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.457373",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.539424",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -23966,7 +23978,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.485976",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.540289",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -23987,7 +24001,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.517274",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.541224",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24008,7 +24024,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.543970",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.542068",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24029,7 +24047,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.569961",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-28T22:13:55.542959",
+    "proposal_id": "prop_explore-claude-code_1779977635"
   },
   {
     "finding_id": "explore-claude-code_1779941304",

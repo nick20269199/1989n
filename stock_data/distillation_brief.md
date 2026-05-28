@@ -2,9 +2,10 @@
 
 ## 待蒸馏文件 (匹配规则)
 
+- `git_push.log` (639.8KB)
 - `last_error.txt` (0.0KB)
 
-共 1 个文件待蒸馏
+共 2 个文件待蒸馏
 
 ## 今日其他产出
 
@@ -12,34 +13,34 @@
 - `analysis_30min_20260528_1130.md` (0.6KB)
 - `analysis_30min_20260528_1500.json` (1.5KB)
 - `analysis_30min_20260528_1500.md` (0.6KB)
+- `analysis_overnight_20260528_2337.json` (0.6KB)
+- `analysis_overnight_20260528_2337.md` (0.2KB)
 - `call_auction.log` (6.2KB)
 - `closing_review.log` (38.9KB)
 - `cognitive_agent.log` (87.5KB)
 - `distillation_brief.md` (1.9KB)
-- `distill_queue.json` (8.6KB)
+- `distill_queue.json` (8.7KB)
+- `evening.log` (17.8KB)
 - `feishu_outbox.jsonl` (0.0KB)
+- `forecast_closer.log` (2.4KB)
 - `health_check.log` (3.1KB)
 - `hot_stocks.log` (320.7KB)
 - `intraday_close.log` (63.1KB)
 - `intraday_midday.log` (52.2KB)
+- `kae_daily.log` (0.1KB)
 - `morning_brief_agent_latest.json` (6.7KB)
-- `morning_brief_agent_latest.md` (6.1KB)
-- `nightly_health.log` (9.1KB)
-- `nightly_plan.log` (98.0KB)
-- `recon_daily.log` (3.6KB)
-- `Table.xls-2026.5.28` (0.4KB)
 
-... 还有 4154 个文件
+... 还有 4170 个文件
 
 ## 队列积压 (未蒸馏)
 
-- 2026-05-26: git_push.log
 - 2026-05-27: closing_review.json
 - 2026-05-27: last_error.txt
 - 2026-05-27: git_push.log
 - 2026-05-28: last_error.txt
+- 2026-05-28: git_push.log
 
-... 还有 49 条
+... 还有 50 条
 
 ---
 
@@ -57,4 +58,4 @@
 4. 如无新知识 → 标记队列条目为 skipped
 5. 推送更新到 GitHub (git_auto_push.py)
 
-> 生成时间: 2026-05-28 15:47
+> 生成时间: 2026-05-28 23:47

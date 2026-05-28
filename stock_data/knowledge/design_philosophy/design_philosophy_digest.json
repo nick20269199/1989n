@@ -1,0 +1,65 @@
+[
+  {
+    "creator": "九天Hector",
+    "title": "手把手教你把 Gbrain 装进Claude Code。 > 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LLM 长期记忆项",
+    "content": "手把手教你把 Gbrain 装进Claude Code。 > 本期围绕 Gbrain 这个 YC 现任总裁 Gary Tan 本月亲手开源、GitHub 已破 1 万 star 的 LLM 长期记忆项目，完整跑通从安装初始化到 MCP 集成的工业级落地全链路。视频拆四件事：①为什么 RAG / Graph RAG 改了 4 版召回精度还是掉、Gbrain\"按主题归档结构化笔记\"的路径凭什么解决；②dream 周期夜间整理实际配置——实体提取/主题关联/冲突仲裁/过期标记 4 步是怎么跑的；③skillify 错误自愈机制——Agent 检索错一次自己生成新 skill 不用改 prompt；④把 Gbrain 装进 Claude Code 当 MCP 用，今晚 Agent 就拥有跨会话跨月份的长期记忆。复刻项目 + 12 步检索完整对话记录 + 与 Memory 0/Letta 横向对比表，评论区留言资料，我会挨个回复哈～#Gbrain   #Agent #程序员 #抖音前沿科技首发计划 #AI应用教程",
+    "url": "https://www.douyin.com/video/7643757516882496808",
+    "extracted_at": "2026-05-28T22:19:28.805364"
+  },
+  {
+    "creator": "清华姜学长",
+    "title": "AI自己做AI研究，Karpathy开源AutoResearch #人工智能 #大模型 #AI工具 #vibecoding #姜学长",
+    "content": "AI自己做AI研究，Karpathy开源AutoResearch #人工智能 #大模型 #AI工具 #vibecoding #姜学长",
+    "url": "https://www.douyin.com/video/7627479575833258865",
+    "extracted_at": "2026-05-28T22:19:28.809799"
+  },
+  {
+    "creator": "清华姜学长",
+    "title": "Karpathy是怎么学AI的？他的方法普通人能用 #人工智能 #大模型 #AI工具 #智能体 #姜学长",
+    "content": "Karpathy是怎么学AI的？他的方法普通人能用 #人工智能 #大模型 #AI工具 #智能体 #姜学长",
+    "url": "https://www.douyin.com/video/7622660806530455153",
+    "extracted_at": "2026-05-28T22:19:28.809830"
+  },
+  {
+    "creator": "清华姜学长",
+    "title": "Karpathy紧急纠偏，和AI对话请戒掉“你”和“我 Karpathy紧急纠偏，和AI对话请戒掉“你”和“我 #AI #大模型 #人工智能 #AI对话 #karpathy",
+    "content": "Karpathy紧急纠偏，和AI对话请戒掉“你”和“我 Karpathy紧急纠偏，和AI对话请戒掉“你”和“我 #AI #大模型 #人工智能 #AI对话 #karpathy",
+    "url": "https://www.douyin.com/video/7584421760159993137",
+    "extracted_at": "2026-05-28T22:19:28.809981"
+  },
+  {
+    "creator": "清华姜学长",
+    "title": "从Andrej Karpathy 看LLMs目前缺乏哪些心智 从Andrej Karpathy 看LLMs目前缺乏哪些心智 #大模型 #LLMs #AI #人工智能 #干货分享",
+    "content": "从Andrej Karpathy 看LLMs目前缺乏哪些心智 从Andrej Karpathy 看LLMs目前缺乏哪些心智 #大模型 #LLMs #AI #人工智能 #干货分享",
+    "url": "https://www.douyin.com/video/7566272457143225637",
+    "extracted_at": "2026-05-28T22:19:28.810070"
+  },
+  {
+    "creator": "阿森编程日记",
+    "title": "只用了Claude Code 30%能力？7个必装Skill 如果你用Claude Code只发挥了30%能力，一定要看这7个必装Skill！附官方英文名：Superpowers、……版本过低，升级后",
+    "content": "只用了Claude Code 30%能力？7个必装Skill 如果你用Claude Code只发挥了30%能力，一定要看这7个必装Skill！附官方英文名：Superpowers、……版本过低，升级后可展示全部信息 7个值得安装的Claude Code Skill，包括全能Skill Superpowers、文档处理神器PDF、去AI味神器humanizer-zh、大项目救星planning with files、前端颜值救星frontend-design、代码质量守护神Skill review和压轴神器skill-creator。这些Skill覆盖开发全流程、文档处理、前端优化、代码质量等方面，能让Clau...",
+    "url": "https://www.douyin.com/video/7638504373409369337",
+    "extracted_at": "2026-05-28T22:19:28.812112"
+  },
+  {
+    "creator": "阿森编程日记",
+    "title": "强烈推荐6个自用skill 2026强烈推荐新手必用6个skill，功能超齐全！自用认证。\n#skills #AI #AI工作流 #claudecode #大模型",
+    "content": "强烈推荐6个自用skill 2026强烈推荐新手必用6个skill，功能超齐全！自用认证。\n#skills #AI #AI工作流 #claudecode #大模型 推荐6个实用技能，包括reator、document skills、find skill和frontend design。reator可将通用工作流转化为独特skill，document skills可自动处理文档，find skill可精准找到适合的skill，frontend design是前端优化神器。",
+    "url": "https://www.douyin.com/video/7627063419945979188",
+    "extracted_at": "2026-05-28T22:19:28.812243"
+  },
+  {
+    "creator": "阿森编程日记（AI自动化）",
+    "title": "只用了Claude Code 30%能力？7个必装Skill 如果你用Claude Code只发挥了30%能力，一定要看这7个必装Skill！附官方英文名：Superpowers、……版本过低，升级后",
+    "content": "只用了Claude Code 30%能力？7个必装Skill 如果你用Claude Code只发挥了30%能力，一定要看这7个必装Skill！附官方英文名：Superpowers、……版本过低，升级后可展示全部信息 7个值得安装的Claude Code Skill，包括全能Skill Superpowers、文档处理神器PDF、去AI味神器humanizer-zh、大项目救星planning with files、前端颜值救星frontend-design、代码质量守护神Skill review和压轴神器skill-creator。这些Skill覆盖开发全流程、文档处理、前端优化、代码质量等方面，能让Clau...",
+    "url": "https://www.douyin.com/video/7638504373409369337",
+    "extracted_at": "2026-05-28T22:19:28.813955"
+  },
+  {
+    "creator": "阿森编程日记（AI自动化）",
+    "title": "强烈推荐6个自用skill 2026强烈推荐新手必用6个skill，功能超齐全！自用认证。\n#skills #AI #AI工作流 #claudecode #大模型",
+    "content": "强烈推荐6个自用skill 2026强烈推荐新手必用6个skill，功能超齐全！自用认证。\n#skills #AI #AI工作流 #claudecode #大模型 推荐6个实用技能，包括reator、document skills、find skill和frontend design。reator可将通用工作流转化为独特skill，document skills可自动处理文档，find skill可精准找到适合的skill，frontend design是前端优化神器。",
+    "url": "https://www.douyin.com/video/7627063419945979188",
+    "extracted_at": "2026-05-28T22:19:28.814083"
+  }
+]

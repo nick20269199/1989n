@@ -1,0 +1,636 @@
+{
+  "analysis_timestamp": "2026-05-28T20:33:03.471210",
+  "summary": {
+    "total_gaps": 29,
+    "total_prospector_entries": 888,
+    "covered_gap_count": 17,
+    "uncovered_gap_count": 12,
+    "open_exploration_gap_count": 15
+  },
+  "covered_gaps": [
+    {
+      "gap_id": "pipeline-knowledge-db-expert-connect",
+      "title": "Knowledge DB 未接入 Expert 管线",
+      "domain": "pipeline",
+      "priority": "P0",
+      "status": "solution_found",
+      "total_findings": 42,
+      "high_value_findings": 11,
+      "high_value_absorbed": 11,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "arch-context-isolation",
+      "title": "Expert 上下文隔离 — 拼接大 prompt 导致知识熵增",
+      "domain": "architecture",
+      "priority": "P1",
+      "status": "solution_found",
+      "total_findings": 23,
+      "high_value_findings": 23,
+      "high_value_absorbed": 23,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "knowledge-creator-discovery",
+      "title": "无主动知识发现机制 — 等人给链接而非自己搜",
+      "domain": "knowledge",
+      "priority": "P1",
+      "status": "insight_enriched",
+      "total_findings": 19,
+      "high_value_findings": 19,
+      "high_value_absorbed": 19,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "knowledge-upstream-tracing",
+      "title": "上游追溯 — 从抖音引用反向追踪原始论文/演讲/开源项目",
+      "domain": "knowledge",
+      "priority": "P1",
+      "status": "solution_found",
+      "total_findings": 65,
+      "high_value_findings": 13,
+      "high_value_absorbed": 13,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "pipeline-shared-cache",
+      "title": "Expert 间无共享缓存 — 同一数据被重复拉取",
+      "domain": "pipeline",
+      "priority": "P1",
+      "status": "absorbed",
+      "total_findings": 15,
+      "high_value_findings": 3,
+      "high_value_absorbed": 3,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "pipeline-data-whitelist",
+      "title": "数据采集层缺白名单校验",
+      "domain": "pipeline",
+      "priority": "P1",
+      "status": "absorbed",
+      "total_findings": 15,
+      "high_value_findings": 3,
+      "high_value_absorbed": 3,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "explore-------",
+      "title": "探索: 谷歌再发论文",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "solution_found",
+      "total_findings": 54,
+      "high_value_findings": 50,
+      "high_value_absorbed": 3,
+      "high_value_unabsorbed": 47,
+      "is_covered": true
+    },
+    {
+      "gap_id": "explore-engram",
+      "title": "探索: Engram",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "solution_found",
+      "total_findings": 36,
+      "high_value_findings": 34,
+      "high_value_absorbed": 3,
+      "high_value_unabsorbed": 31,
+      "is_covered": true
+    },
+    {
+      "gap_id": "explore-------deepseek----engram",
+      "title": "探索: 一条视频搞懂Deepseek最新论文Engram",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "solution_found",
+      "total_findings": 36,
+      "high_value_findings": 34,
+      "high_value_absorbed": 3,
+      "high_value_unabsorbed": 31,
+      "is_covered": true
+    },
+    {
+      "gap_id": "knowledge-ai-design-philosophy",
+      "title": "AI大师设计哲学 — 从论文/演讲中提炼架构理念和思维方式",
+      "domain": "knowledge",
+      "priority": "P2",
+      "status": "solution_found",
+      "total_findings": 20,
+      "high_value_findings": 17,
+      "high_value_absorbed": 17,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "arch-multi-layer-security",
+      "title": "单点安全防御 — 需扩展为多层架构",
+      "domain": "architecture",
+      "priority": "P2",
+      "status": "absorbed",
+      "total_findings": 27,
+      "high_value_findings": 14,
+      "high_value_absorbed": 14,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "trading-rules-not-operationalized",
+      "title": "trading_rules.json 存在但未被 analysis 管线加载",
+      "domain": "trading",
+      "priority": "P2",
+      "status": "absorbed",
+      "total_findings": 25,
+      "high_value_findings": 12,
+      "high_value_absorbed": 12,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "arch-gbrain-integration",
+      "title": "Gbrain 长期记忆可探索集成",
+      "domain": "architecture",
+      "priority": "P2",
+      "status": "solution_found",
+      "total_findings": 25,
+      "high_value_findings": 12,
+      "high_value_absorbed": 12,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "tool-claude-code-skills-distillation",
+      "title": "Claude Code Skills 蒸馏机制",
+      "domain": "tool",
+      "priority": "P2",
+      "status": "solution_found",
+      "total_findings": 21,
+      "high_value_findings": 10,
+      "high_value_absorbed": 10,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "arch-memory-hierarchy",
+      "title": "记忆系统未分层 — 单层 flat 结构",
+      "domain": "architecture",
+      "priority": "P2",
+      "status": "solution_found",
+      "total_findings": 16,
+      "high_value_findings": 4,
+      "high_value_absorbed": 4,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "tool-agent-self-evolution-pattern",
+      "title": "Agent 自进化模式 — 从九天Hector Skills自进化工程",
+      "domain": "tool",
+      "priority": "P2",
+      "status": "solution_found",
+      "total_findings": 16,
+      "high_value_findings": 4,
+      "high_value_absorbed": 4,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    },
+    {
+      "gap_id": "concept-position-sizing",
+      "title": "缺乏系统化的仓位管理模型",
+      "domain": "trading",
+      "priority": "P2",
+      "status": "absorbed",
+      "total_findings": 8,
+      "high_value_findings": 2,
+      "high_value_absorbed": 2,
+      "high_value_unabsorbed": 0,
+      "is_covered": true
+    }
+  ],
+  "uncovered_gaps": [
+    {
+      "gap_id": "explore-claude-code",
+      "title": "探索: Claude Code",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 72,
+      "high_value_findings": 34,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 34,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-copilot",
+      "title": "探索: Copilot",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "open",
+      "total_findings": 50,
+      "high_value_findings": 47,
+      "high_value_absorbed": 1,
+      "high_value_unabsorbed": 46,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-cursor",
+      "title": "探索: cursor",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 45,
+      "high_value_findings": 38,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 38,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-chroma",
+      "title": "探索: Chroma",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 45,
+      "high_value_findings": 42,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 42,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-dify",
+      "title": "探索: Dify",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 45,
+      "high_value_findings": 36,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 36,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-codex",
+      "title": "探索: Codex",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 25,
+      "high_value_findings": 17,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 17,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-langchain",
+      "title": "探索: LangChain",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 24,
+      "high_value_findings": 11,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 11,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-lora",
+      "title": "探索: LoRA",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 24,
+      "high_value_findings": 9,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 9,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-vllm",
+      "title": "探索: vLLM",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 23,
+      "high_value_findings": 12,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 12,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-qlora",
+      "title": "探索: QLoRA",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 23,
+      "high_value_findings": 8,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 8,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-gbrain",
+      "title": "探索: Gbrain",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "open",
+      "total_findings": 10,
+      "high_value_findings": 4,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 4,
+      "is_covered": false
+    },
+    {
+      "gap_id": "explore-xbuilderlab-cheat-on-content",
+      "title": "探索: XBuilderLAB/cheat-on-content",
+      "domain": "open-exploration",
+      "priority": "P2",
+      "status": "open",
+      "total_findings": 7,
+      "high_value_findings": 5,
+      "high_value_absorbed": 0,
+      "high_value_unabsorbed": 5,
+      "is_covered": false
+    }
+  ],
+  "top_unaddressed": [
+    {
+      "rank": 1,
+      "gap_id": "explore-claude-code",
+      "title": "探索: Claude Code",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 72,
+      "high_value_findings": 34,
+      "why_unaddressed": "Status=investigating, 72 total findings but 0 HV absorbed"
+    },
+    {
+      "rank": 2,
+      "gap_id": "explore-copilot",
+      "title": "探索: Copilot",
+      "priority": "P2",
+      "status": "open",
+      "total_findings": 50,
+      "high_value_findings": 47,
+      "why_unaddressed": "Status=open, only 1 HV absorbed of 47 total"
+    },
+    {
+      "rank": 3,
+      "gap_id": "explore-cursor",
+      "title": "探索: cursor",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 45,
+      "high_value_findings": 38,
+      "why_unaddressed": "Status=investigating, 45 total findings but 0 HV absorbed"
+    },
+    {
+      "rank": 4,
+      "gap_id": "explore-chroma",
+      "title": "探索: Chroma",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 45,
+      "high_value_findings": 42,
+      "why_unaddressed": "Status=investigating, 45 total findings but 0 HV absorbed"
+    },
+    {
+      "rank": 5,
+      "gap_id": "explore-dify",
+      "title": "探索: Dify",
+      "priority": "P2",
+      "status": "investigating",
+      "total_findings": 45,
+      "high_value_findings": 36,
+      "why_unaddressed": "Status=investigating, 45 total findings but 0 HV absorbed"
+    }
+  ],
+  "open_exploration_status": {
+    "explore-gbrain": {
+      "title": "探索: Gbrain",
+      "status": "open",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 10,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 4
+    },
+    "explore-claude-code": {
+      "title": "探索: Claude Code",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace",
+        "web",
+        "web_bing"
+      ],
+      "total_findings": 72,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 34
+    },
+    "explore-codex": {
+      "title": "探索: Codex",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace",
+        "vv_db"
+      ],
+      "total_findings": 25,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 17
+    },
+    "explore-cursor": {
+      "title": "探索: cursor",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 45,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 38
+    },
+    "explore-langchain": {
+      "title": "探索: LangChain",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 24,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 11
+    },
+    "explore-lora": {
+      "title": "探索: LoRA",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 24,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 9
+    },
+    "explore-vllm": {
+      "title": "探索: vLLM",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 23,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 12
+    },
+    "explore-qlora": {
+      "title": "探索: QLoRA",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 23,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 8
+    },
+    "explore-chroma": {
+      "title": "探索: Chroma",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 45,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 42
+    },
+    "explore-dify": {
+      "title": "探索: Dify",
+      "status": "investigating",
+      "finding_sources": [
+        "github",
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 45,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 36
+    },
+    "explore-copilot": {
+      "title": "探索: Copilot",
+      "status": "open",
+      "finding_sources": [
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 50,
+      "hv_absorbed": 1,
+      "hv_unabsorbed": 46
+    },
+    "explore-xbuilderlab-cheat-on-content": {
+      "title": "探索: XBuilderLAB/cheat-on-content",
+      "status": "open",
+      "finding_sources": [
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 7,
+      "hv_absorbed": 0,
+      "hv_unabsorbed": 5
+    },
+    "explore-engram": {
+      "title": "探索: Engram",
+      "status": "solution_found",
+      "finding_sources": [
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 36,
+      "hv_absorbed": 3,
+      "hv_unabsorbed": 31
+    },
+    "explore-------deepseek----engram": {
+      "title": "探索: 一条视频搞懂Deepseek最新论文Engram",
+      "status": "solution_found",
+      "finding_sources": [
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 36,
+      "hv_absorbed": 3,
+      "hv_unabsorbed": 31
+    },
+    "explore-------": {
+      "title": "探索: 谷歌再发论文",
+      "status": "solution_found",
+      "finding_sources": [
+        "github_api",
+        "upstream_trace"
+      ],
+      "total_findings": 54,
+      "hv_absorbed": 3,
+      "hv_unabsorbed": 47
+    }
+  },
+  "recommended_next": [
+    {
+      "action": "Launch Exploration: 探索: Gbrain",
+      "gap_id": "explore-gbrain",
+      "priority": "P2",
+      "status": "open",
+      "reason": "Open-exploration gap with status=open, not yet investigated",
+      "specific_step": "Read trace evidence for this gap, execute web search for original source material"
+    },
+    {
+      "action": "Launch Exploration: 探索: Copilot",
+      "gap_id": "explore-copilot",
+      "priority": "P2",
+      "status": "open",
+      "reason": "Open-exploration gap with status=open, not yet investigated",
+      "specific_step": "Read trace evidence for this gap, execute web search for original source material"
+    },
+    {
+      "action": "Launch Exploration: 探索: XBuilderLAB/cheat-on-content",
+      "gap_id": "explore-xbuilderlab-cheat-on-content",
+      "priority": "P2",
+      "status": "open",
+      "reason": "Open-exploration gap with status=open, not yet investigated",
+      "specific_step": "Read trace evidence for this gap, execute web search for original source material"
+    },
+    {
+      "action": "Batch Absorb: 探索: 谷歌再发论文",
+      "gap_id": "explore-------",
+      "priority": "P2",
+      "status": "solution_found",
+      "reason": "Has 47 high-value unabsorbed findings",
+      "specific_step": "Run sel_digest.py to distill these findings, generate proposal, trigger absorption"
+    },
+    {
+      "action": "Batch Absorb: 探索: Chroma",
+      "gap_id": "explore-chroma",
+      "priority": "P2",
+      "status": "investigating",
+      "reason": "Has 42 high-value unabsorbed findings",
+      "specific_step": "Run sel_digest.py to distill these findings, generate proposal, trigger absorption"
+    }
+  ]
+}

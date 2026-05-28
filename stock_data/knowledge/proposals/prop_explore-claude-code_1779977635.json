@@ -1,0 +1,19 @@
+{
+  "proposal_id": "prop_explore-claude-code_1779977635",
+  "gap_id": "explore-claude-code",
+  "gap_title": "探索: Claude Code",
+  "priority": "P2",
+  "source": "外部来源",
+  "source_title": "shareAI-lab/learn-claude-code",
+  "source_url": "https://github.com/shareAI-lab/learn-claude-code",
+  "relevance": 5,
+  "summary": "强关联: 标题/描述高度匹配缺口关键字: shareAI-lab/learn-claude-code (★63112)",
+  "pattern": "general",
+  "implied_changes": [],
+  "implementation_hint": "待分析具体实施方案",
+  "test_files": [],
+  "status": "proposed",
+  "created_at": "2026-05-28T22:13:55.542939",
+  "executed_at": null,
+  "execution_result": null
+}
