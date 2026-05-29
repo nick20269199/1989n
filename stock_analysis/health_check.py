@@ -302,6 +302,100 @@ def check_department_readiness() -> dict:
     return checks
 
 
+def _collect_agent_metrics():
+    """采集 Agent 执行指标，写入 system_health.json"""
+    import glob
+    system_health = Path("D:/1989n/stock_data/status/system_health.json")
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    # 1. Agent 执行日志统计
+    agent_log_dir = Path("D:/1989n/logs/agent_exec")
+    total_calls = 0
+    failed_calls = 0
+    if agent_log_dir.exists():
+        log_files = list(agent_log_dir.rglob("*.json"))
+        # 只看最近 7 天
+        cutoff = datetime.now().timestamp() - 7 * 86400
+        for f in log_files:
+            try:
+                if f.stat().st_mtime < cutoff:
+                    continue
+                data = json.loads(f.read_text(encoding="utf-8"))
+                total_calls += 1
+                if data.get("exit_code", 0) != 0:
+                    failed_calls += 1
+            except Exception:
+                pass
+
+    agent_failure_rate = round(failed_calls / max(total_calls, 1), 4)
+
+    # 2. 数据源可用率
+    try:
+        intel = json.loads(Path("D:/1989n/stock_data/status/intelligence_status.json").read_text(encoding="utf-8"))
+        channels = intel.get("data_channels", {})
+        ok_chan = sum(1 for v in channels.values() if str(v).lower() == "ok")
+        total_chan = max(len(channels), 1)
+        data_source_availability = round(ok_chan / total_chan, 4)
+    except Exception:
+        data_source_availability = None
+
+    # 3. 路由器调用率 (检查 task-router.py 调用记录)
+    router_calls_7d = 0
+    if agent_log_dir.exists():
+        for f in agent_log_dir.rglob("*.json"):
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+                agent = data.get("agent", "") or data.get("skill", "")
+                if "task_router" in agent.lower() or "task-router" in data.get("task", "").lower():
+                    router_calls_7d += 1
+            except Exception:
+                pass
+    router_call_rate = min(router_calls_7d / max(total_calls, 1), 1.0)
+
+    # 4. 日志完整性 (5部门状态文件当天更新)
+    dept_files = {
+        "engineering": "engineering_status.json",
+        "front-office": "front-office_status.json",
+        "intelligence": "intelligence_status.json",
+        "reading": "reading_status.json",
+        "rd": "rd_status.json",
+    }
+    missing_logs = 0
+    for dept, fname in dept_files.items():
+        fp = Path(f"D:/1989n/stock_data/status/{fname}")
+        if fp.exists():
+            try:
+                data = json.loads(fp.read_text(encoding="utf-8"))
+                ts = data.get("timestamp", data.get("meta", {}).get("last_updated", ""))
+                if today not in ts:
+                    missing_logs += 1
+            except Exception:
+                missing_logs += 1
+        else:
+            missing_logs += 1
+    log_integrity = round(1 - missing_logs / max(len(dept_files), 1), 4)
+
+    report = {
+        "date": today,
+        "router_call_rate": router_call_rate,
+        "agent_failure_rate": agent_failure_rate,
+        "false_report_check": None,
+        "route_coverage": None,
+        "data_source_availability": data_source_availability,
+        "log_integrity": log_integrity,
+        "status": "active",
+        "details": {
+            "total_agent_calls_7d": total_calls,
+            "failed_agent_calls_7d": failed_calls,
+            "router_calls_7d": router_calls_7d,
+        },
+    }
+    system_health.parent.mkdir(parents=True, exist_ok=True)
+    system_health.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"[系统健康] 写入完成 | Agent调用{total_calls}次 失败率{agent_failure_rate:.1%}")
+    return report
+
+
 def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
@@ -342,6 +436,9 @@ def main():
             issues.append(f"晨间预检 {name}: {result['detail']}")
     eng_health = "healthy" if not issues else "degraded"
     publish_status("engineering", {"health": eng_health, "issues": issues, "consumers": ["front-office", "intelligence"]})
+
+    # ── 系统健康指标采集 ──
+    _collect_agent_metrics()
 
     # 通道健康快照 — 供 dept_preflight 保鲜检查
     _write_channel_health()

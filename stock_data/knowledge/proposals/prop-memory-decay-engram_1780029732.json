@@ -1,0 +1,25 @@
+{
+  "proposal_id": "prop-memory-decay-engram_1780029732",
+  "gap_id": "explore-engram",
+  "gap_title": "探索: Engram",
+  "priority": "P2",
+  "source": "web_search",
+  "source_title": "Engram — MCP memory with temporal decay + Ebbinghaus forgetting curve",
+  "source_url": "https://github.com/199-biotechnologies/engram",
+  "relevance": 4,
+  "summary": "Engram 的 temporal decay 机制(基于 Ebbinghaus 遗忘曲线)可直接应用到 SEL 知识库。当前 learning/rules.json 和 knowledge/ 下的所有条目等权存在，未被访问的知识永远不会降权，导致知识库膨胀后信噪比下降。实施：为每条知识增加 access_count + last_accessed 字段，每日衰减巡检按公式 score *= exp(-days_since_access / half_life) 计算当前权重，低于阈值自动归档。高频命中知识自动上浮。",
+  "pattern": "sel_memory_decay",
+  "implied_changes": [
+    "stock_analysis/sel_lint.py — 新增衰减巡检(decay_check)",
+    "stock_analysis/knowledge_db.py — register 时增加 access_count/last_accessed",
+    "stock_analysis/learning/daily_compress.py — 查询时更新访问计数"
+  ],
+  "implementation_hint": "规则表(rules.json)每条增加 access_count(int) + last_accessed(date)。sel_lint.py 新增 decay_check：遍历规则，days_since_access > 30 则 score *= 0.5, days > 90 则标记为 archived。越活跃的规则 score 越接近 1。daily_compress.py 每次读取规则时更新 last_accessed。",
+  "test_files": [
+    "stock_analysis/tests/test_sel_lint.py"
+  ],
+  "status": "proposed",
+  "created_at": "2026-05-29T12:42:12.786192",
+  "executed_at": null,
+  "execution_result": null
+}

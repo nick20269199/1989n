@@ -300,8 +300,7 @@ def _fallback_holdings() -> list[dict]:
         {"code": "002050", "name": "三花智控", "shares": 700, "cost": 53.639, "sector": "制冷控制件", "first_buy": "2026-05-14", "latest_buy": "2026-05-27"},
         {"code": "600744", "name": "华银电力", "shares": 3600, "cost": 8.979, "sector": "电力", "first_buy": "2026-05-28", "latest_buy": "2026-05-28"},
         {"code": "002015", "name": "协鑫能科", "shares": 800, "cost": 22.610, "sector": "清洁能源", "first_buy": "2026-05-28", "latest_buy": "2026-05-28"},
-    ]
-def _market_prefix(code: str) -> str:
+    ]def _market_prefix(code: str) -> str:
     """根据代码返回交易所前缀: sz 或 sh"""
     if code.startswith(("0", "3")):
         return "sz"

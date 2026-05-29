@@ -1,0 +1,26 @@
+{
+  "proposal_id": "prop_knowledge-vector-search-chroma_1780029732",
+  "gap_id": "explore-chroma",
+  "gap_title": "探索: Chroma",
+  "priority": "P2",
+  "source": "web_search",
+  "source_title": "Chroma Vector Database — Python embedded semantic search",
+  "source_url": "https://github.com/chroma-core/chroma",
+  "relevance": 5,
+  "summary": "Chroma 是嵌入式 Python 向量数据库(HNSW/余弦相似度)，pip install chromadb 即可使用。当前 Knowledge DB(knowledge_db.py) 仅用 SQLite FTS5 全文检索，接入 Chroma 后可在 query 层增加语义搜索后端：用户查询 → 向量化 → Chroma ANN 检索 → 合并 FTS5 结果 → 返回。Embedding 用 Sentence Transformers all-MiniLM-L6-v2(本地运行，无API成本)。Metadata 过滤支持 where 子句按 gap_id/date/tags 筛选。MIT 协议，嵌入模式无需额外服务。",
+  "pattern": "knowledge_db_vector_backend",
+  "implied_changes": [
+    "stock_analysis/knowledge_db.py — 新增 Chroma 向量后端",
+    "stock_analysis/config.py — 可选：CHROMA_DIR 配置",
+    "stock_analysis/intelligence_service.py — 查询路由：向量→FTS5 级联",
+    "stock_analysis/sel_lint.py — 新增 Chroma 集合健康检查"
+  ],
+  "implementation_hint": "knowledge_db.py 新增 VectorBackend 类，init 时 PersistentClient(path)，register 时同步写入 embedding(collection.add)，search 时先 collection.query(query_texts=) 取 top_k，再与 FTS5 结果做 score 加权融合。",
+  "test_files": [
+    "stock_analysis/tests/test_knowledge_db.py"
+  ],
+  "status": "proposed",
+  "created_at": "2026-05-29T12:42:12.786192",
+  "executed_at": null,
+  "execution_result": null
+}

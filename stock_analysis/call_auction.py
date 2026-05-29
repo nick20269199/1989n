@@ -32,7 +32,7 @@ import requests
 
 from config import (
     STOCK_DATA_DIR, HEADERS, EASTMONEY_QUOTE_URL,
-    FEISHU_WEBHOOK_URL,
+    FEISHU_WEBHOOK_URL, EASTMONEY_HEADERS, EASTMONEY_COOKIE,
 )
 
 # ── 后备数据通道 ──────────────────────────────────────────────
@@ -44,6 +44,25 @@ except ImportError:
 
     def tencent_quotes(codes): return {}
     def sina_quotes(codes): return {}
+
+# ── AKShare 后备（市场级数据：广度/概念/行业）───────────────
+try:
+    import akshare as ak
+    _AKSHARE_OK = True
+except ImportError:
+    _AKSHARE_OK = False
+
+# ── 通达信 TDX 后备（个股实时行情）────────────────────────
+try:
+    from pytdx.hq import TdxHq_API
+    _TDX_OK = True
+except ImportError:
+    _TDX_OK = False
+
+    class TdxHq_API:
+        def connect(self, *a, **kw): return False
+        def get_security_quotes(self, *a, **kw): return []
+        def disconnect(self): pass
 
 # ── 可选依赖 ─────────────────────────────────────────────────────
 try:
@@ -96,9 +115,19 @@ def ts_compact() -> str:
     return now_cst().strftime("%Y%m%d_%H%M")
 
 def safe_get(url: str, params: dict = None, timeout: int = TIMEOUT) -> Optional[requests.Response]:
+    """HTTP GET 请求，东财 URL 自动使用专用请求头和 Cookie"""
+    headers = EASTMONEY_HEADERS if "eastmoney" in url else HEADERS
+    cookies = {}
+    if "eastmoney" in url and EASTMONEY_COOKIE:
+        for pair in EASTMONEY_COOKIE.split(";"):
+            pair = pair.strip()
+            if "=" in pair:
+                k, v = pair.split("=", 1)
+                cookies[k.strip()] = v.strip()
     for attempt in range(MAX_RETRIES + 1):
         try:
-            r = requests.get(url, params=params, headers=HEADERS, timeout=timeout)
+            r = requests.get(url, params=params, headers=headers, cookies=cookies or None,
+                             timeout=timeout)
             r.raise_for_status()
             return r
         except Exception as e:
@@ -362,6 +391,314 @@ def fetch_auction_limit_orders() -> dict:
 
 
 # ═══════════════════════════════════════════════════════════════════
+#  后备方案: AKShare (市场广度/概念/行业)
+# ═══════════════════════════════════════════════════════════════════
+
+def fetch_auction_breadth_akshare() -> dict:
+    """后备方案: 用 AKShare 全A行情聚合估算竞价涨跌分布"""
+    result = {"up": 0, "down": 0, "flat": 0, "limit_up": 0, "limit_down": 0,
+              "total": 0, "avg_change": 0.0, "details": [], "_fallback": "akshare"}
+    if not _AKSHARE_OK:
+        return result
+    try:
+        df = ak.stock_zh_a_spot_em()
+        if df is None or df.empty:
+            return result
+        result["total"] = len(df)
+        chg_col = "涨跌幅"
+        if chg_col not in df.columns:
+            for c in df.columns:
+                if "涨" in c and "幅" in c:
+                    chg_col = c
+                    break
+        changes = df[chg_col].dropna()
+        result["limit_up"] = int((changes >= 9.8).sum())
+        result["limit_down"] = int((changes <= -9.8).sum())
+        result["up"] = int((changes > 0).sum()) - result["limit_up"]
+        result["down"] = int((changes < 0).sum()) - result["limit_down"]
+        result["flat"] = int((changes == 0).sum())
+        result["avg_change"] = round(changes.mean(), 2)
+        top20 = df.nlargest(20, chg_col)
+        result["details"] = [
+            {"code": str(row.get("代码", "")).zfill(6),
+             "name": row.get("名称", ""),
+             "change_pct": float(row.get(chg_col, 0))}
+            for _, row in top20.iterrows()
+        ]
+        logger.info(f"[AKShare后备] 广度: 涨{result['up']} 跌{result['down']} "
+                    f"涨停{result['limit_up']} 跌停{result['limit_down']}")
+    except Exception as e:
+        logger.warning(f"[AKShare后备] 广度获取失败: {e}")
+    return result
+
+
+def fetch_auction_concepts_akshare() -> list[dict]:
+    """后备方案: 用 AKShare 获取概念板块竞价表现"""
+    if not _AKSHARE_OK:
+        return []
+    try:
+        df = ak.stock_board_concept_name_em()
+        if df is None or df.empty:
+            return []
+        top = df.nlargest(10, "涨跌幅") if "涨跌幅" in df.columns else df.head(10)
+        concepts = []
+        for _, row in top.iterrows():
+            concepts.append({
+                "name": row.get("板块名称", ""),
+                "change_pct": float(row.get("涨跌幅", 0)),
+                "turnover": round(float(row.get("成交额", 0)) / 1e8, 2) if row.get("成交额") else 0,
+                "leading_stock": row.get("龙头股", ""),
+                "leading_pct": float(row.get("龙头股涨跌幅", 0)),
+            })
+        logger.info(f"[AKShare后备] 概念板块: {len(concepts)} 个")
+        return concepts
+    except Exception as e:
+        logger.warning(f"[AKShare后备] 概念失败: {e}")
+        return []
+
+
+def fetch_auction_industries_akshare() -> list[dict]:
+    """后备方案: 用 AKShare 获取行业板块竞价表现"""
+    if not _AKSHARE_OK:
+        return []
+    try:
+        df = ak.stock_board_industry_name_em()
+        if df is None or df.empty:
+            return []
+        top = df.nlargest(15, "涨跌幅") if "涨跌幅" in df.columns else df.head(15)
+        industries = []
+        for _, row in top.iterrows():
+            industries.append({
+                "name": row.get("板块名称", ""),
+                "change_pct": float(row.get("涨跌幅", 0)),
+                "turnover": round(float(row.get("成交额", 0)) / 1e8, 2) if row.get("成交额") else 0,
+                "main_net_inflow": round(float(row.get("主力净流入", 0)) / 1e8, 2) if row.get("主力净流入") else 0,
+                "leading_stock": row.get("龙头股", ""),
+            })
+        logger.info(f"[AKShare后备] 行业板块: {len(industries)} 个")
+        return industries
+    except Exception as e:
+        logger.warning(f"[AKShare后备] 行业失败: {e}")
+        return []
+
+
+def fetch_auction_breadth_sampling() -> dict:
+    """第二后备: 从腾讯/新浪分批采样个股行情，估算涨跌比
+
+    使用固定样本池（~300只覆盖所有行业），以实时行情聚合估算
+    """
+    result = {"up": 0, "down": 0, "flat": 0, "limit_up": 0, "limit_down": 0,
+              "total": 0, "avg_change": 0.0, "details": [], "_fallback": "sampling"}
+    if not _FALLBACK_OK:
+        return result
+    try:
+        # 固定样本: 沪深300成分股 + 各行业龙头（约300只）
+        # 分批从腾讯拉取行情
+        sample_pool = [
+            # 沪深300权重股
+            "600519", "000858", "600036", "601318", "000333", "002415", "600276",
+            "000568", "600887", "601166", "000651", "600900", "600030", "002594",
+            "300750", "601899", "600809", "002714", "000001", "601398",
+            # 各行业龙头
+            "600585", "000002", "002475", "300124", "601012", "600031", "000792",
+            "002304", "000725", "002230", "300782", "603259", "688981", "688036",
+            "601088", "600028", "601857", "600941", "688111", "300059",
+        ] + [f"{prefix}{str(i).zfill(4)}" for i in range(1, 280, 10)
+             for prefix in ("60", "00", "30")][:300]
+
+        chunk_size = 50
+        all_changes = []
+        for i in range(0, len(sample_pool), chunk_size):
+            chunk = sample_pool[i:i + chunk_size]
+            try:
+                q = tencent_quotes(chunk)
+                for code, d in q.items():
+                    chg = d.get("change_pct")
+                    if chg is not None:
+                        all_changes.append((code, d.get("name", ""), float(chg)))
+            except Exception:
+                pass
+            time.sleep(0.2)
+
+        if not all_changes:
+            return result
+
+        result["total"] = len(all_changes)
+        for _, _, chg in all_changes:
+            if chg >= 9.8:
+                result["limit_up"] += 1
+            elif chg <= -9.8:
+                result["limit_down"] += 1
+            elif chg > 0:
+                result["up"] += 1
+            elif chg < 0:
+                result["down"] += 1
+            else:
+                result["flat"] += 1
+
+        result["avg_change"] = round(sum(c for _, _, c in all_changes) / len(all_changes), 2)
+
+        # 涨幅前10
+        sorted_codes = sorted(all_changes, key=lambda x: -x[2])
+        result["details"] = [
+            {"code": c, "name": n, "change_pct": round(chg, 2)}
+            for c, n, chg in sorted_codes[:10]
+        ]
+
+        logger.info(f"[采样后备] 广度: 涨{result['up']} 跌{result['down']} "
+                    f"样本{len(all_changes)}只")
+    except Exception as e:
+        logger.warning(f"[采样后备] 获取失败: {e}")
+    return result
+
+
+TDX_SERVER = ("180.153.18.170", 7709)
+TDX_TIMEOUT = 3
+
+
+def _tdx_quotes_batch(codes: list[str]) -> dict[str, dict]:
+    """批量从通达信获取行情。返回 {code: {name, price, prev_close, volume, ...}}"""
+    if not _TDX_OK:
+        return {}
+    try:
+        api = TdxHq_API()
+        if not api.connect(*TDX_SERVER, time_out=TDX_TIMEOUT):
+            return {}
+        # 根据代码前缀判断市场 (0=深圳, 1=上海)
+        market_codes = [(0 if c.startswith(("0", "3")) else 1, c) for c in codes]
+        quotes = api.get_security_quotes(market_codes) or []
+        api.disconnect()
+        result = {}
+        for q in quotes:
+            if q and q.get("code"):
+                code = str(q["code"]).zfill(6)
+                price = q.get("price", 0) or 0
+                prev_close = q.get("last_close", 0) or 0
+                result[code] = {
+                    "current": price,
+                    "prev_close": prev_close,
+                    "change_pct": round((price - prev_close) / prev_close * 100, 2) if prev_close else 0,
+                    "open": q.get("open", 0) or 0,
+                    "high": q.get("high", 0) or 0,
+                    "low": q.get("low", 0) or 0,
+                    "volume": q.get("vol", 0) or 0,
+                    "amount": q.get("amount", 0) or 0,
+                }
+        return result
+    except Exception as e:
+        logger.warning(f"[TDX] 批量查询失败: {e}")
+        return {}
+
+
+# ── XyStock 板块映射（概念/行业数据后备）────────────────────────
+XY_BLOCK_DIR = Path("D:/XyStock/CONFIG")
+_XY_BLOCK_CACHE = {"gn": None, "hy": None}  # {name: {code, stocks}}
+
+
+def _load_xy_blocks(block_type: str = "gn") -> dict:
+    """从 XyStock 加载板块→股票映射。block_type: 'gn'(概念) 或 'hy'(行业)"""
+    if _XY_BLOCK_CACHE.get(block_type):
+        return _XY_BLOCK_CACHE[block_type]
+    try:
+        bd_file = XY_BLOCK_DIR / "blockdata.txt"
+        bs_file = XY_BLOCK_DIR / "blockstocks.txt"
+        if not bd_file.exists() or not bs_file.exists():
+            return {}
+
+        bd = json.loads(bd_file.read_text(encoding="utf-8"))
+        bs = json.loads(bs_file.read_text(encoding="utf-8"))
+
+        # 板块→股票映射
+        stock_map = {}
+        for b in bs.get("result", {}).get("blocks", []):
+            code = b.get("code")
+            stocks = [s["code"] for s in b.get("stocks", []) if s.get("code") != "*"]
+            stock_map[code] = stocks
+
+        top_code = 813000 if block_type == "gn" else 811000
+        prefix = "GN" if block_type == "gn" else "HY"
+        result = {}
+        for top in bd.get("result", {}).get("blocks", []):
+            if top.get("code") == top_code:
+                for b in top.get("blocks", []):
+                    code = b["code"]
+                    name = b.get("name", "")
+                    stocks = stock_map.get(code, [])
+                    if stocks:
+                        result[name] = {"code": code, "stocks": stocks}
+
+        _XY_BLOCK_CACHE[block_type] = result
+        logger.info(f"[XyStock] 加载 {prefix} 板块: {len(result)} 个")
+        return result
+    except Exception as e:
+        logger.warning(f"[XyStock] 加载板块数据失败: {e}")
+        return {}
+
+
+def fetch_boards_via_xy(block_type: str = "gn") -> list[dict]:
+    """通过 XyStock 板块映射 + 个股行情聚合计算板块涨跌"""
+    blocks = _load_xy_blocks(block_type)
+    if not blocks:
+        return []
+
+    # 收集所有股票去重
+    all_stocks = list(set(
+        s for info in blocks.values() for s in info["stocks"]
+    ))
+    if not all_stocks:
+        return []
+
+    # 批量获取行情 — Tencent（大容量）优先，TDX（小批量）后备
+    quotes = {}
+    if _FALLBACK_OK:
+        try:
+            from data_source_router import tencent_quotes
+            # 每次300只分批拉取
+            for i in range(0, len(all_stocks), 300):
+                chunk = all_stocks[i:i + 300]
+                q = tencent_quotes(chunk)
+                for code, d in q.items():
+                    chg = d.get("change_pct")
+                    if chg is not None:
+                        quotes[code] = {"change_pct": float(chg)}
+        except Exception:
+            pass
+
+    if not quotes:
+        quotes = _tdx_quotes_batch(all_stocks[:200])
+    if not quotes:
+        return []
+
+    # 按板块聚合
+    board_results = []
+    for name, info in blocks.items():
+        stock_changes = []
+        for code in info["stocks"]:
+            if code in quotes:
+                chg = quotes[code].get("change_pct", 0)
+                if chg is not None:
+                    stock_changes.append(chg)
+
+        if len(stock_changes) < 3:  # 少于3只股票不统计
+            continue
+
+        avg_chg = round(sum(stock_changes) / len(stock_changes), 2)
+        max_chg = round(max(stock_changes), 2)
+        min_chg = round(min(stock_changes), 2)
+        up = sum(1 for c in stock_changes if c > 0)
+        down = sum(1 for c in stock_changes if c < 0)
+
+        board_results.append({
+            "name": name, "change_pct": avg_chg,
+            "up": up, "down": down, "total": len(stock_changes),
+            "max_change": max_chg, "min_change": min_chg,
+        })
+
+    board_results.sort(key=lambda x: -x["change_pct"])
+    return board_results[:20]  # 返回前20
+
+
+# ═══════════════════════════════════════════════════════════════════
 #  5. 持仓竞价
 # ═══════════════════════════════════════════════════════════════════
 
@@ -495,10 +832,14 @@ def fetch_portfolio_auction(holdings: list[dict]) -> list[dict]:
     """
     获取持仓股竞价表现。
     优先用 A 方案 (push2 details API → 完整竞价过程)，
-    A 方案失败则回退到 B 方案 (腾讯行情API)，
+    A 方案失败则回退到 D 方案 (通达信行情)，
+    D 方案失败则回退到 B 方案 (腾讯行情API)，
     B 方案失败则回退到 C 方案 (新浪行情API)。
     """
     results = []
+    all_codes = [h["code"] for h in holdings]
+    tdx_cache = {}  # lazily fetched
+
     for h in holdings:
         code = h["code"]
 
@@ -509,6 +850,27 @@ def fetch_portfolio_auction(holdings: list[dict]) -> list[dict]:
             detail["shares"] = h.get("shares", 0)
             detail["_source"] = "A"
             results.append(detail)
+            continue
+
+        # D 方案: 通达信行情 (批量懒加载)
+        if _TDX_OK and not tdx_cache:
+            tdx_cache = _tdx_quotes_batch(all_codes)
+            if tdx_cache:
+                logger.info(f"[TDX] 批量获取 {len(tdx_cache)} 只成功")
+        if code in tdx_cache:
+            d = tdx_cache[code]
+            results.append({
+                "code": code,
+                "name": h.get("name", ""),
+                "auction_price": round(d.get("current", 0), 2),
+                "prev_close": round(d.get("prev_close", 0), 2),
+                "auction_chg_pct": d.get("change_pct", 0),
+                "open_volume": d.get("volume", 0),
+                "sector": h.get("sector", ""),
+                "shares": h.get("shares", 0),
+                "_source": "D",
+            })
+            logger.info(f"[D方案/通达信] {code} 获取成功")
             continue
 
         # B 方案: 腾讯行情 API
@@ -705,25 +1067,43 @@ def main():
     start = time.time()
 
     try:
-        # 1. 市场广度
+        # 1. 市场广度 → 东财push2 → AKShare → 采样
         breadth = fetch_auction_breadth()
         if breadth.get("total", 0) == 0:
-            _record_data_gap("fetch_auction_breadth", "东方财富 push2",
-                             "WAF封锁，全市场竞价涨跌分布采集空", "竞价广度/涨停跌停计数/涨跌比 全部缺失")
+            logger.info("[竞价] push2广度失效，尝试AKShare后备...")
+            breadth = fetch_auction_breadth_akshare()
+        if breadth.get("total", 0) == 0:
+            logger.info("[竞价] AKShare后备失效，尝试采样后备...")
+            breadth = fetch_auction_breadth_sampling()
+        if breadth.get("total", 0) == 0:
+            _record_data_gap("fetch_auction_breadth", "东方财富 push2/AKShare/采样",
+                             "全部通道均失败", "竞价广度/涨停跌停计数/涨跌比 全部缺失")
         time.sleep(0.3)
 
-        # 2. 概念板块竞价
+        # 2. 概念板块竞价 → 东财push2 → AKShare → XyStock+TDX
         concepts = fetch_auction_concepts()
         if not concepts:
-            _record_data_gap("fetch_auction_concepts", "东方财富 push2",
-                             "WAF封锁，概念板块竞价采集空", "概念板块竞价表现缺失")
+            logger.info("[竞价] push2概念失效，尝试AKShare后备...")
+            concepts = fetch_auction_concepts_akshare()
+        if not concepts:
+            logger.info("[竞价] AKShare概念失效，尝试XyStock+TDX后备...")
+            concepts = fetch_boards_via_xy("gn")
+        if not concepts:
+            _record_data_gap("fetch_auction_concepts", "东方财富 push2/AKShare/XyStock",
+                             "全部通道均失败", "概念板块竞价表现缺失")
         time.sleep(0.3)
 
-        # 3. 行业板块竞价
+        # 3. 行业板块竞价 → 东财push2 → AKShare → XyStock+TDX
         industries = fetch_auction_industries()
         if not industries:
-            _record_data_gap("fetch_auction_industries", "东方财富 push2",
-                             "WAF封锁，行业板块竞价采集空", "行业板块竞价表现缺失")
+            logger.info("[竞价] push2行业失效，尝试AKShare后备...")
+            industries = fetch_auction_industries_akshare()
+        if not industries:
+            logger.info("[竞价] AKShare行业失效，尝试XyStock+TDX后备...")
+            industries = fetch_boards_via_xy("hy")
+        if not industries:
+            _record_data_gap("fetch_auction_industries", "东方财富 push2/AKShare/XyStock",
+                             "全部通道均失败", "行业板块竞价表现缺失")
         time.sleep(0.3)
 
         # 4. 涨停封单

@@ -9166,7 +9166,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_16",
@@ -9482,7 +9483,8 @@
         }
       ],
       "reason": "匹配 7 个缺口 (15 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_22",
@@ -9753,7 +9755,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_27",
@@ -10038,7 +10041,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_32",
@@ -10227,7 +10231,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_35",
@@ -10459,7 +10464,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_39",
@@ -10744,7 +10750,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_44",
@@ -10933,7 +10940,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_47",
@@ -11279,7 +11287,8 @@
         }
       ],
       "reason": "匹配 7 个缺口 (15 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_53",
@@ -11689,7 +11698,8 @@
         }
       ],
       "reason": "匹配 6 个缺口 (7 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_62",
@@ -11959,7 +11969,8 @@
         }
       ],
       "reason": "匹配 8 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_67",
@@ -12079,7 +12090,8 @@
         }
       ],
       "reason": "匹配 8 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_69",
@@ -12319,7 +12331,8 @@
         }
       ],
       "reason": "匹配 8 个缺口 (10 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_73",
@@ -12499,7 +12512,8 @@
         }
       ],
       "reason": "匹配 8 个缺口 (10 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_76",
@@ -12745,7 +12759,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_80",
@@ -12934,7 +12949,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_83",
@@ -13225,7 +13241,8 @@
         }
       ],
       "reason": "匹配 7 个缺口 (8 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_88",
@@ -13386,7 +13403,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_91",
@@ -13822,7 +13840,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_99",
@@ -14181,7 +14200,8 @@
         }
       ],
       "reason": "匹配 7 个缺口 (8 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_106",
@@ -14501,7 +14521,8 @@
         }
       ],
       "reason": "匹配 9 个缺口 (10 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_113",
@@ -14746,7 +14767,8 @@
         }
       ],
       "reason": "匹配 8 个缺口 (18 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_117",
@@ -15036,7 +15058,8 @@
         }
       ],
       "reason": "匹配 7 个缺口 (18 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_122",
@@ -15261,7 +15284,8 @@
         }
       ],
       "reason": "匹配 8 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_126",
@@ -15427,7 +15451,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_129",
@@ -15692,7 +15717,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_134",
@@ -16001,7 +16027,8 @@
         }
       ],
       "reason": "匹配 6 个缺口 (19 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_140",
@@ -16241,7 +16268,8 @@
         }
       ],
       "reason": "匹配 5 个缺口 (14 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_145",
@@ -16466,7 +16494,8 @@
         }
       ],
       "reason": "匹配 5 个缺口 (13 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_150",
@@ -16646,7 +16675,8 @@
         }
       ],
       "reason": "匹配 5 个缺口 (6 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_154",
@@ -16895,7 +16925,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_158",
@@ -17099,7 +17130,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_161",
@@ -17325,7 +17357,8 @@
         }
       ],
       "reason": "匹配 5 个缺口 (10 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_165",
@@ -17525,7 +17558,8 @@
         }
       ],
       "reason": "匹配 9 个缺口 (12 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_169",
@@ -17770,7 +17804,8 @@
         }
       ],
       "reason": "匹配 8 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "trace_1779940869_173",
@@ -17950,7 +17985,8 @@
         }
       ],
       "reason": "匹配 8 个缺口 (9 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_176",
@@ -18115,7 +18151,8 @@
         }
       ],
       "reason": "匹配 5 个缺口 (7 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_179",
@@ -18395,7 +18432,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_185",
@@ -18660,7 +18698,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_190",
@@ -18925,7 +18964,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_195",
@@ -19127,7 +19167,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_199",
@@ -19319,7 +19360,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_203",
@@ -19511,7 +19553,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_207",
@@ -19807,7 +19850,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_214",
@@ -19951,7 +19995,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_217",
@@ -20143,7 +20188,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_221",
@@ -20335,7 +20381,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_225",
@@ -20527,7 +20574,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_229",
@@ -20904,7 +20952,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_238",
@@ -21116,7 +21165,8 @@
         }
       ],
       "reason": "匹配 5 个缺口 (8 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_243",
@@ -21296,7 +21346,8 @@
         }
       ],
       "reason": "匹配 5 个缺口 (8 命中), 来源类型加分 (+1)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_247",
@@ -21545,7 +21596,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_252",
@@ -21686,7 +21738,8 @@
         }
       ],
       "reason": "匹配 3 个缺口 (4 命中)"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_255",
@@ -22069,7 +22122,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_264",
@@ -22451,7 +22505,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_272",
@@ -22590,7 +22645,8 @@
       "ref_url": "",
       "priority": "high",
       "status": "pending"
-    }
+    },
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "trace_1779940869_275",
@@ -23240,7 +23296,8 @@
       "error": "401 Client Error: Unauthorized for url: https://api.github.com/search/repositories?q=Chroma&sort=stars&order=desc&per_page=10"
     },
     "discovered_at": "2026-05-28T12:01:33.940737",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-dify_1779940894",
@@ -23304,7 +23361,8 @@
       "error": "401 Client Error: Unauthorized for url: https://api.github.com/search/repositories?q=Engram&sort=stars&order=desc&per_page=10"
     },
     "discovered_at": "2026-05-28T12:01:36.887107",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop-memory-decay-engram_1780029732"
   },
   {
     "finding_id": "explore-------deepseek----engram_1779940897",
@@ -24069,7 +24127,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.600934",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.150959",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24089,7 +24149,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.626877",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.153188",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24109,7 +24171,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.657342",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.156188",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24129,7 +24193,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.683771",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.158707",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24149,7 +24215,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.711592",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.160912",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24169,7 +24237,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.738787",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.163057",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24189,7 +24259,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.769439",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.165426",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24209,7 +24281,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.796807",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.167673",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24229,7 +24303,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.823609",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.170472",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-claude-code_1779941304",
@@ -24249,7 +24325,9 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:24.850632",
-    "absorbed": false
+    "absorbed": true,
+    "absorbed_at": "2026-05-29T10:32:42.172916",
+    "proposal_id": "prop_explore-claude-code_1780021962"
   },
   {
     "finding_id": "explore-codex_1779941307",
@@ -26730,7 +26808,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.564518",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26751,7 +26830,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.598643",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26772,7 +26852,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.629111",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26793,7 +26874,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.659240",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26814,7 +26896,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.691309",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26835,7 +26918,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.717990",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26856,7 +26940,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.745954",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26877,7 +26962,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.775985",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26898,7 +26984,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.804898",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -26919,7 +27006,8 @@
       }
     },
     "discovered_at": "2026-05-28T12:08:44.833683",
-    "absorbed": false
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
   },
   {
     "finding_id": "explore-chroma_1779941324",
@@ -27646,5 +27734,4867 @@
     },
     "discovered_at": "2026-05-28T12:42:56.346920",
     "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021926",
+    "gap_id": "explore-gbrain",
+    "source": "web_bing",
+    "title": "github.comhttps://github.com › garrytan › gbrain",
+    "url": "https://github.com/garrytan/gbrain",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: github.comhttps://github.com › garrytan › gbrain",
+    "detail": {
+      "query": "Gbrain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2661,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:06.318393",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021926",
+    "gap_id": "explore-gbrain",
+    "source": "web_bing",
+    "title": "ai-bot.cnhttps://ai-bot.cn › gbrain",
+    "url": "https://ai-bot.cn/gbrain/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ai-bot.cnhttps://ai-bot.cn › gbrain",
+    "detail": {
+      "query": "Gbrain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3509,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:06.343634",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021926",
+    "gap_id": "explore-gbrain",
+    "source": "web",
+    "title": "github.comhttps://github.com › garrytan › gbrain",
+    "url": "https://github.com/garrytan/gbrain",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: github.comhttps://github.com › garrytan › gbrain",
+    "detail": {
+      "query": "Gbrain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2661,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:06.379831",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021926",
+    "gap_id": "explore-gbrain",
+    "source": "web",
+    "title": "ai-bot.cnhttps://ai-bot.cn › gbrain",
+    "url": "https://ai-bot.cn/gbrain/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ai-bot.cnhttps://ai-bot.cn › gbrain",
+    "detail": {
+      "query": "Gbrain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3509,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:06.404194",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021927",
+    "gap_id": "explore-codex",
+    "source": "web_bing",
+    "title": "zhihu.comhttps://zhuanlan.zhihu.com",
+    "url": "https://zhuanlan.zhihu.com/p/2011928155204645696",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: zhihu.comhttps://zhuanlan.zhihu.com",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.258,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:07.738057",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021927",
+    "gap_id": "explore-codex",
+    "source": "web_bing",
+    "title": "runoob.comhttps://www.runoob.com › codex › codex-install.html",
+    "url": "https://www.runoob.com/codex/codex-install.html",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: runoob.comhttps://www.runoob.com › codex › codex-install.html",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.344,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:07.780351",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021927",
+    "gap_id": "explore-codex",
+    "source": "web_bing",
+    "title": "csdn.nethttps://blog.csdn.net › nmdbbzcl › article › details",
+    "url": "https://blog.csdn.net/nmdbbzcl/article/details/159380122",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: csdn.nethttps://blog.csdn.net › nmdbbzcl › article › details",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.274,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:07.829335",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021927",
+    "gap_id": "explore-codex",
+    "source": "web_bing",
+    "title": "labuladong.onlinehttps://labuladong.online › zh › ai-coding › codex › install-and-use",
+    "url": "https://labuladong.online/zh/ai-coding/codex/install-and-use/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: labuladong.onlinehttps://labuladong.online › zh › ai-coding › codex › install-and-use",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2829,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:07.870716",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021927",
+    "gap_id": "explore-codex",
+    "source": "web_bing",
+    "title": "ai-bot.cnhttps://ai-bot.cn › sites",
+    "url": "https://ai-bot.cn/sites/53.html",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ai-bot.cnhttps://ai-bot.cn › sites",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2796,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:07.908995",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021927",
+    "gap_id": "explore-codex",
+    "source": "web",
+    "title": "zhihu.comhttps://zhuanlan.zhihu.com",
+    "url": "https://zhuanlan.zhihu.com/p/2011928155204645696",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: zhihu.comhttps://zhuanlan.zhihu.com",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.258,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:07.966220",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021928",
+    "gap_id": "explore-codex",
+    "source": "web",
+    "title": "runoob.comhttps://www.runoob.com › codex › codex-install.html",
+    "url": "https://www.runoob.com/codex/codex-install.html",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: runoob.comhttps://www.runoob.com › codex › codex-install.html",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.344,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:08.006830",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021928",
+    "gap_id": "explore-codex",
+    "source": "web",
+    "title": "csdn.nethttps://blog.csdn.net › nmdbbzcl › article › details",
+    "url": "https://blog.csdn.net/nmdbbzcl/article/details/159380122",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: csdn.nethttps://blog.csdn.net › nmdbbzcl › article › details",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.274,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:08.050453",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021928",
+    "gap_id": "explore-codex",
+    "source": "web",
+    "title": "labuladong.onlinehttps://labuladong.online › zh › ai-coding › codex › install-and-use",
+    "url": "https://labuladong.online/zh/ai-coding/codex/install-and-use/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: labuladong.onlinehttps://labuladong.online › zh › ai-coding › codex › install-and-use",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2829,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:08.090744",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021928",
+    "gap_id": "explore-codex",
+    "source": "web",
+    "title": "ai-bot.cnhttps://ai-bot.cn › sites",
+    "url": "https://ai-bot.cn/sites/53.html",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ai-bot.cnhttps://ai-bot.cn › sites",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2796,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:08.125738",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021929",
+    "gap_id": "explore-cursor",
+    "source": "web_bing",
+    "title": "csdn.nethttps://blog.csdn.net › article › details › ...",
+    "url": "https://blog.csdn.net/weixin_36467887/article/details/159619159",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: csdn.nethttps://blog.csdn.net › article › details › ...",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2714,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:09.393872",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021929",
+    "gap_id": "explore-cursor",
+    "source": "web_bing",
+    "title": "runoob.comhttps://www.runoob.com › cursor",
+    "url": "https://www.runoob.com/cursor/cursor-tutorial.html",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: runoob.comhttps://www.runoob.com › cursor",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2979,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:09.435655",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021929",
+    "gap_id": "explore-cursor",
+    "source": "web_bing",
+    "title": "cursor-ide.comhttps://www.cursor-ide.com › blog › cursor-ai-free-guide",
+    "url": "https://www.cursor-ide.com/blog/cursor-ai-free-guide",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: cursor-ide.comhttps://www.cursor-ide.com › blog › cursor-ai-free-guide",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2864,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:09.483265",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021929",
+    "gap_id": "explore-cursor",
+    "source": "web",
+    "title": "csdn.nethttps://blog.csdn.net › article › details › ...",
+    "url": "https://blog.csdn.net/weixin_36467887/article/details/159619159",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: csdn.nethttps://blog.csdn.net › article › details › ...",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2714,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:09.537759",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021929",
+    "gap_id": "explore-cursor",
+    "source": "web",
+    "title": "runoob.comhttps://www.runoob.com › cursor",
+    "url": "https://www.runoob.com/cursor/cursor-tutorial.html",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: runoob.comhttps://www.runoob.com › cursor",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2979,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:09.584875",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021929",
+    "gap_id": "explore-cursor",
+    "source": "web",
+    "title": "cursor-ide.comhttps://www.cursor-ide.com › blog › cursor-ai-free-guide",
+    "url": "https://www.cursor-ide.com/blog/cursor-ai-free-guide",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: cursor-ide.comhttps://www.cursor-ide.com › blog › cursor-ai-free-guide",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2864,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:09.638224",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web_bing",
+    "title": "langchain-doc.cnhttps://langchain-doc.cn",
+    "url": "https://langchain-doc.cn/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain-doc.cnhttps://langchain-doc.cn",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3647,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.111662",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web_bing",
+    "title": "langchain.comhttps://www.langchain.com",
+    "url": "https://www.langchain.com/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain.comhttps://www.langchain.com",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2733,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.141900",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web_bing",
+    "title": "runoob.comhttps://www.runoob.com › langchain",
+    "url": "https://www.runoob.com/langchain/langchain-tutorial.html",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: runoob.comhttps://www.runoob.com › langchain",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4209,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.183785",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web_bing",
+    "title": "zhihu.comhttps://zhuanlan.zhihu.com",
+    "url": "https://zhuanlan.zhihu.com/p/1919781127339620246",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: zhihu.comhttps://zhuanlan.zhihu.com",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2607,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.214224",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web_bing",
+    "title": "langchaincn.cnhttps://langchaincn.cn",
+    "url": "https://langchaincn.cn/",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: langchaincn.cnhttps://langchaincn.cn",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4597,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.250358",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web_bing",
+    "title": "langchain.org.cnhttps://docs.langchain.org.cn › oss › python › langchain",
+    "url": "https://docs.langchain.org.cn/oss/python/langchain/overview",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain.org.cnhttps://docs.langchain.org.cn › oss › python › langchain",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3464,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.280201",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web_bing",
+    "title": "langchain.com.cnhttps://www.langchain.com.cn › docs › introduction",
+    "url": "https://www.langchain.com.cn/docs/introduction/",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: langchain.com.cnhttps://www.langchain.com.cn › docs › introduction",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4887,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.317278",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web_bing",
+    "title": "langchain-china.comhttps://www.langchain-china.com",
+    "url": "https://www.langchain-china.com/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain-china.comhttps://www.langchain-china.com",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2519,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.359100",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web",
+    "title": "langchain-doc.cnhttps://langchain-doc.cn",
+    "url": "https://langchain-doc.cn/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain-doc.cnhttps://langchain-doc.cn",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3647,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.404675",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web",
+    "title": "langchain.comhttps://www.langchain.com",
+    "url": "https://www.langchain.com/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain.comhttps://www.langchain.com",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2733,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.448073",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web",
+    "title": "runoob.comhttps://www.runoob.com › langchain",
+    "url": "https://www.runoob.com/langchain/langchain-tutorial.html",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: runoob.comhttps://www.runoob.com › langchain",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4209,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.495334",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web",
+    "title": "zhihu.comhttps://zhuanlan.zhihu.com",
+    "url": "https://zhuanlan.zhihu.com/p/1919781127339620246",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: zhihu.comhttps://zhuanlan.zhihu.com",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2607,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.539893",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web",
+    "title": "langchaincn.cnhttps://langchaincn.cn",
+    "url": "https://langchaincn.cn/",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: langchaincn.cnhttps://langchaincn.cn",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4597,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.590293",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web",
+    "title": "langchain.org.cnhttps://docs.langchain.org.cn › oss › python › langchain",
+    "url": "https://docs.langchain.org.cn/oss/python/langchain/overview",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain.org.cnhttps://docs.langchain.org.cn › oss › python › langchain",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3464,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.631300",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web",
+    "title": "langchain.com.cnhttps://www.langchain.com.cn › docs › introduction",
+    "url": "https://www.langchain.com.cn/docs/introduction/",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: langchain.com.cnhttps://www.langchain.com.cn › docs › introduction",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4887,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.667029",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021931",
+    "gap_id": "explore-langchain",
+    "source": "web",
+    "title": "langchain-china.comhttps://www.langchain-china.com",
+    "url": "https://www.langchain-china.com/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain-china.comhttps://www.langchain-china.com",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2519,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:11.704676",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021936",
+    "gap_id": "explore-qlora",
+    "source": "web_bing",
+    "title": "n1n.aihttps://explore.n1n.ai › zh › blog",
+    "url": "https://explore.n1n.ai/zh/blog/2026-nian-lora-yu-qlora-da-moxing-weitiao-quan-zhinan-2026-04-17",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: n1n.aihttps://explore.n1n.ai › zh › blog",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2887,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:16.195682",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021936",
+    "gap_id": "explore-qlora",
+    "source": "web",
+    "title": "n1n.aihttps://explore.n1n.ai › zh › blog",
+    "url": "https://explore.n1n.ai/zh/blog/2026-nian-lora-yu-qlora-da-moxing-weitiao-quan-zhinan-2026-04-17",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: n1n.aihttps://explore.n1n.ai › zh › blog",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2887,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:16.256364",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021940",
+    "gap_id": "explore-copilot",
+    "source": "web_bing",
+    "title": "copilotcn.cnhttps://copilotcn.cn",
+    "url": "https://copilotcn.cn/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: copilotcn.cnhttps://copilotcn.cn",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3684,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:20.653685",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021940",
+    "gap_id": "explore-copilot",
+    "source": "web_bing",
+    "title": "github.comhttps://github.com › features › copilot",
+    "url": "https://github.com/features/copilot",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: github.comhttps://github.com › features › copilot",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2599,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:20.696911",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021940",
+    "gap_id": "explore-copilot",
+    "source": "web",
+    "title": "copilotcn.cnhttps://copilotcn.cn",
+    "url": "https://copilotcn.cn/",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: copilotcn.cnhttps://copilotcn.cn",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3684,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:20.754824",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021940",
+    "gap_id": "explore-copilot",
+    "source": "web",
+    "title": "github.comhttps://github.com › features › copilot",
+    "url": "https://github.com/features/copilot",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: github.comhttps://github.com › features › copilot",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2599,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:20.795680",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021942",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web_bing",
+    "title": "hotgit.orghttps://www.hotgit.org › repo › XBuilderLAB › cheat-on-content",
+    "url": "https://www.hotgit.org/repo/XBuilderLAB/cheat-on-content",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: hotgit.orghttps://www.hotgit.org › repo › XBuilderLAB › cheat-on-content",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.3871,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:22.086810",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021942",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web_bing",
+    "title": "jishuzhan.nethttps://jishuzhan.net › article",
+    "url": "https://jishuzhan.net/article/2058428583438761985",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: jishuzhan.nethttps://jishuzhan.net › article",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2513,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:22.136011",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021942",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web_bing",
+    "title": "51cto.comhttps://blog.51cto.com",
+    "url": "https://blog.51cto.com/u_11542371/14627935",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: 51cto.comhttps://blog.51cto.com",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2676,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:22.177969",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021942",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web_bing",
+    "title": "kuro7983.comhttps://www.kuro7983.com › repo › XBuilderLAB › cheat-on-content",
+    "url": "https://www.kuro7983.com/repo/XBuilderLAB/cheat-on-content",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: kuro7983.comhttps://www.kuro7983.com › repo › XBuilderLAB › cheat-on-content",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3053,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:22.228814",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021942",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web",
+    "title": "hotgit.orghttps://www.hotgit.org › repo › XBuilderLAB › cheat-on-content",
+    "url": "https://www.hotgit.org/repo/XBuilderLAB/cheat-on-content",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: hotgit.orghttps://www.hotgit.org › repo › XBuilderLAB › cheat-on-content",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.3871,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:22.273945",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021942",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web",
+    "title": "jishuzhan.nethttps://jishuzhan.net › article",
+    "url": "https://jishuzhan.net/article/2058428583438761985",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: jishuzhan.nethttps://jishuzhan.net › article",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2513,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:22.314830",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021942",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web",
+    "title": "51cto.comhttps://blog.51cto.com",
+    "url": "https://blog.51cto.com/u_11542371/14627935",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: 51cto.comhttps://blog.51cto.com",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2676,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:22.352738",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021942",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web",
+    "title": "kuro7983.comhttps://www.kuro7983.com › repo › XBuilderLAB › cheat-on-content",
+    "url": "https://www.kuro7983.com/repo/XBuilderLAB/cheat-on-content",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: kuro7983.comhttps://www.kuro7983.com › repo › XBuilderLAB › cheat-on-content",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.3053,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:22.397754",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021943",
+    "gap_id": "explore-gbrain",
+    "source": "github_api",
+    "title": "garrytan/gbrain",
+    "url": "https://github.com/garrytan/gbrain",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: garrytan/gbrain (★19606)",
+    "detail": {
+      "query": "Gbrain",
+      "stars": 19606,
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2517,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:23.562303",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021943",
+    "gap_id": "explore-gbrain",
+    "source": "github_api",
+    "title": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: huytieu/COG-second-brain (★498)",
+    "detail": {
+      "query": "Gbrain",
+      "stars": 498,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2351,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:23.602930",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021943",
+    "gap_id": "explore-gbrain",
+    "source": "github_api",
+    "title": "garrytan/gbrain-evals",
+    "url": "https://github.com/garrytan/gbrain-evals",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: garrytan/gbrain-evals (★188)",
+    "detail": {
+      "query": "Gbrain",
+      "stars": 188,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2034,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:23.634915",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021943",
+    "gap_id": "explore-gbrain",
+    "source": "github",
+    "title": "garrytan/gbrain",
+    "url": "https://github.com/garrytan/gbrain",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: garrytan/gbrain",
+    "detail": {
+      "query": "Gbrain",
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2517,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:23.700161",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021943",
+    "gap_id": "explore-gbrain",
+    "source": "github",
+    "title": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: huytieu/COG-second-brain",
+    "detail": {
+      "query": "Gbrain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2351,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:23.745653",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-gbrain_1780021943",
+    "gap_id": "explore-gbrain",
+    "source": "github",
+    "title": "garrytan/gbrain-evals",
+    "url": "https://github.com/garrytan/gbrain-evals",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: garrytan/gbrain-evals",
+    "detail": {
+      "query": "Gbrain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.2034,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:23.788537",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: affaan-m/ECC (★197391)",
+    "detail": {
+      "query": "Codex",
+      "stars": 197391,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1671,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.017377",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "ultraworkers/claw-code",
+    "url": "https://github.com/ultraworkers/claw-code",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ultraworkers/claw-code (★192744)",
+    "detail": {
+      "query": "Codex",
+      "stars": 192744,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0784,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.052812",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: NousResearch/hermes-agent (★171694)",
+    "detail": {
+      "query": "Codex",
+      "stars": 171694,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0089,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.084500",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "openai/codex",
+    "url": "https://github.com/openai/codex",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: openai/codex (★86661)",
+    "detail": {
+      "query": "Codex",
+      "stars": 86661,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2067,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.124431",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: nextlevelbuilder/ui-ux-pro-max-skill (★84321)",
+    "detail": {
+      "query": "Codex",
+      "stars": 84321,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0337,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.167379",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "farion1231/cc-switch",
+    "url": "https://github.com/farion1231/cc-switch",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: farion1231/cc-switch (★83819)",
+    "detail": {
+      "query": "Codex",
+      "stars": 83819,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1985,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.219954",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: thedotmack/claude-mem (★79431)",
+    "detail": {
+      "query": "Codex",
+      "stars": 79431,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1605,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.260006",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ComposioHQ/awesome-claude-skills (★62310)",
+    "detail": {
+      "query": "Codex",
+      "stars": 62310,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0725,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.299595",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ruvnet/ruflo (★56162)",
+    "detail": {
+      "query": "Codex",
+      "stars": 56162,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1216,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.325723",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github_api",
+    "title": "safishamsi/graphify",
+    "url": "https://github.com/safishamsi/graphify",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: safishamsi/graphify (★55681)",
+    "detail": {
+      "query": "Codex",
+      "stars": 55681,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1817,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.360316",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: affaan-m/ECC",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1671,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.399817",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "ultraworkers/claw-code",
+    "url": "https://github.com/ultraworkers/claw-code",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ultraworkers/claw-code",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0784,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.443333",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: NousResearch/hermes-agent",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0089,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.487636",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "openai/codex",
+    "url": "https://github.com/openai/codex",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: openai/codex",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2067,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.528406",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: nextlevelbuilder/ui-ux-pro-max-skill",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0337,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.573801",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "farion1231/cc-switch",
+    "url": "https://github.com/farion1231/cc-switch",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: farion1231/cc-switch",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1985,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.619056",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: thedotmack/claude-mem",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1605,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.652953",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ComposioHQ/awesome-claude-skills",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0725,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.692429",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ruvnet/ruflo",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1216,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.739436",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-codex_1780021945",
+    "gap_id": "explore-codex",
+    "source": "github",
+    "title": "safishamsi/graphify",
+    "url": "https://github.com/safishamsi/graphify",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: safishamsi/graphify",
+    "detail": {
+      "query": "Codex",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1817,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:25.783999",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021946",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: affaan-m/ECC (★197391)",
+    "detail": {
+      "query": "cursor",
+      "stars": 197391,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1577,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:26.885833",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021946",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: x1xhlol/system-prompts-and-models-of-ai-tools (★138493)",
+    "detail": {
+      "query": "cursor",
+      "stars": 138493,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.104,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:26.925793",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021946",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ComposioHQ/awesome-claude-skills (★62310)",
+    "detail": {
+      "query": "cursor",
+      "stars": 62310,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0988,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:26.967119",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "code-yeongyu/oh-my-openagent",
+    "url": "https://github.com/code-yeongyu/oh-my-openagent",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: code-yeongyu/oh-my-openagent (★59981)",
+    "detail": {
+      "query": "cursor",
+      "stars": 59981,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0403,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.007240",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "safishamsi/graphify",
+    "url": "https://github.com/safishamsi/graphify",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: safishamsi/graphify (★55681)",
+    "detail": {
+      "query": "cursor",
+      "stars": 55681,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1367,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.050493",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "nexu-io/open-design",
+    "url": "https://github.com/nexu-io/open-design",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: nexu-io/open-design (★54893)",
+    "detail": {
+      "query": "cursor",
+      "stars": 54893,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.095,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.095498",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: addyosmani/agent-skills (★46723)",
+    "detail": {
+      "query": "cursor",
+      "stars": 46723,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0608,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.139892",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "Lum1104/Understand-Anything",
+    "url": "https://github.com/Lum1104/Understand-Anything",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: Lum1104/Understand-Anything (★42965)",
+    "detail": {
+      "query": "cursor",
+      "stars": 42965,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1217,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.185056",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "PatrickJS/awesome-cursorrules",
+    "url": "https://github.com/PatrickJS/awesome-cursorrules",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: PatrickJS/awesome-cursorrules (★39757)",
+    "detail": {
+      "query": "cursor",
+      "stars": 39757,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2149,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.230226",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github_api",
+    "title": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: sickn33/antigravity-awesome-skills (★39041)",
+    "detail": {
+      "query": "cursor",
+      "stars": 39041,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1157,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.274474",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: affaan-m/ECC",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1577,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.323519",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: x1xhlol/system-prompts-and-models-of-ai-tools",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.104,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.368987",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ComposioHQ/awesome-claude-skills",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0988,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.413371",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "code-yeongyu/oh-my-openagent",
+    "url": "https://github.com/code-yeongyu/oh-my-openagent",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: code-yeongyu/oh-my-openagent",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0403,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.456177",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "safishamsi/graphify",
+    "url": "https://github.com/safishamsi/graphify",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: safishamsi/graphify",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1367,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.501526",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "nexu-io/open-design",
+    "url": "https://github.com/nexu-io/open-design",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: nexu-io/open-design",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.095,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.544687",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: addyosmani/agent-skills",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0608,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.583855",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "Lum1104/Understand-Anything",
+    "url": "https://github.com/Lum1104/Understand-Anything",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: Lum1104/Understand-Anything",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1217,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.625848",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "PatrickJS/awesome-cursorrules",
+    "url": "https://github.com/PatrickJS/awesome-cursorrules",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: PatrickJS/awesome-cursorrules",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2149,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.668792",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-cursor_1780021947",
+    "gap_id": "explore-cursor",
+    "source": "github",
+    "title": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: sickn33/antigravity-awesome-skills",
+    "detail": {
+      "query": "cursor",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1157,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:27.716865",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "langchain-ai/langchain",
+    "url": "https://github.com/langchain-ai/langchain",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: langchain-ai/langchain (★137905)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 137905,
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4319,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.025436",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "microsoft/markitdown",
+    "url": "https://github.com/microsoft/markitdown",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: microsoft/markitdown (★127856)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 127856,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0307,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.061995",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "bytedance/deer-flow",
+    "url": "https://github.com/bytedance/deer-flow",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: bytedance/deer-flow (★69886)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 69886,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0506,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.097721",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "FlowiseAI/Flowise",
+    "url": "https://github.com/FlowiseAI/Flowise",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: FlowiseAI/Flowise (★53177)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 53177,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.023,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.134105",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "BerriAI/litellm",
+    "url": "https://github.com/BerriAI/litellm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: BerriAI/litellm (★48598)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 48598,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0689,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.171702",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "chatchat-space/Langchain-Chatchat",
+    "url": "https://github.com/chatchat-space/Langchain-Chatchat",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: chatchat-space/Langchain-Chatchat (★38099)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 38099,
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4125,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.206830",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "danny-avila/LibreChat",
+    "url": "https://github.com/danny-avila/LibreChat",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: danny-avila/LibreChat (★37628)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 37628,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0958,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.240431",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "reworkd/AgentGPT",
+    "url": "https://github.com/reworkd/AgentGPT",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: reworkd/AgentGPT (★36144)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 36144,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.043,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.273853",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "langchain-ai/langgraph",
+    "url": "https://github.com/langchain-ai/langgraph",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: langchain-ai/langgraph (★33268)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 33268,
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2676,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.306076",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github_api",
+    "title": "huggingface/agents-course",
+    "url": "https://github.com/huggingface/agents-course",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: huggingface/agents-course (★28954)",
+    "detail": {
+      "query": "LangChain",
+      "stars": 28954,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0489,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.350841",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "langchain-ai/langchain",
+    "url": "https://github.com/langchain-ai/langchain",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: langchain-ai/langchain",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4319,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.398709",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "microsoft/markitdown",
+    "url": "https://github.com/microsoft/markitdown",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: microsoft/markitdown",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0307,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.438203",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "bytedance/deer-flow",
+    "url": "https://github.com/bytedance/deer-flow",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: bytedance/deer-flow",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0506,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.483129",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "FlowiseAI/Flowise",
+    "url": "https://github.com/FlowiseAI/Flowise",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: FlowiseAI/Flowise",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.023,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.524415",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "BerriAI/litellm",
+    "url": "https://github.com/BerriAI/litellm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: BerriAI/litellm",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0689,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.569776",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "chatchat-space/Langchain-Chatchat",
+    "url": "https://github.com/chatchat-space/Langchain-Chatchat",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: chatchat-space/Langchain-Chatchat",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.4125,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.610887",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "danny-avila/LibreChat",
+    "url": "https://github.com/danny-avila/LibreChat",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: danny-avila/LibreChat",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0958,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.653575",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "reworkd/AgentGPT",
+    "url": "https://github.com/reworkd/AgentGPT",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: reworkd/AgentGPT",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.043,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.700138",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "langchain-ai/langgraph",
+    "url": "https://github.com/langchain-ai/langgraph",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: langchain-ai/langgraph",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2676,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.742375",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-langchain_1780021949",
+    "gap_id": "explore-langchain",
+    "source": "github",
+    "title": "huggingface/agents-course",
+    "url": "https://github.com/huggingface/agents-course",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: huggingface/agents-course",
+    "detail": {
+      "query": "LangChain",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0489,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:29.785404",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021950",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "hiyouga/LlamaFactory",
+    "url": "https://github.com/hiyouga/LlamaFactory",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: hiyouga/LlamaFactory (★71684)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 71684,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0204,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:30.885404",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021950",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "labmlai/annotated_deep_learning_paper_implementations",
+    "url": "https://github.com/labmlai/annotated_deep_learning_paper_implementations",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: labmlai/annotated_deep_learning_paper_implementations (★66839)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 66839,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0369,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:30.946458",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021950",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "datawhalechina/self-llm",
+    "url": "https://github.com/datawhalechina/self-llm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: datawhalechina/self-llm (★30666)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 30666,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0468,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:30.987527",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "huggingface/peft",
+    "url": "https://github.com/huggingface/peft",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: huggingface/peft (★21201)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 21201,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0198,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.027526",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "ymcui/Chinese-LLaMA-Alpaca",
+    "url": "https://github.com/ymcui/Chinese-LLaMA-Alpaca",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ymcui/Chinese-LLaMA-Alpaca (★18946)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 18946,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0323,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.070051",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "tloen/alpaca-lora",
+    "url": "https://github.com/tloen/alpaca-lora",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: tloen/alpaca-lora (★18922)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 18922,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1267,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.109797",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "lyogavin/airllm",
+    "url": "https://github.com/lyogavin/airllm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: lyogavin/airllm (★18377)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 18377,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.014,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.155036",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "camenduru/stable-diffusion-webui-colab",
+    "url": "https://github.com/camenduru/stable-diffusion-webui-colab",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: camenduru/stable-diffusion-webui-colab (★15933)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 15933,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.201551",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "modelscope/ms-swift",
+    "url": "https://github.com/modelscope/ms-swift",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: modelscope/ms-swift (★14311)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 14311,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0362,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.239230",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github_api",
+    "title": "microsoft/LoRA",
+    "url": "https://github.com/microsoft/LoRA",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: microsoft/LoRA (★13555)",
+    "detail": {
+      "query": "LoRA",
+      "stars": 13555,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2048,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.267966",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "hiyouga/LlamaFactory",
+    "url": "https://github.com/hiyouga/LlamaFactory",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: hiyouga/LlamaFactory",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0204,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.305278",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "labmlai/annotated_deep_learning_paper_implementations",
+    "url": "https://github.com/labmlai/annotated_deep_learning_paper_implementations",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: labmlai/annotated_deep_learning_paper_implementations",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0369,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.343870",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "datawhalechina/self-llm",
+    "url": "https://github.com/datawhalechina/self-llm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: datawhalechina/self-llm",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0468,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.381100",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "huggingface/peft",
+    "url": "https://github.com/huggingface/peft",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: huggingface/peft",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0198,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.414665",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "ymcui/Chinese-LLaMA-Alpaca",
+    "url": "https://github.com/ymcui/Chinese-LLaMA-Alpaca",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ymcui/Chinese-LLaMA-Alpaca",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0323,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.439731",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "tloen/alpaca-lora",
+    "url": "https://github.com/tloen/alpaca-lora",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: tloen/alpaca-lora",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1267,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.461789",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "lyogavin/airllm",
+    "url": "https://github.com/lyogavin/airllm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: lyogavin/airllm",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.014,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.489837",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "camenduru/stable-diffusion-webui-colab",
+    "url": "https://github.com/camenduru/stable-diffusion-webui-colab",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: camenduru/stable-diffusion-webui-colab",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.522133",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "modelscope/ms-swift",
+    "url": "https://github.com/modelscope/ms-swift",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: modelscope/ms-swift",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0362,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.562189",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-lora_1780021951",
+    "gap_id": "explore-lora",
+    "source": "github",
+    "title": "microsoft/LoRA",
+    "url": "https://github.com/microsoft/LoRA",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: microsoft/LoRA",
+    "detail": {
+      "query": "LoRA",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2048,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:31.603344",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "vllm-project/vllm",
+    "url": "https://github.com/vllm-project/vllm",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: vllm-project/vllm (★81306)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 81306,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1489,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.665047",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "earendil-works/pi",
+    "url": "https://github.com/earendil-works/pi",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: earendil-works/pi (★57014)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 57014,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1221,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.702551",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "BerriAI/litellm",
+    "url": "https://github.com/BerriAI/litellm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: BerriAI/litellm (★48598)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 48598,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0937,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.742287",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "meta-llama/llama-cookbook",
+    "url": "https://github.com/meta-llama/llama-cookbook",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: meta-llama/llama-cookbook (★18335)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 18335,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0282,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.779841",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "modelscope/FunASR",
+    "url": "https://github.com/modelscope/FunASR",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: modelscope/FunASR (★16445)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 16445,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0079,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.827849",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "GeeeekExplorer/nano-vllm",
+    "url": "https://github.com/GeeeekExplorer/nano-vllm",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: GeeeekExplorer/nano-vllm (★13714)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 13714,
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2594,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.868800",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "OpenRLHF/OpenRLHF",
+    "url": "https://github.com/OpenRLHF/OpenRLHF",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: OpenRLHF/OpenRLHF (★9559)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 9559,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0876,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.905640",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "xorbitsai/inference",
+    "url": "https://github.com/xorbitsai/inference",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: xorbitsai/inference (★9317)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 9317,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0461,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.949480",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021952",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "Orchestra-Research/AI-Research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: Orchestra-Research/AI-Research-SKILLs (★9040)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 9040,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0183,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:32.996211",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github_api",
+    "title": "intel/ipex-llm",
+    "url": "https://github.com/intel/ipex-llm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: intel/ipex-llm (★8810)",
+    "detail": {
+      "query": "vLLM",
+      "stars": 8810,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0552,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.045996",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "vllm-project/vllm",
+    "url": "https://github.com/vllm-project/vllm",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: vllm-project/vllm",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1489,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.087925",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "earendil-works/pi",
+    "url": "https://github.com/earendil-works/pi",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: earendil-works/pi",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1221,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.129581",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "BerriAI/litellm",
+    "url": "https://github.com/BerriAI/litellm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: BerriAI/litellm",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0937,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.175331",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "meta-llama/llama-cookbook",
+    "url": "https://github.com/meta-llama/llama-cookbook",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: meta-llama/llama-cookbook",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0282,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.219064",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "modelscope/FunASR",
+    "url": "https://github.com/modelscope/FunASR",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: modelscope/FunASR",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0079,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.260759",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "GeeeekExplorer/nano-vllm",
+    "url": "https://github.com/GeeeekExplorer/nano-vllm",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: GeeeekExplorer/nano-vllm",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2594,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.305899",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "OpenRLHF/OpenRLHF",
+    "url": "https://github.com/OpenRLHF/OpenRLHF",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: OpenRLHF/OpenRLHF",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0876,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.352243",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "xorbitsai/inference",
+    "url": "https://github.com/xorbitsai/inference",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: xorbitsai/inference",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0461,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.394428",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "Orchestra-Research/AI-Research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: Orchestra-Research/AI-Research-SKILLs",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0183,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.428657",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-vllm_1780021953",
+    "gap_id": "explore-vllm",
+    "source": "github",
+    "title": "intel/ipex-llm",
+    "url": "https://github.com/intel/ipex-llm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: intel/ipex-llm",
+    "detail": {
+      "query": "vLLM",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0552,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:33.456231",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "hiyouga/LlamaFactory",
+    "url": "https://github.com/hiyouga/LlamaFactory",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: hiyouga/LlamaFactory (★71684)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 71684,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0354,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.557437",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "lyogavin/airllm",
+    "url": "https://github.com/lyogavin/airllm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: lyogavin/airllm (★18377)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 18377,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0059,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.589535",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "artidoro/qlora",
+    "url": "https://github.com/artidoro/qlora",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: artidoro/qlora (★10913)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 10913,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2352,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.623153",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "bitsandbytes-foundation/bitsandbytes",
+    "url": "https://github.com/bitsandbytes-foundation/bitsandbytes",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: bitsandbytes-foundation/bitsandbytes (★8234)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 8234,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0307,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.660900",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "yangjianxin1/Firefly",
+    "url": "https://github.com/yangjianxin1/Firefly",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: yangjianxin1/Firefly (★6640)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 6640,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0333,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.691880",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "hiyouga/ChatGLM-Efficient-Tuning",
+    "url": "https://github.com/hiyouga/ChatGLM-Efficient-Tuning",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: hiyouga/ChatGLM-Efficient-Tuning (★3724)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 3724,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0121,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.724605",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "iusztinpaul/hands-on-llms",
+    "url": "https://github.com/iusztinpaul/hands-on-llms",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: iusztinpaul/hands-on-llms (★3413)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 3413,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0303,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.763521",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "AnswerDotAI/fsdp_qlora",
+    "url": "https://github.com/AnswerDotAI/fsdp_qlora",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: AnswerDotAI/fsdp_qlora (★1545)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 1545,
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2583,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.807784",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "ssbuild/chatglm_finetuning",
+    "url": "https://github.com/ssbuild/chatglm_finetuning",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ssbuild/chatglm_finetuning (★1533)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 1533,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0063,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.857678",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github_api",
+    "title": "RahulSChand/gpu_poor",
+    "url": "https://github.com/RahulSChand/gpu_poor",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: RahulSChand/gpu_poor (★1400)",
+    "detail": {
+      "query": "QLoRA",
+      "stars": 1400,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.119,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.902064",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "hiyouga/LlamaFactory",
+    "url": "https://github.com/hiyouga/LlamaFactory",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: hiyouga/LlamaFactory",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0354,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.946823",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021954",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "lyogavin/airllm",
+    "url": "https://github.com/lyogavin/airllm",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: lyogavin/airllm",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0059,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:34.989952",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021955",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "artidoro/qlora",
+    "url": "https://github.com/artidoro/qlora",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: artidoro/qlora",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2352,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:35.034924",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021955",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "bitsandbytes-foundation/bitsandbytes",
+    "url": "https://github.com/bitsandbytes-foundation/bitsandbytes",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: bitsandbytes-foundation/bitsandbytes",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0307,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:35.081927",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021955",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "yangjianxin1/Firefly",
+    "url": "https://github.com/yangjianxin1/Firefly",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: yangjianxin1/Firefly",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0333,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:35.128694",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021955",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "hiyouga/ChatGLM-Efficient-Tuning",
+    "url": "https://github.com/hiyouga/ChatGLM-Efficient-Tuning",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: hiyouga/ChatGLM-Efficient-Tuning",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0121,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:35.188091",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021955",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "iusztinpaul/hands-on-llms",
+    "url": "https://github.com/iusztinpaul/hands-on-llms",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: iusztinpaul/hands-on-llms",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0303,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:35.228016",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021955",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "AnswerDotAI/fsdp_qlora",
+    "url": "https://github.com/AnswerDotAI/fsdp_qlora",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: AnswerDotAI/fsdp_qlora",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2583,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:35.271283",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021955",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "ssbuild/chatglm_finetuning",
+    "url": "https://github.com/ssbuild/chatglm_finetuning",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ssbuild/chatglm_finetuning",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0063,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:35.314068",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-qlora_1780021955",
+    "gap_id": "explore-qlora",
+    "source": "github",
+    "title": "RahulSChand/gpu_poor",
+    "url": "https://github.com/RahulSChand/gpu_poor",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: RahulSChand/gpu_poor",
+    "detail": {
+      "query": "QLoRA",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.119,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:35.355160",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "chroma-core/chroma",
+    "url": "https://github.com/chroma-core/chroma",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: chroma-core/chroma (★28114)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 28114,
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.3055,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.525845",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "langchain4j/langchain4j",
+    "url": "https://github.com/langchain4j/langchain4j",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain4j/langchain4j (★12138)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 12138,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0937,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.568095",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "gka/chroma.js",
+    "url": "https://github.com/gka/chroma.js",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: gka/chroma.js (★10564)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 10564,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1026,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.618475",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "std-microblock/chromatic",
+    "url": "https://github.com/std-microblock/chromatic",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: std-microblock/chromatic (★8295)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 8295,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2196,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.669664",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "Shaunwei/RealChar",
+    "url": "https://github.com/Shaunwei/RealChar",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: Shaunwei/RealChar (★6211)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 6211,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1289,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.717477",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "alecthomas/chroma",
+    "url": "https://github.com/alecthomas/chroma",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: alecthomas/chroma (★4944)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 4944,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1462,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.768124",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "hegelai/prompttools",
+    "url": "https://github.com/hegelai/prompttools",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: hegelai/prompttools (★3035)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 3035,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1171,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.816632",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "Mintplex-Labs/vector-admin",
+    "url": "https://github.com/Mintplex-Labs/vector-admin",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: Mintplex-Labs/vector-admin (★2230)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 2230,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1043,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.867004",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "graypegg/chromatism",
+    "url": "https://github.com/graypegg/chromatism",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: graypegg/chromatism (★1763)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 1763,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1126,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.916947",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021956",
+    "gap_id": "explore-chroma",
+    "source": "github_api",
+    "title": "acoustid/chromaprint",
+    "url": "https://github.com/acoustid/chromaprint",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: acoustid/chromaprint (★1285)",
+    "detail": {
+      "query": "Chroma",
+      "stars": 1285,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.097,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:36.966881",
+    "absorbed": false,
+    "proposal_id": "prop_knowledge-vector-search-chroma_1780029732"
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "chroma-core/chroma",
+    "url": "https://github.com/chroma-core/chroma",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: chroma-core/chroma",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.3055,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.017383",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "langchain4j/langchain4j",
+    "url": "https://github.com/langchain4j/langchain4j",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langchain4j/langchain4j",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0937,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.066425",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "gka/chroma.js",
+    "url": "https://github.com/gka/chroma.js",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: gka/chroma.js",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1026,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.115044",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "std-microblock/chromatic",
+    "url": "https://github.com/std-microblock/chromatic",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: std-microblock/chromatic",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2196,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.161067",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "Shaunwei/RealChar",
+    "url": "https://github.com/Shaunwei/RealChar",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: Shaunwei/RealChar",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1289,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.206954",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "alecthomas/chroma",
+    "url": "https://github.com/alecthomas/chroma",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: alecthomas/chroma",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1462,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.254152",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "hegelai/prompttools",
+    "url": "https://github.com/hegelai/prompttools",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: hegelai/prompttools",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1171,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.306364",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "Mintplex-Labs/vector-admin",
+    "url": "https://github.com/Mintplex-Labs/vector-admin",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: Mintplex-Labs/vector-admin",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1043,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.353752",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "graypegg/chromatism",
+    "url": "https://github.com/graypegg/chromatism",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: graypegg/chromatism",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1126,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.401149",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-chroma_1780021957",
+    "gap_id": "explore-chroma",
+    "source": "github",
+    "title": "acoustid/chromaprint",
+    "url": "https://github.com/acoustid/chromaprint",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: acoustid/chromaprint",
+    "detail": {
+      "query": "Chroma",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.097,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:37.448548",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "langgenius/dify",
+    "url": "https://github.com/langgenius/dify",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langgenius/dify (★143016)",
+    "detail": {
+      "query": "Dify",
+      "stars": 143016,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1103,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.617421",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "langbot-app/LangBot",
+    "url": "https://github.com/langbot-app/LangBot",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langbot-app/LangBot (★16136)",
+    "detail": {
+      "query": "Dify",
+      "stars": 16136,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0685,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.662528",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "svcvit/Awesome-Dify-Workflow",
+    "url": "https://github.com/svcvit/Awesome-Dify-Workflow",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: svcvit/Awesome-Dify-Workflow (★10531)",
+    "detail": {
+      "query": "Dify",
+      "stars": 10531,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2321,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.701339",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "xinnan-tech/xiaozhi-esp32-server",
+    "url": "https://github.com/xinnan-tech/xiaozhi-esp32-server",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: xinnan-tech/xiaozhi-esp32-server (★9658)",
+    "detail": {
+      "query": "Dify",
+      "stars": 9658,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0164,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.739422",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "evolution-foundation/evolution-api",
+    "url": "https://github.com/evolution-foundation/evolution-api",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: evolution-foundation/evolution-api (★8474)",
+    "detail": {
+      "query": "Dify",
+      "stars": 8474,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0022,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.783622",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "53AI/53AIHub",
+    "url": "https://github.com/53AI/53AIHub",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: 53AI/53AIHub (★4905)",
+    "detail": {
+      "query": "Dify",
+      "stars": 4905,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0602,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.832827",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "cs-lazy-tools/ChatGPT-On-CS",
+    "url": "https://github.com/cs-lazy-tools/ChatGPT-On-CS",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: cs-lazy-tools/ChatGPT-On-CS (★4015)",
+    "detail": {
+      "query": "Dify",
+      "stars": 4015,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0017,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.885211",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "wwwzhouhui/dify-for-dsl",
+    "url": "https://github.com/wwwzhouhui/dify-for-dsl",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: wwwzhouhui/dify-for-dsl (★3752)",
+    "detail": {
+      "query": "Dify",
+      "stars": 3752,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1094,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.926332",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021958",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "ngc660sec/NGCBot",
+    "url": "https://github.com/ngc660sec/NGCBot",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ngc660sec/NGCBot (★3316)",
+    "detail": {
+      "query": "Dify",
+      "stars": 3316,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0243,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:38.963929",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github_api",
+    "title": "bytebase/dbhub",
+    "url": "https://github.com/bytebase/dbhub",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: bytebase/dbhub (★2852)",
+    "detail": {
+      "query": "Dify",
+      "stars": 2852,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.017,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.002939",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "langgenius/dify",
+    "url": "https://github.com/langgenius/dify",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langgenius/dify",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1103,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.044297",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "langbot-app/LangBot",
+    "url": "https://github.com/langbot-app/LangBot",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: langbot-app/LangBot",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0685,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.088231",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "svcvit/Awesome-Dify-Workflow",
+    "url": "https://github.com/svcvit/Awesome-Dify-Workflow",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: svcvit/Awesome-Dify-Workflow",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2321,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.133180",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "xinnan-tech/xiaozhi-esp32-server",
+    "url": "https://github.com/xinnan-tech/xiaozhi-esp32-server",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: xinnan-tech/xiaozhi-esp32-server",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0164,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.182017",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "evolution-foundation/evolution-api",
+    "url": "https://github.com/evolution-foundation/evolution-api",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: evolution-foundation/evolution-api",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0022,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.229836",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "53AI/53AIHub",
+    "url": "https://github.com/53AI/53AIHub",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: 53AI/53AIHub",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0602,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.275144",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "cs-lazy-tools/ChatGPT-On-CS",
+    "url": "https://github.com/cs-lazy-tools/ChatGPT-On-CS",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: cs-lazy-tools/ChatGPT-On-CS",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0017,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.319542",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "wwwzhouhui/dify-for-dsl",
+    "url": "https://github.com/wwwzhouhui/dify-for-dsl",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: wwwzhouhui/dify-for-dsl",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1094,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.364307",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "ngc660sec/NGCBot",
+    "url": "https://github.com/ngc660sec/NGCBot",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: ngc660sec/NGCBot",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0243,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.413050",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-dify_1780021959",
+    "gap_id": "explore-dify",
+    "source": "github",
+    "title": "bytebase/dbhub",
+    "url": "https://github.com/bytebase/dbhub",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: bytebase/dbhub",
+    "detail": {
+      "query": "Dify",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.017,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:39.461111",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021960",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: x1xhlol/system-prompts-and-models-of-ai-tools (★138493)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 138493,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0706,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:40.617012",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021960",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "github/spec-kit",
+    "url": "https://github.com/github/spec-kit",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: github/spec-kit (★106840)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 106840,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0859,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:40.659376",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021960",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: nextlevelbuilder/ui-ux-pro-max-skill (★84321)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 84321,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.031,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:40.705888",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021960",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: thedotmack/claude-mem (★79431)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 79431,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1382,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:40.756565",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021960",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "nexu-io/open-design",
+    "url": "https://github.com/nexu-io/open-design",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: nexu-io/open-design (★54893)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 54893,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0583,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:40.808799",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021960",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "Lum1104/Understand-Anything",
+    "url": "https://github.com/Lum1104/Understand-Anything",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: Lum1104/Understand-Anything (★42965)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 42965,
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1254,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:40.857950",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021960",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "asgeirtj/system_prompts_leaks",
+    "url": "https://github.com/asgeirtj/system_prompts_leaks",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: asgeirtj/system_prompts_leaks (★40886)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 40886,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1169,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:40.909658",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021960",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "chatboxai/chatbox",
+    "url": "https://github.com/chatboxai/chatbox",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: chatboxai/chatbox (★40172)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 40172,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0371,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:40.959049",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: wshobson/agents (★36092)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 36092,
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0666,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.016641",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github_api",
+    "title": "github/awesome-copilot",
+    "url": "https://github.com/github/awesome-copilot",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: github/awesome-copilot (★34055)",
+    "detail": {
+      "query": "Copilot",
+      "stars": 34055,
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2691,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.063760",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: x1xhlol/system-prompts-and-models-of-ai-tools",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0706,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.112853",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "github/spec-kit",
+    "url": "https://github.com/github/spec-kit",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: github/spec-kit",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0859,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.152941",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: nextlevelbuilder/ui-ux-pro-max-skill",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.031,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.201151",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: thedotmack/claude-mem",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1382,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.252521",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "nexu-io/open-design",
+    "url": "https://github.com/nexu-io/open-design",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: nexu-io/open-design",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0583,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.303310",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "Lum1104/Understand-Anything",
+    "url": "https://github.com/Lum1104/Understand-Anything",
+    "relevance": 4,
+    "summary": "强关联: TF-IDF 高相似度: Lum1104/Understand-Anything",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 4,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.1254,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.349846",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "asgeirtj/system_prompts_leaks",
+    "url": "https://github.com/asgeirtj/system_prompts_leaks",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: asgeirtj/system_prompts_leaks",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.1169,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.400471",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "chatboxai/chatbox",
+    "url": "https://github.com/chatboxai/chatbox",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: chatboxai/chatbox",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0371,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.448828",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents",
+    "relevance": 3,
+    "summary": "中关联: TF-IDF 部分匹配: wshobson/agents",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 3,
+        "reason": "中关联: TF-IDF 部分匹配",
+        "similarity": 0.0666,
+        "keyword_hits": 0
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.501813",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-copilot_1780021961",
+    "gap_id": "explore-copilot",
+    "source": "github",
+    "title": "github/awesome-copilot",
+    "url": "https://github.com/github/awesome-copilot",
+    "relevance": 5,
+    "summary": "强关联: TF-IDF 高相似度: github/awesome-copilot",
+    "detail": {
+      "query": "Copilot",
+      "evaluation": {
+        "relevance": 5,
+        "reason": "强关联: TF-IDF 高相似度",
+        "similarity": 0.2691,
+        "keyword_hits": 1
+      }
+    },
+    "discovered_at": "2026-05-29T10:32:41.552714",
+    "absorbed": false
+  },
+  {
+    "finding_id": "explore-xbuilderlab-cheat-on-content_1780021962",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "github_api",
+    "title": "GitHub速率限制: XBuilderLAB/cheat-on-content",
+    "url": "",
+    "relevance": 1,
+    "summary": "GitHub API rate limit exceeded",
+    "detail": {
+      "query": "XBuilderLAB/cheat-on-content",
+      "status": "rate_limited"
+    },
+    "discovered_at": "2026-05-29T10:32:42.111586",
+    "absorbed": false
+  },
+  {
+    "finding_id": "web_gbrain_20260529",
+    "gap_id": "explore-gbrain",
+    "source": "web_search",
+    "title": "Gbrain — Garry Tan 开源 LLM 长期记忆 MCP 服务",
+    "url": "https://github.com/garrytan/gbrain",
+    "relevance": 5,
+    "summary": "Gbrain 是 YC 总裁 Garry Tan 开源的 SQLite 长期记忆系统。单文件 SQLite(FTS5+向量嵌入)，通过 MCP stdio 暴露服务，支持 CLI 操作(get/put/search/query/ingest/link/tag/timeline/embed/serve)。设计目标：替代 Git 无法管理的 2.3GB/7471 文件知识库。采用混合搜索(关键词+语义)，不需要外部向量数据库。含 dream cycle(自主夜处理)机制。MIT 协议。19K+ GitHub stars。当前系统记忆架构(arch-memory-hierarchy)可直接参考其 MCP 集成模式。",
+    "discovered_at": "2026-05-29T12:29:32.304105",
+    "absorbed": false,
+    "proposal_id": null
+  },
+  {
+    "finding_id": "web_xbuilderlab_20260529",
+    "gap_id": "explore-xbuilderlab-cheat-on-content",
+    "source": "web_search",
+    "title": "XBuilderLAB/cheat-on-content — 内容创作自进化评分系统",
+    "url": "https://github.com/XBuilderLAB/cheat-on-content",
+    "relevance": 4,
+    "summary": "Claude Code Skill 系统，13 个子 Skill。核心流程：打分→盲测→发布→T+3复盘→自动进化评分规则。与通用 AI 工具区别：不生成内容而量化判断，学习账号特定模式而非全局平均，评分规则自动进化(连续3次同向偏差触发升级)，新规则必须全历史样本优于旧规则才部署。MIT 协议。其 auto-evolving rubric 设计模式可参考到 stock_analysis/experts/grader.py 的评分校准机制。",
+    "discovered_at": "2026-05-29T12:29:32.304105",
+    "absorbed": false,
+    "proposal_id": null
   }
 ]

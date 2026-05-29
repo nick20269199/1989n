@@ -1,0 +1,21 @@
+{"task_id": "TK-20260526115223", "dept": "rd", "status": "failed", "result_summary": "unknown", "_ts": "2026-05-29 13:32:00"}
+{"task_id": "TK-20260526120310", "dept": "rd", "status": "needs_claude", "result_summary": "研发想法需主会话 Claude 深度参与", "_ts": "2026-05-29 13:32:00"}
+{"task_id": "TK-20260526121841", "dept": "front-office", "status": "failed", "result_summary": "unknown", "_ts": "2026-05-29 13:32:00"}
+{"task_id": "TK-20260526121841", "dept": "front-office", "status": "failed", "result_summary": "unknown", "_ts": "2026-05-29 13:32:00"}
+{"task_id": "TK-20260526121850", "dept": "rd", "status": "needs_claude", "result_summary": "研发想法需主会话 Claude 深度参与", "_ts": "2026-05-29 13:32:00"}
+{"task_id": "TK-20260526122015", "dept": "front-office", "status": "needs_claude", "result_summary": "需主会话 Claude 处理", "_ts": "2026-05-29 13:32:00"}
+{"task_id": "TK-20260526151441", "dept": "intelligence", "status": "failed", "result_summary": "unknown", "_ts": "2026-05-29 13:32:00"}
+{"task_id": "TK-20260526115223", "dept": "rd", "status": "needs_claude", "result_summary": "unknown", "_ts": "2026-05-29 13:32:35"}
+{"task_id": "TK-20260526120310", "dept": "rd", "status": "needs_claude", "result_summary": "研发想法需主会话 Claude 深度参与", "_ts": "2026-05-29 13:32:35"}
+{"task_id": "TK-20260526121841", "dept": "front-office", "status": "needs_claude", "result_summary": "unknown", "_ts": "2026-05-29 13:32:35"}
+{"task_id": "TK-20260526121841", "dept": "front-office", "status": "needs_claude", "result_summary": "unknown", "_ts": "2026-05-29 13:32:35"}
+{"task_id": "TK-20260526121850", "dept": "rd", "status": "needs_claude", "result_summary": "研发想法需主会话 Claude 深度参与", "_ts": "2026-05-29 13:32:35"}
+{"task_id": "TK-20260526122015", "dept": "front-office", "status": "needs_claude", "result_summary": "需主会话 Claude 处理", "_ts": "2026-05-29 13:32:35"}
+{"task_id": "TK-20260526151441", "dept": "intelligence", "status": "needs_claude", "result_summary": "unknown", "_ts": "2026-05-29 13:32:35"}
+{"task_id": "TK-20260526115223", "dept": "rd", "status": "needs_claude", "result_summary": "unknown", "_ts": "2026-05-29 13:33:11"}
+{"task_id": "TK-20260526120310", "dept": "rd", "status": "needs_claude", "result_summary": "研发想法需主会话 Claude 深度参与", "_ts": "2026-05-29 13:33:11"}
+{"task_id": "TK-20260526121841", "dept": "front-office", "status": "needs_claude", "result_summary": "unknown", "_ts": "2026-05-29 13:33:11"}
+{"task_id": "TK-20260526121841", "dept": "front-office", "status": "needs_claude", "result_summary": "unknown", "_ts": "2026-05-29 13:33:11"}
+{"task_id": "TK-20260526121850", "dept": "rd", "status": "needs_claude", "result_summary": "研发想法需主会话 Claude 深度参与", "_ts": "2026-05-29 13:33:11"}
+{"task_id": "TK-20260526122015", "dept": "front-office", "status": "needs_claude", "result_summary": "需主会话 Claude 处理", "_ts": "2026-05-29 13:33:11"}
+{"task_id": "TK-20260526151441", "dept": "intelligence", "status": "needs_claude", "result_summary": "unknown", "_ts": "2026-05-29 13:33:11"}

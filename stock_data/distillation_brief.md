@@ -1,36 +1,33 @@
-# 蒸馏简报 — 2026-05-28
+# 蒸馏简报 — 2026-05-29
 
 ## 待蒸馏文件 (匹配规则)
 
-- `git_push.log` (639.8KB)
-- `last_error.txt` (0.0KB)
-
-共 2 个文件待蒸馏
+无
 
 ## 今日其他产出
 
-- `analysis_30min_20260528_1130.json` (1.6KB)
-- `analysis_30min_20260528_1130.md` (0.6KB)
-- `analysis_30min_20260528_1500.json` (1.5KB)
-- `analysis_30min_20260528_1500.md` (0.6KB)
-- `analysis_overnight_20260528_2337.json` (0.6KB)
-- `analysis_overnight_20260528_2337.md` (0.2KB)
-- `call_auction.log` (6.2KB)
-- `closing_review.log` (38.9KB)
-- `cognitive_agent.log` (87.5KB)
-- `distillation_brief.md` (1.9KB)
-- `distill_queue.json` (8.7KB)
-- `evening.log` (17.8KB)
-- `feishu_outbox.jsonl` (0.0KB)
-- `forecast_closer.log` (2.4KB)
-- `health_check.log` (3.1KB)
-- `hot_stocks.log` (320.7KB)
-- `intraday_close.log` (63.1KB)
-- `intraday_midday.log` (52.2KB)
-- `kae_daily.log` (0.1KB)
-- `morning_brief_agent_latest.json` (6.7KB)
+- `analysis_30min_20260529_1130.json` (1.8KB)
+- `analysis_30min_20260529_1130.md` (0.6KB)
+- `analysis_30min_20260529_1500.json` (1.5KB)
+- `analysis_30min_20260529_1500.md` (0.6KB)
+- `call_auction.log` (6.3KB)
+- `claude_inbox.json` (1.8KB)
+- `closing_review.log` (39.0KB)
+- `cognitive_agent.log` (87.8KB)
+- `consumer_log.jsonl` (3.1KB)
+- `consumer_run.log` (17.2KB)
+- `distillation_brief.md` (1.4KB)
+- `distill_queue.json` (8.8KB)
+- `health_check.log` (3.3KB)
+- `hot_stocks.log` (320.9KB)
+- `intraday_close.log` (66.2KB)
+- `intraday_midday.log` (59.0KB)
+- `nightly_health.log` (9.2KB)
+- `nightly_plan.log` (98.1KB)
+- `recon_daily.log` (3.7KB)
+- `task_queue.json` (3.0KB)
 
-... 还有 4170 个文件
+... 还有 4369 个文件
 
 ## 队列积压 (未蒸馏)
 
@@ -58,4 +55,4 @@
 4. 如无新知识 → 标记队列条目为 skipped
 5. 推送更新到 GitHub (git_auto_push.py)
 
-> 生成时间: 2026-05-28 23:47
+> 生成时间: 2026-05-29 15:47

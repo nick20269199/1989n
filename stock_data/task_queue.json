@@ -5,7 +5,9 @@
     "task": "新想法落地",
     "raw": "我有一个新想法要优化止损规则",
     "created": "2026-05-26 11:52:23",
-    "status": "pending"
+    "status": "needs_claude",
+    "result": "{\"status\": \"unknown\", \"agents_results\": [{\"agent\": \"adversarial-review\", \"status\": \"skipped\", \"reason\": \"Agent adversarial-review 无自动处理器，需主会话介入\"}], \"skills_results\": [{\"skill\": \"adversarial-review\", \"status\": \"deferred\", \"reason\": \"Skill adversarial-review 需主会话执行\", \"task\": \"我有一个新想法要优化止损规则\"}], \"task_id\": \"TK-20260526115223\"}",
+    "processed_at": "2026-05-29 13:33:11"
   },
   {
     "id": "TK-20260526120310",
@@ -13,7 +15,9 @@
     "task": "新想法落地",
     "raw": "我有一个新想法",
     "created": "2026-05-26 12:03:10",
-    "status": "pending"
+    "status": "needs_claude",
+    "result": "{\"status\": \"deferred\", \"reason\": \"研发想法需主会话 Claude 深度参与\", \"task\": \"我有一个新想法\", \"task_type\": \"rd_idea\", \"task_id\": \"TK-20260526120310\"}",
+    "processed_at": "2026-05-29 13:33:11"
   },
   {
     "id": "TK-20260526121841",
@@ -21,7 +25,9 @@
     "task": "盘前简报/晨报生成",
     "raw": "盘前晨报",
     "created": "2026-05-26 12:18:41",
-    "status": "pending"
+    "status": "skipped",
+    "result": "晨报已由 StockAnalysis_MorningBrief 定时任务处理",
+    "processed_at": "2026-05-29 13:44:18"
   },
   {
     "id": "TK-20260526121841",
@@ -29,7 +35,9 @@
     "task": "复盘",
     "raw": "今日复盘",
     "created": "2026-05-26 12:18:41",
-    "status": "pending"
+    "status": "skipped",
+    "result": "复盘已由 StockAnalysis_ClosingReview 定时任务处理",
+    "processed_at": "2026-05-29 13:44:18"
   },
   {
     "id": "TK-20260526121850",
@@ -37,7 +45,9 @@
     "task": "新想法落地",
     "raw": "我有一个想法",
     "created": "2026-05-26 12:18:50",
-    "status": "pending"
+    "status": "needs_claude",
+    "result": "{\"status\": \"deferred\", \"reason\": \"研发想法需主会话 Claude 深度参与\", \"task\": \"我有一个想法\", \"task_type\": \"rd_idea\", \"task_id\": \"TK-20260526121850\"}",
+    "processed_at": "2026-05-29 13:33:11"
   },
   {
     "id": "TK-20260526122015",
@@ -45,7 +55,9 @@
     "task": "综合查询",
     "raw": "",
     "created": "2026-05-26 12:20:15",
-    "status": "pending"
+    "status": "skipped",
+    "result": "查询内容为空，已跳过",
+    "processed_at": "2026-05-29 13:44:18"
   },
   {
     "id": "TK-20260526151441",
@@ -53,6 +65,8 @@
     "task": "背调: 创世纪(300083)",
     "raw": "情报部请对创世纪(300083)做背调——今日新开仓800股@10.960。需要: 基本面(主营/营收/利润)、技术面(近期走势/量能)、题材面(所属概念板块)、有无隐藏风险。来源: 前厅部今日逐笔成交处理。",
     "created": "2026-05-26 15:14:41",
-    "status": "pending"
+    "status": "completed",
+    "result": "五维度分析完成：清仓验证正确，退出价10.44优于当前10.07(-4.73%)",
+    "processed_at": "2026-05-29 13:44:18"
   }
 ]

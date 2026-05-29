@@ -422,7 +422,7 @@
     ],
     "status": "investigating",
     "created_at": "2026-05-28T12:01:09.360700",
-    "updated_at": "2026-05-28T12:08:27.816607"
+    "updated_at": "2026-05-29T10:32:25.805427"
   },
   {
     "gap_id": "explore-cursor",
@@ -439,7 +439,7 @@
     ],
     "status": "investigating",
     "created_at": "2026-05-28T12:01:09.361294",
-    "updated_at": "2026-05-28T12:08:30.665952"
+    "updated_at": "2026-05-29T10:32:27.742144"
   },
   {
     "gap_id": "explore-langchain",
@@ -456,7 +456,7 @@
     ],
     "status": "investigating",
     "created_at": "2026-05-28T12:01:09.361922",
-    "updated_at": "2026-05-28T12:08:33.652250"
+    "updated_at": "2026-05-29T10:32:29.798353"
   },
   {
     "gap_id": "explore-lora",
@@ -473,7 +473,7 @@
     ],
     "status": "investigating",
     "created_at": "2026-05-28T12:01:09.362449",
-    "updated_at": "2026-05-28T12:08:36.594498"
+    "updated_at": "2026-05-29T10:32:31.622989"
   },
   {
     "gap_id": "explore-vllm",
@@ -490,7 +490,7 @@
     ],
     "status": "investigating",
     "created_at": "2026-05-28T12:01:09.362990",
-    "updated_at": "2026-05-28T12:08:39.461277"
+    "updated_at": "2026-05-29T10:32:33.473193"
   },
   {
     "gap_id": "explore-qlora",
@@ -507,7 +507,7 @@
     ],
     "status": "investigating",
     "created_at": "2026-05-28T12:01:09.363574",
-    "updated_at": "2026-05-28T12:08:42.327269"
+    "updated_at": "2026-05-29T10:32:35.377763"
   },
   {
     "gap_id": "explore-chroma",
@@ -524,7 +524,7 @@
     ],
     "status": "investigating",
     "created_at": "2026-05-28T12:01:09.364183",
-    "updated_at": "2026-05-28T12:08:45.146274"
+    "updated_at": "2026-05-29T10:32:37.471800"
   },
   {
     "gap_id": "explore-dify",
@@ -556,8 +556,9 @@
       "web",
       "github"
     ],
-    "status": "open",
-    "created_at": "2026-05-28T12:01:09.365443"
+    "status": "investigating",
+    "created_at": "2026-05-28T12:01:09.365443",
+    "updated_at": "2026-05-29T10:32:41.578322"
   },
   {
     "gap_id": "explore-xbuilderlab-cheat-on-content",

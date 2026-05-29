@@ -1,0 +1,65 @@
+[
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526120310",
+    "reason": "研发想法需主会话 Claude 深度参与",
+    "task": "我有一个新想法",
+    "created": "2026-05-29 13:32:00"
+  },
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526121850",
+    "reason": "研发想法需主会话 Claude 深度参与",
+    "task": "我有一个想法",
+    "created": "2026-05-29 13:32:00"
+  },
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526122015",
+    "reason": "需主会话 Claude 处理",
+    "task": "",
+    "created": "2026-05-29 13:32:00"
+  },
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526120310",
+    "reason": "研发想法需主会话 Claude 深度参与",
+    "task": "我有一个新想法",
+    "created": "2026-05-29 13:32:35"
+  },
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526121850",
+    "reason": "研发想法需主会话 Claude 深度参与",
+    "task": "我有一个想法",
+    "created": "2026-05-29 13:32:35"
+  },
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526122015",
+    "reason": "需主会话 Claude 处理",
+    "task": "",
+    "created": "2026-05-29 13:32:35"
+  },
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526120310",
+    "reason": "研发想法需主会话 Claude 深度参与",
+    "task": "我有一个新想法",
+    "created": "2026-05-29 13:33:11"
+  },
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526121850",
+    "reason": "研发想法需主会话 Claude 深度参与",
+    "task": "我有一个想法",
+    "created": "2026-05-29 13:33:11"
+  },
+  {
+    "source": "task_consumer",
+    "task_id": "TK-20260526122015",
+    "reason": "需主会话 Claude 处理",
+    "task": "",
+    "created": "2026-05-29 13:33:11"
+  }
+]

@@ -9,6 +9,7 @@
   py vv_transcribe.py --limit 10         # 只转录前10个
   py vv_transcribe.py --force            # 重新转录已有的
   py vv_transcribe.py --priority         # 按优先级顺序（行家5人→专项→其余）
+  py vv_transcribe.py --since 2026-05-25 # 只转录此日期后的视频
 """
 
 import asyncio
@@ -71,8 +72,10 @@ def ensure_dirs():
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def get_untranscribed(account=None, limit=None, force=False, priority=False):
-    """从数据库获取待转录视频列表"""
+def get_untranscribed(account=None, limit=None, force=False, priority=False, since=None):
+    """从数据库获取待转录视频列表
+    since: 只返回此日期后的视频 (YYYY-MM-DD 或 Unix timestamp)
+    """
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
@@ -86,6 +89,15 @@ def get_untranscribed(account=None, limit=None, force=False, priority=False):
     if account:
         query += " AND vv_id = ?"
         params.append(account)
+
+    if since:
+        if isinstance(since, str):
+            dt = datetime.strptime(since, "%Y-%m-%d")
+            since_ts = int(dt.timestamp())
+        else:
+            since_ts = int(since)
+        query += " AND create_time >= ?"
+        params.append(since_ts)
 
     if priority:
         # 按优先级排序
@@ -201,7 +213,7 @@ async def get_video_url_api(page, aweme_id):
         return None
 
 
-async def transcribe_batch(account=None, limit=None, force=False, priority=False):
+async def transcribe_batch(account=None, limit=None, force=False, priority=False, since=None):
     """批量转录主函数"""
     if not FFMPEG:
         print("[ERROR] ffmpeg 未找到")
@@ -218,7 +230,7 @@ async def transcribe_batch(account=None, limit=None, force=False, priority=False
         return
 
     ensure_dirs()
-    videos = get_untranscribed(account, limit, force, priority)
+    videos = get_untranscribed(account, limit, force, priority, since)
 
     if not videos:
         print("没有待转录的视频")
@@ -315,8 +327,13 @@ async def transcribe_batch(account=None, limit=None, force=False, priority=False
                     str(audio_path), "-y",
                 ], capture_output=True, text=True, timeout=120, encoding="utf-8", errors="replace")
 
-                # 删除视频文件节省空间
-                video_file.unlink(missing_ok=True)
+                # 删除视频文件节省空间（ffmpeg 可能未完全释放句柄，重试3次）
+                for _ in range(3):
+                    try:
+                        video_file.unlink(missing_ok=True)
+                        break
+                    except PermissionError:
+                        time.sleep(1)
 
                 if ok.returncode != 0 or not audio_path.exists():
                     err = ok.stderr[-200:] if ok.stderr else "未知错误"
@@ -378,6 +395,7 @@ def main():
     parser.add_argument("--limit", type=int, help="限制转录数量")
     parser.add_argument("--force", action="store_true", help="重新转录已有")
     parser.add_argument("--priority", action="store_true", help="按优先级顺序")
+    parser.add_argument("--since", help="只转录此日期后的视频 (YYYY-MM-DD)")
     args = parser.parse_args()
 
     asyncio.run(transcribe_batch(
@@ -385,6 +403,7 @@ def main():
         limit=args.limit,
         force=args.force,
         priority=args.priority,
+        since=args.since,
     ))
 
 
