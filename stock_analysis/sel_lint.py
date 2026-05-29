@@ -320,6 +320,117 @@ def scan_ingest_incomplete(files: list) -> list:
     return findings
 
 
+# ── Scan 7: Memory Decay (Ebbinghaus) ──────────────────────────────────
+def scan_memory_decay(files: list = None) -> list:
+    """检查 knowledge_entry 中的记忆衰减风险。
+
+    衰减规则:
+    - last_accessed > 30天 → 衰减 (MEDIUM)
+    - last_accessed > 90天 → 归档候选 (HIGH)
+    - access_count==0 且 created > 30天 → 冷数据 (LOW)
+    """
+    try:
+        sys.path.insert(0, str(STOCK_ANALYSIS))
+        from knowledge_db import get_db
+    except ImportError:
+        return [{"file": "knowledge_db", "issue": "无法导入 knowledge_db", "severity": "MEDIUM"}]
+
+    findings = []
+    try:
+        with get_db() as db:
+            rows = db.execute(
+                "SELECT id, topic, source_file, access_count, last_accessed, created_at, tier "
+                "FROM knowledge_entry WHERE status = 'active'"
+            ).fetchall()
+
+        now = datetime.now()
+        for r in rows:
+            days_since_access = None
+            if r["last_accessed"]:
+                try:
+                    la = datetime.strptime(r["last_accessed"][:10], "%Y-%m-%d")
+                    days_since_access = (now - la).days
+                except ValueError:
+                    pass
+
+            # 如果 last_accessed 为 NULL, 用 created_at 推算 (从未被访问过)
+            if days_since_access is None and r["created_at"]:
+                try:
+                    ca = datetime.strptime(r["created_at"][:10], "%Y-%m-%d")
+                    days_since_access = (now - ca).days
+                except ValueError:
+                    pass
+
+            if days_since_access is None:
+                continue
+
+            src = r["source_file"] or f"entry#{r['id']}"
+            if days_since_access > 90:
+                findings.append({
+                    "file": src, "days": days_since_access,
+                    "topic": r["topic"], "access_count": r["access_count"],
+                    "issue": f"记忆陈旧: {days_since_access}天未访问, 建议归档",
+                    "severity": "HIGH",
+                })
+            elif days_since_access > 30:
+                findings.append({
+                    "file": src, "days": days_since_access,
+                    "topic": r["topic"], "access_count": r["access_count"],
+                    "issue": f"记忆衰减: {days_since_access}天未访问",
+                    "severity": "MEDIUM",
+                })
+
+            # 冷数据: 创建后从未被访问
+            if r["access_count"] == 0 and r["created_at"]:
+                try:
+                    created = datetime.strptime(r["created_at"][:10], "%Y-%m-%d")
+                    if (now - created).days > 30:
+                        findings.append({
+                            "file": src, "days": (now - created).days,
+                            "topic": r["topic"], "access_count": 0,
+                            "issue": "冷数据: 创建后从未被访问",
+                            "severity": "LOW",
+                        })
+                except ValueError:
+                    pass
+    except Exception as e:
+        findings.append({
+            "file": "knowledge_entry",
+            "issue": f"记忆衰减扫描失败: {e}",
+            "severity": "MEDIUM",
+        })
+
+    return findings
+
+
+# ── Scan 8: Chroma Vector Backend Health ───────────────────────────────
+def scan_chroma_health(files: list = None) -> list:
+    """检查 Chroma 向量后端健康状态。"""
+    try:
+        sys.path.insert(0, str(STOCK_ANALYSIS))
+        from knowledge_db import vector_collection_stats, VECTOR_ENABLED
+    except ImportError:
+        return [{"file": "knowledge_db", "issue": "无法导入 knowledge_db", "severity": "MEDIUM"}]
+
+    # Try lazy init if not already enabled
+    if not VECTOR_ENABLED:
+        try:
+            from knowledge_db import _init_vector_backend
+            _init_vector_backend()
+        except Exception:
+            pass
+
+    try:
+        stats = vector_collection_stats()
+        if stats.get("enabled"):
+            if stats.get("count", 0) == 0:
+                return [{"file": "chroma", "issue": "Chroma 向量库为空 (0条)", "severity": "LOW"}]
+            return [{"file": "chroma", "issue": f"Chroma 向量库正常 ({stats['count']}条)", "severity": "LOW", "_ok": True}]
+        return [{"file": "chroma", "issue": "Chroma 向量后端未启用 (chromadb 未安装或初始化失败)", "severity": "LOW"}]
+    except Exception as e:
+        return [{"file": "chroma", "issue": f"Chroma 健康检查失败: {e}", "severity": "MEDIUM"}]
+
+
 # ── Scan 6: Missing Connections ─────────────────────────────────────────
 def scan_missing_connections(files: list) -> list:
     """Files modified within 7 days, sharing concepts but no mutual reference."""
@@ -478,6 +589,8 @@ def main():
     zombie = scan_zombie_rules(files)
     ingest = scan_ingest_incomplete(files)
     missing = scan_missing_connections(files)
+    decay = scan_memory_decay()
+    chroma = scan_chroma_health()
 
     scans = {
         "1_知识腐烂": rot,
@@ -486,6 +599,8 @@ def main():
         "4_僵尸规则": zombie,
         "5_Ingest未完成": ingest,
         "6_缺失连接": missing,
+        "7_记忆衰减": decay,
+        "8_向量库健康": chroma,
     }
 
     # Count by severity per scan
@@ -541,7 +656,8 @@ def main():
     for scan_name, items in scans.items():
         label = {"1_知识腐烂": "知识腐烂", "2_Draft未验证": "Draft长期未验证",
                  "3_幽灵引用": "幽灵引用", "4_僵尸规则": "规则脱节",
-                 "5_Ingest未完成": "Ingest未完成", "6_缺失连接": "缺失连接"}.get(scan_name, scan_name)
+                 "5_Ingest未完成": "Ingest未完成", "6_缺失连接": "缺失连接",
+                 "7_记忆衰减": "记忆衰减", "8_向量库健康": "向量库健康"}.get(scan_name, scan_name)
         sv = scan_severity[scan_name]
         if sv["high"] + sv["med"] == 0:
             lines.append(f"### {label} ✅ — {sv['total']}项, 全部正常")

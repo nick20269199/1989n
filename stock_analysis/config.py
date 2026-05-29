@@ -27,6 +27,7 @@ STOCK_DATA_DIR = Path(os.getenv("STOCK_DATA_DIR", "D:/1989n/stock_data"))
 SCREENSHOT_DIR = Path(os.getenv("SCREENSHOT_DIR", "D:/1989n/screenshots"))
 DATABASE_PATH = os.getenv("DATABASE_PATH", str(STOCK_DATA_DIR / "stock.db"))
 LEARNING_DIR = STOCK_DATA_DIR / "learning"
+CHROMA_DIR = STOCK_DATA_DIR / "chroma_db"
 ERROR_FILE = STOCK_DATA_DIR / "last_error.txt"
 LOG_DIR = PROJECT_DIR / "logs"
 OUTPUT_DIR = PROJECT_DIR / "output"
@@ -70,10 +71,20 @@ XUEQIU_TIMELINE_URL = "https://xueqiu.com/v4/statuses/public_timeline_by_categor
 # === 请求头 ===
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                  "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
 }
+
+# 东方财富专用请求头（带 Referer，模拟浏览器访问）
+EASTMONEY_HEADERS = {
+    **HEADERS,
+    "Referer": "https://quote.eastmoney.com/",
+    "Origin": "https://quote.eastmoney.com",
+}
+
+# 东方财富 Cookie（从 .env 加载，会员登录后可绕过 WAF）
+EASTMONEY_COOKIE = os.getenv("EASTMONEY_COOKIE", "")
 
 # === 日志配置 ===
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")

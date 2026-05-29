@@ -6,11 +6,15 @@
   knowledge_entry — 记忆知识条目 (来源/分类/标签/内容片段)
   decision_log    — 分析/交易决策记录 (时间/股票/类型/结论/回顾)
 
+向量检索（可选，需 pip install chromadb）:
+  安装 chromadb 后自动启用语义搜索，与 FTS5 级联检索。
+  无需额外配置，向量数据存储在 stock_data/chroma_db/。
+
 使用:
   from knowledge_db import query_stock_history, search_knowledge, list_files
   files = list_files("000062")          # 所有关联某股票的文件
   decisions = query_stock_history("000062", days=30)  # 过去30天决策
-  entries = search_knowledge("放量突破")  # 搜索相关知识
+  entries = search_knowledge("放量突破")  # 搜索相关知识（自动混合检索）
 """
 import json
 import sqlite3
@@ -18,9 +22,97 @@ import re
 from pathlib import Path
 from datetime import datetime
 from contextlib import contextmanager
-from config import DATABASE_PATH, STOCK_DATA_DIR
+from config import DATABASE_PATH, STOCK_DATA_DIR, CHROMA_DIR
 
 STOCK_DATA = Path(STOCK_DATA_DIR)
+
+# ── 可选向量检索后端 ─────────────────────────────────────────────
+VECTOR_ENABLED = False
+_vector_collection = None
+
+
+def _init_vector_backend():
+    """惰性初始化 Chroma 向量后端。import 失败则不启用。"""
+    global VECTOR_ENABLED, _vector_collection
+    if VECTOR_ENABLED:
+        return True
+    try:
+        import chromadb
+        from chromadb.config import Settings
+        client = chromadb.PersistentClient(
+            path=str(CHROMA_DIR),
+            settings=Settings(anonymized_telemetry=False),
+        )
+        _vector_collection = client.get_or_create_collection(
+            name="knowledge",
+            metadata={"hnsw:space": "cosine"},
+        )
+        VECTOR_ENABLED = True
+        return True
+    except Exception:
+        VECTOR_ENABLED = False
+        return False
+
+
+def vector_search(query: str, limit: int = 10) -> list[dict]:
+    """向量语义搜索。返回 [{id, text, metadata, score}, ...]"""
+    if not _init_vector_backend():
+        return []
+    try:
+        results = _vector_collection.query(
+            query_texts=[query],
+            n_results=limit,
+        )
+        hits = []
+        for i in range(len(results["ids"][0])):
+            hits.append({
+                "id": int(results["ids"][0][i]),
+                "text": results["documents"][0][i] if results["documents"] else "",
+                "metadata": results["metadatas"][0][i] if results["metadatas"] else {},
+                "score": 1.0 - (results["distances"][0][i] if results["distances"] else 0),
+            })
+        return hits
+    except Exception:
+        return []
+
+
+def vector_index_entry(entry_id: int, text: str, metadata: dict = None):
+    """将 knowledge_entry 写入向量索引。"""
+    if not _init_vector_backend():
+        return False
+    try:
+        _vector_collection.add(
+            ids=[str(entry_id)],
+            documents=[text[:5000]],
+            metadatas=[metadata or {}],
+        )
+        return True
+    except Exception:
+        return False
+
+
+def vector_delete_entry(entry_id: int):
+    """从向量索引中删除条目。"""
+    if not _init_vector_backend():
+        return False
+    try:
+        _vector_collection.delete(ids=[str(entry_id)])
+        return True
+    except Exception:
+        return False
+
+
+def vector_collection_stats() -> dict:
+    """向量集合统计。"""
+    if not _init_vector_backend():
+        return {"enabled": False, "count": 0}
+    try:
+        count = _vector_collection.count()
+        return {"enabled": True, "count": count}
+    except Exception:
+        return {"enabled": False, "count": 0}
+
+
 MEMORY_DIRS = [
     Path("D:/1989n/.claude/memory"),
     Path("D:/1989n/.claude/projects/d--1989n/memory"),
@@ -325,29 +417,73 @@ def file_index_stats() -> dict:
 # ── 记忆分层 CRUD ─────────────────────────────────────────────
 
 
-def search_knowledge(query: str, topic: str = None, limit: int = 20) -> list[dict]:
-    """搜索 knowledge_entry，同时更新访问计数用于自动升降级。"""
-    conditions = ["status = 'active'"]
-    params = []
+def search_knowledge(query: str, topic: str = None, limit: int = 20, use_vector: bool = True) -> list[dict]:
+    """搜索 knowledge_entry，同时使用 FTS5 关键词 + 向量语义搜索。
+
+    混合检索策略:
+    1. 同时执行 FTS5 LIKE 搜索和向量语义搜索
+    2. 按来源排序: hybrid > vector-only > fts5-only
+    3. 更新访问计数用于自动升降级
+    """
+    # ── FTS5 关键词搜索 ──
+    fts5_conditions = ["status = 'active'"]
+    fts5_params = []
 
     if topic:
-        conditions.append("topic = ?")
-        params.append(topic)
+        fts5_conditions.append("topic = ?")
+        fts5_params.append(topic)
 
-    # 搜索 content_snippet 和 tags
-    conditions.append("(content_snippet LIKE ? OR tags LIKE ?)")
-    params.append(f"%{query}%")
-    params.append(f"%{query}%")
+    fts5_conditions.append("(content_snippet LIKE ? OR tags LIKE ?)")
+    fts5_params.append(f"%{query}%")
+    fts5_params.append(f"%{query}%")
 
-    where = " AND ".join(conditions)
+    where = " AND ".join(fts5_conditions)
     sql = f"SELECT * FROM knowledge_entry WHERE {where} ORDER BY updated_at DESC LIMIT ?"
-    params.append(limit)
+    fts5_params.append(limit * 2)
 
+    fts5_results: list[dict] = []
     with get_db() as db:
-        rows = db.execute(sql, params).fetchall()
-        results = [dict(r) for r in rows]
+        rows = db.execute(sql, fts5_params).fetchall()
+        fts5_results = [dict(r) for r in rows]
 
-    # 更新访问计数（异步风格：不阻塞主路径）
+    # ── 向量语义搜索 ──
+    vector_results: list[dict] = []
+    if use_vector:
+        vector_results = vector_search(query, limit=limit * 2)
+
+    # ── 混合合并 ──
+    seen: set[int] = set()
+    merged: list[dict] = []
+
+    # 第一梯队: 被两种方式同时命中的 (hybrid)
+    for vr in vector_results:
+        vid = vr["id"]
+        match = next((f for f in fts5_results if f["id"] == vid), None)
+        if match:
+            match["_source"] = "hybrid"
+            match["_vector_score"] = vr["score"]
+            merged.append(match)
+            seen.add(vid)
+
+    # 第二梯队: 仅向量命中的 (vector-only)
+    for vr in vector_results:
+        if vr["id"] not in seen:
+            entry: dict = dict(vr)
+            entry["_source"] = "vector-only"
+            entry["_vector_score"] = vr["score"]
+            merged.append(entry)
+            seen.add(vr["id"])
+
+    # 第三梯队: 仅 FTS5 命中的 (fts5-only)
+    for fr in fts5_results:
+        if fr["id"] not in seen:
+            fr["_source"] = "fts5-only"
+            merged.append(fr)
+            seen.add(fr["id"])
+
+    results = merged[:limit]
+
+    # 更新访问计数 (异步风格: 不阻塞主路径)
     _bump_access([r["id"] for r in results])
 
     return results
@@ -456,12 +592,21 @@ def index_memory_file(md_path: str) -> int:
     with get_db() as db:
         # 先删除同源文件的旧条目
         db.execute("DELETE FROM knowledge_entry WHERE source_file = ?", (str(path),))
-        db.execute(
+        cursor = db.execute(
             """INSERT INTO knowledge_entry
                (source_file, topic, tags, content_snippet, created_at, updated_at, status)
                VALUES (?, ?, ?, ?, ?, ?, 'active')""",
             (str(path), topic, json.dumps(tags, ensure_ascii=False),
              snippet, now, now),
+        )
+        entry_id = cursor.lastrowid
+
+    # 同步到向量索引
+    if entry_id:
+        vector_index_entry(
+            entry_id,
+            snippet,
+            {"source_file": str(path), "topic": topic, "tags": json.dumps(tags, ensure_ascii=False)},
         )
 
     return 1
@@ -490,29 +635,6 @@ def _extract_tags(content: str, topic: str) -> list[str]:
     found.extend(sorted(set(stock_codes)))
 
     return found[:20]
-
-
-def search_knowledge(query: str, topic: str = None, limit: int = 20) -> list[dict]:
-    """搜索 knowledge_entry"""
-    conditions = ["status = 'active'"]
-    params = []
-
-    if topic:
-        conditions.append("topic = ?")
-        params.append(topic)
-
-    # 搜索 content_snippet 和 tags
-    conditions.append("(content_snippet LIKE ? OR tags LIKE ?)")
-    params.append(f"%{query}%")
-    params.append(f"%{query}%")
-
-    where = " AND ".join(conditions)
-    sql = f"SELECT * FROM knowledge_entry WHERE {where} ORDER BY updated_at DESC LIMIT ?"
-    params.append(limit)
-
-    with get_db() as db:
-        rows = db.execute(sql, params).fetchall()
-    return [dict(r) for r in rows]
 
 
 def list_knowledge_by_topic(topic: str, limit: int = 50) -> list[dict]:

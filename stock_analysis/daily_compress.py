@@ -495,14 +495,79 @@ def condense_rule(insight_text: str, cycle_stage: str = "",
 
 
 def commit_rule(rule: dict) -> str:
-    """将凝练的规则写入规则库。"""
+    """将凝练的规则写入规则库，并同步到 knowledge_entry 获取访问追踪。"""
     data = load_json(RULES_FILE)
     rules = data.get("rules", [])
     rule["id"] = datetime.now().strftime("R%Y%m%d_%H%M%S")
     rules.append(rule)
     data["rules"] = rules
     save_json(RULES_FILE, data)
+
+    # 同步到 knowledge_entry 以启用访问追踪/升降级
+    _sync_rule_to_knowledge_db(rule)
+
     return rule["id"]
+
+
+def _sync_rule_to_knowledge_db(rule: dict):
+    """将规则同步到 knowledge_entry 以便使用访问追踪/自动升降级。"""
+    try:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from knowledge_db import get_db
+        import json as _json
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        content = (
+            f"规则[{rule.get('id', '')}]: "
+            f"{rule.get('condition', '')} → {rule.get('action', '')}"
+        )
+        if rule.get('failure_signal'):
+            content += f" (失效: {rule['failure_signal']})"
+        with get_db() as db:
+            db.execute(
+                "DELETE FROM knowledge_entry WHERE source_file = ? AND topic = 'rule'",
+                (f"rules.json/{rule.get('id', '')}",),
+            )
+            db.execute(
+                """INSERT INTO knowledge_entry
+                   (source_file, topic, tags, content_snippet, created_at, updated_at, status, tier)
+                   VALUES (?, 'rule', ?, ?, ?, ?, 'active', 4)""",
+                (
+                    f"rules.json/{rule.get('id', '')}",
+                    _json.dumps([rule.get('cycle_stage', '')], ensure_ascii=False) if rule.get('cycle_stage') else '[]',
+                    content[:500],
+                    now, now,
+                ),
+            )
+    except Exception:
+        pass  # non-critical, don't block rule writing
+
+
+def load_rules() -> list[dict]:
+    """加载规则库，同时 bumped 每条规则的访问计数。"""
+    data = load_json(RULES_FILE)
+    rules = data.get("rules", [])
+    # Bump access counts for tracking
+    for r in rules:
+        _bump_rule_access(r.get("id", ""))
+    return rules
+
+
+def _bump_rule_access(rule_id: str):
+    """递增 knowledge_entry 中对应规则的 access_count。"""
+    if not rule_id:
+        return
+    try:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from knowledge_db import get_db
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with get_db() as db:
+            db.execute(
+                "UPDATE knowledge_entry SET access_count = access_count + 1, last_accessed = ? "
+                "WHERE source_file = ? AND topic = 'rule'",
+                (now, f"rules.json/{rule_id}"),
+            )
+    except Exception:
+        pass
 
 
 def write_digest_v2(date_str: str, cycle_stage: dict, ratio_snapshot: dict,
